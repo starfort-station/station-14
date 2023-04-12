@@ -132,3 +132,12 @@
 
 - type: playTimeTracker
   id: JobZookeeper
+  
+- type: playTimeTracker
+  id: JobFieldMedic
+  
+- type: playTimeTracker
+  id: JobFieldScientist
+  
+- type: playTimeTracker
+  id: JobFieldTrooper
