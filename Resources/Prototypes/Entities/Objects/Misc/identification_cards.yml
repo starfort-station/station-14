@@ -107,10 +107,6 @@
     heldPrefix: gold
   - type: PresetIdCard
     job: Captain
-  - type: Tag
-    tags:
-      - WhitelistChameleon
-      - HighRiskItem
 
 - type: entity
   parent: IDCardStandard
@@ -400,18 +396,6 @@
 
 - type: entity
   parent: IDCardStandard
-  id: BrigmedIDCard
-  name: brigmedic ID card
-  components:
-  - type: Sprite
-    layers:
-    - state: default
-    - state: idbrigmedic
-  - type: PresetIdCard
-    job: Brigmedic
-
-- type: entity
-  parent: IDCardStandard
   id: CentcomIDCard
   name: command officer ID card
   components:
@@ -564,7 +548,7 @@
     - state: idzookeeper
   - type: PresetIdCard
     job: Zookeeper
-
+    
 - type: entity
   parent: IDCardStandard
   id: DetectiveIDCard
@@ -588,7 +572,7 @@
     - state: idcentcom
   - type: Item
     heldPrefix: gold
-
+    
 
 - type: entity
   parent: IDCardStandard
@@ -603,3 +587,64 @@
   - type: IdCard
     jobTitle: Cluwne
   - type: Unremoveable
+
+- type: entity
+  parent: IDCardStandard
+  id: CCAgentIDCard
+  name: CentCom Agent ID card
+  components:
+    - type: Sprite
+      layers:
+        - state: default
+        - state: idlawyer
+    - type: PresetIdCard
+      job: CCAgent
+
+- type: entity
+  parent: IDCardStandard
+  id: BrigmedIDCard
+  name: brigmedic ID card
+  components:
+  - type: Sprite
+    layers:
+    - state: default
+    - state: idbrigmedic
+  - type: PresetIdCard
+    job: Brigmedic
+    
+#Expedition
+- type: entity
+  parent: PassengerIDCard
+  id: FieldMedicIDCard
+  name: field medic ID card
+  components:
+  - type: PresetIdCard
+    job: FieldMedic
+  - type: Sprite
+    layers:
+    - state: default
+    - state: idfield-medic
+
+- type: entity
+  parent: PassengerIDCard
+  id: FieldScientistIDCard
+  name: field scientist ID card
+  components:
+  - type: PresetIdCard
+    job: FieldScientist
+  - type: Sprite
+    layers:
+    - state: default
+    - state: idfield-scientist
+
+- type: entity
+  parent: PassengerIDCard
+  id: FieldTrooperIDCard
+  name: field trooper ID card
+  components:
+  - type: PresetIdCard
+    job: FieldTrooper
+  - type: Sprite
+    layers:
+    - state: default
+    - state: idfield-trooper
