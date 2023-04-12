@@ -88,7 +88,7 @@
   components:
   - type: StorageFill
     contents:
-      - id: BoxSurvival
+      - id: BoxSurvivalMedical
       - id: Flash
       #- id: TelescopicBaton
 
@@ -110,7 +110,7 @@
   components:
   - type: StorageFill
     contents:
-      - id: BoxSurvival
+      - id: BoxSurvivalSecurity
       - id: Flash
 
 - type: entity
@@ -157,7 +157,7 @@
   components:
   - type: StorageFill
     contents:
-      - id: BoxSurvival
+      - id: BoxSurvivalMedical
 
 - type: entity
   noSpawn: true
@@ -198,7 +198,7 @@
   components:
     - type: StorageFill
       contents:
-      - id: BoxSurvival
+      - id: BoxSurvivalSecurity
       - id: Lighter
       - id: CigPackBlack
       - id: HandLabeler
@@ -281,6 +281,15 @@
   noSpawn: true
   parent: ClothingBackpackSalvage
   id: ClothingBackpackSalvageFilled
+  components:
+    - type: StorageFill
+      contents:
+        - id: BoxSurvival
+        
+- type: entity
+  noSpawn: true
+  parent: ClothingBackpackExpedition
+  id: ClothingBackpackExpeditionFilled
   components:
     - type: StorageFill
       contents:

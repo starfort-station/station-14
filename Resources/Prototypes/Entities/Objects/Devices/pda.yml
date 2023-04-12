@@ -752,3 +752,51 @@
         - Write
   - type: Unremoveable
 
+- type: entity
+  parent: BasePDA
+  id: CCAgentPDA
+  name: CentCom Agent PDA
+  description: For some kinds of clown.
+  components:
+  - type: PDA
+    id: CCAgentIDCard
+    state: pda-ert
+  - type: Icon
+    state: pda-ert
+    
+# Expedition
+- type: entity
+  parent: BasePDA
+  id: FieldTrooperPDA
+  name: field trooper PDA
+  description: Looks like brand new camo pda.
+  components:
+  - type: PDA
+    id: FieldTrooperIDCard
+    state: pda-fieldtrooper
+  - type: Icon
+    state: pda-fieldtrooper
+    
+- type: entity
+  parent: BasePDA
+  id: FieldMedicPDA
+  name: field medic PDA
+  description: Looks like brand new camo pda.
+  components:
+  - type: PDA
+    id: FieldMedicIDCard
+    state: pda-fieldmedic
+  - type: Icon
+    state: pda-fieldmedic
+
+- type: entity
+  parent: BasePDA
+  id: FieldScientistPDA
+  name: field scientist PDA
+  description: Looks like brand new camo pda.
+  components:
+  - type: PDA
+    id: FieldScientistIDCard
+    state: pda-fieldscientist
+  - type: Icon
+    state: pda-fieldscientist

@@ -538,3 +538,56 @@
     layers:
       - state: green
       - state: zookeeper
+
+- type: entity
+  id: SpawnPointCCAgent
+  parent: SpawnPointJobBase
+  name: CCAgent
+  components:
+  - type: SpawnPoint
+    job_id: CCAgent
+  - type: Sprite
+    layers:
+      - state: green
+      - state: lawyer
+
+
+#Expedition
+- type: entity
+  id: SpawnPointFileldMedic
+  parent: SpawnPointJobBase
+  name: FileldMedic
+  components:
+  - type: SpawnPoint
+    job_id: FieldMedic
+  - type: Sprite
+    layers:
+      - state: green
+      - sprite: Markers\jobs.rsi
+        state: field_medic
+
+- type: entity
+  id: SpawnPointFileldScientist
+  parent: SpawnPointJobBase
+  name: FileldScientist
+  components:
+  - type: SpawnPoint
+    job_id: FieldScientist
+  - type: Sprite
+    layers:
+      - state: green
+      - sprite: Markers\jobs.rsi
+        state: field_scientist
+
+- type: entity
+  id: SpawnPointFileldTrooper
+  parent: SpawnPointJobBase
+  name: FileldTrooper
+  components:
+  - type: SpawnPoint
+    job_id: FieldTrooper
+  - type: Sprite
+    layers:
+      - state: green
+      - sprite: Markers\jobs.rsi
+        state: field_trooper

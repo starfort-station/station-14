@@ -1,0 +1,6 @@
+- type: vendingMachineInventory
+  id: ExpeditorsDrobeInventory
+  startingInventory:
+    ClothingHeadsetExpedition: 3
+    ClothingShoesBootsCombat: 2
+    ClothingBackpackExpedition: 3

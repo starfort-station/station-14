@@ -1,0 +1,35 @@
+- type: job
+  id: FieldScientist
+  name: job-name-field-scientist
+  description: job-description-field-scientist
+  playTimeTracker: JobFieldScientist
+  requirements:
+    - !type:OverallPlaytimeRequirement
+      time: 18000 #5 hrs
+    - !type:DepartmentTimeRequirement
+      department: Security
+      time: 1800 #30 min
+    - !type:DepartmentTimeRequirement
+      department: Science
+      time: 3600 #1 hrs
+  startingGear: FieldScientistGear
+  icon: "FieldScientist"
+  supervisors: job-supervisors-rd
+  canBeAntag: false
+  access:
+  - Research
+  - Maintenance
+  - Expedition
+  - External
+  extendedAccess:
+  - Brig
+
+- type: startingGear
+  id: FieldScientistGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitFieldScientist
+    back: ClothingBackpackExpeditionFilled
+    shoes: ClothingShoesBootsCombatFilled
+    id: FieldScientistPDA
+    ears: ClothingHeadsetExpedition
+    belt: ClothingBeltUtilityFilled
