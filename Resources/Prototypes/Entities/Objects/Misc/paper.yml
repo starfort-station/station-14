@@ -31,7 +31,6 @@
     - Trash
   - type: Appearance
   - type: PaperVisuals
-  - type: Recyclable
 
 - type: entity
   name: office paper
@@ -167,122 +166,6 @@
   - type: NukeCodePaper
 
 - type: entity
-  parent: Paper
-  id: StationGoalPaper
-  name: station goal
-  description: "It looks like you have a lot of work to do."
-  components:
-    - type: Paper
-      stampState: paper_stamp-cent
-      stampedBy:
-        - ЦентКом #CentComm
-
-- type: entity
-  parent: StationGoalPaper
-  id: StationGoalShuttle
-  suffix: Shuttle
-  components:
-    - type: Paper
-      content: station-goal-shuttle
-
-- type: entity
-  parent: StationGoalPaper
-  id: StationGoalRestoration
-  suffix: Restoration
-  components:
-    - type: Paper
-      content: station-goal-restoration
-
-- type: entity
-  parent: StationGoalPaper
-  id: StationGoalOrbitalStorage
-  suffix: OrbitalStorage
-  components:
-    - type: Paper
-      content: station-goal-orbital-storage
-
-- type: entity
-  parent: StationGoalPaper
-  id: StationGoalArtifacts
-  suffix: Artifacts
-  components:
-    - type: Paper
-      content: station-goal-artifacts
-
-- type: entity
-  parent: StationGoalPaper
-  id: StationGoalRipley
-  suffix: Ripley
-  components:
-    - type: Paper
-      content: station-goal-ripley
-
-- type: entity
-  parent: StationGoalPaper
-  id: StationGoalMoney
-  suffix: Money
-  components:
-    - type: Paper
-      content: station-goal-money
-
-- type: entity
-  parent: StationGoalPaper
-  id: StationGoalProvisions
-  suffix: Provisions
-  components:
-    - type: Paper
-      content: station-goal-provisions
-
-- type: entity
-  parent: StationGoalPaper
-  id: StationGoalMedicines
-  suffix: Medicines
-  components:
-    - type: Paper
-      content: station-goal-medicines
-
-- type: entity
-  id: StationGoalRandom
-  parent: [PresentBase, BaseItem]
-  suffix: Filled Safe
-  components:
-  - type: SpawnItemsOnUse
-    items:
-      - id: TrashEnvelope
-      - id: StationGoalShuttle
-        orGroup: GiftPool
-      - id: StationGoalRestoration
-        orGroup: GiftPool
-      - id: StationGoalOrbitalStorage
-        orGroup: GiftPool
-      - id: StationGoalRipley
-        orGroup: GiftPool
-      - id: StationGoalMoney
-        orGroup: GiftPool
-      - id: StationGoalProvisions
-        orGroup: GiftPool
-      - id: StationGoalMedicines
-        orGroup: GiftPool
-    sound:
-      path: /Audio/Effects/unwrap.ogg
-  - type: Sprite
-    sprite: Objects/Misc/bureaucracy.rsi
-    netsync: false
-    layers:
-      - state: envelope_station_goal
-
-- type: entity
-  id: TrashEnvelope
-  parent: BaseItem
-  name: trash
-  description: 'Crumpled piece of paper.'
-  components:
-  - type: Sprite
-    sprite: Objects/Misc/bureaucracy.rsi
-    state: envelope_unwrapped
-  - type: Recyclable
-
-- type: entity
   name: pen
   parent: BaseItem
   id: Pen
@@ -298,7 +181,9 @@
     sprite: Objects/Misc/bureaucracy.rsi
     heldPrefix: pen
     size: 2
-  - type: Recyclable
+  - type: PhysicalComposition
+    materialComposition:
+      Steel: 25
 
 - type: entity
   name: Cybersun pen
@@ -673,7 +558,122 @@
   - type: Sprite
     sprite: Objects/Misc/bureaucracy.rsi
     state: stamp-ce
-    
+
+- type: entity
+  parent: Paper
+  id: StationGoalPaper
+  name: station goal
+  description: "It looks like you have a lot of work to do."
+  components:
+    - type: Paper
+      stampState: paper_stamp-cent
+      stampedBy:
+        - ЦентКом #CentComm
+
+- type: entity
+  parent: StationGoalPaper
+  id: StationGoalShuttle
+  suffix: Shuttle
+  components:
+    - type: Paper
+      content: station-goal-shuttle
+
+- type: entity
+  parent: StationGoalPaper
+  id: StationGoalRestoration
+  suffix: Restoration
+  components:
+    - type: Paper
+      content: station-goal-restoration
+
+- type: entity
+  parent: StationGoalPaper
+  id: StationGoalOrbitalStorage
+  suffix: OrbitalStorage
+  components:
+    - type: Paper
+      content: station-goal-orbital-storage
+
+- type: entity
+  parent: StationGoalPaper
+  id: StationGoalArtifacts
+  suffix: Artifacts
+  components:
+    - type: Paper
+      content: station-goal-artifacts
+
+- type: entity
+  parent: StationGoalPaper
+  id: StationGoalRipley
+  suffix: Ripley
+  components:
+    - type: Paper
+      content: station-goal-ripley
+
+- type: entity
+  parent: StationGoalPaper
+  id: StationGoalMoney
+  suffix: Money
+  components:
+    - type: Paper
+      content: station-goal-money
+
+- type: entity
+  parent: StationGoalPaper
+  id: StationGoalProvisions
+  suffix: Provisions
+  components:
+    - type: Paper
+      content: station-goal-provisions
+
+- type: entity
+  parent: StationGoalPaper
+  id: StationGoalMedicines
+  suffix: Medicines
+  components:
+    - type: Paper
+      content: station-goal-medicines
+
+- type: entity
+  id: StationGoalRandom
+  parent: [PresentBase, BaseItem]
+  suffix: Filled Safe
+  components:
+  - type: SpawnItemsOnUse
+    items:
+      - id: TrashEnvelope
+      - id: StationGoalShuttle
+        orGroup: GiftPool
+      - id: StationGoalRestoration
+        orGroup: GiftPool
+      - id: StationGoalOrbitalStorage
+        orGroup: GiftPool
+      - id: StationGoalRipley
+        orGroup: GiftPool
+      - id: StationGoalMoney
+        orGroup: GiftPool
+      - id: StationGoalProvisions
+        orGroup: GiftPool
+      - id: StationGoalMedicines
+        orGroup: GiftPool
+    sound:
+      path: /Audio/Effects/unwrap.ogg
+  - type: Sprite
+    sprite: Objects/Misc/bureaucracy.rsi
+    netsync: false
+    layers:
+      - state: envelope_station_goal
+
+- type: entity
+  id: TrashEnvelope
+  parent: BaseItem
+  name: trash
+  description: 'Crumpled piece of paper.'
+  components:
+  - type: Sprite
+    sprite: Objects/Misc/bureaucracy.rsi
+    state: envelope_unwrapped
+
 - type: entity
   name: IAA rubber stamp
   parent: RubberStampMime

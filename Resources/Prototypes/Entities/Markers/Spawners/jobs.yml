@@ -427,6 +427,18 @@
       - state: green
       - state: detective
 
+- type: entity
+  id: SpawnPointBrigmedic
+  parent: SpawnPointJobBase
+  name: brigmedic
+  components:
+  - type: SpawnPoint
+    job_id: Brigmedic
+  - type: Sprite
+    layers:
+      - state: green
+      - state: brigmed
+
 # SPECIAL
 # ERT
 - type: entity
@@ -526,7 +538,7 @@
     layers:
       - state: green
       - state: zookeeper
-      
+
 - type: entity
   id: SpawnPointCCAgent
   parent: SpawnPointJobBase
@@ -539,8 +551,8 @@
       - state: green
       - state: lawyer
 
-#Expedition
 
+#Expedition
 - type: entity
   id: SpawnPointFileldMedic
   parent: SpawnPointJobBase

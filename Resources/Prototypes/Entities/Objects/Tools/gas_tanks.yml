@@ -35,6 +35,11 @@
     damage:
       types:
         Blunt: 10
+  - type: PhysicalComposition
+    materialComposition:
+      Steel: 400
+  - type: StaticPrice
+    price: 20
 
 - type: entity
   parent: GasTankBase
@@ -47,7 +52,7 @@
   - type: GasTank
     outputPressure: 21.27825
     air:
-      volume: 20
+      volume: 70
       temperature: 293.15
     tankLowPressure: 30.0
   - type: Clothing
@@ -95,7 +100,7 @@
   - type: GasTank
     outputPressure: 21.27825
     air:
-      volume: 6
+      volume: 3
       temperature: 293.15
   - type: Item
     size: 10
@@ -109,32 +114,9 @@
     damage:
       types:
         Blunt: 5
-
-- type: entity
-  parent: OxygenTank
-  id: EmergencyAirTank
-  name: emergency air tank
-  description: Used for emergencies. Contains very little oxygen, so try to conserve it until you actually need it.
-  components:
-  - type: Sprite
-    sprite: Objects/Tanks/emergency_white.rsi
-  - type: GasTank
-    outputPressure: 21.27825
-    air:
-      volume: 6
-      temperature: 293.15
-  - type: Item
-    size: 10
-  - type: Clothing
-    sprite: Objects/Tanks/emergency_white.rsi
-    slots:
-    - Pocket
-    - Belt
-    - suitStorage
-  - type: MeleeWeapon
-    damage:
-      types:
-        Blunt: 5
+  - type: PhysicalComposition
+    materialComposition:
+      Steel: 100
 
 - type: entity
   parent: EmergencyOxygenTank
@@ -148,7 +130,7 @@
   - type: GasTank
     outputPressure: 21.27825
     air:
-      volume: 8
+      volume: 6
       temperature: 293.15
   - type: Item
     size: 10
@@ -169,7 +151,7 @@
   - type: GasTank
     outputPressure: 21.27825
     air:
-      volume: 16
+      volume: 12
       temperature: 293.15
   - type: Item
     size: 10
@@ -196,7 +178,7 @@
     - type: GasTank
       outputPressure: 101.325
       air:
-        volume: 20
+        volume: 70
         temperature: 293.15
     - type: Clothing
       sprite: Objects/Tanks/generic.rsi
@@ -215,7 +197,7 @@
     - type: GasTank
       outputPressure: 101.325
       air:
-        volume: 20
+        volume: 70
         temperature: 293.15
     - type: Clothing
       sprite: Objects/Tanks/anesthetic.rsi
@@ -234,7 +216,7 @@
     - type: GasTank
       outputPressure: 101.325
       air:
-        volume: 20
+        volume: 70
         temperature: 293.15
     - type: Item
       size: 10
@@ -243,3 +225,32 @@
       slots:
         - Belt
         - suitStorage
+
+- type: entity
+  parent: OxygenTank
+  id: EmergencyAirTank
+  name: emergency air tank
+  description: Used for emergencies. Contains very little oxygen, so try to conserve it until you actually need it.
+  components:
+  - type: Sprite
+    sprite: Objects/Tanks/emergency_white.rsi
+  - type: GasTank
+    outputPressure: 21.27825
+    air:
+      volume: 6
+      temperature: 293.15
+  - type: Item
+    size: 10
+  - type: Clothing
+    sprite: Objects/Tanks/emergency_white.rsi
+    slots:
+    - Pocket
+    - Belt
+    - suitStorage
+  - type: MeleeWeapon
+    damage:
+      types:
+        Blunt: 5
+  - type: PhysicalComposition
+    materialComposition:
+      Steel: 100
