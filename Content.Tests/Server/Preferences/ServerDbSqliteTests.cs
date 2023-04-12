@@ -34,7 +34,7 @@ namespace Content.Tests.Server.Preferences
   - Aaliyah
 
 - type: dataset
-  id: names_last
+  id: names_last_male 
   values:
   - Ackerley
 
