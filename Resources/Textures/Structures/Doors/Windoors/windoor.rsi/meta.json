@@ -160,6 +160,10 @@
             "name":"bolted_open_unlit",
             "directions":4
         },
+		{
+            "name":"emergency_open_unlit",
+            "directions":4
+        },
         {
             "name":"welded",
             "directions":4
