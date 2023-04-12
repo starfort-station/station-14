@@ -5,12 +5,15 @@
   - type: StorageFill
     contents:
       - id: MopItem
+        amount: 1
       - id: MopBucket
+        amount: 1
       - id: Bucket
         amount: 3
       - id: WetFloorSign
         amount: 2
       - id: Soap
+        amount: 1
       - id: SprayBottleSpaceCleaner
         amount: 2
       - id: TrashBag
@@ -23,7 +26,9 @@
   - type: StorageFill
     contents:
       - id: BoxLighttube
+        amount: 1
       - id: BoxLightbulb
+        amount: 1
 
 - type: entity
   id: CrateMousetrapBoxes
@@ -32,6 +37,7 @@
     - type: StorageFill
       contents:
         - id: BoxMousetrap
+          amount: 1
 
 - type: entity
   id: CrateServiceSmokeables
@@ -110,7 +116,9 @@
   - type: StorageFill
     contents:
     - id: BoxPDA
+      amount: 1
     - id: BoxID
+      amount: 1
 
 - type: entity
   id: CrateServiceBooks

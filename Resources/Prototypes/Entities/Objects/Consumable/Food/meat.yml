@@ -225,7 +225,6 @@
   - type: Tag
     tags:
     - Raw
-    - HighRiskItem
   - type: Sprite
     state: corgi
   - type: SolutionContainerManager

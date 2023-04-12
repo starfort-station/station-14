@@ -45,9 +45,7 @@
   - type: Tag
     tags:
     - Trash
-  - type: PhysicalComposition
-    materialComposition:
-      Glass: 100
+  - type: Recyclable
   - type: SpaceGarbage
 
 - type: entity
@@ -63,6 +61,7 @@
   - type: Tag
     tags:
     - Trash
+  - type: Recyclable
   - type: SpaceGarbage
 
 # Small Plate
@@ -148,7 +147,5 @@
   - type: Tag
     tags:
     - Trash
-  - type: PhysicalComposition
-    materialComposition:
-      Steel: 100
+  - type: Recyclable
   - type: SpaceGarbage

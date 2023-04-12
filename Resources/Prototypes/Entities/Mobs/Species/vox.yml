@@ -96,7 +96,6 @@
     # canColorFacialHair: false
   - type: Inventory
     speciesId: vox
-  - type: InventorySlots
   - type: Butcherable
     butcheringType: Spike
     spawned:

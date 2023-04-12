@@ -17,14 +17,13 @@
       visuals:
         - type: ParticleAcceleratorPartVisualizer
           baseState: unlit
-    - type: ParticleAcceleratorPart
     - type: ParticleAcceleratorFuelChamber
     - type: Construction
       graph: ParticleAcceleratorFuelChamber
       node: completed
     - type: GuideHelp
       guides: [ Singularity, Power ]
-
+      
 # Unfinished
 
 - type: entity

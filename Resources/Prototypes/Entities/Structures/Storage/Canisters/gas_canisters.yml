@@ -608,9 +608,7 @@
         - MachineMask
         layer:
         - MachineLayer
-    - type: PhysicalComposition
-      materialComposition:
-        Steel: 500
+    - type: Recyclable
     - type: StaticPrice
       price: 60
 

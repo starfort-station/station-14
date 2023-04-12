@@ -38,6 +38,8 @@
     noRot: true
     drawdepth: Mobs
     netsync: false
+  - type: Recyclable
+    safe: false
   - type: Faction
     factions:
     - SimpleNeutral

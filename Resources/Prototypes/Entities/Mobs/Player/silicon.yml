@@ -56,6 +56,8 @@
   - type: Pullable
   - type: Examiner
   - type: Puller
+  - type: Recyclable
+    safe: false
   - type: StandingState
   - type: Alerts
   - type: Tag
@@ -78,7 +80,6 @@
     group: Drone
   - type: Inventory
     templateId: drone
-  - type: InventorySlots
   - type: Strippable
   - type: UserInterface
     interfaces:

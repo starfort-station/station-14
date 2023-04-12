@@ -25,6 +25,7 @@
       - id: MaterialCloth
         amount: 2
       - id: MaterialDurathread
+        amount: 1
 
 - type: entity
   id: CrateMaterialPlastic
@@ -42,6 +43,7 @@
   - type: StorageFill
     contents:
       - id: MaterialWoodPlank
+        amount: 1
 
 - type: entity
   id: CrateMaterialPlasteel

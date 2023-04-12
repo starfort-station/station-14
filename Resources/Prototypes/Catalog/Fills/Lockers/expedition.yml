@@ -1,0 +1,45 @@
+- type: entity
+  id: LockerFieldTroopFilled
+  suffix: Expedition, Filled
+  parent: LockerFieldTroop
+  components:
+  - type: StorageFill
+    contents:
+      - id: FlashlightSeclite
+      - id: ClothingHeadsetExpedition
+      - id: ClothingHandsGlovesColorBlack
+      - id: ClothingShoesBootsJack
+      - id: WeaponRifleLecter
+      - id: ClothingShoesBootsMag
+      - id: ClothingMaskGasExplorer
+
+- type: entity
+  id: LockerFieldSciFilled
+  suffix: Expedition, Filled
+  parent: LockerFieldSci
+  components:
+  - type: StorageFill
+    contents:
+      - id: ClothingHandsGlovesLatex
+      - id: ClothingHeadsetExpedition
+      - id: ClothingMaskSterile
+      - id: NodeScanner
+      - id: MedkitFilled
+      - id: ClothingShoesBootsMag
+      - id: ClothingMaskGasExplorer
+
+- type: entity
+  id: LockerFieldMedFilled
+  suffix: Filled
+  parent: LockerFieldMed
+  components:
+  - type: StorageFill
+    contents:
+      - id: HandheldHealthAnalyzer
+      - id: ClothingHandsGlovesLatex
+      - id: ClothingHeadsetExpedition
+      - id: ClothingBeltMedicalFilled
+      - id: ClothingMaskSterile
+      - id: ClothingShoesBootsMag
+      - id: MedkitFilled
+      - id: ClothingMaskGasExplorer

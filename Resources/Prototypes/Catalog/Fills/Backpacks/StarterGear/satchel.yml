@@ -7,15 +7,14 @@
     contents:
       - id: BoxSurvival
 
-- type: entity
-  noSpawn: true
-  parent: ClothingBackpackSatchelClown
-  id: ClothingBackpackSatchelClownFilled
-  components:
-  - type: StorageFill
-    contents:
-      - id: BoxHug
-      - id: RubberStampClown
+#- type: entity
+#  noSpawn: true
+#  parent: ClothingBackpackSatchelClown
+#  id: ClothingBackpackSatchelClownFilled
+#  components:
+#  - type: StorageFill
+#    contents:
+#      - id: BoxHug
 
 - type: entity
   noSpawn: true
@@ -87,7 +86,7 @@
   components:
   - type: StorageFill
     contents:
-      - id: BoxSurvival
+      - id: BoxSurvivalMedical
       - id: Flash
       #- id: TelescopicBaton
 
@@ -109,7 +108,7 @@
   components:
   - type: StorageFill
     contents:
-      - id: BoxSurvival
+      - id: BoxSurvivalSecurity
       - id: Flash
 
 - type: entity
@@ -146,7 +145,7 @@
   components:
   - type: StorageFill
     contents:
-      - id: BoxSurvival
+      - id: BoxSurvivalMedical
 
 - type: entity
   noSpawn: true
@@ -187,7 +186,7 @@
   components:
     - type: StorageFill
       contents:
-      - id: BoxSurvival
+      - id: BoxSurvivalSecurity
       - id: Lighter
       - id: CigPackBlack
       - id: BoxForensicPad

@@ -5,6 +5,7 @@
   id: MobHuman
   components:
   - type: CombatMode
+    disarm: null
   - type: InteractionPopup
     successChance: 1
     interactSuccessString: hugging-success-generic
@@ -43,7 +44,7 @@
       prototype: SyndicateOperativeGearExtremelyBasic
       prototypes: [SyndicateOperativeGearExtremelyBasic]
     - type: RandomMetadata
-      nameSegments: [names_death_commando]
+      nameSegments: [corvax_names_death_commando] # Corvax-Localization
     - type: Faction
       factions:
       - Syndicate

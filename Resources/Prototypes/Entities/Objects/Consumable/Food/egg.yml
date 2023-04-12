@@ -67,6 +67,25 @@
         acts: [ "Destruction" ]
 
 # Splat
+
+- type: entity
+  name: egg
+  id: PuddleEgg
+  parent: PuddleBase
+  description: If the floor was a little hotter this would fry.
+  components:
+  - type: Sprite
+    sprite: Fluids/egg_splat.rsi
+    state: egg-0
+    netsync: false
+  - type: SolutionContainerManager
+    solutions:
+      puddle:
+        maxVol: 1000
+        reagents:
+        - ReagentId: Egg
+          Quantity: 2
+
 - type: entity
   name: eggshells
   parent: BaseItem
@@ -91,6 +110,7 @@
     tags:
     - Egg
     - Trash
+  - type: Recyclable
   - type: SpaceGarbage
 
 # Egg

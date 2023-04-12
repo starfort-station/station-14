@@ -265,33 +265,23 @@
   parent: ClothingUniformBase
   id: ClothingUniformJumpsuitHoS
   name: head of security's jumpsuit
-  description: It's bright red and rather crisp, much like security's victims tend to be. Its sturdy fabric provides minor protection from slash and pierce damage.
+  description: It's bright red and rather crisp, much like security's victims tend to be.
   components:
   - type: Sprite
     sprite: Clothing/Uniforms/Jumpsuit/hos.rsi
   - type: Clothing
     sprite: Clothing/Uniforms/Jumpsuit/hos.rsi
-  - type: Armor
-    modifiers:
-      coefficients:
-        Slash: 0.9
-        Piercing: 0.9  
 
 - type: entity
   parent: ClothingUniformBase
   id: ClothingUniformJumpsuitHoSAlt
   name: head of security's turtleneck
-  description: It's a turtleneck worn by those strong and disciplined enough to achieve the position of Head of Security. Its sturdy fabric provides minor protection from slash and pierce damage.
+  description: It's a turtleneck worn by those strong and disciplined enough to achieve the position of Head of Security. Its sturdy fabric provides minor protection from mechanical damage.
   components:
   - type: Sprite
     sprite: Clothing/Uniforms/Jumpsuit/hos_alt.rsi
   - type: Clothing
     sprite: Clothing/Uniforms/Jumpsuit/hos_alt.rsi
-  - type: Armor
-    modifiers:
-      coefficients:
-        Slash: 0.9
-        Piercing: 0.9  
 
 - type: entity
   parent: ClothingUniformBase
@@ -382,19 +372,6 @@
     sprite: Clothing/Uniforms/Jumpsuit/paramedic.rsi
   - type: Clothing
     sprite: Clothing/Uniforms/Jumpsuit/paramedic.rsi
-  - type: DiseaseProtection
-    protection: 0.1
-
-- type: entity
-  parent: ClothingUniformBase
-  id: ClothingUniformJumpsuitBrigmedic
-  name: brigmedic jumpsuit
-  description: The uniform is issued to qualified persons who have been trained, but no one cares that the training took place half a day.
-  components:
-  - type: Sprite
-    sprite: Clothing/Uniforms/Jumpsuit/brigmedic.rsi
-  - type: Clothing
-    sprite: Clothing/Uniforms/Jumpsuit/brigmedic.rsi
   - type: DiseaseProtection
     protection: 0.1
 
@@ -1055,13 +1032,33 @@
 
 - type: entity
   parent: ClothingUniformBase
-  id: ClothingUniformJumpsuitPirate
-  name: pirate slops
-  description: A pirate variation of a space sailor's jumpsuit.
+  id: ClothingUniformJumpsuitFieldTrooper
+  name: field trooper jumpsuit
+  description: Uniform for expedition squad performing operations in deep space.
   components:
   - type: Sprite
-    sprite: Clothing/Uniforms/Jumpsuit/pirate.rsi
+    sprite: Clothing/Uniforms/Jumpsuit/field_trooper.rsi
   - type: Clothing
-    sprite: Clothing/Uniforms/Jumpsuit/pirate.rsi
-  - type: AddAccentClothing
-    accent: PirateAccent
+    sprite: Clothing/Uniforms/Jumpsuit/field_trooper.rsi
+    
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitFieldScientist
+  name: field scientist jumpsuit
+  description: Uniform for expedition squad performing operations in deep space.
+  components:
+  - type: Sprite
+    sprite: Clothing/Uniforms/Jumpsuit/field_scientist.rsi
+  - type: Clothing
+    sprite: Clothing/Uniforms/Jumpsuit/field_scientist.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitFieldMedic
+  name: field medic jumpsuit
+  description: Uniform for expedition squad performing operations in deep space.
+  components:
+  - type: Sprite
+    sprite: Clothing/Uniforms/Jumpsuit/field_medic.rsi
+  - type: Clothing
+    sprite: Clothing/Uniforms/Jumpsuit/field_medic.rsi

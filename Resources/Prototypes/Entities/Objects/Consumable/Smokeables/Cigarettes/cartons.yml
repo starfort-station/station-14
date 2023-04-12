@@ -24,9 +24,7 @@
   - type: Tag
     tags:
     - Trash
-  - type: PhysicalComposition
-    materialComposition:
-      Plastic: 50
+  - type: Recyclable
   - type: SpaceGarbage
 
 - type: entity

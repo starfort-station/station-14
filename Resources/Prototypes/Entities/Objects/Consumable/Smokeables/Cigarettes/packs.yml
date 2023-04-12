@@ -8,9 +8,7 @@
     tags:
     - CigPack
     - Trash
-  - type: PhysicalComposition
-    materialComposition:
-      Steel: 50
+  - type: Recyclable
   - type: SpaceGarbage
   - type: Storage
     capacity: 6

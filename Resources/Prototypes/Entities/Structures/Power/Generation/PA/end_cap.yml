@@ -7,7 +7,6 @@
     - type: Sprite
       sprite: Structures/Power/Generation/PA/end_cap.rsi
       state: capc
-    - type: ParticleAcceleratorPart
     - type: ParticleAcceleratorEndCap
     - type: Construction
       graph: ParticleAcceleratorEndCap

@@ -54,3 +54,9 @@ ent-CrateVendingMachineRestockTankDispenser = { ent-CrateVendingMachineRestockTa
 
 ent-CrateVendingMachineRestockHappyHonk = { ent-CrateVendingMachineRestockHappyHonkFilled }
     .desc = { ent-CrateVendingMachineRestockHappyHonkFilled.desc }
+
+ent-CrateVendingMachineRestockExpeditionEquipment = { ent-CrateVendingMachineRestockExpeditionEquipmentFilled }
+    .desc = { ent-CrateVendingMachineRestockExpeditionEquipmentFilled.desc }
+
+ent-CrateVendingMachineRestockExpeditionDrobeEquipment = { ent-CrateVendingMachineRestockExpeditionDrobeEquipmentFilled }
+    .desc = { ent-CrateVendingMachineRestockExpeditionDrobeEquipmentFilled.desc }

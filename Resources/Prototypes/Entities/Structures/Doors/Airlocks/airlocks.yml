@@ -86,8 +86,15 @@
   - type: Sprite
     sprite: Structures/Doors/Airlocks/Standard/maint.rsi
 
+- type: entity
+  parent: Airlock
+  id: AirlockExpedition
+  suffix: Expedition
+  components:
+  - type: Sprite
+    sprite: Structures/Doors/Airlocks/Standard/expedition.rsi
+    
 # Glass
-
 - type: entity
   id: AirlockGlass
   parent: Airlock
@@ -212,5 +219,15 @@
   components:
   - type: Sprite
     sprite: Structures/Doors/Airlocks/Glass/security.rsi
+  - type: PaintableAirlock
+    group: Glass
+
+- type: entity
+  parent: AirlockGlass
+  id: AirlockExpeditionGlass
+  suffix: Expedition
+  components:
+  - type: Sprite
+    sprite: Structures/Doors/Airlocks/Glass/expedition.rsi
   - type: PaintableAirlock
     group: Glass

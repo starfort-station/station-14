@@ -16,12 +16,6 @@
         visible: false
   - type: Item
     sprite: Objects/Specific/Chemistry/beaker.rsi
-  - type: MeleeWeapon
-    soundNoDamage:
-      path: "/Audio/Effects/Fluids/splat.ogg"
-    damage:
-      types:
-        Blunt: 0
   - type: SolutionContainerManager
     solutions:
       beaker:
@@ -296,7 +290,7 @@
   - type: SolutionContainerManager
     solutions:
       food:
-        maxVol: 20
+        maxVol: 50
   - type: SolutionSpiker
     sourceSolution: food
   - type: DeleteOnTrigger

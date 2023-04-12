@@ -58,10 +58,6 @@
     sprintModifier: 1
     enabled: false
   - type: NoSlip
-  - type: Tag
-    tags:
-    - WhitelistChameleon
-    - HighRiskItem
   - type: StaticPrice
     price: 750
 

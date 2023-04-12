@@ -43,11 +43,11 @@
             - !type:SpawnEntitiesBehavior
               spawn:
                 SheetSteel:
-                  min: 2
-                  max: 2
+                  min: 5
+                  max: 5
                 SheetGlass:
-                  min: 2
-                  max: 2
+                  min: 5
+                  max: 5
     - type: StaticPrice
       price: 50
 

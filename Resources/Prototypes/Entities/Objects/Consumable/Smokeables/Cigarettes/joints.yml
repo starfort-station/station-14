@@ -12,6 +12,7 @@
     tags:
       - Cigarette
       - Trash
+  - type: Recyclable
   - type: SpaceGarbage
   - type: Clothing
     sprite: Objects/Consumable/Smokeables/Cannabis/joint.rsi
@@ -44,6 +45,7 @@
     tags:
       - Cigarette
       - Trash
+  - type: Recyclable
   - type: SpaceGarbage
   - type: Clothing
     sprite: Objects/Consumable/Smokeables/Cannabis/blunt.rsi

@@ -37,14 +37,3 @@
     contents:
       - id: WeaponLaserGun
         amount: 3
-
-- type: entity
-  id: CrateArmoryPistols
-  parent: CrateWeaponSecure
-  components:
-  - type: StorageFill
-    contents:
-    - id: WeaponPistolMk58
-      amount: 2
-    - id: MagazinePistol
-      amount: 4

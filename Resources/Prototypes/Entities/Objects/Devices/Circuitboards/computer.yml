@@ -13,11 +13,6 @@
         - DroneUsable
     - type: StaticPrice
       price: 100
-    - type: PhysicalComposition
-      materialComposition:
-        Glass: 400
-      chemicalComposition:
-        Silicon: 20
 
 - type: entity
   parent: BaseComputerCircuitboard
@@ -73,10 +68,6 @@
       prototype: ComputerCargoOrders
     - type: StaticPrice
       price: 750
-    - type: Tag
-      tags:
-      - DroneUsable
-      - HighRiskItem
 
 - type: entity
   parent: BaseComputerCircuitboard
@@ -187,10 +178,6 @@
       prototype: ComputerId
     - type: StaticPrice
       price: 750
-    - type: Tag
-      tags:
-      - DroneUsable
-      - HighRiskItem
 
 - type: entity
   parent: BaseComputerCircuitboard
