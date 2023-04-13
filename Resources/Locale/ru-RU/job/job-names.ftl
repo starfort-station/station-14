@@ -1,6 +1,7 @@
 job-name-warden = смотритель
 job-name-security = офицер СБ
 job-name-cadet = кадет СБ
+job-name-brigmedic = бригмедик
 job-name-hos = глава службы безопасности
 job-name-detective = детектив
 job-name-scientist = учёный
@@ -83,6 +84,7 @@ JobSalvageSpecialist = утилизатор
 JobScientist = учёный
 JobSecurityCadet = кадет СБ
 JobSecurityOfficer = офицер СБ
+JobBrigmedic = бригмедик
 JobServiceWorker = сервисный работник
 JobStationEngineer = инженер
 JobTechnicalAssistant = технический ассистент

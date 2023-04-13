@@ -10,3 +10,6 @@ ent-LockerDetectiveFilled = { ent-LockerDetective }
 ent-ClosetBombFilled = { ent-ClosetBomb }
     .suffix = Заполненный
     .desc = { ent-ClosetBomb.desc }
+ent-LockerBrigmedicFilled = { ent-LockerSecurity }
+    .suffix = Заполненный
+    .desc = { ent-LockerSecurity.desc }

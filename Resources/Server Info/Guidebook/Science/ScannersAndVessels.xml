@@ -1,24 +1,23 @@
 <Document>
-## Anomaly Scanner
+## Сканер аномалий
 
-The Anomaly Scanner is used to gather various information on anomalies. They can be found inside of the lockers in the science department.
+Сканер аномалий используется для сбора различной информации об аномалиях. Их можно найти внутри шкафчиков в научном отделе.
 
 <Box>
 <GuideEntityEmbed Entity="AnomalyScanner"/>
 </Box>
 
-Scanning an anomaly shows the severity, general stability, approximate point output, reactions with particle types, and time until the next pulse. The reaction types, specifically, can be used in conjunction with the A.P.E. to manipulate anomalies.
+Сканирование аномалии показывает ее серьезность, общую стабильность, приблизительный выход точки, реакции с типами частиц и время до следующего импульса. Типы реакции, в частности, могут быть использованы в сочетании с A.P.E. для манипулирования аномалиями.
 
-## Anomaly Vessel
+## Сосуд аномалий
 
-The anomaly vessel is a machine that generates points from anomalies. Use the anomaly scanner on an empty vessel, and the anomaly that was last scanned will be synced with the vessel.
+Сосуд аномалий - это машина, которая генерирует точки из аномалий. Используйте сканер аномалий на пустом судне, и аномалия, которая была просканирована последней, будет синхронизирована с судном.
 
 <Box>
 <GuideEntityEmbed Entity="MachineAnomalyVessel"/>
 </Box>
 
-The amount of points a vessel generates per second is based on the severity, stability, and health of an anomaly. The higher each of these values, the higher the point output will be.
+Количество очков, генерируемых судном в секунду, зависит от серьезности, стабильности и здоровья аномалии. Чем выше каждое из этих значений, тем больше очков будет вырабатываться.
 
-Be careful: if an anomaly goes [color=#a4885c]supercritical[/color], the vessel it is linked to will explode. This may damage the station and nearby equipment.
-
+Будьте осторожны: если аномалия станет [color=#a4885c]сверхкритической[/color], судно, с которым она связана, взорвется. Это может повредить станцию и близлежащее оборудование.
 </Document>

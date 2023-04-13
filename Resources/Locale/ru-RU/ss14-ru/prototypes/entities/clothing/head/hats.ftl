@@ -139,3 +139,6 @@ ent-ClothingHeadHatJesterAlt = { ent-ClothingHeadHatJester }
 ent-ClothingHeadHatBeretCmo = берет главного врача
     .desc = Бирюзовый берет с крестом на передней части. Его вид успокаивает и внушает надежду, что вас обязательно вылечат.
     .suffix = { "" }
+ent-ClothingHeadHatPirateTricord = пиратская триуголка
+    .desc = { "" }
+    .suffix = { "" }

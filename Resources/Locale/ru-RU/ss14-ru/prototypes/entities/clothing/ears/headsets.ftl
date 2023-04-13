@@ -46,3 +46,6 @@ ent-ClothingHeadsetService = гарнитура сервисного отдел�
 ent-ClothingHeadsetGrey = гарнитура пассажира
     .desc = { ent-ClothingHeadset.desc }
     .suffix = { "" }
+ent-ClothingHeadsetExpedition = гарнитура экспедитора
+    .desc = { ent-ClothingHeadset.desc }
+    .suffix = { "" }

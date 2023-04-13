@@ -16,3 +16,6 @@ ent-WeaponLauncherAdmemeMeteorLarge = пускатель метеоритов
 ent-WeaponLauncherAdmemeImmovableRodSlow = пускатель неподвижного жезла
     .desc = Стреляет неподвижными жезлами.
     .suffix = Адмемы
+ent-WeaponLauncherPirateCannon = пушка пиратов
+    .desc = Кабум!
+    .suffix = { "" }
