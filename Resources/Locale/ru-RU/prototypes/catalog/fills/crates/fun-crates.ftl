@@ -45,4 +45,4 @@ ent-CrateFunInstrumentsString = ящик струнных инструменто
 ent-CrateFunInstrumentsVariety = ящик разных инструментов
     .desc = В ящике находятся разные инструменты
 ent-CrateFunInstrumentsWoodwind = ящик духовых инструментов
-    .desc = В ящике находятся духовные инструменты
+    .desc = В ящике находятся духовые инструменты
