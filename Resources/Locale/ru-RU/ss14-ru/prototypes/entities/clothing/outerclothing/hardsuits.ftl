@@ -94,4 +94,6 @@ ent-ClothingOuterHardsuitPirateCap = скафандр капитана пира�
 ent-ClothingOuterHardsuitPirateEVA = скафандр для выхода в открытый космос
     .desc = { "" }
     .suffix = { "" }
-
+ent-ClothingOuterHardsuitClown = скафандр клоуна
+    .desc = Самодельный скафандр клоуна
+    .suffix = { "" }

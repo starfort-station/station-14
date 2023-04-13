@@ -4,6 +4,9 @@ ent-ClothingBackpackSatchel = сумка
 ent-ClothingBackpackSatchelLeather = кожаная сумка
     .desc = Модная сумка из ушедшей эпохи.
     .suffix = { "" }
+ent-ClothingBackpackPirateFilled = { ent-ClothingBackpackSatchelLeather }
+    .desc = { ent-ClothingBackpackSatchelLeather.desc }
+    .suffix = { "" }
 ent-ClothingBackpackSatchelEngineering = сумка инженера
     .desc = Прочная сумка с дополнительными карманами.
     .suffix = { "" }
@@ -37,3 +40,7 @@ ent-ClothingBackpackSatchelSalvage = сумка утилизатора
 ent-ClothingBackpackSatchelHolding = сумка хранения
     .desc = Сумка, открывающаяся в локальный карман блюспейса.
     .suffix = { "" }
+ent-ClothingBackpackSatchelClown = сумка клоуна
+    .desc = Для более быстрого побега от службы безопасности.
+    .suffix = { "" }
+

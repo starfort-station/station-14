@@ -82,3 +82,6 @@ ent-ClothingHeadHelmetHardsuitPirateCap = шлем скафандра капит
 ent-ClothingHeadHelmetHardsuitPirateEVA = шлем скафандра для выхода в открытый космос
     .desc = { "" }
     .suffix = { "" }
+ent-ClothingHeadHelmetHardsuitClown = шлем скафандра клоуна
+    .desc = Шлем скафандра клоуна
+    .suffix = { "" }

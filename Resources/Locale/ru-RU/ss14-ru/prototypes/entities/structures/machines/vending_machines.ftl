@@ -196,3 +196,6 @@ ent-VendingMachineExpidition = ЭкспедиторМаг
 ent-VendingMachineExpeditionDrobe = ЭкспедиторШкаф
     .desc = На случай, если вы хотите выглядеть крутыми парнями.
     .suffix = { "" }
+ent-VendingMachineChang = торгомат пропитания
+    .desc = Пропитание для закелючёных.
+    .suffix = { "" }
