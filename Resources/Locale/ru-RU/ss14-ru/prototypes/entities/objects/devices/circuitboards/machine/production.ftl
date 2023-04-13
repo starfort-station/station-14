@@ -136,3 +136,6 @@ ent-SodaDispenserMachineCircuitboard = раздатчик безалкоголя
 ent-TelecomServerCircuitboard = телекоммуникационный сервер (машинная плата)
     .desc = Печатная плата телекоммуникационного сервера.
     .suffix = { "" }
+ent-MaterialReclaimerMachineCircuitboard = переработчик (машинная плата)
+    .desc = Печатная плата переработчика.
+    .suffix = { "" }

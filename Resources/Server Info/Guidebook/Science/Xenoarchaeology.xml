@@ -1,29 +1,29 @@
 <Document>
-# Xenoarchaeology
-Xenoarchaeology is a science subdepartment focused on researching and experimenting on alien artifacts.
+# Ксеноархеология
+Ксеноархеология - это научное подразделение, занимающееся исследованиями и экспериментами над инопланетными артефактами.
 
-## Artifacts
+## Артефакты
 <Box>
 <GuideEntityEmbed Entity="SimpleXenoArtifact" Caption=""/>
 <GuideEntityEmbed Entity="SimpleXenoArtifactItem" Caption=""/>
 </Box>
-Artifacts consist of a randomly-generated graph structure. They consist of nodes connected to each other by edges, the traversal of which is the main goal of the scientists working on them.
+Артефакты состоят из случайно сгенерированной графовой структуры. Они состоят из узлов, соединенных друг с другом ребрами, обход которых является основной целью ученых, работающих над ними.
 
-Each node has two main components: a [color=#a4885c]stimulus[/color] and a [color=#a4885c]reaction[/color]. A stimulus is the external behavior that triggers the reaction. Some reactions are instantaneous effects while others are permanent changes. Triggering the reaction causes the artifact to move to one of the node's edges.
+Каждый узел состоит из двух основных компонентов: [color=#a4885c]стимула[/color] и [color=#a4885c]реакции[/color]. Стимул - это внешнее поведение, которое вызывает реакцию. Некоторые реакции вызывают мгновенный эффект, в то время как другие являются постоянными изменениями. Срабатывание реакции вызывает перемещение артефакта к одному из ребер узла.
 
-With these basic principles, you can begin to grasp how the different nodes of an artifact are interconnected, and how one can move between them by repeatedly activating nodes. 
+Зная эти основные принципы, вы можете понять, как связаны между собой различные узлы артефакта и как можно перемещаться между ними, многократно активируя узлы. 
 
-While it might seem random to an untrained eye, a skilled scientist can learn to understand the internal structure of any artifact.
+Хотя нетренированному глазу это может показаться случайным, опытный ученый может научиться понимать внутреннюю структуру любого артефакта.
 
-## Artifact Analyzer and Analysis Console
+## Анализатор артефактов и консоль анализа
 <Box>
 <GuideEntityEmbed Entity="MachineArtifactAnalyzer"/>
 <GuideEntityEmbed Entity="ComputerAnalysisConsole"/>
 </Box>
-The main equipment that you'll be using for Xenoarchaeology is the [color=#a4885c]artifact analyzer[/color] and the [color=#a4885c]analysis console[/color]. You can use these to create reports that contain valuable information about an artifact. 
+Основное оборудование, которое вы будете использовать в ксеноархеологии, - это [color=#a4885c]анализатор артефактов[/color] и [color=#a4885c]консоль анализа[/color]. С их помощью можно создавать отчеты, содержащие ценную информацию об артефакте. 
 
-To set them up, simply link them with a multitool, set an artifact on top of the analyzer, and press the [color=#a4885c]Scan[/color] button.
+Чтобы настроить их, просто соедините их с мультиинструментом, положите артефакт на анализатор и нажмите кнопку [color=#a4885c]Сканировать[/color].
 
-Using the console, you can permanently destroy an artifact in exchange for points. This is irreversible, so be sure to confirm with your department that all research on it has concluded.
+Используя консоль, вы можете навсегда уничтожить артефакт в обмен на очки. Это необратимо, поэтому не забудьте уточнить в своем отделе, что все исследования артефакта завершены.
 
 </Document>

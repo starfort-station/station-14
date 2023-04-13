@@ -19,3 +19,6 @@ ent-GrenadeFlash = светошумовая граната
 ent-GrenadeFrag = осколочная граната
     .desc = { ent-BaseGrenade.desc }
     .suffix = { "" }
+ent-CannonBall = ядро для пушки
+    .desc = { "" }
+    .suffix = { "" }
