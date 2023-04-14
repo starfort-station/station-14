@@ -49,6 +49,14 @@
 
 - type: entity
   parent: SurveillanceCameraRouterBase
+  id: SurveillanceCameraRouterExpedition
+  suffix: Expedition
+  components:
+    - type: SurveillanceCameraRouter
+      subnetFrequency: SurveillanceCameraExpedition
+
+- type: entity
+  parent: SurveillanceCameraRouterBase
   id: SurveillanceCameraRouterSecurity
   suffix: Security
   components:
