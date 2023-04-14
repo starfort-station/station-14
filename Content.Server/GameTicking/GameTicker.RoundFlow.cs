@@ -25,6 +25,8 @@ using Robust.Shared.Asynchronous;
 using System.Net.Http;
 using Newtonsoft.Json;
 using System.Text;
+using Content.Shared.Destructible;
+using Microsoft.CodeAnalysis.CSharp.Syntax;
 
 namespace Content.Server.GameTicking
 {
@@ -287,7 +289,14 @@ namespace Content.Server.GameTicking
             Encoding.UTF8,
             "application/json");
 
-            var response = await hptclient.PostAsync(_cfg.GetCVar(CCVars.DiscordHookUrlRoundBot), jsonContent);
+            if (RoundIdC == "Empty")
+            {
+                
+            }
+            else
+            {
+                var response = await hptclient.PostAsync(_cfg.GetCVar(CCVars.DiscordHookUrlRoundBot), jsonContent);
+            }
         }
 
         private void RefreshLateJoinAllowed()
