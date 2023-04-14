@@ -87,6 +87,15 @@
     sprite: Structures/Doors/Airlocks/Standard/maint.rsi
 
 - type: entity
+  parent: AirlockMaint
+  id: AirlockMaintRadioactive
+  suffix: radioactive
+  components:
+    - type: RadiationSource
+      intensity: 2
+      slope: 0.5
+
+- type: entity
   parent: Airlock
   id: AirlockExpedition
   suffix: Expedition
@@ -131,6 +140,15 @@
     group: Windoor
   - type: RadiationBlocker
     resistance: 2
+
+- type: entity
+  parent: AirlockGlass
+  id: AirlockGlassRadioactive
+  suffix: radioactive
+  components:
+    - type: RadiationSource
+      intensity: 2
+      slope: 0.5
 
 - type: entity
   parent: AirlockGlass
