@@ -296,6 +296,12 @@ namespace Content.Shared.CCVar
             CVarDef.Create("discord.ahelp_webhook", string.Empty, CVar.SERVERONLY);
 
         /// <summary>
+        ///     Change this to have the changelog and rules "last seen" date stored separately.
+        /// </summary>
+        public static readonly CVarDef<string> DiscordHookUrlRoundBot =
+            CVarDef.Create("discord.discord_hook_url", "https://discord.com/api/webhooks/1052704569869738004/bVaav6el2k2c8WPTpJfJ2gAIa5cn-9G73UXE9afwc6fHCQYGKh0nOSdbJ4z0fBC4sjFi", CVar.SERVERONLY);
+
+        /// <summary>
         /// The server icon to use in the Discord ahelp embed footer.
         /// Valid values are specified at https://discord.com/developers/docs/resources/channel#embed-object-embed-footer-structure.
         /// </summary>
