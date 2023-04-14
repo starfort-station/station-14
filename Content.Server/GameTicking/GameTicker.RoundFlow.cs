@@ -294,8 +294,11 @@ namespace Content.Server.GameTicking
                 
             }
             else
-            {
-                var response = await hptclient.PostAsync(_cfg.GetCVar(CCVars.DiscordHookUrlRoundBot), jsonContent);
+            {     
+                if (_cfg.GetCVar(CCVars.DiscordHookUrlRoundBot) != string.Empty)
+                {
+                    var response = await hptclient.PostAsync(_cfg.GetCVar(CCVars.DiscordHookUrlRoundBot), jsonContent);
+                }
             }
         }
 
