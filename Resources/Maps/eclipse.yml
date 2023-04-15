@@ -94095,7 +94095,7 @@ entities:
     parent: 1
     type: Transform
 - uid: 11380
-  type: SpawnPointFileldTrooper
+  type: SpawnPointFieldTrooper
   components:
   - pos: -115.5,-20.5
     parent: 1
@@ -98197,13 +98197,13 @@ entities:
     parent: 1
     type: Transform
 - uid: 11982
-  type: SpawnPointFileldTrooper
+  type: SpawnPointFieldTrooper
   components:
   - pos: -115.5,-19.5
     parent: 1
     type: Transform
 - uid: 11983
-  type: SpawnPointFileldScientist
+  type: SpawnPointFieldScientist
   components:
   - pos: -113.5,-19.5
     parent: 1
@@ -98298,7 +98298,7 @@ entities:
     parent: 1
     type: Transform
 - uid: 11998
-  type: SpawnPointFileldMedic
+  type: SpawnPointFieldMedic
   components:
   - pos: -116.5,-19.5
     parent: 1
@@ -119389,7 +119389,7 @@ entities:
       id: docking
     type: Fixtures
 - uid: 14459
-  type: SpawnPointFileldScientist
+  type: SpawnPointFieldScientist
   components:
   - pos: -113.5,-20.5
     parent: 1
