@@ -2,6 +2,7 @@
   id: ExpeditorsDrobeInventory
   startingInventory:
     ClothingHeadsetExpedition: 3
+    EncryptionKeyExpedition: 3
     ClothingShoesBootsCombatFilled: 2
     ClothingBackpackExpedition: 3
     ClothingMaskGasExplorer: 2

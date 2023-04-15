@@ -595,7 +595,7 @@
         Blunt: 0.95
         Slash: 0.95
         Piercing: 0.95
-        
+
 # Expedition
 - type: entity
   noSpawn: true
@@ -610,7 +610,7 @@
   - type: Clothing
     sprite: Clothing/Head/Hardsuits/fieldmedic.rsi
   - type: PointLight
-    color: "#6b8e23"
+    color: "#39ff14"
   - type: PressureProtection
     highPressureMultiplier: 0.3
     lowPressureMultiplier: 7000
@@ -628,7 +628,7 @@
         Cold: 0.9
         Radiation: 0.75
         Caustic: 0.3
-  
+
 - type: entity
   noSpawn: true
   parent: ClothingHeadHardsuitWithLightBase
@@ -660,7 +660,7 @@
         Cold: 0.7
         Radiation: 0.5
         Caustic: 0.5
-        
+
 - type: entity
   noSpawn: true
   parent: ClothingHeadHardsuitWithLightBase
@@ -674,7 +674,7 @@
   - type: Clothing
     sprite: Clothing/Head/Hardsuits/fieldtrooper.rsi
   - type: PointLight
-    color: "#6b8e23"
+    color: "#39ff14"
   - type: PressureProtection
     highPressureMultiplier: 0.525
     lowPressureMultiplier: 10000

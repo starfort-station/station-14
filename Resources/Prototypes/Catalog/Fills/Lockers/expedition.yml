@@ -32,6 +32,10 @@
       - id: MedkitFilled
       - id: ClothingShoesBootsMag
       - id: ClothingMaskGasExplorer
+      - id: ModularGrenade
+      - id: ModularGrenade
+      - id: TimerTrigger
+      - id: TimerTrigger
       - id: ClothingShoesBootsCombatFilled
       - id: ClothingUniformJumpsuitFieldScientist
       - id: ClothingBackpackExpedition
