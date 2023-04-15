@@ -6,7 +6,7 @@
   - type: Sprite
     layers:
       - state: green
-      - sprite: Mobs\Aliens\Xenos\burrower.rsi
+      - sprite: Mobs/Aliens/Xenos/burrower.rsi
         state: crit
   - type: ConditionalSpawner
     prototypes:
@@ -20,7 +20,7 @@
   - type: Sprite
     layers:
       - state: green
-      - sprite: Mobs\Aliens\Xenos\praetorian.rsi
+      - sprite: Mobs/Aliens/Xenos/praetorian.rsi
         state: crit
   - type: ConditionalSpawner
     prototypes:
@@ -34,7 +34,7 @@
   - type: Sprite
     layers:
       - state: green
-      - sprite: Mobs\Aliens\Xenos\drone.rsi
+      - sprite: Mobs/Aliens/Xenos/drone.rsi
         state: crit
   - type: ConditionalSpawner
     prototypes:
@@ -48,7 +48,7 @@
   - type: Sprite
     layers:
       - state: green
-      - sprite: Mobs\Aliens\Xenos\queen.rsi
+      - sprite: Mobs/Aliens/Xenos/queen.rsi
         state: crit
   - type: ConditionalSpawner
     prototypes:
@@ -62,7 +62,7 @@
   - type: Sprite
     layers:
       - state: green
-      - sprite: Mobs\Aliens\Xenos\ravager.rsi
+      - sprite: Mobs/Aliens/Xenos/ravager.rsi
         state: crit
   - type: ConditionalSpawner
     prototypes:
@@ -76,7 +76,7 @@
   - type: Sprite
     layers:
       - state: green
-      - sprite: Mobs\Aliens\Xenos\runner.rsi
+      - sprite: Mobs/Aliens/Xenos/runner.rsi
         state: crit
   - type: ConditionalSpawner
     prototypes:
@@ -90,7 +90,7 @@
   - type: Sprite
     layers:
       - state: green
-      - sprite: Mobs\Aliens\Xenos\spitter.rsi
+      - sprite: Mobs/Aliens/Xenos/spitter.rsi
         state: crit
   - type: ConditionalSpawner
     prototypes:
@@ -104,7 +104,7 @@
   - type: Sprite
     layers:
       - state: green
-      - sprite: Mobs\Aliens\Xenos\drone.rsi
+      - sprite: Mobs/Aliens/Xenos/drone.rsi
         state: sleeping
   - type: RandomSpawner
     prototypes:
