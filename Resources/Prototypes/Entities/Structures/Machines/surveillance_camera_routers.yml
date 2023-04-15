@@ -38,6 +38,7 @@
         - SurveillanceCameraGeneral
         - SurveillanceCameraMedical
         - SurveillanceCameraCommand
+        - SurveillanceCameraExpedition
 
 - type: entity
   parent: SurveillanceCameraRouterBase

@@ -48,7 +48,7 @@
   name: device-frequency-prototype-name-surveillance-camera-entertainment
   frequency: 1939
 
- - type: deviceFrequency
+- type: deviceFrequency
   id: SurveillanceCameraExpedition
   name: device-frequency-prototype-name-surveillance-camera-expedition
   frequency: 1940 
