@@ -2,5 +2,9 @@
   id: ExpeditorsDrobeInventory
   startingInventory:
     ClothingHeadsetExpedition: 3
-    ClothingShoesBootsCombat: 2
+    ClothingShoesBootsCombatFilled: 2
     ClothingBackpackExpedition: 3
+    ClothingMaskGasExplorer: 2
+    ClothingUniformJumpsuitFieldTrooper: 2
+    ClothingUniformJumpsuitFieldScientist: 2
+    ClothingUniformJumpsuitFieldMedic: 2
