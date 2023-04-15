@@ -22,3 +22,6 @@ ent-WeaponShotgunHandmade = самодельный пистолет
 ent-WeaponShotgunBlunderbuss = мушкетон
     .desc = Смертелен на коротких дистанциях.
     .suffix = Дробовик
+ent-WeaponShotgunKammererAdmeme = бан шотган
+    .desc = Настал час расправы над аборигенами. Использует патроны калибра .50 ружейный.
+    .suffix = Адмемы, Дробовик
