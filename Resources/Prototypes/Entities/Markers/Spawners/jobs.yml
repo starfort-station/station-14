@@ -554,40 +554,40 @@
 
 #Expedition
 - type: entity
-  id: SpawnPointFileldMedic
+  id: SpawnPointFieldMedic
   parent: SpawnPointJobBase
-  name: FileldMedic
+  name: FieldMedic
   components:
   - type: SpawnPoint
     job_id: FieldMedic
   - type: Sprite
     layers:
       - state: green
-      - sprite: Markers\jobs.rsi
+      - sprite: Markers/jobs.rsi
         state: field_medic
 
 - type: entity
-  id: SpawnPointFileldScientist
+  id: SpawnPointFieldScientist
   parent: SpawnPointJobBase
-  name: FileldScientist
+  name: FieldScientist
   components:
   - type: SpawnPoint
     job_id: FieldScientist
   - type: Sprite
     layers:
       - state: green
-      - sprite: Markers\jobs.rsi
+      - sprite: Markers/jobs.rsi
         state: field_scientist
 
 - type: entity
-  id: SpawnPointFileldTrooper
+  id: SpawnPointFieldTrooper
   parent: SpawnPointJobBase
-  name: FileldTrooper
+  name: FieldTrooper
   components:
   - type: SpawnPoint
     job_id: FieldTrooper
   - type: Sprite
     layers:
       - state: green
-      - sprite: Markers\jobs.rsi
+      - sprite: Markers/jobs.rsi
         state: field_trooper

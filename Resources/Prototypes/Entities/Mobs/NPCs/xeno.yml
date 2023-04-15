@@ -260,7 +260,7 @@
     hidden: true
     damage:
      groups:
-       Brute: 50
+       Brute: 30
   - type: SlowOnDamage
     speedModifierThresholds:
       450: 0.7
