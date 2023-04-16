@@ -82,7 +82,7 @@
   suffix: Expedition
   components:
   - type: StaticPrice
-     price: 30000
+    price: 30000
   - type: Artifact
     nodesMin: 9
     nodesMax: 13
