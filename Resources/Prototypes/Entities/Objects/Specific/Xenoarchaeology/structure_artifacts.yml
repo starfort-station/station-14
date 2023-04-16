@@ -76,3 +76,25 @@
     nodesMin: 9
     nodesMax: 13
 
+- type: entity
+  parent: BaseXenoArtifact
+  id: ExpeditionXenoArtifact
+  suffix: Expedition
+   permanentComponents:
+  - type: PhasingArtifact
+  components:
+   - type: StaticPrice
+    price: 30000
+  - type: Artifact
+    nodesMin: 9
+    nodesMax: 13
+  - type: GasMiner
+    spawnGas: CarbonDioxide
+  - type: RadiationSource
+      intensity: 2
+      slope: 0.5
+  - type: DamageOnLand
+    damage:
+      types:
+        Blunt: 5
+        
