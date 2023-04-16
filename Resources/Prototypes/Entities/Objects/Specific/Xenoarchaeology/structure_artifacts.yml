@@ -81,7 +81,7 @@
   id: ExpeditionXenoArtifact
   suffix: Expedition
   components:
-   - type: StaticPrice
+  - type: StaticPrice
      price: 30000
   - type: Artifact
     nodesMin: 9
