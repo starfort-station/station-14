@@ -74,6 +74,7 @@
 
 - type: latheRecipe
   id: ClothingHandsGlovesNitrile
+  icon: Clothing/Hands/Gloves/nitrile.rsi/icon.png
   result: ClothingHandsGlovesNitrile
   completetime: 2
   materials:
