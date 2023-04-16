@@ -80,8 +80,6 @@
   parent: BaseXenoArtifact
   id: ExpeditionXenoArtifact
   suffix: Expedition
-   permanentComponents:
-  - type: PhasingArtifact
   components:
    - type: StaticPrice
     price: 30000
@@ -97,4 +95,5 @@
     damage:
       types:
         Blunt: 5
-        
+  - type: artifactEffect
+  id: EffectWandering
