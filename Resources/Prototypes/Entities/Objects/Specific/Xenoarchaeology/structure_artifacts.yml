@@ -89,8 +89,8 @@
   - type: GasMiner
     spawnGas: CarbonDioxide
   - type: RadiationSource
-      intensity: 2
-      slope: 0.5
+    intensity: 2
+    slope: 0.5
   - type: DamageOnLand
     damage:
       types:
