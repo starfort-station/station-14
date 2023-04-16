@@ -68,5 +68,5 @@ ent-CrateRodentCage = хомячья клетка
     .desc = { ent-CrateGeneric.desc }
     .suffix = { "" }
 ent-CratePirate = сундук пирата
-    .desc = Сундук космических пиратов
+    .desc = Сундук космических пиратов.
     .suffix = { "" }
