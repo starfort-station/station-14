@@ -54,7 +54,8 @@ entities:
   components:
   - type: MetaData
   - type: Transform
-  - type: Map
+  - index: 2
+    type: Map
   - type: PhysicsMap
   - type: Broadphase
   - type: OccluderTree
@@ -6785,11 +6786,6 @@ entities:
         damping: 2501.047
         stiffness: 22449.346
     type: Joint
-  - nextUpdate: 0.8429482
-    type: SpreaderGrid
-  - nextShake: 0
-    shakeTimes: 10
-    type: GravityShake
 - uid: 2
   type: SignRND
   components:
@@ -74254,8 +74250,6 @@ entities:
     pos: -65.59669,-21.480574
     parent: 1
     type: Transform
-  - nextAttack: 1934.0181811
-    type: MeleeWeapon
   - canCollide: False
     type: Physics
 - uid: 8933
@@ -74264,8 +74258,6 @@ entities:
   - pos: -65.496376,-21.699322
     parent: 1
     type: Transform
-  - nextAttack: 1929.4015329
-    type: MeleeWeapon
   - canCollide: False
     type: Physics
 - uid: 8934
@@ -74274,8 +74266,6 @@ entities:
   - pos: -65.29334,-21.51182
     parent: 1
     type: Transform
-  - nextAttack: 1932.9681853
-    type: MeleeWeapon
   - canCollide: False
     type: Physics
 - uid: 8935

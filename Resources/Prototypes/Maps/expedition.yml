@@ -1,0 +1,4 @@
+- type: expeditionMap
+  id: Small1
+  name: "Small / Engineering Storage 1"
+  mapPath: /Maps/Expedition/exp-medium-crashed-shuttle.yml
