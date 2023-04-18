@@ -105,7 +105,7 @@
   - type: PointLight
     radius: 1.5
     energy: 1.6
-    color: "#75ab3c"
+    color: "#6b8e23"
   - type: Computer
     board: ExpeditionShuttleConsoleCircuitboard    
 
