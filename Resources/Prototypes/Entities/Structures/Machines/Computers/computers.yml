@@ -99,7 +99,7 @@
       state: generic_keys
   - type: Tag
     tags:
-      - Syndicate
+      - Expedition
   - type: RadarConsole
     maxRange: 1536
   - type: PointLight
