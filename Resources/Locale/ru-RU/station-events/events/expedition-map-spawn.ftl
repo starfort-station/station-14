@@ -1,0 +1,2 @@
+expedition-map-spawn-event-announcement = В соседнем квадрате замечена подозрительная активность. При наличии отдела экспедиций отправить отряд на изучение квадрата.
+expedition-map-spawn-event-default-map-name = Неопознанный сигнал
