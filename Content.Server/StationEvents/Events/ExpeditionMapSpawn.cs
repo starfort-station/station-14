@@ -29,7 +29,7 @@ public sealed class ExpeditionMapSpawn : StationEventSystem
 
         // Announce event in chat
         var str = Loc.GetString("expedition-map-spawn-event-announcement");
-        ChatSystem.DispatchGlobalAnnouncement(str, colorOverride: Color.FromHex("#18abf5"));
+        ChatSystem.DispatchGlobalAnnouncement(str, colorOverride: Color.FromHex("#6b8e23"));
     }
 
     public override void Started()
@@ -68,16 +68,17 @@ public sealed class ExpeditionMapSpawn : StationEventSystem
 
         var entityMap = MapManager.GetMapEntityId(mapId);
 
-        var ftlPoint = _entMan.SpawnEntity("FTLPoint", new MapCoordinates(0.5f, 0.5f, mapId));
+        var ftlPoint = _entMan.CreateEntityUninitialized("FTLPoint");
 
         var metadata = _entMan.GetComponent<MetaDataComponent>(ftlPoint);
-        metadata.EntityName = "expedition-map-spawn-event-default-map-name";
+        metadata.EntityName = allFoundMaps[index].FTLName;
 
         var ftlComponent = _entMan.GetComponent<FTLDestinationComponent>(ftlPoint);
         ftlComponent.Whitelist ??= new EntityWhitelist();
         ftlComponent.Whitelist.Tags ??= new List<string>();
         ftlComponent.Whitelist.Tags.Add("ExpeditionConsole");
 
+        _entMan.InitializeAndStartEntity(ftlPoint, mapId);
     }
 
 }

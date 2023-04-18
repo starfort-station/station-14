@@ -16,7 +16,7 @@ namespace Content.Server.Expedition
         public string ID { get; } = default!;
 
         /// <summary>
-        /// Relative directory path to the given map, i.e. `Maps/Salvage/template.yml`
+        /// Relative directory path to the given map, i.e. `Maps/Expedition/template.yml`
         /// </summary>
         [DataField("mapPath", required: true)]
         public ResourcePath MapPath { get; } = default!;
@@ -27,5 +27,12 @@ namespace Content.Server.Expedition
         /// </summary>
         [DataField("name")]
         public string Name { get; } = "";
+
+
+        /// <summary>
+        /// Visible name of FTL point
+        /// </summary>
+        [DataField("ftlName", required: true)]
+        public string FTLName { get; } = "strange signal";
     }
 }
