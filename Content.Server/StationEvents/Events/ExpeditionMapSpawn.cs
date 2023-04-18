@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using Robust.Server.GameObjects;
 using Robust.Shared.Map;
 using Content.Server.Salvage;
+using Content.Shared.Whitelist;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
 using Robust.Shared.GameObjects;
@@ -71,6 +72,12 @@ public sealed class ExpeditionMapSpawn : StationEventSystem
 
         var metadata = _entMan.GetComponent<MetaDataComponent>(ftlPoint);
         metadata.EntityName = "expedition-map-spawn-event-default-map-name";
+
+        var ftlComponent = _entMan.GetComponent<FTLDestinationComponent>(ftlPoint);
+        ftlComponent.Whitelist ??= new EntityWhitelist();
+        ftlComponent.Whitelist.Tags ??= new List<string>();
+        ftlComponent.Whitelist.Tags.Add("ExpeditionConsole");
+
     }
 
 }
