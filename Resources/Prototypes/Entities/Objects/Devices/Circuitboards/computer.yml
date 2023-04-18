@@ -288,7 +288,7 @@
   description: A computer printed circuit board for a shuttle console.
   components:
     - type: ComputerBoard
-      prototype: ComputerShuttle      
+      prototype: ComputerShuttleExpedition      
 
 - type: entity
   parent: BaseComputerCircuitboard

@@ -99,9 +99,7 @@
       state: generic_keys
   - type: Tag
     tags:
-      - Expedition
-  - type: RadarConsole
-    maxRange: 1536
+      - ExpeditionConsole
   - type: PointLight
     radius: 1.5
     energy: 1.6
