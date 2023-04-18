@@ -1807,10 +1807,4 @@ entities:
   - pos: 2.5,-1.5
     parent: 0
     type: Transform
-- uid: 166
-  type: FTLPoint
-  components:
-  - pos: 2.5,3.5
-    parent: 0
-    type: Transform
 ...
