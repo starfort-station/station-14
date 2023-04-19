@@ -19,6 +19,7 @@ device-frequency-prototype-name-surveillance-camera-service = Камеры (Се
 device-frequency-prototype-name-surveillance-camera-medical = Камеры (Мед)
 device-frequency-prototype-name-surveillance-camera-general = Камеры (Общие)
 device-frequency-prototype-name-surveillance-camera-entertainment = Камеры (Развлечения)
+device-frequency-prototype-name-surveillance-camera-expedition = Камеры (Эксп)
 device-address-prefix-sensor = Сенс-
 device-address-prefix-fire-alarm = Пож-
 #PDAs and terminals
