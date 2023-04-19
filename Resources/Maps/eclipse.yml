@@ -109284,14 +109284,12 @@ entities:
 - uid: 13570
   type: SurveillanceCameraCommand
   components:
-  - name: Storage
-    type: MetaData
   - pos: 36.5,-14.5
     parent: 1
     type: Transform
   - setupAvailableNetworks:
     - SurveillanceCameraCommand
-    id: Telecomms
+    id: Storage
     type: SurveillanceCamera
 - uid: 13571
   type: ClosetEmergencyFilledRandom
