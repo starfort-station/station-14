@@ -10,6 +10,7 @@
       path: /Audio/Corvax/Announcements/flux.ogg
       params:
         volume: -4
+    minimumPlayers: 5
 
 - type: gameRule
   id: BluespaceArtifact
