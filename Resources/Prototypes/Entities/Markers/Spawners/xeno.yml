@@ -1,0 +1,124 @@
+- type: entity
+  name: burrower spawner
+  id: SpawnMobXenoBurrower
+  parent: MarkerBase
+  components:
+  - type: Sprite
+    layers:
+      - state: green
+      - sprite: Mobs/Aliens/Xenos/burrower.rsi
+        state: crit
+  - type: ConditionalSpawner
+    prototypes:
+      - MobXeno
+
+- type: entity
+  name: praetorian spawner
+  id: SpawnMobXenoPraetorian
+  parent: MarkerBase
+  components:
+  - type: Sprite
+    layers:
+      - state: green
+      - sprite: Mobs/Aliens/Xenos/praetorian.rsi
+        state: crit
+  - type: ConditionalSpawner
+    prototypes:
+      - MobXenoPraetorian
+
+- type: entity
+  name: drone spawner
+  id: SpawnMobXenoDrone
+  parent: MarkerBase
+  components:
+  - type: Sprite
+    layers:
+      - state: green
+      - sprite: Mobs/Aliens/Xenos/drone.rsi
+        state: crit
+  - type: ConditionalSpawner
+    prototypes:
+      - MobXenoDrone
+
+- type: entity
+  name: queen spawner
+  id: SpawnMobXenoQueen
+  parent: MarkerBase
+  components:
+  - type: Sprite
+    layers:
+      - state: green
+      - sprite: Mobs/Aliens/Xenos/queen.rsi
+        state: crit
+  - type: ConditionalSpawner
+    prototypes:
+      - MobXenoQueen
+
+- type: entity
+  name: ravager spawner
+  id: SpawnMobXenoRavager
+  parent: MarkerBase
+  components:
+  - type: Sprite
+    layers:
+      - state: green
+      - sprite: Mobs/Aliens/Xenos/ravager.rsi
+        state: crit
+  - type: ConditionalSpawner
+    prototypes:
+      - MobXenoRavager
+
+- type: entity
+  name: runner spawner
+  id: SpawnMobXenoRunner
+  parent: MarkerBase
+  components:
+  - type: Sprite
+    layers:
+      - state: green
+      - sprite: Mobs/Aliens/Xenos/runner.rsi
+        state: crit
+  - type: ConditionalSpawner
+    prototypes:
+      - MobXenoRunner
+
+- type: entity
+  name: spitter spawner
+  id: SpawnMobXenoSpitter
+  parent: MarkerBase
+  components:
+  - type: Sprite
+    layers:
+      - state: green
+      - sprite: Mobs/Aliens/Xenos/spitter.rsi
+        state: crit
+  - type: ConditionalSpawner
+    prototypes:
+      - MobXenoSpitter
+
+- type: entity
+  name: random xeno spawner
+  id: SpawnMobXenoRandom
+  parent: MarkerBase
+  components:
+  - type: Sprite
+    layers:
+      - state: green
+      - sprite: Mobs/Aliens/Xenos/drone.rsi
+        state: sleeping
+  - type: RandomSpawner
+    prototypes:
+    - MobXeno
+    - MobXenoDrone
+    - MobXenoRunner
+    - MobXenoSpitter
+    chance: 1
+
+- type: entity
+  name: random xeno spawner
+  suffix: half chance
+  id: SpawnMobXenoHalfRandom
+  parent: SpawnMobXenoRandom
+  components:
+  - type: RandomSpawner
+    chance: 0.5

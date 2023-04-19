@@ -1,0 +1,42 @@
+- type: job
+  id: CCAgent
+  name: job-name-ccagent
+  description: job-description-ccagent
+  playTimeTracker: JobCentralCommandOfficial
+  requirements:
+    - !type:DepartmentTimeRequirement
+      department: Engineering
+      time: 18000
+    - !type:DepartmentTimeRequirement
+      department: Medical
+      time: 18000
+    - !type:DepartmentTimeRequirement
+      department: Security
+      time: 18000
+    - !type:OverallPlaytimeRequirement
+      time: 108000
+  startingGear: CCAgentGear
+  icon: "Lawyer"
+  supervisors: job-supervisors-hop
+  access:
+  - Medical
+  - Service
+  - Brig
+  - Maintenance
+  - Command
+
+- type: startingGear
+  id: CCAgentGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitLawyerBlack  # TODO change jumpsuit to randomiser of the 4 variants
+    back: ClothingBackpackFilled
+    shoes: ClothingShoesBootsLaceup
+    id: CCAgentPDA
+    ears: ClothingHeadsetIAA
+    eyes: ClothingEyesGlassesSecurity
+    pocket1: RubberStampIAA
+  inhand:
+    right hand: BriefcaseBrownFilled
+  innerclothingskirt: ClothingUniformJumpskirtLawyerBlack
+  satchel: ClothingBackpackSatchelFilled
+  duffelbag: ClothingBackpackDuffelFilled

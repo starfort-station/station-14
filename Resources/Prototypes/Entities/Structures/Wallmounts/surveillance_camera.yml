@@ -103,6 +103,19 @@
 
 - type: entity
   parent: SurveillanceCameraBase
+  id: SurveillanceCameraExpedition
+  name: camera
+  suffix: Expedition
+  components:
+  - type: DeviceNetwork
+    deviceNetId: Wired
+    receiveFrequencyId: SurveillanceCameraExpedition
+    transmitFrequencyId: SurveillanceCamera
+  - type: SurveillanceCamera
+    networkSet: true
+
+- type: entity
+  parent: SurveillanceCameraBase
   id: SurveillanceCameraSecurity
   name: camera
   suffix: Security

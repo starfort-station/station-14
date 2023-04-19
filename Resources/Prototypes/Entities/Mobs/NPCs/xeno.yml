@@ -59,7 +59,7 @@
   - type: MobThresholds
     thresholds:
       0: Alive
-      50: Dead
+      200: Dead
   - type: Stamina
     excess: 200
   - type: Bloodstream
@@ -72,7 +72,7 @@
     animation: WeaponArcBite
     damage:
       groups:
-        Brute: 6
+        Brute: 20
   - type: Appearance
   - type: DamageStateVisuals
     rotate: true
@@ -111,6 +111,9 @@
   - type: NoSlip
   - type: Perishable #Ummmm the acid kills a lot of the bacteria or something
     molsPerSecondPerUnitMass: 0.0005
+  - type: Damageable
+    damageContainer: Biological
+    damageModifierSet: Xeno
 
 - type: entity
   name: Praetorian
@@ -131,7 +134,7 @@
   - type: MobThresholds
     thresholds:
       0: Alive
-      75: Dead
+      200: Dead
   - type: Stamina
     excess: 300
   - type: SlowOnDamage
@@ -171,7 +174,7 @@
   - type: MeleeWeapon
     damage:
       groups:
-        Brute: 5
+        Brute: 15
   - type: Stamina
     excess: 200
   - type: MovementSpeedModifier
@@ -207,7 +210,7 @@
   - type: MobThresholds
     thresholds:
       0: Alive
-      300: Dead
+      475: Dead
   - type: Stamina
     excess: 1500
   - type: MovementSpeedModifier
@@ -217,7 +220,7 @@
     hidden: true
     damage:
      groups:
-       Brute: 20
+       Brute: 30
   - type: SlowOnDamage
     speedModifierThresholds:
       1000: 0.7
@@ -251,7 +254,7 @@
   - type: MobThresholds
     thresholds:
       0: Alive
-      200: Dead
+      300: Dead
   - type: Stamina
     excess: 550
   - type: MovementSpeedModifier
@@ -261,7 +264,7 @@
     hidden: true
     damage:
      groups:
-       Brute: 10
+       Brute: 30
   - type: SlowOnDamage
     speedModifierThresholds:
       450: 0.7
@@ -295,7 +298,7 @@
   - type: MobThresholds
     thresholds:
       0: Alive
-      50: Dead
+      175: Dead
   - type: Stamina
     excess: 250
   - type: MovementSpeedModifier
@@ -305,7 +308,7 @@
     hidden: true
     damage:
      groups:
-       Brute: 3
+       Brute: 15
   - type: Fixtures
     fixtures:
     - shape:
@@ -346,7 +349,7 @@
   - type: MobThresholds
     thresholds:
       0: Alive
-      75: Dead
+      200: Dead
   - type: Stamina
     excess: 300
   - type: SlowOnDamage

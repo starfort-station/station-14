@@ -225,3 +225,32 @@
       slots:
         - Belt
         - suitStorage
+
+- type: entity
+  parent: OxygenTank
+  id: EmergencyAirTank
+  name: emergency air tank
+  description: Used for emergencies. Contains very little oxygen, so try to conserve it until you actually need it.
+  components:
+  - type: Sprite
+    sprite: Objects/Tanks/emergency_white.rsi
+  - type: GasTank
+    outputPressure: 21.27825
+    air:
+      volume: 6
+      temperature: 293.15
+  - type: Item
+    size: 10
+  - type: Clothing
+    sprite: Objects/Tanks/emergency_white.rsi
+    slots:
+    - Pocket
+    - Belt
+    - suitStorage
+  - type: MeleeWeapon
+    damage:
+      types:
+        Blunt: 5
+  - type: PhysicalComposition
+    materialComposition:
+      Steel: 100
