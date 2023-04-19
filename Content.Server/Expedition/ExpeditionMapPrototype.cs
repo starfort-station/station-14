@@ -1,10 +1,5 @@
 using Robust.Shared.Prototypes;
 using Robust.Shared.Utility;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Content.Server.Expedition
 {
@@ -19,15 +14,13 @@ namespace Content.Server.Expedition
         /// Relative directory path to the given map, i.e. `Maps/Expedition/template.yml`
         /// </summary>
         [DataField("mapPath", required: true)]
-        public ResourcePath MapPath { get; } = default!;
-
+        public ResPath MapPath { get; } = default!;
 
         /// <summary>
         /// Name for admin use
         /// </summary>
         [DataField("name")]
         public string Name { get; } = "";
-
 
         /// <summary>
         /// Visible name of FTL point
