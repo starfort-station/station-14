@@ -38,6 +38,7 @@
         - SurveillanceCameraGeneral
         - SurveillanceCameraMedical
         - SurveillanceCameraCommand
+        - SurveillanceCameraExpedition
 
 - type: entity
   parent: SurveillanceCameraRouterBase
@@ -46,6 +47,14 @@
   components:
     - type: SurveillanceCameraRouter
       subnetFrequency: SurveillanceCameraEngineering
+
+- type: entity
+  parent: SurveillanceCameraRouterBase
+  id: SurveillanceCameraRouterExpedition
+  suffix: Expedition
+  components:
+    - type: SurveillanceCameraRouter
+      subnetFrequency: SurveillanceCameraExpedition
 
 - type: entity
   parent: SurveillanceCameraRouterBase

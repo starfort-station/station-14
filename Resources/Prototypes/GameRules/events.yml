@@ -10,6 +10,7 @@
       path: /Audio/Corvax/Announcements/flux.ogg
       params:
         volume: -4
+    minimumPlayers: 5
 
 - type: gameRule
   id: BluespaceArtifact
@@ -238,3 +239,13 @@
     earliestStart: 50
     weight: 2.5
     endAfter: 1
+
+- type: gameRule
+  id: ExpeditionMapSpawn
+  config:
+    !type:StationEventRuleConfiguration
+    id: ExpeditionMapSpawn
+    weight: 10
+    endAfter: 1
+    startAudio:
+      path: /Audio/Announcements/attention.ogg
