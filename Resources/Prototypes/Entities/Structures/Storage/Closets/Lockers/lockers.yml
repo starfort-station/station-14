@@ -393,3 +393,47 @@
         actOnClose: false
         destroyAfterUses: 2
         destroyType: DeleteComponent
+
+# Expedition
+
+- type: entity
+  id: LockerFieldSci
+  parent: LockerBase
+  name: expedition scientist's locker
+  components:
+    - type: Appearance
+      visuals:
+        - type: StorageVisualizer
+          state: fieldsci
+          state_open: fieldsci_open
+          state_closed: fieldsci_door
+    - type: AccessReader
+      access: [["Research","Expedition"]]
+
+- type: entity
+  id: LockerFieldTroop
+  parent: LockerBaseSecure
+  name: expedition soldier's locker
+  components:
+  - type: Appearance
+    visuals:
+    - type: StorageVisualizer
+      state: fieldsci
+      state_open: fieldsci_open
+      state_closed: fieldtroop_door
+  - type: AccessReader
+    access: [["Security","Expedition"]]
+
+- type: entity
+  id: LockerFieldMed
+  parent: LockerBaseSecure
+  name: expedition doctor's locker
+  components:
+  - type: Appearance
+    visuals:
+    - type: StorageVisualizer
+      state: fieldsci
+      state_open: fieldsci_open
+      state_closed: fieldmed_door
+  - type: AccessReader
+    access: [["Medical","Expedition"]]
