@@ -85,6 +85,7 @@ public sealed class ExpeditionMapSpawn : StationEventSystem
         ftlComponent.Whitelist.Tags ??= new List<string>();
         ftlComponent.Whitelist.Tags.Add("ExpeditionConsole");
 
+        MapManager.DoMapInitialize(mapId);
         _entMan.InitializeAndStartEntity( ftlPoint, mapId);
     }
 
