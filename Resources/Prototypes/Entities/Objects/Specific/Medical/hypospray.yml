@@ -267,21 +267,10 @@
 
 - type: entity
   name: combat medipen
-  parent: ChemicalMedipen
+  parent: SpaceMedipen
   id: CombatMedipen
   description: To recharge in battle.
   components:
-  - type: Sprite
-    sprite: Objects/Specific/Medical/medipen.rsi
-    netsync: false
-    layers:
-    - state: hypovolemic
-      map: [ "enum.SolutionContainerLayers.Fill" ]
-  - type: Appearance
-  - type: SolutionContainerVisuals
-    maxFillLevels: 1
-    changeColor: false
-    emptySpriteName: hypovolemic_empty
   - type: Hypospray
     solutionName: pen
     transferAmount: 18
@@ -296,5 +285,3 @@
             Quantity: 9
           - ReagentId: DexalinPlus
             Quantity: 6
-  - type: Tag
-    tags: [Expedition]
