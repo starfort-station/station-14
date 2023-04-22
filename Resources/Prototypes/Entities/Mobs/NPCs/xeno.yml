@@ -11,6 +11,10 @@
   - type: CombatMode
   - type: InputMover
   - type: MobMover
+  - type: ActiveRadio
+    channels:
+    - Xeno
+    globalReceive: true
   - type: HTN
     rootTask: XenoCompound
     blackboard:
