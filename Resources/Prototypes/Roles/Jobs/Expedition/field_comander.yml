@@ -1,8 +1,8 @@
 - type: job
-  id: FieldCommander
-  name: job-name-field-commander
-  description: job-description-field-commander
-  playTimeTracker: JobFieldCommander
+  id: FieldComander
+  name: job-name-field-comander
+  description: job-description-field-comander
+  playTimeTracker: JobFieldComander
   requirements:
     - !type:OverallPlaytimeRequirement
       time: 21600 #6 hrs
@@ -12,8 +12,8 @@
     - !type:DepartmentTimeRequirement
       department: Expedition
       time: 18000 #5 hrs
-  startingGear: FieldCommanderGear
-  icon: "FieldCommander"
+  startingGear: FieldComanderGear
+  icon: "FieldComander"
   supervisors: job-supervisors-rd
   canBeAntag: false
   access:
@@ -25,7 +25,7 @@
   - Security
 
 - type: startingGear
-  id: FieldCommaderGear
+  id: FieldComaderGear
   equipment:
     jumpsuit: #спрайтеры
     back: #спрайтеры
