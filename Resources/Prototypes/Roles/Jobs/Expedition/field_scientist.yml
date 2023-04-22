@@ -14,7 +14,7 @@
       time: 3600 #1 hrs
   startingGear: FieldScientistGear
   icon: "FieldScientist"
-  supervisors: job-supervisors-field-commander
+  supervisors: job-supervisors-field-comander
   canBeAntag: false
   access:
   - Research
