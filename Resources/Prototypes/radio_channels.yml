@@ -76,3 +76,10 @@
   frequency: 1213
   color: "#8f4a4b"
   longRange: true
+
+- type: radioChannel
+  id: Xeno
+  name: chat-radio-xeno
+  keycode: 'у' # Corvax-Localization
+  frequency: 6666
+  color: "#ff4d6a"
