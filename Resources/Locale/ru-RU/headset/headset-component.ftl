@@ -12,3 +12,4 @@ chat-radio-service = Сервис
 chat-radio-supply = Снабжение
 chat-radio-syndicate = Синдикат
 chat-radio-expedition = Экспедиция
+chat-radio-xeno = Ксено
