@@ -671,24 +671,6 @@
             ]
         },
         {
-            "name": "direction_exp",
-            "directions": 4,
-            "delays": [
-                [
-                    1
-                ],
-                [
-                    1
-                ],
-                [
-                    1
-                ],
-                [
-                    1
-                ]
-            ]
-        },
-        {
             "name": "dock",
             "delays": [
                 [
@@ -1371,6 +1353,24 @@
         {
             "name": "zero",
             "delays": [
+                [
+                    1
+                ]
+            ]
+        },
+        {
+            "name": "direction_exp",
+            "directions": 4,
+            "delays": [
+                [
+                    1
+                ],
+                [
+                    1
+                ],
+                [
+                    1
+                ],
                 [
                     1
                 ]

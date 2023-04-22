@@ -1,7 +1,7 @@
 {
   "version": 1,
   "license": "CC-BY-SA-3.0",
-  "copyright": "Taken from tgstation at commit https://github.com/tgstation/tgstation/commit/d917f4c2a088419d5c3aec7656b7ff8cebd1822e idcluwne made by brainfood1183 (github) for ss14",
+  "copyright": "Taken from tgstation at commit https://github.com/tgstation/tgstation/commit/d917f4c2a088419d5c3aec7656b7ff8cebd1822e idcluwne made by brainfood1183 (github) for ss14, idbrigmedic made by PuroSlavKing (Github)",
   "size": {
     "x": 32,
     "y": 32
@@ -90,6 +90,9 @@
     },
     {
       "name": "idheadofsecurity"
+    },
+    {
+      "name": "idbrigmedic"
     },
     {
       "name": "idjanitor"
@@ -202,18 +205,6 @@
 	{
       "name": "idcluwne"
     },
-	{
-      "name": "idbrigmedic"
-    },
-	{
-      "name": "idfield-medic"
-    },
-	{
-      "name": "idfield-trooper"
-    },
-	{
-      "name": "idfield-scientist"
-    },
     {
       "name": "gold-inhand-left",
       "directions": 4
@@ -253,6 +244,15 @@
     {
       "name": "blue-inhand-right",
       "directions": 4
+    },
+    {
+      "name": "idfield-medic"
+    },
+    {
+      "name": "idfield-trooper"
+    },
+    {
+      "name": "idfield-scientist"
     }
   ]
 }
