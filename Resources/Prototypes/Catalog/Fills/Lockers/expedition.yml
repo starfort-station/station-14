@@ -8,11 +8,9 @@
       - id: FlashlightSeclite
       - id: ClothingHeadsetExpedition
       - id: ClothingHandsGlovesColorBlack
-      - id: ClothingShoesBootsJack
       - id: WeaponRifleLecter
       - id: ClothingShoesBootsMag
       - id: ClothingMaskGasExplorer
-      - id: ClothingShoesBootsCombatFilled
       - id: ClothingUniformJumpsuitFieldTrooper
       - id: ClothingBackpackExpedition
       - id: ClothingOuterHardsuitExpeditionTrooper
@@ -36,7 +34,6 @@
       - id: ModularGrenade
       - id: TimerTrigger
       - id: TimerTrigger
-      - id: ClothingShoesBootsCombatFilled
       - id: ClothingUniformJumpsuitFieldScientist
       - id: ClothingBackpackExpedition
       - id: ClothingOuterHardsuitExpeditionScientist
@@ -56,7 +53,6 @@
       - id: ClothingShoesBootsMag
       - id: MedkitFilled
       - id: ClothingMaskGasExplorer
-      - id: ClothingShoesBootsCombatFilled
       - id: ClothingUniformJumpsuitFieldMedic
       - id: ClothingBackpackExpedition
       - id: ClothingOuterHardsuitExpeditionMedic
