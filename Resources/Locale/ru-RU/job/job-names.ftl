@@ -46,6 +46,7 @@ job-name-ccagent = агент внутренних дел
 job-name-field-trooper = солдат
 job-name-field-medic = полевой врач
 job-name-field-scientist = полевой ученый
+job-name-field-commander = Командир экспедиции
 # Role timers - Make these alphabetical or I cut you
 JobAtmosphericTechnician = Атмосферный техник
 JobBartender = Бармен
