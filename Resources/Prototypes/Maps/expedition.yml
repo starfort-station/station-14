@@ -1,8 +1,10 @@
-- type: expeditionMap
-  id: ExpSmall
-  name: "Small / Engineering Storage 1"
-  ftlName: "Разбитый шаттл"
-  mapPath: /Maps/Expedition/exp-medium-crashed-shuttle.yml
+########################## Example ##############################
+#- type: expeditionMap                                          #
+#  id: ExpSmall                                                 #
+#  name: "Small / Engineering Storage 1"                        #
+#  ftlName: "Разбитый шаттл"                                    #
+#  mapPath: /Maps/Expedition/exp-medium-crashed-shuttle.yml     #
+#################################################################
 
 - type: expeditionMap
   id: ExpSmallMiningStation
