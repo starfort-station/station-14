@@ -18,6 +18,7 @@ namespace Content.Server.StationEvents.Events;
 public sealed class ExpeditionMapSpawn : StationEventSystem
 {
     [Dependency] private readonly MapLoaderSystem _mapLoader = default!;
+    [Dependency] private readonly TransformSystem _transform = default!;
     [Dependency] private readonly IEntityManager _entMan = default!;
     [Dependency] private readonly IRobustRandom _random = default!;
 
@@ -65,20 +66,26 @@ public sealed class ExpeditionMapSpawn : StationEventSystem
         var success = _mapLoader.TryLoad(mapId, allFoundMaps[index].MapPath.ToString(), out _);
         if (!success)
             throw new Exception("Map load failed");
+        else
+            Logger.Info(string.Format(
+                "Expedition map was created with index {0}, map name is {1}", smallestValue, allFoundMaps[index].Name));
 
         var entityMap = MapManager.GetMapEntityId(mapId);
-
+        
         var ftlPoint = _entMan.CreateEntityUninitialized("FTLPoint");
-
+        
         var metadata = _entMan.GetComponent<MetaDataComponent>(ftlPoint);
         metadata.EntityName = allFoundMaps[index].FTLName;
+
+        var transform = _entMan.GetComponent<TransformComponent>(ftlPoint);
+        _transform.SetParent(ftlPoint, entityMap);
 
         var ftlComponent = _entMan.GetComponent<FTLDestinationComponent>(ftlPoint);
         ftlComponent.Whitelist ??= new EntityWhitelist();
         ftlComponent.Whitelist.Tags ??= new List<string>();
         ftlComponent.Whitelist.Tags.Add("ExpeditionConsole");
 
-        _entMan.InitializeAndStartEntity(ftlPoint, mapId);
+        _entMan.InitializeAndStartEntity( ftlPoint, mapId);
     }
 
 }
