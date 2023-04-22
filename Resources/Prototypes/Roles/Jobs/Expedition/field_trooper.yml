@@ -11,7 +11,7 @@
       time: 3600 #1 hrs
   startingGear: FieldTrooperGear
   icon: "FieldTrooper"
-  supervisors: job-supervisors-rd
+  supervisors: job-supervisors-field-commander
   canBeAntag: false
   access:
   - Brig
