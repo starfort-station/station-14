@@ -67,11 +67,17 @@
     {
       "name": "atropen_empty"
     },
-	{
+    {
       "name": "medipen-inhand-left"
     },
     {
       "name": "medipen-inhand-right"
+    },
+    {
+      "name": "combatpen"
+    },
+    {
+      "name": "combatpen_empty"
     }
   ]
 }

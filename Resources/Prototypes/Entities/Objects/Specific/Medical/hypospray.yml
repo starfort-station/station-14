@@ -264,3 +264,34 @@
     - id: Hypopen
     sound:
       path: /Audio/Effects/unwrap.ogg
+
+- type: entity
+  name: combat medipen
+  parent: ChemicalMedipen
+  id: CombatMedipen
+  description: To recharge in battle.
+  components:
+  - type: Hypospray
+    solutionName: pen
+    transferAmount: 18
+  - type: Sprite
+    sprite: Objects/Specific/Medical/medipen.rsi
+    netsync: false
+    layers:
+    - state: combatpen
+      map: [ "enum.SolutionContainerLayers.Fill" ]
+  - type: SolutionContainerVisuals
+    maxFillLevels: 1
+    changeColor: false
+    emptySpriteName: combatpen_empty
+  - type: SolutionContainerManager
+    solutions:
+      pen:
+        maxVol: 18
+        reagents:
+          - ReagentId: TranexamicAcid
+            Quantity: 3
+          - ReagentId: Bicaridine
+            Quantity: 9
+          - ReagentId: DexalinPlus
+            Quantity: 6
