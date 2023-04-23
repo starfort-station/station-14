@@ -29,8 +29,8 @@
   id: FieldComaderGear
   equipment:
     jumpsuit: #спрайтеры
-    back: #спрайтеры
-    shoes: ClothingBootsAssaultFilled
+    back:     back: ClothingBackpackExpeditionFilled
+    shoes: ClothingShoesBootsAssaultFilled
     id: #спрайтеры
     ears: ChotlingHeadsetExpedition
     belt: ClothingBeltAssault
