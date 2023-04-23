@@ -230,3 +230,18 @@
     layers:
     - state: crypt_gray
     - state: expedition_label
+    
+- type: entity
+  parent: EncryptionKey
+  id: EncryptionKeyXeno
+  name: xeno encryption key
+  description: An encryption key that used by xenomorphs.
+  components:
+  - type: EncryptionKey
+    channels:
+    - Xeno
+    defaultChannel: Xeno
+  - type: Sprite
+    layers:
+    - state: crypt_gray
+    - state: xeno_label
