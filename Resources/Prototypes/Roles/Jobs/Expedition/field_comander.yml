@@ -30,7 +30,7 @@
   equipment:
     jumpsuit: #спрайтеры
     back: #спрайтеры
-    shoes: #спрайтеры
+    shoes: ClothingBootsAssaultFilled
     id: #спрайтеры
-    ears: #спрайтеры
-    belt: #спрайтеры
+    ears: ChotlingHeadsetExpedition
+    belt: ClothingBeltAssault
