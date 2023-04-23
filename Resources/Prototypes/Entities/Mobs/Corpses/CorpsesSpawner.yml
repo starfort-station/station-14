@@ -1,0 +1,70 @@
+- type: entity
+  id: CorpsesSpawnerBase
+  parent: MarkerBase
+  abstract: true
+  components:
+  - type: Sprite
+    layers:
+      - state: red
+      - sprite: Mobs/Species/Human/parts.rsi
+        state: full
+      
+- type: entity
+  name: Cargo Corpses Spawner
+  id: CargoCorpsesSpawner
+  parent: CorpsesSpawnerBase
+  components:
+  - type: ConditionalSpawner
+    chance: 0.4
+    prototypes:
+      - MobRandomCargoBody
+      
+- type: entity
+  name: Engineer Corpses Spawner
+  id: EngineerCorpsesSpawner
+  parent: CorpsesSpawnerBase
+  components:
+  - type: ConditionalSpawner
+    chance: 0.4
+    prototypes:
+      - MobRandomEngineerBody
+      
+- type: entity
+  name: Service Corpses Spawner
+  id: ServiceCorpsesSpawner
+  parent: CorpsesSpawnerBase
+  components:
+  - type: ConditionalSpawner
+    chance: 0.4
+    prototypes:
+      - MobRandomServiceBody
+      
+- type: entity
+  name: Medic Corpses Spawner
+  id: MedicCorpsesSpawner
+  parent: CorpsesSpawnerBase
+  components:
+  - type: ConditionalSpawner
+    chance: 0.4
+    prototypes:
+      - MobRandomMedicBody
+      
+- type: entity
+  name: Science Corpses Spawner
+  id: ScienceCorpsesSpawner
+  parent: CorpsesSpawnerBase
+  components:
+  - type: ConditionalSpawner
+    chance: 0.4
+    prototypes:
+      - MobRandomScienceBody
+      
+- type: entity
+  name: Security Corpses Spawner
+  id: SecurityCorpsesSpawner
+  parent: CorpsesSpawnerBase
+  components:
+  - type: ConditionalSpawner
+    chance: 0.4
+    prototypes:
+      - MobRandomSecurityBody  
