@@ -1,0 +1,131 @@
+- type: randomHumanoidSettings
+  id: RandomServiceCorpse
+  components:
+  - type: Damageable
+    damage:
+      types:
+        Bloodloss: 49
+        Asphyxiation: 76
+        Slash: 56
+        Blunt: 19
+  - type: RandomMetadata
+    nameSegments: [corvax_names_death_commando] # Corvax-Localization
+  - type: Loadout
+    prototypes:     # some proto was doubled for increse chance to spawn
+    - ClownGear
+    - MimeGear
+    - JanitorGear
+    - JanitorGear
+    - ServiceWorkerGear
+    - ServiceWorkerGear
+    - MusicianGear
+    - BotanistGear
+    - BotanistGear
+    - ChefGear
+    - PassengerGear
+    - PassengerGear
+    - PassengerGear
+    
+- type: randomHumanoidSettings
+  id: RandomCargoCorpse
+  components:
+  - type: Damageable
+    damage:
+      types:
+        Bloodloss: 49
+        Asphyxiation: 76
+        Slash: 56
+        Blunt: 19
+  - type: RandomMetadata
+    nameSegments: [corvax_names_death_commando] # Corvax-Localization
+  - type: Loadout
+    prototypes:     # some proto was doubled for increse chance to spawn
+    - CargoTechGear
+    - CargoTechGear
+    - SalvageSpecialistGear
+
+
+- type: randomHumanoidSettings
+  id: RandomEngineerCorpse
+  components:
+  - type: Damageable
+    damage:
+      types:
+        Bloodloss: 49
+        Asphyxiation: 76
+        Slash: 56
+        Blunt: 19
+  - type: RandomMetadata
+    nameSegments: [corvax_names_death_commando] # Corvax-Localization
+  - type: Loadout
+    prototypes:     # some proto was doubled for increse chance to spawn
+    - TechnicalAssistantGear
+    - TechnicalAssistantGear
+    - AtmosphericTechnicianGear
+    - StationEngineerGear
+    - StationEngineerGear
+
+
+- type: randomHumanoidSettings
+  id: RandomMedicCorpse
+  components:
+  - type: Damageable
+    damage:
+      types:
+        Bloodloss: 49
+        Asphyxiation: 76
+        Slash: 56
+        Blunt: 19
+  - type: RandomMetadata
+    nameSegments: [corvax_names_death_commando] # Corvax-Localization
+  - type: Loadout
+    prototypes:     # some proto was doubled for increse chance to spawn
+    - MedicalInternGear
+    - MedicalInternGear
+    - PsychologistGear
+    - ChemistGear
+    - DoctorGear
+    - DoctorGear
+
+
+- type: randomHumanoidSettings
+  id: RandomScienceCorpse
+  components:
+  - type: Damageable
+    damage:
+      types:
+        Bloodloss: 49
+        Asphyxiation: 76
+        Slash: 56
+        Blunt: 19
+  - type: RandomMetadata
+    nameSegments: [corvax_names_death_commando] # Corvax-Localization
+  - type: Loadout
+    prototypes:     # some proto was doubled for increse chance to spawn
+    - ResearchAssistantGear
+    - ResearchAssistantGear
+    - ResearchAssistantGear
+    - ScientistGear
+    - ScientistGear
+    
+    
+- type: randomHumanoidSettings
+  id: RandomSecurityCorpse
+  components:
+  - type: Damageable
+    damage:
+      types:
+        Bloodloss: 49
+        Asphyxiation: 76
+        Slash: 56
+        Blunt: 19
+  - type: RandomMetadata
+    nameSegments: [corvax_names_death_commando] # Corvax-Localization
+  - type: Loadout
+    prototypes:     # some proto was doubled for increse chance to spawn
+    - SecurityCadetGear
+    - SecurityCadetGear
+    - SecurityOfficerGear
+    - SecurityOfficerGear
+    - SecurityOfficerGear
+    - DetectiveGear
