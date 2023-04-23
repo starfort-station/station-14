@@ -22,9 +22,11 @@
     - BotanistGear
     - BotanistGear
     - ChefGear
+    - ChaplainGear
     - PassengerGear
     - PassengerGear
     - PassengerGear
+    - CorpseHoPGear                     # Chance 1/15
     
 - type: randomHumanoidSettings
   id: RandomCargoCorpse
@@ -42,7 +44,10 @@
     prototypes:     # some proto was doubled for increse chance to spawn
     - CargoTechGear
     - CargoTechGear
+    - CargoTechGear
     - SalvageSpecialistGear
+    - SalvageSpecialistGear
+    - CorpseQuartermasterGear           # Chance 1/6
 
 
 - type: randomHumanoidSettings
@@ -61,7 +66,12 @@
     prototypes:     # some proto was doubled for increse chance to spawn
     - TechnicalAssistantGear
     - TechnicalAssistantGear
+    - TechnicalAssistantGear
     - AtmosphericTechnicianGear
+    - AtmosphericTechnicianGear
+    - CorpseChiefEngineerGear           # Chance 1/10
+    - StationEngineerGear
+    - StationEngineerGear
     - StationEngineerGear
     - StationEngineerGear
 
@@ -82,8 +92,12 @@
     prototypes:     # some proto was doubled for increse chance to spawn
     - MedicalInternGear
     - MedicalInternGear
+    - MedicalInternGear
     - PsychologistGear
     - ChemistGear
+    - ChemistGear
+    - CorpseCMOGear                     # Chance 1/10
+    - DoctorGear
     - DoctorGear
     - DoctorGear
 
@@ -107,6 +121,8 @@
     - ResearchAssistantGear
     - ScientistGear
     - ScientistGear
+    - ScientistGear
+    - CorpseResearchDirectorGear        # Chance 1/7
     
     
 - type: randomHumanoidSettings
@@ -125,7 +141,11 @@
     prototypes:     # some proto was doubled for increse chance to spawn
     - SecurityCadetGear
     - SecurityCadetGear
+    - SecurityCadetGear
+    - SecurityOfficerGear
     - SecurityOfficerGear
     - SecurityOfficerGear
     - SecurityOfficerGear
     - DetectiveGear
+    - CorpseWardenGear
+    - CorpseHoSGear                 # Chance 1/10
