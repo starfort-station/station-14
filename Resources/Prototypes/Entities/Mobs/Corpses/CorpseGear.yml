@@ -7,7 +7,6 @@
     head: ClothingHeadHatCaptain
     eyes: ClothingEyesGlassesSunglasses
     gloves: ClothingHandsGlovesCaptain
-    outerClothing: ClothingOuterArmorCaptainCarapace
     ears: ClothingHeadsetAltCommand
   innerclothingskirt: ClothingUniformJumpskirtCaptain
   satchel: ClothingBackpackSatchelCaptainFilled

@@ -10,6 +10,29 @@
         state: full
       
 - type: entity
+  name: Random corpses Spawner
+  id: RandomCorpsesSpawner
+  parent: CorpsesSpawnerBase
+  components:
+  - type: ConditionalSpawner
+    prototypes:
+      - MobRandomCargoBody
+      - MobRandomEngineerBody
+      - MobRandomServiceBody
+      - MobRandomMedicBody
+      - MobRandomScienceBody
+      - MobRandomSecurityBody 
+    
+- type: entity
+  name: Captain corpse Spawner
+  id: CaptainCorpsesSpawner
+  parent: CorpsesSpawnerBase
+  components:
+  - type: ConditionalSpawner
+    prototypes:
+      - MobCaptainBody  
+      
+- type: entity
   name: Cargo Corpses Spawner
   id: CargoCorpsesSpawner
   parent: CorpsesSpawnerBase
