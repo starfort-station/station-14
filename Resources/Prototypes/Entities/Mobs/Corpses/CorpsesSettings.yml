@@ -1,13 +1,29 @@
 - type: randomHumanoidSettings
+  id: CaptainCorpse
+  components:
+  - type: Damageable
+    damage:
+      types:
+        Bloodloss: 51
+        Asphyxiation: 76
+        Slash: 56
+        Blunt: 21
+  - type: RandomMetadata
+    nameSegments: [corvax_names_death_commando] # Corvax-Localization
+  - type: Loadout
+    prototypes:    
+    - CorpseCaptainGear
+
+- type: randomHumanoidSettings
   id: RandomServiceCorpse
   components:
   - type: Damageable
     damage:
       types:
-        Bloodloss: 49
+        Bloodloss: 51
         Asphyxiation: 76
         Slash: 56
-        Blunt: 19
+        Blunt: 21
   - type: RandomMetadata
     nameSegments: [corvax_names_death_commando] # Corvax-Localization
   - type: Loadout
@@ -34,10 +50,10 @@
   - type: Damageable
     damage:
       types:
-        Bloodloss: 49
+        Bloodloss: 51
         Asphyxiation: 76
         Slash: 56
-        Blunt: 19
+        Blunt: 21
   - type: RandomMetadata
     nameSegments: [corvax_names_death_commando] # Corvax-Localization
   - type: Loadout
@@ -56,10 +72,10 @@
   - type: Damageable
     damage:
       types:
-        Bloodloss: 49
+        Bloodloss: 51
         Asphyxiation: 76
         Slash: 56
-        Blunt: 19
+        Blunt: 21
   - type: RandomMetadata
     nameSegments: [corvax_names_death_commando] # Corvax-Localization
   - type: Loadout
@@ -82,10 +98,10 @@
   - type: Damageable
     damage:
       types:
-        Bloodloss: 49
+        Bloodloss: 51
         Asphyxiation: 76
         Slash: 56
-        Blunt: 19
+        Blunt: 21
   - type: RandomMetadata
     nameSegments: [corvax_names_death_commando] # Corvax-Localization
   - type: Loadout
@@ -108,10 +124,10 @@
   - type: Damageable
     damage:
       types:
-        Bloodloss: 49
+        Bloodloss: 51
         Asphyxiation: 76
         Slash: 56
-        Blunt: 19
+        Blunt: 21
   - type: RandomMetadata
     nameSegments: [corvax_names_death_commando] # Corvax-Localization
   - type: Loadout
@@ -131,10 +147,10 @@
   - type: Damageable
     damage:
       types:
-        Bloodloss: 49
+        Bloodloss: 51
         Asphyxiation: 76
         Slash: 56
-        Blunt: 19
+        Blunt: 21
   - type: RandomMetadata
     nameSegments: [corvax_names_death_commando] # Corvax-Localization
   - type: Loadout

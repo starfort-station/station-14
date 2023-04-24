@@ -102,7 +102,7 @@
   components:
   - type: Sprite
     sprite: Structures/Doors/Airlocks/Standard/expedition.rsi
-    
+
 # Glass
 - type: entity
   id: AirlockGlass
@@ -250,3 +250,53 @@
     sprite: Structures/Doors/Airlocks/Glass/expedition.rsi
   - type: PaintableAirlock
     group: Glass
+
+
+# Spawns open
+- type: entity
+  parent: AirlockMaint
+  id: AirlockMaintOpen
+  suffix: Open
+  components:
+  - type: Door
+    state: Open
+
+- type: entity
+  parent: AirlockEngineering
+  id: AirlockEngineeringOpen
+  suffix: Open
+  components:
+  - type: Door
+    state: Open
+
+- type: entity
+  parent: AirlockCargo
+  id: AirlockCargoOpen
+  suffix: Open
+  components:
+  - type: Door
+    state: Open
+
+- type: entity
+  parent: AirlockSecurity
+  id: AirlockSecurityOpen
+  suffix: Open
+  components:
+  - type: Door
+    state: Open
+
+- type: entity
+  parent: AirlockScience
+  id: AirlockScienceOpen
+  suffix: Open
+  components:
+  - type: Door
+    state: Open
+
+- type: entity
+  parent: AirlockMedical
+  id: AirlockMedicalOpen
+  suffix: Open
+  components:
+  - type: Door
+    state: Open

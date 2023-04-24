@@ -1,5 +1,14 @@
 - type: entity
   parent: MobHuman
+  id: MobCaptainBody
+  name: Random body
+  suffix: Dead, Captain
+  components:
+  - type: RandomHumanoidSpawner
+    settings: CaptainCorpse
+
+- type: entity
+  parent: MobHuman
   id: MobRandomServiceBody
   name: Random body
   suffix: Dead, Service
