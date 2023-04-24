@@ -43,5 +43,7 @@ ent-ClothingBackpackCluwne = проклятый хихишкин фон хонк
     .suffix = Неснимаемый
 ent-ClothingBackpackExpedition = рюкзак экспедитора
     .desc = Рюкзак изготовленый из прочной ткани.
+ent-ClothingBackpackExpeditionFilled
+    .desc = Рюкзак изготовленый из прочной ткани.
 ent-ClothingBackpackIan = рюкзак иана
     .desc = Иногда он носит это.
