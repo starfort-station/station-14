@@ -1085,6 +1085,17 @@
     sprite: Clothing/Uniforms/Jumpsuit/field_medic.rsi
   - type: Clothing
     sprite: Clothing/Uniforms/Jumpsuit/field_medic.rsi
+    
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitFieldCommander
+  name: field commander jumpsuit
+  description: Uniform for convenient management of your freight forwarders
+  components:
+  - type: Sprite
+    sprite: Clothing/Uniforms/Jumpsuit/field_commander.rsi
+  - type: Clothing
+    sprite: Clothing/Uniforms/Jumpsuit/field_commander.rsi
 
 - type: entity
   parent: ClothingUniformBase
