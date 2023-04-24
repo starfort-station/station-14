@@ -654,7 +654,7 @@
   id: FieldCommanderIDCard
   name: field commander ID card
   components:
-  - type: PresetIDCars
+  - type: PresetIDCard
     job: FieldCommander
   - type: Sprite
     layers:
