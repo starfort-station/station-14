@@ -27,7 +27,7 @@
   - Security
 
 - type: startingGear
-  id: FieldCommaderGear
+  id: FieldCommanderGear
   equipment:
     jumpsuit: ClothingUniformJumpsuitFieldCommander
     back: ClothingBackpackExpeditionFilled
