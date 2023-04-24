@@ -28,7 +28,7 @@
 - type: startingGear
   id: FieldComaderGear
   equipment:
-    jumpsuit: #спрайтеры
+    jumpsuit: ClothingUniformJumpsuitFieldCommander
     back: ClothingBackpackExpeditionFilled
     shoes: ClothingShoesBootsAssaultFilled
     id: FieldCommanderPDA
