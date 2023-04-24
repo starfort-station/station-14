@@ -2,3 +2,12 @@
   id: Expedition
   name: id-card-access-level-field
 
+- type: accessLevel
+  id: Sergeant
+  name: id-card-access-level-sergeant
+
+- type: accessGroup
+  id: Expedition
+  tags:
+  - Expedition
+  - Sergeant

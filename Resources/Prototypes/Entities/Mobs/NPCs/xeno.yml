@@ -21,7 +21,6 @@
       NavSmash: !type:Bool
         true
   - type: Tool
-    speed: 1.5
     qualities:
       - Prying
     useSound:
@@ -46,7 +45,7 @@
     fixtures:
     - shape:
         !type:PhysShapeCircle
-        radius: 0.25
+        radius: 0.45
       density: 1000
       mask:
       - MobMask
@@ -287,7 +286,6 @@
   - type: Sprite
     drawdepth: Mobs
     sprite: Mobs/Aliens/Xenos/runner.rsi
-    offset: 0,0.6
     layers:
     - map: ["enum.DamageStateVisualLayers.Base"]
       state: running
@@ -313,7 +311,7 @@
     fixtures:
     - shape:
         !type:PhysShapeCircle
-        radius: 0.35
+        radius: 0.45
       density: 235
       mask:
       - MobMask

@@ -293,7 +293,7 @@
   components:
     - type: StorageFill
       contents:
-        - id: BoxSurvival
+        - id: BoxSurvivalExpedition
 
 - type: entity
   parent: ClothingBackpackSatchelLeather
