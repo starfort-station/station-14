@@ -118,6 +118,7 @@ namespace Content.Client.Entry
             _prototypeManager.RegisterIgnore("alertLevels");
             _prototypeManager.RegisterIgnore("nukeopsRole");
             _prototypeManager.RegisterIgnore("flavor");
+            _prototypeManager.RegisterIgnore("expeditionMap");
 
             _componentFactory.GenerateNetIds();
             _adminManager.Initialize();

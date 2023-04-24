@@ -59,6 +59,8 @@ public sealed class IdCardConsoleComponent : Component
         "Engineering",
         "External",
         "HeadOfPersonnel",
+        "Expedition",
+        "Sergeant",
         "HeadOfSecurity",
         "Hydroponics",
         "Janitor",

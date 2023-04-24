@@ -1,0 +1,116 @@
+- type: startingGear
+  id: CorpseCaptainGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitCaptain
+    back: ClothingBackpackCaptainFilled
+    shoes: ClothingShoesColorBlack
+    head: ClothingHeadHatCaptain
+    eyes: ClothingEyesGlassesSunglasses
+    gloves: ClothingHandsGlovesCaptain
+    outerClothing: ClothingOuterArmorCaptainCarapace
+    ears: ClothingHeadsetAltCommand
+  innerclothingskirt: ClothingUniformJumpskirtCaptain
+  satchel: ClothingBackpackSatchelCaptainFilled
+  duffelbag: ClothingBackpackDuffelCaptainFilled
+
+
+- type: startingGear
+  id: CorpseHoPGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitHoP
+    back: ClothingBackpackHOPFilled
+    shoes: ClothingShoesColorBrown
+    head: ClothingHeadHatHopcap
+    ears: ClothingHeadsetAltCommand
+  innerclothingskirt: ClothingUniformJumpskirtHoP
+  satchel: ClothingBackpackSatchelHOPFilled
+  duffelbag: ClothingBackpackDuffelHOPFilled
+
+
+- type: startingGear
+  id: CorpseChiefEngineerGear
+  equipment:
+    head: ClothingHeadHatHardhatWhite
+    jumpsuit: ClothingUniformJumpsuitChiefEngineer
+    back: ClothingBackpackChiefEngineerFilled
+    shoes: ClothingShoesColorBrown
+    eyes: ClothingEyesGlassesMeson
+    ears: ClothingHeadsetCE
+    belt: ClothingBeltChiefEngineerFilled
+  innerclothingskirt: ClothingUniformJumpskirtChiefEngineer
+  satchel: ClothingBackpackSatchelChiefEngineerFilled
+  duffelbag: ClothingBackpackDuffelChiefEngineerFilled
+
+
+- type: startingGear
+  id: CorpseQuartermasterGear
+  equipment:
+    head: ClothingHeadHatQMsoft
+    jumpsuit: ClothingUniformJumpsuitQM
+    back: ClothingBackpackQuartermasterFilled
+    shoes: ClothingShoesColorBrown
+    ears: ClothingHeadsetQM
+    pocket1: AppraisalTool
+  innerclothingskirt: ClothingUniformJumpskirtQM
+  satchel: ClothingBackpackSatchelQuartermasterFilled
+  duffelbag: ClothingBackpackDuffelQuartermasterFilled
+
+
+- type: startingGear
+  id: CorpseCMOGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitCMO
+    back: ClothingBackpackCMOFilled
+    shoes: ClothingShoesColorBrown
+    outerClothing: ClothingOuterCoatLabCmo
+    ears: ClothingHeadsetAltMedical
+    belt: ClothingBeltMedicalFilled
+  innerclothingskirt: ClothingUniformJumpskirtCMO
+  satchel: ClothingBackpackSatchelCMOFilled
+  duffelbag: ClothingBackpackDuffelCMOFilled
+  
+
+- type: startingGear
+  id: CorpseResearchDirectorGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitResearchDirector
+    back: ClothingBackpackResearchDirectorFilled
+    shoes: ClothingShoesColorBrown
+    outerClothing: ClothingOuterCoatRnd
+    ears: ClothingHeadsetRD
+  innerclothingskirt: ClothingUniformJumpskirtResearchDirector
+  satchel: ClothingBackpackSatchelResearchDirectorFilled
+  duffelbag: ClothingBackpackDuffelResearchDirectorFilled
+
+
+- type: startingGear
+  id: CorpseWardenGear
+  equipment:
+    head: ClothingHeadHatWarden
+    jumpsuit: ClothingUniformJumpsuitWarden
+    back: ClothingBackpackSecurityFilled
+    shoes: ClothingShoesBootsCombatFilled
+    eyes: ClothingEyesGlassesSecurity
+    outerClothing: ClothingOuterCoatWarden
+    ears: ClothingHeadsetSecurity
+    belt: ClothingBeltSecurityFilled
+  innerclothingskirt: ClothingUniformJumpskirtWarden
+  satchel: ClothingBackpackSatchelSecurityFilled
+  duffelbag: ClothingBackpackDuffelSecurityFilled
+
+
+- type: startingGear
+  id: CorpseHoSGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitHoS
+    back: ClothingBackpackHOSFilled
+    shoes: ClothingShoesBootsCombatFilled
+    outerClothing: ClothingOuterCoatHoSTrench
+    eyes: ClothingEyesGlassesSecurity
+    head: ClothingHeadHatBeretHoS
+    gloves: ClothingHandsGlovesCombat
+    ears: ClothingHeadsetAltSecurity
+    belt: ClothingBeltSecurityFilled
+  innerclothingskirt: ClothingUniformJumpskirtHoS
+  satchel: ClothingBackpackSatchelHOSFilled
+  duffelbag: ClothingBackpackDuffelHOSFilled

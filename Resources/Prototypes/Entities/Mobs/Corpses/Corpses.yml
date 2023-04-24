@@ -1,0 +1,57 @@
+- type: entity
+  parent: MobHuman
+  id: MobRandomServiceBody
+  name: Random body
+  suffix: Dead, Service
+  components:
+  - type: RandomHumanoidSpawner
+    settings: RandomServiceCorpse
+    
+- type: entity
+  parent: MobHuman
+  id: MobRandomEngineerBody
+  name: Random body
+  suffix: Dead, Engineer
+  components:
+  - type: RandomHumanoidSpawner
+    settings: RandomEngineerCorpse
+    
+ 
+- type: entity
+  parent: MobHuman
+  id: MobRandomCargoBody
+  name: Random body
+  suffix: Dead, Cargo
+  components:
+  - type: RandomHumanoidSpawner
+    settings: RandomCargoCorpse
+    
+    
+- type: entity
+  parent: MobHuman
+  id: MobRandomMedicBody
+  name: Random body
+  suffix: Dead, Medic
+  components:
+  - type: RandomHumanoidSpawner
+    settings: RandomMedicCorpse
+    
+    
+- type: entity
+  parent: MobHuman
+  id: MobRandomScienceBody
+  name: Random body
+  suffix: Dead, Science
+  components:
+  - type: RandomHumanoidSpawner
+    settings: RandomScienceCorpse
+    
+    
+- type: entity
+  parent: MobHuman
+  id: MobRandomSecurityBody
+  name: Random body
+  suffix: Dead, Security
+  components:
+  - type: RandomHumanoidSpawner
+    settings: RandomSecurityCorpse

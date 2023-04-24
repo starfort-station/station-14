@@ -7,7 +7,7 @@
   - type: StorageFill
     contents:
       - id: ClothingMaskBreath
-      - id: EmergencyOxygenTankFilled
+      - id: EmergencyAirTankFilled
       - id: SpaceMedipen
       - id: EmergencyMedipen
       - id: Flare
@@ -26,7 +26,7 @@
   - type: StorageFill
     contents:
       - id: ClothingMaskBreath
-      - id: ExtendedEmergencyOxygenTankFilled
+      - id: EmergencyAirTankFilled
       - id: SpaceMedipen
       - id: EmergencyMedipen
       - id: Flare
@@ -46,7 +46,7 @@
   - type: StorageFill
     contents:
       - id: ClothingMaskGasSecurity
-      - id: EmergencyOxygenTankFilled
+      - id: EmergencyAirTankFilled
       - id: SpaceMedipen
       - id: EmergencyMedipen
       - id: Flare
@@ -66,7 +66,7 @@
   - type: StorageFill
     contents:
       - id: ClothingMaskBreathMedical
-      - id: EmergencyOxygenTankFilled
+      - id: EmergencyAirTankFilled
       - id: SpaceMedipen
       - id: EmergencyMedipen
       - id: Flare
@@ -91,7 +91,7 @@
   - type: StorageFill
     contents:
       - id: ClothingMaskBreath
-      - id: EmergencyOxygenTankFilled
+      - id: EmergencyAirTankFilled
       - id: SpaceMedipen
       - id: EmergencyMedipen
       - id: Flare
@@ -109,7 +109,7 @@
   - type: StorageFill
     contents:
       - id: ClothingMaskGasSyndicate
-      - id: ExtendedEmergencyOxygenTankFilled
+      - id: EmergencyAirTankFilled
       - id: SpaceMedipen
       - id: EmergencyMedipen
       - id: Flare
@@ -118,3 +118,22 @@
     layers:
       - state: internals
       - state: extendedtank
+
+- type: entity
+  name: expedition survival box
+  parent: BoxCardboard
+  id: BoxSurvivalExpedition
+  description: It's a box with basic internals inside.
+  components:
+  - type: StorageFill
+    contents:
+      - id: ClothingMaskGasExplorer
+      - id: EmergencyAirTankFilled
+      - id: SpaceMedipen
+      - id: CombatMedipen
+      - id: Flare
+      - id: FoodTinMRE
+  - type: Sprite
+    layers:
+      - state: internals
+      - state: expedition

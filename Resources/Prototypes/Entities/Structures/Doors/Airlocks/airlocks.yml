@@ -86,8 +86,24 @@
   - type: Sprite
     sprite: Structures/Doors/Airlocks/Standard/maint.rsi
 
-# Glass
+- type: entity
+  parent: AirlockMaint
+  id: AirlockMaintRadioactive
+  suffix: radioactive
+  components:
+    - type: RadiationSource
+      intensity: 2
+      slope: 0.5
 
+- type: entity
+  parent: Airlock
+  id: AirlockExpedition
+  suffix: Expedition
+  components:
+  - type: Sprite
+    sprite: Structures/Doors/Airlocks/Standard/expedition.rsi
+    
+# Glass
 - type: entity
   id: AirlockGlass
   parent: Airlock
@@ -125,6 +141,15 @@
     group: Windoor
   - type: RadiationBlocker
     resistance: 2
+
+- type: entity
+  parent: AirlockGlass
+  id: AirlockGlassRadioactive
+  suffix: radioactive
+  components:
+    - type: RadiationSource
+      intensity: 2
+      slope: 0.5
 
 - type: entity
   parent: AirlockGlass
@@ -213,5 +238,15 @@
   components:
   - type: Sprite
     sprite: Structures/Doors/Airlocks/Glass/security.rsi
+  - type: PaintableAirlock
+    group: Glass
+
+- type: entity
+  parent: AirlockGlass
+  id: AirlockExpeditionGlass
+  suffix: Expedition
+  components:
+  - type: Sprite
+    sprite: Structures/Doors/Airlocks/Glass/expedition.rsi
   - type: PaintableAirlock
     group: Glass

@@ -19,8 +19,14 @@ using Robust.Shared.Random;
 using Robust.Shared.Utility;
 using System.Linq;
 using System.Threading.Tasks;
+using System.Text.Json;
 using Content.Shared.Database;
 using Robust.Shared.Asynchronous;
+using System.Net.Http;
+using Newtonsoft.Json;
+using System.Text;
+using Content.Shared.Destructible;
+using Microsoft.CodeAnalysis.CSharp.Syntax;
 
 namespace Content.Server.GameTicking
 {
@@ -239,6 +245,7 @@ namespace Content.Server.GameTicking
             UpdateLateJoinStatus();
             AnnounceRound();
             UpdateInfoText();
+            DiscordBot();
 
 #if EXCEPTION_TOLERANCE
             }
@@ -265,6 +272,34 @@ namespace Content.Server.GameTicking
             _roundStartFailCount = 0;
 #endif
             _startingRound = false;
+        }
+
+        static readonly HttpClient hptclient = new HttpClient();
+
+        public async void DiscordBot()
+        {
+            var RoundIdB = RoundId.ToString();
+            var RoundIdC = _gameMapManager.GetSelectedMap()?.MapName ?? "Unknown";
+
+            using StringContent jsonContent = new(
+            System.Text.Json.JsonSerializer.Serialize(new
+            {
+                content = $"Новый раунд начался! Номер раунда: {RoundIdB}, Карта: \"{RoundIdC}\""
+            }),
+            Encoding.UTF8,
+            "application/json");
+
+            if (RoundIdC == "Empty")
+            {
+                
+            }
+            else
+            {     
+                if (_cfg.GetCVar(CCVars.DiscordHookUrlRoundBot) != string.Empty)
+                {
+                    var response = await hptclient.PostAsync(_cfg.GetCVar(CCVars.DiscordHookUrlRoundBot), jsonContent);
+                }
+            }
         }
 
         private void RefreshLateJoinAllowed()

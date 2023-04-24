@@ -101,6 +101,9 @@
       "name": "idlawyer"
     },
     {
+      "name": "idiaa"
+    },
+    {
       "name": "idmedicaldoctor"
     },
     {
@@ -241,6 +244,15 @@
     {
       "name": "blue-inhand-right",
       "directions": 4
+    },
+    {
+      "name": "idfield-medic"
+    },
+    {
+      "name": "idfield-trooper"
+    },
+    {
+      "name": "idfield-scientist"
     }
   ]
 }

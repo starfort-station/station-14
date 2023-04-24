@@ -194,8 +194,17 @@
     {
       "name": "pda-ert"
     },
-	{
+    {
       "name": "pda-cluwne"
+    },
+    {
+      "name": "pda-fieldmedic"
+    },
+    {
+      "name": "pda-fieldscientist"
+    },
+    {
+      "name": "pda-fieldtrooper"
     }
   ]
 }

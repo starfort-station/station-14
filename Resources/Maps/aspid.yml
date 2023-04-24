@@ -148343,4 +148343,10 @@ entities:
   - pos: -6.5,57.5
     parent: 1
     type: Transform
+- uid: 18503
+  type: StationGoalRandom
+  components:
+  - pos: 4.98761,73.48303
+    parent: 1
+    type: Transform
 ...

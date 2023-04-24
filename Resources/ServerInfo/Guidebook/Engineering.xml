@@ -1,9 +1,9 @@
 <Document>
-# Engineering
+# Инженерное дело
 
-Engineering is a combination of construction work, repair work, maintaining a death machine that happens to produce power, and making sure the station contains breathable air.
+Инженерное дело - это сочетание строительных работ, ремонтных работ, обслуживание машины смерти, которая, как оказалось, производит энергию, и обеспечение того, чтобы на станции был пригодный для дыхания воздух.
 
-## Tools
+## Инструменты
 <Box>
 <GuideEntityEmbed Entity="Wrench"/>
 <GuideEntityEmbed Entity="Crowbar"/>
@@ -14,8 +14,8 @@ Engineering is a combination of construction work, repair work, maintaining a de
 <GuideEntityEmbed Entity="Welder"/>
 <GuideEntityEmbed Entity="Multitool"/>
 </Box>
-Your core toolset is a small variety of tools. If you're an engineer, then you should have a belt on your waist containing one of each, if not you can likely find them in maintenance and tool storage within assorted toolboxes and vending machines.
+Ваш основной набор инструментов - это небольшое разнообразие инструментов. Если вы инженер, то у вас на поясе должен быть пояс, содержащий по одному из них, если нет, то вы можете найти их на складе технического обслуживания и инструментов в различных ящиках для инструментов и торговых автоматах.
 
-Most tasks will have explainers for how to perform them on examination, for example if you're constructing a wall, it'll tell you the next step if you look at it a bit closer.
+Большинство заданий имеют пояснения, как их выполнять, например, если вы строите стену, то при ближайшем рассмотрении вам подскажут следующий шаг.
 
 </Document>

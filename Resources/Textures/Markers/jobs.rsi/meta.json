@@ -169,11 +169,20 @@
     {
       "name": "warden"
     },
-	{
+    {
       "name": "cluwne"
     },
     {
       "name": "musician"
+    },
+    {
+      "name": "field_medic"
+    },
+    {
+      "name": "field_scientist"
+    },
+    {
+      "name": "field_trooper"
     }
   ]
 }
