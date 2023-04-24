@@ -44,6 +44,7 @@
 #          map: ["enum.DoorVisualLayers.BaseBolted"]
         - state: panel_open
           map: ["enum.WiresVisualLayers.MaintenancePanel"]
+    - type: AnimationPlayer
     - type: Fixtures
       fixtures:
       - shape:
@@ -72,6 +73,8 @@
         path: /Audio/Machines/airlock_close.ogg
       denySound:
         path: /Audio/Machines/airlock_deny.ogg
+      openingAnimationTime: 0.6
+      closingAnimationTime: 0.6
     - type: Weldable
       fuel: 3
       time: 3
