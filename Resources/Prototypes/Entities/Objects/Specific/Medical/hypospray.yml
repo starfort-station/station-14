@@ -281,7 +281,7 @@
         reagents:
           - ReagentId: TranexamicAcid
             Quantity: 3
-          - ReagentId: Bicaridine
+          - ReagentId: Omnizine
             Quantity: 9
           - ReagentId: DexalinPlus
             Quantity: 6
