@@ -1,0 +1,18 @@
+- type: entity
+  name: expedition survival box
+  parent: BoxCardboard
+  id: BoxSurvivalExpedition
+  description: It's a box with basic internals inside.
+  components:
+  - type: StorageFill
+    contents:
+      - id: ClothingMaskGasExplorer
+      - id: EmergencyAirTankFilled
+      - id: SpaceMedipen
+      - id: CombatMedipen
+      - id: Flare
+      - id: FoodTinMRE
+  - type: Sprite
+    layers:
+      - state: internals
+      - state: expedition
