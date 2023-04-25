@@ -1,0 +1,6 @@
+- type: radioChannel
+  id: Expedition
+  name: chat-radio-expedition
+  keycode: 'э' # Corvax-Localization
+  frequency: 1345
+  color: "#6b8e23"

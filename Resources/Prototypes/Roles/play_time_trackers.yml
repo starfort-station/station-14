@@ -135,14 +135,6 @@
   
 - type: playTimeTracker
   id: JobBrigmedic
-  
-- type: playTimeTracker
-  id: JobFieldMedic
-  
-- type: playTimeTracker
-  id: JobFieldScientist
-  
-- type: playTimeTracker
-  id: JobFieldTrooper
+
   
   

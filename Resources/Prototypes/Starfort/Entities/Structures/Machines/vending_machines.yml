@@ -1,0 +1,56 @@
+- type: entity
+  parent: VendingMachine
+  id: VendingMachineExpidition
+  name: ExpiMag
+  description: For those who consider themselves tough guys.
+  components:
+  - type: VendingMachine
+    pack: FreightforwardersEquipmentInventory
+    offState: off
+    brokenState: broken
+    normalState: normal-unshaded
+    denyState: deny-unshaded
+  - type: Sprite
+    sprite: Structures/Machines/VendingMachines/expidition.rsi
+    layers:
+    - state: "off"
+      map: ["enum.VendingMachineVisualLayers.Base"]
+    - state: "off"
+      map: ["enum.VendingMachineVisualLayers.BaseUnshaded"]
+      shader: unshaded
+    - state: panel
+      map: ["enum.WiresVisualLayers.MaintenancePanel"]
+  - type: PointLight
+    radius: 1.5
+    energy: 1.6
+    color: "#9dc5c9"
+  - type: AccessReader
+    access: [["Expedition"]]
+
+- type: entity
+  parent: VendingMachine
+  id: VendingMachineExpeditionDrobe
+  name: ExpiMag
+  description: In case you want to look like the tough guys.
+  components:
+  - type: VendingMachine
+    pack: ExpeditorsDrobeInventory
+    offState: off
+    brokenState: broken
+    normalState: normal-unshaded
+  - type: Sprite
+    sprite: Structures/Machines/VendingMachines/expeditorsdrobe.rsi
+    layers:
+    - state: "off"
+      map: ["enum.VendingMachineVisualLayers.Base"]
+    - state: "off"
+      map: ["enum.VendingMachineVisualLayers.BaseUnshaded"]
+      shader: unshaded
+    - state: panel
+      map: ["enum.WiresVisualLayers.MaintenancePanel"]
+  - type: PointLight
+    radius: 1.5
+    energy: 1.6
+    color: "#9dc5c9"
+  - type: AccessReader
+    access: [["Expedition"]]

@@ -1,0 +1,10 @@
+- type: entity
+  parent: BaseComputerCircuitboard
+  id: ExpeditionShuttleConsoleCircuitboard
+  suffix: Expedition
+  name: shuttle console board
+  description: A computer printed circuit board for a shuttle console.
+  components:
+    - type: ComputerBoard
+      prototype: ComputerShuttleExpedition      
+      

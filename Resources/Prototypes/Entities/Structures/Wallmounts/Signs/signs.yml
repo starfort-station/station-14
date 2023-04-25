@@ -33,15 +33,6 @@
   components:
   - type: Sprite
     state: direction_bridge
-
-- type: entity
-  parent: SignDirectionalBridge
-  id: SignDirectionalBridgeRadioactive
-  suffix: radioactive
-  components:
-    - type: RadiationSource
-      intensity: 2
-      slope: 0.5
   
 - type: entity
   parent: BaseSignDirectional
