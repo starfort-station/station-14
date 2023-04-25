@@ -13,8 +13,8 @@ salvage-expedition-window-biome = Биом:
 salvage-expedition-window-modifiers = Модификаторы:
 salvage-expedition-window-loot = Лут:
 salvage-expedition-window-none = N/A
-salvage-expedition-window-claimed = Заявлено
-salvage-expedition-window-claim = Иск
+salvage-expedition-window-claimed = Выбранно
+salvage-expedition-window-claim = Выбрать
 salvage-expedition-window-next = Следующее предложение
 # Описания экспедиций
 salvage-expedition-desc-mining = Собирать ресурсы в зоне.
@@ -34,7 +34,7 @@ salvage-expedition-difficulty-Moderate = Умеренный
 salvage-expedition-difficulty-Hazardous = Опасный
 salvage-expedition-difficulty-Extreme = Экстремальный
 # Бегун
-salvage-expedition-announcement-countdown-minutes = { $duration } минут, оставшихся до завершения экспедиции.
-salvage-expedition-announcement-countdown-seconds = { $duration } секунд, оставшихся до завершения экспедиции.
-salvage-expedition-announcement-dungeon = Подземелье находится в { $direction }.
+salvage-expedition-announcement-countdown-minutes = { $duration } минут, осталось до завершения экспедиции.
+salvage-expedition-announcement-countdown-seconds = { $duration } секунд, осталось до завершения экспедиции.
+salvage-expedition-announcement-dungeon = Подземелье находится на { $direction }.
 salvage-expedition-completed = Экспедиция завершена.
