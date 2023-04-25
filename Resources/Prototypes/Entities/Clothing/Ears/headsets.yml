@@ -257,18 +257,3 @@
   - type: Clothing
     sprite: Clothing/Ears/Headsets/security.rsi
     
-- type: entity
-  parent: ClothingHeadset
-  id: ClothingHeadsetExpedition
-  name: expedition headset
-  description: A headset for expedition to chat while the station burns around them.
-  components:
-  - type: ContainerFill
-    containers:
-      key_slots:
-      - EncryptionKeyExpedition
-      - EncryptionKeyCommon
-  - type: Sprite
-    sprite: Clothing/Ears/Headsets/expedition.rsi
-  - type: Clothing
-    sprite: Clothing/Ears/Headsets/expedition.rsi
