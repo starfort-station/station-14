@@ -267,7 +267,7 @@
 
 - type: entity
   name: combat medipen
-  parent: SpaceMedipen
+  parent: ChemicalMedipen
   id: CombatMedipen
   description: To recharge in battle.
   components:
