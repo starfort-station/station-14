@@ -26,4 +26,65 @@
       intensity: 2
       slope: 0.5
 
-
+- type: entity
+  parent: WallShuttle
+  id: WallReinforcedShuttle
+  name: reinforced shuttle wall
+  components:
+  - type: Sprite
+    sprite: Structures/Walls/reinf_shuttle.rsi
+  - type: Icon
+    sprite: Structures/Walls/reinf_shuttle.rsi
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 2000
+      behaviors:
+        - !type:DoActsBehavior
+          acts: [ "Destruction" ]
+    - trigger:
+        !type:DamageTrigger
+        damage: 1000
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          path: /Audio/Effects/metalbreak.ogg
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+    destroySound:
+      path: /Audio/Effects/metalbreak.ogg
+      
+- type: entity
+  parent: WallShuttleDiagonal
+  id: WallReinforcedShuttleDiagonal
+  name: reinforced shuttle wall
+  suffix: diagonal
+  components:
+  - type: Sprite
+    netsync: false
+    drawdepth: Walls
+    sprite: Structures/Walls/reinf_shuttle_diagonal.rsi
+    state: state0
+  - type: Icon
+    sprite: Structures/Walls/reinf_shuttle_diagonal.rsi
+    state: state0
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 1200
+      behaviors:
+        - !type:DoActsBehavior
+          acts: [ "Destruction" ]
+    - trigger:
+        !type:DamageTrigger
+        damage: 600
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          path: /Audio/Effects/metalbreak.ogg
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+    destroySound:
+      path: /Audio/Effects/metalbreak.ogg
