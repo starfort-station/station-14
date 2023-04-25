@@ -1,0 +1,29 @@
+# Radioactive
+- type: entity
+  parent: WallSolid
+  id: WallSolidRadioactive
+  suffix: radioactive
+  components:
+    - type: RadiationSource
+      intensity: 2
+      slope: 0.5
+
+- type: entity
+  parent: WallSolidRust
+  id: WallSolidRustRadioactive
+  suffix: rust, radioactive
+  components:
+    - type: RadiationSource
+      intensity: 2
+      slope: 0.5
+
+- type: entity
+  parent: WallReinforced
+  id: WallReinforcedRadioactive
+  suffix: radioactive
+  components:
+    - type: RadiationSource
+      intensity: 2
+      slope: 0.5
+
+
