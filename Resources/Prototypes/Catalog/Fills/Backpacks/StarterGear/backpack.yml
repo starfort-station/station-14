@@ -219,7 +219,9 @@
         - id: MagazinePistolHighCapacityRubber
         - id: MagazinePistol
         - id: Handcuffs
+          amount: 3
         - id: PaperWrittenERTmanual
+        - id: CombatMedipen
 
 
 - type: entity

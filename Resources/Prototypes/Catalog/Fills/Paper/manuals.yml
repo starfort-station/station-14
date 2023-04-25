@@ -32,3 +32,6 @@
   components:
   - type: Paper
     content: book-text-ERT-manual
+    stampState: paper_stamp-cent
+    stampedBy:
+      - ЦентКом #CentComm
