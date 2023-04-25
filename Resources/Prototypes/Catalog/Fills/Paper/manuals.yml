@@ -24,3 +24,11 @@
       type: PaperBoundUserInterface
   - type: Paper
     content: book-text-holoparasite-info
+
+- type: entity
+  id: PaperWrittenERTmanual
+  suffix: "ERT manual"
+  parent: Paper
+  components:
+  - type: Paper
+    content: book-text-ERT-manual

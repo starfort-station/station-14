@@ -213,12 +213,13 @@
   components:
     - type: StorageFill
       contents:
-        - id: BoxSurvival
+        - id: BoxSurvivalSecurity
         - id: WeaponPulsePistol
         - id: WeaponPistolMk58
         - id: MagazinePistolHighCapacityRubber
         - id: MagazinePistol
         - id: Handcuffs
+        - id: PaperWrittenERTmanual
 
 
 - type: entity
@@ -228,12 +229,14 @@
   components:
     - type: StorageFill
       contents:
-        - id: BoxSurvival
+        - id: BoxSurvivalSecurity
         - id: WeaponDisabler
         - id: WeaponPulsePistol
         - id: WeaponPulseCarbine
         - id: BoxHandcuff
+        - id: PaperWrittenERTmanual
         - id: Handcuffs
+          amount: 3
 
 - type: entity
   noSpawn: true
@@ -242,10 +245,11 @@
   components:
     - type: StorageFill
       contents:
-        - id: BoxSurvival
+        - id: BoxSurvivalMedical
         - id: WeaponPulseCarbine
         - id: Hypospray
         - id: MedkitAdvancedFilled
+        - id: PaperWrittenERTmanual
 
 
 - type: entity
@@ -255,7 +259,8 @@
   components:
     - type: StorageFill
       contents:
-        - id: BoxSurvival
+        - id: BoxSurvivalEngineering
+        - id: PaperWrittenERTmanual
         - id: trayScanner
         - id: WeaponPulseCarbine
         - id: RCD
@@ -271,6 +276,7 @@
     - type: StorageFill
       contents:
         - id: BoxSurvival
+        - id: PaperWrittenERTmanual
         - id: WeaponPulsePistol
         - id: MedkitFilled
         - id: BoxLightMixed
