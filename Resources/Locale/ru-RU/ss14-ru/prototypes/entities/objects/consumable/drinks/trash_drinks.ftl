@@ -1,4 +1,4 @@
-ent-DrinkBottleBaseEmpty = base empty bottle
+ent-DrinkBottleBaseEmpty = пустая бутылка
     .desc = Это пустая бутылка.
 ent-DrinkBottleAbsinthe = бутылка от Джейлбрейк Верте
     .desc = { ent-DrinkBottleBaseEmpty.desc }
@@ -14,7 +14,7 @@ ent-DrinkBottleGin = бутылка от джина Гриффитер
     .desc = { ent-DrinkBottleBaseEmpty.desc }
 ent-DrinkBottleGoldschlager = бутылка от гольдшлягера
     .desc = { ent-DrinkBottleBaseEmpty.desc }
-ent-DrinkBottleCoffeeLiqueur = coffee liqueur bottle
+ent-DrinkBottleCoffeeLiqueur = бутылка от кофейного ликёра
     .desc = { ent-DrinkBottleBaseEmpty.desc }
 ent-DrinkBottleNTCahors = бутылка от кагора
     .desc = { ent-DrinkBottleBaseEmpty.desc }

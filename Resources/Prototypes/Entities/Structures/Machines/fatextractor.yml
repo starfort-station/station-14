@@ -2,7 +2,7 @@
   id: FatExtractor
   parent: BaseMachinePowered
   name: lipid extractor
-  description: Safely and efficiently extracts excess fat from a subject.
+  description: Безопасно и эффективно удаляет излишки жира из организма.
   components:
   - type: FatExtractor
     processSound:
