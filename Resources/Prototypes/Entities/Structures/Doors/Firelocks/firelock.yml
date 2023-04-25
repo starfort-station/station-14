@@ -44,6 +44,7 @@
 #          map: ["enum.DoorVisualLayers.BaseBolted"]
         - state: panel_open
           map: ["enum.WiresVisualLayers.MaintenancePanel"]
+    - type: AnimationPlayer
     - type: Fixtures
       fixtures:
       - shape:
@@ -72,16 +73,14 @@
         path: /Audio/Machines/airlock_close.ogg
       denySound:
         path: /Audio/Machines/airlock_deny.ogg
+      openingAnimationTime: 0.6
+      closingAnimationTime: 0.6
     - type: Weldable
       fuel: 3
       time: 3
     - type: Firelock
+      #simpleVisuals: true # Corvax-Resprite-Airlocks
     - type: Appearance
-      visuals:
-        - type: AirlockVisualizer
-#          animationTime: 0.6
-#          emergencyAccessLayer: false
-          simpleVisuals: true # Corvax-Resprite-Airlocks
     - type: WiresVisuals
     - type: Wires
       BoardName: "Firelock Control"
@@ -177,3 +176,27 @@
       canCollide: false
     - type: StaticPrice
       price: 100
+
+- type: entity
+  id: FirelockClosed
+  parent: Firelock
+  suffix: Closed
+  components:
+  - type: Door
+    state: Closed
+  - type: Occluder
+    enabled: true
+  - type: Physics
+    canCollide: true
+
+- type: entity
+  id: FirelockGlassClosed
+  parent: FirelockGlass
+  suffix: Closed
+  components:
+  - type: Door
+    state: Closed
+  - type: Occluder
+    enabled: true
+  - type: Physics
+    canCollide: true

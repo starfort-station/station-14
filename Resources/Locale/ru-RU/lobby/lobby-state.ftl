@@ -1,4 +1,5 @@
 lobby-state-paused = Пауза
+lobby-state-soon = Скоро начнется раунд
 lobby-state-preloading = Скоро
 lobby-state-right-now-question = Прямо сейчас?
 lobby-state-right-now-confirmation = Прямо сейчас
