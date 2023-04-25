@@ -91,3 +91,20 @@
     chance: 0.4
     prototypes:
       - MobRandomSecurityBody  
+      
+# Starfort xeno
+- type: entity
+  name: Random xeno corpses Spawner
+  id: RandomXenoCorpsesSpawner
+  parent: MarkerBase
+  components:
+  - type: Sprite
+    layers:
+    - state: red
+    - sprite: Mobs/Aliens/Xenos/burrower.rsi
+      state: dead
+  - type: ConditionalSpawner
+    prototypes:
+      - MobXenoBody
+      - MobXenoPraetorianBody
+      - MobXenoDroneBody

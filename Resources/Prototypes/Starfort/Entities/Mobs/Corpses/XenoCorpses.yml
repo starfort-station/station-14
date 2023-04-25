@@ -1,0 +1,29 @@
+- type: entity
+  parent: MobXeno
+  id: MobXenoBody
+  suffix: Dead
+  components:
+  - type: Damageable
+    damage:
+      types:
+        Piercing: 223
+        
+- type: entity
+  parent: MobXenoPraetorian
+  id: MobXenoPraetorianBody
+  suffix: Dead
+  components:
+  - type: Damageable
+    damage:
+      types:
+        Piercing: 203
+        
+- type: entity
+  parent: MobXenoDrone
+  id: MobXenoDroneBody
+  suffix: Dead
+  components:
+  - type: Damageable
+    damage:
+      types:
+        Blunt: 174
