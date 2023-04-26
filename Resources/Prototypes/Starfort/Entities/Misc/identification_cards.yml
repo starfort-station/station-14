@@ -34,3 +34,15 @@
     layers:
     - state: default
     - state: idfield-trooper
+    
+- type: entity
+  parent: PassengerIDCard
+  id: FieldCommanderIDCard
+  name: field commander ID card
+  components:
+  - type: PresetIdCard
+    job: FieldCommander
+  - type: Sprite
+    layers:
+    - state: default
+    - state: idfield-commander
