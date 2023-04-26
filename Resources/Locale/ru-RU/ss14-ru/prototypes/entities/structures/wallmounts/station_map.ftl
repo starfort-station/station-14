@@ -1,4 +1,7 @@
-ent-WallStationMapBroken = карта станции
+ent-StationMap = карта станции
+    .desc = Виртуальная карта окрестностей станции.
+    .suffix = Настенный
+ent-StationMapBroken = карта станции
     .desc = Виртуальная карта окрестностей станции.
     .suffix = Настенный, Сломанный
 ent-WallStationMap = карта станции

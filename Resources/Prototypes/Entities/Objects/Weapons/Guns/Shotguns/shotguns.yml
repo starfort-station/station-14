@@ -203,6 +203,7 @@
   name: Admemerer
   parent: BaseWeaponShotgun
   id: WeaponShotgunKammererAdmeme
+  suffix: Admin
   description: The hour of punishment over the natives has come. Uses .50 shotgun shells.
   components:
   - type: Sprite

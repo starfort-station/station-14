@@ -1,0 +1,8 @@
+- type: entity
+  parent: ClothingBackpack
+  id: ClothingBackpackExpedition
+  name: expedition bag
+  description: A robust backpack for stashing ammo, guns and pills.
+  components:
+    - type: Sprite
+      sprite: Clothing/Back/Backpacks/expedition.rsi

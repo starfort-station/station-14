@@ -1,6 +1,9 @@
 ent-RandomCorpsesSpawner = спавнер случайного трупа
     .desc = Спавнит случайный труп.
 	.suffix = 100%
+ent-RandomXenoCorpsesSpawner = спавнер случайного трупа ксено
+    .desc = Спавнит случайный труп ксено.
+	.suffix = 100%
 ent-CaptainCorpsesSpawner = спавнер трупа капитана
     .desc = { ent-RandomCorpsesSpawner.desc 
 	.suffix = Капитан, 100%
@@ -22,3 +25,4 @@ ent-ScienceCorpsesSpawner = спавнер трупа ученого
 ent-SecurityCorpsesSpawner = спавнер трупа безопасности
     .desc = { ent-RandomCorpsesSpawner.desc }
     .suffix = Безопасность, 40%
+	

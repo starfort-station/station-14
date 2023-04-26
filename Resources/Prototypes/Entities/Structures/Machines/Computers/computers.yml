@@ -83,32 +83,6 @@
 
 - type: entity
   parent: BaseComputerShuttle
-  id: ComputerShuttleExpedition
-  name: expedition shuttle console
-  description: Used to pilot an expedition shuttle.
-  components:
-  - type: Sprite
-    layers:
-    - map: ["computerLayerBody"]
-      state: computer
-    - map: ["computerLayerKeyboard"]
-      state: generic_keyboard
-    - map: ["computerLayerScreen"]
-      state: shuttle
-    - map: ["computerLayerKeys"]
-      state: generic_keys
-  - type: Tag
-    tags:
-      - ExpeditionConsole
-  - type: PointLight
-    radius: 1.5
-    energy: 1.6
-    color: "#6b8e23"
-  - type: Computer
-    board: ExpeditionShuttleConsoleCircuitboard    
-
-- type: entity
-  parent: BaseComputerShuttle
   id: ComputerShuttleSyndie
   name: syndicate shuttle console
   description: Used to pilot a syndicate shuttle.
