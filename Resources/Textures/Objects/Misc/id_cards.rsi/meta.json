@@ -253,6 +253,9 @@
     },
     {
       "name": "idfield-scientist"
+    },
+    {
+      "name": "idfield-engineer"
     }
   ]
 }

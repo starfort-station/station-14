@@ -1,0 +1,36 @@
+- type: job
+  id: FieldEngineer
+  name: job-name-field-engineer
+  description: job-description-field-engineer
+  playTimeTracker: JobFieldEngineer
+  requirements:
+    - !type:OverallPlaytimeRequirement
+      time: 18000 #5 hrs
+    - !type:DepartmentTimeRequirement
+      department: Security
+      time: 1800 #30 min
+    - !type:DepartmentTimeRequirement
+      department: Engineering
+      time: 3600 #1 hrs
+  startingGear: FieldEngineerGear
+  icon: "FieldEngineer"
+  supervisors: job-supervisors-field-commander 
+  canBeAntag: false
+  access:
+  - Engineering
+  - Maintenance
+  - Expedition
+  - External
+  extendedAccess:
+  - Atmospherics
+  - Brig
+
+- type: startingGear
+  id: FieldEngineerGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitFieldEngineer
+    back: ClothingBackpackExpeditionFilled
+    shoes: ClothingShoesBootsCombatFilled
+    id: FieldEngineerPDA
+    ears: ClothingHeadsetExpedition
+    belt: ClothingBeltUtilityFilled

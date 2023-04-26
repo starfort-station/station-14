@@ -7,4 +7,6 @@
 - type: playTimeTracker
   id: JobFieldTrooper
   
+- type: playTimeTracker
+  id: JobFieldEngineer
   

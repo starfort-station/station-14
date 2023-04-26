@@ -34,3 +34,15 @@
     state: pda-fieldscientist
   - type: Icon
     state: pda-fieldscientist
+
+- type: entity
+  parent: BasePDA
+  id: FieldEngineerPDA
+  name: field engineer PDA
+  description: Looks like brand new camo pda.
+  components:
+  - type: PDA
+    id: FieldEngineerIDCard
+    state: pda-fieldengineer
+  - type: Icon
+    state: pda-fieldengineer

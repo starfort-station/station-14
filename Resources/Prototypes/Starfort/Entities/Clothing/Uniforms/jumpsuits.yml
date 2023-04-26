@@ -31,3 +31,13 @@
   - type: Clothing
     sprite: Clothing/Uniforms/Jumpsuit/field_medic.rsi
 
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitFieldEngineer
+  name: field engineer jumpsuit
+  description: Uniform for expedition squad performing operations in deep space.
+  components:
+  - type: Sprite
+    sprite: Clothing/Uniforms/Jumpsuit/field_engineer.rsi
+  - type: Clothing
+    sprite: Clothing/Uniforms/Jumpsuit/field_engineer.rsi

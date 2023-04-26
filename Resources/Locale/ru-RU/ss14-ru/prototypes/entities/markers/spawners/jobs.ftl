@@ -99,3 +99,5 @@ ent-SpawnPointFieldScientist = полевой учёный
     .desc = { ent-SpawnPointJobBase.desc }
 ent-SpawnPointFieldTrooper = полевой солдат
     .desc = { ent-SpawnPointJobBase.desc }
+ent-SpawnPointFieldEngineer = полевой инжинер
+    .desc = { ent-SpawnPointJobBase.desc }
