@@ -45,4 +45,4 @@
     id: FieldCommanderIDCard
     state: pda-fieldcommander
   - type: Icon
-    state: pda-fieldcommader
+    state: pda-fieldcommander
