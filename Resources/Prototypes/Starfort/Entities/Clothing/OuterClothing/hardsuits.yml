@@ -1,0 +1,60 @@
+# Expedition
+- type: entity
+  abstract: true
+  parent: ClothingOuterHardsuitBase
+  id: ClothingOuterHardsuitExpeditionBase
+  components:
+  - type: Sprite
+    sprite: Clothing/OuterClothing/Hardsuits/expedition.rsi
+  - type: Clothing
+    sprite: Clothing/OuterClothing/Hardsuits/expedition.rsi
+  - type: PressureProtection
+    highPressureMultiplier: 0.3
+    lowPressureMultiplier: 7000
+  - type: DiseaseProtection
+    protection: 0.7
+  - type: ExplosionResistance
+    damageCoefficient: 0.55
+  - type: ClothingSpeedModifier
+    walkModifier: 0.80
+    sprintModifier: 0.80
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.55
+        Slash: 0.55
+        Piercing: 0.7
+        Heat: 0.8
+        Cold: 0.8
+        Radiation: 0.5
+        Caustic: 0.5
+
+- type: entity
+  parent: ClothingOuterHardsuitExpeditionBase
+  id: ClothingOuterHardsuitExpeditionMedic
+  name: Field hardsuit
+  description: Modern expedition hardsuit with composition armor, looks for medic
+  suffix: field medic
+  components:
+  - type: ToggleableClothing
+    clothingPrototype: ClothingHeadHelmetHardsuitExpeditionMedic
+    
+- type: entity
+  parent: ClothingOuterHardsuitExpeditionBase
+  id: ClothingOuterHardsuitExpeditionTrooper
+  name: Field hardsuit
+  description: Modern expedition hardsuit with composition armor, looks for trooper
+  suffix: field trooper
+  components:
+  - type: ToggleableClothing
+    clothingPrototype: ClothingHeadHelmetHardsuitExpeditionTrooper
+    
+- type: entity
+  parent: ClothingOuterHardsuitExpeditionBase
+  id: ClothingOuterHardsuitExpeditionScientist
+  name: Field hardsuit
+  description: Modern expedition hardsuit with composition armor, looks for scientist
+  suffix: field scientist
+  components:
+  - type: ToggleableClothing
+    clothingPrototype: ClothingHeadHelmetHardsuitExpeditionScientist
