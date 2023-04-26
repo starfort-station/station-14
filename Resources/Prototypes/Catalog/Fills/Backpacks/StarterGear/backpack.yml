@@ -213,7 +213,7 @@
   components:
     - type: StorageFill
       contents:
-        - id: BoxSurvivalSecurity
+        - id: BoxSurvivalERT
         - id: WeaponPulsePistol
         - id: WeaponPistolMk58
         - id: MagazinePistolHighCapacityRubber
@@ -221,7 +221,6 @@
         - id: Handcuffs
           amount: 3
         - id: PaperWrittenERTmanual
-        - id: CombatMedipen
 
 
 - type: entity
@@ -231,7 +230,7 @@
   components:
     - type: StorageFill
       contents:
-        - id: BoxSurvivalSecurity
+        - id: BoxSurvivalERT
         - id: WeaponDisabler
         - id: WeaponPulsePistol
         - id: WeaponPulseCarbine
@@ -261,7 +260,7 @@
   components:
     - type: StorageFill
       contents:
-        - id: BoxSurvivalEngineering
+        - id: BoxSurvivalERT
         - id: PaperWrittenERTmanual
         - id: trayScanner
         - id: WeaponPulseCarbine
@@ -277,7 +276,7 @@
   components:
     - type: StorageFill
       contents:
-        - id: BoxSurvival
+        - id: BoxSurvivalERT
         - id: PaperWrittenERTmanual
         - id: WeaponPulsePistol
         - id: MedkitFilled

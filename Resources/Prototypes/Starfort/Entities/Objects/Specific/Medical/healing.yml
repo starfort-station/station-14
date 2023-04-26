@@ -1,0 +1,12 @@
+- type: entity
+  name: bicaridine pill
+  parent: Pill
+  id: PillBicaridine
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 20
+        reagents:
+        - ReagentId: Bicaridine
+          Quantity: 10

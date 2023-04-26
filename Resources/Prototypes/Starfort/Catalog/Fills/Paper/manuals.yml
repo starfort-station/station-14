@@ -1,0 +1,11 @@
+- type: entity
+  id: PaperWrittenERTmanual
+  suffix: "ERT manual"
+  parent: Paper
+  components:
+  - type: Paper
+    contentSize: 5000
+    content: book-text-ERT-manual
+    stampState: paper_stamp-cent
+    stampedBy:
+      - ЦентКом #CentComm

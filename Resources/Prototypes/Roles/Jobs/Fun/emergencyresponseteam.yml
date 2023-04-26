@@ -159,7 +159,7 @@
     outerClothing: ClothingOuterVestKevlar
     id: ERTLeaderPDA
     ears: ClothingHeadsetAltCommand
-    belt: ClothingBeltMedicalFilled
+    belt: ClothingBeltMilitaryERTMedicFilled
     pocket1: HandheldHealthAnalyzer
     pocket2: Flare
 
@@ -176,7 +176,7 @@
     suitstorage: OxygenTankFilled
     id: ERTLeaderPDA
     ears: ClothingHeadsetAltCommand
-    belt: ClothingBeltMedicalFilled
+    belt: ClothingBeltMilitaryERTMedicFilled
     pocket1: HandheldHealthAnalyzer
     pocket2: Flare
 
