@@ -258,5 +258,6 @@
     id: ExpeditionMapSpawn
     weight: 10
     endAfter: 1
+    minimumPlayers: 100
     startAudio:
       path: /Audio/Announcements/attention.ogg
