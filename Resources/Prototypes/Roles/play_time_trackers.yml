@@ -137,4 +137,6 @@
   id: JobBrigmedic
 
   
+- type: playTimeTracker
+  id: JobFieldCommander
   
