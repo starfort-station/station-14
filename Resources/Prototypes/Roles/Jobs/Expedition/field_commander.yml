@@ -14,7 +14,7 @@
       time: 18000 #5 hrs
   startingGear: FieldCommanderGear
   icon: "FieldCommander"
-  supervisors: job-supervisors-rd
+  supervisors: job-supervisors-captain
   canBeAntag: false
   access:
   - Brig
@@ -34,4 +34,4 @@
     shoes: ClothingShoesBootsAssaultFilled
     id: FieldCommanderPDA
     ears: ClothingHeadsetExpedition
-    belt: ClothingBeltAssault
+    belt: ClothingBeltSecurityWebbing
