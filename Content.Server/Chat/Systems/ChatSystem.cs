@@ -264,7 +264,7 @@ public sealed partial class ChatSystem : SharedChatSystem
 
         if (!EntityManager.TryGetComponent<StationDataComponent>(station, out var stationDataComp)) return;
 
-        var filter = _stationSystem.GetInStation(stationDataComp);
+        var filter = _stationSystem.GetInStation(stationDataComp, 64);
 
         _chatManager.ChatMessageToManyFiltered(filter, ChatChannel.Radio, message, wrappedMessage, source, false, true, colorOverride);
 
