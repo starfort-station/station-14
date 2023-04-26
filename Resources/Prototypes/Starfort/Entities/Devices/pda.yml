@@ -34,3 +34,15 @@
     state: pda-fieldscientist
   - type: Icon
     state: pda-fieldscientist
+ 
+- type: entity
+  parent: BasePDA
+  id: FieldCommanderPDA
+  name: field commander PDA
+  description: A parody of ERT
+  components:
+  - type: PDA
+    id: FieldCommanderIDCard
+    state: pda-fieldcommander
+  - type: Icon
+    state: pda-fieldcommander
