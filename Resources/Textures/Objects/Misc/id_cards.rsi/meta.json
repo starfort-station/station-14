@@ -1,7 +1,7 @@
 {
   "version": 1,
   "license": "CC-BY-SA-3.0",
-  "copyright": "Taken from tgstation at commit https://github.com/tgstation/tgstation/commit/d917f4c2a088419d5c3aec7656b7ff8cebd1822e idcluwne made by brainfood1183 (github) for ss14, idbrigmedic made by PuroSlavKing (Github)",
+  "copyright": "Taken from tgstation at commit https://github.com/tgstation/tgstation/commit/d917f4c2a088419d5c3aec7656b7ff8cebd1822e idcluwne made by brainfood1183 (github) for ss14, idbrigmedic made by PuroSlavKing (Github), id-fieldcommander made by fedKotikeD (https://github.com/starfort-station/station-14/pull/74)",
   "size": {
     "x": 32,
     "y": 32
@@ -253,6 +253,9 @@
     },
     {
       "name": "idfield-scientist"
+    },
+    {
+      "name": "idfield-commander"
     }
   ]
 }
