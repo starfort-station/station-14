@@ -40,3 +40,17 @@
       state_closed: fieldmed_door
   - type: AccessReader
     access: [["Medical","Expedition"]]
+
+- type: entity
+  id: LockerFieldEng
+  parent: LockerBaseSecure
+  name: expedition engineer's locker
+  components:
+  - type: Appearance
+    visuals:
+    - type: StorageVisualizer
+      state: fieldsci
+      state_open: fieldsci_open
+      state_closed: fieldeng_door
+  - type: AccessReader
+    access: [["Engineering","Expedition"]]

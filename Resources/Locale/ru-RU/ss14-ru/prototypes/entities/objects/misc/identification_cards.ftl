@@ -102,3 +102,5 @@ ent-FieldScientistIDCard = ID полевого учёного
     .desc = { ent-IDCardStandard.desc }
 ent-FieldTrooperIDCard = ID полевого солдата
     .desc = { ent-IDCardStandard.desc }
+ent-FieldEngineerIDCard = ID полевого инженера
+    .desc = { ent-IDCardStandard.desc }

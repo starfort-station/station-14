@@ -1,0 +1,12 @@
+- type: entity
+  id: SpawnPointFieldEngineer
+  parent: SpawnPointJobBase
+  name: FieldEngineer
+  components:
+  - type: SpawnPoint
+    job_id: FieldEngineer
+  - type: Sprite
+    layers:
+      - state: green
+      - sprite: Markers/jobs.rsi
+        state: field_engineer

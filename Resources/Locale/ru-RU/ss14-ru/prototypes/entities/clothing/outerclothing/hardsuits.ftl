@@ -75,3 +75,6 @@ ent-ClothingOuterHardsuitExpeditionTrooper = экспедиционный ска
 ent-ClothingOuterHardsuitExpeditionScientist = экспедиционный скафандр
     .desc = Современный экспедиционный скафандр ученого с композиционной броней.
     .suffix = полевой ученый
+ent-ClothingOuterHardsuitExpeditionEngineer = экспедиционный скафандр
+    .desc = Современный экспедиционный скафандр инженера с композиционной броней.
+    .suffix = полевой инженер

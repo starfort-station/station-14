@@ -33,6 +33,17 @@
 
 - type: entity
   parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitFieldEngineer
+  name: field engineer jumpsuit
+  description: Uniform for expedition squad performing operations in deep space.
+  components:
+  - type: Sprite
+    sprite: Clothing/Uniforms/Jumpsuit/field_engineer.rsi
+  - type: Clothing
+    sprite: Clothing/Uniforms/Jumpsuit/field_engineer.rsi
+
+- type: entity
+  parent: ClothingUniformBase
   id: ClothingUniformJumpsuitFieldCommander
   name: field commander jumpsuit
   description: Uniform for convenient management of your freight forwarders

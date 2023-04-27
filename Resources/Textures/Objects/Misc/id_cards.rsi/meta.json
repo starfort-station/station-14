@@ -255,6 +255,9 @@
       "name": "idfield-scientist"
     },
     {
+      "name": "idfield-engineer"
+    },
+    {
       "name": "idfield-commander"
     }
   ]

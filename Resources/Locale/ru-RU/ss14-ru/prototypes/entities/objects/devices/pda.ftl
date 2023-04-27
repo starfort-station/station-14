@@ -97,3 +97,5 @@ ent-FieldScientistPDA = ID полевого учёного
     .desc = Пахнет кислотой
 ent-FieldTrooperPDA = ID полевого солдата
     .desc = Пахнет кислотой
+ent-FieldEngineerPDA = ID полевого инженера
+    .desc = Пахнет кислотой

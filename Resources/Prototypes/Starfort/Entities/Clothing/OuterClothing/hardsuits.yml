@@ -58,3 +58,13 @@
   components:
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHelmetHardsuitExpeditionScientist
+
+- type: entity
+  parent: ClothingOuterHardsuitExpeditionBase
+  id: ClothingOuterHardsuitExpeditionEngineer
+  name: Field hardsuit
+  description: Modern expedition hardsuit with composition armor, looks for engineer
+  suffix: field engineer
+  components:
+  - type: ToggleableClothing
+    clothingPrototype: ClothingHeadHelmetHardsuitExpeditionEngineer

@@ -207,6 +207,9 @@
       "name": "pda-fieldtrooper"
     },
     {
+      "name": "pda-fieldengineer"
+    },
+    {
       "name": "pda-fieldcommander"
     }
   ]
