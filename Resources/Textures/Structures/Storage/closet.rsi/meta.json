@@ -499,20 +499,23 @@
     {
       "name": "yellow_door"
     },
-	{
+    {
       "name": "fieldsci"
     },
-	{
+    {
       "name": "fieldsci_open"
     },
-	{
+    {
       "name": "fieldmed_door"
     },
-	{
+    {
       "name": "fieldsci_door"
     },
-	{
+    {
       "name": "fieldtroop_door"
+    },
+    {
+      "name": "fieldeng_door"
     }
   ]
 }
