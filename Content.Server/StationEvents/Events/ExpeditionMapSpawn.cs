@@ -61,7 +61,7 @@ public sealed class ExpeditionMapSpawn : StationEventSystem
             return;
         }
 
-        var index = _random.Next(allFoundMaps.Count() - 1);
+        var index = _random.Next() % allFoundMaps.Count();      // default functions with max int work bad, had 0 random idk.
 
         var success = _mapLoader.TryLoad(mapId, allFoundMaps[index].MapPath.ToString(), out _);
         if (!success)
@@ -85,8 +85,9 @@ public sealed class ExpeditionMapSpawn : StationEventSystem
         ftlComponent.Whitelist.Tags ??= new List<string>();
         ftlComponent.Whitelist.Tags.Add("ExpeditionConsole");
 
+        _entMan.InitializeAndStartEntity(ftlPoint, mapId);
         MapManager.DoMapInitialize(mapId);
-        _entMan.InitializeAndStartEntity( ftlPoint, mapId);
+        
     }
 
 }
