@@ -33,3 +33,5 @@
     id: FieldScientistPDA
     ears: ClothingHeadsetExpedition
     belt: ClothingBeltUtilityFilled
+  satchel: ClothingBackpackSatchelExpeditionFilled
+  duffelbag: ClothingBackpackDuffelExpeditionFilled

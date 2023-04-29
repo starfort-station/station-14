@@ -1,1 +1,8 @@
-
+- type: entity
+  parent: ClothingBackpack
+  id: ClothingBackpackDuffelExpedition
+  name: expedition duffel bag
+  description: A large robust duffel back for stashing ammo, guns and pills.
+  components:
+    - type: Sprite
+      sprite: Starfort/Clothing/Back/Duffels/expedition.rsi

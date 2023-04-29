@@ -156,6 +156,9 @@
         },
         {
             "name": "FieldEngineer"
+        },
+        {
+            "name": "FieldCommander"
         }
     ]
 }
