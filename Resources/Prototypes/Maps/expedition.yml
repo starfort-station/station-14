@@ -11,3 +11,14 @@
   name: "Small / Mining Station 1"
   ftlName: "Добывающая станция"
   mapPath: /Maps/Expedition/exp-medium-lost-mining-station.yml
+  
+  
+- type: expeditionMap
+  id: ExpBigResearchStation
+  name: "Big / Research Station 1"
+  ftlName: "Исследовательская станция"
+  mapPath: /Maps/Expedition/exp-lab-yamaka.yml
+  
+  
+  
+  
