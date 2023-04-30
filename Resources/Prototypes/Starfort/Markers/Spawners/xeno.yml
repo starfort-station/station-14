@@ -10,7 +10,7 @@
         state: crit
   - type: ConditionalSpawner
     prototypes:
-      - MobXeno
+      - XenoAlienBurrower
 
 - type: entity
   name: praetorian spawner
@@ -24,7 +24,7 @@
         state: crit
   - type: ConditionalSpawner
     prototypes:
-      - MobXenoPraetorian
+      - XenoAlienPraetorian
 
 - type: entity
   name: drone spawner
@@ -38,7 +38,7 @@
         state: crit
   - type: ConditionalSpawner
     prototypes:
-      - MobXenoDrone
+      - XenoAlienDrone
 
 - type: entity
   name: queen spawner
@@ -52,7 +52,7 @@
         state: crit
   - type: ConditionalSpawner
     prototypes:
-      - MobXenoQueen
+      - XenoAlienQueen
 
 - type: entity
   name: ravager spawner
@@ -66,7 +66,7 @@
         state: crit
   - type: ConditionalSpawner
     prototypes:
-      - MobXenoRavager
+      - XenoAlienRavager
 
 - type: entity
   name: runner spawner
@@ -80,7 +80,7 @@
         state: crit
   - type: ConditionalSpawner
     prototypes:
-      - MobXenoRunner
+      - XenoAlienRunner
 
 - type: entity
   name: spitter spawner
@@ -94,7 +94,7 @@
         state: crit
   - type: ConditionalSpawner
     prototypes:
-      - MobXenoSpitter
+      - XenoAlienSpitter
 
 - type: entity
   name: random xeno spawner
@@ -108,10 +108,10 @@
         state: sleeping
   - type: RandomSpawner
     prototypes:
-    - MobXeno
-    - MobXenoDrone
-    - MobXenoRunner
-    - MobXenoSpitter
+    - XenoAlienBurrower
+    - XenoAlienDrone
+    - XenoAlienRunner
+    - XenoAlienSpitter
     chance: 1
 
 - type: entity
