@@ -30,3 +30,5 @@
     id: FieldTrooperPDA
     ears: ClothingHeadsetExpedition
     belt: ClothingBeltSecurityWebbing
+  satchel: ClothingBackpackSatchelExpeditionFilled
+  duffelbag: ClothingBackpackDuffelExpeditionFilled

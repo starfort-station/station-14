@@ -34,3 +34,5 @@
     id: FieldMedicPDA
     ears: ClothingHeadsetExpedition
     belt: ClothingBeltMedicalFilled
+  satchel: ClothingBackpackSatchelExpeditionFilled
+  duffelbag: ClothingBackpackDuffelExpeditionFilled

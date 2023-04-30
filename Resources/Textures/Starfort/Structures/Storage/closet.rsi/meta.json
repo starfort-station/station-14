@@ -1,0 +1,44 @@
+{
+  "version": 1,
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "copyright": "Made by github.com/starfort-station/station-14",
+  "license": "CC-BY-SA-3.0",
+  "states": [
+    {
+      "name": "generic"
+    },
+    {
+      "name": "generic_door"
+    },
+    {
+      "name": "locked"
+    },
+    {
+      "name": "unlocked"
+    },
+    {
+      "name": "welded"
+    },
+    {
+      "name": "fieldsci"
+    },
+    {
+      "name": "fieldsci_open"
+    },
+    {
+      "name": "fieldmed_door"
+    },
+    {
+      "name": "fieldsci_door"
+    },
+    {
+      "name": "fieldtroop_door"
+    },
+    {
+      "name": "fieldeng_door"
+    }
+  ]
+}

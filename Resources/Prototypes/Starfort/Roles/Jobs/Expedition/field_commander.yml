@@ -17,6 +17,7 @@
   supervisors: job-supervisors-captain
   canBeAntag: false
   access:
+  - Command
   - Brig
   - Maintenance
   - Expedition
@@ -35,3 +36,5 @@
     id: FieldCommanderPDA
     ears: ClothingHeadsetExpedition
     belt: ClothingBeltSecurityWebbing
+  satchel: ClothingBackpackSatchelExpeditionFilled
+  duffelbag: ClothingBackpackDuffelExpeditionFilled

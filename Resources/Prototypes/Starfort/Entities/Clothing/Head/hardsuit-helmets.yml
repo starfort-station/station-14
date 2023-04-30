@@ -8,9 +8,9 @@
   suffix: field medic
   components:
   - type: Sprite
-    sprite: Clothing/Head/Hardsuits/fieldmedic.rsi
+    sprite: Starfort/Clothing/Head/Hardsuits/fieldmedic.rsi
   - type: Clothing
-    sprite: Clothing/Head/Hardsuits/fieldmedic.rsi
+    sprite: Starfort/Clothing/Head/Hardsuits/fieldmedic.rsi
   - type: PointLight
     color: "#39ff14"
   - type: PressureProtection
@@ -40,9 +40,9 @@
   suffix: field scientist
   components:
   - type: Sprite
-    sprite: Clothing/Head/Hardsuits/fieldscientist.rsi
+    sprite: Starfort/Clothing/Head/Hardsuits/fieldscientist.rsi
   - type: Clothing
-    sprite: Clothing/Head/Hardsuits/fieldscientist.rsi
+    sprite: Starfort/Clothing/Head/Hardsuits/fieldscientist.rsi
   - type: PointLight
     color: "#39ff14"
   - type: PressureProtection
@@ -72,9 +72,9 @@
   suffix: field trooper
   components:
   - type: Sprite
-    sprite: Clothing/Head/Hardsuits/fieldtrooper.rsi
+    sprite: Starfort/Clothing/Head/Hardsuits/fieldtrooper.rsi
   - type: Clothing
-    sprite: Clothing/Head/Hardsuits/fieldtrooper.rsi
+    sprite: Starfort/Clothing/Head/Hardsuits/fieldtrooper.rsi
   - type: PointLight
     color: "#39ff14"
   - type: PressureProtection
@@ -104,9 +104,9 @@
   suffix: field engineer
   components:
   - type: Sprite
-    sprite: Clothing/Head/Hardsuits/fieldengineer.rsi
+    sprite: Starfort/Clothing/Head/Hardsuits/fieldengineer.rsi
   - type: Clothing
-    sprite: Clothing/Head/Hardsuits/fieldengineer.rsi
+    sprite: Starfort/Clothing/Head/Hardsuits/fieldengineer.rsi
   - type: PointLight
     color: "#39ff14"
   - type: PressureProtection

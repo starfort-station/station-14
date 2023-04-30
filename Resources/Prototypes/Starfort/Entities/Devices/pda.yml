@@ -5,18 +5,33 @@
   name: field trooper PDA
   description: Looks like brand new camo pda.
   components:
+  - type: Sprite
+    sprite: Starfort/Objects/Devices/pda.rsi
+    netsync: false
+    layers:
+    - map: [ "enum.PDAVisualLayers.Base" ]
+    - state: "light_overlay"
+      map: [ "enum.PDAVisualLayers.Flashlight" ]
+      shader: "unshaded"
+      visible: false
+    - state: "id_overlay"
+      map: [ "enum.PDAVisualLayers.IDLight" ]
+      shader: "unshaded"
+      visible: false
   - type: PDA
     id: FieldTrooperIDCard
     state: pda-fieldtrooper
   - type: Icon
+    sprite: Starfort/Objects/Devices/pda.rsi
     state: pda-fieldtrooper
     
 - type: entity
-  parent: BasePDA
+  parent: FieldTrooperPDA
   id: FieldMedicPDA
   name: field medic PDA
   description: Looks like brand new camo pda.
   components:
+  - type: Sprite
   - type: PDA
     id: FieldMedicIDCard
     state: pda-fieldmedic
@@ -24,11 +39,12 @@
     state: pda-fieldmedic
 
 - type: entity
-  parent: BasePDA
+  parent: FieldTrooperPDA
   id: FieldScientistPDA
   name: field scientist PDA
   description: Looks like brand new camo pda.
   components:
+  - type: Sprite
   - type: PDA
     id: FieldScientistIDCard
     state: pda-fieldscientist
@@ -36,11 +52,12 @@
     state: pda-fieldscientist
 
 - type: entity
-  parent: BasePDA
+  parent: FieldTrooperPDA
   id: FieldEngineerPDA
   name: field engineer PDA
   description: Looks like brand new camo pda.
   components:
+  - type: Sprite
   - type: PDA
     id: FieldEngineerIDCard
     state: pda-fieldengineer
@@ -48,14 +65,14 @@
     state: pda-fieldengineer
 
 - type: entity
-  parent: BasePDA
+  parent: FieldTrooperPDA
   id: FieldCommanderPDA
   name: field commander PDA
   description: A parody of ERT
   components:
+  - type: Sprite
   - type: PDA
     id: FieldCommanderIDCard
     state: pda-fieldcommander
   - type: Icon
     state: pda-fieldcommander
-

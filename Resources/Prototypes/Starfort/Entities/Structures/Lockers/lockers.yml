@@ -1,7 +1,23 @@
 # Expedition
 - type: entity
+  id: LockerFieldTroop
+  parent: LockerBaseSecure
+  name: expedition soldier's locker
+  components:
+    - type: Sprite
+      sprite: Starfort/Structures/Storage/closet.rsi
+    - type: Appearance
+      visuals:
+        - type: StorageVisualizer
+          state: fieldsci
+          state_open: fieldsci_open
+          state_closed: fieldtroop_door
+    - type: AccessReader
+      access: [["Security","Expedition"]]
+
+- type: entity
   id: LockerFieldSci
-  parent: LockerBase
+  parent: LockerFieldTroop
   name: expedition scientist's locker
   components:
     - type: Appearance
@@ -14,22 +30,8 @@
       access: [["Research","Expedition"]]
 
 - type: entity
-  id: LockerFieldTroop
-  parent: LockerBaseSecure
-  name: expedition soldier's locker
-  components:
-  - type: Appearance
-    visuals:
-    - type: StorageVisualizer
-      state: fieldsci
-      state_open: fieldsci_open
-      state_closed: fieldtroop_door
-  - type: AccessReader
-    access: [["Security","Expedition"]]
-
-- type: entity
   id: LockerFieldMed
-  parent: LockerBaseSecure
+  parent: LockerFieldTroop
   name: expedition doctor's locker
   components:
   - type: Appearance
@@ -43,7 +45,7 @@
 
 - type: entity
   id: LockerFieldEng
-  parent: LockerBaseSecure
+  parent: LockerFieldTroop
   name: expedition engineer's locker
   components:
   - type: Appearance
