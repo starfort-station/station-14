@@ -8,7 +8,7 @@
       - state: red
       - sprite: Mobs/Species/Human/parts.rsi
         state: full
-      
+
 - type: entity
   name: Random corpses Spawner
   id: RandomCorpsesSpawner
@@ -21,8 +21,8 @@
       - MobRandomServiceBody
       - MobRandomMedicBody
       - MobRandomScienceBody
-      - MobRandomSecurityBody 
-    
+      - MobRandomSecurityBody
+
 - type: entity
   name: Captain corpse Spawner
   id: CaptainCorpsesSpawner
@@ -30,8 +30,8 @@
   components:
   - type: ConditionalSpawner
     prototypes:
-      - MobCaptainBody  
-      
+      - MobCaptainBody
+
 - type: entity
   name: Cargo Corpses Spawner
   id: CargoCorpsesSpawner
@@ -41,7 +41,7 @@
     chance: 0.4
     prototypes:
       - MobRandomCargoBody
-      
+
 - type: entity
   name: Engineer Corpses Spawner
   id: EngineerCorpsesSpawner
@@ -51,7 +51,7 @@
     chance: 0.4
     prototypes:
       - MobRandomEngineerBody
-      
+
 - type: entity
   name: Service Corpses Spawner
   id: ServiceCorpsesSpawner
@@ -61,7 +61,7 @@
     chance: 0.4
     prototypes:
       - MobRandomServiceBody
-      
+
 - type: entity
   name: Medic Corpses Spawner
   id: MedicCorpsesSpawner
@@ -71,7 +71,7 @@
     chance: 0.4
     prototypes:
       - MobRandomMedicBody
-      
+
 - type: entity
   name: Science Corpses Spawner
   id: ScienceCorpsesSpawner
@@ -81,7 +81,7 @@
     chance: 0.4
     prototypes:
       - MobRandomScienceBody
-      
+
 - type: entity
   name: Security Corpses Spawner
   id: SecurityCorpsesSpawner
@@ -90,9 +90,9 @@
   - type: ConditionalSpawner
     chance: 0.4
     prototypes:
-      - MobRandomSecurityBody  
-      
-# Starfort xeno
+      - MobRandomSecurityBody
+
+
 - type: entity
   name: Random xeno corpses Spawner
   id: RandomXenoCorpsesSpawner
@@ -105,6 +105,6 @@
       state: dead
   - type: ConditionalSpawner
     prototypes:
-      - MobXenoBody
-      - MobXenoPraetorianBody
-      - MobXenoDroneBody
+      - XenoAlienBurrower
+      - XenoAlienPraetorianBody
+      - XenoAlienDroneBody
