@@ -22,7 +22,7 @@ public sealed class DarkVisionOverlay : Overlay
 
 
     public override bool RequestScreenTexture => true;
-    public override OverlaySpace Space => OverlaySpace.WorldSpace;
+    public override OverlaySpace Space => OverlaySpace.WorldSpaceBelowFOV;
 
     private ShaderInstance _darkShader;
     //private readonly ShaderInstance _circleMaskShader;
@@ -57,8 +57,6 @@ public sealed class DarkVisionOverlay : Overlay
 
     protected override void FrameUpdate(FrameEventArgs args)
     {
-
-
         _timeDelta = args.DeltaSeconds;
     }
 
@@ -80,14 +78,9 @@ public sealed class DarkVisionOverlay : Overlay
     {
         if (ScreenTexture == null || _darkVisionComponent == null)
             return;
-        if (_timeDelta == null)
-            return;
 
-        //_lightManager.DrawHardFov = true;
         _lightManager.DrawLighting = false;
-        //_lightManager.DrawShadows = false;
 
-        //_darkShader?.SetParameter("DELTA_TIME", _timeDelta);
         _darkShader?.SetParameter("SCREEN_TEXTURE", ScreenTexture);
 
         var worldHandle = args.WorldHandle;

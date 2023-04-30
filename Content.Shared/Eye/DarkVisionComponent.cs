@@ -12,6 +12,6 @@ namespace Content.Client.Eye.DarkVision
         public String? ShaderTexturePrototype;
 
         [DataField("layerColor")]
-        public Color LayerColor = Color.White;
+        public Color LayerColor = Color.FromHex("#00000000");
     }
 }
