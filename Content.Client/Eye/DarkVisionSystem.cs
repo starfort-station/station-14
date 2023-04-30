@@ -41,6 +41,10 @@ public sealed class DarkVisionSystem : EntitySystem
 
     private void OnPlayerAttached(EntityUid uid, DarkVisionComponent component, PlayerAttachedEvent args)
     {
+        if (component.ShaderTexturePrototype != null)
+        {
+            _overlay.SetShaderProto(component.ShaderTexturePrototype);
+        }
         _overlayMan.AddOverlay(_overlay);
     }
 
