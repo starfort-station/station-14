@@ -22,31 +22,24 @@ public sealed class DarkVisionOverlay : Overlay
 
 
     public override bool RequestScreenTexture => true;
-    public override OverlaySpace Space => OverlaySpace.WorldSpaceBelowFOV;
+    public override OverlaySpace Space => OverlaySpace.WorldSpace;
 
     private ShaderInstance _darkShader;
-    //private readonly ShaderInstance _circleMaskShader;
 
     private DarkVisionComponent? _darkVisionComponent = default!;
-    private float _timeDelta = 0;
 
     public DarkVisionOverlay()
     {
         IoCManager.InjectDependencies(this);
-        if (_darkVisionComponent == null)
+
+        if (_darkVisionComponent?.ShaderTexturePrototype == null)
         {
             _darkShader = _prototypeManager.Index<ShaderPrototype>("NightVisionRoboto").InstanceUnique();
             return;
         }
 
-        if (_darkVisionComponent.ShaderTexturePrototype == null)
-        {
-            _darkShader = _prototypeManager.Index<ShaderPrototype>("NightVisionRoboto").InstanceUnique();
-            return;
-        }
-
-        _darkShader = _prototypeManager.Index<ShaderPrototype>(_darkVisionComponent.ShaderTexturePrototype)
-                .InstanceUnique();
+        _darkShader = _prototypeManager.Index<ShaderPrototype>(
+                _darkVisionComponent.ShaderTexturePrototype).InstanceUnique();
     }
 
     public void SetShaderProto(String proto)
@@ -54,11 +47,6 @@ public sealed class DarkVisionOverlay : Overlay
         _darkShader = _prototypeManager.Index<ShaderPrototype>(proto).InstanceUnique();
     }
 
-
-    protected override void FrameUpdate(FrameEventArgs args)
-    {
-        _timeDelta = args.DeltaSeconds;
-    }
 
     protected override bool BeforeDraw(in OverlayDrawArgs args)
     {
@@ -79,11 +67,11 @@ public sealed class DarkVisionOverlay : Overlay
         if (ScreenTexture == null || _darkVisionComponent == null)
             return;
 
-        _lightManager.DrawLighting = false;
-
         _darkShader?.SetParameter("SCREEN_TEXTURE", ScreenTexture);
 
         var worldHandle = args.WorldHandle;
+
+        _lightManager.DrawLighting = _darkVisionComponent.DrawLight;
         worldHandle.UseShader(_darkShader);
         worldHandle.DrawRect(args.WorldBounds, _darkVisionComponent.LayerColor);
         worldHandle.UseShader(null);

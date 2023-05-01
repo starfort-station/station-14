@@ -13,5 +13,8 @@ namespace Content.Client.Eye.DarkVision
 
         [DataField("layerColor")]
         public Color LayerColor = Color.FromHex("#00000000");
+
+        [DataField("mustDrawLight")]
+        public bool DrawLight = false;
     }
 }

@@ -19,10 +19,10 @@ public sealed class DarkVisionSystem : EntitySystem
 {
     [Dependency] private readonly IPlayerManager _player = default!;
     [Dependency] private readonly IOverlayManager _overlayMan = default!;
-    [Dependency] ILightManager _lightManager = default!;
+    [Dependency] private readonly ILightManager _lightManager = default!;
 
 
-    private DarkVisionOverlay _overlay = default!;
+    private DarkVisionOverlay _darkOverlay = default!;
 
     public override void Initialize()
     {
@@ -36,35 +36,42 @@ public sealed class DarkVisionSystem : EntitySystem
 
         SubscribeNetworkEvent<RoundRestartCleanupEvent>(RoundRestartCleanup);
 
-        _overlay = new();
+        _darkOverlay = new DarkVisionOverlay();
     }
 
     private void OnPlayerAttached(EntityUid uid, DarkVisionComponent component, PlayerAttachedEvent args)
     {
         if (component.ShaderTexturePrototype != null)
         {
-            _overlay.SetShaderProto(component.ShaderTexturePrototype);
+            _darkOverlay.SetShaderProto(component.ShaderTexturePrototype);
         }
-        _overlayMan.AddOverlay(_overlay);
+        _lightManager.DrawLighting = component.DrawLight;
+        _overlayMan.AddOverlay(_darkOverlay);
+        
     }
 
     private void OnPlayerDetached(EntityUid uid, DarkVisionComponent component, PlayerDetachedEvent args)
     {
-        _overlayMan.RemoveOverlay(_overlay);
+        _overlayMan.RemoveOverlay(_darkOverlay);
         _lightManager.DrawLighting = true;
     }
 
     private void OnVisionInit(EntityUid uid, DarkVisionComponent component, ComponentInit args)
     {
         if (_player.LocalPlayer?.ControlledEntity == uid)
-            _overlayMan.AddOverlay(_overlay);
+        {
+            _lightManager.DrawLighting = component.DrawLight;
+            _overlayMan.AddOverlay(_darkOverlay);
+        }
+            
     }
 
     private void OnVisionShutdown(EntityUid uid, DarkVisionComponent component, ComponentShutdown args)
     {
         if (_player.LocalPlayer?.ControlledEntity == uid)
         {
-            _overlayMan.RemoveOverlay(_overlay);
+            _lightManager.DrawLighting = true;
+            _overlayMan.RemoveOverlay(_darkOverlay);
         }
     }
 
