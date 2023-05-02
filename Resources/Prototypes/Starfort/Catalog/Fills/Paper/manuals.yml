@@ -1,11 +1,21 @@
 - type: entity
-  id: PaperWrittenERTmanual
+  id: PaperWrittenERTmanualFirst
   suffix: "ERT manual"
   parent: Paper
   components:
   - type: Paper
-    contentSize: 5000
-    content: book-text-ERT-manual
+    content: book-text-ERT-manual-first
+    stampState: paper_stamp-cent
+    stampedBy:
+      - ЦентКом #CentComm
+
+- type: entity
+  id: PaperWrittenERTmanualSecond
+  suffix: "ERT manual"
+  parent: Paper
+  components:
+  - type: Paper
+    content: book-text-ERT-manual-second
     stampState: paper_stamp-cent
     stampedBy:
       - ЦентКом #CentComm

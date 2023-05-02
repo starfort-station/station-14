@@ -220,7 +220,8 @@
         - id: MagazinePistol
         - id: Handcuffs
           amount: 3
-        - id: PaperWrittenERTmanual
+        - id: PaperWrittenERTmanualFirst
+        - id: PaperWrittenERTmanualSecond
 
 
 - type: entity
@@ -235,7 +236,8 @@
         - id: WeaponPulsePistol
         - id: WeaponPulseCarbine
         - id: BoxHandcuff
-        - id: PaperWrittenERTmanual
+        - id: PaperWrittenERTmanualFirst
+        - id: PaperWrittenERTmanualSecond
         - id: Handcuffs
           amount: 3
 
@@ -250,7 +252,8 @@
         - id: WeaponPulseCarbine
         - id: Hypospray
         - id: MedkitAdvancedFilled
-        - id: PaperWrittenERTmanual
+        - id: PaperWrittenERTmanualFirst
+        - id: PaperWrittenERTmanualSecond
 
 
 - type: entity
@@ -261,7 +264,8 @@
     - type: StorageFill
       contents:
         - id: BoxSurvivalERT
-        - id: PaperWrittenERTmanual
+        - id: PaperWrittenERTmanualFirst
+        - id: PaperWrittenERTmanualSecond
         - id: trayScanner
         - id: WeaponPulseCarbine
         - id: RCD
@@ -277,7 +281,8 @@
     - type: StorageFill
       contents:
         - id: BoxSurvivalERT
-        - id: PaperWrittenERTmanual
+        - id: PaperWrittenERTmanualFirst
+        - id: PaperWrittenERTmanualSecond
         - id: WeaponPulsePistol
         - id: MedkitFilled
         - id: BoxLightMixed
