@@ -1,4 +1,0 @@
-- type: shader
-  id: SuperLight
-  kind: source
-  path: "/Textures/Shaders/super_light.swsl"
