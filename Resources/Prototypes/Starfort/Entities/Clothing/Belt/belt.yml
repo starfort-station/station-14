@@ -39,5 +39,5 @@
       - id: Brutepack
       - id: Ointment
       - id: PillDexalin
-       amount: 3
+        amount: 3
       - id: Stunbaton
