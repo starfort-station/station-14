@@ -30,11 +30,11 @@
   - type: StorageFill
     contents:
       - id: ClusterBangFull
-       amount: 2
+        amount: 2
       - id: Handcuffs
-       amount: 3
+        amount: 3
       - id: Zipties
-       amount: 3
+        amount: 3
       - id: FlashlightSeclite
       - id: Brutepack
       - id: Ointment
