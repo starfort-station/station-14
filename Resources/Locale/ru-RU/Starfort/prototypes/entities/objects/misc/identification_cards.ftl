@@ -1,0 +1,14 @@
+ent-CCAgentIDCard = ID карта агента внутрених дел
+    .desc = { ent-IDCardStandard.desc }
+ent-FieldRecrutIDCard = ID новобранца
+    .desc = { ent-IDCardStandard.desc }
+ent-FieldTrooperIDCard = ID полевого солдата
+    .desc = { ent-IDCardStandard.desc }
+ent-FieldMedicIDCard = ID полевого врача
+    .desc = { ent-IDCardStandard.desc }
+ent-FieldScientistIDCard = ID полевого учёного
+    .desc = { ent-IDCardStandard.desc }
+ent-FieldEngineerIDCard = ID полевого инженера
+    .desc = { ent-IDCardStandard.desc }
+ent-FieldCommanderIDCard = ID сержанта
+    .desc = { ent-IDCardStandard.desc }

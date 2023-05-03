@@ -1,0 +1,12 @@
+ent-ClothingUniformJumpsuitFieldRecrut = комбинезон новобранца
+    .desc = Униформа экспедиционного отряда, выполняющего операции в далёком космосе.
+ent-ClothingUniformJumpsuitFieldTrooper = комбинезон полевого солдата
+    .desc = { ent-ClothingUniformJumpsuitFieldRecrut.desc }
+ent-ClothingUniformJumpsuitFieldMedic = комбинезон полевого медика
+    .desc = { ent-ClothingUniformJumpsuitFieldRecrut.desc }
+ent-ClothingUniformJumpsuitFieldScientist = комбинезон полевого учёного
+    .desc = { ent-ClothingUniformJumpsuitFieldRecrut.desc }
+ent-ClothingUniformJumpsuitFieldEngineer = комбинезон полевого инженера
+    .desc = { ent-ClothingUniformJumpsuitFieldRecrut.desc }
+ent-ClothingUniformJumpsuitFieldCommander = комбинезон сержанта
+    .desc = { ent-ClothingUniformJumpsuitFieldRecrut.desc }
