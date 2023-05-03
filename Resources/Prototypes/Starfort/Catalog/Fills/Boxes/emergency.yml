@@ -13,6 +13,7 @@
       - id: Flare
       - id: FoodTinMRE
   - type: Sprite
+    sprite: Starfort/Objects/Storage/boxes.rsi
     layers:
       - state: internals
       - state: expedition

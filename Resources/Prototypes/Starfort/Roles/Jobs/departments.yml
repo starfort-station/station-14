@@ -3,7 +3,8 @@
   description: department-Expedition-description
   color: "#21421e"
   roles:
-  - ResearchDirector
+  - FieldCommander
   - FieldTrooper
   - FieldScientist
   - FieldMedic
+  - FieldEngineer

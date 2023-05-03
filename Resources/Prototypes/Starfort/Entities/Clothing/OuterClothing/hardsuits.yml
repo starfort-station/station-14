@@ -5,9 +5,9 @@
   id: ClothingOuterHardsuitExpeditionBase
   components:
   - type: Sprite
-    sprite: Clothing/OuterClothing/Hardsuits/expedition.rsi
+    sprite: Starfort/Clothing/OuterClothing/Hardsuits/expedition.rsi
   - type: Clothing
-    sprite: Clothing/OuterClothing/Hardsuits/expedition.rsi
+    sprite: Starfort/Clothing/OuterClothing/Hardsuits/expedition.rsi
   - type: PressureProtection
     highPressureMultiplier: 0.3
     lowPressureMultiplier: 7000
@@ -58,3 +58,13 @@
   components:
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHelmetHardsuitExpeditionScientist
+
+- type: entity
+  parent: ClothingOuterHardsuitExpeditionBase
+  id: ClothingOuterHardsuitExpeditionEngineer
+  name: Field hardsuit
+  description: Modern expedition hardsuit with composition armor, looks for engineer
+  suffix: field engineer
+  components:
+  - type: ToggleableClothing
+    clothingPrototype: ClothingHeadHelmetHardsuitExpeditionEngineer

@@ -256,7 +256,7 @@
   config:
     !type:StationEventRuleConfiguration
     id: ExpeditionMapSpawn
-    weight: 10
+    weight: 0
     endAfter: 1
     startAudio:
       path: /Audio/Announcements/attention.ogg

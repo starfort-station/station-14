@@ -10,6 +10,6 @@
       - EncryptionKeyExpedition
       - EncryptionKeyCommon
   - type: Sprite
-    sprite: Clothing/Ears/Headsets/expedition.rsi
+    sprite: Starfort/Clothing/Ears/Headsets/expedition.rsi
   - type: Clothing
-    sprite: Clothing/Ears/Headsets/expedition.rsi
+    sprite: Starfort/Clothing/Ears/Headsets/expedition.rsi

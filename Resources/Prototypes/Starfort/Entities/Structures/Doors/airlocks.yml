@@ -5,7 +5,7 @@
   suffix: Expedition
   components:
   - type: Sprite
-    sprite: Structures/Doors/Airlocks/Standard/expedition.rsi
+    sprite: Starfort/Structures/Doors/Airlocks/Standart/expedition.rsi
 
 - type: entity
   parent: AirlockGlass
@@ -13,7 +13,7 @@
   suffix: Expedition
   components:
   - type: Sprite
-    sprite: Structures/Doors/Airlocks/Glass/expedition.rsi
+    sprite: Starfort/Structures/Doors/Airlocks/Glass/expedition.rsi
   - type: PaintableAirlock
     group: Glass
 

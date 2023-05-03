@@ -11,7 +11,7 @@
     normalState: normal-unshaded
     denyState: deny-unshaded
   - type: Sprite
-    sprite: Structures/Machines/VendingMachines/expidition.rsi
+    sprite: Starfort/Structures/Machines/VendingMachines/expidition.rsi
     layers:
     - state: "off"
       map: ["enum.VendingMachineVisualLayers.Base"]
@@ -39,7 +39,7 @@
     brokenState: broken
     normalState: normal-unshaded
   - type: Sprite
-    sprite: Structures/Machines/VendingMachines/expeditorsdrobe.rsi
+    sprite: Starfort/Structures/Machines/VendingMachines/expeditorsdrobe.rsi
     layers:
     - state: "off"
       map: ["enum.VendingMachineVisualLayers.Base"]
