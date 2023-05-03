@@ -7,6 +7,18 @@
     "y": 32
   },
   "states": [
+     {
+      "name": "emitter0",
+      "directions": 4
+    },
+    {
+      "name": "emitter1",
+      "directions": 4
+    },
+    {
+      "name": "emitter2",
+      "directions": 4
+    },
     {
       "name": "beam",
       "directions": 4
