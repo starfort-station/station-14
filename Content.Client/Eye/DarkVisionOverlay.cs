@@ -1,6 +1,7 @@
 using Content.Client.Drugs;
 using Content.Shared.Drugs;
 using Content.Shared.Eye.Blinding;
+using Content.Shared.Eye.DarkVision;
 using Content.Shared.StatusEffect;
 using Robust.Client.GameObjects;
 using Robust.Client.Graphics;
@@ -56,8 +57,9 @@ public sealed class DarkVisionOverlay : Overlay
             return false;
 
         var darkVision = _entityManager.GetComponent<DarkVisionComponent>(playerEntity.Value);
-        if (darkVision == null)
+        if (darkVision == null || !darkVision.IsEnable)
             return false;
+        
         _darkVisionComponent = darkVision;
         return true;
     }

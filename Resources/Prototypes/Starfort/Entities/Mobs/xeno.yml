@@ -37,6 +37,7 @@
   - type: DarkVision
     layerColor: "#920016"
     shaderTexture: "GreyscaleFullscreen"
+    toggle: true
   - type: MobState
     allowedStates:
       - Alive

@@ -8,7 +8,15 @@
     sprite: Starfort/Clothing/Eyes/nvg.rsi
   - type: Clothing
     sprite: Starfort/Clothing/Eyes/nvg.rsi
-  - type: ToggleableLightVisuals
+  - type: GoggleToggle
+    on: false
+    shaderTexture: "NightVisionRoboto"
+    toggleAction:
+      name: action-name-nvg
+      description: action-description-nvg-toggle
+      icon: Starfort/Clothing/Eyes/nvg.rsi/icon.png
+      iconOn: Starfort/Clothing/Eyes/nvg.rsi/icon-on.png
+      event: !type:ToggleGogglesEvent
   - type: Battery
     maxCharge: 600 #lights drain 3/s but recharge of 2 makes this 1/s. Therefore 600 is 10 minutes of light.
     startingCharge: 600

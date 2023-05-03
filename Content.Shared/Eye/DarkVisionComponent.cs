@@ -2,11 +2,11 @@ using Robust.Client.Graphics;
 using Robust.Shared.GameStates;
 using Robust.Shared.Serialization;
 
-namespace Content.Client.Eye.DarkVision
+namespace Content.Shared.Eye.DarkVision
 {
     [RegisterComponent]
     [NetworkedComponent]
-    public sealed class DarkVisionComponent : Component
+    public sealed partial class DarkVisionComponent : Component
     {
         [DataField("shaderTexture")]
         public String? ShaderTexturePrototype;
@@ -16,5 +16,8 @@ namespace Content.Client.Eye.DarkVision
 
         [DataField("mustDrawLight")]
         public bool DrawLight = false;
+
+        [DataField("toggle")]
+        public bool IsEnable = false;
     }
 }
