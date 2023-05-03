@@ -97,3 +97,7 @@ ent-FieldScientistPDA = КПК полевого учёного
     .desc = Пахнет кислотой.
 ent-FieldTrooperPDA = КПК полевого солдата
     .desc = Пахнет порохом.
+ent-FieldEngineerPDA = КПК полевого инженера
+    .desc = Пахнет сварочным топливом.
+ent-FieldCommanderPDA = КПК сержанта
+    .desc = Этот КПК надеется что вы и ваша команда не облажаетесь.
