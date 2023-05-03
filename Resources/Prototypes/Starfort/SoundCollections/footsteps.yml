@@ -1,0 +1,5 @@
+- type: soundCollection
+  id: ERTmovingadvmagboots
+  files:
+  - /Audio/Starfort/Effects/Footsteps/ERTstep1.ogg
+  - /Audio/Starfort/Effects/Footsteps/ERTstep2.ogg

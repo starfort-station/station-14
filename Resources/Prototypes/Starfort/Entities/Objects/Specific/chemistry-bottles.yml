@@ -1,0 +1,15 @@
+- type: entity
+  id: BicaridineChemistryBottle
+  name: bicaridine bottle
+  parent: BaseChemistryEmptyBottle
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink: # This solution name and target volume is hard-coded in ChemMasterComponent
+        maxVol: 30
+        reagents:
+        - ReagentId: Bicaridine
+          Quantity: 30
+  - type: Tag
+    tags:
+    - Bottle
