@@ -1,4 +1,4 @@
-ent-CCAgentIDCard = ID карта агента внутрених дел
+ent-CCAgentIDCard = ID карта агента внутренних дел
     .desc = { ent-IDCardStandard.desc }
 ent-FieldRecrutIDCard = ID новобранца
     .desc = { ent-IDCardStandard.desc }
