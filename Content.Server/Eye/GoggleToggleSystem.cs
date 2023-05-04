@@ -17,8 +17,8 @@ public sealed class GoggleToggleSystem : GoggleToggleSharedSystem
     {
         base.Initialize();
 
-        SubscribeLocalEvent<GoggleToggleComponent, GotEquippedEvent>(OnGotEquipped);
-        SubscribeLocalEvent<GoggleToggleComponent, GotUnequippedEvent>(OnGotUnequipped);
+        //SubscribeLocalEvent<GoggleToggleComponent, GotEquippedEvent>(OnGotEquipped);
+        //SubscribeLocalEvent<GoggleToggleComponent, GotUnequippedEvent>(OnGotUnequipped);
     }
 
     protected override void UpdateGogglesState(EntityUid uid, GoggleToggleComponent goggles)
@@ -29,7 +29,6 @@ public sealed class GoggleToggleSystem : GoggleToggleSharedSystem
             vision.LayerColor = goggles.LayerColor;
             vision.ShaderTexturePrototype = goggles.ShaderTexturePrototype;
             vision.IsEnable = goggles.On;
-            _darkVision.ForceUpdate(uid, vision);
         }
         else
         {
@@ -42,41 +41,32 @@ public sealed class GoggleToggleSystem : GoggleToggleSharedSystem
                 Owner = uid
             };
             _entManager.AddComponent(uid, visionComponent, true);
-            _darkVision.ForceUpdate(uid, visionComponent);
         }
     }
 
-    private void OnGotUnequipped(EntityUid uid, GoggleToggleComponent component, GotUnequippedEvent args)
-    {
-        if (args.Slot == "eyes")
-        {
-            if (TryComp<DarkVisionComponent>(uid, out var vision))
-            {
-                vision.IsEnable = component.On = false;
-            }
-        }
-    }
+    //private void OnGotUnequipped(EntityUid uid, GoggleToggleComponent component, GotUnequippedEvent args)
+    //{
+    //    if (args.Slot == "eyes")
+    //    {
+    //        if (TryComp<DarkVisionComponent>(args.Equipee, out var vision))
+    //        {
+    //            vision.IsEnable = component.On = false;
+    //            vision.DrawLight = true;
+    //            Dirty(vision);
+    //        }
+    //    }
+    //}
 
-    private void OnGotEquipped(EntityUid uid, GoggleToggleComponent component, GotEquippedEvent args)
-    {
-        if (args.Slot == "eyes")
-        {
-            if (TryComp<DarkVisionComponent>(uid, out var vision))
-            {
-                vision.IsEnable = component.On;
-            }
-            else
-            {
-                var visionComponent = new DarkVisionComponent
-                {
-                    IsEnable = component.On,
-                    DrawLight = component.DrawLight,
-                    LayerColor = component.LayerColor,
-                    ShaderTexturePrototype = component.ShaderTexturePrototype,
-                    Owner = uid
-                };
-                _entManager.AddComponent(uid, visionComponent, true);
-            }
-        }
-    }
+    //private void OnGotEquipped(EntityUid uid, GoggleToggleComponent component, GotEquippedEvent args)
+    //{
+    //    if (args.Slot == "eyes")
+    //    {
+    //        if (TryComp<DarkVisionComponent>(args.Equipee, out var vision))
+    //        {
+    //            vision.IsEnable = component.On;
+    //            vision.DrawLight = component.DrawLight;
+    //            Dirty(vision);
+    //        }
+    //    }
+    //}
 }

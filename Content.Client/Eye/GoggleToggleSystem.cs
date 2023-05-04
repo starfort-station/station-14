@@ -15,13 +15,13 @@ public sealed class GoggleToggleSystem : GoggleToggleSharedSystem
     [Dependency] private readonly IEntityManager _entManager = default!;
     protected override void UpdateGogglesState(EntityUid uid, GoggleToggleComponent goggles)
     {
-        //if (TryComp<DarkVisionComponent>(uid, out var vision))
-        //{
-        //    vision.DrawLight = goggles.DrawLight;
-        //    vision.LayerColor = goggles.LayerColor;
-        //    vision.ShaderTexturePrototype = goggles.ShaderTexturePrototype;
-        //    vision.IsEnable = goggles.On;
-        //    _darkVision.ForceUpdate(uid, vision);
-        //}
+        if (TryComp<DarkVisionComponent>(uid, out var vision))
+        {
+            vision.DrawLight = goggles.DrawLight;
+            vision.LayerColor = goggles.LayerColor;
+            vision.ShaderTexturePrototype = goggles.ShaderTexturePrototype;
+            vision.IsEnable = goggles.On;
+            _darkVision.ForceUpdate(uid, vision);
+        }
     }
 }

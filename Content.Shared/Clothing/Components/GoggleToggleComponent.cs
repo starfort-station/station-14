@@ -1,12 +1,12 @@
 using Content.Shared.Actions;
 using Content.Shared.Actions.ActionTypes;
-using Content.Shared.Eye.DarkVision;
 using Robust.Shared.GameStates;
 
 namespace Content.Shared.Clothing.Components
 {
-    [Access(typeof(GoggleToggleSharedSystem))]//,typeof(DarkVisionSharedSystem))]
+    [Access(typeof(GoggleToggleSharedSystem))]
     [RegisterComponent]
+    [NetworkedComponent]
     [AutoGenerateComponentState]
     public sealed partial class GoggleToggleComponent : Component
     {
@@ -22,7 +22,8 @@ namespace Content.Shared.Clothing.Components
         [DataField("mustDrawLight")]
         public bool DrawLight = false;
 
-        [DataField("on"), AutoNetworkedField]
+        [DataField("on")]
+        [AutoNetworkedField]
         public bool On;
     }
 

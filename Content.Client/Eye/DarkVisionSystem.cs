@@ -48,7 +48,6 @@ public sealed class DarkVisionSystem : DarkVisionSharedSystem
                 _overlayMan.RemoveOverlay(_darkOverlay);
                 _lightManager.DrawLighting = true;
             }
-
         }
     }
 

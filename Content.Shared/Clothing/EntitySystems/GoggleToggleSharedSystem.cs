@@ -11,6 +11,7 @@ namespace Content.Shared.Clothing;
 public abstract class GoggleToggleSharedSystem : EntitySystem
 {
     [Dependency] private readonly IEntityManager _entManager = default!;
+    [Dependency] private readonly DarkVisionSharedSystem _darkVision = default!;
     [Dependency] private readonly SharedActionsSystem _sharedActions = default!;
     [Dependency] private readonly SharedContainerSystem _sharedContainer = default!;
     public override void Initialize()
@@ -19,15 +20,13 @@ public abstract class GoggleToggleSharedSystem : EntitySystem
 
         SubscribeLocalEvent<GoggleToggleComponent, GetItemActionsEvent>(OnGetActions);
         SubscribeLocalEvent<GoggleToggleComponent, ToggleGogglesEvent>(OnToggleAction);
+
+        SubscribeLocalEvent<GoggleToggleComponent, GotEquippedEvent>(OnGotEquipped);
+        SubscribeLocalEvent<GoggleToggleComponent, GotUnequippedEvent>(OnGotUnequipped);
     }
 
     private void OnToggleAction(EntityUid uid, GoggleToggleComponent goggles, ToggleGogglesEvent args)
     {
-        if (args.Handled)
-            return;
-
-        args.Handled = true;
-
         goggles.On = !goggles.On;
 
         if (_sharedContainer.TryGetContainingContainer(uid, out var container))
@@ -48,5 +47,33 @@ public abstract class GoggleToggleSharedSystem : EntitySystem
     {
         if (component.ToggleAction != null && args.SlotFlags == SlotFlags.EYES)
             args.Actions.Add(component.ToggleAction);
+    }
+
+    private void OnGotUnequipped(EntityUid uid, GoggleToggleComponent component, GotUnequippedEvent args)
+    {
+        if (args.Slot == "eyes")
+        {
+            if (TryComp<DarkVisionComponent>(args.Equipee, out var vision))
+            {
+                vision.IsEnable = component.On = false;
+                _darkVision.ForceUpdate(args.Equipee, vision);
+                //vision.DrawLight = true;
+                Dirty(vision);
+            }
+        }
+    }
+
+    private void OnGotEquipped(EntityUid uid, GoggleToggleComponent component, GotEquippedEvent args)
+    {
+        if (args.Slot == "eyes")
+        {
+            if (TryComp<DarkVisionComponent>(args.Equipee, out var vision))
+            {
+                vision.IsEnable = component.On;
+                _darkVision.ForceUpdate(args.Equipee, vision);
+                //vision.DrawLight = component.DrawLight;
+                Dirty(vision);
+            }
+        }
     }
 }

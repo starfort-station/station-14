@@ -5,6 +5,7 @@ using Robust.Shared.Serialization;
 namespace Content.Shared.Eye.DarkVision
 {
     [RegisterComponent]
+    [AutoGenerateComponentState]
     [NetworkedComponent]
     public sealed partial class DarkVisionComponent : Component
     {
@@ -15,9 +16,10 @@ namespace Content.Shared.Eye.DarkVision
         public Color LayerColor = Color.FromHex("#00000000");
 
         [DataField("mustDrawLight")]
-        public bool DrawLight = false;
+        public bool DrawLight = true;
 
         [DataField("toggle")]
+        [AutoNetworkedField]
         public bool IsEnable = false;
     }
 }
