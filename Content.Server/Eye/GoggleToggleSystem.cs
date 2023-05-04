@@ -13,13 +13,6 @@ public sealed class GoggleToggleSystem : GoggleToggleSharedSystem
 {
     [Dependency] private readonly IEntityManager _entManager = default!;
     [Dependency] private readonly DarkVisionSystem _darkVision = default!;
-    public override void Initialize()
-    {
-        base.Initialize();
-
-        //SubscribeLocalEvent<GoggleToggleComponent, GotEquippedEvent>(OnGotEquipped);
-        //SubscribeLocalEvent<GoggleToggleComponent, GotUnequippedEvent>(OnGotUnequipped);
-    }
 
     protected override void UpdateGogglesState(EntityUid uid, GoggleToggleComponent goggles)
     {
@@ -44,29 +37,4 @@ public sealed class GoggleToggleSystem : GoggleToggleSharedSystem
         }
     }
 
-    //private void OnGotUnequipped(EntityUid uid, GoggleToggleComponent component, GotUnequippedEvent args)
-    //{
-    //    if (args.Slot == "eyes")
-    //    {
-    //        if (TryComp<DarkVisionComponent>(args.Equipee, out var vision))
-    //        {
-    //            vision.IsEnable = component.On = false;
-    //            vision.DrawLight = true;
-    //            Dirty(vision);
-    //        }
-    //    }
-    //}
-
-    //private void OnGotEquipped(EntityUid uid, GoggleToggleComponent component, GotEquippedEvent args)
-    //{
-    //    if (args.Slot == "eyes")
-    //    {
-    //        if (TryComp<DarkVisionComponent>(args.Equipee, out var vision))
-    //        {
-    //            vision.IsEnable = component.On;
-    //            vision.DrawLight = component.DrawLight;
-    //            Dirty(vision);
-    //        }
-    //    }
-    //}
 }

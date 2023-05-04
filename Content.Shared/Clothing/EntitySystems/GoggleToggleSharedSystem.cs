@@ -57,7 +57,6 @@ public abstract class GoggleToggleSharedSystem : EntitySystem
             {
                 vision.IsEnable = component.On = false;
                 _darkVision.ForceUpdate(args.Equipee, vision);
-                //vision.DrawLight = true;
                 Dirty(vision);
             }
         }
@@ -71,7 +70,6 @@ public abstract class GoggleToggleSharedSystem : EntitySystem
             {
                 vision.IsEnable = component.On;
                 _darkVision.ForceUpdate(args.Equipee, vision);
-                //vision.DrawLight = component.DrawLight;
                 Dirty(vision);
             }
         }

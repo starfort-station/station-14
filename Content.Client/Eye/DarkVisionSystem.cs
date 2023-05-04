@@ -62,7 +62,6 @@ public sealed class DarkVisionSystem : DarkVisionSharedSystem
         }
         _lightManager.DrawLighting = component.DrawLight;
         _overlayMan.AddOverlay(_darkOverlay);
-        
     }
 
     private void OnPlayerDetached(EntityUid uid, DarkVisionComponent component, PlayerDetachedEvent args)

@@ -10,6 +10,9 @@
     {
       "name": "icon"
     },
+	{
+      "name": "icon-on"
+    },
     {
       "name": "equipped-EYES",
       "directions": 4
