@@ -1,0 +1,8 @@
+- type: entity
+  noSpawn: true
+  parent: ClothingBackpackDuffelExpedition
+  id: ClothingBackpackDuffelExpeditionFilled
+  components:
+    - type: StorageFill
+      contents:
+        - id: BoxSurvivalExpedition

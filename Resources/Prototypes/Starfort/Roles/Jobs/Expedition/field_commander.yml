@@ -1,0 +1,40 @@
+- type: job
+  id: FieldCommander
+  name: job-name-field-commander
+  description: job-description-field-commander
+  playTimeTracker: JobFieldCommander
+  requirements:
+    - !type:OverallPlaytimeRequirement
+      time: 21600 #6 hrs
+    - !type:DepartmentTimeRequirement
+      department: Security
+      time: 9000 #2.5 hrs
+    - !type:DepartmentTimeRequirement
+      department: Expedition
+      time: 18000 #5 hrs
+  startingGear: FieldCommanderGear
+  icon: "FieldCommander"
+  supervisors: job-supervisors-captain
+  canBeAntag: false
+  access:
+  - Command
+  - Brig
+  - Maintenance
+  - Expedition
+  - External
+  - Armory
+  - Sergeant
+  extendedAccess:
+  - Security
+
+- type: startingGear
+  id: FieldCommanderGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitFieldCommander
+    back: ClothingBackpackExpeditionFilled
+    shoes: ClothingShoesBootsAssaultFilled
+    id: FieldCommanderPDA
+    ears: ClothingHeadsetExpedition
+    belt: ClothingBeltSecurityWebbing
+  satchel: ClothingBackpackSatchelExpeditionFilled
+  duffelbag: ClothingBackpackDuffelExpeditionFilled

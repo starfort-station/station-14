@@ -1,0 +1,8 @@
+- type: entity
+  parent: ClothingBackpack
+  id: ClothingBackpackSatchelExpedition
+  name: expedition satchel
+  description: A robust satchel for stashing ammo, guns and pills.
+  components:
+    - type: Sprite
+      sprite: Starfort/Clothing/Back/Satchels/expedition.rsi

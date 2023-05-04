@@ -153,6 +153,12 @@
         },
         {
             "name": "FieldTrooper"
+        },
+        {
+            "name": "FieldEngineer"
+        },
+        {
+            "name": "FieldCommander"
         }
     ]
 }

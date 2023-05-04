@@ -1,0 +1,4 @@
+- type: shader
+  id: NightVisionRoboto
+  kind: source
+  path: "/Textures/Shaders/nightvision_robo.swsl"

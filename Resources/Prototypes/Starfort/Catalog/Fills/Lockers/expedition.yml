@@ -59,3 +59,20 @@
       - id: CombatMedipen
       - id: CombatMedipen
       - id: CombatMedipen
+
+- type: entity
+  id: LockerFieldEngFilled
+  suffix: Filled
+  parent: LockerFieldEng
+  components:
+  - type: StorageFill
+    contents:
+      - id: ClothingHandsGlovesColorYellow
+      - id: ClothingHeadsetExpedition
+      - id: ClothingShoesBootsMag
+      - id: ClothingMaskGasExplorer
+      - id: ClothingUniformJumpsuitFieldMedic
+      - id: ClothingBackpackExpedition
+      - id: ClothingOuterHardsuitExpeditionEngineer
+      - id: InflatableWallStack
+      - id: GasAnalyzer

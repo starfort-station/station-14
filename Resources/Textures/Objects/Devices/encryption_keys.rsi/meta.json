@@ -34,7 +34,6 @@
     {"name": "sci_label"},
     {"name": "sec_label"},
     {"name": "service_label"},
-    {"name": "synd_label"},
-    {"name": "expedition_label"}
+    {"name": "synd_label"}
   ]
 }

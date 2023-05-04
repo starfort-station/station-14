@@ -5,4 +5,4 @@
   description: A robust backpack for stashing ammo, guns and pills.
   components:
     - type: Sprite
-      sprite: Clothing/Back/Backpacks/expedition.rsi
+      sprite: Starfort/Clothing/Back/Backpacks/expedition.rsi

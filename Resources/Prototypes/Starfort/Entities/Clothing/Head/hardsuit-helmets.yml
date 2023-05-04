@@ -8,9 +8,9 @@
   suffix: field medic
   components:
   - type: Sprite
-    sprite: Clothing/Head/Hardsuits/fieldmedic.rsi
+    sprite: Starfort/Clothing/Head/Hardsuits/fieldmedic.rsi
   - type: Clothing
-    sprite: Clothing/Head/Hardsuits/fieldmedic.rsi
+    sprite: Starfort/Clothing/Head/Hardsuits/fieldmedic.rsi
   - type: PointLight
     color: "#39ff14"
   - type: PressureProtection
@@ -40,9 +40,9 @@
   suffix: field scientist
   components:
   - type: Sprite
-    sprite: Clothing/Head/Hardsuits/fieldscientist.rsi
+    sprite: Starfort/Clothing/Head/Hardsuits/fieldscientist.rsi
   - type: Clothing
-    sprite: Clothing/Head/Hardsuits/fieldscientist.rsi
+    sprite: Starfort/Clothing/Head/Hardsuits/fieldscientist.rsi
   - type: PointLight
     color: "#39ff14"
   - type: PressureProtection
@@ -72,9 +72,41 @@
   suffix: field trooper
   components:
   - type: Sprite
-    sprite: Clothing/Head/Hardsuits/fieldtrooper.rsi
+    sprite: Starfort/Clothing/Head/Hardsuits/fieldtrooper.rsi
   - type: Clothing
-    sprite: Clothing/Head/Hardsuits/fieldtrooper.rsi
+    sprite: Starfort/Clothing/Head/Hardsuits/fieldtrooper.rsi
+  - type: PointLight
+    color: "#39ff14"
+  - type: PressureProtection
+    highPressureMultiplier: 0.525
+    lowPressureMultiplier: 10000
+  - type: DiseaseProtection
+    protection: 0.85
+  - type: ExplosionResistance
+    damageCoefficient: 0.4
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.65
+        Slash: 0.65
+        Piercing: 0.8
+        Heat: 0.9
+        Cold: 0.9
+        Radiation: 0.8
+        Caustic: 0.5
+
+- type: entity
+  noSpawn: true
+  parent: ClothingHeadHardsuitWithLightBase
+  id: ClothingHeadHelmetHardsuitExpeditionEngineer
+  name: expedition hardsuit helmet
+  description: Modern armor helmet with yelow marks
+  suffix: field engineer
+  components:
+  - type: Sprite
+    sprite: Starfort/Clothing/Head/Hardsuits/fieldengineer.rsi
+  - type: Clothing
+    sprite: Starfort/Clothing/Head/Hardsuits/fieldengineer.rsi
   - type: PointLight
     color: "#39ff14"
   - type: PressureProtection
