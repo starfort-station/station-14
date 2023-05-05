@@ -336,9 +336,6 @@
 
 - type: entity
   id: ExpeditionMapSpawn
-  config:
-    !type:StationEventRuleConfiguration
-    id: ExpeditionMapSpawn
   parent: BaseGameRule
   noSpawn: true
   components:
