@@ -99,6 +99,7 @@
   unlockedRecipes:
   - SeedExtractorMachineCircuitboard
   - HydroponicsTrayMachineCircuitboard
+  - Vape
 
 - type: technology
   name: technologies-virology
@@ -311,6 +312,27 @@
   - RipleyLLeg
   - RipleyRLeg
 
+- type: technology
+  name: technologies-clown-technology
+  id: ClownTechnology
+  description: technologies-clown-technology-description
+  icon:
+    sprite: Objects/Specific/Mech/mecha.rsi
+    state: honker
+  requiredPoints: 15000
+  requiredTechnologies:
+  - RipleyTechnology
+  unlockedRecipes:
+  - HonkerCentralElectronics
+  - HonkerPeripheralsElectronics
+  - HonkerTargetingElectronics
+  - MechEquipmentHorn
+  - HonkerHarness
+  - HonkerLArm
+  - HonkerRArm
+  - HonkerLLeg
+  - HonkerRLeg
+
 # Industrial Engineering Technology Tree
 
 - type: technology
@@ -516,9 +538,7 @@
   - TechDiskComputerCircuitboard
   - CapacitorStockPart
   - MatterBinStockPart
-  - MicroLaserStockPart
   - MicroManipulatorStockPart
-  - ScanningModuleStockPart
   - NodeScanner
   - AnomalyScanner
   - AnomalyLocator
@@ -554,7 +574,10 @@
   unlockedRecipes:
   - ProximitySensor
   - LeftArmBorg
+  - LightHeadBorg
   - RightArmBorg
+  - LeftLegBorg
+  - RightLegBorg
   - Drone
   - ExosuitFabricatorMachineCircuitboard
 
@@ -586,9 +609,7 @@
   unlockedRecipes:
   - AdvancedCapacitorStockPart
   - AdvancedMatterBinStockPart
-  - HighPowerMicroLaserStockPart
   - NanoManipulatorStockPart
-  - AdvancedScanningModuleStockPart
 
 - type: technology
   name: technologies-magboots-technology
@@ -617,6 +638,4 @@
   unlockedRecipes:
   - SuperCapacitorStockPart
   - SuperMatterBinStockPart
-  - UltraHighPowerMicroLaserStockPart
   - PicoManipulatorStockPart
-  - PhasicScanningModuleStockPart
