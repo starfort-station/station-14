@@ -636,6 +636,10 @@
     accentHColor: "#447987"
   - type: Icon
     state: pda-ert
+  - type: HealthAnalyzer
+    scanDelay: 0.6
+    scanningEndSound:
+      path: "/Audio/Items/Medical/healthscanner.ogg"
 
 - type: entity
   parent: ERTLeaderPDA
