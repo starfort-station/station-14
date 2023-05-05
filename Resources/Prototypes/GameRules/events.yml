@@ -334,15 +334,12 @@
     duration: 1
   - type: LoneOpsSpawnRule
 
-- type: gameRule
 - type: entity
   id: ExpeditionMapSpawn
-  config:
-    !type:StationEventRuleConfiguration
-    id: ExpeditionMapSpawn
   parent: BaseGameRule
   noSpawn: true
   components:
   - type: StationEvent
     weight: 0
     duration: 1
+  - type: ExpeditionMapSpawnRule

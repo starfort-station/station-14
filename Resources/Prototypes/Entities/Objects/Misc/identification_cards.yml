@@ -408,8 +408,6 @@
 
 - type: entity
   parent: IDCardStandard
-<<<<<<< HEAD
-=======
   id: BrigmedicIDCard
   name: brigmedic ID card
   components:
@@ -420,7 +418,6 @@
 
 - type: entity
   parent: IDCardStandard
->>>>>>> fe1125d9e2b6e32af5c5e4ecd9ce5a6c773c4f53
   id: CentcomIDCard
   name: command officer ID card
   components:
@@ -573,7 +570,7 @@
     - state: idzookeeper
   - type: PresetIdCard
     job: Zookeeper
-    
+
 - type: entity
   parent: IDCardStandard
   id: DetectiveIDCard
@@ -597,7 +594,7 @@
     - state: idcentcom
   - type: Item
     heldPrefix: gold
-    
+
 
 - type: entity
   parent: IDCardStandard
@@ -625,14 +622,3 @@
     - type: PresetIdCard
       job: CCAgent
 
-- type: entity
-  parent: IDCardStandard
-  id: BrigmedIDCard
-  name: brigmedic ID card
-  components:
-  - type: Sprite
-    layers:
-    - state: default
-    - state: idbrigmedic
-  - type: PresetIdCard
-    job: Brigmedic
