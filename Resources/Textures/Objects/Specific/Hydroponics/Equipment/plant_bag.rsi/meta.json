@@ -1,11 +1,7 @@
 {
   "version": 1,
   "license": "CC-BY-SA-3.0",
-<<<<<<< HEAD
   "copyright": "Taken from tgstation at commit https://github.com/tgstation/tgstation/commit/782006a07ef7f16f70128489b3e78b210ee4bbbe",
-=======
-  "copyright": "Taken from tgstation at commit https://github.com/tgstation/tgstation/commit/40d89d11ea4a5cb81d61dc1018b46f4e7d32c62a, inhand sprites by лазік#7305",
->>>>>>> fe1125d9e2b6e32af5c5e4ecd9ce5a6c773c4f53
   "size": {
     "x": 32,
     "y": 32
