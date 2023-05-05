@@ -17,14 +17,14 @@
   equipment:
     jumpsuit: ClothingUniformJumpsuitERTLeader
     back: ClothingBackpackERTLeaderFilled
-    shoes: ClothingShoesBootsJack
+    shoes: ClothingShoesBootsMagAdvERT
     head: ClothingHeadHelmetHelmet
     eyes: ClothingEyesGlassesSecurity
-    gloves: ClothingHandsGlovesColorBlack
+    gloves: ClothingHandsGlovesCombat
     outerClothing: ClothingOuterVestKevlar
     id: ERTLeaderPDA
-    ears: ClothingHeadsetAltCommand
-    belt: ClothingBeltSecurityWebbing
+    ears: ClothingHeadsetCentCom
+    belt: ClothingBeltMilitaryERTFilled
     pocket1: Flare
 
 - type: startingGear
@@ -32,15 +32,15 @@
   equipment:
     jumpsuit: ClothingUniformJumpsuitERTLeader
     back: ClothingBackpackERTLeaderFilled
-    shoes: ClothingShoesBootsMag
+    shoes: ClothingShoesBootsMagAdvERT
     mask: ClothingMaskBreath
     eyes: ClothingEyesGlassesSecurity
-    gloves: ClothingHandsGlovesColorBlack
+    gloves: ClothingHandsGlovesCombat
     outerClothing: ClothingOuterHardsuitERTLeader
     suitstorage: OxygenTankFilled
     id: ERTLeaderPDA
-    ears: ClothingHeadsetAltCommand
-    belt: ClothingBeltSecurityFilled
+    ears: ClothingHeadsetCentCom
+    belt: ClothingBeltMilitaryERTFilled
     pocket1: Flare
 
 # Engineer
@@ -65,7 +65,7 @@
     shoes: ClothingShoesBootsWork
     head: ClothingHeadHelmetHelmet
     eyes: ClothingEyesGlassesMeson
-    gloves: ClothingHandsGlovesColorYellow
+    gloves: ClothingHandsGlovesCombat
     outerClothing: ClothingOuterVestKevlar
     id: ERTLeaderPDA
     ears: ClothingHeadsetAltCommand
@@ -77,10 +77,10 @@
   equipment:
     jumpsuit: ClothingUniformJumpsuitERTEngineer
     back: ClothingBackpackERTEngineerFilled
-    shoes: ClothingShoesBootsMagAdv
+    shoes: ClothingShoesBootsMagAdvERT
     mask: ClothingMaskBreath
     eyes: ClothingEyesGlassesMeson
-    gloves: ClothingHandsGlovesColorYellow
+    gloves: ClothingHandsGlovesCombat
     outerClothing: ClothingOuterHardsuitERTEngineer
     suitstorage: OxygenTankFilled
     id: ERTLeaderPDA
@@ -110,11 +110,11 @@
     shoes: ClothingShoesBootsJack
     head: ClothingHeadHelmetHelmet
     eyes: ClothingEyesGlassesSecurity
-    gloves: ClothingHandsGlovesColorBlack
+    gloves: ClothingHandsGlovesCombat
     outerClothing: ClothingOuterVestKevlar
     id: ERTLeaderPDA
     ears: ClothingHeadsetAltCommand
-    belt: ClothingBeltSecurityWebbing
+    belt: ClothingBeltMilitaryERTFilled
     pocket1: Flare
 
 - type: startingGear
@@ -122,15 +122,15 @@
   equipment:
     jumpsuit: ClothingUniformJumpsuitERTSecurity
     back: ClothingBackpackERTSecurityFilled
-    shoes: ClothingShoesBootsMag
+    shoes: ClothingShoesBootsMagAdvERT
     mask: ClothingMaskBreath
     eyes: ClothingEyesGlassesSecurity
-    gloves: ClothingHandsGlovesColorBlack
+    gloves: ClothingHandsGlovesCombat
     outerClothing: ClothingOuterHardsuitERTSecurity
     suitstorage: OxygenTankFilled
     id: ERTLeaderPDA
     ears: ClothingHeadsetAltCommand
-    belt: ClothingBeltSecurityWebbing
+    belt: ClothingBeltMilitaryERTFilled
     pocket1: Flare
 
 # Medical
@@ -155,11 +155,11 @@
     shoes: ClothingShoesBootsJack
     head: ClothingHeadHelmetHelmet
     eyes: ClothingEyesHudMedical
-    gloves: ClothingHandsGlovesColorBlack
+    gloves: ClothingHandsGlovesCombat
     outerClothing: ClothingOuterVestKevlar
     id: ERTLeaderPDA
     ears: ClothingHeadsetAltCommand
-    belt: ClothingBeltMedicalFilled
+    belt: ClothingBeltMilitaryERTMedicFilled
     pocket1: HandheldHealthAnalyzer
     pocket2: Flare
 
@@ -168,15 +168,15 @@
   equipment:
     jumpsuit: ClothingUniformJumpsuitERTMedic
     back: ClothingBackpackERTMedicalFilled
-    shoes: ClothingShoesBootsMag
+    shoes: ClothingShoesBootsMagAdvERT
     mask: ClothingMaskBreath
     eyes: ClothingEyesHudMedical
-    gloves: ClothingHandsGlovesColorBlack
+    gloves: ClothingHandsGlovesCombat
     outerClothing: ClothingOuterHardsuitERTMedical
     suitstorage: OxygenTankFilled
     id: ERTLeaderPDA
     ears: ClothingHeadsetAltCommand
-    belt: ClothingBeltMedicalFilled
+    belt: ClothingBeltMilitaryERTMedicFilled
     pocket1: HandheldHealthAnalyzer
     pocket2: Flare
 

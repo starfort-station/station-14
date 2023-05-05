@@ -1,0 +1,65 @@
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitFieldTrooper
+  name: field trooper jumpsuit
+  description: Uniform for expedition squad performing operations in deep space.
+  components:
+  - type: Sprite
+    sprite: Starfort/Clothing/Uniforms/Jumpsuit/field_trooper.rsi
+  - type: Clothing
+    sprite: Starfort/Clothing/Uniforms/Jumpsuit/field_trooper.rsi
+    
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitFieldScientist
+  name: field scientist jumpsuit
+  description: Uniform for expedition squad performing operations in deep space.
+  components:
+  - type: Sprite
+    sprite: Starfort/Clothing/Uniforms/Jumpsuit/field_scientist.rsi
+  - type: Clothing
+    sprite: Starfort/Clothing/Uniforms/Jumpsuit/field_scientist.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitFieldMedic
+  name: field medic jumpsuit
+  description: Uniform for expedition squad performing operations in deep space.
+  components:
+  - type: Sprite
+    sprite: Starfort/Clothing/Uniforms/Jumpsuit/field_medic.rsi
+  - type: Clothing
+    sprite: Starfort/Clothing/Uniforms/Jumpsuit/field_medic.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitFieldEngineer
+  name: field engineer jumpsuit
+  description: Uniform for expedition squad performing operations in deep space.
+  components:
+  - type: Sprite
+    sprite: Starfort/Clothing/Uniforms/Jumpsuit/field_engineer.rsi
+  - type: Clothing
+    sprite: Starfort/Clothing/Uniforms/Jumpsuit/field_engineer.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitFieldCommander
+  name: field commander jumpsuit
+  description: Uniform for convenient management of your freight forwarders.
+  components:
+  - type: Sprite
+    sprite: Starfort/Clothing/Uniforms/Jumpsuit/field_commander.rsi
+  - type: Clothing
+    sprite: Starfort/Clothing/Uniforms/Jumpsuit/field_commander.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitFieldRecrut
+  name: field recrut jumpsuit
+  description: Uniform for expedition squad performing operations in deep space.
+  components:
+  - type: Sprite
+    sprite: Starfort/Clothing/Uniforms/Jumpsuit/field_recrut.rsi
+  - type: Clothing
+    sprite: Starfort/Clothing/Uniforms/Jumpsuit/field_recrut.rsi

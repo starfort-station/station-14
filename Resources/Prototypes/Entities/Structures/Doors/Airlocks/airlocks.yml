@@ -87,7 +87,6 @@
     sprite: Structures/Doors/Airlocks/Standard/maint.rsi
 
 # Glass
-
 - type: entity
   id: AirlockGlass
   parent: Airlock
@@ -215,3 +214,4 @@
     sprite: Structures/Doors/Airlocks/Glass/security.rsi
   - type: PaintableAirlock
     group: Glass
+    

@@ -1,0 +1,38 @@
+- type: entity
+  name: expedition survival box
+  parent: BoxCardboard
+  id: BoxSurvivalExpedition
+  description: It's a box with basic internals inside.
+  components:
+  - type: StorageFill
+    contents:
+      - id: ClothingMaskGasExplorer
+      - id: EmergencyAirTankFilled
+      - id: SpaceMedipen
+      - id: CombatMedipen
+      - id: Flare
+      - id: FoodTinMRE
+  - type: Sprite
+    sprite: Starfort/Objects/Storage/boxes.rsi
+    layers:
+      - state: internals
+      - state: expedition
+
+- type: entity
+  name: ERT survival box
+  parent: BoxCardboard
+  id: BoxSurvivalERT
+  description: It's a box with basic internals inside.
+  components:
+  - type: StorageFill
+    contents:
+      - id: ClothingMaskBreath
+      - id: EmergencyAirTankFilled
+      - id: SpaceMedipen
+      - id: AdvancedCombatMedipen
+      - id: Flare
+      - id: FoodTinMRE
+  - type: Sprite
+    layers:
+      - state: internals
+      - state: emergencytank

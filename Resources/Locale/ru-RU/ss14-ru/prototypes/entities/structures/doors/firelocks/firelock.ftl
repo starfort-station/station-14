@@ -1,0 +1,14 @@
+ent-BaseFirelock = пожарный шлюз
+    .desc = Примените лом.
+ent-Firelock = { ent-BaseFirelock }
+    .desc = { ent-BaseFirelock.desc }
+ent-FirelockGlass = стеклянный пожарный шлюз
+    .desc = { ent-Firelock.desc }
+ent-FirelockEdge = пожарный шлюз
+    .desc = { ent-BaseFirelock.desc }
+ent-FirelockGlassClosed = { ent-FirelockGlass }
+    .desc = { ent-Firelock.desc }
+    .suffix = Закрытый
+ent-FirelockClosed = { ent-BaseFirelock }
+    .desc = { ent-Firelock.desc }
+    .suffix = Закрытый

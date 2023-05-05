@@ -208,3 +208,33 @@
     fireRate: 2
   - type: BallisticAmmoProvider
     capacity: 1
+    
+- type: entity
+  name: Admemerer
+  parent: BaseWeaponShotgun
+  id: WeaponShotgunKammererAdmeme
+  suffix: Admin
+  description: The hour of punishment over the natives has come. Uses .50 shotgun shells.
+  components:
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Shotguns/pump.rsi
+  - type: Clothing
+    sprite: Objects/Weapons/Guns/Shotguns/pump.rsi
+  - type: Gun
+    fireRate: 10
+    selectedMode: SemiAuto
+    availableModes:
+    - SemiAuto
+    soundGunshot:
+     path: /Audio/Weapons/Guns/Gunshots/perma.ogg
+    soundEmpty:
+     path: /Audio/Weapons/Guns/Empty/empty.ogg
+  - type: BallisticAmmoProvider
+    autoCycle: false
+    whitelist:
+      tags:
+      - ShellShotgun
+    capacity: 4
+    proto: ShellShotgun
+    soundInsert:
+     path: /Audio/Weapons/Guns/MagIn/reloadingadmeme.ogg

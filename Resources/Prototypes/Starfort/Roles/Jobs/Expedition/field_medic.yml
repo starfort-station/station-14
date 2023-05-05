@@ -1,0 +1,38 @@
+- type: job
+  id: FieldMedic
+  name: job-name-field-medic
+  description: job-description-field-medic
+  playTimeTracker: JobFieldMedic
+  requirements:
+    - !type:OverallPlaytimeRequirement
+      time: 18000 #5 hrs
+    - !type:DepartmentTimeRequirement
+      department: Security
+      time: 1800 #30 min
+    - !type:DepartmentTimeRequirement
+      department: Medical
+      time: 3600 #1 hrs
+  startingGear: FieldMedicGear
+  icon: "FieldMedic"
+  supervisors: job-supervisors-field-commander
+  canBeAntag: false
+  access:
+  - Medical
+  - Maintenance
+  - Expedition
+  - External
+  extendedAccess:
+  - Chemistry
+  - Brig
+
+- type: startingGear
+  id: FieldMedicGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitFieldMedic
+    back: ClothingBackpackExpeditionFilled
+    shoes: ClothingShoesBootsCombatFilled
+    id: FieldMedicPDA
+    ears: ClothingHeadsetExpedition
+    belt: ClothingBeltMedicalFilled
+  satchel: ClothingBackpackSatchelExpeditionFilled
+  duffelbag: ClothingBackpackDuffelExpeditionFilled

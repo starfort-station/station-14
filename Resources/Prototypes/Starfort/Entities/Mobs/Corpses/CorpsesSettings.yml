@@ -1,0 +1,167 @@
+- type: randomHumanoidSettings
+  id: CaptainCorpse
+  components:
+  - type: Damageable
+    damage:
+      types:
+        Bloodloss: 51
+        Asphyxiation: 76
+        Slash: 56
+        Blunt: 21
+  - type: RandomMetadata
+    nameSegments: [corvax_names_death_commando] # Corvax-Localization
+  - type: Loadout
+    prototypes:    
+    - CorpseCaptainGear
+
+- type: randomHumanoidSettings
+  id: RandomServiceCorpse
+  components:
+  - type: Damageable
+    damage:
+      types:
+        Bloodloss: 51
+        Asphyxiation: 76
+        Slash: 56
+        Blunt: 21
+  - type: RandomMetadata
+    nameSegments: [corvax_names_death_commando] # Corvax-Localization
+  - type: Loadout
+    prototypes:     # some proto was doubled for increse chance to spawn
+    - ClownGear
+    - MimeGear
+    - JanitorGear
+    - JanitorGear
+    - ServiceWorkerGear
+    - ServiceWorkerGear
+    - MusicianGear
+    - BotanistGear
+    - BotanistGear
+    - ChefGear
+    - ChaplainGear
+    - PassengerGear
+    - PassengerGear
+    - PassengerGear
+    - CorpseHoPGear                     # Chance 1/15
+    
+- type: randomHumanoidSettings
+  id: RandomCargoCorpse
+  components:
+  - type: Damageable
+    damage:
+      types:
+        Bloodloss: 51
+        Asphyxiation: 76
+        Slash: 56
+        Blunt: 21
+  - type: RandomMetadata
+    nameSegments: [corvax_names_death_commando] # Corvax-Localization
+  - type: Loadout
+    prototypes:     # some proto was doubled for increse chance to spawn
+    - CargoTechGear
+    - CargoTechGear
+    - CargoTechGear
+    - SalvageSpecialistGear
+    - SalvageSpecialistGear
+    - CorpseQuartermasterGear           # Chance 1/6
+
+
+- type: randomHumanoidSettings
+  id: RandomEngineerCorpse
+  components:
+  - type: Damageable
+    damage:
+      types:
+        Bloodloss: 51
+        Asphyxiation: 76
+        Slash: 56
+        Blunt: 21
+  - type: RandomMetadata
+    nameSegments: [corvax_names_death_commando] # Corvax-Localization
+  - type: Loadout
+    prototypes:     # some proto was doubled for increse chance to spawn
+    - TechnicalAssistantGear
+    - TechnicalAssistantGear
+    - TechnicalAssistantGear
+    - AtmosphericTechnicianGear
+    - AtmosphericTechnicianGear
+    - CorpseChiefEngineerGear           # Chance 1/10
+    - StationEngineerGear
+    - StationEngineerGear
+    - StationEngineerGear
+    - StationEngineerGear
+
+
+- type: randomHumanoidSettings
+  id: RandomMedicCorpse
+  components:
+  - type: Damageable
+    damage:
+      types:
+        Bloodloss: 51
+        Asphyxiation: 76
+        Slash: 56
+        Blunt: 21
+  - type: RandomMetadata
+    nameSegments: [corvax_names_death_commando] # Corvax-Localization
+  - type: Loadout
+    prototypes:     # some proto was doubled for increse chance to spawn
+    - MedicalInternGear
+    - MedicalInternGear
+    - MedicalInternGear
+    - PsychologistGear
+    - ChemistGear
+    - ChemistGear
+    - CorpseCMOGear                     # Chance 1/10
+    - DoctorGear
+    - DoctorGear
+    - DoctorGear
+
+
+- type: randomHumanoidSettings
+  id: RandomScienceCorpse
+  components:
+  - type: Damageable
+    damage:
+      types:
+        Bloodloss: 51
+        Asphyxiation: 76
+        Slash: 56
+        Blunt: 21
+  - type: RandomMetadata
+    nameSegments: [corvax_names_death_commando] # Corvax-Localization
+  - type: Loadout
+    prototypes:     # some proto was doubled for increse chance to spawn
+    - ResearchAssistantGear
+    - ResearchAssistantGear
+    - ResearchAssistantGear
+    - ScientistGear
+    - ScientistGear
+    - ScientistGear
+    - CorpseResearchDirectorGear        # Chance 1/7
+    
+    
+- type: randomHumanoidSettings
+  id: RandomSecurityCorpse
+  components:
+  - type: Damageable
+    damage:
+      types:
+        Bloodloss: 51
+        Asphyxiation: 76
+        Slash: 56
+        Blunt: 21
+  - type: RandomMetadata
+    nameSegments: [corvax_names_death_commando] # Corvax-Localization
+  - type: Loadout
+    prototypes:     # some proto was doubled for increse chance to spawn
+    - SecurityCadetGear
+    - SecurityCadetGear
+    - SecurityCadetGear
+    - SecurityOfficerGear
+    - SecurityOfficerGear
+    - SecurityOfficerGear
+    - SecurityOfficerGear
+    - DetectiveGear
+    - CorpseWardenGear
+    - CorpseHoSGear                 # Chance 1/10
