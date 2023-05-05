@@ -1,7 +1,11 @@
 {
   "version": 1,
   "license": "CC-BY-SA-3.0",
+<<<<<<< HEAD
   "copyright": "Taken from tgstation at https://github.com/tgstation/tgstation/commit/59f2a4e10e5ba36033c9734ddebfbbdc6157472d, pda-cluwne made by brainfood1183 (github) ss14, pda-brigmed and pda-centcom made by PuroSlavKing (Github), pda-fieldcommander made by fedKotikeD (https://github.com/starfort-station/station-14/pull/74)",
+=======
+  "copyright": "Taken from tgstation at https://github.com/tgstation/tgstation/commit/59f2a4e10e5ba36033c9734ddebfbbdc6157472d, pda-cluwne made by brainfood1183 (github) ss14 | pda-brigmedic and pda-centcom made by PuroSlavKing (Github) | pda-brigemdic resprited by Hülle#2562 (Discord)",
+>>>>>>> fe1125d9e2b6e32af5c5e4ecd9ce5a6c773c4f53
   "size": {
     "x": 32,
     "y": 32
@@ -12,6 +16,14 @@
     },
     {
       "name": "equipped-BELT",
+      "directions": 4
+    },
+    {
+      "name": "inhand-left",
+      "directions": 4
+    },
+    {
+      "name": "inhand-right",
       "directions": 4
     },
     {
@@ -98,6 +110,9 @@
       "name": "pda-medical"
     },
     {
+      "name": "pda-paramedic"
+    },
+    {
       "name": "pda-mime"
     },
     {
@@ -137,7 +152,7 @@
       "name": "pda-security"
     },
     {
-      "name": "pda-brigmed",
+      "name": "pda-brigmedic",
       "delays": [
         [
           0.3,

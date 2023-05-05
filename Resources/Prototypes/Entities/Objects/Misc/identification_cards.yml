@@ -158,6 +158,18 @@
 
 - type: entity
   parent: IDCardStandard
+  id: ParamedicIDCard
+  name: paramedic ID card
+  components:
+  - type: Sprite
+    layers:
+    - state: default
+    - state: idparamedic
+  - type: PresetIdCard
+    job: Paramedic
+
+- type: entity
+  parent: IDCardStandard
   id: ChemistIDCard
   name: chemist ID card
   components:
@@ -396,6 +408,19 @@
 
 - type: entity
   parent: IDCardStandard
+<<<<<<< HEAD
+=======
+  id: BrigmedicIDCard
+  name: brigmedic ID card
+  components:
+  - type: Sprite
+    layers:
+    - state: default
+    - state: idbrigmedic
+
+- type: entity
+  parent: IDCardStandard
+>>>>>>> fe1125d9e2b6e32af5c5e4ecd9ce5a6c773c4f53
   id: CentcomIDCard
   name: command officer ID card
   components:

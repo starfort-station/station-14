@@ -63,6 +63,12 @@
         },
         {
             "name": "box_medical"
+<<<<<<< HEAD
+=======
+        },
+        {
+            "name": "box_science"
+>>>>>>> fe1125d9e2b6e32af5c5e4ecd9ce5a6c773c4f53
         },
         {
             "name": "box_olive"
@@ -111,6 +117,9 @@
         },
         {
             "name": "lighttube"
+        },
+        {
+            "name": "omegacart"
         },
         {
             "name": "magazine"
