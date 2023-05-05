@@ -244,21 +244,6 @@
     {
       "name": "blue-inhand-right",
       "directions": 4
-    },
-    {
-      "name": "idfield-medic"
-    },
-    {
-      "name": "idfield-trooper"
-    },
-    {
-      "name": "idfield-scientist"
-    },
-    {
-      "name": "idfield-engineer"
-    },
-    {
-      "name": "idfield-commander"
     }
   ]
 }

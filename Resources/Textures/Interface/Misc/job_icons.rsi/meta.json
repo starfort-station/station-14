@@ -159,6 +159,9 @@
         },
         {
             "name": "FieldCommander"
+        },
+        {
+            "name": "FieldRecrut"
         }
     ]
 }

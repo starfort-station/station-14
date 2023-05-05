@@ -1,0 +1,41 @@
+- type: entity
+  name: combat medipen
+  parent: ChemicalMedipen
+  id: CombatMedipen
+  description: To recharge in battle.
+  components:
+  - type: Hypospray
+    solutionName: pen
+    transferAmount: 18
+  - type: SolutionContainerManager
+    solutions:
+      pen:
+        maxVol: 18
+        reagents:
+          - ReagentId: TranexamicAcid
+            Quantity: 3
+          - ReagentId: Bicaridine
+            Quantity: 9
+          - ReagentId: DexalinPlus
+            Quantity: 6
+
+- type: entity
+  name: advanced combat medipen
+  parent: ChemicalMedipen
+  id: AdvancedCombatMedipen
+  description: Advanced combat medipen, which
+  components:
+  - type: Hypospray
+    solutionName: pen
+    transferAmount: 18
+  - type: SolutionContainerManager
+    solutions:
+      pen:
+        maxVol: 18
+        reagents:
+          - ReagentId: TranexamicAcid
+            Quantity: 3
+          - ReagentId: Omnizine
+            Quantity: 5
+          - ReagentId: DexalinPlus
+            Quantity: 9

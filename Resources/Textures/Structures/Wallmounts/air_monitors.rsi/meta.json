@@ -299,7 +299,7 @@
     {
       "name": "fire_b2",
       "directions": 4
-    },
+    },   
     {
       "name": "fire_bitem",
       "directions": 1
@@ -323,6 +323,28 @@
         [
           0.3,
           0.3
+        ]
+      ]
+    },
+    {
+      "name": "fire_detected",
+      "directions": 4,
+      "delays": [
+        [
+          0.4,
+          0.4
+        ],
+        [
+          0.4,
+          0.4
+        ],
+        [
+          0.4,
+          0.4
+        ],
+        [
+          0.4,
+          0.4
         ]
       ]
     },
@@ -367,6 +389,10 @@
           0.2
         ]
       ]
+    },
+    {
+      "name": "fire_overlay",
+      "directions": 4
     },
     {
       "name": "firex",
