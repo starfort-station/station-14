@@ -4,8 +4,8 @@
   - Aspid
   - Bagel
   - Barratry
-  - Box
   - Cluster
+<<<<<<< HEAD
   - Fland
   - Kettle
   - Marathon
@@ -14,3 +14,9 @@
   - Omega
   - Origin
   - Saltern
+=======
+  - Moose
+  - Omega
+  - Eclipse
+  
+>>>>>>> master

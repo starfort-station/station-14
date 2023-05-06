@@ -1,41 +1,41 @@
 ﻿<Document>
-# Jobs
+# Рабочие места
 
-SS14 has a large number of jobs, divided into seven major departments:
+В SS14 имеется большое количество рабочих мест, разделенных на семь основных отделов:
 
-## Service
-This department includes the janitor, passengers, clown, mime, musician, chef, bartender, the head of personnel, and other jobs who exist to serve the station.
+## Обслуживание
+В этот отдел входят уборщик, пассажиры, клоун, мим, музыкант, повар, бармен, начальник отдела кадров и другие работники, которые существуют для обслуживания станции.
 
-It primarily functions as folks who entertain, clean, and serve the rest of the crew, with the exception of passengers who have no particular job beyond getting lost in maintenance.
+В основном это люди, которые развлекают, убирают и обслуживают остальных членов экипажа, за исключением пассажиров, у которых нет никакой конкретной работы, кроме как заблудиться в обслуживании.
 
-## Cargo
-Cargo consists of the cargo technicians, salvage technicians, and the quartermaster. As a department, it responsible resource distribution and trade, capable of buying and selling things on the galactic market.
+## Груз
+Грузовой отдел состоит из грузовых техников, техников по спасению и квартирмейстера. Как отдел, он отвечает за распределение ресурсов и торговлю, способен покупать и продавать вещи на галактическом рынке.
 
-For the most part, this means they scrounge around the station and assorted wrecks to find materials to sell and redistribute, and purchase materials other departments request.
+По большей части это означает, что они рыщут по станции и различным обломкам, чтобы найти материалы для продажи и перераспределения, а также покупают материалы, которые запрашивают другие отделы.
 
-## Security
-Security consists of the security cadets, lawyers, detective, security officers, warden, and the head of security. As a department it is responsible for dealing with troublemakers and non-humanoid threats like giant rats and carp.
+## Безопасность
+Отдел безопасности состоит из курсантов, юристов, детективов, офицеров безопасности, надзирателей и начальника службы безопасности. Как отдел, он отвечает за борьбу с нарушителями спокойствия и негуманоидными угрозами, такими как гигантские крысы и карпы.
 
-As a result of this, and the need to walk a fine line, security sometimes is overwhelmed by angry crew (don't kill the clown), and it is important for members of it to try and stay on their best behavior.
+В результате этого, а также необходимости ходить по тонкой грани, служба безопасности иногда бывает перегружена разъяренной командой (не убивайте клоуна), поэтому ее членам важно стараться вести себя как можно лучше.
 
-## Medical
-Medical consists of the medical interns, chemists, medical doctors, and the chief medical officer. As a department it is responsible for taking care of the crew, treat and/or clone the wounded and dead, treat disease, and prevent everyone from dying a horrible, bloody death in a closet somewhere.
+## Медицина
+Медицинский отдел состоит из медицинских интернов, химиков, врачей и главного врача. Как отдел, он отвечает за уход за экипажем, лечение и/или клонирование раненых и мертвых, лечение болезней и предотвращение ужасной, кровавой смерти в чулане.
 
-Medical is one of the more well-equipped departments, with the ability to locate injured crew using the crew monitor, a nigh infinite supply of chems should chemistry be on-par, and the ability to rapidly diagnose and vaccinate contagious diseases.
+Медицинский отдел - один из наиболее хорошо оснащенных отделов: у него есть возможность определять местонахождение раненых с помощью монитора экипажа, практически бесконечный запас химикатов на случай, если химия окажется на уровне, и возможность быстро диагностировать и вакцинировать заразные болезни.
 
-## Science
-Science consists of scientists, and the research director. As a department it is responsible for researching technologies and artifacts, upgrading machines, and printing new and useful dev ices.
+## Наука
+Научный отдел состоит из ученых и директора по исследованиям. Как отдел она отвечает за исследование технологий и артефактов, модернизацию машин и печать новых и полезных устройств.
 
-Scientists should seek out new artifacts to study, as well as solicit departments to help upgrade their machines.
+Ученые должны искать новые артефакты для изучения, а также обращаться к отделам с просьбой помочь модернизировать их машины.
 
-## Engineering
-Engineering consists of technical assistants, station engineers, atmospheric technicians, and the chief engineer. As a department it is responsible for keeping the station powered, its structure intact and its air supply working.
+## Инженерный отдел
+Инженерный отдел состоит из технических помощников, инженеров станции, атмосферных техников и главного инженера. Как отдел, он отвечает за поддержание станции в рабочем состоянии, ее структуру и подачу воздуха.
 
-Engineering is readily equipped to go safely into space, and as such they should always attempt to repair uninhabitable parts of the station.
+Инженерный отдел имеет все необходимое для безопасного выхода в космос, и поэтому они всегда должны пытаться ремонтировать непригодные для жизни части станции.
 
-## Command
-Command consists of the captain, the head of personnel, the head of security, the chief engineer, the chief medical officer, the research director, and the quartermaster. As a department it is responsible for keeping the station and its departments running efficiently.
+## Командование
+Командование состоит из капитана, начальника отдела кадров, начальника службы безопасности, главного инженера, главного врача, директора по исследованиям и квартирмейстера. Как отдел оно отвечает за эффективное функционирование станции и ее подразделений.
 
-Command members should always be relatively competent in their respective departments and attempt to delegate responsibility and direct work.
+Члены командования всегда должны быть относительно компетентны в своих отделах и стараться делегировать ответственность и направлять работу.
 
 </Document>

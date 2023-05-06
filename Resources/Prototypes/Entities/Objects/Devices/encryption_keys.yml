@@ -73,6 +73,7 @@
     - Security
     - Service
     - Supply
+    - Expedition
     defaultChannel: Command
   - type: Sprite
     layers:

@@ -198,7 +198,7 @@
   components:
     - type: StorageFill
       contents:
-      - id: BoxSurvival
+      - id: BoxSurvivalSecurity
       - id: Lighter
       - id: CigPackBlack
       - id: HandLabeler
@@ -213,12 +213,15 @@
   components:
     - type: StorageFill
       contents:
-        - id: BoxSurvival
+        - id: BoxSurvivalERT
         - id: WeaponPulsePistol
         - id: WeaponPistolMk58
         - id: MagazinePistolHighCapacityRubber
         - id: MagazinePistol
         - id: Handcuffs
+          amount: 3
+        - id: PaperWrittenERTmanualFirst
+        - id: PaperWrittenERTmanualSecond
         - id: CrowbarRed
 
 - type: entity
@@ -228,12 +231,15 @@
   components:
     - type: StorageFill
       contents:
-        - id: BoxSurvival
+        - id: BoxSurvivalERT
         - id: WeaponDisabler
         - id: WeaponPulsePistol
         - id: WeaponPulseCarbine
         - id: BoxHandcuff
+        - id: PaperWrittenERTmanualFirst
+        - id: PaperWrittenERTmanualSecond
         - id: Handcuffs
+          amount: 3
         - id: CrowbarRed
 
 - type: entity
@@ -243,10 +249,12 @@
   components:
     - type: StorageFill
       contents:
-        - id: BoxSurvival
+        - id: BoxSurvivalMedical
         - id: WeaponPulseCarbine
         - id: Hypospray
         - id: MedkitAdvancedFilled
+        - id: PaperWrittenERTmanualFirst
+        - id: PaperWrittenERTmanualSecond
         - id: CrowbarRed
 
 - type: entity
@@ -256,7 +264,9 @@
   components:
     - type: StorageFill
       contents:
-        - id: BoxSurvival
+        - id: BoxSurvivalERT
+        - id: PaperWrittenERTmanualFirst
+        - id: PaperWrittenERTmanualSecond
         - id: trayScanner
         - id: WeaponPulseCarbine
         - id: RCD
@@ -271,7 +281,9 @@
   components:
     - type: StorageFill
       contents:
-        - id: BoxSurvival
+        - id: BoxSurvivalERT
+        - id: PaperWrittenERTmanualFirst
+        - id: PaperWrittenERTmanualSecond
         - id: WeaponPulsePistol
         - id: MedkitFilled
         - id: BoxLightMixed

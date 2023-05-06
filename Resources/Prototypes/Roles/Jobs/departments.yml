@@ -46,6 +46,7 @@
   - HeadOfSecurity
   - ResearchDirector
   - Quartermaster
+  - CCAgent
 
 - type: department
   id: Engineering
@@ -82,7 +83,7 @@
 
 - type: department
   id: Science
-  description: department-Command-description
+  description: department-Science-description
   color: "#D381C9"
   roles:
   - ResearchDirector

@@ -1,0 +1,110 @@
+- type: entity
+  id: CorpsesSpawnerBase
+  parent: MarkerBase
+  abstract: true
+  components:
+  - type: Sprite
+    layers:
+      - state: red
+      - sprite: Mobs/Species/Human/parts.rsi
+        state: full
+
+- type: entity
+  name: Random corpses Spawner
+  id: RandomCorpsesSpawner
+  parent: CorpsesSpawnerBase
+  components:
+  - type: ConditionalSpawner
+    prototypes:
+      - MobRandomCargoBody
+      - MobRandomEngineerBody
+      - MobRandomServiceBody
+      - MobRandomMedicBody
+      - MobRandomScienceBody
+      - MobRandomSecurityBody
+
+- type: entity
+  name: Captain corpse Spawner
+  id: CaptainCorpsesSpawner
+  parent: CorpsesSpawnerBase
+  components:
+  - type: ConditionalSpawner
+    prototypes:
+      - MobCaptainBody
+
+- type: entity
+  name: Cargo Corpses Spawner
+  id: CargoCorpsesSpawner
+  parent: CorpsesSpawnerBase
+  components:
+  - type: ConditionalSpawner
+    chance: 0.4
+    prototypes:
+      - MobRandomCargoBody
+
+- type: entity
+  name: Engineer Corpses Spawner
+  id: EngineerCorpsesSpawner
+  parent: CorpsesSpawnerBase
+  components:
+  - type: ConditionalSpawner
+    chance: 0.4
+    prototypes:
+      - MobRandomEngineerBody
+
+- type: entity
+  name: Service Corpses Spawner
+  id: ServiceCorpsesSpawner
+  parent: CorpsesSpawnerBase
+  components:
+  - type: ConditionalSpawner
+    chance: 0.4
+    prototypes:
+      - MobRandomServiceBody
+
+- type: entity
+  name: Medic Corpses Spawner
+  id: MedicCorpsesSpawner
+  parent: CorpsesSpawnerBase
+  components:
+  - type: ConditionalSpawner
+    chance: 0.4
+    prototypes:
+      - MobRandomMedicBody
+
+- type: entity
+  name: Science Corpses Spawner
+  id: ScienceCorpsesSpawner
+  parent: CorpsesSpawnerBase
+  components:
+  - type: ConditionalSpawner
+    chance: 0.4
+    prototypes:
+      - MobRandomScienceBody
+
+- type: entity
+  name: Security Corpses Spawner
+  id: SecurityCorpsesSpawner
+  parent: CorpsesSpawnerBase
+  components:
+  - type: ConditionalSpawner
+    chance: 0.4
+    prototypes:
+      - MobRandomSecurityBody
+
+
+- type: entity
+  name: Random xeno corpses Spawner
+  id: RandomXenoCorpsesSpawner
+  parent: MarkerBase
+  components:
+  - type: Sprite
+    layers:
+    - state: red
+    - sprite: Mobs/Aliens/Xenos/burrower.rsi
+      state: dead
+  - type: ConditionalSpawner
+    prototypes:
+      - XenoAlienBurrower
+      - XenoAlienPraetorianBody
+      - XenoAlienDroneBody

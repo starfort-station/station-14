@@ -1,0 +1,29 @@
+- type: entity
+  parent: XenoAlienBurrower
+  id: XenoAlienBurrowerBody
+  suffix: Dead
+  components:
+  - type: Damageable
+    damage:
+      types:
+        Piercing: 223
+
+- type: entity
+  parent: XenoAlienPraetorian
+  id: XenoAlienPraetorianBody
+  suffix: Dead
+  components:
+  - type: Damageable
+    damage:
+      types:
+        Piercing: 203
+
+- type: entity
+  parent: XenoAlienDrone
+  id: XenoAlienDroneBody
+  suffix: Dead
+  components:
+  - type: Damageable
+    damage:
+      types:
+        Blunt: 174

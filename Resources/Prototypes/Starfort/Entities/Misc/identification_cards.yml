@@ -1,0 +1,79 @@
+ #Expedition
+- type: entity
+  parent: PassengerIDCard
+  id: FieldTrooperIDCard
+  name: field trooper ID card
+  components:
+  - type: PresetIdCard
+    job: FieldTrooper
+  - type: Sprite
+    sprite: Starfort/Objects/Misc/id_cards.rsi
+    layers:
+    - state: default
+    - state: idfield-trooper
+  - type: Clothing
+    slots:
+    - idcard
+    sprite: Starfort/Objects/Misc/id_cards.rsi
+  - type: Item
+    heldPrefix: default
+
+- type: entity
+  parent: FieldTrooperIDCard
+  id: FieldMedicIDCard
+  name: field medic ID card
+  components:
+  - type: PresetIdCard
+    job: FieldMedic
+  - type: Sprite
+    layers:
+    - state: default
+    - state: idfield-medic
+
+- type: entity
+  parent: FieldTrooperIDCard
+  id: FieldScientistIDCard
+  name: field scientist ID card
+  components:
+  - type: PresetIdCard
+    job: FieldScientist
+  - type: Sprite
+    layers:
+    - state: default
+    - state: idfield-scientist
+
+- type: entity
+  parent: FieldTrooperIDCard
+  id: FieldEngineerIDCard
+  name: field engineer ID card
+  components:
+  - type: PresetIdCard
+    job: FieldEngineer
+  - type: Sprite
+    layers:
+    - state: default
+    - state: idfield-engineer
+ 
+- type: entity
+  parent: FieldTrooperIDCard
+  id: FieldCommanderIDCard
+  name: field commander ID card
+  components:
+  - type: PresetIdCard
+    job: FieldCommander
+  - type: Sprite
+    layers:
+    - state: default
+    - state: idfield-commander
+
+- type: entity
+  parent: FieldTrooperIDCard
+  id: FieldRecrutIDCard
+  name: field recrut ID card
+  components:
+  - type: PresetIdCard
+    job: FieldRecrut
+  - type: Sprite
+    layers:
+    - state: default
+    - state: idfield-recrut

@@ -1,0 +1,32 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "Made by github.com/starfort-station/station-14",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "green"
+    },
+    {
+      "name": "field_medic"
+    },
+    {
+      "name": "field_scientist"
+    },
+    {
+      "name": "field_trooper"
+    },
+    {
+      "name": "field_engineer"
+    },
+    {
+      "name": "field_commander"
+    },
+    {
+      "name": "field_recrut"
+    }
+  ]
+}

@@ -1,4 +1,4 @@
-- type: entity
+﻿- type: entity
   id: AnomalySpawn
   parent: BaseGameRule
   noSpawn: true
@@ -8,6 +8,11 @@
     startDelay: 30
     duration: 35
   - type: AnomalySpawnRule
+    startAudio: # Corvax-Announcements
+      path: /Audio/Corvax/Announcements/flux.ogg
+      params:
+        volume: -4
+    minimumPlayers: 5
 
 - type: entity
   id: BluespaceArtifact
@@ -19,6 +24,10 @@
     startDelay: 30
     duration: 35
   - type: BluespaceArtifactRule
+    startAudio: # Corvax-Announcements
+      path: /Audio/Corvax/Announcements/blusp_anomalies.ogg
+      params:
+        volume: -4
 
 - type: entity
   id: BluespaceLocker
@@ -113,8 +122,12 @@
   - type: StationEvent
     startAnnouncement: station-event-gas-leak-start-announcement
     startAudio:
-      path: /Audio/Announcements/attention.ogg
+      path: /Audio/Announcements/gasleak_start.ogg # Corvax-Announcements
+      params:
+        volume: -4
     endAnnouncement: station-event-gas-leak-end-announcement
+    endAudio:
+      path: /Audio/Announcements/gasleak_end.ogg # Corvax-Announcements
     earliestStart: 10
     minimumPlayers: 5
     weight: 5
@@ -146,9 +159,11 @@
     startAnnouncement: station-event-meteor-swarm-start-announcement
     endAnnouncement: station-event-meteor-swarm-end-announcement
     startAudio:
-      path: /Audio/Announcements/meteors.ogg
+      path: /Audio/Announcements/meteors_start.ogg
       params:
         volume: -4
+    endAudio:
+      path: /Audio/Announcements/meteors_end.ogg # Corvax-Announcements
     duration: null #ending is handled by MeteorSwarmRule
     startDelay: 30
   - type: MeteorSwarmRule
@@ -204,8 +219,8 @@
     weight: 10
     startAnnouncement: station-event-solar-flare-start-announcement
     endAnnouncement: station-event-solar-flare-end-announcement
-    startAudio:
-      path: /Audio/Announcements/attention.ogg
+    startAudio: # Corvax-Announcements
+      path: /Audio/Corvax/Announcements/comms_blackout.ogg
     duration: 120
     maxDuration: 240
   - type: SolarFlareRule
@@ -224,7 +239,9 @@
   - type: StationEvent
     startAnnouncement: station-event-vent-clog-start-announcement
     startAudio:
-      path: /Audio/Announcements/attention.ogg
+      path: /Audio/Announcements/ventclog.ogg # Corvax-Announcements
+      params:
+        volume: -4
     earliestStart: 15
     minimumPlayers: 15
     weight: 5
@@ -316,3 +333,13 @@
     reoccurrenceDelay: 25
     duration: 1
   - type: LoneOpsSpawnRule
+
+- type: entity
+  id: ExpeditionMapSpawn
+  parent: BaseGameRule
+  noSpawn: true
+  components:
+  - type: StationEvent
+    weight: 0
+    duration: 1
+  - type: ExpeditionMapSpawnRule

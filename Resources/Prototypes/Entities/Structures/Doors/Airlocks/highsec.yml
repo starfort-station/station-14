@@ -22,7 +22,7 @@
     - state: emergency_unlit
       map: ["enum.DoorVisualLayers.BaseEmergencyAccess"]
       shader: unshaded
-    - state: panel_open
+    - state: panel_closed # Corvax-Resprite-Airlocks
       map: ["enum.WiresVisualLayers.MaintenancePanel"]
   - type: AnimationPlayer
   - type: Physics
@@ -57,6 +57,7 @@
     fuel: 10
     time: 10
   - type: Airlock
+    openUnlitVisible: true
   - type: Appearance
   - type: WiresVisuals
   - type: ApcPowerReceiver

@@ -219,6 +219,7 @@
       - EncryptionKeyScience
       - EncryptionKeyCommand
       - EncryptionKeyCommon
+      - EncryptionKeyExpedition
 
 - type: entity
   parent: ClothingHeadset
@@ -269,3 +270,20 @@
   - type: Clothing
     sprite: Clothing/Ears/Headsets/service.rsi
 
+- type: entity
+  parent: ClothingHeadset
+  id: ClothingHeadsetIAA
+  name: iaa's headset
+  description: This is used by IAA.
+  components:
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - EncryptionKeySecurity
+      - EncryptionKeyCommon
+      - EncryptionKeyCommand
+  - type: Sprite
+    sprite: Clothing/Ears/Headsets/security.rsi
+  - type: Clothing
+    sprite: Clothing/Ears/Headsets/security.rsi
+    
