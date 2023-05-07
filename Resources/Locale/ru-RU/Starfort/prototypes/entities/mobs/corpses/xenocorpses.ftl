@@ -1,9 +1,0 @@
-ent-XenoAlienBurrowerBody = { ent-XenoAlienBurrower }
-    .suffix = Труп
-    .desc = { ent-XenoAlienBurrower.desc }
-ent-XenoAlienPraetorianBody = { ent-XenoAlienPraetorian }
-    .suffix = Труп
-    .desc = { ent-XenoAlienPraetorian.desc }
-ent-XenoAlienDroneBody = { ent-XenoAlienDrone }
-    .suffix = Труп
-    .desc = { ent-XenoAlienDrone.desc }
