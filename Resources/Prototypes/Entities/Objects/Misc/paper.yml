@@ -687,7 +687,8 @@
   - type: Sprite
     sprite: Objects/Misc/bureaucracy.rsi
     state: envelope_unwrapped
-  - tags:
+  - type: Tag
+    tags:
     - Trash
 
 - type: entity
