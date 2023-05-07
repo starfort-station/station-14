@@ -116,7 +116,7 @@ barsign-prototype-description-emprah = Нравится и фанатикам, �
 ## EmpBarSign
 
 barsign-prototype-name-spacebucks = Космические баксы
-barisgn-prototype-description-spacebucks = От них никуда не деться, даже в космосе.
+barsign-prototype-description-spacebucks = От них невозможно скрыться, даже в космосе.
 barsign-prototype-description-empbarsign = Что-то пошло совсем не так.
 
 ## SignOff

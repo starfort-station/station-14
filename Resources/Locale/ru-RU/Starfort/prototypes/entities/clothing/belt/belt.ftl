@@ -1,3 +1,4 @@
-ent-ClothingBeltMilitaryERTMedicFilled = { ent-ClothingBeltMilitaryERTMedic }
-    .suffix = Заполненный
-    .desc = { ent-ClothingBeltMilitaryERTMedic.desc }
+ent-ClothingBeltMilitaryERT = РПС ОБР
+    .desc = Усовершенствованная ременно-поясная система, которая имеется на вооружении у элитных бойцов NanoTrasen.
+ent-ClothingBeltMilitaryERTMedic = РПС Медиков ОБР
+    .desc = Усовершенствованная ременно-поясная система, которая имеется на вооружении у Медиков ОБР, которые храбро спасают жизни своих товарищей.

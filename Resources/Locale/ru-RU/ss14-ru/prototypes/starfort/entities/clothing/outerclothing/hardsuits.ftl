@@ -1,0 +1,14 @@
+ent-ClothingOuterHardsuitExpeditionBase = { ent-ClothingOuterHardsuitBase }
+    .desc = { ent-ClothingOuterHardsuitBase.desc }
+ent-ClothingOuterHardsuitExpeditionMedic = Полевой комбинезон
+    .desc = Современный экспедиционный комбинезон с композитной броней, для медика
+    .suffix = Полевой медик
+ent-ClothingOuterHardsuitExpeditionTrooper = Полевой комбинезон
+    .desc = Современный экспедиционный комбинезон с композитной броней, для солдата
+    .суффикс = Полевой солдат
+ent-ClothingOuterHardsuitExpeditionScientist = Полевой комбинезон
+    .desc = Современный экспедиционный комбинезон с композитной броней, для ученого
+    .suffix = Полевой ученый
+ent-ClothingOuterHardsuitExpeditionEngineer = Полевой комбинезон
+    .desc = Современный экспедиционный комбинезон с композитной броней, для инженера
+    .suffix = Полевой инженер
