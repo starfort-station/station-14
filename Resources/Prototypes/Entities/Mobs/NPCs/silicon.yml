@@ -233,6 +233,8 @@
     interactFailureString: petting-failure-cleanbot
     interactSuccessSound:
       path: /Audio/Ambience/Objects/periodic_beep.ogg
+  - type: ReplacementAccent
+    accent: silicon
 
 - type: entity
   parent: MobSiliconBase
