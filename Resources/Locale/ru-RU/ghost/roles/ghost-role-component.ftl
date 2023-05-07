@@ -12,3 +12,6 @@ ghost-role-information-hamster-name = Хомяк
 ghost-role-information-hamster-description = Маленький ворчливый пушистик.
 ghost-role-information-hamlet-name = Хомяк Гамлет
 ghost-role-information-hamlet-description = Живёт на капитанском мостике, немного вспыльчив и всегда голоден.
+ghost-role-information-slimes-name = Слизь
+ghost-role-information-slimes-description = Обычный слизеринец без особых потребностей и интересов. Он просто живет.
+ghost-role-information-angry-slimes-description = Все вокруг тебя раздражает, уничтожь их!

@@ -1,0 +1,12 @@
+ent-LockerFieldTroopFilled = { ent-LockerFieldTroop }
+    .suffix = Экспедиция, Заполненный
+    .desc = { ent-LockerFieldTroop.desc }
+ent-LockerFieldSciFilled = { ent-LockerFieldSci }
+    .suffix = Экспедиция, Заполненный
+    .desc = { ent-LockerFieldSci.desc }
+ent-LockerFieldMedFilled = { ent-LockerFieldMed }
+    .suffix = Экспедиция, Заполненный
+    .desc = { ent-LockerFieldMed.desc }
+ent-LockerFieldEngFilled = { ent-LockerFieldEng }
+    .suffix = Экспедиция, Заполненный
+    .desc = { ent-LockerFieldEng.desc }
