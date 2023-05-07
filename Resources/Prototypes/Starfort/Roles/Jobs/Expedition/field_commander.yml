@@ -34,7 +34,7 @@
     back: ClothingBackpackExpeditionFilled
     shoes: ClothingShoesBootsAssaultFilled
     id: FieldCommanderPDA
-    ears: ClothingHeadsetExpedition
+    ears: ClothingHeadsetExpeditionCommand
     belt: ClothingBeltSecurityWebbing
   satchel: ClothingBackpackSatchelExpeditionFilled
   duffelbag: ClothingBackpackDuffelExpeditionFilled
