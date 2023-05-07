@@ -1,0 +1,14 @@
+- type: entity
+  parent: BaseVendingMachineRestock
+  id: VendingMachineRestockSustenanceEquipment
+  name: Sustenance Vendor restock box
+  description: Wasted.
+  components:
+  - type: VendingMachineRestock
+    canRestock:
+    - SustenanceInventory
+  - type: Sprite
+    layers:
+    - state: base
+    - state: green_bit
+      shader: unshaded
