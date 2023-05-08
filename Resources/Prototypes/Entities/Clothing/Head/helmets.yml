@@ -303,3 +303,21 @@
         Slash: 0.95
         Heat: 0.90
         Radiation: 0.75
+
+- type: entity
+  parent: ClothingHeadHelmetHelmet
+  id: ClothingHeadHelmetUSSP
+  name: USSP helmet
+  description: A usual helmet of USSP.
+  components:
+  - type: Sprite
+    sprite: Clothing/Head/Helmets/USSP.rsi
+  - type: Clothing
+    sprite: Clothing/Head/Helmets/USSP.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.6
+        Slash: 0.75
+        Piercing: 0.8
+        Heat: 0.9
