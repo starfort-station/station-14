@@ -130,3 +130,14 @@
     - id: WeaponWandFireball
     - id: WeaponWandDeath
     - id: WeaponWandPolymorphDoor
+
+- type: entity
+  parent: ClothingBeltMilitaryWebbingUSSP
+  id: ClothingBeltMilitaryWebbingUSSPFilled
+  suffix: Filled
+  components:
+  - type: StorageFill
+    contents:
+      - WeaponSniperMosin
+      - DrinkMREFlask
+      - Shovel

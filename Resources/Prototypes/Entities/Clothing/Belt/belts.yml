@@ -564,3 +564,12 @@
       - WeaponSniperMosin
       - DrinkMREFlask
       - Shovel
+
+- type: entity
+  parent: ClothingBeltMilitaryWebbing
+  id: ClothingBeltSWATWebbing
+  name: SWAT chest rig
+  description: For SWAT.
+  components:
+  - type: Storage
+    capacity: 200
