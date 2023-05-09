@@ -74,6 +74,7 @@
       - Wrench
       - Crowbar
       - Multitool
+      - NetworkConfigurator
       - AirlockPainter
       - CableStack
       - HandheldGPSBasic
@@ -214,6 +215,7 @@
       - FireAlarmElectronics
       - IntercomElectronics
       - MailingUnitElectronics
+      - SignalTimerElectronics
       - Bucket
       - MopItem
       - AdvMopItem
@@ -276,6 +278,7 @@
       - FireAlarmElectronics
       - MailingUnitElectronics
       - IntercomElectronics
+      - SignalTimerElectronics
       - SMESMachineCircuitboard
       - SubstationMachineCircuitboard
       - ThermomachineFreezerMachineCircuitBoard
@@ -283,7 +286,6 @@
       - CloningPodMachineCircuitboard
       - MedicalScannerMachineCircuitboard
       - CryoPodMachineCircuitboard
-      - CrewMonitoringComputerCircuitboard
       - VaccinatorMachineCircuitboard
       - DiagnoserMachineCircuitboard
       - ChemMasterMachineCircuitboard
@@ -480,6 +482,7 @@
     idleState: icon
     runningState: icon
     staticRecipes:
+      - HandLabeler
       - Defibrillator
       - HandheldHealthAnalyzer
       - ClothingHandsGlovesLatex
