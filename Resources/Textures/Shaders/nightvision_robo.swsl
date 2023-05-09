@@ -24,7 +24,14 @@ void fragment() {
 	float gLine = xCoord - mod(time * 1500.0, xCoord);
 	float xLine = mod(time * 1500.0, yCoord);
 
-    if (FRAGCOORD.y > fLine - 5.0 && FRAGCOORD.y < fLine + 5.0) {
+    float xValue = (FRAGCOORD.x - xCoord/2.) * (FRAGCOORD.x - xCoord/2.);
+    float yValue = (FRAGCOORD.y - yCoord/2.) * (FRAGCOORD.y - yCoord/2.);
+
+    if (xValue + yValue > 260000.0) {
+        colorset = vec3(0.0);
+        alpha = 1.0;
+    }
+    else if (FRAGCOORD.y > fLine - 5.0 && FRAGCOORD.y < fLine + 5.0) {
         colorset = vec3(0.079,0.720,0.021);  // dark green
         alpha = 0.95;
     }
@@ -47,11 +54,11 @@ void fragment() {
     else {
 		colorset = vec3(0.079,0.800,0.021);  // dark green
     }
-	
+
 	lowp vec4 light = texture2D(lightMap, Pos);
 	//COLOR = vec4(fLine , sLine, zLine, 1.0 );
 	//COLOR = vec4(sin(TIME));
-	//COLOR = vec4(vec3(fLine), alpha); colorset + 
+	//COLOR = vec4(vec3(fLine), alpha); colorset +
     //COLOR = vec4(vec3(light.z), 1.0);
 	COLOR = vec4(colorset, alpha);
 }
