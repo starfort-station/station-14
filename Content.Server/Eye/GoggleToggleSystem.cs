@@ -1,27 +1,25 @@
-using Content.Server.Eye.DarkVision;
-using Content.Shared.Actions;
-using Content.Shared.Alert;
-using Content.Shared.Clothing;
 using Content.Shared.Clothing.Components;
-using Content.Shared.Eye.DarkVision;
-using Content.Shared.Inventory;
-using Content.Shared.Inventory.Events;
+using Content.Shared.Clothing.EntitySystems;
+using Content.Shared.Eye;
 
-namespace Content.Server.Clothing;
+namespace Content.Server.Eye;
 
 public sealed class GoggleToggleSystem : GoggleToggleSharedSystem
 {
     [Dependency] private readonly IEntityManager _entManager = default!;
-    [Dependency] private readonly DarkVisionSystem _darkVision = default!;
 
     protected override void UpdateGogglesState(EntityUid uid, GoggleToggleComponent goggles)
     {
+        DarkVisionComponent tempComp;
+
         if (TryComp<DarkVisionComponent>(uid, out var vision))
         {
             vision.DrawLight = goggles.DrawLight;
             vision.LayerColor = goggles.LayerColor;
             vision.ShaderTexturePrototype = goggles.ShaderTexturePrototype;
             vision.IsEnable = goggles.On;
+
+            tempComp = vision;
         }
         else
         {
@@ -34,7 +32,14 @@ public sealed class GoggleToggleSystem : GoggleToggleSharedSystem
                 Owner = uid
             };
             _entManager.AddComponent(uid, visionComponent, true);
+            tempComp = visionComponent;
+
         }
+        if (tempComp.ShaderTexturePrototype == null)
+            return;
+
+        RaiseNetworkEvent(new RequestUpdateOverlayMessage(uid, tempComp.ShaderTexturePrototype,
+            tempComp.LayerColor, tempComp.DrawLight, tempComp.IsEnable));
     }
 
 }

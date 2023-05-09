@@ -1,17 +1,13 @@
 using Content.Shared.Actions;
-using Content.Shared.Alert;
 using Content.Shared.Clothing.Components;
-using Content.Shared.Eye.DarkVision;
 using Content.Shared.Inventory;
 using Content.Shared.Inventory.Events;
 using Robust.Shared.Containers;
 
-namespace Content.Shared.Clothing;
+namespace Content.Shared.Clothing.EntitySystems;
 
 public abstract class GoggleToggleSharedSystem : EntitySystem
 {
-    [Dependency] private readonly IEntityManager _entManager = default!;
-    [Dependency] private readonly DarkVisionSharedSystem _darkVision = default!;
     [Dependency] private readonly SharedActionsSystem _sharedActions = default!;
     [Dependency] private readonly SharedContainerSystem _sharedContainer = default!;
     public override void Initialize()
@@ -20,7 +16,6 @@ public abstract class GoggleToggleSharedSystem : EntitySystem
 
         SubscribeLocalEvent<GoggleToggleComponent, GetItemActionsEvent>(OnGetActions);
         SubscribeLocalEvent<GoggleToggleComponent, ToggleGogglesEvent>(OnToggleAction);
-
         SubscribeLocalEvent<GoggleToggleComponent, GotEquippedEvent>(OnGotEquipped);
         SubscribeLocalEvent<GoggleToggleComponent, GotUnequippedEvent>(OnGotUnequipped);
     }
@@ -29,16 +24,19 @@ public abstract class GoggleToggleSharedSystem : EntitySystem
     {
         goggles.On = !goggles.On;
 
+        OnChanged(uid, goggles);
+
         if (_sharedContainer.TryGetContainingContainer(uid, out var container))
         {
             UpdateGogglesState(container.Owner, goggles);
         }
+    }
 
+    protected void OnChanged(EntityUid uid, GoggleToggleComponent goggles)
+    {
         if (goggles.ToggleAction == null)
             return;
-
         _sharedActions.SetToggled(goggles.ToggleAction, goggles.On);
-        Dirty(goggles);
     }
 
     protected virtual void UpdateGogglesState(EntityUid uid, GoggleToggleComponent goggles) { }
@@ -53,12 +51,13 @@ public abstract class GoggleToggleSharedSystem : EntitySystem
     {
         if (args.Slot == "eyes")
         {
-            if (TryComp<DarkVisionComponent>(args.Equipee, out var vision))
+            component.On = false;
+            if (component.ToggleAction != null)
             {
-                vision.IsEnable = component.On = false;
-                _darkVision.ForceUpdate(args.Equipee, vision);
-                Dirty(vision);
+                _sharedActions.SetToggled(component.ToggleAction, component.On);
             }
+
+            UpdateGogglesState(args.Equipee, component);
         }
     }
 
@@ -66,12 +65,12 @@ public abstract class GoggleToggleSharedSystem : EntitySystem
     {
         if (args.Slot == "eyes")
         {
-            if (TryComp<DarkVisionComponent>(args.Equipee, out var vision))
+            if (component.ToggleAction != null)
             {
-                vision.IsEnable = component.On;
-                _darkVision.ForceUpdate(args.Equipee, vision);
-                Dirty(vision);
+                _sharedActions.SetToggled(component.ToggleAction, component.On);
             }
+
+            UpdateGogglesState(args.Equipee, component);
         }
     }
 }

@@ -1,18 +1,10 @@
-using Content.Client.Drugs;
-using Content.Shared.Drugs;
-using Content.Shared.Eye.Blinding;
-using Content.Shared.Eye.DarkVision;
-using Content.Shared.StatusEffect;
-using Robust.Client.GameObjects;
+using Content.Shared.Eye;
 using Robust.Client.Graphics;
 using Robust.Client.Player;
 using Robust.Shared.Enums;
 using Robust.Shared.Prototypes;
-using Robust.Shared.Timing;
-using KeyNotFoundException = System.Collections.Generic.KeyNotFoundException;
 
-
-namespace Content.Client.Eye.DarkVision;
+namespace Content.Client.Eye;
 public sealed class DarkVisionOverlay : Overlay
 {
     [Dependency] private readonly IPrototypeManager _prototypeManager = default!;

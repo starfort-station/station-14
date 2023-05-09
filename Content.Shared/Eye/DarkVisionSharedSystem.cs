@@ -1,11 +1,27 @@
-using Content.Shared.GameTicking;
-using Robust.Shared.GameObjects;
-using Robust.Shared.Network;
-using System.ComponentModel;
+using Robust.Shared.Serialization;
 
-namespace Content.Shared.Eye.DarkVision;
+namespace Content.Shared.Eye;
+
+[Serializable, NetSerializable]
+public sealed class RequestUpdateOverlayMessage : EntityEventArgs
+{
+    public EntityUid Id { get; }
+    public String ShaderTexturePrototype { get; }
+    public Color LayerColor { get; }
+    public bool DrawLight { get; }
+    public bool On { get; }
+    public RequestUpdateOverlayMessage(EntityUid id, string shaderTexture,
+        Color layerColor, bool drawLight, bool toggleOn)
+    {
+        Id = id;
+        ShaderTexturePrototype = shaderTexture;
+        LayerColor = layerColor;
+        DrawLight = drawLight;
+        On = toggleOn;
+    }
+}
 
 public abstract class DarkVisionSharedSystem : EntitySystem
 {
-    public virtual void ForceUpdate(EntityUid uid, DarkVisionComponent component) { }
+    // Maybe must be deleted
 }
