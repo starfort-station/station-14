@@ -549,10 +549,6 @@
   name: USSP chest rig
   description: A set of tactical webbing worn by USSP boarding parties.
   components:
-  - type: Sprite
-    sprite: Clothing/Belt/USSP.rsi
-  - type: Clothing
-    sprite: Clothing/Belt/USSP.rsi
   - type: Storage
     capacity: 70
     whitelist:
