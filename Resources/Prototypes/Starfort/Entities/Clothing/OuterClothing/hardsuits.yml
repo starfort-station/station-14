@@ -11,8 +11,6 @@
   - type: PressureProtection
     highPressureMultiplier: 0.3
     lowPressureMultiplier: 10000
-  - type: DiseaseProtection
-    protection: 0.7
   - type: ExplosionResistance
     damageCoefficient: 0.55
   - type: ClothingSpeedModifier
@@ -92,8 +90,6 @@
   - type: PressureProtection
     highPressureMultiplier: 0.3
     lowPressureMultiplier: 7000
-  - type: DiseaseProtection
-    protection: 0.5
   - type: ClothingSpeedModifier
     walkModifier: 0.85
     sprintModifier: 0.85
