@@ -1,10 +1,6 @@
 using Content.Server.Body.Components;
-using Content.Server.Clothing.Components;
-using Content.Server.Station.Systems;
 using Content.Shared.Damage;
 using Content.Shared.Damage.Prototypes;
-using Content.Shared.Eye.DarkVision;
-using Content.Shared.Roles;
 using Timer = Robust.Shared.Timing.Timer;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
