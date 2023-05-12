@@ -113,6 +113,9 @@
   id: CartridgeRifle
 
 - type: Tag
+  id: CartridgeHeavyLecter
+
+- type: Tag
   id: CartridgeRocket
 
 # Allows you to walk over tile entities such as lava without steptrigger
@@ -416,6 +419,9 @@
 
 - type: Tag
   id: MagazineRifle
+
+- type: Tag
+  id: MagazineHeavyLecter
 
 - type: Tag
   id: MagazineShotgun
