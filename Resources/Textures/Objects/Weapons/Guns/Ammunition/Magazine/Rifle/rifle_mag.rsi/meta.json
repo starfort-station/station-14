@@ -11,6 +11,9 @@
             "name": "base"
         },
         {
+            "name": "heavy"
+        },
+        {
             "name": "high_velocity"
         },
         {
@@ -24,6 +27,9 @@
         },
         {
             "name": "mag-1"
+        },
+        {
+            "name": "mag-2"
         }
     ]
 }
