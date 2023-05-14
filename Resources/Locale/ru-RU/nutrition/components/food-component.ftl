@@ -11,6 +11,8 @@ food-system-you-cannot-eat-any-more = В вас больше не лезет!
 food-system-you-cannot-eat-any-more-other = В него больше не лезет!
 food-system-try-use-food-is-empty = { $entity } пустая!
 food-system-wrong-utensil = вы не можете есть { $food } с помощью { $utensil }.
+food-system-cant-digest = Вы не можете переварить { THE($entity) }!
+food-system-cant-digest-other = Они не могут переварить { THE($entity) }!
 food-system-verb-eat = Съесть
 
 ## Force feeding

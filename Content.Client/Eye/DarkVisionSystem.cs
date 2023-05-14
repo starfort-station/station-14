@@ -1,10 +1,9 @@
+using Content.Shared.Eye;
 using Robust.Client.GameObjects;
 using Robust.Client.Graphics;
 using Robust.Client.Player;
-using Content.Shared.Clothing.Components;
-using Content.Shared.Eye.DarkVision;
 
-namespace Content.Client.Eye.DarkVision;
+namespace Content.Client.Eye;
 
 public sealed class DarkVisionSystem : DarkVisionSharedSystem
 {
@@ -27,26 +26,37 @@ public sealed class DarkVisionSystem : DarkVisionSharedSystem
         SubscribeLocalEvent<DarkVisionComponent, PlayerAttachedEvent>(OnPlayerAttached);
         SubscribeLocalEvent<DarkVisionComponent, PlayerDetachedEvent>(OnPlayerDetached);
 
+        SubscribeNetworkEvent<RequestUpdateOverlayMessage>(OnRequestOverlay);
+
         _darkOverlay = new DarkVisionOverlay();
     }
 
-    public override void ForceUpdate(EntityUid uid, DarkVisionComponent component)
+    private void OnRequestOverlay(RequestUpdateOverlayMessage message, EntitySessionEventArgs args)
     {
-        if (_player.LocalPlayer?.ControlledEntity == uid)
+        if (_player.LocalPlayer?.ControlledEntity == message.Id)
         {
-            if (component.IsEnable)
+
+            if (TryComp<DarkVisionComponent>(message.Id, out var vision))
             {
-                if (component.ShaderTexturePrototype != null)
+                vision.IsEnable = message.On;
+                vision.DrawLight = vision.IsEnable ? message.DrawLight : true;
+                vision.LayerColor = message.LayerColor;
+                vision.ShaderTexturePrototype = message.ShaderTexturePrototype;
+
+                if (vision.IsEnable)
                 {
-                    _darkOverlay.SetShaderProto(component.ShaderTexturePrototype);
+                    if (vision.ShaderTexturePrototype != null)
+                    {
+                        _darkOverlay.SetShaderProto(vision.ShaderTexturePrototype);
+                        _lightManager.DrawLighting = vision.DrawLight;
+                        _overlayMan.AddOverlay(_darkOverlay);
+                    }
                 }
-                _lightManager.DrawLighting = component.DrawLight;
-                _overlayMan.AddOverlay(_darkOverlay);
-            }
-            else
-            {
-                _overlayMan.RemoveOverlay(_darkOverlay);
-                _lightManager.DrawLighting = true;
+                else
+                {
+                    _overlayMan.RemoveOverlay(_darkOverlay);
+                    _lightManager.DrawLighting = true;
+                }
             }
         }
     }
@@ -59,9 +69,9 @@ public sealed class DarkVisionSystem : DarkVisionSharedSystem
         if (component.ShaderTexturePrototype != null)
         {
             _darkOverlay.SetShaderProto(component.ShaderTexturePrototype);
+            _lightManager.DrawLighting = component.DrawLight;
+            _overlayMan.AddOverlay(_darkOverlay);
         }
-        _lightManager.DrawLighting = component.DrawLight;
-        _overlayMan.AddOverlay(_darkOverlay);
     }
 
     private void OnPlayerDetached(EntityUid uid, DarkVisionComponent component, PlayerDetachedEvent args)

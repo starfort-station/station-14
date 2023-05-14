@@ -7,8 +7,6 @@
   description: They mostly come at night. Mostly.
   components:
   - type: Insulated
-  - type: DiseaseProtection
-    protection: 1
   - type: CombatMode
   - type: InputMover
   - type: MobMover
@@ -119,14 +117,15 @@
     bodyType: Dynamic
   - type: Fixtures
     fixtures:
-    - shape:
-        !type:PhysShapeCircle
-        radius: 0.45
-      density: 1000
-      mask:
-      - MobMask
-      layer:
-      - MobLayer
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.25
+        density: 1000
+        mask:
+        - MobMask
+        layer:
+        - MobLayer
 
 
 # AlienPraetorian
@@ -149,14 +148,15 @@
       250: 0.7
   - type: Fixtures
     fixtures:
-    - shape:
-        !type:PhysShapeCircle
-        radius: 0.45
-      density: 400
-      mask:
-      - MobMask
-      layer:
-      - MobLayer
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.25
+        density: 500
+        mask:
+        - MobMask
+        layer:
+        - MobLayer
 
 
 # AlienDrone
@@ -187,14 +187,15 @@
     baseSprintSpeed : 5.5
   - type: Fixtures
     fixtures:
-    - shape:
-        !type:PhysShapeCircle
-        radius: 0.45
-      density: 450
-      mask:
-      - MobMask
-      layer:
-      - MobLayer
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.35
+        density: 600
+        mask:
+        - MobMask
+        layer:
+        - MobLayer
 
 
 # AlienQueen
@@ -229,14 +230,15 @@
       1000: 0.7
   - type: Fixtures
     fixtures:
-    - shape:
-        !type:PhysShapeCircle
-        radius: 0.45
-      density: 15500
-      mask:
-      - MobMask
-      layer:
-      - MobLayer
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.45
+        density: 15000
+        mask:
+        - MobMask
+        layer:
+        - MobLayer
 
 
 # AlienRavager
@@ -271,14 +273,15 @@
       450: 0.7
   - type: Fixtures
     fixtures:
-    - shape:
-        !type:PhysShapeCircle
-        radius: 0.45
-      density: 1350
-      mask:
-      - MobMask
-      layer:
-      - MobLayer
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.45
+        density: 1300
+        mask:
+        - MobMask
+        layer:
+        - MobLayer
 
 
 # AlienRunner
@@ -309,16 +312,17 @@
        Brute: 15
   - type: Fixtures
     fixtures:
-    - shape:
-        !type:PhysShapeCircle
-        radius: 0.45
-      density: 235
-      mask:
-      - MobMask
-      layer:
-      - MobLayer
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.45
+        density: 300
+        mask:
+        - MobMask
+        layer:
+        - MobLayer
 
-# AlienRunner
+# AlienSpitter
 - type: entity
   name: Spitter
   parent: MobXenoAlienBase
@@ -338,11 +342,12 @@
       250: 0.4
   - type: Fixtures
     fixtures:
-    - shape:
-        !type:PhysShapeCircle
-        radius: 0.45
-      density: 235
-      mask:
-      - MobMask
-      layer:
-      - MobLayer
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.45
+        density: 1000
+        mask:
+        - MobMask
+        layer:
+        - MobLayer

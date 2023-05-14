@@ -56,3 +56,17 @@
       state_closed: fieldeng_door
   - type: AccessReader
     access: [["Engineering","Expedition"]]
+    
+- type: entity
+  id: LockerFieldComm
+  parent: LockerFieldTroop
+  name: expedition commander's locker
+  components:
+  - type: Appearance
+    visuals:
+    - type: StorageVisualizer
+      state: fieldsci
+      state_open: fieldsci_open
+      state_closed: fieldcom_door
+  - type: AccessReader
+    access: [["Sergeant","Expedition"]]

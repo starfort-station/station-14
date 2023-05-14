@@ -30,6 +30,14 @@
     proto: BulletRifle
 
 - type: entity
+  id: CartridgeHeavyLecter
+  name: cartridge (.15 rifle)
+  parent: BaseCartridgeRifle
+  components:
+  - type: CartridgeAmmo
+    proto: BulletHeavyLecter
+
+- type: entity
   id: CartridgeRifleHighVelocity
   name: cartridge (.20 rifle high-velocity)
   parent: BaseCartridgeRifle

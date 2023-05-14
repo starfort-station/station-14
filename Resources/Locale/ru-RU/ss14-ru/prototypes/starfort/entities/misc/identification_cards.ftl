@@ -1,0 +1,12 @@
+ent-FieldTrooperIDCard = ID полевого солдата
+    .desc = { ent-PassengerIDCard.desc }
+ent-FieldMedicIDCard = ID полевого медика
+    .desc = { ent-FieldTrooperIDCard.desc }
+ent-FieldScientistIDCard = ID полевого ученого
+    .desc = { ent-FieldTrooperIDCard.desc }
+ent-FieldEngineerIDCard = ID полевого инженера
+    .desc = { ent-FieldTrooperIDCard.desc }
+ent-FieldCommanderIDCard = ID полевого командира
+    .desc = { ent-FieldTrooperIDCard.desc }
+ent-FieldRecrutIDCard = ID полевого рекрута
+    .desc = { ent-FieldTrooperIDCard.desc }

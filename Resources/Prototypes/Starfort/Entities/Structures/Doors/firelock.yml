@@ -20,7 +20,7 @@
   - type: Door
     state: Closed
   - type: Occluder
-    enabled: true
+    enabled: false
   - type: Physics
     canCollide: true
   - type: Airtight
