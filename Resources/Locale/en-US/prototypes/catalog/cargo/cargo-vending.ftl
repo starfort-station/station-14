@@ -63,3 +63,9 @@ ent-CrateVendingMachineRestockDiscountDans = { ent-CrateVendingMachineRestockDis
 
 ent-CrateVendingMachineRestockDonut = { ent-CrateVendingMachineRestockDonutFilled }
     .desc = { ent-CrateVendingMachineRestockDonutFilled.desc }
+
+ent-CrateVendingMachineRestockExpeditionEquipment = { ent-CrateVendingMachineRestockExpeditionEquipmentFilled }
+    .desc = { ent-CrateVendingMachineRestockExpeditionEquipmentFilled.desc }
+
+ent-CrateVendingMachineRestockExpeditionDrobeEquipment = { ent-CrateVendingMachineRestockExpeditionDrobeEquipmentFilled }
+    .desc = { ent-CrateVendingMachineRestockExpeditionDrobeEquipmentFilled.desc }

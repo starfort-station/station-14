@@ -121,3 +121,31 @@
       delay: 3
       transferAmount: 1
       solution: puddle
+
+- type: entity
+  name: puddle
+  suffix: Blood
+  parent: Puddle
+  id: PuddleBlood
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      puddle: 
+        maxVol: 1000
+        reagents:
+        - ReagentId: Blood
+          Quantity: 25
+
+- type: entity
+  name: puddle
+  suffix: XenoBlood
+  parent: Puddle
+  id: PuddleXeno
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      puddle: 
+        maxVol: 1000
+        reagents:
+        - ReagentId: FluorosulfuricAcid
+          Quantity: 25

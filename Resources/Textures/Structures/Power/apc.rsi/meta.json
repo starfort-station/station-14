@@ -1,23 +1,17 @@
 {
   "version": 1,
   "license": "CC-BY-SA-3.0",
-  "copyright": "Taken from tgstation at commit https://github.com/tgstation/tgstation/commit/9c7d509354ee030300f63c701da63c17928c3b3b and modified by Swept",
+  "copyright": "Taken from TauCetiClassic at commit https://github.com/TauCetiStation/TauCetiClassic/commit/fca7f2a0f9154c0c6c4efc2f8f58441fb9b34759",
   "size": {
     "x": 32,
     "y": 32
   },
   "states": [
     {
-      "name": "base"
-    },
-    {
       "name": "broken"
     },
     {
       "name": "frame"
-    },
-    {
-      "name": "panel"
     },
     {
       "name": "lock0-unlocked"
@@ -111,26 +105,38 @@
       ]
     },
     {
+      "name": "sparks-unlit",
+      "delays": [
+        [
+          0.1,
+          0.1,
+          0.05,
+          0.05,
+          0.1,
+          0.1
+        ]
+      ]
+    },
+    {
+      "name": "base"
+    },
+    {
       "name": "emag-unlit",
       "delays": [
         [
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
           0.5,
           0.5
         ]
       ]
     },
     {
-      "name": "sparks-unlit",
-      "delays": [
-        [
-          0.1,
-          0.1,
-          0.1,
-          0.1,
-          0.1,
-          0.1
-        ]
-      ]
+      "name": "panel"
     }
   ]
 }

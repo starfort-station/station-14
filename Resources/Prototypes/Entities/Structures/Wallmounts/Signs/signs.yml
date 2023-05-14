@@ -33,7 +33,7 @@
   components:
   - type: Sprite
     state: direction_bridge
-
+  
 - type: entity
   parent: BaseSignDirectional
   id: SignDirectionalBrig
@@ -213,6 +213,15 @@
   components:
   - type: Sprite
     state: direction_wash
+
+- type: entity
+  parent: BaseSignDirectional
+  id: SignDirectionalExp
+  name: expedition sign
+  description: A direction sign, pointing out which way the Expedition department is.
+  components:
+  - type: Sprite
+    state: direction_exp
 
 # Regular Signs
 

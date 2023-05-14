@@ -1,32 +1,32 @@
 ﻿<Document>
-# Survival
+# Выживание
 
-It is generally wise to avoid situations that will cause you harm, because medical can only heal you so much when there's nuclear operatives on your doorstep.
+Как правило, разумно избегать ситуаций, которые могут причинить вам вред, потому что медицина может только исцелить вас, когда на пороге стоят ядерные агенты.
 
-## Identifying your situation
-Your PDA contains both a vessel name and list of crew currently active in your vessel, a reminder for your name if needed, and your assigned job for the shift, allowing you to quickly assess the situation.
+## Идентификация ситуации
+Ваш КПК содержит как название судна, так и список экипажа, работающего в данный момент на вашем судне, напоминание вашего имени при необходимости, а также назначенную работу на смену, что позволяет вам быстро оценить ситуацию.
 
-## Emergency Treatment
-In the event of a serious emergency, there's a few things you can do to help ensure your long-term survival, including:
+## Экстренное лечение
+В случае серьезной чрезвычайной ситуации вы можете сделать несколько вещей, которые помогут обеспечить ваше долгосрочное выживание, в том числе:
 
-- If entering critical condition, use the emergency medipen from your emergency box, it'll make sure you don't end up unable to do anything. Emergency medipens can also be used to revive people currently in crit on the floor, and to prolong the amount of time you have to deal with poisons/etc.
+- В случае критического состояния воспользуйтесь экстренным медикаментом из вашего аварийного ящика - он поможет вам не потерять способность что-либо делать. Экстренные аптечки также можно использовать для оживления людей, находящихся в критическом состоянии на полу, и для продления времени, в течение которого вы можете справиться с ядами/и т.д.
 <Box>
 <GuideEntityEmbed Entity="EmergencyMedipen"/>
 <GuideEntityEmbed Entity="SpaceMedipen"/>
 </Box>
-- Your emergency box contains a breath mask and oxygen tank, which can help you survive longer in a spacing situation.
+- В вашем аварийном ящике находится дыхательная маска и воздушный баллон, которые могут помочь вам дольше продержаться в ситуации, когда вы находитесь на расстоянии.
 <Box>
 <GuideEntityEmbed Entity="ClothingMaskBreath"/>
 <GuideEntityEmbed Entity="EmergencyOxygenTankFilled"/>
 </Box>
-- If actively bleeding out, or simply wishing to prepare, it's possible to slice up cloth items with a knife or other sharp object and use the resulting cloth to create gauze to stem bleeding with.
+- При активном кровотечении или просто желании подготовиться можно разрезать тканевые изделия ножом или другим острым предметом и использовать полученную ткань для создания марли для остановки кровотечения.
 <Box>
 <GuideEntityEmbed Entity="Gauze"/>
 <GuideEntityEmbed Entity="MaterialCloth"/>
 </Box>
-- In lieu of an actual health analyzer, simply examining yourself and using the detailed examine is a good way to figure out what wounds you have.
-- If going blind, carrots are another way to treat the issue (as they contain Oculine, the chemistry drug used to treat blindness) should they be available.
-- Well-made meals (cooked food not from a vending machine) is generally much better for your overall health and can help heal smaller wounds more quickly.
-- Simple bed rest cures the majority of diseases and also allows wounds to close up on their own. Medical beds are best for this, providing a sterile surface and support for all damaged body parts, but any bed works. Even sitting down helps, if only a little.
+- Вместо настоящего анализатора здоровья, просто осмотрите себя и воспользуйтесь детальным осмотром - это хороший способ выяснить, какие раны у вас есть.
+- Если вы ослепли, морковь - еще один способ лечения (поскольку она содержит Окулин, химический препарат, используемый для лечения слепоты), если она доступна.
+- Хорошо приготовленная еда (приготовленная пища, а не из автомата) обычно гораздо лучше для вашего общего здоровья и может помочь быстрее заживить небольшие раны.
+- Простой постельный режим лечит большинство болезней, а также позволяет ранам закрыться самостоятельно. Лучше всего для этого подходят медицинские кровати, обеспечивающие стерильную поверхность и поддержку всех поврежденных частей тела, но подойдет любая кровать. Даже сидение помогает, хотя бы немного.
 
 </Document>

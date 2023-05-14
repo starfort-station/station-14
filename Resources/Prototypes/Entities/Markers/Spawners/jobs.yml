@@ -564,3 +564,15 @@
     layers:
       - state: green
       - state: zookeeper
+
+- type: entity
+  id: SpawnPointCCAgent
+  parent: SpawnPointJobBase
+  name: CCAgent
+  components:
+  - type: SpawnPoint
+    job_id: CCAgent
+  - type: Sprite
+    layers:
+      - state: green
+      - state: lawyer

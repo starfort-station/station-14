@@ -1,0 +1,17 @@
+- type: playTimeTracker
+  id: JobFieldMedic
+  
+- type: playTimeTracker
+  id: JobFieldScientist
+  
+- type: playTimeTracker
+  id: JobFieldTrooper
+  
+- type: playTimeTracker
+  id: JobFieldEngineer
+
+- type: playTimeTracker
+  id: JobFieldCommander
+
+- type: playTimeTracker
+  id: JobFieldRecrut

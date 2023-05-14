@@ -1,0 +1,15 @@
+- type: entity
+  parent: EncryptionKey
+  id: EncryptionKeyExpedition
+  name: expedition encryption key
+  description: A headset for expedition to chat while the station burns around them.
+  components:
+  - type: EncryptionKey
+    channels:
+    - Expedition
+    defaultChannel: Expedition
+  - type: Sprite
+    sprite: Starfort/Objects/Devices/encryption_keys.rsi
+    layers:
+    - state: crypt_gray
+    - state: expedition_label

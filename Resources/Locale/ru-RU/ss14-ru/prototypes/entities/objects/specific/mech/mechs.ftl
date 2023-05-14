@@ -1,0 +1,12 @@
+ent-BaseMech = { "" }
+    .desc = { "" }
+ent-MechRipley = Рипли
+    .desc = Любимый мех-погрузчик отдела снабжения.
+ent-MechRipleyBattery = { ent-MechRipley }
+    .suffix = Батарея
+    .desc = { ent-MechRipley.desc }
+ent-MechHonker = Х.О.Н.К.
+    .desc = Произведенный \"Тиранией Гудка, INC\", этот экзокостюм предназначен как тяжёлая поддержка для клоунов. Используется для распространения веселья и радости жизни. ХОНК!.
+ent-MechHonkerBattery = { ent-MechHonker }
+    .suffix = Батарея
+    .desc = { ent-MechHonker.desc }

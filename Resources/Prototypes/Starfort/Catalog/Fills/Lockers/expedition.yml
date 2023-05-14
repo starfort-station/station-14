@@ -1,0 +1,97 @@
+- type: entity
+  id: LockerFieldTroopFilled
+  suffix: Expedition, Filled
+  parent: LockerFieldTroop
+  components:
+  - type: StorageFill
+    contents:
+      - id: FlashlightSeclite
+      - id: ClothingHeadsetExpedition
+      - id: ClothingHandsGlovesColorBlack
+      - id: WeaponRifleLecter
+      - id: ClothingBeltMilitaryWebbing
+      - id: ClothingShoesBootsMag
+      - id: ClothingMaskGasExplorer
+      - id: ClothingUniformJumpsuitFieldTrooper
+      - id: ClothingBackpackExpedition
+      - id: ClothingOuterHardsuitExpeditionTrooper
+
+
+- type: entity
+  id: LockerFieldSciFilled
+  suffix: Expedition, Filled
+  parent: LockerFieldSci
+  components:
+  - type: StorageFill
+    contents:
+      - id: ClothingHandsGlovesLatex
+      - id: ClothingHeadsetExpedition
+      - id: ClothingMaskSterile
+      - id: NodeScanner
+      - id: MedkitFilled
+      - id: ClothingShoesBootsMag
+      - id: ClothingMaskGasExplorer
+      - id: ModularGrenade
+      - id: ModularGrenade
+      - id: TimerTrigger
+      - id: TimerTrigger
+      - id: ClothingUniformJumpsuitFieldScientist
+      - id: ClothingBackpackExpedition
+      - id: ClothingOuterHardsuitExpeditionScientist
+
+- type: entity
+  id: LockerFieldMedFilled
+  suffix: Filled
+  parent: LockerFieldMed
+  components:
+  - type: StorageFill
+    contents:
+      - id: HandheldHealthAnalyzer
+      - id: ClothingHandsGlovesLatex
+      - id: ClothingHeadsetExpedition
+      - id: ClothingBeltMedicalFilled
+      - id: ClothingMaskSterile
+      - id: ClothingShoesBootsMag
+      - id: MedkitFilled
+      - id: ClothingMaskGasExplorer
+      - id: ClothingUniformJumpsuitFieldMedic
+      - id: ClothingBackpackExpedition
+      - id: ClothingOuterHardsuitExpeditionMedic
+      - id: CombatMedipen
+      - id: CombatMedipen
+      - id: CombatMedipen
+
+- type: entity
+  id: LockerFieldEngFilled
+  suffix: Filled
+  parent: LockerFieldEng
+  components:
+  - type: StorageFill
+    contents:
+      - id: ClothingHandsGlovesColorYellow
+      - id: ClothingHeadsetExpedition
+      - id: ClothingShoesBootsMag
+      - id: ClothingMaskGasExplorer
+      - id: ClothingUniformJumpsuitFieldMedic
+      - id: ClothingBackpackExpedition
+      - id: ClothingOuterHardsuitExpeditionEngineer
+      - id: InflatableWallStack
+      - id: GasAnalyzer
+
+- type: entity
+  id: LockerFieldCommFilled
+  suffix: Filled
+  parent: LockerFieldComm
+  components:
+  - type: StorageFill
+    contents:
+      - id: ClothingHandsGlovesColorBlack
+      - id: ClothingHeadsetExpeditionCommand
+      - id: WeaponRifleLecter
+      - id: ClothingShoesBootsMag
+      - id: ClothingBeltMilitaryWebbing
+      - id: ClothingMaskGasExplorer
+      - id: ClothingUniformJumpsuitFieldCommander
+      - id: ClothingBackpackExpedition
+      - id: ClothingOuterHardsuitExpeditionCommander
+      - id: CombatMedipen

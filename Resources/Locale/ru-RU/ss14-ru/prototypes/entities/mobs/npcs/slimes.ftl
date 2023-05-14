@@ -1,0 +1,17 @@
+ent-MobAdultSlimes = слайм
+    .desc = Оно так похоже на желе. Интересно, каково оно на вкус?
+ent-MobAdultSlimesBlue = синий слайм
+    .desc = { ent-MobAdultSlimes.desc }
+ent-MobAdultSlimesBlueAngry = синий слайм
+    .suffix = Агрессивный
+    .desc = { ent-MobAdultSlimes.desc }
+ent-MobAdultSlimesGreen = зелёный слайм
+    .desc = { ent-MobAdultSlimes.desc }
+ent-MobAdultSlimesGreenAngry = зелёный слайм
+    .suffix = Агрессивный
+    .desc = { ent-MobAdultSlimes.desc }
+ent-MobAdultSlimesYellow = жёлтый слайм
+    .desc = { ent-MobAdultSlimes.desc }
+ent-MobAdultSlimesYellowAngry = жёлтый слайм
+    .suffix = Агрессивный
+    .desc = { ent-MobAdultSlimes.desc }

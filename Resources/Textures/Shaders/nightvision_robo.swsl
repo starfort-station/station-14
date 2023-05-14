@@ -1,0 +1,65 @@
+preset raw;
+
+uniform sampler2D SCREEN_TEXTURE;
+varying highp vec2 Pos;
+
+void vertex()
+{
+    VERTEX = pixel_snap(apply_mvp(aPos));
+    Pos = (VERTEX + 1.0) / 2.0;
+    UV = mix(modifyUV.xy, modifyUV.zw, tCoord);
+    gl_Position = vec4(VERTEX, 0.0, 1.0);
+}
+
+void fragment() {
+    vec3 colorset;
+    float time = TIME;
+	float yCoord = 1.0/SCREEN_PIXEL_SIZE.y;
+	float xCoord = 1.0/SCREEN_PIXEL_SIZE.x;
+    float alpha = 0.5;
+
+    float fLine = yCoord - mod(time * 200.0, yCoord);
+    float sLine = mod(time * 500.0, yCoord);
+    float zLine = mod(time * 500.0, xCoord) * 3;
+	float gLine = xCoord - mod(time * 1500.0, xCoord);
+	float xLine = mod(time * 1500.0, yCoord);
+
+    float xValue = (FRAGCOORD.x - xCoord/2.) * (FRAGCOORD.x - xCoord/2.);
+    float yValue = (FRAGCOORD.y - yCoord/2.) * (FRAGCOORD.y - yCoord/2.);
+
+    if (xValue + yValue > 260000.0) {
+        colorset = vec3(0.0);
+        alpha = 1.0;
+    }
+    else if (FRAGCOORD.y > fLine - 5.0 && FRAGCOORD.y < fLine + 5.0) {
+        colorset = vec3(0.079,0.720,0.021);  // dark green
+        alpha = 0.95;
+    }
+    else if (FRAGCOORD.y > sLine - 3.0 && FRAGCOORD.y < sLine + 3.0) {
+        colorset = vec3(0.079,0.720,0.021);  // dark green
+        alpha = 0.85;
+    }
+    else if (FRAGCOORD.x > zLine - 3.0 && FRAGCOORD.x < zLine + 3.0) {
+        colorset = vec3(0.079,0.720,0.021);  // dark green
+        alpha = 0.75;
+    }
+	else if (FRAGCOORD.x > gLine - 3.0 && FRAGCOORD.x < gLine + 3.0) {
+        colorset = vec3(0.079,0.720,0.021);  // dark green
+        alpha = 0.75;
+    }
+	else if (FRAGCOORD.y > xLine - 3.0 && FRAGCOORD.y < xLine + 3.0) {
+        colorset = vec3(0.079,0.720,0.021);  // dark green
+        alpha = 0.7;
+    }
+    else {
+		colorset = vec3(0.079,0.800,0.021);  // dark green
+    }
+
+	lowp vec4 light = texture2D(lightMap, Pos);
+	//COLOR = vec4(fLine , sLine, zLine, 1.0 );
+	//COLOR = vec4(sin(TIME));
+	//COLOR = vec4(vec3(fLine), alpha); colorset +
+    //COLOR = vec4(vec3(light.z), 1.0);
+	COLOR = vec4(colorset, alpha);
+}
+

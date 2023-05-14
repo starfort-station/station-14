@@ -143,7 +143,28 @@
             "name": "SecurityCadet"
         },
         {
+            "name": "IAA"
+        },
+        {
             "name": "Zookeeper"
+        },
+        {
+            "name": "FieldMedic"
+        },
+        {
+            "name": "FieldScientist"
+        },
+        {
+            "name": "FieldTrooper"
+        },
+        {
+            "name": "FieldEngineer"
+        },
+        {
+            "name": "FieldCommander"
+        },
+        {
+            "name": "FieldRecrut"
         }
     ]
 }

@@ -770,11 +770,6 @@
   description: flavor-complex-electrons
 
 - type: flavor
-  id: bottledlightning
-  flavorType: Complex
-  description: flavor-complex-bottledlightning
-
-- type: flavor
   id: meatballs
   flavorType: Complex
   description: flavor-complex-meatballs

@@ -1,0 +1,10 @@
+ent-SpawnPointFieldTrooper = Полевой солдат
+    .desc = { ent-SpawnPointJobBase.desc }
+ent-SpawnPointFieldMedic = Полевой медик
+    .desc = { ent-SpawnPointJobBase.desc }
+ent-SpawnPointFieldScientist = Полевой учёный
+    .desc = { ent-SpawnPointJobBase.desc }
+ent-SpawnPointFieldEngineer = Полевой инженер
+    .desc = { ent-SpawnPointJobBase.desc }
+ent-SpawnPointFieldCommander = Полевой командир
+    .desc = { ent-SpawnPointJobBase.desc }

@@ -7,7 +7,7 @@
   - type: StorageFill
     contents:
       - id: ClothingMaskBreath
-      - id: EmergencyOxygenTankFilled
+      - id: EmergencyAirTankFilled
       - id: SpaceMedipen
       - id: EmergencyMedipen
       - id: Flare
@@ -26,7 +26,7 @@
   - type: StorageFill
     contents:
       - id: ClothingMaskBreath
-      - id: ExtendedEmergencyOxygenTankFilled
+      - id: EmergencyAirTankFilled
       - id: SpaceMedipen
       - id: EmergencyMedipen
       - id: Flare
@@ -46,7 +46,7 @@
   - type: StorageFill
     contents:
       - id: ClothingMaskGasSecurity
-      - id: EmergencyOxygenTankFilled
+      - id: EmergencyAirTankFilled
       - id: SpaceMedipen
       - id: EmergencyMedipen
       - id: Flare
@@ -86,7 +86,7 @@
   - type: StorageFill
     contents:
       - id: ClothingMaskBreathMedical
-      - id: EmergencyOxygenTankFilled
+      - id: EmergencyAirTankFilled
       - id: SpaceMedipen
       - id: EmergencyMedipen
       - id: Flare
@@ -111,7 +111,7 @@
   - type: StorageFill
     contents:
       - id: ClothingMaskBreath
-      - id: EmergencyOxygenTankFilled
+      - id: EmergencyAirTankFilled
       - id: SpaceMedipen
       - id: EmergencyMedipen
       - id: Flare
@@ -129,7 +129,7 @@
   - type: StorageFill
     contents:
       - id: ClothingMaskGasSyndicate
-      - id: ExtendedEmergencyOxygenTankFilled
+      - id: EmergencyAirTankFilled
       - id: SpaceMedipen
       - id: EmergencyMedipen
       - id: Flare

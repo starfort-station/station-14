@@ -656,6 +656,10 @@
     accentHColor: "#447987"
   - type: Icon
     state: pda-ert
+  - type: HealthAnalyzer
+    scanDelay: 0.6
+    scanningEndSound:
+      path: "/Audio/Items/Medical/healthscanner.ogg"
 
 - type: entity
   parent: ERTLeaderPDA
@@ -781,3 +785,14 @@
         - Write
   - type: Unremoveable
 
+- type: entity
+  parent: BasePDA
+  id: CCAgentPDA
+  name: CentCom Agent PDA
+  description: For some kinds of clown.
+  components:
+  - type: PDA
+    id: CCAgentIDCard
+    state: pda-ert
+  - type: Icon
+    state: pda-ert

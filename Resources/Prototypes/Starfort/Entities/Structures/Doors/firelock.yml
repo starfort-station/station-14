@@ -1,0 +1,27 @@
+- type: entity
+  id: FirelockClosed
+  parent: Firelock
+  suffix: Closed
+  components:
+  - type: Door
+    state: Closed
+  - type: Occluder
+    enabled: true
+  - type: Physics
+    canCollide: true
+  - type: Airtight
+    airBlocked: false
+
+- type: entity
+  id: FirelockGlassClosed
+  parent: FirelockGlass
+  suffix: Closed
+  components:
+  - type: Door
+    state: Closed
+  - type: Occluder
+    enabled: true
+  - type: Physics
+    canCollide: true
+  - type: Airtight
+    airBlocked: false
