@@ -1,0 +1,66 @@
+#SOFTSUITS
+
+#HARDSUITS
+#Expedition
+- type: entity
+  id: SuitStorageExpeditionEngi
+  parent: SuitStorageBase
+  suffix: Field Engineer
+  components:
+  - type: StorageFill
+    contents:
+        - id: AirTankFilled
+        - id: ClothingShoesBootsMag
+        - id: ClothingOuterHardsuitExpeditionEngineer
+        - id: ClothingMaskBreath
+        
+- type: entity
+  id: SuitStorageExpeditionEngi
+  parent: SuitStorageBase
+  suffix: Field Engineer
+  components:
+  - type: StorageFill
+    contents:
+        - id: AirTankFilled
+        - id: ClothingShoesBootsMag
+        - id: ClothingOuterHardsuitExpeditionTrooper
+        - id: ClothingMaskBreath
+        
+- type: entity
+  id: SuitStorageExpeditionEngi
+  parent: SuitStorageBase
+  suffix: Field Engineer
+  components:
+  - type: StorageFill
+    contents:
+        - id: AirTankFilled
+        - id: ClothingShoesBootsMag
+        - id: ClothingOuterHardsuitExpeditionScientist
+        - id: ClothingMaskBreath
+        
+- type: entity
+  id: SuitStorageExpeditionEngi
+  parent: SuitStorageBase
+  suffix: Field Engineer
+  components:
+  - type: StorageFill
+    contents:
+        - id: AirTankFilled
+        - id: ClothingShoesBootsMag
+        - id: ClothingOuterHardsuitExpeditionMedic
+        - id: ClothingMaskBreath
+        
+- type: entity
+  id: SuitStorageExpeditionEngi
+  parent: SuitStorageBase
+  suffix: Field Engineer
+  components:
+  - type: StorageFill
+    contents:
+        - id: AirTankFilled
+        - id: ClothingShoesBootsMag
+        - id: ClothingOuterHardsuitExpeditionCommander
+        - id: ClothingMaskBreath
+      
+
+        
