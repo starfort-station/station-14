@@ -15,9 +15,9 @@
         - id: ClothingMaskBreath
         
 - type: entity
-  id: SuitStorageExpeditionEngi
+  id: SuitStorageExpeditionTroop
   parent: SuitStorageBase
-  suffix: Field Engineer
+  suffix: Trooper
   components:
   - type: StorageFill
     contents:
@@ -27,9 +27,9 @@
         - id: ClothingMaskBreath
         
 - type: entity
-  id: SuitStorageExpeditionEngi
+  id: SuitStorageExpeditionSci
   parent: SuitStorageBase
-  suffix: Field Engineer
+  suffix: Field Scientist
   components:
   - type: StorageFill
     contents:
@@ -39,9 +39,9 @@
         - id: ClothingMaskBreath
         
 - type: entity
-  id: SuitStorageExpeditionEngi
+  id: SuitStorageExpeditionMed
   parent: SuitStorageBase
-  suffix: Field Engineer
+  suffix: Field Medic
   components:
   - type: StorageFill
     contents:
@@ -51,9 +51,9 @@
         - id: ClothingMaskBreath
         
 - type: entity
-  id: SuitStorageExpeditionEngi
+  id: SuitStorageExpeditionComm
   parent: SuitStorageBase
-  suffix: Field Engineer
+  suffix: Field Commander
   components:
   - type: StorageFill
     contents:
