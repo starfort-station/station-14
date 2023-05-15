@@ -10,3 +10,6 @@ ent-LockerFieldMedFilled = { ent-LockerFieldMed }
 ent-LockerFieldEngFilled = { ent-LockerFieldEng }
     .suffix = Экспедиция, Заполненный
     .desc = { ent-LockerFieldEng.desc }
+ent-LockerFieldCommFilled = { ent-LockerFieldComm }
+    .suffix = Экспедиция, Заполненный
+    .desc = { ent-LockerFieldComm.desc }

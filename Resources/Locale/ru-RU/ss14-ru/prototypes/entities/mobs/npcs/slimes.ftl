@@ -15,3 +15,5 @@ ent-MobAdultSlimesYellow = жёлтый слайм
 ent-MobAdultSlimesYellowAngry = жёлтый слайм
     .suffix = Агрессивный
     .desc = { ent-MobAdultSlimes.desc }
+ent-MobSlimesPet = Смайл
+    .desc = Этот шедевр прошел через тысячи экспериментов. Но это самое милое создание в мире. Улыбнись, слайм!
