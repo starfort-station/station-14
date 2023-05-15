@@ -6,3 +6,5 @@ ent-LockerFieldMed = шкаф полевого врача
     .desc = { ent-LockerFieldTroop.desc }
 ent-LockerFieldEng = шкаф полевого инженера
     .desc = { ent-LockerFieldTroop.desc }
+ent-LockerFieldComm = шкаф командира экспедиторов
+    .desc = { ent-LockerFieldTroop.desc }
