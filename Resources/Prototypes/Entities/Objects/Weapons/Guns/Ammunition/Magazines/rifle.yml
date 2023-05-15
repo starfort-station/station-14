@@ -103,7 +103,7 @@
       - MagazineHeavyLecter
   - type: Sprite
     netsync: false
-    sprite: Objects/Weapons/Guns/Ammunition/Magazine/Rifle/rifle_mag.rsi
+    sprite: Starfort/Objects/Weapons/Ammunition/Magazine/Rifle/rifle_mag.rsi
     layers:
     - state: heavy
       map: ["enum.GunVisualLayers.Base"]

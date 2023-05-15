@@ -191,7 +191,7 @@
   description: A high end military grade assault rifle. Was modified to use bigger caliber. Uses .15 rifle ammo.
   components:
   - type: Sprite
-    sprite: Objects/Weapons/Guns/Rifles/heavylecter.rsi
+    sprite: Starfort/Objects/Weapons/Guns/Rifles/heavylecter.rsi 
     layers:
       - state: base
         map: ["enum.GunVisualLayers.Base"]
