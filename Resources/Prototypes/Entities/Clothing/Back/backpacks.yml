@@ -170,6 +170,11 @@
     sprite: Clothing/Back/Backpacks/ertleader.rsi
   - type: Storage
     capacity: 250
+    storageOpenSound:
+      collection: ERTStorageOpen
+  - type: UseDelay
+    delay: 1
+
 
 - type: entity
   parent: ClothingBackpackERTLeader
