@@ -65,27 +65,6 @@
     defaultTarget: meat steak
 
 - type: entity
-  name: raw human meat
-  parent: FoodMeatBase
-  id: FoodMeatHuman
-  description: Gross.
-  components:
-  - type: Tag
-    tags:
-    - Raw
-  - type: Sprite
-    state: plain
-  - type: SolutionContainerManager
-    solutions:
-      food:
-        reagents:
-        - ReagentId: UncookedAnimalProteins
-          Quantity: 9
-  - type: SliceableFood
-    count: 3
-    slice: FoodMeatCutlet
-
-- type: entity
   name: raw carp fillet
   parent: FoodMeatBase
   # MeatFish?...
@@ -124,6 +103,12 @@
   - type: Sprite
     netsync: false
     state: bacon
+  - type: RandomSprite
+    available:
+      - enum.DamageStateVisualLayers.Base:
+          bacon: ""
+      - enum.DamageStateVisualLayers.Base:
+          bacon2: ""
   - type: SolutionContainerManager
     solutions:
       food:
@@ -258,9 +243,6 @@
   id: FoodMeatCrab
   description: A pile of raw crab meat.
   components:
-  - type: FlavorProfile
-    flavors:
-      - crabby
   - type: Tag
     tags:
     - Raw
@@ -551,38 +533,6 @@
 # Cooked
 
 - type: entity
-  parent: BaseItem
-  id: MaterialSmileExtract
-  name: extract smile
-  description: It's a real panacea. But at what cost?
-  components:
-  - type: Food
-  - type: Extractable
-    grindableSolutionName: food
-  - type: FlavorProfile
-    flavors:
-      - sweet
-  - type: Sprite
-    sprite: Mobs/Aliens/slimes.rsi
-    layers:
-    - map: [ "enum.DamageStateVisualLayers.Base" ]
-      state: rainbow_slime_extract
-  - type: SolutionContainerManager
-    solutions:
-      food:
-        reagents:
-        - ReagentId: Omnizine
-          Quantity: 30
-        - ReagentId: Nutriment
-          Quantity: 10
-        - ReagentId: Iron
-          Quantity: 10
-  - type: Item
-    size: 5
-  - type: StaticPrice
-    price: 3000 #It has so much Omnizin in it
-
-- type: entity
   name: steak
   parent: FoodMeatBase
   id: FoodMeatCooked
@@ -776,9 +726,6 @@
   id: FoodMeatCrabCooked
   description: Some deliciously cooked crab meat.
   components:
-  - type: FlavorProfile
-    flavors:
-      - crabby
   - type: Tag
     tags:
     - Cooked
@@ -1023,7 +970,11 @@
     - Raw
     - Cutlet
   - type: Sprite
-    state: spidercutlet
+    layers:
+    - state: cutlet
+      color: black
+    - state: cutlet-alpha
+      color: red
   - type: SolutionContainerManager
     solutions:
       food:
@@ -1046,7 +997,11 @@
     - Raw
     - Cutlet
   - type: Sprite
-    state: xenocutlet
+    layers:
+    - state: cutlet
+      color: black
+    - state: cutlet-alpha
+      color: green
   - type: SolutionContainerManager
     solutions:
       food:
@@ -1235,7 +1190,11 @@
     - Cooked
     - Cutlet
   - type: Sprite
-    state: spidercutlet-cooked
+    layers:
+    - state: cutlet-cooked
+      color: black
+    - state: cutlet-alpha
+      color: red
   - type: SolutionContainerManager
     solutions:
       food:
@@ -1256,7 +1215,11 @@
     - Cooked
     - Cutlet
   - type: Sprite
-    state: xenocutlet-cooked
+    layers:
+    - state: cutlet-cooked
+      color: black
+    - state: cutlet-alpha
+      color: green
   - type: SolutionContainerManager
     solutions:
       food:

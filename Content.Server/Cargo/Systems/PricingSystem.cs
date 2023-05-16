@@ -121,10 +121,10 @@ public sealed class PricingSystem : EntitySystem
         return price;
     }
 
-    private double GetMaterialPrice(PhysicalCompositionComponent component)
+    private double GetMaterialPrice(MaterialComponent component)
     {
         double price = 0;
-        foreach (var (id, quantity) in component.MaterialComposition)
+        foreach (var (id, quantity) in component.Materials)
         {
             price += _prototypeManager.Index<MaterialPrototype>(id).Price * quantity;
         }
@@ -213,10 +213,9 @@ public sealed class PricingSystem : EntitySystem
     {
         double price = 0;
 
-        if (HasComp<MaterialComponent>(uid) &&
-            TryComp<PhysicalCompositionComponent>(uid, out var composition))
+        if (TryComp<MaterialComponent>(uid, out var material))
         {
-            var matPrice = GetMaterialPrice(composition);
+            var matPrice = GetMaterialPrice(material);
             if (TryComp<StackComponent>(uid, out var stack))
                 matPrice *= stack.Count;
 
@@ -230,11 +229,10 @@ public sealed class PricingSystem : EntitySystem
     {
         double price = 0;
 
-        if (prototype.Components.ContainsKey(_factory.GetComponentName(typeof(MaterialComponent))) &&
-            prototype.Components.TryGetValue(_factory.GetComponentName(typeof(PhysicalCompositionComponent)), out var composition))
+        if (prototype.Components.TryGetValue(_factory.GetComponentName(typeof(MaterialComponent)), out var materials))
         {
-            var compositionComp = (PhysicalCompositionComponent) composition.Component;
-            var matPrice = GetMaterialPrice(compositionComp);
+            var materialsComp = (MaterialComponent) materials.Component;
+            var matPrice = GetMaterialPrice(materialsComp);
 
             if (prototype.Components.TryGetValue(_factory.GetComponentName(typeof(StackComponent)), out var stackProto))
             {

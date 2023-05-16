@@ -3,7 +3,7 @@ using Robust.Shared.Audio;
 
 namespace Content.Server.Magic.Events;
 
-public sealed class KnockSpellEvent : InstantActionEvent, ISpeakSpell
+public sealed class KnockSpellEvent : InstantActionEvent
 {
     /// <summary>
     /// The range this spell opens doors in
@@ -20,7 +20,4 @@ public sealed class KnockSpellEvent : InstantActionEvent, ISpeakSpell
     /// </summary>
     [DataField("knockVolume")]
     public float KnockVolume = 5f;
-
-    [DataField("speech")]
-    public string? Speech { get; }
 }

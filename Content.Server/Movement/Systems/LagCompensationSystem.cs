@@ -1,7 +1,6 @@
 using Content.Server.Movement.Components;
 using Robust.Server.Player;
 using Robust.Shared.Map;
-using Robust.Shared.Players;
 using Robust.Shared.Timing;
 
 namespace Content.Server.Movement.Systems;
@@ -65,13 +64,13 @@ public sealed class LagCompensationSystem : EntitySystem
         component.Positions.Enqueue((_timing.CurTime, args.NewPosition, args.NewRotation));
     }
 
-    public (EntityCoordinates Coordinates, Angle Angle) GetCoordinatesAngle(EntityUid uid, ICommonSession? pSession,
+    public (EntityCoordinates Coordinates, Angle Angle) GetCoordinatesAngle(EntityUid uid, IPlayerSession pSession,
         TransformComponent? xform = null)
     {
         if (!Resolve(uid, ref xform))
             return (EntityCoordinates.Invalid, Angle.Zero);
 
-        if (pSession == null || !TryComp<LagCompensationComponent>(uid, out var lag) || lag.Positions.Count == 0)
+        if (!TryComp<LagCompensationComponent>(uid, out var lag) || lag.Positions.Count == 0)
             return (xform.Coordinates, xform.LocalRotation);
 
         var angle = Angle.Zero;
@@ -103,15 +102,15 @@ public sealed class LagCompensationSystem : EntitySystem
         return (coordinates, angle);
     }
 
-    public Angle GetAngle(EntityUid uid, ICommonSession? session, TransformComponent? xform = null)
+    public Angle GetAngle(EntityUid uid, IPlayerSession pSession, TransformComponent? xform = null)
     {
-        var (_, angle) = GetCoordinatesAngle(uid, session, xform);
+        var (_, angle) = GetCoordinatesAngle(uid, pSession, xform);
         return angle;
     }
 
-    public EntityCoordinates GetCoordinates(EntityUid uid, ICommonSession? session, TransformComponent? xform = null)
+    public EntityCoordinates GetCoordinates(EntityUid uid, IPlayerSession pSession, TransformComponent? xform = null)
     {
-        var (coordinates, _) = GetCoordinatesAngle(uid, session, xform);
+        var (coordinates, _) = GetCoordinatesAngle(uid, pSession, xform);
         return coordinates;
     }
 }

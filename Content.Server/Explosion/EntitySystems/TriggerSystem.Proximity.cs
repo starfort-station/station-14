@@ -77,14 +77,14 @@ public sealed partial class TriggerSystem
         if (args.OurFixture.ID != TriggerOnProximityComponent.FixtureID) return;
 
         _activeProximities.Add(component);
-        component.Colliding.Add(args.OtherBody);
+        component.Colliding.Add(args.OtherFixture.Body);
     }
 
     private static void OnProximityEndCollide(EntityUid uid, TriggerOnProximityComponent component, ref EndCollideEvent args)
     {
         if (args.OurFixture.ID != TriggerOnProximityComponent.FixtureID) return;
 
-        component.Colliding.Remove(args.OtherBody);
+        component.Colliding.Remove(args.OtherFixture.Body);
     }
 
     private void SetProximityAppearance(EntityUid uid, TriggerOnProximityComponent component)

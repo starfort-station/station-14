@@ -3,6 +3,8 @@ using Content.Server.DeviceNetwork;
 using Content.Server.DeviceNetwork.Systems;
 using Content.Server.Ghost;
 using Content.Server.Light.Components;
+using Content.Server.MachineLinking.Events;
+using Content.Server.MachineLinking.System;
 using Content.Server.Power.Components;
 using Content.Server.Temperature.Components;
 using Content.Shared.Audio;
@@ -20,8 +22,6 @@ using Robust.Shared.Player;
 using Robust.Shared.Timing;
 using Content.Shared.DoAfter;
 using Content.Server.Emp;
-using Content.Server.DeviceLinking.Events;
-using Content.Server.DeviceLinking.Systems;
 
 namespace Content.Server.Light.EntitySystems
 {
@@ -37,7 +37,7 @@ namespace Content.Server.Light.EntitySystems
         [Dependency] private readonly SharedPopupSystem _popupSystem = default!;
         [Dependency] private readonly IAdminLogManager _adminLogger= default!;
         [Dependency] private readonly SharedHandsSystem _handsSystem = default!;
-        [Dependency] private readonly DeviceLinkSystem _signalSystem = default!;
+        [Dependency] private readonly SignalLinkerSystem _signalSystem = default!;
         [Dependency] private readonly SharedContainerSystem _containerSystem = default!;
         [Dependency] private readonly SharedDoAfterSystem _doAfterSystem = default!;
         [Dependency] private readonly SharedAudioSystem _audio = default!;
@@ -69,7 +69,7 @@ namespace Content.Server.Light.EntitySystems
         private void OnInit(EntityUid uid, PoweredLightComponent light, ComponentInit args)
         {
             light.LightBulbContainer = _containerSystem.EnsureContainer<ContainerSlot>(uid, LightBulbContainer);
-            _signalSystem.EnsureSinkPorts(uid, light.OnPort, light.OffPort, light.TogglePort);
+            _signalSystem.EnsureReceiverPorts(uid, light.OnPort, light.OffPort, light.TogglePort);
         }
 
         private void OnMapInit(EntityUid uid, PoweredLightComponent light, MapInitEvent args)
@@ -224,20 +224,19 @@ namespace Content.Server.Light.EntitySystems
         /// <summary>
         ///     Try to break bulb inside light fixture
         /// </summary>
-        public bool TryDestroyBulb(EntityUid uid, PoweredLightComponent? light = null)
+        public void TryDestroyBulb(EntityUid uid, PoweredLightComponent? light = null)
         {
             // check bulb state
             var bulbUid = GetBulb(uid, light);
             if (bulbUid == null || !EntityManager.TryGetComponent(bulbUid.Value, out LightBulbComponent? lightBulb))
-                return false;
+                return;
             if (lightBulb.State == LightBulbState.Broken)
-                return false;
+                return;
 
             // break it
             _bulbSystem.SetState(bulbUid.Value, LightBulbState.Broken, lightBulb);
             _bulbSystem.PlayBreakSound(bulbUid.Value, lightBulb);
             UpdateLight(uid, light);
-            return true;
         }
         #endregion
 
@@ -334,10 +333,6 @@ namespace Content.Server.Light.EntitySystems
 
         private void OnPowerChanged(EntityUid uid, PoweredLightComponent component, ref PowerChangedEvent args)
         {
-            // TODO: Power moment
-            if (MetaData(uid).EntityPaused)
-                return;
-
             UpdateLight(uid, component);
         }
 
@@ -354,7 +349,7 @@ namespace Content.Server.Light.EntitySystems
             _appearance.SetData(uid, PoweredLightVisuals.Blinking, isNowBlinking, appearance);
         }
 
-        private void OnSignalReceived(EntityUid uid, PoweredLightComponent component, ref SignalReceivedEvent args)
+        private void OnSignalReceived(EntityUid uid, PoweredLightComponent component, SignalReceivedEvent args)
         {
             if (args.Port == component.OffPort)
                 SetState(uid, false, component);
@@ -429,8 +424,8 @@ namespace Content.Server.Light.EntitySystems
 
         private void OnEmpPulse(EntityUid uid, PoweredLightComponent component, ref EmpPulseEvent args)
         {
-            if (TryDestroyBulb(uid, component))
-                args.Affected = true;
+            args.Affected = true;
+            TryDestroyBulb(uid, component);
         }
     }
 }

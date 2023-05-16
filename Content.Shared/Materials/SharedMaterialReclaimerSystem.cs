@@ -87,7 +87,7 @@ public abstract class SharedMaterialReclaimerSystem : EntitySystem
             return;
         if (!TryComp<MaterialReclaimerComponent>(uid, out var reclaimer))
             return;
-        TryStartProcessItem(uid, args.OtherEntity, reclaimer);
+        TryStartProcessItem(uid, args.OtherFixture.Body.Owner, reclaimer);
     }
 
     private void OnActiveStartup(EntityUid uid, ActiveMaterialReclaimerComponent component, ComponentStartup args)

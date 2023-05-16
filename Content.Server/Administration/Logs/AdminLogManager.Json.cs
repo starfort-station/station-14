@@ -2,7 +2,6 @@
 using System.Text.Json;
 using System.Text.Json.Serialization;
 using Content.Server.Administration.Logs.Converters;
-using Content.Server.Database;
 using Robust.Server.GameObjects;
 using Robust.Server.Player;
 
@@ -33,10 +32,10 @@ public sealed partial class AdminLogManager
         _sawmill.Debug($"Admin log converters found: {string.Join(" ", converterNames)}");
     }
 
-    private (JsonDocument Json, HashSet<Guid> Players, List<AdminLogEntity> Entities) ToJson(
+    private (JsonDocument json, HashSet<Guid> players, Dictionary<int, string?> entities) ToJson(
         Dictionary<string, object?> properties)
     {
-        var entities = new Dictionary<EntityUid, AdminLogEntity>();
+        var entities = new Dictionary<int, string?>();
         var players = new HashSet<Guid>();
         var parsed = new Dictionary<string, object?>();
 
@@ -70,8 +69,7 @@ public sealed partial class AdminLogManager
                 ? metadata.EntityName
                 : null;
 
-            // TODO set the id too whenever we feel like running a migration for 10 hours
-            entities.TryAdd(uid, new AdminLogEntity { Name = entityName });
+            entities.TryAdd((int) uid, entityName);
 
             if (_entityManager.TryGetComponent(uid, out ActorComponent? actor))
             {
@@ -79,6 +77,6 @@ public sealed partial class AdminLogManager
             }
         }
 
-        return (JsonSerializer.SerializeToDocument(parsed, _jsonOptions), players, entities.Values.ToList());
+        return (JsonSerializer.SerializeToDocument(parsed, _jsonOptions), players, entities);
     }
 }

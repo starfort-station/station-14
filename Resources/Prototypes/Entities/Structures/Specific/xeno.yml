@@ -31,8 +31,7 @@
       bodyType: Static
     - type: Fixtures
       fixtures:
-        fix1:
-          shape:
+        - shape:
             !type:PhysShapeAabb
             bounds: "-0.5,-0.5,0.5,0.5"
           mask:

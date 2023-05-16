@@ -4,16 +4,12 @@ using Content.Server.Mind.Components;
 using Content.Shared.Body.Components;
 using Content.Shared.Body.Events;
 using Content.Shared.Body.Organ;
-using Content.Shared.Body.Part;
 using Content.Shared.Movement.Components;
-using Content.Shared.Movement.Systems;
 
 namespace Content.Server.Body.Systems
 {
     public sealed class BrainSystem : EntitySystem
     {
-        [Dependency] private readonly MovementSpeedModifierSystem _movementSpeed = default!;
-
         public override void Initialize()
         {
             base.Initialize();
@@ -46,14 +42,7 @@ namespace Content.Server.Body.Systems
                 Comp<GhostOnMoveComponent>(newEntity).MustBeDead = true;
 
             // TODO: This is an awful solution.
-            // Our greatest minds still can't figure out how to allow brains/heads to ghost without giving them the
-            // ability to move first. I hate this with a passion.
-            if (!HasComp<InputMoverComponent>(newEntity))
-            {
-                AddComp<InputMoverComponent>(newEntity);
-                var move = EnsureComp<MovementSpeedModifierComponent>(newEntity);
-                _movementSpeed.ChangeBaseSpeed(newEntity, 0, 0 , 0, move);
-            }
+            EnsureComp<InputMoverComponent>(newEntity);
 
             oldMind.Mind?.TransferTo(newEntity);
         }

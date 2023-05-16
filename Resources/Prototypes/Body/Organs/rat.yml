@@ -11,9 +11,7 @@
   parent: OrganAnimalStomach
   suffix: "rat"
   components:
-  - type: SolutionContainerManager
-    solutions:
-      stomach:
-        maxVol: 50
+  - type: Stomach
+    maxVolume: 50 # they're hungry
   - type: Sprite
     state: stomach

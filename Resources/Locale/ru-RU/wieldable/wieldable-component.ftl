@@ -14,4 +14,3 @@ wieldable-component-not-enough-free-hands =
        *[other] свободных рук
     }.
 wieldable-component-not-in-hands = { CAPITALIZE($item) } не в ваших руках!
-wieldable-component-requires = { CAPITALIZE(THE($item)) } должны быть в руках!

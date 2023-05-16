@@ -24,15 +24,15 @@
     bodyType: Dynamic
   - type: Fixtures
     fixtures:
-      fix1:
-        shape:
-          !type:PhysShapeAabb
-          bounds: "-0.35,-0.35,0.35,0.35"
-        density: 1000
-        mask:
-        - MobMask
-        layer:
-        - MachineLayer
+    - shape:
+        !type:PhysShapeAabb
+        bounds: "-0.35,-0.35,0.35,0.35"
+      density: 1000
+      mask:
+      - MobMask
+      layer:
+      - MachineLayer
+  - type: HumanoidAppearance
   - type: AnimationPlayer
   - type: MeleeWeapon
     hidden: true

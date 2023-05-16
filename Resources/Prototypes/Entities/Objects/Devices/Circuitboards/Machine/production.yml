@@ -1,4 +1,4 @@
-- type: entity
+﻿- type: entity
   id: AutolatheMachineCircuitboard
   parent: BaseMachineCircuitboard
   name: autolathe machine board
@@ -99,9 +99,6 @@
       Manipulator: 3
     materialRequirements:
       Glass: 5
-  - type: GuideHelp
-    guides:
-    - Robotics
 
 - type: entity
   id: UniformPrinterMachineCircuitboard
@@ -112,7 +109,7 @@
     prototype: UniformPrinter
     requirements:
       MatterBin: 1
-      Manipulator: 2
+      Laser: 2
 
 - type: entity
   id: VaccinatorMachineCircuitboard
@@ -143,18 +140,11 @@
     state: medical
   - type: MachineBoard
     prototype: DiseaseDiagnoser
+    requirements:
+      Manipulator: 1
+      Laser: 2
     materialRequirements:
       Cable: 5
-    tagRequirements:
-      GlassBeaker:
-        Amount: 1
-        DefaultPrototype: Beaker
-        ExamineName: Glass Beaker
-    componentRequirements:
-      DiseaseSwab:
-        Amount: 1
-        DefaultPrototype: DiseaseSwab
-        ExamineName: Swab
 
 - type: entity
   id: ArtifactAnalyzerMachineCircuitboard
@@ -167,7 +157,7 @@
     - type: MachineBoard
       prototype: MachineArtifactAnalyzer
       requirements:
-        Manipulator: 3
+        ScanningModule: 3
         Capacitor: 1
       materialRequirements:
         Glass: 5
@@ -183,7 +173,7 @@
     - type: MachineBoard
       prototype: MachineTraversalDistorter
       requirements:
-        Manipulator: 1
+        ScanningModule: 1
         Capacitor: 2
       materialRequirements:
         Steel: 5
@@ -200,7 +190,7 @@
     - type: MachineBoard
       prototype: MachineAnomalyVessel
       requirements:
-        Capacitor: 5
+        ScanningModule: 5
       materialRequirements:
         Cable: 1
         PlasmaGlass: 10
@@ -216,10 +206,10 @@
     - type: MachineBoard
       prototype: MachineAPE
       requirements:
-        Capacitor: 2
+        Capacitor: 1
+        Laser: 3
       materialRequirements:
         Cable: 1
-        Glass: 1
 
 - type: entity
   id: ThermomachineFreezerMachineCircuitBoard
@@ -232,8 +222,8 @@
   - type: MachineBoard
     prototype: GasThermoMachineFreezer
     requirements:
-      MatterBin: 2
-      Capacitor: 2
+      MatterBin: 3
+      Laser: 3
     materialRequirements:
       Cable: 5
   - type: Construction
@@ -252,8 +242,8 @@
   - type: MachineBoard
     prototype: GasThermoMachineHeater
     requirements:
-      MatterBin: 2
-      Capacitor: 2
+      MatterBin: 3
+      Laser: 3
     materialRequirements:
       Cable: 5
   - type: Construction
@@ -272,7 +262,7 @@
   - type: MachineBoard
     prototype: PortableScrubber
     requirements:
-      MatterBin: 1
+      MatterBin: 3
       Manipulator: 2
     materialRequirements:
       Cable: 5
@@ -289,7 +279,7 @@
     - type: MachineBoard
       prototype: CloningPod
       requirements:
-        MatterBin: 2
+        ScanningModule: 2
         Manipulator: 2
       materialRequirements:
         Glass: 1
@@ -306,6 +296,7 @@
     - type: MachineBoard
       prototype: MedicalScanner
       requirements:
+        ScanningModule: 2
         Capacitor: 1
       materialRequirements:
         Glass: 5
@@ -319,6 +310,9 @@
   components:
     - type: MachineBoard
       prototype: CrewMonitoringServer
+      requirements:
+        Capacitor: 1
+        ScanningModule: 2
       materialRequirements:
         Steel: 1
         Cable: 2
@@ -333,8 +327,12 @@
       state: medical
     - type: MachineBoard
       prototype: CryoPod
+      requirements:
+        ScanningModule: 1
+        Manipulator: 1
+        MatterBin: 2
       materialRequirements:
-        Glass: 5
+        Glass: 1
         Cable: 1
 
 - type: entity
@@ -348,10 +346,9 @@
     - type: MachineBoard
       prototype: chem_master
       requirements:
-        Capacitor: 1
+        Manipulator: 1
       materialRequirements:
         Glass: 1
-        Cable: 1
       tagRequirements:
         GlassBeaker:
           Amount: 2
@@ -367,17 +364,13 @@
     - type: Sprite
       state: medical
     - type: MachineBoard
-      prototype: ChemDispenser
+      prototype: chem_dispenser
       requirements:
         Capacitor: 1
+        Manipulator: 1
+        MatterBin: 2
       materialRequirements:
         Glass: 1
-        Steel: 3
-      tagRequirements:
-        GlassBeaker:
-          Amount: 2
-          DefaultPrototype: Beaker
-          ExamineName: Glass Beaker
 
 - type: entity
   id: BiomassReclaimerMachineCircuitboard
@@ -388,15 +381,21 @@
     - type: MachineBoard
       prototype: BiomassReclaimer
       requirements:
-        MatterBin: 2
+        Laser: 1
         Manipulator: 1
       tagRequirements:
+        Pipe:
+          Amount: 1
+          DefaultPrototype: GasPipeStraight
+          ExamineName: pipe
+        BorgArm:
+          Amount: 3
+          DefaultPrototype: LeftArmBorg
+          ExamineName: borg arm
         Knife:
-          Amount: 2
+          Amount: 3
           DefaultPrototype: KitchenKnife
-          ExamineName: Knife
-      materialRequirements:
-        Steel: 5
+          ExamineName: knife
 
 - type: entity
   id: HydroponicsTrayMachineCircuitboard
@@ -408,10 +407,14 @@
       state: service
     - type: MachineBoard
       prototype: hydroponicsTray
+      # See: https://github.com/vgstation-coders/vgstation13/blob/e9a806f30b4db0efa2a68b9eb42e3120d2321b6a/code/modules/hydroponics/hydro_tray.dm#L57
+      requirements:
+        MatterBin: 2
+        ScanningModule: 1
+        Capacitor: 1
       materialRequirements:
         # replacing the console screen
-        Glass: 5
-        Cable: 2
+        Glass: 1
       tagRequirements:
         GlassBeaker:
           Amount: 2
@@ -448,7 +451,7 @@
     - type: MachineBoard
       prototype: SMESBasicEmpty
       requirements:
-        Capacitor: 5
+        Capacitor: 10
 
 - type: entity
   id: SubstationMachineCircuitboard
@@ -476,9 +479,11 @@
   components:
     - type: MachineBoard
       prototype: DawInstrument
+      requirements:
+        Capacitor: 4
+        ScanningModule: 5
       materialRequirements:
         Glass: 1
-        Cable: 1
       tagRequirements:
 #      One instrument to bring them all and in the darkness bind them...
        KeyedInstrument:
@@ -529,7 +534,8 @@
   - type: MachineBoard
     prototype: Thruster
     requirements:
-      Capacitor: 4
+      Laser: 4
+      Capacitor: 1
     materialRequirements:
       Steel: 5
 
@@ -541,7 +547,7 @@
   - type: MachineBoard
     prototype: Gyroscope
     requirements:
-      Manipulator: 2
+      ScanningModule: 2
       Capacitor: 1
     materialRequirements:
       Glass: 2
@@ -574,6 +580,7 @@
     - type: MachineBoard
       prototype: KitchenReagentGrinder
       requirements:
+        Capacitor: 1
         MatterBin: 2
         Manipulator: 2
       tagRequirements:
@@ -591,9 +598,9 @@
     - type: MachineBoard
       prototype: ChemistryHotplate
       requirements:
-        Capacitor: 2
+        Laser: 2
       materialRequirements:
-        Glass: 1
+        Steel: 2
 
 - type: entity
   id: StasisBedMachineCircuitboard
@@ -606,11 +613,12 @@
       prototype: StasisBed
       requirements:
         Capacitor: 1
+        Manipulator: 1
       materialRequirements:
         Cable: 3
       tagRequirements:
         Pipe:
-          Amount: 1
+          Amount: 4
           DefaultPrototype: GasPipeStraight
           ExamineName: Pipe
         Cryobeaker:
@@ -644,7 +652,8 @@
       prototype: OreProcessor
       requirements:
         MatterBin: 1
-        Manipulator: 3
+        Manipulator: 1
+        Laser: 2
       materialRequirements:
         Glass: 1
 
@@ -659,6 +668,7 @@
       prototype: KitchenMicrowave
       requirements:
         Capacitor: 1
+        Laser: 1
       materialRequirements:
         Glass: 2
         Cable: 2
@@ -673,7 +683,7 @@
     - type: MachineBoard
       prototype: FatExtractor
       requirements:
-        Manipulator: 1
+        Laser: 1
       componentRequirements:
         Utensil:
           Amount: 1
@@ -690,7 +700,8 @@
     - type: MachineBoard
       prototype: Emitter
       requirements:
-        Capacitor: 2
+        Capacitor: 1
+        Laser: 1
       materialRequirements:
         CableHV: 5
         Glass: 2
@@ -703,8 +714,8 @@
   components:
     - type: MachineBoard
       prototype: SurveillanceCameraRouterConstructed
-      materialRequirements:
-        Cable: 1
+      requirements:
+        Capacitor: 4
 
 - type: entity
   id: SurveillanceCameraWirelessRouterCircuitboard
@@ -714,9 +725,9 @@
   components:
     - type: MachineBoard
       prototype: SurveillanceCameraWirelessRouterConstructed
-      materialRequirements:
-        Cable: 2
-        Glass: 1
+      requirements:
+        Laser: 1
+        Capacitor: 4
 
 - type: entity
   id: SurveillanceWirelessCameraMovableCircuitboard
@@ -726,6 +737,9 @@
   components:
     - type: MachineBoard
       prototype: SurveillanceWirelessCameraMovableConstructed
+      requirements:
+        Laser: 1
+        Capacitor: 4
       materialRequirements:
         Glass: 2
         Cable: 2
@@ -738,9 +752,12 @@
   components:
     - type: MachineBoard
       prototype: SurveillanceWirelessCameraAnchoredConstructed
+      requirements:
+        Laser: 1
+        Capacitor: 4
       materialRequirements:
+        Glass: 2
         Cable: 2
-        Glass: 1
 
 - type: entity
   id: GasRecyclerMachineCircuitboard
@@ -751,8 +768,8 @@
   - type: MachineBoard
     prototype: GasRecycler
     requirements:
-      Capacitor: 1
-      Manipulator: 1
+      Laser: 2
+      Manipulator: 2
     materialRequirements:
       Steel: 10
       Plasma: 5
@@ -801,6 +818,9 @@
   components:
     - type: MachineBoard
       prototype: TelecomServer
+      requirements:
+        Capacitor: 1
+        ScanningModule: 2
       materialRequirements:
         Steel: 1
         Cable: 2

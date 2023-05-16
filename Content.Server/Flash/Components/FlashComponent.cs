@@ -9,6 +9,10 @@ namespace Content.Server.Flash.Components
         [ViewVariables(VVAccess.ReadWrite)]
         public int FlashDuration { get; set; } = 5000;
 
+        [DataField("uses")]
+        [ViewVariables(VVAccess.ReadWrite)]
+        public int Uses { get; set; } = 5;
+
         [DataField("range")]
         [ViewVariables(VVAccess.ReadWrite)]
         public float Range { get; set; } = 7f;
@@ -26,5 +30,7 @@ namespace Content.Server.Flash.Components
         public SoundSpecifier Sound { get; set; } = new SoundPathSpecifier("/Audio/Weapons/flash.ogg");
 
         public bool Flashing;
+
+        public bool HasUses => Uses > 0;
     }
 }

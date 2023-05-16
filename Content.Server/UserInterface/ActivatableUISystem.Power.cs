@@ -19,7 +19,10 @@ public sealed partial class ActivatableUISystem
 
     private void OnPowerCellRemoved(EntityUid uid, PowerCellDrawComponent component, EntRemovedFromContainerMessage args)
     {
-        _cell.SetPowerCellDrawEnabled(uid, false);
+        if (TryComp<PowerCellDrawComponent>(uid, out var draw))
+        {
+            draw.Enabled = false;
+        }
 
         if (HasComp<ActivatableUIRequiresPowerCellComponent>(uid) &&
             TryComp<ActivatableUIComponent>(uid, out var activatable) &&
@@ -31,12 +34,18 @@ public sealed partial class ActivatableUISystem
 
     private void OnBatteryOpened(EntityUid uid, ActivatableUIRequiresPowerCellComponent component, BoundUIOpenedEvent args)
     {
-        _cell.SetPowerCellDrawEnabled(uid, true);
+        if (!TryComp<PowerCellDrawComponent>(uid, out var draw))
+            return;
+
+        draw.Enabled = true;
     }
 
     private void OnBatteryClosed(EntityUid uid, ActivatableUIRequiresPowerCellComponent component, BoundUIClosedEvent args)
     {
-        _cell.SetPowerCellDrawEnabled(uid, false);
+        if (!TryComp<PowerCellDrawComponent>(uid, out var draw))
+            return;
+
+        draw.Enabled = false;
     }
 
     /// <summary>

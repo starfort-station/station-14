@@ -74,7 +74,8 @@ namespace Content.Server.Nutrition.EntitySystems
                             timerTrigger.Delay,
                             timerTrigger.BeepInterval,
                             timerTrigger.InitialBeepDelay,
-                            timerTrigger.BeepSound);
+                            timerTrigger.BeepSound,
+                            timerTrigger.BeepParams);
                     }
                 }
             }

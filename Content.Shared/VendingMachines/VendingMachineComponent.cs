@@ -3,7 +3,6 @@ using Content.Shared.Actions.ActionTypes;
 using Robust.Shared.Audio;
 using Robust.Shared.GameStates;
 using Robust.Shared.Serialization;
-using Robust.Shared.Serialization.TypeSerializers.Implementations.Custom;
 using Robust.Shared.Serialization.TypeSerializers.Implementations.Custom.Prototype;
 
 namespace Content.Shared.VendingMachines
@@ -87,13 +86,7 @@ namespace Content.Shared.VendingMachines
         /// </summary>
         [DataField("soundVend")]
         // Grabbed from: https://github.com/discordia-space/CEV-Eris/blob/f702afa271136d093ddeb415423240a2ceb212f0/sound/machines/vending_drop.ogg
-        public SoundSpecifier SoundVend = new SoundPathSpecifier("/Audio/Machines/machine_vend.ogg")
-        {
-            Params = new AudioParams
-            {
-                Volume = -2f
-            }
-        };
+        public SoundSpecifier SoundVend = new SoundPathSpecifier("/Audio/Machines/machine_vend.ogg");
 
         /// <summary>
         ///     Sound that plays when an item can't be ejected
@@ -115,12 +108,6 @@ namespace Content.Shared.VendingMachines
         public float EjectAccumulator = 0f;
         public float DenyAccumulator = 0f;
         public float DispenseOnHitAccumulator = 0f;
-
-        /// <summary>
-        ///     While disabled by EMP it randomly ejects items
-        /// </summary>
-        [DataField("nextEmpEject", customTypeSerializer: typeof(TimeOffsetSerializer))]
-        public TimeSpan NextEmpEject = TimeSpan.Zero;
 
         #region Client Visuals
         /// <summary>

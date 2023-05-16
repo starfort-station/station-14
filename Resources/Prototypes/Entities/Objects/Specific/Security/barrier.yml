@@ -25,15 +25,14 @@
     canCollide: false
   - type: Fixtures
     fixtures:
-      fix1:
-        shape:
-          !type:PhysShapeCircle
-          radius: 0.45
-        density: 75
-        mask:
-        - MachineMask
-        layer:
-        - WallLayer
+    - shape:
+        !type:PhysShapeCircle
+        radius: 0.45
+      density: 75
+      mask:
+      - MachineMask
+      layer:
+      - WallLayer
   - type: AccessReader
     access: [["Security"]]
   - type: Lock

@@ -16,7 +16,7 @@
         - ReagentId: Nutriment
           Quantity: 5
   - type: Slippery
-    launchForwardsMultiplier: 5
+    launchForwardsMultiplier: 20
   - type: StepTrigger
     intersectRatio: 0.2
   - type: CollisionWake
@@ -25,17 +25,16 @@
     bodyType: Dynamic
   - type: Fixtures
     fixtures:
-      slips:
-        shape:
-          !type:PhysShapeAabb
-          bounds: "-0.2,-0.2,0.2,0.2"
-        hard: false
-        layer:
-        - SlipLayer
-      fix1:
-        shape:
-          !type:PhysShapeAabb
-          bounds: "-0.2,-0.2,0.2,0.2"
-        density: 30
-        mask:
-        - ItemMask
+    - shape:
+        !type:PhysShapeAabb
+        bounds: "-0.2,-0.2,0.2,0.2"
+      id: "slips"
+      hard: false
+      layer:
+      - SlipLayer
+    - shape:
+        !type:PhysShapeAabb
+        bounds: "-0.2,-0.2,0.2,0.2"
+      density: 30
+      mask:
+      - ItemMask

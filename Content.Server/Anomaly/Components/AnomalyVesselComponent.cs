@@ -32,7 +32,7 @@ public sealed class AnomalyVesselComponent : Component
     /// The machine part that affects the point multiplier of the vessel
     /// </summary>
     [DataField("machinePartPointModifier", customTypeSerializer: typeof(PrototypeIdSerializer<MachinePartPrototype>))]
-    public string MachinePartPointModifier = "Capacitor";
+    public string MachinePartPointModifier = "ScanningModule";
 
     /// <summary>
     /// A value used to scale the point multiplier

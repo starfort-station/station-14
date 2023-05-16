@@ -3,7 +3,6 @@
   description: Accelerated particles.
   id: ParticlesProjectile
   parent: BaseBullet
-  noSpawn: true
   components:
     - type: Sprite
       layers:
@@ -21,16 +20,15 @@
     - type: Physics
     - type: Fixtures
       fixtures:
-        fix1:
-          shape:
-            !type:PhysShapeAabb
-            bounds: "-0.48,-0.48,0.48,0.48"
-          hard: false
-          layer: [None]
-          mask:
-          # Has to hit mobs, singularity, and singularity generator
-          - Opaque
-          - FullTileMask
+      - shape:
+          !type:PhysShapeAabb
+          bounds: "-0.48,-0.48,0.48,0.48"
+        hard: false
+        layer: [None]
+        mask:
+        # Has to hit mobs, singularity, and singularity generator
+        - Opaque
+        - FullTileMask
     - type: ParticleProjectile
     - type: SinguloFood
       # Energy is setup by the PA particle fire function.

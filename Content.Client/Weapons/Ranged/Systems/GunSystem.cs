@@ -1,7 +1,6 @@
 using Content.Client.Items;
 using Content.Client.Weapons.Ranged.Components;
 using Content.Shared.Camera;
-using Content.Shared.Input;
 using Content.Shared.Spawners.Components;
 using Content.Shared.Weapons.Ranged;
 using Content.Shared.Weapons.Ranged.Components;
@@ -138,9 +137,7 @@ public sealed partial class GunSystem : SharedGunSystem
             return;
         }
 
-        var useKey = gun.UseKey ? EngineKeyFunctions.Use : EngineKeyFunctions.UseSecondary;
-
-        if (_inputSystem.CmdStates.GetState(useKey) != BoundKeyState.Down)
+        if (_inputSystem.CmdStates.GetState(EngineKeyFunctions.Use) != BoundKeyState.Down)
         {
             if (gun.ShotCounter != 0)
                 EntityManager.RaisePredictiveEvent(new RequestStopShootEvent { Gun = gunUid });
@@ -161,7 +158,7 @@ public sealed partial class GunSystem : SharedGunSystem
         }
 
         // Define target coordinates relative to gun entity, so that network latency on moving grids doesn't fuck up the target location.
-        var coordinates = EntityCoordinates.FromMap(entity, mousePos, TransformSystem, EntityManager);
+        var coordinates = EntityCoordinates.FromMap(entity, mousePos, Transform, EntityManager);
 
         Sawmill.Debug($"Sending shoot request tick {Timing.CurTick} / {Timing.CurTime}");
 
@@ -178,13 +175,13 @@ public sealed partial class GunSystem : SharedGunSystem
         // Rather than splitting client / server for every ammo provider it's easier
         // to just delete the spawned entities. This is for programmer sanity despite the wasted perf.
         // This also means any ammo specific stuff can be grabbed as necessary.
-        var direction = fromCoordinates.ToMapPos(EntityManager, TransformSystem) - toCoordinates.ToMapPos(EntityManager, TransformSystem);
+        var direction = fromCoordinates.ToMapPos(EntityManager, Transform) - toCoordinates.ToMapPos(EntityManager, Transform);
 
         foreach (var (ent, shootable) in ammo)
         {
             if (throwItems)
             {
-                Recoil(user, direction, gun.CameraRecoilScalar);
+                Recoil(user, direction);
                 if (ent!.Value.IsClientSide())
                     Del(ent.Value);
                 else
@@ -200,7 +197,7 @@ public sealed partial class GunSystem : SharedGunSystem
                         SetCartridgeSpent(ent!.Value, cartridge, true);
                         MuzzleFlash(gunUid, cartridge, user);
                         Audio.PlayPredicted(gun.SoundGunshot, gunUid, user);
-                        Recoil(user, direction, gun.CameraRecoilScalar);
+                        Recoil(user, direction);
                         // TODO: Can't predict entity deletions.
                         //if (cartridge.DeleteOnSpawn)
                         //    Del(cartridge.Owner);
@@ -217,7 +214,7 @@ public sealed partial class GunSystem : SharedGunSystem
                 case AmmoComponent newAmmo:
                     MuzzleFlash(gunUid, newAmmo, user);
                     Audio.PlayPredicted(gun.SoundGunshot, gunUid, user);
-                    Recoil(user, direction, gun.CameraRecoilScalar);
+                    Recoil(user, direction);
                     if (ent!.Value.IsClientSide())
                         Del(ent.Value);
                     else
@@ -225,18 +222,18 @@ public sealed partial class GunSystem : SharedGunSystem
                     break;
                 case HitscanPrototype:
                     Audio.PlayPredicted(gun.SoundGunshot, gunUid, user);
-                    Recoil(user, direction, gun.CameraRecoilScalar);
+                    Recoil(user, direction);
                     break;
             }
         }
     }
 
-    private void Recoil(EntityUid? user, Vector2 recoil, float recoilScalar)
+    private void Recoil(EntityUid? user, Vector2 recoil)
     {
-        if (!Timing.IsFirstTimePredicted || user == null || recoil == Vector2.Zero || recoilScalar == 0)
+        if (!Timing.IsFirstTimePredicted || user == null || recoil == Vector2.Zero)
             return;
 
-        _recoil.KickCamera(user.Value, recoil.Normalized * 0.5f * recoilScalar);
+        _recoil.KickCamera(user.Value, recoil.Normalized * 0.5f);
     }
 
     protected override void Popup(string message, EntityUid? uid, EntityUid? user)
@@ -298,9 +295,6 @@ public sealed partial class GunSystem : SharedGunSystem
 
         _animPlayer.Play(ent, anim, "muzzle-flash");
         var light = EnsureComp<PointLightComponent>(uid);
-
-        if (light.Enabled)
-            return;
 
         light.NetSyncEnabled = false;
         light.Enabled = true;

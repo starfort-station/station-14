@@ -17,7 +17,7 @@
     openTimeTwo: 0.4
     openingAnimationTime: 1.0
     closingAnimationTime: 1.0
-    canPry: false
+    pryTime: -1
     crushDamage:
       types:
         Blunt: 25 # yowch

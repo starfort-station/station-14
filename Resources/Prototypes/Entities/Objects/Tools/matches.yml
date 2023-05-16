@@ -1,4 +1,4 @@
-- type: entity
+﻿- type: entity
   id: SmallboxItem
   parent: BaseStorageItem
   abstract: true
@@ -37,10 +37,11 @@
     radius: 1.1
     color: darkorange
   - type: Appearance
-  - type: BurnStateVisuals
-    unlitIcon: match_unlit
-    litIcon: match_lit
-    burntIcon: match_burnt
+    visuals:
+      - type: BurnStateVisualizer
+        unlitIcon: match_unlit
+        litIcon: match_lit
+        burntIcon: match_burnt
 
 - type: entity
   parent: Matchstick
@@ -71,13 +72,11 @@
   - type: Item
     sprite: Objects/Tools/matches.rsi
     heldPrefix: matchbox
-    size: 5
-  - type: Storage
-    capacity: 5
+    size: 10
   - type: StorageFill
     contents:
       - id: Matchstick
-        amount: 5
+        amount: 6
   - type: ItemCounter
     count:
       tags: [Matchstick]

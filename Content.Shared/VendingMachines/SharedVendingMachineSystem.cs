@@ -2,25 +2,18 @@ using Content.Shared.Emag.Components;
 using Robust.Shared.Prototypes;
 using System.Linq;
 using Content.Shared.DoAfter;
-using Content.Shared.Interaction;
-using Content.Shared.Popups;
-using Robust.Shared.Network;
+using Robust.Shared.Serialization;
 
 namespace Content.Shared.VendingMachines;
 
-public abstract partial class SharedVendingMachineSystem : EntitySystem
+public abstract class SharedVendingMachineSystem : EntitySystem
 {
-    [Dependency] private readonly INetManager _net = default!;
-    [Dependency] protected readonly IPrototypeManager PrototypeManager = default!;
-    [Dependency] protected readonly SharedAudioSystem Audio = default!;
-    [Dependency] private readonly SharedDoAfterSystem _doAfter = default!;
-    [Dependency] protected readonly SharedPopupSystem Popup = default!;
+    [Dependency] private readonly IPrototypeManager _prototypeManager = default!;
 
     public override void Initialize()
     {
         base.Initialize();
         SubscribeLocalEvent<VendingMachineComponent, ComponentInit>(OnComponentInit);
-        SubscribeLocalEvent<VendingMachineRestockComponent, AfterInteractEvent>(OnAfterInteract);
     }
 
     protected virtual void OnComponentInit(EntityUid uid, VendingMachineComponent component, ComponentInit args)
@@ -36,7 +29,7 @@ public abstract partial class SharedVendingMachineSystem : EntitySystem
             return;
         }
 
-        if (!PrototypeManager.TryIndex(component.PackPrototypeId, out VendingMachineInventoryPrototype? packPrototype))
+        if (!_prototypeManager.TryIndex(component.PackPrototypeId, out VendingMachineInventoryPrototype? packPrototype))
             return;
 
         AddInventoryFromPrototype(uid, packPrototype.StartingInventory, InventoryType.Regular, component);
@@ -103,9 +96,9 @@ public abstract partial class SharedVendingMachineSystem : EntitySystem
 
         foreach (var (id, amount) in entries)
         {
-            if (PrototypeManager.HasIndex<EntityPrototype>(id))
+            if (_prototypeManager.HasIndex<EntityPrototype>(id))
             {
-                if (inventory.TryGetValue(id, out var entry))
+                if (inventory.TryGetValue(id, out VendingMachineInventoryEntry? entry))
                     // Prevent a machine's stock from going over three times
                     // the prototype's normal amount. This is an arbitrary
                     // number and meant to be a convenience for someone
@@ -118,4 +111,9 @@ public abstract partial class SharedVendingMachineSystem : EntitySystem
             }
         }
     }
+}
+
+[Serializable, NetSerializable]
+public sealed class RestockDoAfterEvent : SimpleDoAfterEvent
+{
 }

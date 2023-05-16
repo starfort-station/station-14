@@ -22,13 +22,12 @@
           - Write
   - type: Fixtures
     fixtures:
-      fix1:
-        shape:
-          !type:PhysShapeAabb
-          bounds: "-0.10,-0.10,0.10,0.10"
-        density: 500
-        mask:
-          - TabletopMachineMask
+    - shape:
+        !type:PhysShapeAabb
+        bounds: "-0.10,-0.10,0.10,0.10"
+      density: 500
+      mask:
+        - TabletopMachineMask
   - type: InteractionOutline
   - type: Bin
     whitelist:

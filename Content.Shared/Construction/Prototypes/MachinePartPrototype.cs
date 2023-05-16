@@ -15,14 +15,8 @@ public sealed class MachinePartPrototype : IPrototype
     public string ID { get; } = default!;
 
     /// <summary>
-    /// A human-readable name for the machine part type.
-    /// </summary>
-    [DataField("name")]
-    public readonly string Name = string.Empty;
-
-    /// <summary>
     /// A stock part entity based on the machine part.
     /// </summary>
-    [DataField("stockPartPrototype", customTypeSerializer: typeof(PrototypeIdSerializer<EntityPrototype>), required: true)]
-    public readonly string StockPartPrototype = string.Empty;
+    [DataField("stockPartPrototype", customTypeSerializer: typeof(PrototypeIdSerializer<EntityPrototype>))]
+    public string? StockPartPrototype { get; }
 }

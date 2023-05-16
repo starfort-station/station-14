@@ -8,11 +8,11 @@
   },
   "states": [
     {
-      "name": "unwired",
+      "name": "chamber",
       "directions": 4
     },
     {
-      "name": "completed",
+      "name": "chamberc",
       "directions": 4
     },
     {
@@ -36,7 +36,7 @@
       "directions": 4
     },
     {
-      "name": "wired",
+      "name": "chamberw",
       "directions": 4
     }
   ]

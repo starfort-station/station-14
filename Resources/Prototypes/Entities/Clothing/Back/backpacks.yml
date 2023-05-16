@@ -62,15 +62,6 @@
 
 - type: entity
   parent: ClothingBackpack
-  id: ClothingBackpackBrigmedic
-  name: brigmedic backpack
-  description: It's a very sterile backpack.
-  components:
-  - type: Sprite
-    sprite: Clothing/Back/Backpacks/brigmedic.rsi
-
-- type: entity
-  parent: ClothingBackpack
   id: ClothingBackpackEngineering
   name: engineering backpack
   description: It's a tough backpack for the daily grind of station life.
@@ -170,11 +161,6 @@
     sprite: Clothing/Back/Backpacks/ertleader.rsi
   - type: Storage
     capacity: 250
-    storageOpenSound:
-      collection: ERTStorageOpen
-  - type: UseDelay
-    delay: 1
-
 
 - type: entity
   parent: ClothingBackpackERTLeader

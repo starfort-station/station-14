@@ -142,7 +142,7 @@
   - type: SolutionContainerManager
     solutions:
       beaker:
-        maxVol: 60
+        maxVol: 40
         canReact: false
   - type: Damageable
     damageContainer: Inorganic
@@ -151,7 +151,7 @@
     thresholds:
     - trigger:
         !type:DamageTrigger
-        damage: 5
+        damage: 100
       behaviors:
       - !type:SpillBehavior
         solution: beaker
@@ -242,7 +242,6 @@
     sprite: Objects/Specific/Chemistry/syringe.rsi
     state: "syringe_base0"
   - type: Item
-    size: 3
     sprite: Objects/Specific/Chemistry/syringe.rsi
     heldPrefix: 0
   - type: SolutionContainerManager
@@ -284,7 +283,9 @@
   - type: Item
     size: 1
     sprite: Objects/Specific/Chemistry/pills.rsi
-  - type: Pill
+  - type: Tag
+    tags:
+      - Pill
   - type: Food
     forceFeedDelay: 1
     transferAmount: null
@@ -303,19 +304,6 @@
     grindableSolutionName: food
   - type: StaticPrice
     price: 0
-  - type: Damageable
-    damageContainer: Inorganic
-  - type: Destructible
-    thresholds:
-    - trigger:
-        !type:DamageTrigger
-        damage: 10
-      behaviors:
-      - !type:SpillBehavior
-        solution: food
-        transferForensics: true
-      - !type:DoActsBehavior
-        acts: [ "Destruction" ]
 
 - type: entity
   name: pill canister
@@ -339,6 +327,6 @@
     storageInsertSound: /Audio/Effects/pill_insert.ogg
     storageRemoveSound: /Audio/Effects/pill_remove.ogg
     whitelist:
-      components:
-      - Pill
+      tags:
+        - Pill
   - type: Dumpable

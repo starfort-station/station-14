@@ -1,11 +1,10 @@
-- type: guideEntry
+﻿- type: guideEntry
   id: Science
   name: guide-entry-science
   text: "/ServerInfo/Guidebook/Science/Science.xml"
   children:
   - AnomalousResearch
   - Xenoarchaeology
-  - Robotics
   - MachineUpgrading
 
 - type: guideEntry
@@ -33,11 +32,6 @@
   children:
   - ArtifactReports
   - TraversalDistorter
-
-- type: guideEntry
-  id: Robotics
-  name: guide-entry-robotics
-  text: "/ServerInfo/Guidebook/Science/Robotics.xml"
 
 - type: guideEntry
   id: ArtifactReports

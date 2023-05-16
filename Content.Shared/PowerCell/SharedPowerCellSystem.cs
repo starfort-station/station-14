@@ -8,7 +8,6 @@ namespace Content.Shared.PowerCell;
 public abstract class SharedPowerCellSystem : EntitySystem
 {
     [Dependency] private readonly ItemSlotsSystem _itemSlots = default!;
-    [Dependency] private readonly SharedAppearanceSystem _appearance = default!;
 
     public override void Initialize()
     {
@@ -21,7 +20,7 @@ public abstract class SharedPowerCellSystem : EntitySystem
 
     private void OnRejuventate(EntityUid uid, PowerCellSlotComponent component, RejuvenateEvent args)
     {
-        if (!_itemSlots.TryGetSlot(uid, component.CellSlotId, out var itemSlot) || !itemSlot.Item.HasValue)
+        if (!_itemSlots.TryGetSlot(uid, component.CellSlotId, out ItemSlot? itemSlot) || !itemSlot.Item.HasValue)
             return;
 
         // charge entity batteries and remove booby traps.
@@ -49,7 +48,7 @@ public abstract class SharedPowerCellSystem : EntitySystem
 
         if (args.Container.ID != component.CellSlotId)
             return;
-        _appearance.SetData(uid, PowerCellSlotVisuals.Enabled, true);
+
         RaiseLocalEvent(uid, new PowerCellChangedEvent(false), false);
     }
 
@@ -57,7 +56,7 @@ public abstract class SharedPowerCellSystem : EntitySystem
     {
         if (args.Container.ID != component.CellSlotId)
             return;
-        _appearance.SetData(uid, PowerCellSlotVisuals.Enabled, false);
+
         RaiseLocalEvent(uid, new PowerCellChangedEvent(true), false);
     }
 }

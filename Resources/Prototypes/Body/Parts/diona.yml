@@ -48,6 +48,11 @@
     vital: true
   - type: Input
     context: "ghost"
+  - type: MovementSpeedModifier
+    baseWalkSpeed: 0
+    baseSprintSpeed: 0
+  - type: InputMover
+  - type: GhostOnMove
   - type: Tag
     tags:
       - Head
@@ -116,9 +121,9 @@
   - type: BodyPart
     partType: Leg
     symmetry: Left
-  - type: MovementBodyPart
-    walkSpeed : 1.5
-    sprintSpeed : 3.5
+  - type: MovementSpeedModifier
+    baseWalkSpeed : 1.5
+    baseSprintSpeed : 3.5
 
 - type: entity
   id: RightLegDiona
@@ -132,9 +137,9 @@
   - type: BodyPart
     partType: Leg
     symmetry: Right
-  - type: MovementBodyPart
-    walkSpeed : 1.5
-    sprintSpeed : 3.5
+  - type: MovementSpeedModifier
+    baseWalkSpeed : 1.5
+    baseSprintSpeed : 3.5
 
 - type: entity
   id: LeftFootDiona

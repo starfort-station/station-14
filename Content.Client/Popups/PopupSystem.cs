@@ -1,4 +1,3 @@
-using System.Linq;
 using Content.Shared.GameTicking;
 using Content.Shared.Popups;
 using Robust.Client.Graphics;
@@ -11,7 +10,6 @@ using Robust.Shared.Map;
 using Robust.Shared.Player;
 using Robust.Shared.Players;
 using Robust.Shared.Prototypes;
-using Robust.Shared.Timing;
 using Robust.Shared.Utility;
 
 namespace Content.Client.Popups
@@ -24,7 +22,6 @@ namespace Content.Client.Popups
         [Dependency] private readonly IPlayerManager _playerManager = default!;
         [Dependency] private readonly IPrototypeManager _prototype = default!;
         [Dependency] private readonly IResourceCache _resource = default!;
-        [Dependency] private readonly IGameTiming _timing = default!;
         [Dependency] private readonly IUserInterfaceManager _uiManager = default!;
 
         public IReadOnlyList<WorldPopupLabel> WorldLabels => _aliveWorldLabels;
@@ -123,16 +120,7 @@ namespace Content.Client.Popups
 
         public override void PopupEntity(string message, EntityUid uid, Filter filter, bool recordReplay, PopupType type=PopupType.Small)
         {
-            if (!filter.Recipients.Contains(_playerManager.LocalPlayer?.Session))
-                return;
-
             PopupEntity(message, uid, type);
-        }
-
-        public override void PopupClient(string message, EntityUid uid, EntityUid recipient, PopupType type = PopupType.Small)
-        {
-            if (_timing.IsFirstTimePredicted)
-                PopupEntity(message, uid, recipient);
         }
 
         public override void PopupEntity(string message, EntityUid uid, PopupType type = PopupType.Small)

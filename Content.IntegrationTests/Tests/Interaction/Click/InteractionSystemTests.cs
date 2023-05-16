@@ -26,14 +26,13 @@ namespace Content.IntegrationTests.Tests.Interaction.Click
     bodyType: Dynamic
   - type: Fixtures
     fixtures:
-      fix1:
-        shape:
-          !type:PhysShapeAabb
-            bounds: ""-0.25,-0.25,0.25,0.25""
-        layer:
-        - MobMask
-        mask:
-        - MobMask
+    - shape:
+        !type:PhysShapeAabb
+          bounds: ""-0.25,-0.25,0.25,0.25""
+      layer:
+      - MobMask
+      mask:
+      - MobMask
 ";
 
         [Test]

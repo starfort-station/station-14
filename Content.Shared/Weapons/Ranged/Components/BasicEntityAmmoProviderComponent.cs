@@ -1,5 +1,6 @@
 ﻿using Robust.Shared.GameStates;
 using Robust.Shared.Prototypes;
+using Robust.Shared.Serialization;
 using Robust.Shared.Serialization.TypeSerializers.Implementations.Custom.Prototype;
 
 namespace Content.Shared.Weapons.Ranged.Components;
@@ -8,7 +9,7 @@ namespace Content.Shared.Weapons.Ranged.Components;
 ///     Simply provides a certain capacity of entities that cannot be reloaded through normal means and have
 ///     no special behavior like cycling, magazine
 /// </summary>
-[RegisterComponent, NetworkedComponent, AutoGenerateComponentState]
+[RegisterComponent, AutoGenerateComponentState]
 public sealed partial class BasicEntityAmmoProviderComponent : AmmoProviderComponent
 {
     [ViewVariables(VVAccess.ReadWrite)]

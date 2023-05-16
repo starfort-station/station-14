@@ -11,16 +11,15 @@
     bodyType: Static
   - type: Fixtures
     fixtures:
-      fix1:
-        shape:
-          !type:PhysShapeAabb
-          bounds: "-0.45,-0.45,0.45,0.45"
-        density: 60
-        mask:
-        - MachineMask
-        layer:
-        - MidImpassable
-        - LowImpassable
+    - shape:
+        !type:PhysShapeAabb
+        bounds: "-0.45,-0.45,0.45,0.45"
+      density: 60
+      mask:
+      - MachineMask
+      layer:
+      - MidImpassable
+      - LowImpassable
   - type: Pullable
   - type: Tag
     tags:
@@ -44,17 +43,18 @@
     bodyType: Dynamic
   - type: Fixtures
     fixtures:
-      fix1:
-        shape:
-          !type:PhysShapeAabb
-          bounds: "-0.45,-0.45,0.45,0.45"
-        density: 60
-        mask:
-        - MachineMask
-        layer:
-        - MidImpassable
-        - LowImpassable
+    - shape:
+        !type:PhysShapeAabb
+        bounds: "-0.45,-0.45,0.45,0.45"
+      density: 60
+      mask:
+      - MachineMask
+      layer:
+      - MidImpassable
+      - LowImpassable
   - type: Anchorable
+  - type: StaticPrice
+    price: 50
 
 - type: Tag
   id: Structure

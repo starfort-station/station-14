@@ -13,15 +13,14 @@
     damagePopupType: Combined
   - type: Fixtures
     fixtures:
-      fix1:
-        shape:
-          !type:PhysShapeCircle
-          radius: 0.35
-        density: 200
-        mask:
-        - FullTileMask
-        layer:
-        - WallLayer
+    - shape:
+        !type:PhysShapeCircle
+        radius: 0.35
+      density: 200
+      mask:
+      - FullTileMask
+      layer:
+      - WallLayer
   - type: InteractionOutline
   - type: Physics
   - type: Damageable

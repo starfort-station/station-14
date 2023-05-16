@@ -19,7 +19,6 @@ public sealed class AdminLogsEui : BaseEui
     public AdminLogsEui()
     {
         LogsWindow = new AdminLogsWindow();
-        LogsWindow.OnClose += OnCloseWindow;
         LogsControl = LogsWindow.Logs;
 
         LogsControl.LogSearch.OnTextEntered += _ => RequestLogs();
@@ -40,13 +39,7 @@ public sealed class AdminLogsEui : BaseEui
 
     private void OnRequestClosed(WindowRequestClosedEventArgs args)
     {
-        SendMessage(new CloseEuiMessage());
-    }
-
-    private void OnCloseWindow()
-    {
-        if (ClydeWindow == null)
-            SendMessage(new CloseEuiMessage());
+        SendMessage(new Close());
     }
 
     private void RequestLogs()
@@ -81,6 +74,10 @@ public sealed class AdminLogsEui : BaseEui
             return;
         }
 
+        LogsControl.Orphan();
+        LogsWindow.Dispose();
+        LogsWindow = null;
+
         var monitor = _clyde.EnumerateMonitors().First();
 
         ClydeWindow = _clyde.CreateWindow(new WindowCreateParameters
@@ -91,10 +88,6 @@ public sealed class AdminLogsEui : BaseEui
             Width = 1000,
             Height = 400
         });
-
-        LogsControl.Orphan();
-        LogsWindow.Dispose();
-        LogsWindow = null;
 
         ClydeWindow.RequestClosed += OnRequestClosed;
         ClydeWindow.DisposeOnClose = true;

@@ -3,7 +3,7 @@ using Content.Shared.Storage;
 
 namespace Content.Server.Magic.Events;
 
-public sealed class WorldSpawnSpellEvent : WorldTargetActionEvent, ISpeakSpell
+public sealed class WorldSpawnSpellEvent : WorldTargetActionEvent
 {
     // TODO:This class needs combining with InstantSpawnSpellEvent
 
@@ -25,8 +25,5 @@ public sealed class WorldSpawnSpellEvent : WorldTargetActionEvent, ISpeakSpell
     /// Lifetime to set for the entities to self delete
     /// </summary>
     [DataField("lifetime")] public float? Lifetime;
-
-    [DataField("speech")]
-    public string? Speech { get; }
 }
 

@@ -92,8 +92,6 @@ public sealed class AdminLogsEui : BaseEui
 
     public override async void HandleMessage(EuiMessageBase msg)
     {
-        base.HandleMessage(msg);
-
         if (!_adminManager.HasAdminFlag(Player, AdminFlags.Logs))
         {
             return;
@@ -101,6 +99,11 @@ public sealed class AdminLogsEui : BaseEui
 
         switch (msg)
         {
+            case Close _:
+            {
+                Close();
+                break;
+            }
             case LogsRequest request:
             {
                 _sawmill.Info($"Admin log request from admin with id {Player.UserId.UserId} and name {Player.Name}");

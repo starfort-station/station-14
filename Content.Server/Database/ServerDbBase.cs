@@ -12,6 +12,7 @@ using Content.Shared.Preferences;
 using Microsoft.EntityFrameworkCore;
 using Robust.Shared.Enums;
 using Robust.Shared.Network;
+using Robust.Shared.Utility;
 
 namespace Content.Server.Database
 {
@@ -68,26 +69,23 @@ namespace Content.Server.Database
                 throw new NotImplementedException();
             }
 
-            var oldProfile = db.DbContext.Profile
-                .Include(p => p.Preference)
-                .Where(p => p.Preference.UserId == userId.UserId)
-                .Include(p => p.Jobs)
-                .Include(p => p.Antags)
-                .Include(p => p.Traits)
-                .AsSplitQuery()
-                .SingleOrDefault(h => h.Slot == slot);
+            var entity = ConvertProfiles(humanoid, slot);
 
-            var newProfile = ConvertProfiles(humanoid, slot, oldProfile);
-            if (oldProfile == null)
+            var prefs = await db.DbContext
+                .Preference
+                .Include(p => p.Profiles)
+                .SingleAsync(p => p.UserId == userId.UserId);
+
+            var oldProfile = prefs
+                .Profiles
+                .SingleOrDefault(h => h.Slot == entity.Slot);
+
+            if (oldProfile is not null)
             {
-                var prefs = await db.DbContext
-                    .Preference
-                    .Include(p => p.Profiles)
-                    .SingleAsync(p => p.UserId == userId.UserId);
-
-                prefs.Profiles.Add(newProfile);
+                prefs.Profiles.Remove(oldProfile);
             }
 
+            prefs.Profiles.Add(entity);
             await db.DbContext.SaveChangesAsync();
         }
 
@@ -219,9 +217,8 @@ namespace Content.Server.Database
             );
         }
 
-        private static Profile ConvertProfiles(HumanoidCharacterProfile humanoid, int slot, Profile? profile = null)
+        private static Profile ConvertProfiles(HumanoidCharacterProfile humanoid, int slot)
         {
-            profile ??= new Profile();
             var appearance = (HumanoidCharacterAppearance) humanoid.CharacterAppearance;
             List<string> markingStrings = new();
             foreach (var marking in appearance.Markings)
@@ -230,44 +227,41 @@ namespace Content.Server.Database
             }
             var markings = JsonSerializer.SerializeToDocument(markingStrings);
 
-            profile.CharacterName = humanoid.Name;
-            profile.FlavorText = humanoid.FlavorText;
-            profile.Species = humanoid.Species;
-            profile.Age = humanoid.Age;
-            profile.Sex = humanoid.Sex.ToString();
-            profile.Gender = humanoid.Gender.ToString();
-            profile.HairName = appearance.HairStyleId;
-            profile.HairColor = appearance.HairColor.ToHex();
-            profile.FacialHairName = appearance.FacialHairStyleId;
-            profile.FacialHairColor = appearance.FacialHairColor.ToHex();
-            profile.EyeColor = appearance.EyeColor.ToHex();
-            profile.SkinColor = appearance.SkinColor.ToHex();
-            profile.Clothing = humanoid.Clothing.ToString();
-            profile.Backpack = humanoid.Backpack.ToString();
-            profile.Markings = markings;
-            profile.Slot = slot;
-            profile.PreferenceUnavailable = (DbPreferenceUnavailableMode) humanoid.PreferenceUnavailable;
-
-            profile.Jobs.Clear();
-            profile.Jobs.AddRange(
+            var entity = new Profile
+            {
+                CharacterName = humanoid.Name,
+                FlavorText = humanoid.FlavorText,
+                Species = humanoid.Species,
+                Age = humanoid.Age,
+                Sex = humanoid.Sex.ToString(),
+                Gender = humanoid.Gender.ToString(),
+                HairName = appearance.HairStyleId,
+                HairColor = appearance.HairColor.ToHex(),
+                FacialHairName = appearance.FacialHairStyleId,
+                FacialHairColor = appearance.FacialHairColor.ToHex(),
+                EyeColor = appearance.EyeColor.ToHex(),
+                SkinColor = appearance.SkinColor.ToHex(),
+                Clothing = humanoid.Clothing.ToString(),
+                Backpack = humanoid.Backpack.ToString(),
+                Markings = markings,
+                Slot = slot,
+                PreferenceUnavailable = (DbPreferenceUnavailableMode) humanoid.PreferenceUnavailable
+            };
+            entity.Jobs.AddRange(
                 humanoid.JobPriorities
                     .Where(j => j.Value != JobPriority.Never)
                     .Select(j => new Job {JobName = j.Key, Priority = (DbJobPriority) j.Value})
             );
-
-            profile.Antags.Clear();
-            profile.Antags.AddRange(
+            entity.Antags.AddRange(
                 humanoid.AntagPreferences
                     .Select(a => new Antag {AntagName = a})
             );
-
-            profile.Traits.Clear();
-            profile.Traits.AddRange(
+            entity.Traits.AddRange(
                 humanoid.TraitPreferences
                         .Select(t => new Trait {TraitName = t})
             );
 
-            return profile;
+            return entity;
         }
         #endregion
 
@@ -669,16 +663,23 @@ namespace Content.Server.Database
         {
             await using var db = await GetDb();
 
-            // ReSharper disable once SuggestVarOrType_Elsewhere
-            Dictionary<Guid, int> players = await db.DbContext.Player
-                .Where(player => playerIds.Contains(player.UserId))
-                .ToDictionaryAsync(player => player.UserId, player => player.Id);
+            var round = await db.DbContext.Round
+                .Include(round => round.Players)
+                .SingleAsync(round => round.Id == id);
 
-            foreach (var player in playerIds)
+            var players = await db.DbContext.Player
+                .Where(player => playerIds.Contains(player.UserId))
+                .ToListAsync();
+
+            var playerSet = new HashSet<Guid>(round.Players.Select(player => player.UserId));
+            foreach (var player in players)
             {
-                await db.DbContext.Database.ExecuteSqlAsync($"""
-INSERT INTO player_round (players_id, rounds_id) VALUES ({players[player]}, {id}) ON CONFLICT DO NOTHING
-""");
+                if (playerSet.Contains(player.UserId))
+                {
+                    continue;
+                }
+
+                round.Players.Add(player);
             }
 
             await db.DbContext.SaveChangesAsync();
@@ -723,14 +724,30 @@ INSERT INTO player_round (players_id, rounds_id) VALUES ({players[player]}, {id}
             return (server, false);
         }
 
-        public async Task AddAdminLogs(List<AdminLog> logs)
+        public virtual async Task AddAdminLogs(List<QueuedLog> logs)
         {
             await using var db = await GetDb();
-            db.DbContext.AdminLog.AddRange(logs);
+
+            var entities = new Dictionary<int, AdminLogEntity>();
+
+            foreach (var (log, entityData) in logs)
+            {
+                var logEntities = new List<AdminLogEntity>(entityData.Count);
+                foreach (var (id, name) in entityData)
+                {
+                    var entity = entities.GetOrNew(id);
+                    entity.Name = name;
+                    logEntities.Add(entity);
+                }
+
+                log.Entities = logEntities;
+                db.DbContext.AdminLog.Add(log);
+            }
+
             await db.DbContext.SaveChangesAsync();
         }
 
-        private static IQueryable<AdminLog> GetAdminLogsQuery(ServerDbContext db, LogFilter? filter = null)
+        private async Task<IQueryable<AdminLog>> GetAdminLogsQuery(ServerDbContext db, LogFilter? filter = null)
         {
             IQueryable<AdminLog> query = db.AdminLog;
 
@@ -825,7 +842,7 @@ INSERT INTO player_round (players_id, rounds_id) VALUES ({players[player]}, {id}
         public async IAsyncEnumerable<string> GetAdminLogMessages(LogFilter? filter = null)
         {
             await using var db = await GetDb();
-            var query = GetAdminLogsQuery(db.DbContext, filter);
+            var query = await GetAdminLogsQuery(db.DbContext, filter);
 
             await foreach (var log in query.Select(log => log.Message).AsAsyncEnumerable())
             {
@@ -836,7 +853,7 @@ INSERT INTO player_round (players_id, rounds_id) VALUES ({players[player]}, {id}
         public async IAsyncEnumerable<SharedAdminLog> GetAdminLogs(LogFilter? filter = null)
         {
             await using var db = await GetDb();
-            var query = GetAdminLogsQuery(db.DbContext, filter);
+            var query = await GetAdminLogsQuery(db.DbContext, filter);
             query = query.Include(log => log.Players);
 
             await foreach (var log in query.AsAsyncEnumerable())
@@ -854,7 +871,7 @@ INSERT INTO player_round (players_id, rounds_id) VALUES ({players[player]}, {id}
         public async IAsyncEnumerable<JsonDocument> GetAdminLogsJson(LogFilter? filter = null)
         {
             await using var db = await GetDb();
-            var query = GetAdminLogsQuery(db.DbContext, filter);
+            var query = await GetAdminLogsQuery(db.DbContext, filter);
 
             await foreach (var json in query.Select(log => log.Json).AsAsyncEnumerable())
             {

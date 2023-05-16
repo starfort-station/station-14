@@ -11,10 +11,12 @@
     sprite: Objects/Specific/Janitorial/light_replacer.rsi
   - type: LightReplacer
     contents:
-    - id: LightTube
+    - name: LightTube
       amount: 8
-    - id: LightBulb
+      type: Tube
+    - name: LightBulb
       amount: 5
+      type: Bulb
   - type: Tag
     tags:
       - DroneUsable
@@ -23,13 +25,3 @@
   - type: ContainerContainer
     containers:
       light_replacer_storage: !type:Container
-
-- type: entity
-  parent: LightReplacer
-  id: LightReplacerEmpty
-  suffix: Empty
-  components:
-  - type: LightReplacer
-    contents:
-    - id: LightTube
-      amount: 0

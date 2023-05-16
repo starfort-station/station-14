@@ -23,6 +23,9 @@ namespace Content.Server.Ghost.Roles.UI
                 case GhostRoleFollowRequestMessage req:
                     EntitySystem.Get<GhostRoleSystem>().Follow(Player, req.Identifier);
                     break;
+                case GhostRoleWindowCloseMessage _:
+                    Closed();
+                    break;
             }
         }
 

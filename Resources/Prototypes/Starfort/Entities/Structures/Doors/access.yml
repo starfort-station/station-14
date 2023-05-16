@@ -55,10 +55,17 @@
     access: [["Expedition"]]
 
 - type: entity
-  parent: AirlockExpeditionSergeant
-  id: AirlockExpeditionSergeantLocked
+  parent: AirlockExpedition
+  id: AirlockExpeditionLockedSergeant 
   suffix: Expedition, Sergeant, Locked
   components:
   - type: AccessReader
     access: [["Sergeant"]]   
  
+- type: entity
+  parent: AirlockExpeditionGlass
+  id: AirlockExpeditionGlassLockedSergeant 
+  suffix: Expedition, Sergeant, Locked
+  components:
+  - type: AccessReader
+    access: [["Sergeant"]]

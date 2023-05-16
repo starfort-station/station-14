@@ -455,17 +455,6 @@ namespace Content.Shared.CCVar
         public static readonly CVarDef<int> DatabaseSqliteDelay =
             CVarDef.Create("database.sqlite_delay", DefaultSqliteDelay, CVar.SERVERONLY);
 
-        /// <summary>
-        /// Amount of concurrent SQLite database operations.
-        /// </summary>
-        /// <remarks>
-        /// Note that SQLite is not a properly asynchronous database and also has limited read/write concurrency.
-        /// Increasing this number may allow more concurrent reads, but it probably won't matter much.
-        /// SQLite operations are normally ran on the thread pool, which may cause thread pool starvation if the concurrency is too high.
-        /// </remarks>
-        public static readonly CVarDef<int> DatabaseSqliteConcurrency =
-            CVarDef.Create("database.sqlite_concurrency", 3, CVar.SERVERONLY);
-
 #if DEBUG
         private const int DefaultSqliteDelay = 1;
 #else
@@ -578,9 +567,6 @@ namespace Content.Shared.CCVar
         public static readonly CVarDef<bool> HudHeldItemShow =
             CVarDef.Create("hud.held_item_show", true, CVar.ARCHIVE | CVar.CLIENTONLY);
 
-        public static readonly CVarDef<bool> CombatModeIndicatorsPointShow =
-            CVarDef.Create("hud.combat_mode_indicators_point_show", true, CVar.ARCHIVE | CVar.CLIENTONLY);
-
         public static readonly CVarDef<float> HudHeldItemOffset =
             CVarDef.Create("hud.held_item_offset", 28f, CVar.ARCHIVE | CVar.CLIENTONLY);
 
@@ -623,12 +609,6 @@ namespace Content.Shared.CCVar
 
         public static readonly CVarDef<bool> AdminAnnounceLogout =
             CVarDef.Create("admin.announce_logout", true, CVar.SERVERONLY);
-
-        /// <summary>
-        ///     Minimum explosion intensity to create an admin alert message. -1 to disable the alert.
-        /// </summary>
-        public static readonly CVarDef<int> AdminAlertExplosionMinIntensity =
-            CVarDef.Create("admin.alert.explosion_min_intensity", 60, CVar.SERVERONLY);
 
         /*
          * Explosions
@@ -928,7 +908,7 @@ namespace Content.Shared.CCVar
         /// Whether or not OOC chat should be enabled during a round.
         /// </summary>
         public static readonly CVarDef<bool> OocEnableDuringRound =
-            CVarDef.Create("ooc.enable_during_round", false, CVar.NOTIFY | CVar.REPLICATED | CVar.SERVER);
+            CVarDef.Create("ooc.enable_during_round", false, CVar.NOTIFY | CVar.REPLICATED |CVar.SERVER);
 
         /*
          * LOOC
@@ -1097,7 +1077,7 @@ namespace Content.Shared.CCVar
         /// Cooldown between arrivals departures. This should be longer than the FTL time or it will double cycle.
         /// </summary>
         public static readonly CVarDef<float> ArrivalsCooldown =
-            CVarDef.Create("shuttle.arrivals_cooldown", 50f, CVar.SERVERONLY);
+            CVarDef.Create("shuttle.arrivals_cooldown", 90f, CVar.SERVERONLY);
 
         /// <summary>
         /// Are players allowed to return on the arrivals shuttle.
@@ -1110,12 +1090,6 @@ namespace Content.Shared.CCVar
         /// </summary>
         public static readonly CVarDef<bool> CargoShuttles =
             CVarDef.Create("shuttle.cargo", true, CVar.SERVERONLY);
-
-        /// <summary>
-        /// Whether to automatically spawn escape shuttles.
-        /// </summary>
-        public static readonly CVarDef<bool> DisableGridFill =
-            CVarDef.Create("shuttle.disable_grid_fill", false, CVar.SERVERONLY);
 
         /*
          * Emergency

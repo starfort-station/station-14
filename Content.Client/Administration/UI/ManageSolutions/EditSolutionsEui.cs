@@ -16,7 +16,7 @@ namespace Content.Client.Administration.UI.ManageSolutions
         public EditSolutionsEui()
         {
             _window = new EditSolutionsWindow();
-            _window.OnClose += () => SendMessage(new CloseEuiMessage());
+            _window.OnClose += () => SendMessage(new EditSolutionsEuiMsg.Close());
         }
 
         public override void Opened()
@@ -28,6 +28,7 @@ namespace Content.Client.Administration.UI.ManageSolutions
         public override void Closed()
         {
             base.Closed();
+            _window.OnClose -= () => SendMessage(new EditSolutionsEuiMsg.Close());
             _window.Close();
         }
 

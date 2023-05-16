@@ -123,7 +123,7 @@ namespace Content.Client.Storage.UI
                         {
                             HorizontalAlignment = HAlignment.Left,
                             VerticalAlignment = VAlignment.Center,
-                            SetSize = new Vector2(32.0f, 32.0f),
+                            MinSize = new Vector2(32.0f, 32.0f),
                             OverrideDirection = Direction.South,
                             Sprite = sprite
                         },

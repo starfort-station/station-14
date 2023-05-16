@@ -1,29 +1,43 @@
 - type: entity
-  parent: ClothingBeltStorageBase
-  id: ClothingBeltMilitaryERT
-  name: Belt-shoulder system of the ERT
-  description: A set of tactical webbing worn for ERT.
+  id: ClothingBeltMilitaryERTMedicFilled
+  parent: ClothingBeltMilitaryERTMedic
+  suffix: Filled
   components:
-  - type: Sprite
-    sprite: Clothing/Belt/militarywebbingERT.rsi
-  - type: Clothing
-    sprite: Clothing/Belt/militarywebbingERT.rsi
-  - type: Item
-    size: 80
-  - type: Storage
-    capacity: 80
+  - type: StorageFill
+    contents:
+      - id: EpinephrineChemistryBottle
+      - id: PowerCellHigh
+      - id: BicaridineChemistryBottle
+      - id: Cautery
+      - id: PillBicaridine
+        amount: 5
+      - id: Gauze
+        amount: 2
+      - id: Ointment
+        amount: 3
+      - id: Brutepack
+        amount: 2
+      - id: Bloodpack
+        amount: 3
+      - id: AdvancedCombatMedipen
+        amount: 3
 
 - type: entity
-  parent: ClothingBeltStorageBase
-  id: ClothingBeltMilitaryERTMedic
-  name: Belt-shoulder system of the ERT Medic
-  description: A set of tactical webbing worn for ERT.
+  id: ClothingBeltMilitaryERTFilled
+  parent: ClothingBeltMilitaryERT
+  suffix: Filled
   components:
-  - type: Sprite
-    sprite: Clothing/Belt/militarywebbingERT.rsi
-  - type: Clothing
-    sprite: Clothing/Belt/militarywebbingERT.rsi
-  - type: Item
-    size: 80
-  - type: Storage
-    capacity: 80
+  - type: StorageFill
+    contents:
+      - id: ClusterBangFull
+        amount: 2
+      - id: Handcuffs
+        amount: 3
+      - id: Zipties
+        amount: 3
+      - id: FlashlightSeclite
+      - id: Brutepack
+      - id: Ointment
+      - id: PillDexalin
+        amount: 3
+      - id: Stunbaton

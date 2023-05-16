@@ -1,3 +1,4 @@
+using static Robust.Shared.GameObjects.SharedSpriteComponent;
 
 namespace Content.Shared.Clothing;
 

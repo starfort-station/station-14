@@ -6,8 +6,7 @@ namespace Content.Shared.DeviceNetwork;
 public enum NetworkConfiguratorUiKey
 {
     List,
-    Configure,
-    Link
+    Configure
 }
 
 [Serializable, NetSerializable]
@@ -51,35 +50,5 @@ public sealed class NetworkConfiguratorButtonPressedMessage : BoundUserInterface
     public NetworkConfiguratorButtonPressedMessage(NetworkConfiguratorButtonKey buttonKey)
     {
         ButtonKey = buttonKey;
-    }
-}
-
-[Serializable, NetSerializable]
-public sealed class NetworkConfiguratorClearLinksMessage : BoundUserInterfaceMessage
-{
-
-}
-
-[Serializable, NetSerializable]
-public sealed class NetworkConfiguratorToggleLinkMessage : BoundUserInterfaceMessage
-{
-    public readonly string Source;
-    public readonly string Sink;
-
-    public NetworkConfiguratorToggleLinkMessage(string source, string sink)
-    {
-        Source = source;
-        Sink = sink;
-    }
-}
-
-[Serializable, NetSerializable]
-public sealed class NetworkConfiguratorLinksSaveMessage : BoundUserInterfaceMessage
-{
-    public readonly List<(string source, string sink)> Links;
-
-    public NetworkConfiguratorLinksSaveMessage(List<(string source, string sink)> links)
-    {
-        Links = links;
     }
 }

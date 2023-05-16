@@ -8,7 +8,11 @@
 <Box>
 <GuideEntityEmbed Entity="CapacitorStockPart"/>
 <GuideEntityEmbed Entity="MatterBinStockPart"/>
+<GuideEntityEmbed Entity="MicroLaserStockPart"/>
+</Box>
+<Box>
 <GuideEntityEmbed Entity="MicroManipulatorStockPart"/>
+<GuideEntityEmbed Entity="ScanningModuleStockPart"/>
 </Box>
 Вы можете изучить каждую деталь машины, чтобы узнать ее тип и рейтинг, который варьируется от 1 до 4.
 

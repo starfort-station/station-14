@@ -25,12 +25,11 @@ namespace Content.IntegrationTests.Tests.Utility
   - type: Physics
   - type: Fixtures
     fixtures:
-      fix1:
-        shape:
-          !type:PhysShapeAabb
-            bounds: ""-0.49,-0.49,0.49,0.49""
-        mask:
-        - Impassable
+    - shape:
+        !type:PhysShapeAabb
+          bounds: ""-0.49,-0.49,0.49,0.49""
+      mask:
+      - Impassable
 ";
 
         [Test]

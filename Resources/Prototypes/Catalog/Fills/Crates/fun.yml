@@ -16,12 +16,8 @@
       - id: PlushieRouny
       - id: PlushieRatvar
       - id: PlushieSharkBlue
-        orGroup: PlushieShark
-      - id: PlushieSharkGrey
-        orGroup: PlushieShark
       - id: PlushieAtmosian
       - id: PlushieDiona
-      - id: PlushieXeno
 
 - type: entity
   id: CrateFunInstrumentsVariety
@@ -189,16 +185,6 @@
       - id: DrinkLean
         amount: 4
       - id: KnifePlastic
-
-- type: entity
-  id: CrateFunWaterGuns
-  parent: CratePlastic
-  components:
-  - type: StorageFill
-    contents:
-      - id: WeaponWaterBlaster
-      - id: WeaponWaterPistol
-        amount: 5
 
 - type: entity
   id: CrateFunSyndicateSegway

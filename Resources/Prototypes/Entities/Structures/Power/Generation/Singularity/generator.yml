@@ -16,17 +16,16 @@
     bodyType: Static
   - type: Fixtures
     fixtures:
-      fix1:
-        shape:
-          # Using a circle here makes it a lot easier to pull it all the way from Cargo
-          !type:PhysShapeCircle
-            radius: 0.45
-        density: 190
-        # Keep an eye on ParticlesProjectile when adjusting these
-        mask:
-        - MachineMask
-        layer:
-        - Opaque
+    - shape:
+        # Using a circle here makes it a lot easier to pull it all the way from Cargo
+        !type:PhysShapeCircle
+          radius: 0.45
+      density: 190
+      # Keep an eye on ParticlesProjectile when adjusting these
+      mask:
+      - MachineMask
+      layer:
+      - Opaque
   - type: Transform
     anchored: true
     noRot: true
@@ -34,4 +33,4 @@
   - type: Pullable
   - type: GuideHelp
     guides: [ Singularity, Power ]
-
+  

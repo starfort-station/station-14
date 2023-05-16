@@ -8,11 +8,6 @@ namespace Content.Server.DeviceNetwork
     /// </summary>
     public static class DeviceNetworkConstants
     {
-        /// <summary>
-        /// Used by logic gates to transmit the state of their ports
-        /// </summary>
-        public const string LogicState = "logic_state";
-
         #region Commands
 
         /// <summary>

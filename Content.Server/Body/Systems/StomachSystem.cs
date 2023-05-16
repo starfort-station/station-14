@@ -16,6 +16,7 @@ namespace Content.Server.Body.Systems
 
         public override void Initialize()
         {
+            SubscribeLocalEvent<StomachComponent, ComponentInit>(OnComponentInit);
             SubscribeLocalEvent<StomachComponent, ApplyMetabolicMultiplierEvent>(OnApplyMetabolicMultiplier);
         }
 
@@ -84,6 +85,11 @@ namespace Content.Server.Body.Systems
             // Reset the accumulator properly
             if (component.AccumulatedFrameTime >= component.UpdateInterval)
                 component.AccumulatedFrameTime = component.UpdateInterval;
+        }
+
+        private void OnComponentInit(EntityUid uid, StomachComponent component, ComponentInit args)
+        {
+            _solutionContainerSystem.EnsureSolution(uid, DefaultSolutionName, component.InitialMaxVolume, out _);
         }
 
         public bool CanTransferSolution(EntityUid uid, Solution solution,

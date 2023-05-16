@@ -1,5 +1,4 @@
 using Content.Shared.Eye.Blinding;
-using Content.Shared.Eye.Blinding.Components;
 using Robust.Client.GameObjects;
 using Robust.Client.Graphics;
 using Robust.Client.Player;
@@ -22,6 +21,8 @@ public sealed class BlurryVisionSystem : EntitySystem
 
         SubscribeLocalEvent<BlurryVisionComponent, PlayerAttachedEvent>(OnPlayerAttached);
         SubscribeLocalEvent<BlurryVisionComponent, PlayerDetachedEvent>(OnPlayerDetached);
+
+        SubscribeLocalEvent<BlurryVisionComponent, ComponentHandleState>(OnHandleState);
 
         _overlay = new();
     }
@@ -48,5 +49,13 @@ public sealed class BlurryVisionSystem : EntitySystem
         {
             _overlayMan.RemoveOverlay(_overlay);
         }
+    }
+
+    private void OnHandleState(EntityUid uid, BlurryVisionComponent component, ref ComponentHandleState args)
+    {
+        if (args.Current is not BlurryVisionComponentState state)
+            return;
+
+        component.Magnitude = state.Magnitude;
     }
 }

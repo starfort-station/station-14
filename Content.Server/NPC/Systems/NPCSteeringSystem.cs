@@ -168,9 +168,6 @@ public sealed partial class NPCSteeringSystem : SharedNPCSteeringSystem
     {
         if (Resolve(uid, ref component, false))
         {
-            if (component.Coordinates.Equals(coordinates))
-                return component;
-
             component.PathfindToken?.Cancel();
             component.PathfindToken = null;
             component.CurrentPath.Clear();

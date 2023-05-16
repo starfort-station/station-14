@@ -2,10 +2,8 @@ using Content.Server.Atmos.Components;
 using Content.Server.Atmos.EntitySystems;
 using Content.Server.NodeContainer;
 using Content.Server.NodeContainer.NodeGroups;
-using Content.Server.Shuttles.Components;
 using Content.Shared.Atmos;
 using Content.Shared.Spreader;
-using Content.Shared.Tag;
 using Robust.Shared.Collections;
 using Robust.Shared.Map;
 using Robust.Shared.Map.Components;
@@ -29,18 +27,22 @@ public sealed class SpreaderSystem : EntitySystem
 
     private readonly List<string> _spreaderGroups = new();
 
-    private const string IgnoredTag = "SpreaderIgnore";
-
     /// <inheritdoc/>
     public override void Initialize()
     {
         SubscribeLocalEvent<AirtightChanged>(OnAirtightChanged);
         SubscribeLocalEvent<GridInitializeEvent>(OnGridInit);
+        SubscribeLocalEvent<SpreaderGridComponent, MapInitEvent>(OnSpreaderGridMapInit);
 
         SubscribeLocalEvent<SpreaderGridComponent, EntityUnpausedEvent>(OnGridUnpaused);
 
         SetupPrototypes();
         _prototype.PrototypesReloaded += OnPrototypeReload;
+    }
+
+    private void OnSpreaderGridMapInit(EntityUid uid, SpreaderGridComponent component, MapInitEvent args)
+    {
+        component.NextUpdate = _timing.CurTime;
     }
 
     public override void Shutdown()
@@ -176,11 +178,15 @@ public sealed class SpreaderSystem : EntitySystem
 
     private void Spread(EntityUid uid, SpreaderNode node, INodeGroup group, ref int updates)
     {
-        GetNeighbors(uid, node.Name, out var freeTiles, out _, out var neighbors);
+        GetNeighbors(uid, node.Name, out var freeTiles, out var occupiedTiles, out var neighbors);
+
+        TryComp<MapGridComponent>(Transform(uid).GridUid, out var grid);
 
         var ev = new SpreadNeighborsEvent()
         {
+            Grid = grid,
             NeighborFreeTiles = freeTiles,
+            NeighborOccupiedTiles = occupiedTiles,
             Neighbors = neighbors,
             Updates = updates,
         };
@@ -192,9 +198,9 @@ public sealed class SpreaderSystem : EntitySystem
     /// <summary>
     /// Gets the neighboring node data for the specified entity and the specified node group.
     /// </summary>
-    public void GetNeighbors(EntityUid uid, string groupName, out ValueList<(MapGridComponent Grid, Vector2i Tile)> freeTiles, out ValueList<Vector2i> occupiedTiles, out ValueList<EntityUid> neighbors)
+    public void GetNeighbors(EntityUid uid, string groupName, out ValueList<Vector2i> freeTiles, out ValueList<Vector2i> occupiedTiles, out ValueList<EntityUid> neighbors)
     {
-        freeTiles = new ValueList<(MapGridComponent Grid, Vector2i Tile)>();
+        freeTiles = new ValueList<Vector2i>();
         occupiedTiles = new ValueList<Vector2i>();
         neighbors = new ValueList<EntityUid>();
 
@@ -207,82 +213,47 @@ public sealed class SpreaderSystem : EntitySystem
         var tile = grid.TileIndicesFor(transform.Coordinates);
         var nodeQuery = GetEntityQuery<NodeContainerComponent>();
         var airtightQuery = GetEntityQuery<AirtightComponent>();
-        var dockQuery = GetEntityQuery<DockingComponent>();
-        var xformQuery = GetEntityQuery<TransformComponent>();
-        var tagQuery = GetEntityQuery<TagComponent>();
-        var blockedAtmosDirs = AtmosDirection.Invalid;
 
-        // Due to docking ports they may not necessarily be opposite directions.
-        var neighborTiles = new ValueList<(MapGridComponent grid, Vector2i Indices, AtmosDirection OtherDir, AtmosDirection OurDir)>();
-
-        // Check if anything on our own tile blocking that direction.
-        var ourEnts = grid.GetAnchoredEntitiesEnumerator(tile);
-
-        while (ourEnts.MoveNext(out var ent))
-        {
-            // Spread via docks in a special-case.
-            if (dockQuery.TryGetComponent(ent, out var dock) &&
-                dock.Docked &&
-                xformQuery.TryGetComponent(ent, out var xform) &&
-                xformQuery.TryGetComponent(dock.DockedWith, out var dockedXform) &&
-                TryComp<MapGridComponent>(dockedXform.GridUid, out var dockedGrid))
-            {
-                neighborTiles.Add((dockedGrid, dockedGrid.CoordinatesToTile(dockedXform.Coordinates), xform.LocalRotation.ToAtmosDirection(), dockedXform.LocalRotation.ToAtmosDirection()));
-            }
-
-            // If we're on a blocked tile work out which directions we can go.
-            if (!airtightQuery.TryGetComponent(ent, out var airtight) || !airtight.AirBlocked ||
-                tagQuery.TryGetComponent(ent, out var tags) && tags.Tags.Contains(IgnoredTag))
-            {
-                continue;
-            }
-
-            foreach (var value in new[] { AtmosDirection.North, AtmosDirection.East, AtmosDirection.South, AtmosDirection.West})
-            {
-                if ((value & airtight.AirBlockedDirection) == 0x0)
-                    continue;
-
-                blockedAtmosDirs |= value;
-                break;
-            }
-            break;
-        }
-
-        // Add the normal neighbors.
         for (var i = 0; i < 4; i++)
         {
             var direction = (Direction) (i * 2);
-            var atmosDir = direction.ToAtmosDirection();
             var neighborPos = SharedMapSystem.GetDirection(tile, direction);
-            neighborTiles.Add((grid, neighborPos, atmosDir, atmosDir.GetOpposite()));
-        }
 
-        foreach (var (neighborGrid, neighborPos, ourAtmosDir, otherAtmosDir) in neighborTiles)
-        {
-            // This tile is blocked to that direction.
-            if ((blockedAtmosDirs & ourAtmosDir) != 0x0)
-                continue;
-
-            if (!neighborGrid.TryGetTileRef(neighborPos, out var tileRef) || tileRef.Tile.IsEmpty)
+            if (!grid.TryGetTileRef(neighborPos, out var tileRef) || tileRef.Tile.IsEmpty)
                 continue;
 
             var directionEnumerator =
-                neighborGrid.GetAnchoredEntitiesEnumerator(neighborPos);
+                grid.GetAnchoredEntitiesEnumerator(neighborPos);
             var occupied = false;
 
             while (directionEnumerator.MoveNext(out var ent))
             {
-                if (!airtightQuery.TryGetComponent(ent, out var airtight) || !airtight.AirBlocked ||
-                    tagQuery.TryGetComponent(ent, out var tags) && tags.Tags.Contains(IgnoredTag))
+                if (airtightQuery.TryGetComponent(ent, out var airtight) && airtight.AirBlocked)
                 {
-                    continue;
+                    // Check if air direction matters.
+                    var blocked = false;
+
+                    foreach (var value in new[] { AtmosDirection.North, AtmosDirection.East})
+                    {
+                        if ((value & airtight.AirBlockedDirection) == 0x0)
+                            continue;
+
+                        var airDirection = value.ToDirection();
+                        var oppositeDirection = value.ToDirection().GetOpposite();
+
+                        if (direction != airDirection && direction != oppositeDirection)
+                            continue;
+
+                        blocked = true;
+                        break;
+                    }
+
+                    if (!blocked)
+                        continue;
+
+                    occupied = true;
+                    break;
                 }
-
-                if ((airtight.AirBlockedDirection & otherAtmosDir) == 0x0)
-                    continue;
-
-                occupied = true;
-                break;
             }
 
             if (occupied)
@@ -290,7 +261,7 @@ public sealed class SpreaderSystem : EntitySystem
 
             var oldCount = occupiedTiles.Count;
             directionEnumerator =
-                neighborGrid.GetAnchoredEntitiesEnumerator(neighborPos);
+                grid.GetAnchoredEntitiesEnumerator(neighborPos);
 
             while (directionEnumerator.MoveNext(out var ent))
             {
@@ -306,7 +277,7 @@ public sealed class SpreaderSystem : EntitySystem
             }
 
             if (oldCount == occupiedTiles.Count)
-                freeTiles.Add((neighborGrid, neighborPos));
+                freeTiles.Add(neighborPos);
         }
     }
 

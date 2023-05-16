@@ -12,6 +12,3 @@
 
 - type: playTimeTracker
   id: JobFieldCommander
-
-- type: playTimeTracker
-  id: JobFieldRecrut

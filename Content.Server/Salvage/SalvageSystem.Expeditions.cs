@@ -232,9 +232,6 @@ public sealed partial class SalvageSystem
         if (configs.Count == 0)
             return;
 
-        // Temporarily removed coz it SUCKS
-        configs.Remove(SalvageMissionType.Mining);
-
         for (var i = 0; i < MissionLimit; i++)
         {
             _random.Shuffle(configs);

@@ -1,6 +1,4 @@
-using Content.Client.NetworkConfigurator.Systems;
 using Content.Shared.DeviceNetwork;
-using Content.Shared.DeviceNetwork.Components;
 using Robust.Client.Graphics;
 using Robust.Shared.Enums;
 using Robust.Shared.Random;

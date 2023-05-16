@@ -11,7 +11,6 @@
   - type: Clothing
     sprite: Clothing/Belt/utility.rsi
   - type: Storage
-    capacity: 45
     # TODO: Fill this out more.
     whitelist:
       tags:
@@ -27,11 +26,10 @@
         - CigPack
         - Radio
         - HolofanProjector
-        - Multitool
         - AppraisalTool
       components:
         - AirlockPainter
-        - NetworkConfigurator
+        - SignalLinker
         - RCD
         - RCDAmmo
         - Welder
@@ -65,8 +63,8 @@
           - Wrench
       multitool:
         whitelist:
-          tags:
-            - Multitool
+          components:
+          - SignalLinker
     sprite: Clothing/Belt/belt_overlay.rsi
   - type: Appearance
 
@@ -81,7 +79,7 @@
   - type: Clothing
     sprite: Clothing/Belt/ce.rsi
   - type: Storage
-    capacity: 105
+    capacity: 100
     # TODO: Fill this out more.
     whitelist:
       tags:
@@ -98,11 +96,10 @@
         - CigPack
         - Radio
         - HolofanProjector
-        - Multitool
         - AppraisalTool
       components:
         - AirlockPainter
-        - NetworkConfigurator
+        - SignalLinker
         - RCD
         - RCDAmmo
         - Welder
@@ -138,8 +135,8 @@
           - Screwdriver
       multitool:
         whitelist:
-          tags:
-            - Multitool
+          components:
+          - SignalLinker
       wrench:
         whitelist:
           tags:
@@ -244,13 +241,12 @@
         - Gauze
         - Ointment
         - CigPack
+        - Pill
         - PillCanister
         - Radio
-        - DiscreteHealthAnalyzer
       components:
         - Hypospray
         - Injector
-        - Pill
   - type: ItemMapper
     mapLayers:
       bottle:
@@ -263,9 +259,8 @@
           - Hypospray
       pill:
         whitelist:
-          components:
-          - Pill
           tags:
+          - Pill
           - PillCanister
       bottle_spray:
         whitelist:
@@ -511,9 +506,9 @@
   - type: Clothing
     sprite: Clothing/Belt/militarywebbingmed.rsi
   - type: Item
-    size: 70
+    size: 60
   - type: Storage
-    capacity: 70
+    capacity: 60
 
 - type: entity
   parent: ClothingBeltBase
@@ -521,9 +516,6 @@
   name: suspenders
   description: For holding your pants up.
   components:
-  - type: Tag
-    tags:
-    - MimeBelt
   - type: Sprite
     sprite: Clothing/Belt/suspenders.rsi
     state: icon

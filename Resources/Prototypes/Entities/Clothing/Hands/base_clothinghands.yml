@@ -7,3 +7,5 @@
     state: icon
   - type: Clothing
     slots: [gloves]
+  - type: DiseaseProtection
+    protection: 0.05

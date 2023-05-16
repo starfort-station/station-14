@@ -14,7 +14,11 @@ public sealed class SpawnExplosionEui : BaseEui
 {
     public override void HandleMessage(EuiMessageBase msg)
     {
-        base.HandleMessage(msg);
+        if (msg is SpawnExplosionEuiMsg.Close)
+        {
+            Close();
+            return;
+        }
 
         if (msg is not SpawnExplosionEuiMsg.PreviewRequest request)
             return;

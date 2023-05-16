@@ -261,7 +261,7 @@ namespace Content.Server.GameTicking
                     return;
                 }
 
-                _sawmill.Error($"Exception caught while trying to start the round! Restarting round...");
+                _sawmill.Warning($"Exception caught while trying to start the round! Restarting round...");
                 _runtimeLog.LogException(e, nameof(GameTicker));
                 _startingRound = false;
                 RestartRound();
@@ -491,6 +491,7 @@ namespace Content.Server.GameTicking
             // Clear up any game rules.
             ClearGameRules();
 
+            _addedGameRules.Clear();
             _allPreviousGameRules.Clear();
 
             // Round restart cleanup event, so entity systems can reset.

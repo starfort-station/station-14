@@ -11,7 +11,7 @@ public partial class SharedGunSystem
     [Dependency] private readonly INetManager _netMan = default!;
     [Dependency] private readonly SharedContainerSystem _container = default!;
 
-    private void InitializeContainer()
+    public void InitializeContainer()
     {
         SubscribeLocalEvent<ContainerAmmoProviderComponent, TakeAmmoEvent>(OnContainerTakeAmmo);
         SubscribeLocalEvent<ContainerAmmoProviderComponent, GetAmmoCountEvent>(OnContainerAmmoCount);
@@ -19,11 +19,10 @@ public partial class SharedGunSystem
 
     private void OnContainerTakeAmmo(EntityUid uid, ContainerAmmoProviderComponent component, TakeAmmoEvent args)
     {
-        component.ProviderUid ??= uid;
-        if (!_container.TryGetContainer(component.ProviderUid.Value, component.Container, out var container))
+        if (!_container.TryGetContainer(uid, component.Container, out var container))
             return;
 
-        for (var i = 0; i < args.Shots; i++)
+        for (int i = 0; i < args.Shots; i++)
         {
             if (!container.ContainedEntities.Any())
                 break;
@@ -39,8 +38,7 @@ public partial class SharedGunSystem
 
     private void OnContainerAmmoCount(EntityUid uid, ContainerAmmoProviderComponent component, ref GetAmmoCountEvent args)
     {
-        component.ProviderUid ??= uid;
-        if (!_container.TryGetContainer(component.ProviderUid.Value, component.Container, out var container))
+        if (!_container.TryGetContainer(uid, component.Container, out var container))
         {
             args.Capacity = 0;
             args.Count = 0;

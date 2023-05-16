@@ -29,16 +29,6 @@
 
 - type: entity
   noSpawn: true
-  parent: ClothingBackpackDuffelBrigmedic
-  id: ClothingBackpackDuffelBrigmedicFilled
-  components:
-  - type: StorageFill
-    contents:
-      - id: BoxSurvivalBrigmedic
-      - id: Flash
-
-- type: entity
-  noSpawn: true
   parent: ClothingBackpackDuffelMedical
   id: ClothingBackpackDuffelMedicalFilled
   components:
@@ -97,7 +87,7 @@
   components:
   - type: StorageFill
     contents:
-      - id: BoxSurvivalMedical
+      - id: BoxSurvival
       - id: Flash
       #- id: TelescopicBaton
 
@@ -119,7 +109,7 @@
   components:
   - type: StorageFill
     contents:
-      - id: BoxSurvivalSecurity
+      - id: BoxSurvival
       - id: Flash
 
 - type: entity

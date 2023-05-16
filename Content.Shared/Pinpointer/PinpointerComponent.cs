@@ -1,60 +1,57 @@
 using Robust.Shared.GameStates;
 using Robust.Shared.Serialization;
 
-namespace Content.Shared.Pinpointer;
-
-/// <summary>
-/// Displays a sprite on the item that points towards the target component.
-/// </summary>
-[RegisterComponent, NetworkedComponent]
-[AutoGenerateComponentState]
-[Access(typeof(SharedPinpointerSystem))]
-public sealed partial class PinpointerComponent : Component
+namespace Content.Shared.Pinpointer
 {
-    // TODO: Type serializer oh god
-    [DataField("component")]
-    public string? Component;
-
-    [DataField("mediumDistance"), ViewVariables(VVAccess.ReadWrite)]
-    public float MediumDistance = 16f;
-
-    [DataField("closeDistance"), ViewVariables(VVAccess.ReadWrite)]
-    public float CloseDistance = 8f;
-
-    [DataField("reachedDistance"), ViewVariables(VVAccess.ReadWrite)]
-    public float ReachedDistance = 1f;
-
     /// <summary>
-    ///     Pinpointer arrow precision in radians.
+    /// Displays a sprite on the item that points towards the target component.
     /// </summary>
-    [DataField("precision"), ViewVariables(VVAccess.ReadWrite)]
-    public double Precision = 0.09;
+    [RegisterComponent]
+    [NetworkedComponent]
+    [Access(typeof(SharedPinpointerSystem))]
+    public sealed class PinpointerComponent : Component
+    {
+        // TODO: Type serializer oh god
+        [DataField("component")]
+        public string? Component;
 
-    [ViewVariables]
-    public EntityUid? Target = null;
+        [DataField("mediumDistance")]
+        public float MediumDistance = 16f;
 
-    [ViewVariables]
-    [AutoNetworkedField]
-    public bool IsActive = false;
+        [DataField("closeDistance")]
+        public float CloseDistance = 8f;
 
-    [ViewVariables]
-    [AutoNetworkedField]
-    public Angle ArrowAngle;
+        [DataField("reachedDistance")]
+        public float ReachedDistance = 1f;
 
-    [ViewVariables]
-    [AutoNetworkedField]
-    public Distance DistanceToTarget = Distance.Unknown;
+        /// <summary>
+        ///     Pinpointer arrow precision in radians.
+        /// </summary>
+        [DataField("precision")]
+        public double Precision = 0.09;
 
-    [ViewVariables]
-    public bool HasTarget => DistanceToTarget != Distance.Unknown;
-}
+        public EntityUid? Target = null;
+        public bool IsActive = false;
+        public Angle ArrowAngle;
+        public Distance DistanceToTarget = Distance.Unknown;
+        public bool HasTarget => DistanceToTarget != Distance.Unknown;
+    }
 
-[Serializable, NetSerializable]
-public enum Distance : byte
-{
-    Unknown,
-    Reached,
-    Close,
-    Medium,
-    Far
+    [Serializable, NetSerializable]
+    public sealed class PinpointerComponentState : ComponentState
+    {
+        public bool IsActive;
+        public Angle ArrowAngle;
+        public Distance DistanceToTarget;
+    }
+
+    [Serializable, NetSerializable]
+    public enum Distance : byte
+    {
+        Unknown,
+        Reached,
+        Close,
+        Medium,
+        Far
+    }
 }

@@ -130,7 +130,7 @@ public sealed class BackgroundAudioSystem : EntitySystem
     {
         if (_playMan.LocalPlayer is null
             || _playMan.LocalPlayer.ControlledEntity != message.Entity
-            || !(_timing.IsFirstTimePredicted || _timing.ApplyingState))
+            || !_timing.IsFirstTimePredicted)
             return;
 
         // Check if we traversed to grid.

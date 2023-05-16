@@ -24,6 +24,3 @@ ent-WallRockTin = { ent-WallRock }
 ent-WallRockUranium = { ent-WallRock }
     .desc = Рудная жила, богатая ураном.
     .suffix = Уран
-ent-WallRockBananium = { ent-WallRock }
-    .desc = Рудная жила, богатая бананиумом.
-    .suffix = Бананиум

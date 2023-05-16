@@ -28,7 +28,8 @@ public sealed partial class TriggerSystem
                 timerTrigger.Delay,
                 timerTrigger.BeepInterval,
                 timerTrigger.InitialBeepDelay,
-                timerTrigger.BeepSound);
+                timerTrigger.BeepSound,
+                timerTrigger.BeepParams);
         }
 
         else

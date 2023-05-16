@@ -46,20 +46,9 @@
   parent: ClothingUniformBase
   id: ClothingUniformJumpsuitFieldCommander
   name: field commander jumpsuit
-  description: Uniform for convenient management of your freight forwarders.
+  description: Uniform for convenient management of your freight forwarders
   components:
   - type: Sprite
     sprite: Starfort/Clothing/Uniforms/Jumpsuit/field_commander.rsi
   - type: Clothing
     sprite: Starfort/Clothing/Uniforms/Jumpsuit/field_commander.rsi
-
-- type: entity
-  parent: ClothingUniformBase
-  id: ClothingUniformJumpsuitFieldRecrut
-  name: field recrut jumpsuit
-  description: Uniform for expedition squad performing operations in deep space.
-  components:
-  - type: Sprite
-    sprite: Starfort/Clothing/Uniforms/Jumpsuit/field_recrut.rsi
-  - type: Clothing
-    sprite: Starfort/Clothing/Uniforms/Jumpsuit/field_recrut.rsi

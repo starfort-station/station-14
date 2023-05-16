@@ -110,20 +110,19 @@
     state: contrabass
   - type: Fixtures
     fixtures:
-      fix1:
-        shape:
-          !type:PhysShapeCircle
-          radius: 0.30
-        density: 180
-        mask:
-        - Impassable
-        - HighImpassable
-        - MidImpassable
-        layer:
-        - Opaque
-        - HighImpassable
-        - MidImpassable
-        - BulletImpassable
+    - shape:
+        !type:PhysShapeCircle
+        radius: 0.30
+      density: 180
+      mask:
+      - Impassable
+      - HighImpassable
+      - MidImpassable
+      layer:
+      - Opaque
+      - HighImpassable
+      - MidImpassable
+      - BulletImpassable
 
 - type: entity
   name: minimoog

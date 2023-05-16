@@ -1,11 +1,12 @@
 using Content.Server.Body.Systems;
-using Content.Shared.Buckle;
+using Content.Server.Buckle.Systems;
 using Content.Server.Popups;
 using Content.Server.Storage.Components;
 using Content.Server.Storage.EntitySystems;
 using Content.Shared.Body.Components;
 using Content.Shared.Body.Part;
 using Content.Shared.Buckle.Components;
+using Content.Shared.DoAfter;
 using Content.Shared.Examine;
 using Content.Shared.IdentityManagement;
 using Content.Shared.Interaction;
@@ -36,7 +37,7 @@ namespace Content.Server.Toilet
             SubscribeLocalEvent<ToiletComponent, ComponentInit>(OnInit);
             SubscribeLocalEvent<ToiletComponent, MapInitEvent>(OnMapInit);
             SubscribeLocalEvent<ToiletComponent, InteractUsingEvent>(OnInteractUsing);
-            SubscribeLocalEvent<ToiletComponent, InteractHandEvent>(OnInteractHand, new []{typeof(SharedBuckleSystem)});
+            SubscribeLocalEvent<ToiletComponent, InteractHandEvent>(OnInteractHand, new []{typeof(BuckleSystem)});
             SubscribeLocalEvent<ToiletComponent, ExaminedEvent>(OnExamine);
             SubscribeLocalEvent<ToiletComponent, SuicideEvent>(OnSuicide);
             SubscribeLocalEvent<ToiletComponent, ToiletPryDoAfterEvent>(OnToiletPried);

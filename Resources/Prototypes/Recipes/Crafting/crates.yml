@@ -33,7 +33,7 @@
 
 - type: construction
   name: cardboard box
-  id: BigBox
+  id: BaseBigBox
   graph: BaseBigBox
   startNode: start
   targetNode: basebigbox

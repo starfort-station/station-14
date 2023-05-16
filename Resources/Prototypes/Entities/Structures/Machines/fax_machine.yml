@@ -19,15 +19,14 @@
     bodyType: Static
   - type: Fixtures
     fixtures:
-      fix1:
-        shape:
-          !type:PhysShapeAabb
-          bounds: "-0.25,-0.25,0.25,0.25"
-        density: 25
-        mask:
-        - TabletopMachineMask
-        layer:
-        - TabletopMachineLayer
+    - shape:
+        !type:PhysShapeAabb
+        bounds: "-0.25,-0.25,0.25,0.25"
+      density: 25
+      mask:
+      - TabletopMachineMask
+      layer:
+      - TabletopMachineLayer
   - type: ActivatableUI
     key: enum.FaxUiKey.Key
   - type: ActivatableUIRequiresPower

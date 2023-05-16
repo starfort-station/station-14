@@ -4,21 +4,24 @@ using Robust.Client.Player;
 using Robust.Shared.Enums;
 using Robust.Shared.Prototypes;
 using Content.Shared.Eye.Blinding;
-using Content.Shared.Eye.Blinding.Components;
 
 namespace Content.Client.Eye.Blinding
 {
     public sealed class BlurryVisionOverlay : Overlay
     {
+        [Dependency] private readonly IPrototypeManager _prototypeManager = default!;
         [Dependency] private readonly IEntityManager _entityManager = default!;
         [Dependency] private readonly IPlayerManager _playerManager = default!;
 
+        public override bool RequestScreenTexture => true;
         public override OverlaySpace Space => OverlaySpace.WorldSpace;
-        private float _magnitude;
+        private readonly ShaderInstance _dim;
+        private BlurryVisionComponent _blurryVisionComponent = default!;
 
         public BlurryVisionOverlay()
         {
             IoCManager.InjectDependencies(this);
+            _dim = _prototypeManager.Index<ShaderPrototype>("Dim").InstanceUnique();
         }
 
         protected override bool BeforeDraw(in OverlayDrawArgs args)
@@ -37,29 +40,33 @@ namespace Content.Client.Eye.Blinding
             if (!_entityManager.TryGetComponent<BlurryVisionComponent>(playerEntity, out var blurComp))
                 return false;
 
-            if (blurComp.Magnitude <= 0)
+            if (!blurComp.Active)
                 return false;
 
             if (_entityManager.TryGetComponent<BlindableComponent>(playerEntity, out var blindComp)
-                && blindComp.IsBlind)
+                && blindComp.Sources > 0)
                 return false;
 
-            _magnitude = blurComp.Magnitude;
+            _blurryVisionComponent = blurComp;
             return true;
         }
 
         protected override void Draw(in OverlayDrawArgs args)
         {
-            // TODO make this better.
-            // This is a really shitty effect.
-            // Maybe gradually shrink the view-size?
-            // Make the effect only apply to the edge of the viewport?
-            // Actually make it blurry??
-            var opacity =  0.75f * _magnitude / BlurryVisionComponent.MaxMagnitude;
+            if (ScreenTexture == null)
+                return;
+
+            var opacity = -(_blurryVisionComponent.Magnitude / 15) + 0.9f;
+
+            _dim.SetParameter("DAMAGE_AMOUNT", opacity);
+
             var worldHandle = args.WorldHandle;
             var viewport = args.WorldBounds;
+
+            worldHandle.UseShader(_dim);
             worldHandle.SetTransform(Matrix3.Identity);
-            worldHandle.DrawRect(viewport, Color.Black.WithAlpha(opacity));
+            worldHandle.DrawRect(viewport, Color.Black);
+            worldHandle.UseShader(null);
         }
     }
 }

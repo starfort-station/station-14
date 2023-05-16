@@ -16,7 +16,8 @@
     - node: frame1
       entity: FirelockFrame
       actions:
-      - !type:AppearanceChange
+        - !type:SpriteStateChange
+          state: frame1
       edges:
         - to: frame2
           conditions:
@@ -41,7 +42,8 @@
 
     - node: frame2
       actions:
-      - !type:AppearanceChange
+        - !type:SpriteStateChange
+          state: frame2
       edges:
         - to: frame3
           conditions:
@@ -69,7 +71,8 @@
 
     - node: frame3
       actions:
-      - !type:AppearanceChange
+        - !type:SpriteStateChange
+          state: frame3
       edges:
         - to: frame4
           conditions:
@@ -91,7 +94,8 @@
     - node: frame4
       entity: FirelockFrame
       actions:
-      - !type:AppearanceChange
+        - !type:SpriteStateChange
+          state: frame4
       edges:
         - to: Firelock
           conditions:

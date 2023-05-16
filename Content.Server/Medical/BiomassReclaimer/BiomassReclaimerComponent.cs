@@ -63,7 +63,7 @@ namespace Content.Server.Medical.BiomassReclaimer
         /// Machine part whose rating modifies the yield per mass.
         /// </summary>
         [DataField("machinePartYieldAmount", customTypeSerializer: typeof(PrototypeIdSerializer<MachinePartPrototype>))]
-        public string MachinePartYieldAmount = "MatterBin";
+        public string MachinePartYieldAmount = "Manipulator";
 
         /// <summary>
         /// How much the machine part quality affects the yield.
@@ -89,7 +89,7 @@ namespace Content.Server.Medical.BiomassReclaimer
         /// The machine part that increses the processing speed.
         /// </summary>
         [DataField("machinePartProcessSpeed", customTypeSerializer: typeof(PrototypeIdSerializer<MachinePartPrototype>))]
-        public string MachinePartProcessingSpeed = "Manipulator";
+        public string MachinePartProcessingSpeed = "Laser";
 
         /// <summary>
         /// How much the machine part quality affects the yield.

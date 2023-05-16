@@ -91,23 +91,6 @@ namespace Content.Server.Construction
         }
 
         /// <summary>
-        ///     Variant of <see cref="GetCurrentEdge"/> that returns both the node and edge.
-        /// </summary>
-        public (ConstructionGraphNode?, ConstructionGraphEdge?) GetCurrentNodeAndEdge(EntityUid uid, ConstructionComponent? construction = null)
-        {
-            if (!Resolve(uid, ref construction, false))
-                return (null, null);
-
-            if (GetCurrentNode(uid, construction) is not { } node)
-                return (null, null);
-
-            if (construction.EdgeIndex is not {} edgeIndex)
-                return (node, null);
-
-            return (node, GetEdgeFromNode(node, edgeIndex));
-        }
-
-        /// <summary>
         ///     Gets the construction graph step the entity is currently at, or null.
         /// </summary>
         /// <param name="uid">The target entity.</param>
@@ -342,7 +325,6 @@ namespace Content.Server.Construction
 
             // Transform transferring.
             var newTransform = Transform(newUid);
-            newTransform.AttachToGridOrMap(); // in case in hands or a container
             newTransform.LocalRotation = transform.LocalRotation;
             newTransform.Anchored = transform.Anchored;
 

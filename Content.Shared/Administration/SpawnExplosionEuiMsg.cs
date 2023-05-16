@@ -7,6 +7,9 @@ namespace Content.Shared.Administration;
 
 public static class SpawnExplosionEuiMsg
 {
+    [Serializable, NetSerializable]
+    public sealed class Close : EuiMessageBase { }
+
     /// <summary>
     ///     This message is sent to the server to request explosion preview data.
     /// </summary>

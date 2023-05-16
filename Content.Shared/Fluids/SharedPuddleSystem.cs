@@ -11,8 +11,6 @@ public abstract class SharedPuddleSystem : EntitySystem
     /// </summary>
     public const float LowThreshold = 0.3f;
 
-    public const float MediumThreshold = 0.6f;
-
     public override void Initialize()
     {
         base.Initialize();

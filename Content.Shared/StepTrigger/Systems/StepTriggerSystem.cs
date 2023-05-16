@@ -128,7 +128,7 @@ public sealed class StepTriggerSystem : EntitySystem
 
     private void OnStartCollide(EntityUid uid, StepTriggerComponent component, ref StartCollideEvent args)
     {
-        var otherUid = args.OtherEntity;
+        var otherUid = args.OtherFixture.Body.Owner;
 
         if (!args.OtherFixture.Hard)
             return;
@@ -146,7 +146,7 @@ public sealed class StepTriggerSystem : EntitySystem
 
     private void OnEndCollide(EntityUid uid, StepTriggerComponent component, ref EndCollideEvent args)
     {
-        var otherUid = args.OtherEntity;
+        var otherUid = args.OtherFixture.Body.Owner;
 
         if (!component.Colliding.Remove(otherUid))
             return;

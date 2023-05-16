@@ -6,18 +6,6 @@ namespace Content.Server.Shuttles.Components
         [ViewVariables]
         public bool Enabled = true;
 
-        [ViewVariables]
-        public Vector2[] CenterOfThrust = new Vector2[4];
-
-        /// <summary>
-        /// Thrust gets multiplied by this value if it's for braking.
-        /// </summary>
-        public const float BrakeCoefficient = 1.5f;
-
-        public const float MaxLinearVelocity = 10f;
-
-        public const float MaxAngularVelocity = 1f;
-
         /// <summary>
         /// The cached thrust available for each cardinal direction
         /// </summary>

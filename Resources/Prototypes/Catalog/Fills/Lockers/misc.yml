@@ -125,8 +125,6 @@
           prob: 0.1
         - id: ClothingHandsGlovesColorYellowBudget
           prob: 0.25
-        - id: StrangePill
-          prob: 0.20
 
 - type: entity
   id: ClosetWallMaintenanceFilledRandom

@@ -1,7 +1,6 @@
 using Content.Shared.Cloning;
 using Content.Shared.Construction.Prototypes;
 using Content.Shared.Materials;
-using Robust.Shared.Audio;
 using Robust.Shared.Containers;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Serialization.TypeSerializers.Implementations.Custom.Prototype;
@@ -50,34 +49,13 @@ namespace Content.Server.Cloning.Components
         /// The machine part that affects cloning speed
         /// </summary>
         [DataField("machinePartCloningSpeed", customTypeSerializer: typeof(PrototypeIdSerializer<MachinePartPrototype>))]
-        public string MachinePartCloningSpeed = "Manipulator";
+        public string MachinePartCloningSpeed = "ScanningModule";
 
         /// <summary>
         /// The current amount of time it takes to clone a body
         /// </summary>
         [ViewVariables(VVAccess.ReadWrite)]
         public float CloningTime = 30f;
-
-        /// <summary>
-        /// The mob to spawn on emag
-        /// </summary>
-        [ViewVariables(VVAccess.ReadWrite), DataField("mobSpawnId", customTypeSerializer: typeof(PrototypeIdSerializer<EntityPrototype>))]
-        public string MobSpawnId = "MobAbomination";
-
-        /// <summary>
-        /// Emag sound effects.
-        /// </summary>
-        [DataField("sparkSound")]
-        public SoundSpecifier SparkSound = new SoundCollectionSpecifier("sparks")
-        {
-            Params = AudioParams.Default.WithVolume(8),
-        };
-
-        [DataField("screamSound")]
-        public SoundSpecifier ScreamSound = new SoundCollectionSpecifier("ZombieScreams")
-        {
-            Params = AudioParams.Default.WithVolume(4),
-        };
 
         /// <summary>
         /// The machine part that affects how much biomass is needed to clone a body.
@@ -96,7 +74,7 @@ namespace Content.Server.Cloning.Components
         /// The machine part that decreases the amount of material needed for cloning
         /// </summary>
         [DataField("machinePartMaterialUse", customTypeSerializer: typeof(PrototypeIdSerializer<MachinePartPrototype>))]
-        public string MachinePartMaterialUse = "MatterBin";
+        public string MachinePartMaterialUse = "Manipulator";
 
         [ViewVariables(VVAccess.ReadWrite)]
         public CloningPodStatus Status;

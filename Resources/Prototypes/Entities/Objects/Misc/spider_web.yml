@@ -32,14 +32,13 @@
     - type: Physics
     - type: Fixtures
       fixtures:
-        fix1:
-          hard: false
-          density: 7
-          shape:
-            !type:PhysShapeAabb
-            bounds: "-0.5,-0.5,0.5,0.5"
-          layer:
-          - MidImpassable
+      - hard: false
+        density: 7
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.5,-0.5,0.5,0.5"
+        layer:
+        - MidImpassable
     - type: Damageable
       damageModifierSet: Wood
     - type: Destructible

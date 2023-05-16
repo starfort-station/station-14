@@ -5,5 +5,3 @@ generic-reagent-effect-burning-eyes = Ваши глаза начинают ле�
 generic-reagent-effect-burning-eyes-a-bit = Ваши глаза немного горят.
 generic-reagent-effect-tearing-up = Ваши глаза начинают слезиться.
 generic-reagent-effect-nauseous = Вы чувствуете тошноту.
-generic-reagent-effect-parched = Вы чувствуете жажду.
-generic-reagent-effect-thirsty = Вы испытываете жажду.

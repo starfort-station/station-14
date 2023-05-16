@@ -22,9 +22,6 @@ public sealed class PickAccessibleComponentOperator : HTNOperator
     [DataField("targetKey", required: true)]
     public string TargetKey = string.Empty;
 
-    [DataField("target")]
-    public string TargetEntity = "Target";
-
     [DataField("component", required: true)]
     public string Component = string.Empty;
 
@@ -61,7 +58,7 @@ public sealed class PickAccessibleComponentOperator : HTNOperator
 
         var compType = registration.Type;
         var query = _entManager.GetEntityQuery(compType);
-        var targets = new List<EntityUid>();
+        var targets = new List<Component>();
 
         // TODO: Need to get ones that are accessible.
         // TODO: Look at unreal HTN to see repeatable ones maybe?
@@ -71,7 +68,7 @@ public sealed class PickAccessibleComponentOperator : HTNOperator
             if (entity == owner || !query.TryGetComponent(entity, out var comp))
                 continue;
 
-            targets.Add(entity);
+            targets.Add(comp);
         }
 
         if (targets.Count == 0)
@@ -79,12 +76,16 @@ public sealed class PickAccessibleComponentOperator : HTNOperator
             return (false, null);
         }
 
-        foreach (var target in targets)
+        blackboard.TryGetValue<float>(RangeKey, out var maxRange, _entManager);
+
+        if (maxRange == 0f)
+            maxRange = 7f;
+
+        while (targets.Count > 0)
         {
-            var path = await _pathfinding.GetPath(
+            var path = await _pathfinding.GetRandomPath(
                 owner,
-                target,
-                1f,
+                maxRange,
                 cancelToken,
                 flags: _pathfinding.GetFlags(blackboard));
 
@@ -93,13 +94,12 @@ public sealed class PickAccessibleComponentOperator : HTNOperator
                 return (false, null);
             }
 
-            var xform = _entManager.GetComponent<TransformComponent>(target);
+            var target = path.Path.Last().Coordinates;
 
             return (true, new Dictionary<string, object>()
             {
-                { TargetEntity, target },
-                { TargetKey, xform.Coordinates },
-                { PathfindKey, path }
+                { TargetKey, target },
+                { PathfindKey, path}
             });
         }
 

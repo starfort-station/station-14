@@ -11,6 +11,11 @@
               doAfter: 1
     - node: frame
       entity: DisposalMachineFrame
+      actions:
+        - !type:SpriteChange
+          specifier:
+            sprite: /Textures/Structures/Piping/high_pressure_machine_frame.rsi
+            state: frame
       edges:
         - to: start
           completed:
@@ -29,7 +34,8 @@
     - node: frame_cable
       entity: DisposalMachineFrame
       actions:
-      - !type:AppearanceChange
+        - !type:SpriteStateChange
+          state: "frame_cables"
       edges:
         - to: frame
           completed:
@@ -47,7 +53,8 @@
     - node: frame_electronics
       entity: DisposalMachineFrame
       actions:
-      - !type:AppearanceChange
+        - !type:SpriteStateChange
+          state: "frame_electronics"
       edges:
         - to: frame_cable
           completed:
@@ -73,7 +80,8 @@
     - node: frame_unit
       entity: DisposalMachineFrame
       actions:
-      - !type:AppearanceChange
+        - !type:SpriteStateChange
+          state: "frame_unit"
       edges:
         - to: frame_inlet
           steps:
@@ -103,7 +111,8 @@
     - node: frame_mailing
       entity: DisposalMachineFrame
       actions:
-      - !type:AppearanceChange
+        - !type:SpriteStateChange
+          state: "frame_unit"
       edges:
         - to: frame_electronics
           steps:
@@ -133,7 +142,8 @@
     - node: frame_inlet
       entity: DisposalMachineFrame
       actions:
-      - !type:AppearanceChange
+        - !type:SpriteStateChange
+          state: "frame_inlet"
       edges:
         - to: frame_outlet
           steps:
@@ -163,7 +173,8 @@
     - node: frame_outlet
       entity: DisposalMachineFrame
       actions:
-      - !type:AppearanceChange
+        - !type:SpriteStateChange
+          state: "frame_outlet"
       edges:
         - to: frame_electronics
           steps:

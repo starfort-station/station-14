@@ -57,8 +57,7 @@
   - type: SkeletonAccent
   - type: Fixtures
     fixtures:
-      fix1:
-        shape:
+      - shape:
           !type:PhysShapeCircle
           radius: 0.35
         density: 130

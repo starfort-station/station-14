@@ -1,22 +1,15 @@
 using System.Linq;
 using Content.Client.Actions;
-using Content.Client.Items;
-using Content.Client.Message;
-using Content.Client.Stylesheets;
+using Content.Shared.Actions;
 using Content.Shared.Actions.ActionTypes;
-using Content.Shared.DeviceNetwork.Components;
-using Content.Shared.DeviceNetwork.Systems;
-using Content.Shared.Input;
+using Content.Shared.DeviceNetwork;
 using Robust.Client.Graphics;
-using Robust.Client.Input;
 using Robust.Client.Player;
-using Robust.Client.UserInterface;
-using Robust.Client.UserInterface.Controls;
 using Robust.Shared.Console;
 using Robust.Shared.Prototypes;
-using Robust.Shared.Timing;
+using Robust.Shared.Utility;
 
-namespace Content.Client.NetworkConfigurator.Systems;
+namespace Content.Client.NetworkConfigurator;
 
 public sealed class NetworkConfiguratorSystem : SharedNetworkConfiguratorSystem
 {
@@ -24,7 +17,6 @@ public sealed class NetworkConfiguratorSystem : SharedNetworkConfiguratorSystem
     [Dependency] private readonly IOverlayManager _overlay = default!;
     [Dependency] private readonly IPrototypeManager _prototypeManager = default!;
     [Dependency] private readonly ActionsSystem _actions = default!;
-    [Dependency] private readonly IInputManager _inputManager = default!;
 
     private const string Action = "ClearNetworkLinkOverlays";
 
@@ -33,13 +25,6 @@ public sealed class NetworkConfiguratorSystem : SharedNetworkConfiguratorSystem
         base.Initialize();
 
         SubscribeLocalEvent<ClearAllOverlaysEvent>(_ => ClearAllOverlays());
-        SubscribeLocalEvent<NetworkConfiguratorComponent, ItemStatusCollectMessage>(OnCollectItemStatus);
-    }
-
-    private void OnCollectItemStatus(EntityUid uid, NetworkConfiguratorComponent configurator, ItemStatusCollectMessage args)
-    {
-        _inputManager.TryGetKeyBinding((ContentKeyFunctions.AltUseItemInHand), out var binding);
-        args.Controls.Add(new StatusControl(configurator, binding?.GetKeyString() ?? ""));
     }
 
     public bool ConfiguredListIsTracked(EntityUid uid, NetworkConfiguratorComponent? component = null)
@@ -116,41 +101,6 @@ public sealed class NetworkConfiguratorSystem : SharedNetworkConfiguratorSystem
         }
 
         component.ActiveDeviceList = list;
-    }
-
-    private sealed class StatusControl : Control
-    {
-        private readonly RichTextLabel _label;
-        private readonly NetworkConfiguratorComponent _configurator;
-        private readonly string _keyBindingName;
-
-        private bool? _linkModeActive = null;
-
-        public StatusControl(NetworkConfiguratorComponent configurator, string keyBindingName)
-        {
-            _configurator = configurator;
-            _keyBindingName = keyBindingName;
-            _label = new RichTextLabel { StyleClasses = { StyleNano.StyleClassItemStatus } };
-            AddChild(_label);
-        }
-
-        protected override void FrameUpdate(FrameEventArgs args)
-        {
-            base.FrameUpdate(args);
-
-            if (_linkModeActive != null && _linkModeActive == _configurator.LinkModeActive)
-                return;
-
-            _linkModeActive = _configurator.LinkModeActive;
-
-            var modeLocString = _linkModeActive??false
-                ? "network-configurator-examine-mode-link"
-                : "network-configurator-examine-mode-list";
-
-            _label.SetMarkup(Loc.GetString("network-configurator-item-status-label",
-                ("mode", Loc.GetString(modeLocString)),
-                ("keybinding", _keyBindingName)));
-        }
     }
 }
 

@@ -70,7 +70,7 @@ namespace Content.Client.UserInterface.Systems.Ghost.Controls.Roles
         private void OnClose()
         {
             base.Closed();
-            SendMessage(new CloseEuiMessage());
+            SendMessage(new MakeGhostRoleWindowClosedMessage());
         }
     }
 }

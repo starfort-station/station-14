@@ -24,8 +24,7 @@
     - type: Actions
     - type: Fixtures
       fixtures:
-        fix1:
-          shape:
+        - shape:
             !type:PhysShapeAabb
             bounds: "-0.45,-0.45,0.45,0.45"
           density: 60

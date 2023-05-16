@@ -29,16 +29,16 @@
   - type: Clickable
   - type: Fixtures
     fixtures:
-      fix1:
-        shape:
-          !type:PhysShapeCircle
-          radius: 0.4
-        density: 360
-        restitution: 0.0
-        mask:
-        - MobMask
-        layer:
-        - TableLayer
+    - shape:
+        !type:PhysShapeCircle
+        radius: 0.4
+      density: 360
+      restitution: 0.0
+      mask:
+      - MobMask
+      layer:
+      - TableLayer
+  - type: VehicleVisuals
   - type: Appearance
   - type: Repairable
     fuelcost: 20

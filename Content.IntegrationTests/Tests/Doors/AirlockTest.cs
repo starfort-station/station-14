@@ -1,5 +1,6 @@
 using System;
 using System.Threading.Tasks;
+using Content.Server.Doors.Components;
 using Content.Server.Doors.Systems;
 using Content.Shared.Doors.Components;
 using NUnit.Framework;
@@ -25,12 +26,11 @@ namespace Content.IntegrationTests.Tests.Doors
     bodyType: Dynamic
   - type: Fixtures
     fixtures:
-      fix1:
-        shape:
-          !type:PhysShapeCircle
-            bounds: ""-0.49,-0.49,0.49,0.49""
-        layer:
-        - Impassable
+    - shape:
+        !type:PhysShapeCircle
+          bounds: ""-0.49,-0.49,0.49,0.49""
+      layer:
+      - Impassable
 
 - type: entity
   name: AirlockDummy
@@ -44,12 +44,11 @@ namespace Content.IntegrationTests.Tests.Doors
     bodyType: Static
   - type: Fixtures
     fixtures:
-      fix1:
-        shape:
-          !type:PhysShapeAabb
-            bounds: ""-0.49,-0.49,0.49,0.49""
-        mask:
-        - Impassable
+    - shape:
+        !type:PhysShapeAabb
+          bounds: ""-0.49,-0.49,0.49,0.49""
+      mask:
+      - Impassable
 ";
         [Test]
         public async Task OpenCloseDestroyTest()

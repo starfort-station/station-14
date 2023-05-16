@@ -32,9 +32,9 @@
   equipment:
     jumpsuit: ClothingUniformJumpsuitFieldCommander
     back: ClothingBackpackExpeditionFilled
-    shoes: ClothingShoesBootsCombatFilled
+    shoes: ClothingShoesBootsAssaultFilled
     id: FieldCommanderPDA
-    ears: ClothingHeadsetExpeditionCommand
+    ears: ClothingHeadsetExpedition
     belt: ClothingBeltSecurityWebbing
   satchel: ClothingBackpackSatchelExpeditionFilled
   duffelbag: ClothingBackpackDuffelExpeditionFilled

@@ -15,13 +15,12 @@
     fixedRotation: true
   - type: Fixtures
     fixtures:
-      fix1:
-        shape:
-          !type:PhysShapeCircle
-          radius: 0.35
-        density: 15
-        mask:
-        - GhostImpassable
+    - shape:
+        !type:PhysShapeCircle
+        radius: 0.35
+      density: 15
+      mask:
+      - GhostImpassable
   - type: InputMover
   - type: Appearance
   - type: Eye

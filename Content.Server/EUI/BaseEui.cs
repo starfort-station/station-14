@@ -49,8 +49,6 @@ namespace Content.Server.EUI
         /// </summary>
         public virtual void HandleMessage(EuiMessageBase msg)
         {
-            if (msg is CloseEuiMessage)
-                Close();
         }
 
         /// <summary>
