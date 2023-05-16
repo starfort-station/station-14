@@ -1,7 +1,5 @@
 meta:
-  format: 4
-  name: DemoStation
-  author: Space-Wizards
+  format: 5
   postmapinit: false
 tilemap:
   0: Space
@@ -5907,7 +5905,6 @@ entities:
       parent: 1
       type: Transform
     - devices:
-      - invalid
       - 9845
       - 9844
       type: DeviceList
@@ -5995,7 +5992,6 @@ entities:
       parent: 1
       type: Transform
     - devices:
-      - invalid
       - 7835
       - 7974
       - 7973
@@ -6022,7 +6018,6 @@ entities:
       type: Transform
     - devices:
       - 8066
-      - invalid
       - 7847
       - 7842
       - 7836
@@ -6072,7 +6067,6 @@ entities:
       - 7969
       - 7970
       - 7971
-      - invalid
       - 7866
       - 7867
       - 8311
@@ -6113,7 +6107,6 @@ entities:
       - 14894
       - 14889
       - 14892
-      - invalid
       - 8374
       - 8375
       - 8376
@@ -6125,8 +6118,6 @@ entities:
       - 7964
       - 7965
       - 7891
-      - 7888
-      - 7886
       - 8434
       - 8437
       - 7855
@@ -6147,7 +6138,6 @@ entities:
       - 7899
       - 7900
       - 8435
-      - 7887
       - 8436
       - 8438
       - 8439
@@ -6178,7 +6168,6 @@ entities:
       - 8488
       - 7915
       - 7916
-      - invalid
       - 8489
       - 7920
       - 7921
@@ -6272,7 +6261,6 @@ entities:
       - 7953
       - 7952
       - 7951
-      - invalid
       - 9738
       - 9737
       - 9742
@@ -6344,7 +6332,6 @@ entities:
       - 9391
       - 9390
       - 9388
-      - 9803
       type: DeviceList
   - uid: 9811
     components:
@@ -6352,7 +6339,6 @@ entities:
       parent: 1
       type: Transform
     - devices:
-      - 9803
       - 9808
       - 696
       - 697
@@ -6404,7 +6390,6 @@ entities:
       - 9827
       - 9828
       - 9829
-      - invalid
       - 9826
       - 9830
       - 9831
@@ -6440,7 +6425,6 @@ entities:
       type: Transform
     - devices:
       - 9861
-      - invalid
       - 9827
       - 9828
       - 9829
@@ -6477,7 +6461,6 @@ entities:
       - 9864
       - 9865
       - 9866
-      - invalid
       - 9868
       - 4035
       - 2864
@@ -6632,8 +6615,6 @@ entities:
       - 14894
       - 14889
       - 14892
-      - invalid
-      - 7886
       type: DeviceList
   - uid: 15168
     components:
@@ -8721,24 +8702,6 @@ entities:
       pos: -117.5,6.5
       parent: 1
       type: Transform
-  - uid: 7886
-    components:
-    - rot: 3.141592653589793 rad
-      pos: -110.5,-14.5
-      parent: 1
-      type: Transform
-  - uid: 7887
-    components:
-    - rot: 3.141592653589793 rad
-      pos: -110.5,-7.5
-      parent: 1
-      type: Transform
-  - uid: 7888
-    components:
-    - rot: 3.141592653589793 rad
-      pos: -103.5,-14.5
-      parent: 1
-      type: Transform
   - uid: 7902
     components:
     - rot: -1.5707963267948966 rad
@@ -8804,12 +8767,6 @@ entities:
     components:
     - rot: -1.5707963267948966 rad
       pos: -27.5,-3.5
-      parent: 1
-      type: Transform
-  - uid: 9803
-    components:
-    - rot: -1.5707963267948966 rad
-      pos: -27.5,6.5
       parent: 1
       type: Transform
   - uid: 9834
@@ -51045,7 +51002,6 @@ entities:
       parent: 1
       type: Transform
     - devices:
-      - invalid
       - 7835
       - 7974
       - 7973
@@ -51069,7 +51025,6 @@ entities:
       - 7977
       - 7842
       - 7836
-      - invalid
       - 11197
       - 11200
       - 11201
@@ -51109,7 +51064,6 @@ entities:
       - 7969
       - 7970
       - 7971
-      - invalid
       - 7866
       - 7867
       - 15201
@@ -51194,7 +51148,6 @@ entities:
       - 9864
       - 9865
       - 9866
-      - invalid
       - 9868
       - 4035
       - 2864
@@ -51264,7 +51217,6 @@ entities:
       - 7953
       - 7952
       - 7951
-      - invalid
       - 9738
       - 9737
       - 9742
@@ -51301,7 +51253,6 @@ entities:
       parent: 1
       type: Transform
     - devices:
-      - invalid
       - 9758
       - 9757
       - 9759
@@ -51316,7 +51267,6 @@ entities:
       parent: 1
       type: Transform
     - devices:
-      - 9803
       - 9808
       - 696
       - 697
@@ -51340,7 +51290,6 @@ entities:
       - 9827
       - 9828
       - 9829
-      - invalid
       - 9826
       - 9830
       - 9831
@@ -51432,6 +51381,18 @@ entities:
       type: Transform
     - canCollide: False
       type: Physics
+- proto: FireAxeCabinetFilled
+  entities:
+  - uid: 7886
+    components:
+    - pos: -162.5,3.5
+      parent: 1
+      type: Transform
+  - uid: 7887
+    components:
+    - pos: 28.5,-1.5
+      parent: 1
+      type: Transform
 - proto: FireExtinguisher
   entities:
   - uid: 7863
@@ -53653,8 +53614,8 @@ entities:
       pos: -162.5,1.5
       parent: 1
       type: Transform
-    - inletTwoConcentration: 0.22000003
-      inletOneConcentration: 0.78
+    - inletTwoConcentration: 0.78
+      inletOneConcentration: 0.22
       type: GasMixer
   - uid: 5470
     components:
@@ -79386,17 +79347,6 @@ entities:
       type: Transform
     - canCollide: False
       type: Physics
-  - uid: 8087
-    components:
-    - pos: -1.4174263,-6.45133
-      parent: 1
-      type: Transform
-    - devices:
-        'UID: 32348': invalid
-        'UID: 32349': invalid
-      type: NetworkConfigurator
-    - canCollide: False
-      type: Physics
   - uid: 11875
     components:
     - pos: -62.65743,10.581851
@@ -79416,7 +79366,14 @@ entities:
     - pos: -4.52536,-10.331043
       parent: 14329
       type: Transform
-    - devices:
+    - canCollide: False
+      type: Physics
+    - soundSwitchMode: !type:SoundPathSpecifier
+        path: /Audio/Machines/beep.ogg
+      soundNoAccess: !type:SoundPathSpecifier
+        path: /Audio/Machines/custom_deny.ogg
+      lastUseAttempt: 0
+      devices:
         'UID: 16476': 14641
         'UID: 16480': 14685
         'UID: 16478': 14683
@@ -79424,7 +79381,6 @@ entities:
         'UID: 16553': 14731
         'UID: 16554': 14732
         'UID: 16475': 14640
-        'UID: 16484': invalid
         'UID: 16388': 14608
         'UID: 16389': 14609
         'UID: 16391': 14602
@@ -79438,8 +79394,6 @@ entities:
         'UID: 16664': 14808
         'UID: 16665': 14809
       type: NetworkConfigurator
-    - canCollide: False
-      type: Physics
 - proto: NightVisionGoggles
   entities:
   - uid: 11382
@@ -84934,6 +84888,8 @@ entities:
       pos: -65.5,10.5
       parent: 1
       type: Transform
+    - nextSound: -40.1570518
+      type: MaterialReclaimer
     - inputs:
         Reverse: []
         Forward:
@@ -84943,8 +84899,6 @@ entities:
         - port: Off
           uid: 12812
       type: SignalReceiver
-    - nextSound: -40.1570518
-      type: MaterialReclaimer
 - proto: ReinforcedPlasmaWindow
   entities:
   - uid: 551

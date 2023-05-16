@@ -1,8 +1,8 @@
-using Content.Shared.GameTicking;
-using Content.Shared.Eye.DarkVision;
+using Content.Shared.Eye;
 
-namespace Content.Server.Eye.DarkVision;
+namespace Content.Server.Eye;
 
 public sealed class DarkVisionSystem : DarkVisionSharedSystem
 {
+    // Only client logic
 }

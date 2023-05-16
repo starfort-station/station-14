@@ -125,6 +125,9 @@
   id: CartridgeRifle
 
 - type: Tag
+  id: CartridgeHeavyLecter
+
+- type: Tag
   id: CartridgeRocket
 
 # Allows you to walk over tile entities such as lava without steptrigger
@@ -315,9 +318,6 @@
   id: GuideEmbeded
 
 - type: Tag
-  id: GunsDisabled # Allow certain entities to not use guns without complicating the system with an event
-
-- type: Tag
   id: Handcuffs
 
 - type: Tag
@@ -463,6 +463,9 @@
   id: MagazineRifle
 
 - type: Tag
+  id: MagazineHeavyLecter
+
+- type: Tag
   id: MagazineShotgun
 
 - type: Tag
@@ -497,6 +500,9 @@
 
 - type: Tag
   id: Mop
+
+- type: Tag
+  id: Multitool
 
 - type: Tag
   id: NoSpinOnThrow
@@ -678,6 +684,15 @@
 
 - type: Tag
   id: Taser
+
+- type: Tag
+  id: TimerBrigElectronics
+
+- type: Tag
+  id: TimerScreenElectronics
+
+- type: Tag
+  id: TimerSignalElectronics
 
 - type: Tag
   id: Trash

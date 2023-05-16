@@ -1,11 +1,8 @@
-using Robust.Client.Graphics;
 using Robust.Shared.GameStates;
-using Robust.Shared.Serialization;
 
-namespace Content.Shared.Eye.DarkVision
+namespace Content.Shared.Eye
 {
     [RegisterComponent]
-    [AutoGenerateComponentState]
     [NetworkedComponent]
     public sealed partial class DarkVisionComponent : Component
     {
@@ -19,7 +16,6 @@ namespace Content.Shared.Eye.DarkVision
         public bool DrawLight = true;
 
         [DataField("toggle")]
-        [AutoNetworkedField]
         public bool IsEnable = false;
     }
 }
