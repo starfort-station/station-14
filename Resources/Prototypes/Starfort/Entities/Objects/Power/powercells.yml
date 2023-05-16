@@ -5,13 +5,19 @@
   description: A portable substation is a self-contained unit that provides electrical power to remote locations.
   components:
   - type: Sprite
-    sprite: Structures/Power/substation.rsi
+    sprite: Starfort/Structures/Power/powercell.rsi
     snapCardinals: true
     layers:
-    - state: substation
-    - state: screen
+    - state: powercell
+    - map: ["enum.SmesVisualLayers.Charge"]
+      state: dead
       shader: unshaded
-    - state: full
+      visible: false
+    - map: ["enum.SmesVisualLayers.Input"]
+      state: screen
+      shader: unshaded
+    - map: ["enum.SmesVisualLayers.Output"]
+      state: charging
       shader: unshaded
   - type: Battery
     maxCharge: 100000
@@ -44,3 +50,5 @@
     supplyRampRate: 500
   - type: Transform
     anchored: true
+    noRot: true
+  - type: Anchorable
