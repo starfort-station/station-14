@@ -1,3 +1,4 @@
+using System.Linq;
 using Content.Shared.Decals;
 using Content.Shared.Sprite;
 using Robust.Shared.GameStates;
@@ -26,29 +27,17 @@ public sealed class RandomSpriteSystem: SharedRandomSpriteSystem
         if (component.Available.Count == 0)
             return;
 
-        var groups = new List<Dictionary<string, (string, string?)>>();
-        if (component.GetAllGroups)
+        var group = _random.Pick(component.Available);
+        component.Selected.EnsureCapacity(group.Count);
+
+        foreach (var layer in group)
         {
-            groups = component.Available;
-        }
-        else
-        {
-            groups.Add(_random.Pick(component.Available));
-        }
+            Color? color = null;
 
-        component.Selected.EnsureCapacity(groups.Count);
+            if (!string.IsNullOrEmpty(layer.Value.Color))
+                color = _random.Pick(_prototype.Index<ColorPalettePrototype>(layer.Value.Color).Colors.Values);
 
-        foreach (var group in groups)
-        {
-            foreach (var layer in group)
-            {
-                Color? color = null;
-
-                if (!string.IsNullOrEmpty(layer.Value.Item2))
-                    color = _random.Pick(_prototype.Index<ColorPalettePrototype>(layer.Value.Item2).Colors.Values);
-
-                component.Selected.Add(layer.Key, (layer.Value.Item1, color));
-            }
+            component.Selected.Add(layer.Key, (layer.Value.State, color));
         }
 
         Dirty(component);

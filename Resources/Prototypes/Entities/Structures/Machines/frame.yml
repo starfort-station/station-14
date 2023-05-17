@@ -13,15 +13,14 @@
       bodyType: Static
     - type: Fixtures
       fixtures:
-        fix1:
-          shape:
-            !type:PhysShapeAabb
-            bounds: "-0.25,-0.5,0.25,0.5"
-          density: 190
-          mask:
-          - MachineMask
-          layer:
-          - MachineLayer
+      - shape:
+          !type:PhysShapeAabb
+          bounds: "-0.25,-0.5,0.25,0.5"
+        density: 190
+        mask:
+        - MachineMask
+        layer:
+        - MachineLayer
     - type: Clickable
     - type: InteractionOutline
     - type: Anchorable
@@ -65,15 +64,14 @@
       bodyType: Static
     - type: Fixtures
       fixtures:
-        fix1:
-          shape:
-            !type:PhysShapeAabb
-            bounds: "-0.25,-0.5,0.25,0.5"
-          density: 190
-          mask:
-          - MachineMask
-          layer:
-          - MachineLayer
+      - shape:
+          !type:PhysShapeAabb
+          bounds: "-0.25,-0.5,0.25,0.5"
+        density: 190
+        mask:
+        - MachineMask
+        layer:
+        - MachineLayer
     - type: Clickable
     - type: InteractionOutline
     - type: Anchorable
@@ -110,7 +108,7 @@
       mapLayers:
         box_2:
           minCount: 1
-          whitelist:
+          whitelist: 
             components:
             - MachineBoard
 
@@ -124,8 +122,6 @@
     - type: Transform
       anchored: true
       noRot: true
-    - type: Physics
-      bodyType: Static
     - type: Construction
       graph: Machine
       node: destroyedMachineFrame

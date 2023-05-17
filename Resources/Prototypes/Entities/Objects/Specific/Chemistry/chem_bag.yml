@@ -20,10 +20,9 @@
     quickInsert: true
     areaInsert: true
     whitelist:
-      components:
-        - Pill
       tags:
         - PillCanister
+        - Pill
         - Bottle
         - Syringe
   - type: Dumpable

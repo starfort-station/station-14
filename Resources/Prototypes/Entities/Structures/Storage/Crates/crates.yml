@@ -284,15 +284,14 @@
     bodyType: Dynamic
   - type: Fixtures
     fixtures:
-      fix1:
-        shape:
-          !type:PhysShapeAabb
-          bounds: "-0.4,-0.4,0.4,0.29"
-        density: 135
-        mask:
-        - LargeMobMask
-        layer:
-        - LargeMobLayer
+    - shape:
+        !type:PhysShapeAabb
+        bounds: "-0.4,-0.4,0.4,0.29"
+      density: 135
+      mask:
+      - LargeMobMask
+      layer:
+      - LargeMobLayer
   - type: Construction
     graph: CrateLivestock
     node: cratelivestock
@@ -337,15 +336,14 @@
     airtight: false
   - type: Fixtures
     fixtures:
-      fix1:
-        shape:
-          !type:PhysShapeAabb
-          bounds: "-0.4,-0.4,0.4,0.29"
-        density: 80
-        mask:
-        - LargeMobMask
-        layer:
-        - LargeMobLayer
+    - shape:
+        !type:PhysShapeAabb
+        bounds: "-0.4,-0.4,0.4,0.29"
+      density: 80
+      mask:
+      - LargeMobMask
+      layer:
+      - LargeMobLayer
   - type: StaticPrice
     price: 60
 

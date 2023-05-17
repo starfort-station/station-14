@@ -6,15 +6,6 @@
   components:
   - type: Sprite
     sprite: Starfort/Structures/Doors/Airlocks/Standart/expedition.rsi
-    
-- type: entity
-  parent: Airlock
-  id: AirlockExpeditionSergeant
-  suffix: Expedition, Sergeant
-  components:
-  - type: Sprite
-    sprite: Starfort/Structures/Doors/Airlocks/Standart/expedition-command.rsi
-    
 
 - type: entity
   parent: AirlockGlass

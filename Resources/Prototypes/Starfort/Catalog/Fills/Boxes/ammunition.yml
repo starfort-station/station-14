@@ -1,0 +1,10 @@
+- type: entity
+  name: box of .15 high caliber magazines
+  parent: BoxMagazine
+  id: BoxMagazineHeavyLecter
+  description: A box full of .15 high caliber magazines.
+  components:
+  - type: StorageFill
+    contents:
+      - id: MagazineHeavyLecter
+        amount: 6

@@ -3,7 +3,6 @@
 lobbyenabled = false
 # Dev map for faster loading & convenience
 map = "Dev"
-role_timers = false
 
 [physics]
 # Makes mapping annoying

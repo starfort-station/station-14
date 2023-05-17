@@ -4,7 +4,4 @@
   noSpawn: true
   components:
   - type: Stomach
-  - type: SolutionContainerManager
-    solutions:
-      stomach:
-        maxVol: 50
+    maxVol: 50

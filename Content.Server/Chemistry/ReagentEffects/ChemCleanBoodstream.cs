@@ -14,7 +14,7 @@ namespace Content.Server.Chemistry.ReactionEffects
         public float CleanseRate = 3.0f;
         public override void Effect(ReagentEffectArgs args)
         {
-            if (args.Source == null || args.Reagent == null)
+            if (args.Source == null)
                 return;
 
             var cleanseRate = CleanseRate;

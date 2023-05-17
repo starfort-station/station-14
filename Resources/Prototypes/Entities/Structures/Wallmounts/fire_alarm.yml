@@ -110,16 +110,7 @@
   - type: InteractionOutline
   - type: Sprite
     sprite: Structures/Wallmounts/air_monitors.rsi
-    layers:
-    - state: fire_b1
-      map: [ "enum.ConstructionVisuals.Layer" ]
-  - type: Appearance
-  - type: GenericVisualizer
-    visuals:
-      enum.ConstructionVisuals.Key:
-        enum.ConstructionVisuals.Layer:
-          assembly: { state: fire_b1 }
-          electronics: { state: fire_b2 }
+    state: fire_b1
   - type: Construction
     graph: FireAlarm
     node: assembly

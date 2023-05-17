@@ -36,8 +36,7 @@
   suffix: Full
   components:
   - type: Material
-  - type: PhysicalComposition
-    materialComposition:
+    materials:
       Steel: 100
   - type: Stack
     stackType: Steel
@@ -75,8 +74,7 @@
   suffix: Full
   components:
   - type: Material
-  - type: PhysicalComposition
-    materialComposition:
+    materials:
       Plasteel: 100
   - type: Stack
     stackType: Plasteel

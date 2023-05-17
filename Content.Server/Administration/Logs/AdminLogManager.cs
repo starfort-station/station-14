@@ -68,8 +68,8 @@ public sealed partial class AdminLogManager : SharedAdminLogManager, IAdminLogMa
 
     // Per update
     private TimeSpan _nextUpdateTime;
-    private readonly ConcurrentQueue<AdminLog> _logQueue = new();
-    private readonly ConcurrentQueue<AdminLog> _preRoundLogQueue = new();
+    private readonly ConcurrentQueue<QueuedLog> _logQueue = new();
+    private readonly ConcurrentQueue<QueuedLog> _preRoundLogQueue = new();
 
     // Per round
     private int _currentRoundId;
@@ -171,7 +171,7 @@ public sealed partial class AdminLogManager : SharedAdminLogManager, IAdminLogMa
         _nextUpdateTime = _timing.RealTime.Add(_queueSendDelay);
 
         // TODO ADMIN LOGS array pool
-        var copy = new List<AdminLog>(_logQueue.Count + _preRoundLogQueue.Count);
+        var copy = new List<QueuedLog>(_logQueue.Count + _preRoundLogQueue.Count);
 
         copy.AddRange(_logQueue);
         _logQueue.Clear();
@@ -183,10 +183,10 @@ public sealed partial class AdminLogManager : SharedAdminLogManager, IAdminLogMa
         }
         else
         {
-            foreach (var log in _preRoundLogQueue)
+            foreach (var queued in _preRoundLogQueue)
             {
-                log.RoundId = _currentRoundId;
-                CacheLog(log);
+                queued.Log.RoundId = _currentRoundId;
+                CacheLog(queued);
             }
 
             copy.AddRange(_preRoundLogQueue);
@@ -231,17 +231,6 @@ public sealed partial class AdminLogManager : SharedAdminLogManager, IAdminLogMa
         {
             Interlocked.Exchange(ref _currentLogId, 0);
 
-            if (!_preRoundLogQueue.IsEmpty)
-            {
-                // This technically means that you could get pre-round logs from
-                // a previous round passed onto the next one
-                // If this happens please file a complaint with your nearest lottery
-                foreach (var log in _preRoundLogQueue)
-                {
-                    log.Id = NextLogId;
-                }
-            }
-
             if (_metricsEnabled)
             {
                 PreRoundQueueCapReached.Set(0);
@@ -251,26 +240,30 @@ public sealed partial class AdminLogManager : SharedAdminLogManager, IAdminLogMa
         }
     }
 
-    private void Add(LogType type, LogImpact impact, string message, JsonDocument json, HashSet<Guid> players, List<AdminLogEntity> entities)
+    private async void Add(LogType type, LogImpact impact, string message, JsonDocument json, HashSet<Guid> players, Dictionary<int, string?> entities)
     {
+        var logId = NextLogId;
+        var date = DateTime.UtcNow;
+
         var log = new AdminLog
         {
-            Id = NextLogId,
+            Id = logId,
             RoundId = _currentRoundId,
             Type = type,
             Impact = impact,
-            Date = DateTime.UtcNow,
+            Date = date,
             Message = message,
             Json = json,
-            Players = new List<AdminLogPlayer>(players.Count),
-            Entities = entities
+            Players = new List<AdminLogPlayer>(players.Count)
         };
+
+        var queued = new QueuedLog(log, entities);
 
         foreach (var id in players)
         {
             var player = new AdminLogPlayer
             {
-                LogId = log.Id,
+                LogId = logId,
                 PlayerUserId = id
             };
 
@@ -279,11 +272,11 @@ public sealed partial class AdminLogManager : SharedAdminLogManager, IAdminLogMa
 
         if (_runLevel == GameRunLevel.PreRoundLobby)
         {
-            _preRoundLogQueue.Enqueue(log);
+            _preRoundLogQueue.Enqueue(queued);
         }
         else
         {
-            _logQueue.Enqueue(log);
+            _logQueue.Enqueue(queued);
             CacheLog(log);
         }
     }

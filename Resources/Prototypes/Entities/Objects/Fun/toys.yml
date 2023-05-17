@@ -178,17 +178,16 @@
               solution: plushie
     - type: Fixtures
       fixtures:
-        fix1:
-          shape:
+        - shape:
             !type:PhysShapeAabb
             bounds: "-0.3,-0.3,0.3,0.3"
           density: 15
           mask:
             - ItemMask
-        rehydrate:
-          shape:
+        - shape:
             !type:PhysShapeAabb
             bounds: "-0.3,-0.3,0.3,0.3"
+          id: "rehydrate"
           hard: false
           layer:
             - LowImpassable
@@ -363,27 +362,6 @@
   - type: Sprite
     state: plushie_atmosian
 
-- type: entity
-  parent: BasePlushie
-  id: PlushieXeno
-  name: xeno plushie
-  description: An adorable stuffed toy that resembles a scary xenomorf. You're lucky it's just a toy.
-  components:
-  - type: Sprite
-    state: plushie_xeno
-  - type: EmitSoundOnUse
-    sound:
-      path: /Audio/Weapons/Xeno/alien_spitacid.ogg
-  - type: EmitSoundOnLand
-    sound:
-      path: /Audio/Weapons/Xeno/alien_spitacid.ogg
-  - type: EmitSoundOnActivate
-    sound:
-      path: /Audio/Weapons/Xeno/alien_spitacid.ogg
-  - type: MeleeWeapon
-    soundHit:
-      path: /Audio/Weapons/Xeno/alien_spitacid.ogg
-
 ## Figurines
 
 - type: entity
@@ -419,20 +397,6 @@
   components:
   - type: Sprite
     state: nuketoy
-  - type: UseDelay
-    delay: 180.0
-  - type: EmitSoundOnUse
-    sound:
-      path: /Audio/Machines/Nuke/nuke_alarm.ogg
-      params:
-        volume: -5
-        maxdistance: 10
-  - type: EmitSoundOnActivate
-    sound:
-      path: /Audio/Machines/Nuke/nuke_alarm.ogg
-      params:
-        volume: -5
-        maxdistance: 10
 
 - type: entity
   parent: BaseFigurine
@@ -927,4 +891,3 @@
   - type: Tag
     tags:
     - ClownRecorder
-

@@ -37,7 +37,7 @@ public sealed class FatExtractorComponent : Component
     /// Which machine part affects the nutrition rate
     /// </summary>
     [DataField("machinePartNutritionRate", customTypeSerializer: typeof(PrototypeIdSerializer<MachinePartPrototype>))]
-    public string MachinePartNutritionRate = "Manipulator";
+    public string MachinePartNutritionRate = "Laser";
 
     /// <summary>
     /// The increase in rate per each rating above 1.

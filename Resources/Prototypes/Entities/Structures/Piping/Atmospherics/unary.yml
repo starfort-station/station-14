@@ -16,6 +16,8 @@
           nodeGroupID: Pipe
           pipeDirection: South
     - type: CollideOnAnchor
+    - type: StaticPrice
+      price: 200
 
 - type: entity
   parent: GasUnaryBase
@@ -79,7 +81,7 @@
       node: ventpump
     - type: VentCritterSpawnLocation
     - type: AmbientSound
-      enabled: true
+      enabled: false
       volume: -12
       range: 5
       sound:
@@ -171,7 +173,7 @@
       graph: GasUnary
       node: ventscrubber
     - type: AmbientSound
-      enabled: true
+      enabled: false
       volume: -12
       range: 5
       sound:
@@ -252,6 +254,8 @@
           !type:PipeNode
           nodeGroupID: Pipe
           pipeDirection: South
+    - type: StaticPrice
+      price: 500
     - type: Transform
       noRot: false
 

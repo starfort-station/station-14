@@ -2,6 +2,8 @@ using Content.Shared.Hands.Components;
 using JetBrains.Annotations;
 using Robust.Shared.Map;
 using Robust.Shared.Serialization;
+using static Robust.Shared.GameObjects.SharedSpriteComponent;
+
 
 namespace Content.Shared.Hands
 {

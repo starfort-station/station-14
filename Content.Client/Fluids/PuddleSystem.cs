@@ -36,7 +36,7 @@ public sealed class PuddleSystem : SharedPuddleSystem
                 args.Sprite.LayerSetState(0, $"{smooth.StateBase}a");
                 _smooth.SetEnabled(uid, false, smooth);
             }
-            else if (volume < MediumThreshold)
+            else if (volume < 0.6f)
             {
                 args.Sprite.LayerSetState(0, $"{smooth.StateBase}b");
                 _smooth.SetEnabled(uid, false, smooth);

@@ -7,6 +7,8 @@
   description: They mostly come at night. Mostly.
   components:
   - type: Insulated
+  - type: DiseaseProtection
+    protection: 1
   - type: CombatMode
   - type: InputMover
   - type: MobMover
@@ -35,8 +37,6 @@
   - type: DarkVision
     layerColor: "#920016"
     shaderTexture: "GreyscaleFullscreen"
-    mustDrawLight: false
-    toggle: true
   - type: MobState
     allowedStates:
       - Alive
@@ -78,9 +78,9 @@
     allowMovement: true
     allowSpeech: true
     makeSentient: true
-    name: ghost-role-information-xeno-name
-    description: ghost-role-information-xeno-description
-    rules: ghost-role-information-xeno-rules
+    name: xeno
+    description: You are a xeno, co-operate with your hive to kill all crewmembers!
+    rules: You are an antagonist, smack, slash, and wack!
   - type: GhostTakeoverAvailable
   - type: TypingIndicator
     proto: alien
@@ -117,19 +117,14 @@
     bodyType: Dynamic
   - type: Fixtures
     fixtures:
-      fix1:
-        shape:
-          !type:PhysShapeCircle
-          radius: 0.25
-        density: 1000
-        mask:
-        - MobMask
-        layer:
-        - MobLayer
-  - type: GhostRole
-    name: ghost-role-information-burrower-name
-    description: ghost-role-information-burrower-description
-    rules: ghost-role-information-burrower-rules
+    - shape:
+        !type:PhysShapeCircle
+        radius: 0.45
+      density: 1000
+      mask:
+      - MobMask
+      layer:
+      - MobLayer
 
 
 # AlienPraetorian
@@ -152,19 +147,14 @@
       250: 0.7
   - type: Fixtures
     fixtures:
-      fix1:
-        shape:
-          !type:PhysShapeCircle
-          radius: 0.25
-        density: 500
-        mask:
-        - MobMask
-        layer:
-        - MobLayer
-  - type: GhostRole
-    name: ghost-role-information-praetorian-name
-    description: ghost-role-information-praetorian-description
-    rules: ghost-role-information-praetorian-rules
+    - shape:
+        !type:PhysShapeCircle
+        radius: 0.45
+      density: 400
+      mask:
+      - MobMask
+      layer:
+      - MobLayer
 
 
 # AlienDrone
@@ -195,19 +185,14 @@
     baseSprintSpeed : 5.5
   - type: Fixtures
     fixtures:
-      fix1:
-        shape:
-          !type:PhysShapeCircle
-          radius: 0.35
-        density: 600
-        mask:
-        - MobMask
-        layer:
-        - MobLayer
-  - type: GhostRole
-    name: ghost-role-information-drone-name
-    description: ghost-role-information-drone-description
-    rules: ghost-role-information-drone-rules
+    - shape:
+        !type:PhysShapeCircle
+        radius: 0.45
+      density: 450
+      mask:
+      - MobMask
+      layer:
+      - MobLayer
 
 
 # AlienQueen
@@ -242,19 +227,14 @@
       1000: 0.7
   - type: Fixtures
     fixtures:
-      fix1:
-        shape:
-          !type:PhysShapeCircle
-          radius: 0.45
-        density: 15000
-        mask:
-        - MobMask
-        layer:
-        - MobLayer
-  - type: GhostRole
-    name: ghost-role-information-queen-name
-    description: ghost-role-information-queen-description
-    rules: ghost-role-information-queen-rules
+    - shape:
+        !type:PhysShapeCircle
+        radius: 0.45
+      density: 15500
+      mask:
+      - MobMask
+      layer:
+      - MobLayer
 
 
 # AlienRavager
@@ -289,19 +269,14 @@
       450: 0.7
   - type: Fixtures
     fixtures:
-      fix1:
-        shape:
-          !type:PhysShapeCircle
-          radius: 0.45
-        density: 1300
-        mask:
-        - MobMask
-        layer:
-        - MobLayer
-  - type: GhostRole
-    name: ghost-role-information-ravager-name
-    description: ghost-role-information-ravager-description
-    rules: ghost-role-information-ravager-rules
+    - shape:
+        !type:PhysShapeCircle
+        radius: 0.45
+      density: 1350
+      mask:
+      - MobMask
+      layer:
+      - MobLayer
 
 
 # AlienRunner
@@ -332,21 +307,16 @@
        Brute: 15
   - type: Fixtures
     fixtures:
-      fix1:
-        shape:
-          !type:PhysShapeCircle
-          radius: 0.45
-        density: 300
-        mask:
-        - MobMask
-        layer:
-        - MobLayer
-  - type: GhostRole
-    name: ghost-role-information-runner-name
-    description: ghost-role-information-runner-description
-    rules: ghost-role-information-runner-rules
+    - shape:
+        !type:PhysShapeCircle
+        radius: 0.45
+      density: 235
+      mask:
+      - MobMask
+      layer:
+      - MobLayer
 
-# AlienSpitter
+# AlienRunner
 - type: entity
   name: Spitter
   parent: MobXenoAlienBase
@@ -366,16 +336,11 @@
       250: 0.4
   - type: Fixtures
     fixtures:
-      fix1:
-        shape:
-          !type:PhysShapeCircle
-          radius: 0.45
-        density: 1000
-        mask:
-        - MobMask
-        layer:
-        - MobLayer
-  - type: GhostRole
-    name: ghost-role-information-spitter-name
-    description: ghost-role-information-spitter-description
-    rules: ghost-role-information-spitter-rules
+    - shape:
+        !type:PhysShapeCircle
+        radius: 0.45
+      density: 235
+      mask:
+      - MobMask
+      layer:
+      - MobLayer

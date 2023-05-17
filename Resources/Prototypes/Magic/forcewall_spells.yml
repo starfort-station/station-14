@@ -3,6 +3,7 @@
   name: action-name-spell-forcewall
   description: action-description-spell-forcewall
   useDelay: 10
+  speech: action-speech-spell-forcewall
   itemIconStyle: BigAction
   sound: !type:SoundPathSpecifier
     path: /Audio/Magic/forcewall.ogg
@@ -12,4 +13,3 @@
   serverEvent: !type:InstantSpawnSpellEvent
     prototype: WallForce
     posData: !type:TargetInFront
-    speech: action-speech-spell-forcewall

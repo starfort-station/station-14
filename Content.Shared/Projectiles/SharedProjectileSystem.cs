@@ -30,18 +30,31 @@ namespace Content.Shared.Projectiles
             component.Shooter = uid;
             Dirty(component);
         }
-    }
 
-    [Serializable, NetSerializable]
-    public sealed class ImpactEffectEvent : EntityEventArgs
-    {
-        public string Prototype;
-        public EntityCoordinates Coordinates;
-
-        public ImpactEffectEvent(string prototype, EntityCoordinates coordinates)
+        [NetSerializable, Serializable]
+        public sealed class ProjectileComponentState : ComponentState
         {
-            Prototype = prototype;
-            Coordinates = coordinates;
+            public ProjectileComponentState(EntityUid shooter, bool ignoreShooter)
+            {
+                Shooter = shooter;
+                IgnoreShooter = ignoreShooter;
+            }
+
+            public EntityUid Shooter { get; }
+            public bool IgnoreShooter { get; }
+        }
+
+        [Serializable, NetSerializable]
+        public sealed class ImpactEffectEvent : EntityEventArgs
+        {
+            public string Prototype;
+            public EntityCoordinates Coordinates;
+
+            public ImpactEffectEvent(string prototype, EntityCoordinates coordinates)
+            {
+                Prototype = prototype;
+                Coordinates = coordinates;
+            }
         }
     }
 }

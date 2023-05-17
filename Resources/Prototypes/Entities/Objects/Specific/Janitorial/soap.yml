@@ -23,20 +23,19 @@
     bodyType: Dynamic
   - type: Fixtures
     fixtures:
-      slips:
-        shape:
-          !type:PhysShapeAabb
-          bounds: "-0.4,-0.3,0.4,0.3"
-        layer:
-        - SlipLayer
-        hard: false
-      fix1:
-        shape:
-          !type:PhysShapeAabb
-          bounds: "-0.4,-0.3,0.4,0.3"
-        density: 10
-        mask:
-        - ItemMask
+    - shape:
+        !type:PhysShapeAabb
+        bounds: "-0.4,-0.3,0.4,0.3"
+      id: "slips"
+      hard: false
+      layer:
+      - SlipLayer
+    - shape:
+        !type:PhysShapeAabb
+        bounds: "-0.4,-0.3,0.4,0.3"
+      density: 10
+      mask:
+      - ItemMask
 
 - type: entity
   name: soap
@@ -70,7 +69,7 @@
     state: syndie
   - type: Slippery
     paralyzeTime: 5
-    launchForwardsMultiplier: 2.5
+    launchForwardsMultiplier: 9.0
   - type: StepTrigger
   - type: Item
     heldPrefix: syndie
@@ -99,7 +98,7 @@
     state: omega
   - type: Slippery
     paralyzeTime: 7
-    launchForwardsMultiplier: 3
+    launchForwardsMultiplier: 9.0
   - type: StepTrigger
   - type: Item
     heldPrefix: omega

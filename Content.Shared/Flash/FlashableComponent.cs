@@ -24,13 +24,4 @@ namespace Content.Shared.Flash
             Time = time;
         }
     }
-
-    [Serializable, NetSerializable]
-    public enum FlashVisuals : byte
-    {
-        BaseLayer,
-        LightLayer,
-        Burnt,
-        Flashing,
-    }
 }

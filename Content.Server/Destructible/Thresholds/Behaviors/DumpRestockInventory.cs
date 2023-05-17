@@ -1,5 +1,6 @@
 using Robust.Shared.Random;
 using Content.Shared.Stacks;
+using Content.Server.VendingMachines.Restock;
 using Content.Shared.Prototypes;
 using Content.Shared.VendingMachines;
 

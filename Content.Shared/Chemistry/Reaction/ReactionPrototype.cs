@@ -33,12 +33,6 @@ namespace Content.Shared.Chemistry.Reaction
         public float MinimumTemperature = 0.0f;
 
         /// <summary>
-        ///     If true, this reaction will attempt to conserve thermal energy.
-        /// </summary>
-        [DataField("conserveEnergy")]
-        public bool ConserveEnergy = true;
-
-        /// <summary>
         ///     The maximum temperature the reaction can occur at.
         /// </summary>
         [DataField("maxTemp")]

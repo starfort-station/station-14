@@ -74,10 +74,10 @@ namespace Content.Shared.Throwing
                 return;
 
             var thrower = component.Thrower;
-            if (args.OtherEntity == thrower)
-                return;
+            var otherBody = args.OtherFixture.Body;
 
-            ThrowCollideInteraction(thrower, args.OurBody, args.OtherBody);
+            if (otherBody.Owner == thrower) return;
+            ThrowCollideInteraction(thrower, args.OurFixture.Body, otherBody);
         }
 
         private void PreventCollision(EntityUid uid, ThrownItemComponent component, ref PreventCollideEvent args)

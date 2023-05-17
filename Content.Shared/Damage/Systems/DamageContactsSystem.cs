@@ -37,14 +37,15 @@ public sealed class DamageContactsSystem : EntitySystem
 
     private void OnEntityExit(EntityUid uid, DamageContactsComponent component, ref EndCollideEvent args)
     {
-        var otherUid = args.OtherEntity;
+        var otherUid = args.OtherFixture.Body.Owner;
 
         if (!TryComp<PhysicsComponent>(uid, out var body))
             return;
 
         var damageQuery = GetEntityQuery<DamageContactsComponent>();
-        foreach (var ent in _physics.GetContactingEntities(uid, body))
+        foreach (var contact in _physics.GetContactingEntities(body))
         {
+            var ent = contact.Owner;
             if (ent == uid)
                 continue;
 
@@ -57,7 +58,7 @@ public sealed class DamageContactsSystem : EntitySystem
 
     private void OnEntityEnter(EntityUid uid, DamageContactsComponent component, ref StartCollideEvent args)
     {
-        var otherUid = args.OtherEntity;
+        var otherUid = args.OtherFixture.Body.Owner;
 
         if (HasComp<DamagedByContactComponent>(otherUid))
             return;

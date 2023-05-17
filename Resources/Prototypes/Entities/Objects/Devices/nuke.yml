@@ -12,18 +12,17 @@
     noRot: true
     state: nuclearbomb_base
   - type: Physics
-    bodyType: Static
+    bodyType: Dynamic
   - type: Fixtures
     fixtures:
-      fix1:
-        shape:
-          !type:PhysShapeCircle
-          radius: 0.45
-        density: 80 #It has wheels and bluespace tech to make it lighter.
-        mask:
-        - MachineMask
-        layer:
-        - HalfWallLayer
+    - shape:
+        !type:PhysShapeCircle
+        radius: 0.45
+      density: 80 #It has wheels and bluespace tech to make it lighter.
+      mask:
+      - MachineMask
+      layer:
+      - HalfWallLayer
   - type: NukeLabel
   - type: Nuke
     explosionType: Default
@@ -81,15 +80,14 @@
     bodyType: Dynamic
   - type: Fixtures
     fixtures:
-      fix1:
-        shape:
-          !type:PhysShapeCircle
-          radius: 0.45
-        density: 80
-        mask:
-        - TabletopMachineMask
-        layer:
-        - TabletopMachineLayer
+    - shape:
+        !type:PhysShapeCircle
+        radius: 0.45
+      density: 80
+      mask:
+      - TabletopMachineMask
+      layer:
+      - TabletopMachineLayer
   - type: SolutionContainerManager
     solutions:
       tank:

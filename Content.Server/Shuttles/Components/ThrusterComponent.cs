@@ -1,13 +1,12 @@
 using Content.Server.Shuttles.Systems;
 using Content.Shared.Construction.Prototypes;
 using Content.Shared.Damage;
-using Robust.Shared.GameStates;
 using Robust.Shared.Serialization.TypeSerializers.Implementations.Custom;
 using Robust.Shared.Serialization.TypeSerializers.Implementations.Custom.Prototype;
 
 namespace Content.Server.Shuttles.Components
 {
-    [RegisterComponent, NetworkedComponent]
+    [RegisterComponent]
     [Access(typeof(ThrusterSystem))]
     public sealed class ThrusterComponent : Component
     {
@@ -47,10 +46,10 @@ namespace Content.Server.Shuttles.Components
 
         // Need to serialize this because RefreshParts isn't called on Init and this will break post-mapinit maps!
         [ViewVariables(VVAccess.ReadWrite), DataField("thrust")]
-        public float Thrust = 100f;
+        public float Thrust;
 
         [DataField("baseThrust"), ViewVariables(VVAccess.ReadWrite)]
-        public float BaseThrust = 100f;
+        public float BaseThrust = 750f;
 
         [DataField("thrusterType")]
         public ThrusterType Type = ThrusterType.Linear;
@@ -84,7 +83,7 @@ namespace Content.Server.Shuttles.Components
         public TimeSpan NextFire;
 
         [DataField("machinePartThrust", customTypeSerializer: typeof(PrototypeIdSerializer<MachinePartPrototype>))]
-        public string MachinePartThrust = "Capacitor";
+        public string MachinePartThrust = "Laser";
 
         [DataField("partRatingThrustMultiplier")]
         public float PartRatingThrustMultiplier = 1.5f;

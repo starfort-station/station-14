@@ -34,7 +34,6 @@ namespace Content.Server.Chemistry.EntitySystems
         [Dependency] private readonly StorageSystem _storageSystem = default!;
         [Dependency] private readonly LabelSystem _labelSystem = default!;
         [Dependency] private readonly ISharedAdminLogManager _adminLogger = default!;
-        [Dependency] private readonly AppearanceSystem _appearance = default!;
 
         private const string PillPrototypeId = "Pill";
 
@@ -207,9 +206,8 @@ namespace Content.Server.Chemistry.EntitySystems
                 _solutionContainerSystem.TryAddSolution(
                     item, itemSolution, withdrawal.SplitSolution(message.Dosage));
 
-                var pill = EnsureComp<PillComponent>(item);
-                pill.PillType = chemMaster.PillType;
-                Dirty(pill);
+                if (TryComp<SpriteComponent>(item, out var spriteComp))
+                    spriteComp.LayerSetState(0, "pill" + (chemMaster.PillType + 1));
 
                 if (user.HasValue)
                 {

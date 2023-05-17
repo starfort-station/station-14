@@ -6,7 +6,7 @@
     bodyType: Dynamic
   - type: Fixtures
     fixtures:
-      tether:
-        shape:
+      - shape:
           !type:PhysShapeCircle
           radius: 0.35
+        id: tether

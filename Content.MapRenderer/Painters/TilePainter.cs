@@ -43,7 +43,7 @@ namespace Content.MapRenderer.Painters
             {
                 var path = _sTileDefinitionManager[tile.Tile.TypeId].Sprite.ToString();
 
-                if (string.IsNullOrWhiteSpace(path))
+                if (path == null)
                     return;
 
                 var x = (int) (tile.X + xOffset);
@@ -72,7 +72,7 @@ namespace Content.MapRenderer.Painters
             {
                 var path = definition.Sprite.ToString();
 
-                if (string.IsNullOrWhiteSpace(path))
+                if (path == null)
                     continue;
 
                 images[path] = new List<Image>(definition.Variants);

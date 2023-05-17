@@ -13,7 +13,6 @@ using Content.Shared.Shuttles.Components;
 using Content.Shared.Temperature;
 using Robust.Server.GameObjects;
 using Robust.Shared.Map;
-using Robust.Shared.Map.Components;
 using Robust.Shared.Physics.Collision.Shapes;
 using Robust.Shared.Physics.Components;
 using Robust.Shared.Physics.Events;
@@ -44,6 +43,7 @@ public sealed class ThrusterSystem : EntitySystem
         SubscribeLocalEvent<ThrusterComponent, ActivateInWorldEvent>(OnActivateThruster);
         SubscribeLocalEvent<ThrusterComponent, ComponentInit>(OnThrusterInit);
         SubscribeLocalEvent<ThrusterComponent, ComponentShutdown>(OnThrusterShutdown);
+        SubscribeLocalEvent<ThrusterComponent, MapInitEvent>(OnThrusterMapInit);
         SubscribeLocalEvent<ThrusterComponent, PowerChangedEvent>(OnPowerChange);
         SubscribeLocalEvent<ThrusterComponent, AnchorStateChangedEvent>(OnAnchorChange);
         SubscribeLocalEvent<ThrusterComponent, ReAnchorEvent>(OnThrusterReAnchor);
@@ -200,6 +200,12 @@ public sealed class ThrusterSystem : EntitySystem
             EnableThruster(uid, component);
     }
 
+    private void OnThrusterMapInit(EntityUid uid, ThrusterComponent component, MapInitEvent args)
+    {
+        if (component.NextFire < _timing.CurTime)
+            component.NextFire = _timing.CurTime;
+    }
+
     private void OnThrusterInit(EntityUid uid, ThrusterComponent component, ComponentInit args)
     {
         _ambient.SetAmbience(uid, false);
@@ -289,38 +295,6 @@ public sealed class ThrusterSystem : EntitySystem
         }
 
         _ambient.SetAmbience(uid, true);
-        RefreshCenter(uid, shuttleComponent);
-    }
-
-    /// <summary>
-    /// Refreshes the center of thrust for movement calculations.
-    /// </summary>
-    private void RefreshCenter(EntityUid uid, ShuttleComponent shuttle)
-    {
-        // TODO: Only refresh relevant directions.
-        var center = Vector2.Zero;
-        var thrustQuery = GetEntityQuery<ThrusterComponent>();
-        var xformQuery = GetEntityQuery<TransformComponent>();
-
-        foreach (var dir in new[]
-                     { Direction.South, Direction.East, Direction.North, Direction.West })
-        {
-            var index = (int) dir / 2;
-            var pop = shuttle.LinearThrusters[index];
-            var totalThrust = 0f;
-
-            foreach (var ent in pop)
-            {
-                if (!thrustQuery.TryGetComponent(ent, out var thruster) || !xformQuery.TryGetComponent(ent, out var xform))
-                    continue;
-
-                center += xform.LocalPosition * thruster.Thrust;
-                totalThrust += thruster.Thrust;
-            }
-
-            center /= pop.Count * totalThrust;
-            shuttle.CenterOfThrust[index] = center;
-        }
     }
 
     public void DisableThruster(EntityUid uid, ThrusterComponent component, TransformComponent? xform = null, Angle? angle = null)
@@ -384,7 +358,6 @@ public sealed class ThrusterSystem : EntitySystem
         }
 
         component.Colliding.Clear();
-        RefreshCenter(uid, shuttleComponent);
     }
 
     public bool CanEnable(EntityUid uid, ThrusterComponent component)

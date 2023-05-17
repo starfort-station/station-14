@@ -18,8 +18,7 @@
     color: "#b89f25"
   - type: Fixtures
     fixtures:
-      fix1:
-        shape:
+      - shape:
           !type:PhysShapeAabb
           bounds: "-0.25,-0.25,0.25,0.25"
         density: 200
@@ -48,8 +47,7 @@
         state: telescreen
   - type: Fixtures
     fixtures:
-      fix1:
-        shape:
+      - shape:
           !type:PhysShapeAabb
           bounds: "-0.20,-0.10,0.25,0.35"
         density: 250
@@ -122,8 +120,7 @@
   components:
   - type: Fixtures
     fixtures:
-      fix1:
-        shape:
+      - shape:
           !type:PhysShapeAabb
           bounds: "-0.75,-0.10,0.75,0.35"
         density: 75

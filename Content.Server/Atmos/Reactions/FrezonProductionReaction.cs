@@ -20,18 +20,14 @@ public sealed class FrezonProductionReaction : IGasReactionEffect
         var efficiency = mixture.Temperature / Atmospherics.FrezonProductionMaxEfficiencyTemperature;
         var loss = 1 - efficiency;
 
-        // How much the catalyst (N2) will allow us to produce
         // Less N2 is required the more efficient it is.
-        var catalystLimit = initialN2 * (Atmospherics.FrezonProductionNitrogenRatio / efficiency);
-        var oxyLimit = Math.Min(initialOxy, catalystLimit) / Atmospherics.FrezonProductionTritRatio;
+        var minimumN2 = (initialOxy + initialTrit) / (Atmospherics.FrezonProductionNitrogenRatio * efficiency);
 
-        // Amount of tritium & oxygen that are reacting
-        var tritBurned = Math.Min(oxyLimit, initialTrit);
-        var oxyBurned = tritBurned * Atmospherics.FrezonProductionTritRatio;
-        var burnRatio = tritBurned / initialTrit;
+        if (initialN2 < minimumN2)
+            return ReactionResult.NoReaction;
 
-        var oxyConversion = oxyBurned / Atmospherics.FrezonProductionConversionRate;
-        var tritConversion = tritBurned / Atmospherics.FrezonProductionConversionRate;
+        var oxyConversion = initialOxy / Atmospherics.FrezonProductionConversionRate;
+        var tritConversion = initialTrit / Atmospherics.FrezonProductionConversionRate;
         var total = oxyConversion + tritConversion;
 
         mixture.AdjustMoles(Gas.Oxygen, -oxyConversion);

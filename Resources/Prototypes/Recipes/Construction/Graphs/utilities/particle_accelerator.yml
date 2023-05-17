@@ -5,7 +5,8 @@
     - node: start
       entity: ParticleAcceleratorControlBoxUnfinished
       actions:
-      - !type:AppearanceChange
+        - !type:SpriteStateChange
+          state: "box"
       edges:
         - to: wired
           conditions:
@@ -17,7 +18,8 @@
     - node: wired
       entity: ParticleAcceleratorControlBoxUnfinished
       actions:
-      - !type:AppearanceChange
+        - !type:SpriteStateChange
+          state: "boxw"
       edges:
         - to: completed
           conditions:
@@ -55,7 +57,8 @@
     - node: start
       entity: ParticleAcceleratorPowerBoxUnfinished
       actions:
-      - !type:AppearanceChange
+        - !type:SpriteStateChange
+          state: "box"
       edges:
         - to: wired
           conditions:
@@ -67,7 +70,8 @@
     - node: wired
       entity: ParticleAcceleratorPowerBoxUnfinished
       actions:
-      - !type:AppearanceChange
+        - !type:SpriteStateChange
+          state: "boxw"
       edges:
         - to: completed
           conditions:
@@ -105,7 +109,8 @@
     - node: start
       entity: ParticleAcceleratorFuelChamberUnfinished
       actions:
-      - !type:AppearanceChange
+        - !type:SpriteStateChange
+          state: "chamber"
       edges:
         - to: wired
           conditions:
@@ -117,7 +122,8 @@
     - node: wired
       entity: ParticleAcceleratorFuelChamberUnfinished
       actions:
-      - !type:AppearanceChange
+        - !type:SpriteStateChange
+          state: "chamberw"
       edges:
         - to: completed
           conditions:
@@ -154,7 +160,8 @@
     - node: start
       entity: ParticleAcceleratorEndCapUnfinished
       actions:
-      - !type:AppearanceChange
+        - !type:SpriteStateChange
+          state: "cap"
       edges:
         - to: wired
           conditions:
@@ -166,7 +173,8 @@
     - node: wired
       entity: ParticleAcceleratorEndCapUnfinished
       actions:
-      - !type:AppearanceChange
+        - !type:SpriteStateChange
+          state: "capw"
       edges:
         - to: completed
           conditions:
@@ -203,7 +211,8 @@
     - node: start
       entity: ParticleAcceleratorEmitterLeftUnfinished
       actions:
-      - !type:AppearanceChange
+        - !type:SpriteStateChange
+          state: "left"
       edges:
         - to: wired
           conditions:
@@ -215,7 +224,8 @@
     - node: wired
       entity: ParticleAcceleratorEmitterLeftUnfinished
       actions:
-      - !type:AppearanceChange
+        - !type:SpriteStateChange
+          state: "leftw"
       edges:
         - to: completed
           conditions:
@@ -252,7 +262,8 @@
     - node: start
       entity: ParticleAcceleratorEmitterCenterUnfinished
       actions:
-      - !type:AppearanceChange
+        - !type:SpriteStateChange
+          state: "center"
       edges:
         - to: wired
           conditions:
@@ -264,7 +275,8 @@
     - node: wired
       entity: ParticleAcceleratorEmitterCenterUnfinished
       actions:
-      - !type:AppearanceChange
+        - !type:SpriteStateChange
+          state: "centerw"
       edges:
         - to: completed
           conditions:
@@ -301,7 +313,8 @@
     - node: start
       entity: ParticleAcceleratorEmitterRightUnfinished
       actions:
-      - !type:AppearanceChange
+        - !type:SpriteStateChange
+          state: "right"
       edges:
         - to: wired
           conditions:
@@ -313,7 +326,8 @@
     - node: wired
       entity: ParticleAcceleratorEmitterRightUnfinished
       actions:
-      - !type:AppearanceChange
+        - !type:SpriteStateChange
+          state: "rightw"
       edges:
         - to: completed
           conditions:

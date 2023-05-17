@@ -47,26 +47,20 @@
 - type: entity
   id: LockerBrigmedicFilled
   suffix: Brigmedic, Filled
-  parent: LockerBrigmedic
+  parent: LockerSecurity
   components:
   - type: StorageFill
     contents:
+      - id: Flash
       - id: WeaponDisabler
-      - id: TrackingImplanter
-        amount: 2
-      - id: ClothingOuterHardsuitBrigmedic
+      - id: ClothingOuterHardsuitBrigmed
+      - id: EncryptionKeyMedical
       - id: BoxSterileMask
-      - id: ClothingHeadHatBeretBrigmedic
-      - id: ClothingOuterCoatAMG
-      - id: ClothingUniformJumpsuitBrigmedic
-      - id: ClothingUniformJumpskirtBrigmedic
-      - id: ClothingUniformJumpskirtOfLife
-        prob: 0.1
       - id: MedkitFilled
       - id: MedkitCombatFilled
         prob: 0.6
       - id: MedkitAdvancedFilled
-        prob: 0.4
+        prob: 0.3
       - id: MedkitOxygenFilled
         prob: 0.3
       - id: MedkitBruteFilled
@@ -75,8 +69,6 @@
         prob: 0.3
       - id: MedkitBurnFilled
         prob: 0.7
-      - id: ClothingNeckCloakMoth #bzzz Moth-pocalypse
-        prob: 0.15
 
 - type: entity
   id: LockerDetectiveFilled
@@ -109,94 +101,101 @@
       - id: ClothingMaskGas
 
 - type: entity
-  parent: GunSafe
   id: GunSafeDisabler
-  name: disabler safe
+  suffix: Disabler
+  parent: GunSafe
+  name: gun safe disabler
   components:
   - type: StorageFill
     contents:
-    - id: WeaponDisabler
-      amount: 5
+      - id: WeaponDisabler
+        amount: 5
 
 - type: entity
-  parent: GunSafe
   id: GunSafePistolMk58
-  name: mk58 safe
+  suffix: MK58
+  parent: GunSafe
+  name: gun safe Mk58
   components:
   - type: StorageFill
     contents:
-    - id: WeaponPistolMk58
-      amount: 4
-    - id: MagazinePistol
-      amount: 8
+      - id: WeaponPistolMk58
+        amount: 4
+      - id: MagazinePistol
+        amount: 8
 
 - type: entity
-  parent: GunSafe
   id: GunSafeRifleLecter
-  name: lecter safe
+  suffix: Lecter
+  parent: GunSafe
+  name: gun safe lecter
   components:
   - type: StorageFill
     contents:
-    - id: WeaponRifleLecter
-      amount: 2
-    - id: MagazineRifle
-      amount: 4
+      - id: WeaponRifleLecter
+        amount: 2
+      - id: MagazineRifle
+        amount: 4
 
 - type: entity
+  id: GunSafeSubMachineGunVector
+  suffix: Vector
   parent: GunSafe
-  id: GunSafeSubMachineGunDrozd
-  name: drozd safe
+  name: gun safe vector
   components:
   - type: StorageFill
     contents:
-    - id: WeaponSubMachineGunDrozd
-      amount: 2
-    - id: MagazinePistolSubMachineGun
-      amount: 4
+      - id: WeaponSubMachineGunVector
+        amount: 2
+      - id: MagazineMagnumSubMachineGun
+        amount: 4
 
 - type: entity
-  parent: GunSafe
   id: GunSafeShotgunEnforcer
-  name: enforcer safe
+  suffix: Enforcer
+  parent: GunSafe
+  name: gun safe enforcer
   components:
   - type: StorageFill
     contents:
-    - id: WeaponShotgunEnforcer
-      amount: 2
-    - id: MagazineShotgun
-      amount: 4
+      - id: WeaponShotgunEnforcer
+        amount: 2
+      - id: MagazineShotgun
+        amount: 4
 
 - type: entity
-  parent: GunSafe
   id: GunSafeShotgunKammerer
-  name: kammerer safe
+  suffix: Kammerer
+  parent: GunSafe
+  name: gun safe kammerer
   components:
   - type: StorageFill
     contents:
-    - id: WeaponShotgunKammerer
-      amount: 2
-    - id: MagazineShotgun
-      amount: 4
+      - id: WeaponShotgunKammerer
+        amount: 2
+      - id: MagazineShotgun
+        amount: 4
 
 - type: entity
   id: GunSafeSubMachineGunWt550
   suffix: Wt550
   parent: GunSafe
-  name: wt550 safe
+  name: gun safe Wt550
   components:
   - type: StorageFill
     contents:
-    - id: WeaponSubMachineGunWt550
-      amount: 2
-    - id: MagazinePistolSubMachineGun
-      amount: 4
+      - id: WeaponSubMachineGunWt550
+        amount: 2
+      - id: MagazineMagnumSubMachineGun
+        amount: 4
 
 - type: entity
-  parent: GunSafe
   id: GunSafeLaserCarbine
-  name: laser safe
+  suffix: Laser Carbine
+  parent: GunSafe
+  name: gun safe laser carbine
   components:
   - type: StorageFill
     contents:
-    - id: WeaponLaserCarbine
-      amount: 3
+      - id: WeaponLaserCarbine
+        amount: 3

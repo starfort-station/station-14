@@ -1,28 +1,27 @@
 using Content.Shared.Chemistry.Reagent;
 using Content.Shared.Eye.Blinding;
-using Content.Shared.Eye.Blinding.Systems;
 using JetBrains.Annotations;
 
 namespace Content.Server.Chemistry.ReagentEffects
 {
     /// <summary>
-    /// Heal or apply eye damage
+    /// Heal eye damage (or deal)
     /// </summary>
     [UsedImplicitly]
     public sealed class ChemHealEyeDamage : ReagentEffect
     {
         /// <summary>
-        /// How much eye damage to add.
+        /// How much eye damage to remove.
         /// </summary>
         [DataField("amount")]
         public int Amount = -1;
 
         public override void Effect(ReagentEffectArgs args)
         {
-            if (args.Scale != 1f) // huh?
+            if (args.Scale != 1f)
                 return;
 
-            args.EntityManager.EntitySysManager.GetEntitySystem<BlindableSystem>().AdjustEyeDamage(args.SolutionEntity, Amount);
+            args.EntityManager.EntitySysManager.GetEntitySystem<SharedBlindingSystem>().AdjustEyeDamage(args.SolutionEntity, Amount);
         }
     }
 }

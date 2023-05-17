@@ -14,5 +14,3 @@ tool-quality-slicing-name = Нарезка
 tool-quality-slicing-tool-name = Нож
 tool-quality-sawing-name = Отпиливание
 tool-quality-sawing-tool-name = Пила
-tool-quality-honking-name = Хонканье
-tool-quality-honking-tool-name = Велосипедный гудок

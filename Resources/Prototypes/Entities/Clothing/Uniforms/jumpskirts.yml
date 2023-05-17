@@ -111,6 +111,8 @@
     sprite: Clothing/Uniforms/Jumpskirt/cmo.rsi
   - type: Clothing
     sprite: Clothing/Uniforms/Jumpskirt/cmo.rsi
+  - type: DiseaseProtection
+    protection: 0.15
 
 - type: entity
   parent: ClothingUniformSkirtBase
@@ -170,7 +172,7 @@
     modifiers:
       coefficients:
         Slash: 0.9
-        Piercing: 0.9
+        Piercing: 0.9  
 
 - type: entity
   parent: ClothingUniformSkirtBase
@@ -186,7 +188,7 @@
     modifiers:
       coefficients:
         Slash: 0.9
-        Piercing: 0.9
+        Piercing: 0.9  
 
 - type: entity
   parent: ClothingUniformSkirtBase
@@ -231,6 +233,8 @@
     sprite: Clothing/Uniforms/Jumpskirt/medical.rsi
   - type: Clothing
     sprite: Clothing/Uniforms/Jumpskirt/medical.rsi
+  - type: DiseaseProtection
+    protection: 0.1
 
 - type: entity
   parent: ClothingUniformSkirtBase
@@ -253,17 +257,21 @@
     sprite: Clothing/Uniforms/Jumpskirt/paramedic.rsi
   - type: Clothing
     sprite: Clothing/Uniforms/Jumpskirt/paramedic.rsi
+  - type: DiseaseProtection
+    protection: 0.1
 
 - type: entity
   parent: ClothingUniformBase
   id: ClothingUniformJumpskirtBrigmedic
   name: brigmedic jumpskirt
-  description: This uniform is issued to qualified personnel who have been trained. No one cares that the training took half a day.
+  description: The uniform is issued to qualified persons who have been trained, but no one cares that the training took place half a day.
   components:
   - type: Sprite
     sprite: Clothing/Uniforms/Jumpskirt/brigmedic.rsi
   - type: Clothing
     sprite: Clothing/Uniforms/Jumpskirt/brigmedic.rsi
+  - type: DiseaseProtection
+    protection: 0.1
 
 - type: entity
   parent: ClothingUniformSkirtBase
@@ -312,17 +320,6 @@
     sprite: Clothing/Uniforms/Jumpskirt/scientist.rsi
   - type: Clothing
     sprite: Clothing/Uniforms/Jumpskirt/scientist.rsi
-
-- type: entity
-  parent: ClothingUniformSkirtBase
-  id: ClothingUniformJumpskirtRoboticist
-  name: roboticist jumpskirt
-  description: It's a slimming black with reinforced seams; great for industrial work.
-  components:
-  - type: Sprite
-    sprite: Clothing/Uniforms/Jumpskirt/roboticist.rsi
-  - type: Clothing
-    sprite: Clothing/Uniforms/Jumpskirt/roboticist.rsi
 
 - type: entity
   parent: ClothingUniformSkirtBase
@@ -666,14 +663,3 @@
       sprite: Clothing/Uniforms/Jumpskirt/lawyergood.rsi
     - type: Clothing
       sprite: Clothing/Uniforms/Jumpskirt/lawyergood.rsi
-
-- type: entity
-  parent: ClothingUniformBase
-  id: ClothingUniformJumpskirtOfLife
-  name: skirt of life
-  description: A skirt that symbolizes the joy and positivity of our life.
-  components:
-    - type: Sprite
-      sprite: Clothing/Uniforms/Jumpskirt/skirtoflife.rsi
-    - type: Clothing
-      sprite: Clothing/Uniforms/Jumpskirt/skirtoflife.rsi

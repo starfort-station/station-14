@@ -47,14 +47,6 @@
      Plastic: 50
 
 - type: latheRecipe
-  id: SignalTimerElectronics
-  result: SignalTimerElectronics
-  completetime: 2
-  materials:
-     Steel: 50
-     Plastic: 50
-
-- type: latheRecipe
   id: CloningPodMachineCircuitboard
   result: CloningPodMachineCircuitboard
   completetime: 4
@@ -259,6 +251,14 @@
      Gold: 100
 
 - type: latheRecipe
+  id: CrewMonitoringComputerCircuitboard
+  result: CrewMonitoringComputerCircuitboard
+  completetime: 4
+  materials:
+     Steel: 100
+     Glass: 900
+
+- type: latheRecipe
   id: ShuttleConsoleCircuitboard
   result: ShuttleConsoleCircuitboard
   completetime: 4
@@ -326,33 +326,6 @@
     Steel: 100
     Glass: 900
     Gold: 100
-
-- type: latheRecipe
-  id: HonkerCentralElectronics
-  result: HonkerCentralElectronics
-  completetime: 4
-  materials:
-    Steel: 100
-    Glass: 900
-    Bananium: 100
-
-- type: latheRecipe
-  id: HonkerPeripheralsElectronics
-  result: HonkerPeripheralsElectronics
-  completetime: 4
-  materials:
-    Steel: 100
-    Glass: 900
-    Bananium: 100
-
-- type: latheRecipe
-  id: HonkerTargetingElectronics
-  result: HonkerTargetingElectronics
-  completetime: 4
-  materials:
-    Steel: 100
-    Glass: 900
-    Bananium: 100
 
 # Power
 - type: latheRecipe

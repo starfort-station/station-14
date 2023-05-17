@@ -36,8 +36,7 @@
 
 - type: htnPrimitive
   id: PickRangedTargetPrimitive
-  operator: !type:UtilityOperator
-    proto: NearbyRangedTargets
+  operator: !type:PickRangedTargetOperator
 
 # Attacks the specified target if they're in LOS.
 - type: htnPrimitive
@@ -54,11 +53,6 @@
     - !type:TargetInLOSPrecondition
       targetKey: CombatTarget
       rangeKey: RangedRange
-  services:
-    - !type:UtilityService
-      id: RangedService
-      proto: NearbyRangedTargets
-      key: CombatTarget
 
 
 # -- Melee --
@@ -90,8 +84,7 @@
 
 - type: htnPrimitive
   id: PickMeleeTargetPrimitive
-  operator: !type:UtilityOperator
-    proto: NearbyMeleeTargets
+  operator: !type:PickMeleeTargetOperator
 
 # Attacks the specified target if they're in range.
 - type: htnPrimitive
@@ -104,11 +97,6 @@
     - !type:TargetInRangePrecondition
       targetKey: CombatTarget
       rangeKey: MeleeRange
-  services:
-    - !type:UtilityService
-      id: MeleeService
-      proto: NearbyMeleeTargets
-      key: CombatTarget
 
 # Moves the owner into range of the combat target.
 - type: htnPrimitive

@@ -43,20 +43,6 @@
     - AdvMopItem
     - MegaSprayBottle
 
-- type: technology
-  id: AdvancedSprayTechnology
-  name: technologies-advanced-spray-technology
-  description: technologies-advanced-spray-technology-description
-  icon:
-    sprite: Objects/Weapons/Guns/Basic/spraynozzle.rsi
-    state: icon
-  requiredPoints: 7500
-  requiredTechnologies:
-  - AdvancedCleaningTechnology
-  unlockedRecipes:
-  - WeaponSprayNozzle
-  - ClothingBackpackWaterTank
-
 # Food/Bev Service Technology Tree
 
 - type: technology
@@ -113,7 +99,6 @@
   unlockedRecipes:
   - SeedExtractorMachineCircuitboard
   - HydroponicsTrayMachineCircuitboard
-  - Vape
 
 - type: technology
   name: technologies-virology
@@ -185,6 +170,7 @@
   unlockedRecipes:
   - ChemMasterMachineCircuitboard
   - ChemDispenserMachineCircuitboard
+  - CrewMonitoringComputerCircuitboard
   - HandheldCrewMonitor
   - BiomassReclaimerMachineCircuitboard
 
@@ -325,27 +311,6 @@
   - RipleyLLeg
   - RipleyRLeg
 
-- type: technology
-  name: technologies-clown-technology
-  id: ClownTechnology
-  description: technologies-clown-technology-description
-  icon:
-    sprite: Objects/Specific/Mech/mecha.rsi
-    state: honker
-  requiredPoints: 15000
-  requiredTechnologies:
-  - RipleyTechnology
-  unlockedRecipes:
-  - HonkerCentralElectronics
-  - HonkerPeripheralsElectronics
-  - HonkerTargetingElectronics
-  - MechEquipmentHorn
-  - HonkerHarness
-  - HonkerLArm
-  - HonkerRArm
-  - HonkerLLeg
-  - HonkerRLeg
-
 # Industrial Engineering Technology Tree
 
 - type: technology
@@ -372,7 +337,6 @@
   - AirAlarmElectronics
   - FireAlarmElectronics
   - MailingUnitElectronics
-  - SignalTimerElectronics
 
 - type: technology
   name: technologies-material-sheet-printing
@@ -552,7 +516,9 @@
   - TechDiskComputerCircuitboard
   - CapacitorStockPart
   - MatterBinStockPart
+  - MicroLaserStockPart
   - MicroManipulatorStockPart
+  - ScanningModuleStockPart
   - NodeScanner
   - AnomalyScanner
   - AnomalyLocator
@@ -588,10 +554,7 @@
   unlockedRecipes:
   - ProximitySensor
   - LeftArmBorg
-  - LightHeadBorg
   - RightArmBorg
-  - LeftLegBorg
-  - RightLegBorg
   - Drone
   - ExosuitFabricatorMachineCircuitboard
 
@@ -623,7 +586,9 @@
   unlockedRecipes:
   - AdvancedCapacitorStockPart
   - AdvancedMatterBinStockPart
+  - HighPowerMicroLaserStockPart
   - NanoManipulatorStockPart
+  - AdvancedScanningModuleStockPart
 
 - type: technology
   name: technologies-magboots-technology
@@ -652,4 +617,6 @@
   unlockedRecipes:
   - SuperCapacitorStockPart
   - SuperMatterBinStockPart
+  - UltraHighPowerMicroLaserStockPart
   - PicoManipulatorStockPart
+  - PhasicScanningModuleStockPart

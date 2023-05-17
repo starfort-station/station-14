@@ -533,7 +533,7 @@ namespace Content.Shared.Containers.ItemSlots
 
             foreach (var slot in itemSlots.Slots.Values)
             {
-                if (!slot.InsertOnInteract || !CanInsert(uid, args.Using.Value, slot))
+                if (!CanInsert(uid, args.Using.Value, slot))
                     continue;
 
                 var verbSubject = slot.Name != string.Empty

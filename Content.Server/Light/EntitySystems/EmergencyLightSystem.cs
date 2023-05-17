@@ -34,14 +34,8 @@ namespace Content.Server.Light.EntitySystems
 
         private void OnEmergencyPower(EntityUid uid, EmergencyLightComponent component, ref PowerChangedEvent args)
         {
-            var meta = MetaData(uid);
-
-            // TODO: PowerChangedEvent shouldn't be issued for paused ents but this is the world we live in.
-            if (meta.EntityLifeStage >= EntityLifeStage.Terminating ||
-                meta.EntityPaused)
-            {
+            if (MetaData(uid).EntityLifeStage >= EntityLifeStage.Terminating)
                 return;
-            }
 
             UpdateState(component);
         }

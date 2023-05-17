@@ -10,12 +10,14 @@
     sprite: Starfort/Clothing/OuterClothing/Hardsuits/expedition.rsi
   - type: PressureProtection
     highPressureMultiplier: 0.3
-    lowPressureMultiplier: 10000
+    lowPressureMultiplier: 7000
+  - type: DiseaseProtection
+    protection: 0.7
   - type: ExplosionResistance
     damageCoefficient: 0.55
   - type: ClothingSpeedModifier
-    walkModifier: 0.75
-    sprintModifier: 0.75
+    walkModifier: 0.80
+    sprintModifier: 0.80
   - type: Armor
     modifiers:
       coefficients:
@@ -36,7 +38,7 @@
   components:
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHelmetHardsuitExpeditionMedic
-
+    
 - type: entity
   parent: ClothingOuterHardsuitExpeditionBase
   id: ClothingOuterHardsuitExpeditionTrooper
@@ -46,7 +48,7 @@
   components:
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHelmetHardsuitExpeditionTrooper
-
+    
 - type: entity
   parent: ClothingOuterHardsuitExpeditionBase
   id: ClothingOuterHardsuitExpeditionScientist
@@ -66,42 +68,3 @@
   components:
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHelmetHardsuitExpeditionEngineer
-
-- type: entity
-  parent: ClothingOuterHardsuitExpeditionBase
-  id: ClothingOuterHardsuitExpeditionCommander
-  name: Field Commander
-  description: Modern expedition hardsuit with composition armor, looks for command role
-  suffix: field commander
-  components:
-  - type: ToggleableClothing
-    clothingPrototype: ClothingHeadHelmetHardsuitExpeditionCommander
-
-- type: entity
-  parent: ClothingOuterHardsuitBase
-  id: ClothingOuterLightsuitExpedition
-  name: Expedition lightsuit
-  description: Light expedition suit with layered fabric armor
-  components:
-  - type: Sprite
-    sprite: Starfort/Clothing/OuterClothing/Hardsuits/expedition-light.rsi
-  - type: Clothing
-    sprite: Starfort/Clothing/OuterClothing/Hardsuits/expedition-light.rsi
-  - type: PressureProtection
-    highPressureMultiplier: 0.3
-    lowPressureMultiplier: 7000
-  - type: ClothingSpeedModifier
-    walkModifier: 0.85
-    sprintModifier: 0.85
-  - type: ToggleableClothing
-    clothingPrototype: ClothingHeadHelmetLightsuitExpedition
-  - type: Armor
-    modifiers:
-      coefficients:
-        Blunt: 0.85
-        Slash: 0.85
-        Piercing: 0.85
-        Heat: 0.85
-        Cold: 0.85
-        Radiation: 0.8
-        Caustic: 0.8

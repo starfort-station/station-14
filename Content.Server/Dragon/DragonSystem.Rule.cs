@@ -1,7 +1,6 @@
 using System.Linq;
 using Content.Server.GameTicking;
-using Content.Server.GameTicking.Rules.Components;
-using Content.Server.Station.Components;
+using Content.Server.StationEvents.Components;
 using Content.Shared.Dragon;
 using Robust.Server.GameObjects;
 using Robust.Shared.Map.Components;
@@ -11,6 +10,8 @@ namespace Content.Server.Dragon;
 
 public sealed partial class DragonSystem
 {
+    public override string Prototype => "Dragon";
+
     private int RiftsMet(DragonComponent component)
     {
         var finished = 0;
@@ -27,22 +28,27 @@ public sealed partial class DragonSystem
         return finished;
     }
 
-    protected override void Started(EntityUid uid, DragonRuleComponent component, GameRuleComponent gameRule, GameRuleStartedEvent args)
+    public override void Started()
     {
-        base.Started(uid, component, gameRule, args);
+        var spawnLocations = EntityManager.EntityQuery<MapGridComponent, TransformComponent>().ToList();
 
-        if (!_station.Stations.Any())
+        if (spawnLocations.Count == 0)
             return;
 
-        var station = _random.Pick(_station.Stations);
-        if (_station.GetLargestGrid(EntityManager.GetComponent<StationDataComponent>(station)) is not { } grid)
-            return;
+        var location = _random.Pick(spawnLocations);
+        Spawn("MobDragon", location.Item2.MapPosition);
+    }
 
-        Spawn("MobDragon", Transform(grid).MapPosition);
+    public override void Ended()
+    {
+        return;
     }
 
     private void OnRiftRoundEnd(RoundEndTextAppendEvent args)
     {
+        if (!RuleAdded)
+            return;
+
         var dragons = EntityQuery<DragonComponent>(true).ToList();
 
         if (dragons.Count == 0)

@@ -1,11 +1,9 @@
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
-using Content.Shared.CCVar;
 using NUnit.Framework;
 using Robust.Server.GameObjects;
 using Robust.Server.Maps;
-using Robust.Shared.Configuration;
 using Robust.Shared.ContentPack;
 using Robust.Shared.GameObjects;
 using Robust.Shared.Log;
@@ -27,8 +25,6 @@ namespace Content.IntegrationTests.Tests
             var server = pairTracker.Pair.Server;
             var mapLoader = server.ResolveDependency<IEntitySystemManager>().GetEntitySystem<MapLoaderSystem>();
             var mapManager = server.ResolveDependency<IMapManager>();
-            var cfg = server.ResolveDependency<IConfigurationManager>();
-            Assert.That(cfg.GetCVar(CCVars.DisableGridFill), Is.False);
 
             await server.WaitPost(() =>
             {
@@ -96,8 +92,6 @@ namespace Content.IntegrationTests.Tests
             var mapManager = server.ResolveDependency<IMapManager>();
 
             MapId mapId = default;
-            var cfg = server.ResolveDependency<IConfigurationManager>();
-            Assert.That(cfg.GetCVar(CCVars.DisableGridFill), Is.False);
 
             // Load bagel.yml as uninitialized map, and save it to ensure it's up to date.
             server.Post(() =>
@@ -177,8 +171,6 @@ namespace Content.IntegrationTests.Tests
             var mapLoader = server.ResolveDependency<IEntitySystemManager>().GetEntitySystem<MapLoaderSystem>();
             var mapManager = server.ResolveDependency<IMapManager>();
             var userData = server.ResolveDependency<IResourceManager>().UserData;
-            var cfg = server.ResolveDependency<IConfigurationManager>();
-            Assert.That(cfg.GetCVar(CCVars.DisableGridFill), Is.False);
 
             MapId mapId = default;
             const string fileA = "/load tick load a.yml";

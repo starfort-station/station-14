@@ -34,8 +34,7 @@
   suffix: Full
   components:
   - type: Material
-  - type: PhysicalComposition
-    materialComposition:
+    materials:
       Gold: 100
   - type: Stack
     stackType: Gold
@@ -69,8 +68,7 @@
   suffix: Full
   components:
   - type: Material
-  - type: PhysicalComposition
-    materialComposition:
+    materials:
       Silver: 100
   - type: Stack
     stackType: Silver

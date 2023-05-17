@@ -8,11 +8,11 @@
   },
   "states": [
     {
-      "name": "unwired",
+      "name": "left",
       "directions": 4
     },
     {
-      "name": "completed",
+      "name": "leftc",
       "directions": 4
     },
     {
@@ -36,7 +36,7 @@
       "directions": 4
     },
     {
-      "name": "wired",
+      "name": "leftw",
       "directions": 4
     }
   ]

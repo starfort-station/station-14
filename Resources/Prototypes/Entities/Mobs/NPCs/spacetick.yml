@@ -24,15 +24,14 @@
     baseSprintSpeed : 6
   - type: Fixtures
     fixtures:
-      fix1:
-        shape:
-          !type:PhysShapeCircle
-          radius: 0.20
-        density: 20
-        mask:
-        - SmallMobMask
-        layer:
-        - SmallMobLayer
+    - shape:
+        !type:PhysShapeCircle
+        radius: 0.20
+      density: 20
+      mask:
+      - SmallMobMask
+      layer:
+      - SmallMobLayer
   - type: MobState
     allowedStates:
       - Alive
@@ -78,8 +77,9 @@
   - type: GhostRole
     prob: 0.33
     makeSentient: true
-    name: ghost-role-information-space-tick-name
-    description: ghost-role-information-space-tick-description
+    name: space tick
+    description: |
+      Wreak havoc on the station!
   - type: GhostTakeoverAvailable
   - type: ReplacementAccent
     accent: genericAggressive
@@ -90,8 +90,9 @@
   suffix: "Salvage Ruleset"
   components:
   - type: GhostRole
-    name: ghost-role-information-salvage-tick-name
-    description: ghost-role-information-salvage-tick-description
+    name: space tick on salvage wreck
+    description: |
+      Defend the loot inside the salvage wreck!
   - type: GhostTakeoverAvailable
   - type: SalvageMobRestrictions
 

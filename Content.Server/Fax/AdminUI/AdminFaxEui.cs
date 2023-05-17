@@ -38,10 +38,13 @@ public sealed class AdminFaxEui : BaseEui
 
     public override void HandleMessage(EuiMessageBase msg)
     {
-        base.HandleMessage(msg);
-
         switch (msg)
         {
+            case AdminFaxEuiMsg.Close:
+            {
+                Close();
+                break;
+            }
             case AdminFaxEuiMsg.Follow followData:
             {
                 if (Player.AttachedEntity == null ||

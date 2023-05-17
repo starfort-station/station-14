@@ -1,16 +1,9 @@
-using Content.Server.Atmos.EntitySystems;
-
-namespace Content.Server.Atmos.Components;
-
-[RegisterComponent, Access(typeof(FlammableSystem))]
-public sealed class IgniteOnCollideComponent : Component
+namespace Content.Server.Atmos.Components
 {
-    /// <summary>
-    /// How many more times the ignition can be applied.
-    /// </summary>
-    [ViewVariables(VVAccess.ReadWrite), DataField("count")]
-    public int Count = 1;
-
-    [ViewVariables(VVAccess.ReadWrite), DataField("fireStacks")]
-    public float FireStacks;
+    [RegisterComponent]
+    public sealed class IgniteOnCollideComponent : Component
+    {
+        [DataField("fireStacks")]
+        public float FireStacks { get; set; }
+    }
 }

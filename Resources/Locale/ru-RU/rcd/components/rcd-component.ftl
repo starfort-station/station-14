@@ -1,8 +1,6 @@
 ### UI
 
 # Shown when an RCD is examined in details range
-rcd-component-examine-detail = В настоящее время он находится в режиме { $mode }.
-# Shown when an RCD is examined in details range
 rcd-component-examine-detail-count =
     Находится в режиме { $mode }, и { $ammoCount ->
        *[zero] не содержит зарядов.

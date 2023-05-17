@@ -8,10 +8,6 @@
   - type: DeviceList
   - type: DeviceNetwork
     deviceNetId: Wired
-    receiveFrequencyId: BasicDevice
-  - type: DeviceLinkSink
-    ports:
-      - CloningPodReceiver
   - type: Sprite
     netsync: false
     sprite: Structures/Machines/cloning.rsi
@@ -22,15 +18,14 @@
     bodyType: Static
   - type: Fixtures
     fixtures:
-      fix1:
-        shape:
-          !type:PhysShapeAabb
-          bounds: "-0.25,-0.5,0.25,0.5"
-        density: 190
-        mask:
-        - MachineMask
-        layer:
-        - MachineLayer
+    - shape:
+        !type:PhysShapeAabb
+        bounds: "-0.25,-0.5,0.25,0.5"
+      density: 190
+      mask:
+      - MachineMask
+      layer:
+      - MachineLayer
   - type: Construction
     graph: Machine
     node: machine
@@ -38,6 +33,9 @@
      - machine_board
      - machine_parts
      - clonepod-bodyContainer
+  - type: SignalReceiver
+    inputs:
+      CloningPodReceiver: []
   - type: EmptyOnMachineDeconstruct
     containers:
       - clonepod-bodyContainer

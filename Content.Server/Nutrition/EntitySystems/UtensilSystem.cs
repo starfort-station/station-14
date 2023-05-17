@@ -32,24 +32,24 @@ namespace Content.Server.Nutrition.EntitySystems
             if (ev.Target == null || !ev.CanReach)
                 return;
 
-            var result = TryUseUtensil(ev.User, ev.Target.Value, component);
-            ev.Handled = result.Handled;
+            if (TryUseUtensil(ev.User, ev.Target.Value, component))
+                ev.Handled = true;
         }
 
-        public (bool Success, bool Handled) TryUseUtensil(EntityUid user, EntityUid target, UtensilComponent component)
+        private bool TryUseUtensil(EntityUid user, EntityUid target, UtensilComponent component)
         {
             if (!EntityManager.TryGetComponent(target, out FoodComponent? food))
-                return (false, true);
+                return false;
 
             //Prevents food usage with a wrong utensil
             if ((food.Utensil & component.Types) == 0)
             {
                 _popupSystem.PopupEntity(Loc.GetString("food-system-wrong-utensil", ("food", target), ("utensil", component.Owner)), user, user);
-                return (false, true);
+                return false;
             }
 
             if (!_interactionSystem.InRangeUnobstructed(user, target, popup: true))
-                return (false, true);
+                return false;
 
             return _foodSystem.TryFeed(user, user, target, food);
         }

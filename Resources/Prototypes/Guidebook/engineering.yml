@@ -7,7 +7,6 @@
   - Construction
   - Power
   - ShuttleCraft
-  - Networking
 
 - type: guideEntry
   id: Construction
@@ -30,19 +29,6 @@
   id: ShuttleCraft
   name: guide-entry-shuttle-craft
   text: "/ServerInfo/Guidebook/Shuttlecraft.xml"
-
-- type: guideEntry
-  id: Networking
-  name: guide-entry-networking
-  text: "/ServerInfo/Guidebook/Networking.xml"
-  children:
-  - NetworkConfigurator
-
-- type: guideEntry
-  id: NetworkConfigurator
-  name: guide-entry-network-configurator
-  text: "/ServerInfo/Guidebook/Network_Configurator.xml"
-
 
 - type: guideEntry
   id: Power

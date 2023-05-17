@@ -13,15 +13,14 @@
       map: [ "enum.DamageStateVisualLayers.Base" ]
   - type: Fixtures
     fixtures:
-      fix1:
-        shape:
-          !type:PhysShapeCircle
-          radius: 0.3
-        density: 190
-        mask:
-        - MachineMask
-        layer:
-        - Impassable
+    - shape:
+        !type:PhysShapeCircle
+        radius: 0.3
+      density: 190
+      mask:
+      - MachineMask
+      layer:
+      - Impassable
   - type: RandomSprite
     available:
       - enum.DamageStateVisualLayers.Base:

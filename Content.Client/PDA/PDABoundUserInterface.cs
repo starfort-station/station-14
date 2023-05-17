@@ -55,6 +55,11 @@ namespace Content.Client.PDA
                 SendMessage(new ItemSlotButtonPressedEvent(PDAComponent.PDAPenSlotId));
             };
 
+            _menu.ActivateUplinkButton.OnPressed += _ =>
+            {
+                SendMessage(new PDAShowUplinkMessage());
+            };
+
             _menu.ActivateMusicButton.OnPressed += _ =>
             {
                 SendMessage(new PDAShowMusicMessage());
@@ -63,16 +68,6 @@ namespace Content.Client.PDA
             _menu.AccessRingtoneButton.OnPressed += _ =>
             {
                 SendMessage(new PDAShowRingtoneMessage());
-            };
-
-            _menu.ShowUplinkButton.OnPressed += _ =>
-            {
-                SendMessage(new PDAShowUplinkMessage());
-            };
-
-            _menu.LockUplinkButton.OnPressed += _ =>
-            {
-                SendMessage(new PDALockUplinkMessage());
             };
 
             _menu.OnProgramItemPressed += ActivateCartridge;

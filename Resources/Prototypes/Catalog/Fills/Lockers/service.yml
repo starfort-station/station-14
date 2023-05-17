@@ -6,7 +6,7 @@
   - type: StorageFill
     contents:
       - id: ClothingOuterVestKevlar
-      - id: WeaponShotgunDoubleBarreledRubber
+      - id: WeaponShotgunDoubleBarreled
       - id: DrinkShaker
       - id: ClothingEyesGlassesBeer
       - id: DrinkBottleBeer
@@ -17,8 +17,6 @@
         prob: 0.5
       - id: BoxBeanbag
         amount: 2
-      - id: RagItem
-        amound: 2
 
 #- type: entity
 #  id: LockerFormalFilled

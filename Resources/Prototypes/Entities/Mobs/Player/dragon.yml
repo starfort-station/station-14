@@ -9,8 +9,8 @@
       allowMovement: true
       allowSpeech: true
       makeSentient: true
-      name: ghost-role-information-space-dragon-name
-      description: ghost-role-information-space-dragon-description
+      name: Space dragon
+      description: Call in 3 carp rifts and take over this quadrant! You have only 5 minutes in between each rift before you will disappear.
     - type: GhostTakeoverAvailable
     - type: HTN
       rootTask: XenoCompound
@@ -54,8 +54,7 @@
       bodyType: KinematicController
     - type: Fixtures
       fixtures:
-        fix1:
-          shape:
+        - shape:
             !type:PhysShapeCircle
             radius: 0.40
           density: 100

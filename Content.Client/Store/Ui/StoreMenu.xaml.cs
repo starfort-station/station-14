@@ -77,11 +77,6 @@ public sealed partial class StoreMenu : DefaultWindow
         }
     }
 
-    public void SetFooterVisibility(bool visible)
-    {
-        TraitorFooter.Visible = visible;
-    }
-
     private void OnWithdrawButtonDown(BaseButton.ButtonEventArgs args)
     {
         // check if window is already open

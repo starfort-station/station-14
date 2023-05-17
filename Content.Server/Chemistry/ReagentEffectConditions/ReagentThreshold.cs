@@ -23,14 +23,13 @@ namespace Content.Server.Chemistry.ReagentEffectConditions
 
         public override bool Condition(ReagentEffectArgs args)
         {
-            var reagent = Reagent ?? args.Reagent?.ID;
-            if (reagent == null)
-                return true; // No condition to apply.
+            if (Reagent == null)
+                Reagent = args.Reagent.ID;
 
             var quant = FixedPoint2.Zero;
-            if (args.Source != null && args.Source.ContainsReagent(reagent))
+            if (args.Source != null && args.Source.ContainsReagent(Reagent))
             {
-                quant = args.Source.GetReagentQuantity(reagent);
+                quant = args.Source.GetReagentQuantity(args.Reagent.ID);
             }
 
             return quant >= Min && quant <= Max;

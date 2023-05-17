@@ -34,9 +34,9 @@ namespace Content.Server.Chemistry.EntitySystems
 
         private void HandleInjection(EntityUid uid, SolutionInjectOnCollideComponent component, ref StartCollideEvent args)
         {
-            var target = args.OtherEntity;
+            var target = args.OtherFixture.Body.Owner;
 
-            if (!args.OtherBody.Hard ||
+            if (!args.OtherFixture.Body.Hard ||
                 !EntityManager.TryGetComponent<BloodstreamComponent>(target, out var bloodstream) ||
                 !_solutionsSystem.TryGetInjectableSolution(component.Owner, out var solution)) return;
 

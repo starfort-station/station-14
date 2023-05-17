@@ -10,9 +10,6 @@
       layers:
         - state: book_demonomicon
     - type: Spellbook
-    - type: Tag
-      tags:
-      - Spellbook
 
 - type: entity
   id: SpawnSpellbook

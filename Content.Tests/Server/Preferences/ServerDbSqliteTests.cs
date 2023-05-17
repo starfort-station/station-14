@@ -79,7 +79,7 @@ namespace Content.Tests.Server.Preferences
             var conn = new SqliteConnection("Data Source=:memory:");
             conn.Open();
             builder.UseSqlite(conn);
-            return new ServerDbSqlite(() => builder.Options, true);
+            return new ServerDbSqlite(builder.Options);
         }
 
         [Test]

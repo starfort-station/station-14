@@ -8,12 +8,12 @@ public abstract partial class SharedGunSystem
 {
     protected virtual void InitializeBasicEntity()
     {
-        SubscribeLocalEvent<BasicEntityAmmoProviderComponent, MapInitEvent>(OnBasicEntityMapInit);
+        SubscribeLocalEvent<BasicEntityAmmoProviderComponent, ComponentInit>(OnBasicEntityInit);
         SubscribeLocalEvent<BasicEntityAmmoProviderComponent, TakeAmmoEvent>(OnBasicEntityTakeAmmo);
         SubscribeLocalEvent<BasicEntityAmmoProviderComponent, GetAmmoCountEvent>(OnBasicEntityAmmoCount);
     }
 
-    private void OnBasicEntityMapInit(EntityUid uid, BasicEntityAmmoProviderComponent component, MapInitEvent args)
+    private void OnBasicEntityInit(EntityUid uid, BasicEntityAmmoProviderComponent component, ComponentInit args)
     {
         if (component.Count is null)
         {
@@ -26,7 +26,7 @@ public abstract partial class SharedGunSystem
 
     private void OnBasicEntityTakeAmmo(EntityUid uid, BasicEntityAmmoProviderComponent component, TakeAmmoEvent args)
     {
-        for (var i = 0; i < args.Shots; i++)
+        for (int i = 0; i < args.Shots; i++)
         {
             if (component.Count <= 0)
                 return;
@@ -40,7 +40,6 @@ public abstract partial class SharedGunSystem
             args.Ammo.Add((ent, EnsureComp<AmmoComponent>(ent)));
         }
 
-        _recharge.Reset(uid);
         UpdateBasicEntityAppearance(uid, component);
         Dirty(component);
     }
@@ -74,7 +73,6 @@ public abstract partial class SharedGunSystem
         component.Count = count;
         Dirty(component);
         UpdateBasicEntityAppearance(uid, component);
-        UpdateAmmoCount(uid);
 
         return true;
     }

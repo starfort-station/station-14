@@ -76,16 +76,3 @@
     state: pda-fieldcommander
   - type: Icon
     state: pda-fieldcommander
-
-- type: entity
-  parent: FieldTrooperPDA
-  id: FieldRecrutPDA
-  name: field recrut PDA
-  description: Looks like brand new camo pda.
-  components:
-  - type: Sprite
-  - type: PDA
-    id: FieldRecrutIDCard
-    state: pda-fieldrecrut
-  - type: Icon
-    state: pda-fieldrecrut

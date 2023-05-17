@@ -7,7 +7,7 @@
   - type: Projectile
     damage:
       types:
-        Piercing: 35
+        Piercing: 22
 
 - type: entity
   id: BulletMagnumHighVelocity
@@ -18,7 +18,7 @@
   - type: Projectile
     damage:
       types:
-        Piercing: 39
+        Piercing: 24
 
 - type: entity
   id: BulletMagnumPractice
@@ -41,5 +41,3 @@
     damage:
       types:
         Blunt: 3
-  - type: StaminaDamageOnCollide
-    damage: 35 # 3 hits to stun cuz revolver

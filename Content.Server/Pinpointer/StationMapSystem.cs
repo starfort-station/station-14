@@ -1,4 +1,3 @@
-using Content.Server.PowerCell;
 using Content.Shared.Pinpointer;
 using Robust.Server.GameObjects;
 
@@ -7,7 +6,6 @@ namespace Content.Server.Pinpointer;
 public sealed class StationMapSystem : EntitySystem
 {
     [Dependency] private readonly UserInterfaceSystem _ui = default!;
-    [Dependency] private readonly PowerCellSystem _cell = default!;
 
     public override void Initialize()
     {
@@ -36,9 +34,6 @@ public sealed class StationMapSystem : EntitySystem
     private void OnStationMapOpened(EntityUid uid, StationMapComponent component, BoundUIOpenedEvent args)
     {
         if (args.Session.AttachedEntity == null)
-            return;
-
-        if (!_cell.TryUseActivatableCharge(uid))
             return;
 
         var comp = EnsureComp<StationMapUserComponent>(args.Session.AttachedEntity.Value);

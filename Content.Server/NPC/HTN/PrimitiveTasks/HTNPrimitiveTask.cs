@@ -1,5 +1,4 @@
 using Content.Server.NPC.HTN.Preconditions;
-using Content.Server.NPC.Queries;
 using Robust.Shared.Prototypes;
 
 namespace Content.Server.NPC.HTN.PrimitiveTasks;
@@ -20,9 +19,4 @@ public sealed class HTNPrimitiveTask : HTNTask
     [DataField("preconditions")] public List<HTNPrecondition> Preconditions = new();
 
     [DataField("operator", required:true)] public HTNOperator Operator = default!;
-
-    /// <summary>
-    /// Services actively tick and can potentially update keys, such as combat target.
-    /// </summary>
-    [DataField("services")] public List<UtilityService> Services = new();
 }

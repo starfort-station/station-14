@@ -28,13 +28,12 @@
     bodyType: KinematicController
   - type: Fixtures
     fixtures:
-      fix1:
-        shape:
-          !type:PhysShapeCircle
-          radius: 0.40
-        density: 80
-        mask:
-        - GhostImpassable
+    - shape:
+        !type:PhysShapeCircle
+        radius: 0.40
+      density: 80
+      mask:
+      - GhostImpassable
   - type: HeatResistance
   - type: MovementIgnoreGravity
   - type: Damageable
@@ -51,9 +50,9 @@
     group: GenericNumber
   - type: GhostRole
     makeSentient: true
-    name: ghost-role-information-revenant-name
-    description: ghost-role-information-revenant-description
-    rules: ghost-role-information-revenant-rules
+    name: Revenant
+    description: You are a Revenant. Use your powers to harvest souls and unleash chaos upon the crew. Unlock new abilities with the essence you harvest.
+    rules: You are an antagonist, harvest, defile, and drive the crew insane.
   - type: GhostTakeoverAvailable
   - type: Revenant
   - type: PointLight

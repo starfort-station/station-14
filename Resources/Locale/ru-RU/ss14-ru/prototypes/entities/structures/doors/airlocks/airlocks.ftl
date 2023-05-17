@@ -83,3 +83,4 @@ ent-AirlockCommandGlass = { ent-AirlockGlass }
 ent-AirlockSecurityGlass = { ent-AirlockGlass }
     .desc = { ent-AirlockGlass.desc }
     .suffix = СлужбаБезопасности
+

@@ -32,10 +32,11 @@ namespace Content.Server.Administration.UI
 
         public override void HandleMessage(EuiMessageBase msg)
         {
-            base.HandleMessage(msg);
-
             switch (msg)
             {
+                case AdminAnnounceEuiMsg.Close:
+                    Close();
+                    break;
                 case AdminAnnounceEuiMsg.DoAnnounce doAnnounce:
                     if (!_adminManager.HasAdminFlag(Player, AdminFlags.Admin))
                     {

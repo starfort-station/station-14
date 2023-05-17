@@ -50,6 +50,9 @@
       partType: Head
     - type: Input
       context: "human"
+    - type: MovementSpeedModifier
+      baseWalkSpeed: 0
+      baseSprintSpeed: 0
     - type: Speech
     - type: SkeletonAccent
     - type: Actions
@@ -151,7 +154,7 @@
     - type: BodyPart
       partType: Leg
       symmetry: Left
-    - type: MovementBodyPart
+    - type: MovementSpeedModifier
 
 - type: entity
   id: RightLegSkeleton
@@ -168,7 +171,7 @@
     - type: BodyPart
       partType: Leg
       symmetry: Right
-    - type: MovementBodyPart
+    - type: MovementSpeedModifier
 
 - type: entity
   id: LeftFootSkeleton

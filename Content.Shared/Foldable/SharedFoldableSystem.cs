@@ -1,4 +1,3 @@
-using Content.Shared.Buckle;
 using Content.Shared.Storage.Components;
 using JetBrains.Annotations;
 using Robust.Shared.Containers;
@@ -11,7 +10,6 @@ namespace Content.Shared.Foldable;
 public abstract class SharedFoldableSystem : EntitySystem
 {
     [Dependency] protected readonly SharedAppearanceSystem Appearance = default!;
-    [Dependency] private readonly SharedBuckleSystem _buckle = default!;
 
     public override void Initialize()
     {
@@ -67,7 +65,6 @@ public abstract class SharedFoldableSystem : EntitySystem
         component.IsFolded = folded;
         Dirty(component);
         Appearance.SetData(uid, FoldedVisuals.State, folded);
-        _buckle.StrapSetEnabled(uid, !component.IsFolded);
     }
 
     private void OnInsertEvent(EntityUid uid, FoldableComponent component, ContainerGettingInsertedAttemptEvent args)

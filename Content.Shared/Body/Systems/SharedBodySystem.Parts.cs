@@ -311,11 +311,11 @@ public partial class SharedBodySystem
         var acceleration = 0f;
         foreach (var leg in allLegs)
         {
-            if (!TryComp<MovementBodyPartComponent>(leg, out var legModifier))
+            if (!TryComp<MovementSpeedModifierComponent>(leg, out var legModifier))
                 continue;
 
-            walkSpeed += legModifier.WalkSpeed;
-            sprintSpeed += legModifier.SprintSpeed;
+            walkSpeed += legModifier.BaseWalkSpeed;
+            sprintSpeed += legModifier.BaseSprintSpeed;
             acceleration += legModifier.Acceleration;
         }
 

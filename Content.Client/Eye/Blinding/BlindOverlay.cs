@@ -4,7 +4,6 @@ using Robust.Client.Player;
 using Robust.Shared.Enums;
 using Robust.Shared.Prototypes;
 using Content.Shared.Eye.Blinding;
-using Content.Shared.Eye.Blinding.Components;
 
 namespace Content.Client.Eye.Blinding
 {
@@ -47,7 +46,7 @@ namespace Content.Client.Eye.Blinding
 
             _blindableComponent = blindComp;
 
-            var blind = _blindableComponent.IsBlind;
+            var blind = _blindableComponent.Sources > 0;
 
             if (!blind && _blindableComponent.LightSetup) // Turn FOV back on if we can see again
             {

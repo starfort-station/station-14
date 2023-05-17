@@ -52,7 +52,6 @@ namespace Content.Server.Explosion.EntitySystems
         [Dependency] private readonly IAdminLogManager _adminLogger = default!;
         [Dependency] private readonly SharedContainerSystem _container = default!;
         [Dependency] private readonly BodySystem _body = default!;
-        [Dependency] private readonly SharedAudioSystem _audio = default!;
 
         public override void Initialize()
         {
@@ -71,23 +70,10 @@ namespace Content.Server.Explosion.EntitySystems
             SubscribeLocalEvent<TriggerOnStepTriggerComponent, StepTriggeredEvent>(OnStepTriggered);
             SubscribeLocalEvent<TriggerOnSlipComponent, SlipEvent>(OnSlipTriggered);
 
-            SubscribeLocalEvent<SpawnOnTriggerComponent, TriggerEvent>(OnSpawnTrigger);
             SubscribeLocalEvent<DeleteOnTriggerComponent, TriggerEvent>(HandleDeleteTrigger);
             SubscribeLocalEvent<ExplodeOnTriggerComponent, TriggerEvent>(HandleExplodeTrigger);
             SubscribeLocalEvent<FlashOnTriggerComponent, TriggerEvent>(HandleFlashTrigger);
             SubscribeLocalEvent<GibOnTriggerComponent, TriggerEvent>(HandleGibTrigger);
-        }
-
-        private void OnSpawnTrigger(EntityUid uid, SpawnOnTriggerComponent component, TriggerEvent args)
-        {
-            var xform = Transform(uid);
-
-            var coords = xform.Coordinates;
-
-            if (!coords.IsValid(EntityManager))
-                return;
-
-            Spawn(component.Proto, coords);
         }
 
         private void HandleExplodeTrigger(EntityUid uid, ExplodeOnTriggerComponent component, TriggerEvent args)
@@ -156,7 +142,7 @@ namespace Content.Server.Explosion.EntitySystems
             return triggerEvent.Handled;
         }
 
-        public void HandleTimerTrigger(EntityUid uid, EntityUid? user, float delay , float beepInterval, float? initialBeepDelay, SoundSpecifier? beepSound)
+        public void HandleTimerTrigger(EntityUid uid, EntityUid? user, float delay , float beepInterval, float? initialBeepDelay, SoundSpecifier? beepSound, AudioParams beepParams)
         {
             if (delay <= 0)
             {
@@ -199,6 +185,7 @@ namespace Content.Server.Explosion.EntitySystems
             var active = AddComp<ActiveTimerTriggerComponent>(uid);
             active.TimeRemaining = delay;
             active.User = user;
+            active.BeepParams = beepParams;
             active.BeepSound = beepSound;
             active.BeepInterval = beepInterval;
             active.TimeUntilBeep = initialBeepDelay == null ? active.BeepInterval : initialBeepDelay.Value;
@@ -222,16 +209,15 @@ namespace Content.Server.Explosion.EntitySystems
         private void UpdateTimer(float frameTime)
         {
             HashSet<EntityUid> toRemove = new();
-            var query = EntityQueryEnumerator<ActiveTimerTriggerComponent>();
-            while (query.MoveNext(out var uid, out var timer))
+            foreach (var timer in EntityQuery<ActiveTimerTriggerComponent>())
             {
                 timer.TimeRemaining -= frameTime;
                 timer.TimeUntilBeep -= frameTime;
 
                 if (timer.TimeRemaining <= 0)
                 {
-                    Trigger(uid, timer.User);
-                    toRemove.Add(uid);
+                    Trigger(timer.Owner, timer.User);
+                    toRemove.Add(timer.Owner);
                     continue;
                 }
 
@@ -239,7 +225,8 @@ namespace Content.Server.Explosion.EntitySystems
                     continue;
 
                 timer.TimeUntilBeep += timer.BeepInterval;
-                _audio.PlayPvs(timer.BeepSound, uid, timer.BeepSound.Params);
+                var filter = Filter.Pvs(timer.Owner, entityManager: EntityManager);
+                SoundSystem.Play(timer.BeepSound.GetSound(), filter, timer.Owner, timer.BeepParams);
             }
 
             foreach (var uid in toRemove)

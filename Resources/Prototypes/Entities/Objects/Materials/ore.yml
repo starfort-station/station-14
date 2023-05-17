@@ -15,8 +15,7 @@
     - Ore
   - type: Fixtures
     fixtures:
-      fix1:
-        shape:
+      - shape:
           !type:PhysShapeCircle
           radius: 0.2
         density: 20
@@ -47,8 +46,7 @@
   - type: Sprite
     state: gold
   - type: Material
-  - type: PhysicalComposition
-    materialComposition:
+    materials:
       Gold: 500
 
 - type: entity
@@ -70,8 +68,7 @@
   - type: Sprite
     state: iron
   - type: Material
-  - type: PhysicalComposition
-    materialComposition:
+    materials:
       Steel: 500
 
 - type: entity
@@ -93,8 +90,7 @@
   - type: Sprite
     state: plasma
   - type: Material
-  - type: PhysicalComposition
-    materialComposition:
+    materials:
       Plasma: 500
 
 - type: entity
@@ -116,8 +112,7 @@
   - type: Sprite
     state: silver
   - type: Material
-  - type: PhysicalComposition
-    materialComposition:
+    materials:
       Silver: 500
 
 - type: entity
@@ -139,8 +134,7 @@
   - type: Sprite
     state: spacequartz
   - type: Material
-  - type: PhysicalComposition
-    materialComposition:
+    materials:
       Glass: 500
 
 - type: entity
@@ -162,37 +156,12 @@
   - type: Sprite
     state: uranium
   - type: Material
-  - type: PhysicalComposition
-    materialComposition:
+    materials:
       Uranium: 500
 
 - type: entity
   parent: UraniumOre
   id: UraniumOre1
-  suffix: Single
-  components:
-  - type: Stack
-    count: 1
-
-
-- type: entity
-  parent: OreBase
-  id: BananiumOre
-  name: bananium ore
-  suffix: Full
-  components:
-  - type: Stack
-    stackType: BananiumOre
-  - type: Sprite
-    state: bananium
-  - type: Material
-  - type: PhysicalComposition
-    materialComposition:
-      Bananium: 500
-
-- type: entity
-  parent: BananiumOre
-  id: BananiumOre1
   suffix: Single
   components:
   - type: Stack

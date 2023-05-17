@@ -24,7 +24,7 @@ public sealed class ContainmentFieldSystem : EntitySystem
 
     private void HandleFieldCollide(EntityUid uid, ContainmentFieldComponent component, ref StartCollideEvent args)
     {
-        var otherBody = args.OtherEntity;
+        var otherBody = args.OtherFixture.Body.Owner;
 
         if (TryComp<SpaceGarbageComponent>(otherBody, out var garbage))
         {

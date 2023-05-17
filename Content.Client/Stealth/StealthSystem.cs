@@ -18,8 +18,7 @@ public sealed class StealthSystem : SharedStealthSystem
         base.Initialize();
 
         _shader = _protoMan.Index<ShaderPrototype>("Stealth").InstanceUnique();
-        SubscribeLocalEvent<StealthComponent, ComponentShutdown>(OnShutdown);
-        SubscribeLocalEvent<StealthComponent, ComponentStartup>(OnStartup);
+        SubscribeLocalEvent<StealthComponent, ComponentRemove>(OnRemove);
         SubscribeLocalEvent<StealthComponent, BeforePostShaderRenderEvent>(OnShaderRender);
     }
 
@@ -45,7 +44,7 @@ public sealed class StealthSystem : SharedStealthSystem
         if (!enabled)
         {
             if (component.HadOutline)
-                EnsureComp<InteractionOutlineComponent>(uid);
+                AddComp<InteractionOutlineComponent>(uid);
             return;
         }
 
@@ -56,12 +55,13 @@ public sealed class StealthSystem : SharedStealthSystem
         }
     }
 
-    private void OnStartup(EntityUid uid, StealthComponent component, ComponentStartup args)
+    protected override void OnInit(EntityUid uid, StealthComponent component, ComponentInit args)
     {
+        base.OnInit(uid, component, args);
         SetShader(uid, component.Enabled, component);
     }
 
-    private void OnShutdown(EntityUid uid, StealthComponent component, ComponentShutdown args)
+    private void OnRemove(EntityUid uid, StealthComponent component, ComponentRemove args)
     {
         SetShader(uid, false, component);
     }

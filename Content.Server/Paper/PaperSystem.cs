@@ -92,7 +92,7 @@ namespace Content.Server.Paper
 
         private void OnInteractUsing(EntityUid uid, PaperComponent paperComp, InteractUsingEvent args)
         {
-            if (_tagSystem.HasTag(args.Used, "Write") && paperComp.StampedBy.Count == 0)
+            if (_tagSystem.HasTag(args.Used, "Write"))
             {
                 var writeEvent = new PaperWriteEvent(uid, args.User);
                 RaiseLocalEvent(args.Used, ref writeEvent);
@@ -113,8 +113,6 @@ namespace Content.Server.Paper
                     _popupSystem.PopupEntity(stampPaperOtherMessage, args.User, Filter.PvsExcept(args.User, entityManager: EntityManager), true);
                 var stampPaperSelfMessage = Loc.GetString("paper-component-action-stamp-paper-self", ("target", Identity.Entity(args.Target, EntityManager)),("stamp", args.Used));
                     _popupSystem.PopupEntity(stampPaperSelfMessage, args.User, args.User);
-
-                UpdateUserInterface(uid, paperComp);
             }
         }
 
@@ -126,7 +124,7 @@ namespace Content.Server.Paper
             var text = FormattedMessage.EscapeText(args.Text);
 
             if (text.Length + paperComp.Content.Length <= paperComp.ContentSize)
-                paperComp.Content = text;
+                paperComp.Content += text + '\n';
 
             if (TryComp<AppearanceComponent>(uid, out var appearance))
                 _appearance.SetData(uid, PaperVisuals.Status, PaperStatus.Written, appearance);
@@ -138,7 +136,6 @@ namespace Content.Server.Paper
                 _adminLogger.Add(LogType.Chat, LogImpact.Low,
                     $"{ToPrettyString(args.Session.AttachedEntity.Value):player} has written on {ToPrettyString(uid):entity} the following text: {args.Text}");
 
-            paperComp.Mode = PaperAction.Read;
             UpdateUserInterface(uid, paperComp);
         }
 

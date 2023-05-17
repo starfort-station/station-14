@@ -242,16 +242,15 @@
 
 - type: reaction
   id: Impedrezene
-  minTemp: 370
   reactants:
     Mercury:
       amount: 1
     Oxygen:
       amount: 1
-    Water:
+    Sugar:
       amount: 1
   products:
-    Impedrezene: 1
+    Impedrezene: 3
 
 - type: reaction
   id: Lexorin

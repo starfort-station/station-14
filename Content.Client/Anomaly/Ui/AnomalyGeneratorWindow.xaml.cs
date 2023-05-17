@@ -25,7 +25,6 @@ public sealed partial class AnomalyGeneratorWindow : FancyWindow
         IoCManager.InjectDependencies(this);
 
         EntityView.Sprite = _entityManager.GetComponent<SpriteComponent>(gen);
-        EntityView.SpriteOffset = false;
 
         GenerateButton.OnPressed += _ => OnGenerateButtonPressed?.Invoke();
     }

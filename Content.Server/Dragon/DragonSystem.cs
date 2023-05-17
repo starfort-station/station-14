@@ -17,7 +17,6 @@ using Robust.Shared.GameStates;
 using Robust.Shared.Map;
 using Robust.Shared.Random;
 using Content.Server.NPC.Systems;
-using Content.Server.Station.Systems;
 using Content.Shared.DoAfter;
 using Content.Shared.Humanoid;
 using Content.Shared.Mobs;
@@ -25,7 +24,7 @@ using Content.Shared.Mobs.Components;
 
 namespace Content.Server.Dragon
 {
-    public sealed partial class DragonSystem : GameRuleSystem<DragonRuleComponent>
+    public sealed partial class DragonSystem : GameRuleSystem
     {
         [Dependency] private readonly IMapManager _mapManager = default!;
         [Dependency] private readonly IRobustRandom _random = default!;
@@ -38,7 +37,6 @@ namespace Content.Server.Dragon
         [Dependency] private readonly MovementSpeedModifierSystem _movement = default!;
         [Dependency] private readonly SharedContainerSystem _containerSystem = default!;
         [Dependency] private readonly SharedAudioSystem _audioSystem = default!;
-        [Dependency] private readonly StationSystem _station = default!;
         [Dependency] private readonly NPCSystem _npc = default!;
 
         /// <summary>
@@ -210,8 +208,8 @@ namespace Content.Server.Dragon
 
                 // We can't predict the rift being destroyed anyway so no point adding weakened to shared.
                 dragon.WeakenedAccumulator = dragon.WeakenedDuration;
-                _movement.RefreshMovementSpeedModifiers(component.Dragon.Value);
-                _popupSystem.PopupEntity(Loc.GetString("carp-rift-destroyed"), component.Dragon.Value, component.Dragon.Value);
+                _movement.RefreshMovementSpeedModifiers(component.Dragon);
+                _popupSystem.PopupEntity(Loc.GetString("carp-rift-destroyed"), component.Dragon, component.Dragon);
             }
         }
 

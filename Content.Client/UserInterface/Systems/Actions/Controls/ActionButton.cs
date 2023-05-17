@@ -95,7 +95,6 @@ public sealed class ActionButton : Control
             HorizontalExpand = true,
             VerticalExpand = true,
             Scale = (2, 2),
-            SetSize = (64, 64),
             Visible = false,
             OverrideDirection = Direction.South,
         };

@@ -236,11 +236,10 @@ namespace Content.Server.Shuttles.Systems
             if (!component.Docked)
                 return;
 
-            var otherDock = component.DockedWith;
-            var other = Comp<DockingComponent>(otherDock!.Value);
+            var other = Comp<DockingComponent>(component.DockedWith!.Value);
 
             Undock(uid, component);
-            Dock(uid, component, otherDock.Value, other);
+            Dock(uid, component, component.DockedWith.Value, other);
             _console.RefreshShuttleConsoles();
         }
 
@@ -255,6 +254,13 @@ namespace Content.Server.Shuttles.Systems
             {
                 Undock(uid, component);
             }
+
+            if (!TryComp(uid, out PhysicsComponent? physicsComponent))
+            {
+                return;
+            }
+
+            _fixtureSystem.DestroyFixture(uid, DockingFixture, body: physicsComponent);
         }
 
         private void EnableDocking(EntityUid uid, DockingComponent component)
@@ -272,7 +278,6 @@ namespace Content.Server.Shuttles.Systems
             // Listen it makes intersection tests easier; you can probably dump this but it requires a bunch more boilerplate
             // TODO: I want this to ideally be 2 fixtures to force them to have some level of alignment buuuttt
             // I also need collisionmanager for that yet again so they get dis.
-            // TODO: CollisionManager is fine so get to work sloth chop chop.
             _fixtureSystem.TryCreateFixture(uid, shape, DockingFixture, hard: false, body: physicsComponent);
         }
 

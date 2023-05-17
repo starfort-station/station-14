@@ -289,12 +289,12 @@ namespace Content.Server.Mind
         }
 
         /// <summary>
-        /// Removes an objective from this mind.
+        /// Removes an objective to this mind.
         /// </summary>
         /// <returns>Returns true if the removal succeeded.</returns>
         public bool TryRemoveObjective(int index)
         {
-            if (index < 0 || index >= _objectives.Count) return false;
+            if (_objectives.Count >= index) return false;
 
             var objective = _objectives[index];
 

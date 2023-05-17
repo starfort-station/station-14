@@ -13,7 +13,8 @@
   - node: assembly
     entity: AirAlarmAssembly
     actions:
-    - !type:AppearanceChange
+    - !type:SpriteStateChange
+      state: alarm_b1
     edges:
     - to: wired
       steps:
@@ -53,7 +54,8 @@
 
   - node: electronics
     actions:
-    - !type:AppearanceChange
+    - !type:SpriteStateChange
+      state: alarm_b2
     edges:
     - to: air_alarm
       steps:
@@ -90,7 +92,8 @@
   - node: assembly
     entity: FireAlarmAssembly
     actions:
-    - !type:AppearanceChange
+    - !type:SpriteStateChange
+      state: fire_b1
     edges:
     - to: wired
       steps:
@@ -130,7 +133,8 @@
 
   - node: electronics
     actions:
-    - !type:AppearanceChange
+    - !type:SpriteStateChange
+      state: fire_b2
     edges:
     - to: fire_alarm
       steps:
