@@ -1,0 +1,9 @@
+- type: entity
+  id: BannerExpedition
+  parent: BannerBase
+  name: expedition banner
+  description: A banner displaying the colors of the expedition department. Without blood stains.
+  components:
+  - type: Sprite
+    sprite: Starfort/Structures/Decoration/banner.rsi
+    state: banner_expedition

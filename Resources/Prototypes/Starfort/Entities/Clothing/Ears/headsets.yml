@@ -13,3 +13,20 @@
     sprite: Starfort/Clothing/Ears/Headsets/expedition.rsi
   - type: Clothing
     sprite: Starfort/Clothing/Ears/Headsets/expedition.rsi
+
+- type: entity
+  parent: ClothingHeadsetAlt
+  id: ClothingHeadsetExpeditionCommand
+  name: expedition command headset
+  description: A headset for expedition to chat while the station burns around them.
+  components:
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - EncryptionKeyExpedition
+      - EncryptionKeyCommand
+      - EncryptionKeyCommon
+  - type: Sprite
+    sprite: Starfort/Clothing/Ears/Headsets/expedition.rsi
+  - type: Clothing
+    sprite: Starfort/Clothing/Ears/Headsets/expedition.rsi

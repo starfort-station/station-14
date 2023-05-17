@@ -65,3 +65,15 @@
     layers:
     - state: default
     - state: idfield-commander
+
+- type: entity
+  parent: FieldTrooperIDCard
+  id: FieldRecrutIDCard
+  name: field recrut ID card
+  components:
+  - type: PresetIdCard
+    job: FieldRecrut
+  - type: Sprite
+    layers:
+    - state: default
+    - state: idfield-recrut
