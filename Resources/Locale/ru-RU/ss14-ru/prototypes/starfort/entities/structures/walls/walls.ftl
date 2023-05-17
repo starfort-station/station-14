@@ -1,0 +1,14 @@
+ent-WallSolidRadioactive = { ent-WallSolid }
+    .suffix = Радиоактивный
+    .desc = { ent-WallSolid.desc }
+ent-WallSolidRustRadioactive = { ent-WallSolidRust }
+    .suffix = Ржавый, Радиоактивный
+    .desc = { ent-WallSolidRust.desc }
+ent-WallReinforcedRadioactive = { ent-WallReinforced }
+    .suffix = Радиоактивный
+    .desc = { ent-WallReinforced.desc }
+ent-WallReinforcedShuttle = укрепленная стена шаттла
+    .desc = { ent-WallShuttle.desc }
+ent-WallReinforcedShuttleDiagonal = укрепленная стена шаттла
+    .suffix = Диогональный
+    .desc = { ent-WallShuttleDiagonal.desc }

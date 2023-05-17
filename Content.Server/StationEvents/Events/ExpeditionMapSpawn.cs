@@ -12,30 +12,31 @@ using Content.Shared.Whitelist;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
 using Robust.Shared.GameObjects;
+using Content.Server.StationEvents.Components;
+using Content.Server.GameTicking.Rules.Components;
 
 namespace Content.Server.StationEvents.Events;
 
-public sealed class ExpeditionMapSpawn : StationEventSystem
+public sealed class ExpeditionMapSpawnRule : StationEventSystem<ExpeditionMapSpawnRuleComponent>
 {
     [Dependency] private readonly MapLoaderSystem _mapLoader = default!;
     [Dependency] private readonly TransformSystem _transform = default!;
     [Dependency] private readonly IEntityManager _entMan = default!;
     [Dependency] private readonly IRobustRandom _random = default!;
 
-    public override string Prototype => "ExpeditionMapSpawn";
 
-    public override void Added()
+    protected override void Added(EntityUid uid, ExpeditionMapSpawnRuleComponent component, GameRuleComponent gameRule, GameRuleAddedEvent args)
     {
-        base.Added();
+        base.Added(uid, component, gameRule, args);
 
         // Announce event in chat
         var str = Loc.GetString("expedition-map-spawn-event-announcement");
         ChatSystem.DispatchGlobalAnnouncement(str, colorOverride: Color.FromHex("#6b8e23"));
     }
 
-    public override void Started()
+    protected override void Started(EntityUid uid, ExpeditionMapSpawnRuleComponent component, GameRuleComponent gameRule, GameRuleStartedEvent args)
     {
-        base.Started();
+        base.Started(uid, component, gameRule, args);
 
         // find free mapID or maps more than 25, crazy
         var smallestValue = 1;

@@ -6,6 +6,7 @@ device-frequency-prototype-name-lights = Умное освещение
 device-frequency-prototype-name-mailing-units = Почтовый блок
 device-frequency-prototype-name-pdas = КПК
 device-frequency-prototype-name-fax = Факс
+device-frequency-prototype-name-basic-device = Основные устройства
 # prefixes for randomly generated device addresses
 device-address-prefix-vent = Вент-
 device-address-prefix-scrubber = Скр-
@@ -18,6 +19,7 @@ device-frequency-prototype-name-surveillance-camera-command = Камеры (Км
 device-frequency-prototype-name-surveillance-camera-service = Камеры (Сервис)
 device-frequency-prototype-name-surveillance-camera-medical = Камеры (Мед)
 device-frequency-prototype-name-surveillance-camera-general = Камеры (Общие)
+device-frequency-prototype-name-surveillance-camera-expedition = Камеры (Эксп)
 device-frequency-prototype-name-surveillance-camera-entertainment = Камеры (Развлечения)
 device-address-prefix-sensor = Сенс-
 device-address-prefix-fire-alarm = Пож-
