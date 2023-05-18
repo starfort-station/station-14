@@ -131,7 +131,6 @@
     name: ghost-role-information-burrower-name
     description: ghost-role-information-burrower-description
     rules: ghost-role-information-burrower-rules
-  - type: FlashImmunity
 
 
 # AlienPraetorian
@@ -167,7 +166,6 @@
     name: ghost-role-information-praetorian-name
     description: ghost-role-information-praetorian-description
     rules: ghost-role-information-praetorian-rules
-  - type: FlashImmunity
 
 
 # AlienDrone
@@ -211,7 +209,6 @@
     name: ghost-role-information-drone-name
     description: ghost-role-information-drone-description
     rules: ghost-role-information-drone-rules
-  - type: FlashImmunity
 
 
 # AlienQueen
@@ -259,7 +256,6 @@
     name: ghost-role-information-queen-name
     description: ghost-role-information-queen-description
     rules: ghost-role-information-queen-rules
-  - type: FlashImmunity
 
 
 # AlienRavager
@@ -307,7 +303,6 @@
     name: ghost-role-information-ravager-name
     description: ghost-role-information-ravager-description
     rules: ghost-role-information-ravager-rules
-  - type: FlashImmunity
 
 
 # AlienRunner
@@ -351,7 +346,6 @@
     name: ghost-role-information-runner-name
     description: ghost-role-information-runner-description
     rules: ghost-role-information-runner-rules
-  - type: FlashImmunity
 
 # AlienSpitter
 - type: entity
@@ -386,4 +380,3 @@
     name: ghost-role-information-spitter-name
     description: ghost-role-information-spitter-description
     rules: ghost-role-information-spitter-rules
-  - type: FlashImmunity
