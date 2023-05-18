@@ -1,0 +1,9 @@
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingNeckIDMarksMedic
+  name: Field medic identification marks
+  description: Kit with identification marks for field medic
+  components:
+  - type: Sprite
+    sprite: Starfort/Clothing/Neck/IDMarks/field-medic.rsi
+
