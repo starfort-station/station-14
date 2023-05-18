@@ -4,3 +4,4 @@ ent-AnomalyLocator = сканер аномалий
     .desc = Устройство, предназначенное для помощи в обнаружении аномалий. Вы проверили газовые шахты?
 ent-AnomalyLocatorEmpty = { ent-AnomalyLocator }
     .desc = { ent-AnomalyLocator.desc }
+    .suffix = Пустой

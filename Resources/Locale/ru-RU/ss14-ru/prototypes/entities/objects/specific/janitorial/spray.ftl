@@ -11,3 +11,5 @@ ent-SprayBottleSpaceCleaner = космический очиститель
     .desc = Непенящийся очиститель бренда BLAM!
 ent-Vapor = пар
     .desc = { "" }
+ent-BigVapor = { ent-Vapor }
+    .desc = { ent-Vapor.desc }
