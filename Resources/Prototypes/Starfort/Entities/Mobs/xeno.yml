@@ -44,7 +44,7 @@
   - type: MobThresholds
     thresholds:
       0: Alive
-      200: Dead
+      140: Dead
   - type: Stamina
     excess: 200
   - type: Bloodstream
@@ -99,6 +99,7 @@
   - type: Damageable
     damageContainer: Biological
     damageModifierSet: Xeno
+  - type: FlashImmunity
 
 
 # AlienBurrower
@@ -183,7 +184,7 @@
   - type: MobThresholds
     thresholds:
       0: Alive
-      150: Dead
+      105: Dead
   - type: MeleeWeapon
     damage:
       groups:
@@ -226,7 +227,7 @@
   - type: MobThresholds
     thresholds:
       0: Alive
-      475: Dead
+      333: Dead
   - type: Stamina
     excess: 1500
   - type: MovementSpeedModifier
@@ -273,7 +274,7 @@
   - type: MobThresholds
     thresholds:
       0: Alive
-      300: Dead
+      210: Dead
   - type: Stamina
     excess: 550
   - type: MovementSpeedModifier
@@ -319,7 +320,7 @@
   - type: MobThresholds
     thresholds:
       0: Alive
-      175: Dead
+      123: Dead
   - type: Stamina
     excess: 250
   - type: MovementSpeedModifier
