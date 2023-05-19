@@ -1,0 +1,7 @@
+- type: entity
+  id: CartridgeHeavyLecter
+  name: cartridge (.15 rifle)
+  parent: BaseCartridgeRifle
+  components:
+  - type: CartridgeAmmo
+    proto: BulletHeavyLecter
