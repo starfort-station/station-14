@@ -222,7 +222,7 @@
           amount: 3
         - id: PaperWrittenERTmanualFirst
         - id: PaperWrittenERTmanualSecond
-
+        - id: CrowbarRed
 
 - type: entity
   noSpawn: true
@@ -240,6 +240,7 @@
         - id: PaperWrittenERTmanualSecond
         - id: Handcuffs
           amount: 3
+        - id: CrowbarRed
 
 - type: entity
   noSpawn: true
@@ -254,7 +255,7 @@
         - id: MedkitAdvancedFilled
         - id: PaperWrittenERTmanualFirst
         - id: PaperWrittenERTmanualSecond
-
+        - id: CrowbarRed
 
 - type: entity
   noSpawn: true
@@ -288,6 +289,8 @@
         - id: BoxLightMixed
         - id: BoxLightMixed
         - id: Soap
+        - id: CrowbarRed
+        - id: AdvMopItem
 
 - type: entity
   noSpawn: true

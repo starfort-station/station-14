@@ -1,29 +1,17 @@
 - type: randomHumanoidSettings
   id: CaptainCorpse
   components:
-  - type: Damageable
-    damage:
-      types:
-        Bloodloss: 51
-        Asphyxiation: 76
-        Slash: 56
-        Blunt: 21
+  - type: RandomDamage
   - type: RandomMetadata
     nameSegments: [corvax_names_death_commando] # Corvax-Localization
   - type: Loadout
-    prototypes:    
+    prototypes:
     - CorpseCaptainGear
 
 - type: randomHumanoidSettings
   id: RandomServiceCorpse
   components:
-  - type: Damageable
-    damage:
-      types:
-        Bloodloss: 51
-        Asphyxiation: 76
-        Slash: 56
-        Blunt: 21
+  - type: RandomDamage
   - type: RandomMetadata
     nameSegments: [corvax_names_death_commando] # Corvax-Localization
   - type: Loadout
@@ -43,17 +31,11 @@
     - PassengerGear
     - PassengerGear
     - CorpseHoPGear                     # Chance 1/15
-    
+
 - type: randomHumanoidSettings
   id: RandomCargoCorpse
   components:
-  - type: Damageable
-    damage:
-      types:
-        Bloodloss: 51
-        Asphyxiation: 76
-        Slash: 56
-        Blunt: 21
+  - type: RandomDamage
   - type: RandomMetadata
     nameSegments: [corvax_names_death_commando] # Corvax-Localization
   - type: Loadout
@@ -65,17 +47,10 @@
     - SalvageSpecialistGear
     - CorpseQuartermasterGear           # Chance 1/6
 
-
 - type: randomHumanoidSettings
   id: RandomEngineerCorpse
   components:
-  - type: Damageable
-    damage:
-      types:
-        Bloodloss: 51
-        Asphyxiation: 76
-        Slash: 56
-        Blunt: 21
+  - type: RandomDamage
   - type: RandomMetadata
     nameSegments: [corvax_names_death_commando] # Corvax-Localization
   - type: Loadout
@@ -95,13 +70,7 @@
 - type: randomHumanoidSettings
   id: RandomMedicCorpse
   components:
-  - type: Damageable
-    damage:
-      types:
-        Bloodloss: 51
-        Asphyxiation: 76
-        Slash: 56
-        Blunt: 21
+  - type: RandomDamage
   - type: RandomMetadata
     nameSegments: [corvax_names_death_commando] # Corvax-Localization
   - type: Loadout
@@ -121,13 +90,7 @@
 - type: randomHumanoidSettings
   id: RandomScienceCorpse
   components:
-  - type: Damageable
-    damage:
-      types:
-        Bloodloss: 51
-        Asphyxiation: 76
-        Slash: 56
-        Blunt: 21
+  - type: RandomDamage
   - type: RandomMetadata
     nameSegments: [corvax_names_death_commando] # Corvax-Localization
   - type: Loadout
@@ -139,18 +102,12 @@
     - ScientistGear
     - ScientistGear
     - CorpseResearchDirectorGear        # Chance 1/7
-    
-    
+
+
 - type: randomHumanoidSettings
   id: RandomSecurityCorpse
   components:
-  - type: Damageable
-    damage:
-      types:
-        Bloodloss: 51
-        Asphyxiation: 76
-        Slash: 56
-        Blunt: 21
+  - type: RandomDamage
   - type: RandomMetadata
     nameSegments: [corvax_names_death_commando] # Corvax-Localization
   - type: Loadout

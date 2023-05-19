@@ -87,6 +87,7 @@ public sealed class IdCardConsoleComponent : Component
         public readonly string? TargetIdFullName;
         public readonly string? TargetIdJobTitle;
         public readonly string[]? TargetIdAccessList;
+        public readonly string[]? AllowedModifyAccessList;
         public readonly string TargetIdJobPrototype;
 
         public IdCardConsoleBoundUserInterfaceState(bool isPrivilegedIdPresent,
@@ -95,6 +96,7 @@ public sealed class IdCardConsoleComponent : Component
             string? targetIdFullName,
             string? targetIdJobTitle,
             string[]? targetIdAccessList,
+            string[]? allowedModifyAccessList,
             string targetIdJobPrototype,
             string privilegedIdName,
             string targetIdName)
@@ -105,6 +107,7 @@ public sealed class IdCardConsoleComponent : Component
             TargetIdFullName = targetIdFullName;
             TargetIdJobTitle = targetIdJobTitle;
             TargetIdAccessList = targetIdAccessList;
+            AllowedModifyAccessList = allowedModifyAccessList;
             TargetIdJobPrototype = targetIdJobPrototype;
             PrivilegedIdName = privilegedIdName;
             TargetIdName = targetIdName;
