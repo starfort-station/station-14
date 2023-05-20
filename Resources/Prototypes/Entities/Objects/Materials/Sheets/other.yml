@@ -86,11 +86,6 @@
 #      - plasma
 #      - plasma_2
 #      - plasma_3
-    state: plasma_3
-    layers:
-    - state: plasma_3
-      map: ["base"]
-  - type: Appearance
   - type: Extractable
     grindableSolutionName: plasma
   - type: SolutionContainerManager
