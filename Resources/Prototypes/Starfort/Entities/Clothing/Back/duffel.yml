@@ -1,5 +1,5 @@
 - type: entity
-  parent: ClothingBackpack
+  parent: ClothingBackpackDuffel
   id: ClothingBackpackDuffelExpedition
   name: expedition duffel bag
   description: A large robust duffel back for stashing ammo, guns and pills.
