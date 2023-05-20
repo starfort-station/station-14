@@ -1,66 +1,37 @@
-#SOFTSUITS
+# SOFTSUITS
+- type: entity
+  id: SuitStorageLES
+  parent: SuitStorageBase
+  suffix: LES
+  components:
+  - type: StorageFill
+    contents:
+        - id: AirTankFilled
+        - id: ClothingShoesBootsMag
+        - id: ClothingOuterLightsuitExpedition
+        - id: ClothingMaskBreath
 
-#HARDSUITS
-#Expedition
+# HARDSUITS
 - type: entity
-  id: SuitStorageExpeditionEngi
+  id: SuitStorageOBS1
   parent: SuitStorageBase
-  suffix: Field Engineer
+  suffix: OBS-1
   components:
   - type: StorageFill
     contents:
         - id: AirTankFilled
         - id: ClothingShoesBootsMag
-        - id: ClothingOuterHardsuitExpeditionEngineer
+        - id: ClothingOuterHardsuitOBS1
         - id: ClothingMaskBreath
-        
-- type: entity
-  id: SuitStorageExpeditionTroop
-  parent: SuitStorageBase
-  suffix: Trooper
-  components:
-  - type: StorageFill
-    contents:
-        - id: AirTankFilled
-        - id: ClothingShoesBootsMag
-        - id: ClothingOuterHardsuitExpeditionTrooper
-        - id: ClothingMaskBreath
-        
-- type: entity
-  id: SuitStorageExpeditionSci
-  parent: SuitStorageBase
-  suffix: Field Scientist
-  components:
-  - type: StorageFill
-    contents:
-        - id: AirTankFilled
-        - id: ClothingShoesBootsMag
-        - id: ClothingOuterHardsuitExpeditionScientist
-        - id: ClothingMaskBreath
-        
-- type: entity
-  id: SuitStorageExpeditionMed
-  parent: SuitStorageBase
-  suffix: Field Medic
-  components:
-  - type: StorageFill
-    contents:
-        - id: AirTankFilled
-        - id: ClothingShoesBootsMag
-        - id: ClothingOuterHardsuitExpeditionMedic
-        - id: ClothingMaskBreath
-        
-- type: entity
-  id: SuitStorageExpeditionComm
-  parent: SuitStorageBase
-  suffix: Field Commander
-  components:
-  - type: StorageFill
-    contents:
-        - id: AirTankFilled
-        - id: ClothingShoesBootsMag
-        - id: ClothingOuterHardsuitExpeditionCommander
-        - id: ClothingMaskBreath
-      
 
-        
+- type: entity
+  id: SuitStorageOBS2
+  parent: SuitStorageBase
+  suffix: OBS2
+  components:
+  - type: StorageFill
+    contents:
+        - id: AirTankFilled
+        - id: ClothingShoesBootsMag
+        - id: ClothingOuterHardsuitOBS2
+        - id: ClothingMaskBreath

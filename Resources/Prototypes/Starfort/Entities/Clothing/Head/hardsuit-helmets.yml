@@ -1,154 +1,63 @@
 # Expedition
+# OBH-1
 - type: entity
   noSpawn: true
   parent: ClothingHeadHardsuitWithLightBase
-  id: ClothingHeadHelmetHardsuitExpeditionMedic
-  name: expedition hardsuit helmet
-  description: Modern armor helmet with blue marks
-  suffix: field medic
+  id: ClothingHeadHelmetHardsuitOBH1
+  name: OBH-1
+  description: Modern armor helmet, version 1
   components:
   - type: Sprite
-    sprite: Starfort/Clothing/Head/Hardsuits/fieldmedic.rsi
+    sprite: Starfort/Clothing/Head/Hardsuits/obh-1.rsi
   - type: Clothing
-    sprite: Starfort/Clothing/Head/Hardsuits/fieldmedic.rsi
+    sprite: Starfort/Clothing/Head/Hardsuits/obh-1.rsi
   - type: PointLight
     color: "#39ff14"
   - type: PressureProtection
-    highPressureMultiplier: 0.3
-    lowPressureMultiplier: 7000
+    highPressureMultiplier: 0.525
+    lowPressureMultiplier: 10000
   - type: ExplosionResistance
-    damageCoefficient: 0.8
+    damageCoefficient: 0.4
   - type: Armor
     modifiers:
       coefficients:
-        Blunt: 0.8
-        Slash: 0.8
-        Piercing: 0.8
+        Blunt: 0.9
+        Slash: 0.9
+        Piercing: 0.9
+        Heat: 0.9
+        Radiation: 0.95
+
+# OBH-2
+- type: entity
+  noSpawn: true
+  parent: ClothingHeadHardsuitWithLightBase
+  id: ClothingHeadHelmetHardsuitOBH2
+  name: OBH-2
+  description: Modern armor helmet, version 2
+  components:
+  - type: Sprite
+    sprite: Starfort/Clothing/Head/Hardsuits/obh-2.rsi
+  - type: Clothing
+    sprite: Starfort/Clothing/Head/Hardsuits/obh-2.rsi
+  - type: PointLight
+    color: "#39ff14"
+  - type: PressureProtection
+    highPressureMultiplier: 0.525
+    lowPressureMultiplier: 10000
+  - type: ExplosionResistance
+    damageCoefficient: 0.4
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.85
+        Slash: 0.85
+        Piercing: 0.85
         Heat: 0.9
         Cold: 0.9
-        Radiation: 0.75
-        Caustic: 0.3
+        Radiation: 0.85
+        Caustic: 0.85
 
-- type: entity
-  noSpawn: true
-  parent: ClothingHeadHardsuitWithLightBase
-  id: ClothingHeadHelmetHardsuitExpeditionScientist
-  name: expedition hardsuit helmet
-  description: Modern armor helmet with purple marks
-  suffix: field scientist
-  components:
-  - type: Sprite
-    sprite: Starfort/Clothing/Head/Hardsuits/fieldscientist.rsi
-  - type: Clothing
-    sprite: Starfort/Clothing/Head/Hardsuits/fieldscientist.rsi
-  - type: PointLight
-    color: "#39ff14"
-  - type: PressureProtection
-    highPressureMultiplier: 0.3
-    lowPressureMultiplier: 7000
-  - type: ExplosionResistance
-    damageCoefficient: 0.6
-  - type: Armor
-    modifiers:
-      coefficients:
-        Blunt: 0.8
-        Slash: 0.8
-        Piercing: 0.8
-        Heat: 0.7
-        Cold: 0.7
-        Radiation: 0.5
-        Caustic: 0.5
-
-- type: entity
-  noSpawn: true
-  parent: ClothingHeadHardsuitWithLightBase
-  id: ClothingHeadHelmetHardsuitExpeditionTrooper
-  name: expedition hardsuit helmet
-  description: Modern armor helmet with red marks
-  suffix: field trooper
-  components:
-  - type: Sprite
-    sprite: Starfort/Clothing/Head/Hardsuits/fieldtrooper.rsi
-  - type: Clothing
-    sprite: Starfort/Clothing/Head/Hardsuits/fieldtrooper.rsi
-  - type: PointLight
-    color: "#39ff14"
-  - type: PressureProtection
-    highPressureMultiplier: 0.525
-    lowPressureMultiplier: 10000
-  - type: ExplosionResistance
-    damageCoefficient: 0.4
-  - type: Armor
-    modifiers:
-      coefficients:
-        Blunt: 0.65
-        Slash: 0.65
-        Piercing: 0.8
-        Heat: 0.9
-        Cold: 0.9
-        Radiation: 0.8
-        Caustic: 0.5
-
-- type: entity
-  noSpawn: true
-  parent: ClothingHeadHardsuitWithLightBase
-  id: ClothingHeadHelmetHardsuitExpeditionEngineer
-  name: expedition hardsuit helmet
-  description: Modern armor helmet with yelow marks
-  suffix: field engineer
-  components:
-  - type: Sprite
-    sprite: Starfort/Clothing/Head/Hardsuits/fieldengineer.rsi
-  - type: Clothing
-    sprite: Starfort/Clothing/Head/Hardsuits/fieldengineer.rsi
-  - type: PointLight
-    color: "#39ff14"
-  - type: PressureProtection
-    highPressureMultiplier: 0.525
-    lowPressureMultiplier: 10000
-  - type: ExplosionResistance
-    damageCoefficient: 0.4
-  - type: Armor
-    modifiers:
-      coefficients:
-        Blunt: 0.75
-        Slash: 0.75
-        Piercing: 0.8
-        Heat: 0.7
-        Cold: 0.7
-        Radiation: 0.5
-        Caustic: 0.5
-
-- type: entity
-  noSpawn: true
-  parent: ClothingHeadHardsuitWithLightBase
-  id: ClothingHeadHelmetHardsuitExpeditionCommander
-  name: expedition hardsuit helmet
-  description: Modern armor helmet with white marks
-  suffix: field commander
-  components:
-  - type: Sprite
-    sprite: Starfort/Clothing/Head/Hardsuits/fieldcomm.rsi
-  - type: Clothing
-    sprite: Starfort/Clothing/Head/Hardsuits/fieldcomm.rsi
-  - type: PointLight
-    color: "#39ff14"
-  - type: PressureProtection
-    highPressureMultiplier: 0.525
-    lowPressureMultiplier: 10000
-  - type: ExplosionResistance
-    damageCoefficient: 0.4
-  - type: Armor
-    modifiers:
-      coefficients:
-        Blunt: 0.55
-        Slash: 0.55
-        Piercing: 0.6
-        Heat: 0.7
-        Cold: 0.7
-        Radiation: 0.6
-        Caustic: 0.6
-
+# LEH
 - type: entity
   noSpawn: true
   parent: ClothingHeadHardsuitWithLightBase
@@ -156,9 +65,9 @@
   name: expedition lightsuit helmet
   components:
   - type: Sprite
-    sprite: Starfort/Clothing/Head/Hardsuits/field-light.rsi
+    sprite: Starfort/Clothing/Head/Hardsuits/leh.rsi
   - type: Clothing
-    sprite: Starfort/Clothing/Head/Hardsuits/field-light.rsi
+    sprite: Starfort/Clothing/Head/Hardsuits/leh.rsi
   - type: PointLight
     color: "#39ff14"
   - type: PressureProtection
@@ -167,10 +76,7 @@
   - type: Armor
     modifiers:
       coefficients:
-        Blunt: 0.8
-        Slash: 0.85
-        Piercing: 0.85
-        Heat: 0.9
-        Cold: 0.9
-        Radiation: 0.8
-        Caustic: 0.8
+        Blunt: 0.95
+        Slash: 0.95
+        Piercing: 0.95
+        Radiation: 0.95

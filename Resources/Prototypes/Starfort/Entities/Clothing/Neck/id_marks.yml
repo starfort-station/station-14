@@ -1,0 +1,36 @@
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingNeckIDMarksMedic
+  name: Field medic identification marks
+  description: Kit with identification marks for field medic
+  components:
+  - type: Sprite
+    sprite: Starfort/Clothing/Neck/IDMarks/field-medic.rsi
+
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingNeckIDMarksEngineer
+  name: Field engineer identification marks
+  description: Kit with identification marks for field engineer
+  components:
+  - type: Sprite
+    sprite: Starfort/Clothing/Neck/IDMarks/field-engineer.rsi
+    
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingNeckIDMarksSergeant
+  name: Sergeant identification marks
+  description: Kit with identification marks for sergeant
+  components:
+  - type: Sprite
+    sprite: Starfort/Clothing/Neck/IDMarks/field-sergeant.rsi
+    
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingNeckIDMarksCommander
+  name: Field commander identification marks
+  description: Kit with identification marks for field commander
+  components:
+  - type: Sprite
+    sprite: Starfort/Clothing/Neck/IDMarks/field-commander.rsi
+    
