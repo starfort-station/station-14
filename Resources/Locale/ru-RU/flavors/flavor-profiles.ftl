@@ -199,6 +199,7 @@ flavor-complex-screwdriver = как крепкий апельсиновый со
 
 flavor-complex-themartinez = как фиалки и лимонная водка
 flavor-complex-cogchamp = как латунь
+flavor-complex-antifreeze = теплый
 flavor-complex-pilk = как сладкое молоко
 
 # Medicine/chemical-specific flavors.

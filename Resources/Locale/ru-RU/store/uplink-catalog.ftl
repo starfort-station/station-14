@@ -176,3 +176,7 @@ uplink-operative-skirt-name = { ent-ClothingUniformJumpskirtOperative }
 uplink-operative-skirt-desc = Юбка-комбинезон из отборной ткани, выдаваемая нашим ядерным оперативницам, гарантирует, что вы будете выделяться, и не имеет никаких других преимуществ, кроме крутого внешнего вида.
 uplink-balloon-name = { ent-BalloonSyn }
 uplink-balloon-desc = { ent-BalloonSyn.desc }
+uplink-scarf-syndie-red-name = Полосатый красный шарф синдиката
+uplink-scarf-syndie-red-desc = Стильный полосатый шарф синдиката красного цвета. Идеальный зимний аксессуар для тех, у кого обостренное чувство моды, и тех, кто не прочь что-нибудь украсть.
+uplink-scarf-syndie-green-name = Полосатый зеленый шарф синдиката
+uplink-scarf-syndie-green-desc = Стильный полосатый шарф синдикатского зеленого цвета. Идеальный зимний аксессуар для тех, у кого обостренное чувство моды, и тех, кто не прочь что-нибудь украсть.
