@@ -44,6 +44,7 @@
   components:
   - type: StorageFill
     contents:
+      - id: ClothingNeckIDMarksMedic
       - id: HandheldHealthAnalyzer
       - id: ClothingHandsGlovesLatex
       - id: ClothingHeadsetExpedition
@@ -65,6 +66,8 @@
   components:
   - type: StorageFill
     contents:
+      - id: ClothingNeckIDMarksEngineer
+      - id: ClothingEyesGlassesMeson
       - id: ClothingHandsGlovesColorYellow
       - id: ClothingHeadsetExpedition
       - id: ClothingShoesBootsMag
@@ -78,6 +81,10 @@
   id: LockerSergeantFilled
   suffix: Filled
   parent: LockerSergeant
+  components:
+  - type: StorageFill
+    contents:
+      - id: ClothingNeckIDMarksSergeant
 
 - type: entity
   id: LockerFieldCommFilled
@@ -86,6 +93,7 @@
   components:
   - type: StorageFill
     contents:
+      - id: ClothingNeckIDMarksCommander
       - id: ClothingHandsGlovesColorBlack
       - id: ClothingHeadsetExpeditionCommand
       - id: WeaponRifleLecter
