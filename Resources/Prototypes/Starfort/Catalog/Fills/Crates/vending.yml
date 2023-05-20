@@ -1,0 +1,15 @@
+- type: entity
+  id: CrateVendingMachineRestockExpeditionEquipmentFilled
+  parent: CrateGenericSteel
+  components:
+  - type: StorageFill
+    contents:
+      - id: VendingMachineRestockExpeditionEquipment
+
+- type: entity
+  id: CrateVendingMachineRestockExpeditionDrobeEquipmentFilled
+  parent: CrateGenericSteel
+  components:
+  - type: StorageFill
+    contents:
+      - id: VendingMachineRestockExpeditionDrobeEquipment
