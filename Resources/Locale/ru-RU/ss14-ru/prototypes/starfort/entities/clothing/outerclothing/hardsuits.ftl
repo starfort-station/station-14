@@ -1,7 +1,7 @@
-ent-ClothingOuterHardsuitOBS1 = ОБС-1
+ent-ClothingOuterHardsuitOBS1 = Общевойсковой Боевой скафандр
     .desc = Общевойсковой Боевой скафандр, ревизия первая.
     .suffix = Версия 1
-ent-ClothingOuterHardsuitOBS2 = ОБС-2
+ent-ClothingOuterHardsuitOBS2 = { ent-ClothingOuterHardsuitOBS1 }
     .desc = Общевойсковой Боевой скафандр, ревизия вторая, улучшенный.
     .suffix = Версия 2
 ent-ClothingOuterLightsuitExpedition = ЛЭС
