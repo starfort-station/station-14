@@ -21,17 +21,6 @@
         Piercing: 21
 
 - type: entity
-  id: BulletHeavyLecter
-  name: bullet (.15 rifle)
-  parent: BaseBullet
-  noSpawn: true
-  components:
-  - type: Projectile
-    damage:
-      types:
-        Piercing: 25
-
-- type: entity
   id: BulletRiflePractice
   name: bullet (0.20 rifle practice)
   parent: BaseBulletPractice
