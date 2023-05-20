@@ -19,3 +19,4 @@ stamp-component-stamped-name-iaa = Агент Внутренних Дел
 stamp-component-stamped-name-khuynya = Хуйня, переделывай
 stamp-component-stamped-name-incorrect-form = Некорректная форма
 stamp-component-stamped-name-approved-by-CC = Одобрено Центкомом
+stamp-component-stamped-name-ec = Командир экспедиций

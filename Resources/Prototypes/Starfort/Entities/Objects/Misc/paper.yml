@@ -1,0 +1,59 @@
+- type: entity
+  name: IAA rubber stamp
+  parent: RubberStampMime
+  id: RubberStampIAA
+  components:
+  - type: Stamp
+    stampedName: stamp-component-stamped-name-iaa
+    stampState: "paper_stamp-cent"
+  - type: Sprite
+    sprite: Objects/Misc/bureaucracy.rsi
+    state: stamp-iaa
+
+- type: entity
+  name: Khuynya peredelyvay
+  parent: RubberStampMime
+  id: RubberAdmemekhuynya
+  components:
+  - type: Stamp
+    stampedName: stamp-component-stamped-name-khuynya
+    stampState: "paper_stamp-deny"
+  - type: Sprite
+    sprite: Objects/Misc/bureaucracy.rsi
+    state: stamp-deny
+
+- type: entity
+  name: Incorrect query
+  parent: RubberStampMime
+  id: RubberIncorrectquery
+  components:
+  - type: Stamp
+    stampedName: stamp-component-stamped-name-incorrect-form
+    stampState: "paper_stamp-deny"
+  - type: Sprite
+    sprite: Objects/Misc/bureaucracy.rsi
+    state: stamp-deny
+
+- type: entity
+  name: APPROVED from Centcom rubber stamp
+  parent: RubberStampMime
+  id: RubberStampApprovedbyCC
+  components:
+  - type: Stamp
+    stampedName: stamp-component-stamped-name-approved-by-CC
+    stampState: "paper_stamp-iaa"
+  - type: Sprite
+    sprite: Objects/Misc/bureaucracy.rsi
+    state: stamp-iaa
+
+- type: entity
+  name: expeditor commander rubber stamp
+  parent: RubberStampMime
+  id: RubberStampExpeditorComm
+  components:
+  - type: Stamp
+    stampedName: stamp-component-stamped-name-ec
+    stampState: "paper_stamp-ec"
+  - type: Sprite
+    sprite: Objects/Misc/bureaucracy.rsi
+    state: stamp-ec
