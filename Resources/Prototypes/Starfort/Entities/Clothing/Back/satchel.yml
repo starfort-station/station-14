@@ -1,5 +1,5 @@
 - type: entity
-  parent: ClothingBackpack
+  parent: ClothingBackpackSatchel
   id: ClothingBackpackSatchelExpedition
   name: expedition satchel
   description: A robust satchel for stashing ammo, guns and pills.
