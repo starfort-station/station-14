@@ -14,7 +14,6 @@
       - id: ClothingMaskGasExplorer
       - id: ClothingUniformJumpsuitFieldTrooper
       - id: ClothingBackpackExpedition
-      - id: ClothingOuterHardsuitExpeditionTrooper
 
 
 - type: entity
@@ -37,7 +36,6 @@
       - id: TimerTrigger
       - id: ClothingUniformJumpsuitFieldScientist
       - id: ClothingBackpackExpedition
-      - id: ClothingOuterHardsuitExpeditionScientist
 
 - type: entity
   id: LockerFieldMedFilled
@@ -56,7 +54,6 @@
       - id: ClothingMaskGasExplorer
       - id: ClothingUniformJumpsuitFieldMedic
       - id: ClothingBackpackExpedition
-      - id: ClothingOuterHardsuitExpeditionMedic
       - id: CombatMedipen
       - id: CombatMedipen
       - id: CombatMedipen
@@ -72,9 +69,8 @@
       - id: ClothingHeadsetExpedition
       - id: ClothingShoesBootsMag
       - id: ClothingMaskGasExplorer
-      - id: ClothingUniformJumpsuitFieldMedic
+      - id: ClothingUniformJumpsuitFieldEngineer
       - id: ClothingBackpackExpedition
-      - id: ClothingOuterHardsuitExpeditionEngineer
       - id: InflatableWallStack
       - id: GasAnalyzer
 
@@ -93,5 +89,4 @@
       - id: ClothingMaskGasExplorer
       - id: ClothingUniformJumpsuitFieldCommander
       - id: ClothingBackpackExpedition
-      - id: ClothingOuterHardsuitExpeditionCommander
       - id: CombatMedipen
