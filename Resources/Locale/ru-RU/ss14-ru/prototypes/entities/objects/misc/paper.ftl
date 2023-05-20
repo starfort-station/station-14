@@ -116,3 +116,5 @@ ent-TrashEnvelope = мусор
     .desc = Скомканый кусок бумаги.
 ent-RubberStampIAA = печать агента внутрених дел
     .desc = { ent-RubberStampMime.desc }
+ent-RubberStampExpeditorComm = печать командира экспедиций
+    .desc = { ent-RubberStampMime.desc }
