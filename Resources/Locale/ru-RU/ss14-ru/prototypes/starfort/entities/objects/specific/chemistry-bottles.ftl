@@ -1,2 +1,2 @@
-ent-BicaridineChemistryBottle = бутылка с бикаридином
+ent-BicaridineChemistryBottle = бутылочка бикаридина
     .desc = { ent-BaseChemistryEmptyBottle.desc }
