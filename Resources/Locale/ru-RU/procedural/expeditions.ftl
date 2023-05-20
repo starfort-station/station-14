@@ -32,6 +32,8 @@ salvage-expedition-difficulty-Minimal = Минимальный
 salvage-expedition-difficulty-Minor = Незначительный
 salvage-expedition-difficulty-Moderate = Умеренный
 salvage-expedition-difficulty-Hazardous = Опасный
+# Runner
+salvage-expedition-not-all-present = Не все спасатели находятся на борту шаттла!
 salvage-expedition-difficulty-Extreme = Экстремальный
 # Бегун
 salvage-expedition-announcement-countdown-minutes = { $duration } минут, осталось до завершения экспедиции.
