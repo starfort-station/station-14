@@ -1,0 +1,31 @@
+- type: entity
+  parent: BaseVendingMachineRestock
+  id: VendingMachineRestockExpeditionEquipment
+  name: Freightforwarders Vendor restock box
+  description: Have you seriously squandered NT property?
+  components:
+  - type: VendingMachineRestock
+    canRestock:
+    - FreightforwardersEquipmentInventory
+  - type: Sprite
+    layers:
+    - state: base
+    - state: green_bit
+      shader: unshaded
+    - state: refill_expidition
+
+- type: entity
+  parent: BaseVendingMachineRestock
+  id: VendingMachineRestockExpeditionDrobeEquipment
+  name: ExpiDrobe restock box
+  description: When you run out of tough guy clothes.
+  components:
+  - type: VendingMachineRestock
+    canRestock:
+    - ExpeditorsDrobeInventory
+  - type: Sprite
+    layers:
+    - state: base
+    - state: green_bit
+      shader: unshaded
+    - state: refill_expiditiondrobe
