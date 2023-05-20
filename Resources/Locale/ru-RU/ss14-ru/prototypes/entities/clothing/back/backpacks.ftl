@@ -43,7 +43,5 @@ ent-ClothingBackpackHolding = блюспейс рюкзак
 ent-ClothingBackpackCluwne = проклятый хихишкин фон хонкертон
     .desc = Проклятый рюкзак хихишкин фон хонкертон.
     .suffix = Неснимаемый
-ent-ClothingBackpackExpedition = рюкзак экспедитора
-    .desc = Рюкзак, изготовленый из прочной ткани.
 ent-ClothingBackpackIan = рюкзак иана
     .desc = Иногда он носит это.
