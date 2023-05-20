@@ -75,6 +75,11 @@
       - id: GasAnalyzer
 
 - type: entity
+  id: LockerSergeantFilled
+  suffix: Filled
+  parent: LockerSergeant
+
+- type: entity
   id: LockerFieldCommFilled
   suffix: Filled
   parent: LockerFieldComm
