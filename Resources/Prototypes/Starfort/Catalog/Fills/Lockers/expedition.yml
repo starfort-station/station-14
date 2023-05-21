@@ -94,6 +94,7 @@
   - type: StorageFill
     contents:
       - id: ClothingNeckIDMarksCommander
+      - id: RubberStampExpeditorComm
       - id: ClothingHandsGlovesColorBlack
       - id: ClothingHeadsetExpeditionCommand
       - id: WeaponRifleLecter
