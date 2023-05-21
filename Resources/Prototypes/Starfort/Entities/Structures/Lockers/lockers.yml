@@ -7,11 +7,10 @@
     - type: Sprite
       sprite: Starfort/Structures/Storage/closet.rsi
     - type: Appearance
-      visuals:
-        - type: StorageVisualizer
-          state: fieldsci
-          state_open: fieldsci_open
-          state_closed: fieldtroop_door
+    - type: EntityStorageVisuals
+      stateBaseClosed: fieldsci
+      stateDoorOpen: fieldsci_open
+      stateDoorClosed: fieldtroop_door
     - type: AccessReader
       access: [["Security","Expedition"]]
 
@@ -21,11 +20,10 @@
   name: expedition scientist's locker
   components:
     - type: Appearance
-      visuals:
-        - type: StorageVisualizer
-          state: fieldsci
-          state_open: fieldsci_open
-          state_closed: fieldsci_door
+    - type: EntityStorageVisuals
+      stateBaseClosed: fieldsci
+      stateDoorOpen: fieldsci_open
+      stateDoorClosed: fieldsci_door
     - type: AccessReader
       access: [["Research","Expedition"]]
 
@@ -34,53 +32,49 @@
   parent: LockerFieldTroop
   name: expedition doctor's locker
   components:
-  - type: Appearance
-    visuals:
-    - type: StorageVisualizer
-      state: fieldsci
-      state_open: fieldsci_open
-      state_closed: fieldmed_door
-  - type: AccessReader
-    access: [["Medical","Expedition"]]
+    - type: Appearance
+    - type: EntityStorageVisuals
+      stateBaseClosed: fieldsci
+      stateDoorOpen: fieldsci_open
+      stateDoorClosed: fieldmed_door
+    - type: AccessReader
+      access: [["Medical","Expedition"]]
 
 - type: entity
   id: LockerFieldEng
   parent: LockerFieldTroop
   name: expedition engineer's locker
   components:
-  - type: Appearance
-    visuals:
-    - type: StorageVisualizer
-      state: fieldsci
-      state_open: fieldsci_open
-      state_closed: fieldeng_door
-  - type: AccessReader
-    access: [["Engineering","Expedition"]]
+    - type: Appearance
+    - type: EntityStorageVisuals
+      stateBaseClosed: fieldsci
+      stateDoorOpen: fieldsci_open
+      stateDoorClosed: fieldeng_door
+    - type: AccessReader
+      access: [["Engineering","Expedition"]]
 
 - type: entity
   id: LockerSergeant
   parent: LockerFieldTroop
   name: expedition sergeant's locker
   components:
-  - type: Appearance
-    visuals:
-    - type: StorageVisualizer
-      state: fieldsci
-      state_open: fieldsci_open
-      state_closed: fieldsergeant_door
-  - type: AccessReader
-    access: [["Sergeant","Expedition"]]
+    - type: Appearance
+    - type: EntityStorageVisuals
+      stateBaseClosed: fieldsci
+      stateDoorOpen: fieldsci_open
+      stateDoorClosed: fieldsergeant_door
+    - type: AccessReader
+      access: [["Sergeant","Expedition"]]
 
 - type: entity
   id: LockerFieldComm
   parent: LockerFieldTroop
   name: expedition commander's locker
   components:
-  - type: Appearance
-    visuals:
-    - type: StorageVisualizer
-      state: fieldsci
-      state_open: fieldsci_open
-      state_closed: fieldcom_door
-  - type: AccessReader
-    access: [["Sergeant","Expedition"]]
+    - type: Appearance
+    - type: EntityStorageVisuals
+      stateBaseClosed: fieldsci
+      stateDoorOpen: fieldsci_open
+      stateDoorClosed: fieldcom_door
+    - type: AccessReader
+      access: [["Sergeant","Expedition"]]
