@@ -41,6 +41,9 @@
       "name": "fieldeng_door"
     },
 	{
+	  "name": "fieldsergeant_door"
+	},
+	{
       "name": "fieldcom_door"
     }
   ]
