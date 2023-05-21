@@ -12,7 +12,7 @@ body:
     attributes:
       label: Что наблюдается?
       description: Опиши подробно, что именно происходит на момент написания репорта
-      placeholder: Кнопка не нажимается, ничего не происходит...
+      placeholder: Шкаф уборщицы не полностью оборудован
     validations:
       required: true
   - type: textarea
@@ -20,7 +20,7 @@ body:
     attributes:
       label: Как это должно работать?
       description: Как, по твоему мнению, это должно работать, что нужно изменить
-      placeholder: В шкафу уборщицы должна быть форма горничной....
+      placeholder: В шкафу уборщицы должна быть ~~форма горничной~~ швабра...
     validations:
       required: true
   - type: textarea
@@ -28,7 +28,7 @@ body:
     attributes:
       label: Как это повторить?
       description: Пошагово опиши, как повторить эту ошибку
-      placeholder: 1) Засунуть клоуна туда... 2) Попытаться взломать...
+      placeholder: 1) Открыть шкаф 2) Убедиться что нет швабры
     validations:
       required: false
   - type: input
