@@ -17,8 +17,8 @@ body:
   - type: textarea
     id: long-idea
     attributes:
-      label: Почему эта идея должна быть принята?
-      description: Объясни, зачем твоя идея должна быть принята командой разработчиков
+      label: Полностью распишите свой запрос
+      description: Полность распишите суть запроса
       placeholder: Переместить прототипы в папку /Audio/Ramiles/...
     validations:
       required: false
