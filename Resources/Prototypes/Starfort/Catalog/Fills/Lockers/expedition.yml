@@ -58,6 +58,7 @@
       - id: CombatMedipen
       - id: CombatMedipen
       - id: CombatMedipen
+      - id: ClothingNeckStethoscope
 
 - type: entity
   id: LockerFieldEngFilled
@@ -95,9 +96,10 @@
     contents:
       - id: ClothingNeckIDMarksCommander
       - id: RubberStampExpeditorComm
-      - id: ClothingHandsGlovesColorBlack
+      - id: ClothingHandsGlovesCombat
       - id: ClothingHeadsetExpeditionCommand
       - id: WeaponRifleLecter
+      - id: WeaponHeavyLecter
       - id: ClothingShoesBootsMag
       - id: ClothingBeltMilitaryWebbing
       - id: ClothingMaskGasExplorer
