@@ -24,6 +24,12 @@
   - type: Icon
     sprite: Starfort/Objects/Devices/pda.rsi
     state: pda-fieldtrooper
+  - type: PointLight
+    enabled: false
+    color: "#39ff14"
+    radius: 1.5
+    softness: 5
+    autoRot: true
 
 - type: entity
   parent: FieldTrooperPDA
@@ -41,6 +47,12 @@
     scanDelay: 1
     scanningEndSound:
       path: "/Audio/Items/Medical/healthscanner.ogg"
+  - type: PointLight
+    enabled: false
+    color: "#39ff14"
+    radius: 1.5
+    softness: 5
+    autoRot: true
 
 - type: entity
   parent: FieldTrooperPDA
@@ -54,6 +66,12 @@
     state: pda-fieldscientist
   - type: Icon
     state: pda-fieldscientist
+  - type: PointLight
+    enabled: false
+    color: "#39ff14"
+    radius: 1.5
+    softness: 5
+    autoRot: true
 
 - type: entity
   parent: FieldTrooperPDA
@@ -67,6 +85,32 @@
     state: pda-fieldengineer
   - type: Icon
     state: pda-fieldengineer
+  - type: Tool
+    qualities:
+      - Pulsing
+  - type: Tag
+    tags:
+      - Multitool
+      - DroneUsable
+  - type: CartridgeLoader
+    uiKey: enum.PDAUiKey.Key
+    preinstalled:
+      - NotekeeperCartridge
+      - NetProbeCartridge
+    cartridgeSlot:
+      priority: -1
+      name: Cartridge
+      ejectSound: /Audio/Machines/id_swipe.ogg
+      insertSound: /Audio/Weapons/Guns/MagIn/batrifle_magin.ogg
+      whitelist:
+        components:
+          - Cartridge
+  - type: PointLight
+    enabled: false
+    color: "#39ff14"
+    radius: 1.5
+    softness: 5
+    autoRot: true
 
 - type: entity
   parent: FieldTrooperPDA
@@ -80,6 +124,19 @@
     state: pda-fieldcommander
   - type: Icon
     state: pda-fieldcommander
+  - type: UnpoweredFlashlight
+    toggleAction:
+      name: action-name-toggle-light
+      description: action-description-toggle-light
+      icon: { sprite: Objects/Tools/flashlight.rsi, state: flashlight }
+      iconOn: Objects/Tools/flashlight.rsi/flashlight-on.png
+      event: !type:ToggleActionEvent
+  - type: PointLight
+    enabled: false
+    color: "#39ff14"
+    radius: 3.5
+    softness: 6
+    autoRot: true
 
 - type: entity
   parent: FieldTrooperPDA
@@ -93,3 +150,9 @@
     state: pda-fieldrecrut
   - type: Icon
     state: pda-fieldrecrut
+  - type: PointLight
+    enabled: false
+    color: "#39ff14"
+    radius: 1.5
+    softness: 5
+    autoRot: true
