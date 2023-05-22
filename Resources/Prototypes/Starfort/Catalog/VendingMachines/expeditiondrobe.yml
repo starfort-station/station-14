@@ -4,7 +4,9 @@
     ClothingHeadsetExpedition: 3
     EncryptionKeyExpedition: 3
     ClothingShoesBootsCombatFilled: 2
+    ClothingBackpackDuffelExpedition: 3
     ClothingBackpackExpedition: 3
+    ClothingBackpackSatchelExpedition: 3
     ClothingMaskGasExplorer: 2
     ClothingUniformJumpsuitFieldTrooper: 2
     ClothingUniformJumpsuitFieldScientist: 2
