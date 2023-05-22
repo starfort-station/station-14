@@ -10416,6 +10416,7 @@ entities:
       type: Transform
     - links:
       - 15386
+      - 15387
       type: DeviceLinkSink
     - inputs:
         Open:
@@ -10434,6 +10435,7 @@ entities:
       type: Transform
     - links:
       - 15386
+      - 15387
       type: DeviceLinkSink
     - inputs:
         Open:
@@ -10452,6 +10454,7 @@ entities:
       type: Transform
     - links:
       - 15386
+      - 15387
       type: DeviceLinkSink
     - inputs:
         Open:
@@ -10470,6 +10473,7 @@ entities:
       type: Transform
     - links:
       - 15386
+      - 15387
       type: DeviceLinkSink
     - inputs:
         Open:
@@ -10488,6 +10492,7 @@ entities:
       type: Transform
     - links:
       - 15386
+      - 15387
       type: DeviceLinkSink
     - inputs:
         Open:
@@ -10506,6 +10511,7 @@ entities:
       type: Transform
     - links:
       - 15386
+      - 15387
       type: DeviceLinkSink
     - inputs:
         Open:
@@ -10524,6 +10530,7 @@ entities:
       type: Transform
     - links:
       - 15386
+      - 15387
       type: DeviceLinkSink
     - inputs:
         Open:
@@ -10542,6 +10549,7 @@ entities:
       type: Transform
     - links:
       - 15386
+      - 15387
       type: DeviceLinkSink
     - inputs:
         Open:
@@ -10560,6 +10568,7 @@ entities:
       type: Transform
     - links:
       - 15386
+      - 15387
       type: DeviceLinkSink
     - inputs:
         Open:
@@ -10578,6 +10587,7 @@ entities:
       type: Transform
     - links:
       - 15386
+      - 15387
       type: DeviceLinkSink
     - inputs:
         Open:
@@ -10596,6 +10606,7 @@ entities:
       type: Transform
     - links:
       - 15386
+      - 15387
       type: DeviceLinkSink
     - inputs:
         Open:
@@ -10614,6 +10625,7 @@ entities:
       type: Transform
     - links:
       - 15386
+      - 15387
       type: DeviceLinkSink
     - inputs:
         Open:
@@ -10632,6 +10644,7 @@ entities:
       type: Transform
     - links:
       - 15386
+      - 15387
       type: DeviceLinkSink
     - inputs:
         Open:
@@ -10650,6 +10663,7 @@ entities:
       type: Transform
     - links:
       - 15386
+      - 15387
       type: DeviceLinkSink
     - inputs:
         Open:
@@ -89198,6 +89212,7 @@ entities:
       type: Transform
     - links:
       - 1988
+      - 15389
       type: DeviceLinkSink
     - inputs:
         Open:
@@ -89215,6 +89230,7 @@ entities:
       type: Transform
     - links:
       - 1988
+      - 15389
       type: DeviceLinkSink
     - inputs:
         Open:
@@ -89232,6 +89248,7 @@ entities:
       type: Transform
     - links:
       - 1988
+      - 15389
       type: DeviceLinkSink
     - inputs:
         Open:
@@ -89250,6 +89267,7 @@ entities:
       type: Transform
     - links:
       - 1988
+      - 15389
       type: DeviceLinkSink
     - inputs:
         Open:
@@ -89268,6 +89286,7 @@ entities:
       type: Transform
     - links:
       - 1988
+      - 15389
       type: DeviceLinkSink
     - inputs:
         Open:
@@ -89286,6 +89305,7 @@ entities:
       type: Transform
     - links:
       - 1988
+      - 15389
       type: DeviceLinkSink
     - inputs:
         Open:
@@ -89304,6 +89324,7 @@ entities:
       type: Transform
     - links:
       - 1988
+      - 15389
       type: DeviceLinkSink
     - inputs:
         Open:
@@ -89322,6 +89343,7 @@ entities:
       type: Transform
     - links:
       - 10177
+      - 15390
       type: DeviceLinkSink
     - inputs:
         Open:
@@ -89340,6 +89362,7 @@ entities:
       type: Transform
     - links:
       - 10177
+      - 15390
       type: DeviceLinkSink
     - inputs:
         Open:
@@ -89358,6 +89381,7 @@ entities:
       type: Transform
     - links:
       - 10177
+      - 15390
       type: DeviceLinkSink
     - inputs:
         Open:
@@ -89376,6 +89400,7 @@ entities:
       type: Transform
     - links:
       - 10177
+      - 15390
       type: DeviceLinkSink
     - inputs:
         Open:
@@ -89393,6 +89418,7 @@ entities:
       type: Transform
     - links:
       - 10177
+      - 15390
       type: DeviceLinkSink
     - inputs:
         Open:
@@ -89410,6 +89436,7 @@ entities:
       type: Transform
     - links:
       - 10177
+      - 15390
       type: DeviceLinkSink
     - inputs:
         Open:
@@ -89427,6 +89454,7 @@ entities:
       type: Transform
     - links:
       - 10177
+      - 15390
       type: DeviceLinkSink
     - inputs:
         Open:
@@ -89749,6 +89777,7 @@ entities:
       type: Transform
     - links:
       - 10177
+      - 15390
       type: DeviceLinkSink
     - inputs:
         Open:
@@ -89766,6 +89795,7 @@ entities:
       type: Transform
     - links:
       - 1988
+      - 15389
       type: DeviceLinkSink
     - inputs:
         Open:
@@ -89955,6 +89985,130 @@ entities:
         - 10377
         - 10378
         - 10379
+      type: DeviceLinkSource
+  - uid: 15387
+    components:
+    - rot: -1.5707963267948966 rad
+      pos: 19.5,-2.5
+      parent: 1
+      type: Transform
+    - linkedPorts:
+        10263:
+        - Pressed: Toggle
+        10264:
+        - Pressed: Toggle
+        10269:
+        - Pressed: Toggle
+        10270:
+        - Pressed: Toggle
+        10271:
+        - Pressed: Toggle
+        10272:
+        - Pressed: Toggle
+        10349:
+        - Pressed: Toggle
+        10379:
+        - Pressed: Toggle
+        10378:
+        - Pressed: Toggle
+        10377:
+        - Pressed: Toggle
+        10357:
+        - Pressed: Toggle
+        10356:
+        - Pressed: Toggle
+        10355:
+        - Pressed: Toggle
+        10354:
+        - Pressed: Toggle
+      registeredSinks:
+        Pressed:
+        - 10263
+        - 10264
+        - 10269
+        - 10270
+        - 10271
+        - 10272
+        - 10349
+        - 10379
+        - 10378
+        - 10377
+        - 10357
+        - 10356
+        - 10355
+        - 10354
+      type: DeviceLinkSource
+  - uid: 15388
+    components:
+    - pos: -150.5,-7.5
+      parent: 1
+      type: Transform
+  - uid: 15389
+    components:
+    - rot: 3.141592653589793 rad
+      pos: -150.5,0.5
+      parent: 1
+      type: Transform
+    - linkedPorts:
+        4565:
+        - Pressed: Toggle
+        4580:
+        - Pressed: Toggle
+        4566:
+        - Pressed: Toggle
+        4567:
+        - Pressed: Toggle
+        4568:
+        - Pressed: Toggle
+        4569:
+        - Pressed: Toggle
+        4570:
+        - Pressed: Toggle
+        4571:
+        - Pressed: Toggle
+      registeredSinks:
+        Pressed:
+        - 4565
+        - 4580
+        - 4566
+        - 4567
+        - 4568
+        - 4569
+        - 4570
+        - 4571
+      type: DeviceLinkSource
+  - uid: 15390
+    components:
+    - pos: -150.5,-7.5
+      parent: 1
+      type: Transform
+    - linkedPorts:
+        4578:
+        - Pressed: Toggle
+        4579:
+        - Pressed: Toggle
+        4577:
+        - Pressed: Toggle
+        4576:
+        - Pressed: Toggle
+        4572:
+        - Pressed: Toggle
+        4573:
+        - Pressed: Toggle
+        4574:
+        - Pressed: Toggle
+        4575:
+        - Pressed: Toggle
+      registeredSinks:
+        Pressed:
+        - 4578
+        - 4579
+        - 4577
+        - 4576
+        - 4572
+        - 4573
+        - 4574
+        - 4575
       type: DeviceLinkSource
 - proto: SignalSwitch
   entities:
