@@ -24,7 +24,7 @@
   - type: Icon
     sprite: Starfort/Objects/Devices/pda.rsi
     state: pda-fieldtrooper
-    
+
 - type: entity
   parent: FieldTrooperPDA
   id: FieldMedicPDA
@@ -37,6 +37,10 @@
     state: pda-fieldmedic
   - type: Icon
     state: pda-fieldmedic
+  - type: HealthAnalyzer
+    scanDelay: 1
+    scanningEndSound:
+      path: "/Audio/Items/Medical/healthscanner.ogg"
 
 - type: entity
   parent: FieldTrooperPDA
