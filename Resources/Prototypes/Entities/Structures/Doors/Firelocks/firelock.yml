@@ -85,6 +85,7 @@
       #simpleVisuals: true # Corvax-Resprite-Airlocks
     - type: Appearance
     - type: WiresVisuals
+    - type: WiresPanel
     - type: Wires
       BoardName: "Firelock Control"
       LayoutId: Firelock
