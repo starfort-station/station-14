@@ -11,4 +11,6 @@ chat-radio-security = Безопасность
 chat-radio-service = Сервис
 chat-radio-supply = Снабжение
 chat-radio-syndicate = Синдикат
+# not headset but whatever
+chat-radio-handheld = Рация
 chat-radio-expedition = Экспедиция
