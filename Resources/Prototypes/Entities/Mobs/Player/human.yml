@@ -72,7 +72,7 @@
       prototypes: [SyndicateOperativeGearFull]
     - type: RandomMetadata
       nameSegments:
-      - SyndicateNamesPrefix
+      - Агент
       - SyndicateNamesNormal
     - type: Faction
       factions:
