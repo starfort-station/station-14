@@ -12,8 +12,6 @@
       - id: Ointment
         amount: 2
       - id: Gauze
-      - id: PillTricordrazine
-        amount: 5
       # see https://github.com/tgstation/blob/master/code/game/objects/items/storage/firstaid.dm for example contents
 
 - type: entity
@@ -26,8 +24,6 @@
       - id: SyringeInaprovaline
       - id: Ointment
         amount: 4
-      - id: PillKelotane
-        amount: 5
 
 - type: entity
   id: MedkitBruteFilled
@@ -41,8 +37,6 @@
       - id: Gauze
       - id: Bloodpack
       - id: SyringeTranexamicAcid
-      - id: PillIron
-        amount: 5
 
 - type: entity
   id: MedkitToxinFilled
@@ -56,8 +50,6 @@
       - id: SyringeIpecac
         amount: 2
       - id: AntiPoisonMedipen
-      - id: PillDylovene
-        amount: 7
 
 - type: entity
   id: MedkitOxygenFilled
@@ -84,9 +76,7 @@
         amount: 3
       - id: EmergencyMedipen
         amount: 2
-      - id: PillHyronalin
-        amount: 9
-
+      
 - type: entity
   id: MedkitAdvancedFilled
   suffix: Filled
