@@ -6302,7 +6302,6 @@ entities:
       - 180
       - 9805
       - 9806
-      - invalid
       type: DeviceList
   - uid: 9812
     components:
@@ -6425,7 +6424,6 @@ entities:
       - 9354
       - 1284
       - 9044
-      - invalid
       - 9063
       - 4147
       - 1368
@@ -6442,7 +6440,6 @@ entities:
     - devices:
       - 9809
       - 9808
-      - invalid
       - 9873
       - 9886
       - 9877
@@ -11470,6 +11467,15 @@ entities:
       type: Transform
     - canCollide: False
       type: Physics
+  - uid: 15418
+    components:
+    - pos: -6.9672165,-2.6533184
+      parent: 14329
+      type: Transform
+    - nextAttack: 2781.7087463
+      type: MeleeWeapon
+    - nextSound: 2781.9087463
+      type: EmitSoundOnCollide
 - proto: CabbageSeeds
   entities:
   - uid: 8760
@@ -50714,6 +50720,13 @@ entities:
       type: Transform
     - name: Engineering
       type: FaxMachine
+  - uid: 15413
+    components:
+    - pos: -7.5,-7.5
+      parent: 14329
+      type: Transform
+    - name: Expedition Shuttle
+      type: FaxMachine
 - proto: FaxMachineCaptain
   entities:
   - uid: 2799
@@ -51191,7 +51204,6 @@ entities:
     - devices:
       - 9809
       - 9808
-      - invalid
       - 9873
       - 9886
       type: DeviceList
@@ -52986,6 +52998,14 @@ entities:
       type: Drain
     - fixtures: {}
       type: Fixtures
+  - uid: 15417
+    components:
+    - rot: 3.141592653589793 rad
+      pos: -6.5,-1.5
+      parent: 14329
+      type: Transform
+    - fixtures: {}
+      type: Fixtures
 - proto: FloorTileItemDark
   entities:
   - uid: 14934
@@ -53625,6 +53645,14 @@ entities:
       pos: 5.5,-11.5
       parent: 14329
       type: Transform
+  - uid: 15397
+    components:
+    - rot: 1.5707963267948966 rad
+      pos: 2.5,-11.5
+      parent: 14329
+      type: Transform
+    - nextSound: 101.7069273
+      type: EmitSoundOnCollide
 - proto: GasPipeBend
   entities:
   - uid: 656
@@ -54463,6 +54491,32 @@ entities:
     - color: '#4169E1FF'
       type: AtmosPipeColor
     - nextSound: 439.7582324
+      type: EmitSoundOnCollide
+  - uid: 15399
+    components:
+    - rot: 1.5707963267948966 rad
+      pos: 4.5,-2.5
+      parent: 14329
+      type: Transform
+    - nextSound: 194.5161638
+      type: EmitSoundOnCollide
+  - uid: 15400
+    components:
+    - rot: -1.5707963267948966 rad
+      pos: 4.5,-11.5
+      parent: 14329
+      type: Transform
+    - enabled: True
+      type: AmbientSound
+    - nextSound: 196.0135258
+      type: EmitSoundOnCollide
+  - uid: 15401
+    components:
+    - rot: -1.5707963267948966 rad
+      pos: 5.5,-2.5
+      parent: 14329
+      type: Transform
+    - nextSound: 211.2471327
       type: EmitSoundOnCollide
 - proto: GasPipeFourway
   entities:
@@ -65251,6 +65305,82 @@ entities:
       type: AtmosPipeColor
     - nextSound: 435.3837634
       type: EmitSoundOnCollide
+  - uid: 15402
+    components:
+    - rot: 3.141592653589793 rad
+      pos: 4.5,-10.5
+      parent: 14329
+      type: Transform
+    - enabled: True
+      type: AmbientSound
+    - nextSound: 219.0193138
+      type: EmitSoundOnCollide
+  - uid: 15403
+    components:
+    - rot: 3.141592653589793 rad
+      pos: 4.5,-9.5
+      parent: 14329
+      type: Transform
+    - enabled: True
+      type: AmbientSound
+    - nextSound: 219.0193138
+      type: EmitSoundOnCollide
+  - uid: 15404
+    components:
+    - rot: 3.141592653589793 rad
+      pos: 4.5,-8.5
+      parent: 14329
+      type: Transform
+    - enabled: True
+      type: AmbientSound
+    - nextSound: 219.0193138
+      type: EmitSoundOnCollide
+  - uid: 15405
+    components:
+    - rot: 3.141592653589793 rad
+      pos: 4.5,-7.5
+      parent: 14329
+      type: Transform
+    - enabled: True
+      type: AmbientSound
+    - nextSound: 219.0193138
+      type: EmitSoundOnCollide
+  - uid: 15406
+    components:
+    - rot: 3.141592653589793 rad
+      pos: 4.5,-6.5
+      parent: 14329
+      type: Transform
+    - enabled: True
+      type: AmbientSound
+    - nextSound: 219.0193138
+      type: EmitSoundOnCollide
+  - uid: 15407
+    components:
+    - rot: 3.141592653589793 rad
+      pos: 4.5,-5.5
+      parent: 14329
+      type: Transform
+    - nextSound: 219.0193138
+      type: EmitSoundOnCollide
+  - uid: 15408
+    components:
+    - rot: 3.141592653589793 rad
+      pos: 4.5,-4.5
+      parent: 14329
+      type: Transform
+    - nextSound: 219.0193138
+      type: EmitSoundOnCollide
+  - uid: 15409
+    components:
+    - rot: 3.141592653589793 rad
+      pos: 4.5,-3.5
+      parent: 14329
+      type: Transform
+    - enabled: True
+      type: AmbientSound
+    - nextSound: 219.0193138
+      type: EmitSoundOnCollide
 - proto: GasPipeTJunction
   entities:
   - uid: 176
@@ -66739,6 +66869,13 @@ entities:
       pos: 6.5,-2.5
       parent: 14329
       type: Transform
+  - uid: 15410
+    components:
+    - pos: 5.5,-1.5
+      parent: 14329
+      type: Transform
+    - nextSound: 224.219606
+      type: EmitSoundOnCollide
 - proto: GasPressurePump
   entities:
   - uid: 1636
@@ -69156,6 +69293,14 @@ entities:
       pos: -69.5,9.5
       parent: 1
       type: Transform
+  - uid: 15398
+    components:
+    - rot: 1.5707963267948966 rad
+      pos: 3.5,-11.5
+      parent: 14329
+      type: Transform
+    - nextSound: 1059.3935952
+      type: EmitSoundOnCollide
 - proto: GeneratorUranium
   entities:
   - uid: 10094
@@ -80305,6 +80450,11 @@ entities:
     - pos: -51.49995,13.499999
       parent: 1
       type: Transform
+  - uid: 15414
+    components:
+    - pos: -7.625084,-8.250345
+      parent: 14329
+      type: Transform
 - proto: PaperCaptainsThoughts
   entities:
   - uid: 10113
@@ -80563,6 +80713,14 @@ entities:
       type: Transform
     - canCollide: False
       type: Physics
+  - uid: 15415
+    components:
+    - rot: 3.141592653589793 rad
+      pos: -7.3339157,-7.94565
+      parent: 14329
+      type: Transform
+    - nextSound: 520.2762578
+      type: EmitSoundOnCollide
 - proto: PenCap
   entities:
   - uid: 10111
@@ -84383,6 +84541,17 @@ entities:
       parent: 1
       type: Transform
     - nextSound: 258.2882859
+      type: EmitSoundOnCollide
+- proto: RagItem
+  entities:
+  - uid: 15419
+    components:
+    - pos: -6.140129,-2.4277573
+      parent: 14329
+      type: Transform
+    - nextAttack: 2795.409092
+      type: MeleeWeapon
+    - nextSound: 2795.609092
       type: EmitSoundOnCollide
 - proto: Railing
   entities:
@@ -91840,6 +92009,16 @@ entities:
     - pos: -104.5,6.5
       parent: 1
       type: Transform
+- proto: SinkStemlessWater
+  entities:
+  - uid: 15416
+    components:
+    - rot: 3.141592653589793 rad
+      pos: -6.5,-2.5
+      parent: 14329
+      type: Transform
+    - nextChargeTime: 1082.278962
+      type: SolutionRegeneration
 - proto: SinkWide
   entities:
   - uid: 265
@@ -93577,6 +93756,13 @@ entities:
     - pos: -116.5,-19.5
       parent: 1
       type: Transform
+- proto: SpawnPointFieldRecrut
+  entities:
+  - uid: 15394
+    components:
+    - pos: -114.5,-16.5
+      parent: 1
+      type: Transform
 - proto: SpawnPointFieldScientist
   entities:
   - uid: 11983
@@ -93606,6 +93792,13 @@ entities:
   - uid: 3449
     components:
     - pos: -90.5,-1.5
+      parent: 1
+      type: Transform
+- proto: SpawnPointHeadOfSecurity
+  entities:
+  - uid: 15393
+    components:
+    - pos: -53.5,-18.5
       parent: 1
       type: Transform
 - proto: SpawnPointJanitor
@@ -93679,6 +93872,13 @@ entities:
     - pos: -18.5,-3.5
       parent: 1
       type: Transform
+- proto: SpawnPointParamedic
+  entities:
+  - uid: 15391
+    components:
+    - pos: -38.5,-11.5
+      parent: 1
+      type: Transform
 - proto: SpawnPointQuartermaster
   entities:
   - uid: 2808
@@ -93698,6 +93898,18 @@ entities:
   - uid: 596
     components:
     - pos: 9.5,-6.5
+      parent: 1
+      type: Transform
+- proto: SpawnPointSalvageSpecialist
+  entities:
+  - uid: 15395
+    components:
+    - pos: -50.5,4.5
+      parent: 1
+      type: Transform
+  - uid: 15396
+    components:
+    - pos: -49.5,4.5
       parent: 1
       type: Transform
 - proto: SpawnPointScientist
@@ -93775,6 +93987,13 @@ entities:
   - uid: 6629
     components:
     - pos: -152.5,-3.5
+      parent: 1
+      type: Transform
+- proto: SpawnPointWarden
+  entities:
+  - uid: 15392
+    components:
+    - pos: -61.5,-21.5
       parent: 1
       type: Transform
 - proto: SpawnVehicleJanicart
@@ -96411,6 +96630,16 @@ entities:
   - uid: 14835
     components:
     - pos: -4.5,-0.5
+      parent: 14329
+      type: Transform
+  - uid: 15411
+    components:
+    - pos: -7.5,-7.5
+      parent: 14329
+      type: Transform
+  - uid: 15412
+    components:
+    - pos: -7.5,-8.5
       parent: 14329
       type: Transform
 - proto: TableReinforcedGlass
