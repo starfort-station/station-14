@@ -5,6 +5,8 @@
   id: BaseMobOrganic
   noSpawn: true
   components:
+  - type: ContentEye
+    maxZoom: 1,1
   - type: LagCompensation
   - type: RangedDamageSound
     soundGroups:
