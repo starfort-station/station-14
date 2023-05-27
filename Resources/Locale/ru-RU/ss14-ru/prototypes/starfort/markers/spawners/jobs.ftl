@@ -1,3 +1,5 @@
+ent-SpawnPointFieldRecrut = Новобранец
+    .desc = { ent-SpawnPointJobBase.desc }
 ent-SpawnPointFieldTrooper = Полевой солдат
     .desc = { ent-SpawnPointJobBase.desc }
 ent-SpawnPointFieldMedic = Полевой медик
