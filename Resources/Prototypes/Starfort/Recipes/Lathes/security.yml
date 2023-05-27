@@ -1,0 +1,13 @@
+- type: latheRecipe
+  id: MagazineBoxHeavyLecterBig
+  result: MagazineBoxHeavyLecterBig
+  completetime: 30
+  materials:
+    Steel: 7200
+
+- type: latheRecipe
+  id: MagazineBoxHeavyLecter
+  result: MagazineBoxHeavyLecter
+  completetime: 8
+  materials:
+    Steel: 2160
