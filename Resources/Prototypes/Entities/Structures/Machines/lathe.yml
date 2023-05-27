@@ -449,6 +449,8 @@
       - MagazineBoxRifleRubber
       - MagazineBoxLightRifle
       - MagazineBoxLightRifleRubber
+      - MagazineBoxHeavyLecterBig
+      - MagazineBoxHeavyLecter
   - type: MaterialStorage
     whitelist:
       tags:
