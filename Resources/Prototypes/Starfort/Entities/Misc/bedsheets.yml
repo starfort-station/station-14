@@ -1,0 +1,35 @@
+- type: entity
+  id: BedsheetMilitary
+  parent: BedsheetBase
+  name: military's bedsheet
+  description: Default military blanket.
+  components:
+  - type: Sprite
+    sprite: Starfort/Objects/Misc/bedsheets.rsi
+    state: military
+  - type: Clothing
+    sprite: Starfort/Clothing/Neck/Bedsheets/military.rsi
+
+- type: entity
+  id: BedsheetSergeant
+  parent: BedsheetBase
+  name: Sergeant's bedsheet
+  description: Default military blanket.
+  components:
+  - type: Sprite
+    sprite: Starfort/Objects/Misc/bedsheets.rsi
+    state: military-sergeant
+  - type: Clothing
+    sprite: Starfort/Clothing/Neck/Bedsheets/military-sergeant.rsi
+
+- type: entity
+  id: BedsheetFieldCommander
+  parent: BedsheetBase
+  name: Field commander's bedsheet
+  description: Default military blanket.
+  components:
+  - type: Sprite
+    sprite: Starfort/Objects/Misc/bedsheets.rsi
+    state: military-officer
+  - type: Clothing
+    sprite: Starfort/Clothing/Neck/Bedsheets/military-officer.rsi
