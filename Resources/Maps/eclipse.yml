@@ -11420,6 +11420,68 @@ entities:
       type: Transform
     - canCollide: False
       type: Physics
+- proto: BrigTimer
+  entities:
+  - uid: 15417
+    components:
+    - pos: -63.5,-9.5
+      parent: 1
+      type: Transform
+    - linkedPorts:
+        14133:
+        - Start: On
+        - Timer: Toggle
+      registeredSinks:
+        Start:
+        - 14133
+        Timer:
+        - 14133
+      type: DeviceLinkSource
+  - uid: 15420
+    components:
+    - pos: -60.5,-9.5
+      parent: 1
+      type: Transform
+    - linkedPorts:
+        14134:
+        - Start: On
+        - Timer: Toggle
+      registeredSinks:
+        Start:
+        - 14134
+        Timer:
+        - 14134
+      type: DeviceLinkSource
+  - uid: 15421
+    components:
+    - pos: -66.5,-9.5
+      parent: 1
+      type: Transform
+    - linkedPorts:
+        14132:
+        - Start: On
+        - Timer: Toggle
+      registeredSinks:
+        Start:
+        - 14132
+        Timer:
+        - 14132
+      type: DeviceLinkSource
+  - uid: 15422
+    components:
+    - pos: -66.5,-14.5
+      parent: 1
+      type: Transform
+    - linkedPorts:
+        14131:
+        - Start: On
+        - Timer: Toggle
+      registeredSinks:
+        Start:
+        - 14131
+        Timer:
+        - 14131
+      type: DeviceLinkSource
 - proto: Brutepack
   entities:
   - uid: 13419
@@ -11469,10 +11531,10 @@ entities:
       type: Physics
   - uid: 15418
     components:
-    - pos: -6.9672165,-2.6533184
-      parent: 14329
+    - pos: -79.23673,-16.368559
+      parent: 1
       type: Transform
-    - nextAttack: 2781.7087463
+    - nextAttack: 2781.7087462
       type: MeleeWeapon
     - nextSound: 2781.9087463
       type: EmitSoundOnCollide
@@ -49518,6 +49580,11 @@ entities:
     - pos: 12.5,-7.5
       parent: 1
       type: Transform
+  - uid: 15391
+    components:
+    - pos: -54.5,-14.5
+      parent: 1
+      type: Transform
 - proto: DonkpocketBoxSpawner
   entities:
   - uid: 12939
@@ -52998,14 +53065,6 @@ entities:
       type: Drain
     - fixtures: {}
       type: Fixtures
-  - uid: 15417
-    components:
-    - rot: 3.141592653589793 rad
-      pos: -6.5,-1.5
-      parent: 14329
-      type: Transform
-    - fixtures: {}
-      type: Fixtures
 - proto: FloorTileItemDark
   entities:
   - uid: 14934
@@ -54498,7 +54557,7 @@ entities:
       pos: 4.5,-2.5
       parent: 14329
       type: Transform
-    - nextSound: 194.5161638
+    - nextSound: 194.5161637
       type: EmitSoundOnCollide
   - uid: 15400
     components:
@@ -83857,6 +83916,9 @@ entities:
       type: Transform
     - powerLoad: 0
       type: ApcPowerReceiver
+    - links:
+      - 15422
+      type: DeviceLinkSink
   - uid: 14132
     components:
     - pos: -67.5,-7.5
@@ -83864,6 +83926,9 @@ entities:
       type: Transform
     - powerLoad: 0
       type: ApcPowerReceiver
+    - links:
+      - 15421
+      type: DeviceLinkSink
   - uid: 14133
     components:
     - pos: -64.5,-7.5
@@ -83871,6 +83936,9 @@ entities:
       type: Transform
     - powerLoad: 0
       type: ApcPowerReceiver
+    - links:
+      - 15417
+      type: DeviceLinkSink
   - uid: 14134
     components:
     - pos: -61.5,-7.5
@@ -83878,6 +83946,9 @@ entities:
       type: Transform
     - powerLoad: 0
       type: ApcPowerReceiver
+    - links:
+      - 15420
+      type: DeviceLinkSink
   - uid: 14301
     components:
     - rot: -1.5707963267948966 rad
@@ -84546,8 +84617,8 @@ entities:
   entities:
   - uid: 15419
     components:
-    - pos: -6.140129,-2.4277573
-      parent: 14329
+    - pos: -79.64288,-16.65989
+      parent: 1
       type: Transform
     - nextAttack: 2795.409092
       type: MeleeWeapon
@@ -92009,16 +92080,6 @@ entities:
     - pos: -104.5,6.5
       parent: 1
       type: Transform
-- proto: SinkStemlessWater
-  entities:
-  - uid: 15416
-    components:
-    - rot: 3.141592653589793 rad
-      pos: -6.5,-2.5
-      parent: 14329
-      type: Transform
-    - nextChargeTime: 1082.278962
-      type: SolutionRegeneration
 - proto: SinkWide
   entities:
   - uid: 265
@@ -92038,6 +92099,16 @@ entities:
     - pos: -80.5,-15.5
       parent: 1
       type: Transform
+    - solutions:
+        tank:
+          temperature: 293.15
+          canMix: False
+          canReact: True
+          maxVol: 1000
+          reagents:
+          - Quantity: 1000
+            ReagentId: Water
+      type: SolutionContainerManager
   - uid: 13704
     components:
     - rot: 1.5707963267948966 rad
@@ -92050,6 +92121,16 @@ entities:
       pos: -51.5,-11.5
       parent: 1
       type: Transform
+    - solutions:
+        tank:
+          temperature: 293.15
+          canMix: False
+          canReact: True
+          maxVol: 1000
+          reagents:
+          - Quantity: 1000
+            ReagentId: Water
+      type: SolutionContainerManager
 - proto: SMESBasic
   entities:
   - uid: 2878
@@ -93590,6 +93671,13 @@ entities:
     - pos: -55.5,6.5
       parent: 1
       type: Transform
+- proto: SpawnMobShiva
+  entities:
+  - uid: 15416
+    components:
+    - pos: -54.5,-14.5
+      parent: 1
+      type: Transform
 - proto: SpawnMobSlothPaperwork
   entities:
   - uid: 12595
@@ -93870,13 +93958,6 @@ entities:
   - uid: 9903
     components:
     - pos: -18.5,-3.5
-      parent: 1
-      type: Transform
-- proto: SpawnPointParamedic
-  entities:
-  - uid: 15391
-    components:
-    - pos: -38.5,-11.5
       parent: 1
       type: Transform
 - proto: SpawnPointQuartermaster
