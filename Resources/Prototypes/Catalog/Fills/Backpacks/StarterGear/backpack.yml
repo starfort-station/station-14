@@ -217,12 +217,14 @@
         - id: WeaponPulsePistol
         - id: WeaponPistolMk58
         - id: MagazinePistolHighCapacityRubber
+          amount: 2
         - id: MagazinePistol
+          amount: 3
         - id: Handcuffs
           amount: 3
-        - id: PaperWrittenERTmanualFirst
-        - id: PaperWrittenERTmanualSecond
+        - id: PaperWrittenERTmanual
         - id: CrowbarRed
+        - id: BoxBodyBag
 
 - type: entity
   noSpawn: true
@@ -234,13 +236,18 @@
         - id: BoxSurvivalERT
         - id: WeaponDisabler
         - id: WeaponPulsePistol
+        - id: WeaponPistolMk58
+        - id: MagazinePistol
+          amount: 3
+        - id: MagazinePistolHighCapacityRubber
+          amount: 2
         - id: WeaponPulseCarbine
         - id: BoxHandcuff
-        - id: PaperWrittenERTmanualFirst
-        - id: PaperWrittenERTmanualSecond
+        - id: PaperWrittenERTmanual
         - id: Handcuffs
           amount: 3
         - id: CrowbarRed
+        - id: BoxBodyBag
 
 - type: entity
   noSpawn: true
@@ -249,13 +256,20 @@
   components:
     - type: StorageFill
       contents:
-        - id: BoxSurvivalMedical
+        - id: BoxSurvivalERT
+        - id: WeaponPistolMk58
+        - id: MagazinePistol
+          amount: 3
+        - id: MagazinePistolHighCapacityRubber
+          amount: 2
         - id: WeaponPulseCarbine
         - id: Hypospray
         - id: MedkitAdvancedFilled
-        - id: PaperWrittenERTmanualFirst
-        - id: PaperWrittenERTmanualSecond
+        - id: PaperWrittenERTmanual
+        - id: Handcuffs
+          amount: 3
         - id: CrowbarRed
+        - id: BoxBodyBag
 
 - type: entity
   noSpawn: true
@@ -265,14 +279,15 @@
     - type: StorageFill
       contents:
         - id: BoxSurvivalERT
-        - id: PaperWrittenERTmanualFirst
-        - id: PaperWrittenERTmanualSecond
+        - id: PaperWrittenERTmanual
         - id: trayScanner
         - id: WeaponPulseCarbine
         - id: RCD
         - id: RCDAmmo
         - id: RCDAmmo
         - id: RCDAmmo
+        - id: Handcuffs
+          amount: 3
 
 - type: entity
   noSpawn: true
@@ -282,8 +297,7 @@
     - type: StorageFill
       contents:
         - id: BoxSurvivalERT
-        - id: PaperWrittenERTmanualFirst
-        - id: PaperWrittenERTmanualSecond
+        - id: PaperWrittenERTmanual
         - id: WeaponPulsePistol
         - id: MedkitFilled
         - id: BoxLightMixed
@@ -291,6 +305,7 @@
         - id: Soap
         - id: CrowbarRed
         - id: AdvMopItem
+        - id: BoxBodyBag
 
 - type: entity
   noSpawn: true

@@ -1,4 +1,17 @@
 - type: entity
+  id: SpawnPointFieldRecrut
+  parent: SpawnPointJobBase
+  name: FieldRecrut
+  components:
+  - type: SpawnPoint
+    job_id: FieldTrooper
+  - type: Sprite
+    layers:
+      - state: green
+      - sprite: Starfort/Markers/jobs.rsi
+        state: field_recrut
+
+- type: entity
   id: SpawnPointFieldTrooper
   parent: SpawnPointJobBase
   name: FieldTrooper

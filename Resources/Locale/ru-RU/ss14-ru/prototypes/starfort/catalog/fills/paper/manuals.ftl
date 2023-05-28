@@ -1,6 +1,6 @@
-ent-PaperWrittenERTmanualFirst = { ent-Paper }
+ent-PaperWrittenERTmanual = памятка для бойцов НТ
     .suffix = Мануал ОБР
-    .desc = { ent-Paper.desc }
-ent-PaperWrittenERTmanualSecond = { ent-Paper }
-    .suffix = Мануал ОБР
-    .desc = { ent-Paper.desc }
+    .desc = Добро пожаловать в элиту, дружище.
+ent-PaperWrittenExpeditionmanual = СРП Экспедиторов
+    .desc = Листок бумаги, содержащий СРП Экспедиторов.
+
