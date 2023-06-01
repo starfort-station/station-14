@@ -60,6 +60,7 @@
     time: 10
   - type: Airlock
     openUnlitVisible: true
+  - type: DoorBolt
   - type: Appearance
   - type: WiresVisuals
   - type: ApcPowerReceiver
