@@ -10,6 +10,8 @@
       - id: ClothingMaskBreath
         amount: 2
       - id: FoodSnackChocolate
+      - id: Flare
+        amount: 2
       - id: FlashlightLantern
       - id: FlashlightLantern
         prob: 0.5
