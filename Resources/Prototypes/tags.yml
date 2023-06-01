@@ -243,6 +243,9 @@
   id: DroneUsable
 
 - type: Tag
+  id: Ectoplasm
+
+- type: Tag
   id: Egg
 
 - type: Tag
@@ -286,6 +289,9 @@
 
 - type: Tag
   id: FootstepSound
+
+- type: Tag
+  id: ForceableFollow
 
 - type: Tag
   id: ForceFixRotations # fixrotations command WILL target this
@@ -562,6 +568,9 @@
   id: Plastic
 
 - type: Tag
+  id: PlushieGhost
+
+- type: Tag
   id: Powerdrill
 
 - type: Tag
@@ -669,6 +678,9 @@
 
 - type: Tag
   id: StringInstrument
+
+- type: Tag
+  id: StationMapElectronics
 
 - type: Tag
   id: SubdermalImplant
