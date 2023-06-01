@@ -12,6 +12,7 @@
       - id: Ointment
         amount: 2
       - id: Gauze
+      - id: EmergencyMedipen
       # see https://github.com/tgstation/blob/master/code/game/objects/items/storage/firstaid.dm for example contents
 
 - type: entity
@@ -76,7 +77,7 @@
         amount: 3
       - id: EmergencyMedipen
         amount: 2
-      
+
 - type: entity
   id: MedkitAdvancedFilled
   suffix: Filled
