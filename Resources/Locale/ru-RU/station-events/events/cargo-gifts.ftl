@@ -1,18 +1,15 @@
-cargo-gifts-event-announcement = Поздравляем! { $sender } отправил { $description } в { $dest }.
+cargo-gifts-event-announcement = Поздравляем! { $sender } отправил { $description } для { $dest }.
 cargo-gift-default-description = Пакет подарков
 cargo-gift-default-sender = НаноТрейзен
-cargo-gift-default-dest = Грузовой отдел
-
-cargo-gift-dest-bar = бар
-cargo-gift-dest-eng = инженерный отдел
-cargo-gift-dest-supp = орузовой отдел
-cargo-gift-dest-janitor = отдел уборки
-cargo-gift-dest-med = медицинский отдел
-cargo-gift-dest-sec = отдел Службы Безопасности
-
-cargo-gift-pizza-small = небольшая вечеринка с пиццей
-cargo-gift-pizza-large = большая вечеринка с пиццей
-
+cargo-gift-default-dest = грузового отдела
+cargo-gift-dest-bar = бара
+cargo-gift-dest-eng = инженерного отдела
+cargo-gift-dest-supp = горузового отдела
+cargo-gift-dest-janitor = отдела уборки
+cargo-gift-dest-med = медицинского отдела
+cargo-gift-dest-sec = отдела Службы Безопасности
+cargo-gift-pizza-small = небольшой ящик с пиццей
+cargo-gift-pizza-large = большой ящик с пиццей
 cargo-gift-eng = ящик материалов для ремонта обшивки
 cargo-gift-vending = ящик пополнения для торговых автоматов
 cargo-gift-cleaning = оборудование для уборки
