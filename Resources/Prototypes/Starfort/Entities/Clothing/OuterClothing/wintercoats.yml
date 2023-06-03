@@ -1,0 +1,20 @@
+- type: entity
+  parent: ClothingOuterStorageBase
+  id: ClothingPrisonnerOuterWinterCoat
+  name: prisonner winter coat
+  description: Heavy jacket made of "synthetic" animal fur. Surprisingly quite roomy. It has an orange color, typical for the uniform of prisoners.
+  components:
+  - type: Sprite
+    sprite: Starfort/Clothing/OuterClothing/WinterCoats/prisonner-coat.rsi
+  - type: Clothing
+    sprite: Starfort/Clothing/OuterClothing/WinterCoats/prisonner-coat.rsi
+  - type: TemperatureProtection
+    coefficient: 0.1
+  - type: Item
+    size: 20
+  - type: Storage
+    capacity: 20
+  - type: Armor
+    modifiers:
+      coefficients:
+        Heat: 0.90
