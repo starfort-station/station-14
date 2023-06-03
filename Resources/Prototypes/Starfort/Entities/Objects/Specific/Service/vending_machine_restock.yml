@@ -29,3 +29,17 @@
     - state: green_bit
       shader: unshaded
     - state: refill_expiditiondrobe
+
+- type: entity
+  parent: BaseVendingMachineRestock
+  id: VendingMachineRestockSustenceVendor
+  name: Sustenance Vendor restock box
+  description: Restock box for as required by section 47-C of the NT's Prisoner Ethical Treatment Agreement.
+  components:
+  - type: VendingMachineRestock
+    canRestock:
+    - SustenanceInventory
+  - type: Sprite
+    layers:
+    - state: base
+    - state: green_bit

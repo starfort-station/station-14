@@ -13,3 +13,11 @@
   - type: StorageFill
     contents:
       - id: VendingMachineRestockExpeditionDrobeEquipment
+
+- type: entity
+  id: CrateVendingMachineRestockSustenceVendor
+  parent: CrateSecgear
+  components:
+  - type: StorageFill
+    contents:
+      - id: VendingMachineRestockSustenceVendor
