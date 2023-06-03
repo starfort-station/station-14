@@ -1,4 +1,7 @@
-ent-CrateVendingMachineRestockExpeditionEquipmentFilled = { ent-CrateGenericSteel }
-    .desc = { ent-CrateGenericSteel.desc }
-ent-CrateVendingMachineRestockExpeditionDrobeEquipmentFilled = { ent-CrateGenericSteel }
-    .desc = { ent-CrateGenericSteel.desc }
+ent-CrateVendingMachineRestockExpeditionEquipmentFilled = ящик пополнения ЭкспедиторМаг
+    .desc = Содержит набор пополнения ЭкспедиторМаг.
+ent-CrateVendingMachineRestockExpeditionDrobeEquipmentFilled = ящик пополнения ЭкспедиторШкаф
+    .desc = Содержит набор пополнения ЭкспедиторШкаф.
+ent-CrateVendingMachineRestockSustenceVendor = ящик пополнения тюремного торгомата
+    .desc = Содержит набор пополнения тюремного торгомата. Требует уровень доступа Службы Безопасности для открытия.
+
