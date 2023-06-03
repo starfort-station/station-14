@@ -15,7 +15,7 @@
       - id: VendingMachineRestockExpeditionDrobeEquipment
 
 - type: entity
-  id: CrateVendingMachineRestockSustenceVendor
+  id: CrateVendingMachineRestockSustenceVendorFilled
   parent: CrateSecgear
   components:
   - type: StorageFill
