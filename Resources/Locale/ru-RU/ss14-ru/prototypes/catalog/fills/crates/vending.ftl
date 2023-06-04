@@ -50,5 +50,5 @@ ent-CrateVendingMachineRestockExpeditionDrobeEquipmentFilled = { ent-CrateGeneri
     .desc = { ent-CrateGenericSteel.desc }
 ent-CrateVendingMachineRestockHappyHonkFilled = ящик пополнения Хэппи Хонк
     .desc = Содержит набор пополнения торгомата Хэппи Хонк.
-ent-CrateVendingMachineRestockChemVendFilled = ящик пополнения Хэппи Хонк
-    .desc = Содержит набор пополнения торгомата Хэппи Хонк.
+ent-CrateVendingMachineRestockChemVendFilled = ящик пополнения ХимВенд
+    .desc = Содержит набор пополнения торгомата ХимВенд.

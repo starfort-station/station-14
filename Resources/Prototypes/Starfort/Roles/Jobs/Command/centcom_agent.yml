@@ -17,11 +17,12 @@
       time: 108000
   startingGear: CCAgentGear
   icon: "Lawyer"
-  supervisors: job-supervisors-hop
+  supervisors: job-supervisors-centcom
   access:
   - Medical
   - Service
   - Brig
+  - Security
   - Maintenance
   - Command
 
@@ -33,7 +34,9 @@
     shoes: ClothingShoesBootsLaceup
     id: CCAgentPDA
     ears: ClothingHeadsetIAA
-    eyes: ClothingEyesGlassesSecurity
+    gloves: ClothingHandsGlovesColorBlack
+    neck: ClothingNeckLawyerbadge
+    eyes: ClothingEyesGlassesSunglasses
     pocket1: RubberStampIAA
   inhand:
     right hand: BriefcaseBrownFilled
