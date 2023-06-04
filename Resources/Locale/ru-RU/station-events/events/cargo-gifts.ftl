@@ -1,23 +1,20 @@
-cargo-gifts-event-announcement = Поздравляем! { $sender } решил отправить { $description } для { $dest }. Заказ уже долавлен в список поставок. Отдел снабжения должен принять заказ.
+cargo-gifts-event-announcement = Поздравляем! { $sender } отправило { $description } для { $dest }. Заказ уже был добавлен в список поставок. Получить его можно у отдела снабжения.
 cargo-gift-default-description = Пакет подарков
 cargo-gift-default-sender = НаноТрейзен
-cargo-gift-default-dest = Грузовой отдел
-
+cargo-gift-default-dest = грузового отдела
 cargo-gift-dest-bar = бара
 cargo-gift-dest-eng = инженерного отдела
-cargo-gift-dest-supp = грузового отдела
+cargo-gift-dest-supp = отдела поставок
 cargo-gift-dest-janitor = отдела уборки
 cargo-gift-dest-med = медицинского отдела
 cargo-gift-dest-sec = отдела Службы Безопасности
-
-cargo-gift-pizza-small = небольшая вечеринка с пиццей
-cargo-gift-pizza-large = большая вечеринка с пиццей
-
-cargo-gift-eng = материалы для экстренного ремонта
+cargo-gift-pizza-small = небольшой ящик с пиццей
+cargo-gift-pizza-large = большой ящик с пиццей
+cargo-gift-eng = материалы для ремонта обшивки
 cargo-gift-vending = наборы пополнения для торговых автоматов
 cargo-gift-cleaning = оборудование для уборки
-cargo-gift-medical-supply = припасы медикаментов
-cargo-gift-space-protection = защита от вакуумного давления космоса
-cargo-gift-fire-protection = припасы противопожарной защиты
-cargo-gift-security-guns = припасы оружия
+cargo-gift-medical-supply = медицинские принадлежности
+cargo-gift-space-protection = расширенный аварийный ящик
+cargo-gift-fire-protection = противопожарную защиту
+cargo-gift-security-guns = набор оружия
 cargo-gift-security-riot = средства подавления беспорядков

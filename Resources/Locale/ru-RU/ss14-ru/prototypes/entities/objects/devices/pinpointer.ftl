@@ -1,4 +1,6 @@
-ent-PinpointerBase = поисковый навигатор
+ent-PinpointerBase = пинпоинтер
     .desc = Портативное устройство слежения, которое фиксирует определенные сигналы.
-ent-PinpointerNuclear = поисковый навигатор
+ent-PinpointerNuclear = пинпоинтер
     .desc = { ent-PinpointerBase.desc }
+ent-PinpointerUniversal = универсальный пинпоинтер
+    .desc = Портативное устройство слежения, которое фиксирует любой физический объект в выключенном состоянии.

@@ -31,6 +31,7 @@ research-technology-basic-xenoarcheology = Ксеноархеология
 research-technology-alternative-research = Альтернативные исследования
 research-technology-magnets-tech = Магнитные технологии
 research-technology-advanced-parts = Передовые детали
+research-technology-grappling = Крюк
 research-technology-abnormal-artifact-manipulation = Продвинутое манипулирование артефактами
 research-technology-gravity-manipulation = Манипуляция гравитацией
 research-technology-mobile-anomaly-tech = Мобильная аномалистика

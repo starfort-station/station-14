@@ -56,3 +56,5 @@ ent-BulletWaterShot = вода
     .desc = { "" }
 ent-BulletCannonBall = пушечное ядро
     .desc = { ent-BaseBulletTrigger.desc }
+ent-GrapplingHook = крюк для захвата
+    .desc = { "" }

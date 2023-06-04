@@ -1,5 +1,10 @@
 ent-BasePlushie = { ent-BaseItem }
     .desc = { ent-BaseItem.desc }
+ent-PlushieGhost = мягкая игрушка-призрак
+    .desc = Начало вашей личной банды призраков!
+ent-PlushieGhostRevenant = мягкая игрушка ревенант
+    .desc = Настолько мягкая, что хочется вздремнуть...
+    .suffix = НЕ МАПИТЬ
 ent-PlushieBee = плюшевая пчела
     .desc = Милая игрушка, напоминающая еще более милого программиста. Нужно быть монстром, чтобы порвать ее.
 ent-PlushieRGBee = плюшевая RGB-пчела
