@@ -474,7 +474,7 @@
     scanDelay: 1.2
     scanningEndSound:
       path: "/Audio/Items/Medical/healthscanner.ogg"
-      
+
 - type: entity
   parent: BasePDA
   id: ParamedicPDA
@@ -493,7 +493,7 @@
     scanDelay: 0.5
     scanningEndSound:
       path: "/Audio/Items/Medical/healthscanner.ogg"
-      
+
 - type: entity
   parent: BasePDA
   id: ChemistryPDA
@@ -794,5 +794,11 @@
   - type: PDA
     id: CCAgentIDCard
     state: pda-ert
+    penSlot:
+      startingItem: PenCentcom
+      priority: -1
+      whitelist:
+        tags:
+        - Write
   - type: Icon
     state: pda-ert

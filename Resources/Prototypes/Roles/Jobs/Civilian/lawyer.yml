@@ -5,7 +5,7 @@
   playTimeTracker: JobLawyer
   startingGear: LawyerGear
   icon: "Lawyer"
-  supervisors: job-supervisors-hop
+  supervisors: job-supervisors-centcom-agent-and-centcom
   access:
   - Service
   - Brig
@@ -17,6 +17,7 @@
     jumpsuit: ClothingUniformJumpsuitLawyerBlack  # TODO change jumpsuit to randomiser of the 4 variants
     back: ClothingBackpackFilled
     shoes: ClothingShoesBootsLaceup
+    neck: ClothingNeckLawyerbadge
     id: LawyerPDA
     ears: ClothingHeadsetSecurity
     # TODO add copy of space law
