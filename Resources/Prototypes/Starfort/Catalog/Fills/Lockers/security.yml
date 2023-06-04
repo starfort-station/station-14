@@ -1,7 +1,7 @@
 - type: entity
   id: LockerMedicineBrigFilled
   suffix: Filled
-  parent: LockerBrigMedicine
+  parent: LockerMedicineBrig
   components:
   - type: StorageFill
     contents:
