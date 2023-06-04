@@ -1,4 +1,4 @@
-cargo-gifts-event-announcement = Поздравляем! { $sender } отправил { $description } для { $dest }.
+cargo-gifts-event-announcement = Поздравляем! { $sender } отправило { $description } для { $dest }. Заказ уже был добавлен в список поставок. Получить его можно у отдела снабжения.
 cargo-gift-default-description = Пакет подарков
 cargo-gift-default-sender = НаноТрейзен
 cargo-gift-default-dest = грузового отдела
