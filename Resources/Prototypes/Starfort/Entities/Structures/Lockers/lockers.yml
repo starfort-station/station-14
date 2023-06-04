@@ -78,3 +78,18 @@
       stateDoorClosed: fieldcom_door
     - type: AccessReader
       access: [["Sergeant","Expedition"]]
+
+# Security
+- type: entity
+  id: LockerMedicineBrig
+  parent: LockerBase
+  name: brig's medicine locker
+  description: Filled to the brim with medical junk. Requires Medical or Security clearance.
+  components:
+  - type: Appearance
+  - type: EntityStorageVisuals
+    stateBaseClosed: med
+    stateDoorOpen: med_open
+    stateDoorClosed: med_door
+  - type: AccessReader
+    access: [ [ "Medical" ], ["Security"]]
