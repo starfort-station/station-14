@@ -69,6 +69,7 @@ ghost-role-information-ifrit-name = Ифрит
 ghost-role-information-ifrit-description = Слушать хозяина. Не наносите урон. Сильно бейте людей.
 ghost-role-information-space-dragon-name = Космический дракон
 ghost-role-information-space-dragon-description = Вызовите 3 карповых разлома и захватите этот квадрант! У вас есть только 5 минут между каждым разломом, прежде чем вы исчезнете.
+ghost-role-information-space-dragon-dungeon-description = Защищайте подземелье экспедиции вместе со своими товарищами-рыбами!
 ghost-role-information-cluwne-name = Клувень
 ghost-role-information-cluwne-description = Станьте жалким клувьнем, ваша единственная цель в жизни - найти сладкую разрядку от страданий (обычно путем избиения до смерти). Клувень не является антагонистом, но может защищаться. Члены экипажа могут свободно убивать клувней.
 ghost-role-information-skeleton-pirate-name = Пират-скелет
