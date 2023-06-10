@@ -31,3 +31,9 @@ replay-info-info =
     { "[" }color=gray]Comp Hash:[/color] { $compHash }
 # Окно выбора воспроизведения
 replay-menu-select-title = Выбрать воспроизведение
+# Глаголы, связанные с воспроизведением
+replay-verb-spectate = Смотреть
+# команда
+cmd-replay-spectate-help = replay_spectate [сущность]
+cmd-replay-spectate-desc = Прикрепляет или открепляет локального игрока к заданному uid сущности.
+cmd-replay-spectate-hint = Необязательный идентификатор сущности

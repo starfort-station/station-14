@@ -13,3 +13,7 @@ wire-name-power = ПИТН
 wire-name-arcade-invincible = МНЖР
 wire-name-vending-contraband = МНЖР
 wire-name-vending-eject = ТОРГ
+wire-name-pa-keyboard = КЛАВ
+wire-name-pa-limiter = ЛИМ
+wire-name-pa-power = ПИТН
+wire-name-pa-strength = СИЛ
