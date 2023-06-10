@@ -14,3 +14,4 @@ job-supervisors-security = офицерам, смотрителю, и Главе
 job-supervisors-hire = своим нанимателям
 job-supervisors-everyone = вообще всем
 job-supervisors-field-commander = Командиру Экспедиции
+
