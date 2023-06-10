@@ -5,7 +5,7 @@
   playTimeTracker: JobLawyer
   startingGear: LawyerGear
   icon: "Lawyer"
-  supervisors: job-supervisors-centcom-agent-and-centcom
+  supervisors: job-supervisors-magistrate
   access:
   - Service
   - Brig

@@ -17,7 +17,7 @@
       time: 108000
   startingGear: CCAgentGear
   icon: "Lawyer"
-  supervisors: job-supervisors-centcom
+  supervisors: job-supervisors-magistrate
   access:
   - Medical
   - Service
