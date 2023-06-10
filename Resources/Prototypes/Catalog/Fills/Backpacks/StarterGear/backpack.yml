@@ -216,7 +216,7 @@
         - id: BoxSurvivalERT
         - id: WeaponPulsePistol
         - id: WeaponPistolMk58
-        - id: MagazinePistolHighCapacityRubber
+        - id: MagazinePistolRubber
           amount: 2
         - id: MagazinePistol
           amount: 3
@@ -239,7 +239,7 @@
         - id: WeaponPistolMk58
         - id: MagazinePistol
           amount: 3
-        - id: MagazinePistolHighCapacityRubber
+        - id: MagazinePistolRubber
           amount: 2
         - id: WeaponPulseCarbine
         - id: BoxHandcuff
@@ -260,7 +260,7 @@
         - id: WeaponPistolMk58
         - id: MagazinePistol
           amount: 3
-        - id: MagazinePistolHighCapacityRubber
+        - id: MagazinePistolRubber
           amount: 2
         - id: WeaponPulseCarbine
         - id: Hypospray
