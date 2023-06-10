@@ -1,5 +1,4 @@
 job-supervisors-centcom = представителю ЦентКома
-job-supervisors-centcom-agent-and-centcom = Агенту Внутренних Дел и представителю ЦентКома
 job-supervisors-captain = Капитану
 job-supervisors-hop = Главе Персонала
 job-supervisors-hop-qm = Квартирмейстеру и Главе Персонала
@@ -14,4 +13,5 @@ job-supervisors-security = офицерам, смотрителю, и Главе
 job-supervisors-hire = своим нанимателям
 job-supervisors-everyone = вообще всем
 job-supervisors-field-commander = Командиру Экспедиции
+job-supervisors-magistrate = Магистрату
 
