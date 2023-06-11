@@ -34,6 +34,7 @@
 <Box>
 <GuideEntityEmbed Entity="MechRipley" Caption="Рипли"/>
 <GuideEntityEmbed Entity="MechHonker" Caption="Х.О.Н.К."/>
+<GuideEntityEmbed Entity="MechHamtr" Caption="ХОМЯК"/>
 </Box>
   [color=#a4885c]Мехи[/color] - это гигантские металлические чудовища, предназначенные для выполнения различных функций в соответствии с их моделью. Ими управляют игроки, а для их функционирования требуются энергоячейки.
 
