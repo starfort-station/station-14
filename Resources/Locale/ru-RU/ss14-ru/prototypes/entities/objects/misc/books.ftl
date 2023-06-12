@@ -1,5 +1,7 @@
 ent-BookBase = книга
     .desc = Книга в твердом переплете.
+ent-BookChemicalCompendium = химический справочник
+    .desc = Исчерпывающее руководство, написанное каким-то старым скелетом профессора о химическом синтезе.
 ent-BookRandom = { ent-BookBase }
     .suffix = случайный
     .desc = { ent-BookBase.desc }

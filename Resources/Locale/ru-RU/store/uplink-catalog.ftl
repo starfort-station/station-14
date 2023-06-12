@@ -13,6 +13,8 @@ uplink-edagger-name = Энергокинжал
 uplink-edagger-desc = Небольшой энергитический кинжал, удобно замаскированный под ручку.
 uplink-fire-axe-flaming-name = { ent-FireAxeFlaming }
 uplink-fire-axe-flaming-desc = Классическое оружие, оснащенное передовой атмос-технологией, позволяющей ему поджигать цели.
+uplink-gloves-north-star-name = Перчатки Северной звезды
+uplink-gloves-north-star-desc = Пара перчаток, которые значительно сокращают время задержки удара, позволяя избивать людей до смерти шквалом ударов.
 # Explosives
 uplink-explosive-grenade-name = { ent-ExGrenade }
 uplink-explosive-grenade-desc = { ent-ExGrenade.desc }
