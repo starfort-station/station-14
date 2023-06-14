@@ -5926,9 +5926,19 @@ entities:
       pos: 9.5,-0.5
       parent: 1
       type: Transform
+    - ShutdownSubscribers:
+      - 7178
+      - 7176
+      - 13691
+      - 13692
+      type: DeviceNetwork
     - devices:
       - 9845
       - 9844
+      - 7178
+      - 7176
+      - 13691
+      - 13692
       type: DeviceList
   - uid: 367
     components:
@@ -5964,8 +5974,7 @@ entities:
       type: DeviceList
   - uid: 4045
     components:
-    - rot: -1.5707963267948966 rad
-      pos: 7.5,-10.5
+    - pos: 10.5,-6.5
       parent: 1
       type: Transform
   - uid: 5529
@@ -5982,6 +5991,10 @@ entities:
     - pos: -160.5,-2.5
       parent: 1
       type: Transform
+    - ShutdownSubscribers:
+      - 7992
+      - 8022
+      type: DeviceNetwork
     - devices:
       - 8157
       - 8156
@@ -6006,6 +6019,10 @@ entities:
       - 7814
       - 7812
       - 7813
+      - 8023
+      - 7993
+      - 7992
+      - 8022
       type: DeviceList
   - uid: 7843
     components:
@@ -6013,6 +6030,9 @@ entities:
       pos: -144.5,2.5
       parent: 1
       type: Transform
+    - ShutdownSubscribers:
+      - 4109
+      type: DeviceNetwork
     - devices:
       - 7835
       - 7974
@@ -6031,6 +6051,7 @@ entities:
       - 4004
       - 4003
       - 4002
+      - 4109
       type: DeviceList
   - uid: 7848
     components:
@@ -6038,6 +6059,9 @@ entities:
       pos: -144.5,-9.5
       parent: 1
       type: Transform
+    - ShutdownSubscribers:
+      - 4008
+      type: DeviceNetwork
     - devices:
       - 8066
       - 7847
@@ -6055,6 +6079,7 @@ entities:
       - 3957
       - 3979
       - 1131
+      - 4008
       type: DeviceList
   - uid: 7854
     components:
@@ -6120,29 +6145,39 @@ entities:
       pos: -108.5,-13.5
       parent: 1
       type: Transform
-    - devices:
-      - 14900
-      - 14899
-      - 14897
-      - 14898
-      - 14895
-      - 14894
-      - 14889
-      - 14892
-      - 8374
-      - 8375
-      - 8376
-      - 7890
-      - 7889
-      - 7892
-      - 7893
+    - ShutdownSubscribers:
       - 7963
       - 7964
       - 7965
       - 7891
+      - 7890
+      - 7892
+      - 7893
       - 8434
       - 8437
-      - 7855
+      - 14895
+      - 14894
+      - 8376
+      - 8375
+      - 8374
+      - 7889
+      type: DeviceNetwork
+    - devices:
+      - 7963
+      - 7964
+      - 7965
+      - 7891
+      - 7890
+      - 7892
+      - 7893
+      - 8434
+      - 8437
+      - 14895
+      - 14894
+      - 8376
+      - 8375
+      - 8374
+      - 7889
       type: DeviceList
   - uid: 7904
     components:
@@ -6150,6 +6185,9 @@ entities:
       pos: -108.5,-5.5
       parent: 1
       type: Transform
+    - ShutdownSubscribers:
+      - 7903
+      type: DeviceNetwork
     - devices:
       - 7896
       - 7892
@@ -6164,34 +6202,59 @@ entities:
       - 8438
       - 8439
       - 7902
+      - 7903
       type: DeviceList
   - uid: 7910
     components:
     - pos: -94.5,-9.5
       parent: 1
       type: Transform
-    - devices:
+    - ShutdownSubscribers:
+      - 15320
+      - 15322
+      - 15321
+      - 15323
       - 7963
       - 7964
       - 7965
-      - 7911
-      - 7912
       - 7907
+      - 8487
+      - 8488
       - 7960
       - 7961
       - 7962
       - 7908
-      - 7913
-      - 7906
-      - 7905
-      - 7919
-      - 7918
-      - 8487
-      - 8488
       - 7915
       - 7916
-      - 8489
       - 7920
+      - 7911
+      - 7912
+      - 7905
+      - 7906
+      - 7921
+      type: DeviceNetwork
+    - devices:
+      - 15323
+      - 15320
+      - 15321
+      - 15322
+      - 7963
+      - 7964
+      - 7965
+      - 7907
+      - 8487
+      - 8488
+      - 7960
+      - 7961
+      - 7962
+      - 7908
+      - 7915
+      - 7916
+      - 7920
+      - 7911
+      - 7912
+      - 7905
+      - 7906
       - 7921
       type: DeviceList
   - uid: 9311
@@ -6303,6 +6366,10 @@ entities:
       pos: -29.5,0.5
       parent: 1
       type: Transform
+    - ShutdownSubscribers:
+      - 8767
+      - 8766
+      type: DeviceNetwork
     - devices:
       - 7951
       - 7952
@@ -6324,6 +6391,8 @@ entities:
       - 9816
       - 9814
       - 9815
+      - 8767
+      - 8766
       type: DeviceList
   - uid: 9798
     components:
@@ -6360,6 +6429,10 @@ entities:
     - pos: -22.5,-1.5
       parent: 1
       type: Transform
+    - ShutdownSubscribers:
+      - 5893
+      - 5895
+      type: DeviceNetwork
     - devices:
       - 9808
       - 696
@@ -6370,6 +6443,8 @@ entities:
       - 180
       - 9805
       - 9806
+      - 5893
+      - 5895
       type: DeviceList
   - uid: 9812
     components:
@@ -6427,6 +6502,9 @@ entities:
       pos: 6.5,-14.5
       parent: 1
       type: Transform
+    - ShutdownSubscribers:
+      - 533
+      type: DeviceNetwork
     - devices:
       - 9850
       - 9856
@@ -6436,6 +6514,7 @@ entities:
       - 9674
       - 9863
       - 9857
+      - 533
       type: DeviceList
   - uid: 9860
     components:
@@ -6443,6 +6522,10 @@ entities:
       pos: -0.5,-9.5
       parent: 1
       type: Transform
+    - ShutdownSubscribers:
+      - 1384
+      - 3070
+      type: DeviceNetwork
     - devices:
       - 9861
       - 9827
@@ -6454,6 +6537,8 @@ entities:
       - 9855
       - 9667
       - 9669
+      - 1384
+      - 3070
       type: DeviceList
   - uid: 9883
     components:
@@ -6505,6 +6590,10 @@ entities:
       pos: -12.5,-9.5
       parent: 1
       type: Transform
+    - ShutdownSubscribers:
+      - 5898
+      - 5897
+      type: DeviceNetwork
     - devices:
       - 9809
       - 9808
@@ -6513,12 +6602,68 @@ entities:
       - 9877
       - 9876
       - 9874
+      - 5898
+      - 5897
       type: DeviceList
   - uid: 10422
     components:
     - pos: 33.5,-1.5
       parent: 1
       type: Transform
+    - ShutdownSubscribers:
+      - 10576
+      - 10575
+      - 13584
+      - 13577
+      - 13578
+      - 10572
+      - 10578
+      - 10579
+      - 10180
+      - 10179
+      - 13579
+      - 13580
+      - 13581
+      - 10574
+      - 10573
+      - 15174
+      - 15175
+      - 15176
+      - 10520
+      - 10521
+      - 15457
+      - 15460
+      - 15461
+      - 15458
+      - 15459
+      type: DeviceNetwork
+    - devices:
+      - 10576
+      - 10575
+      - 13584
+      - 13577
+      - 13578
+      - 10572
+      - 10578
+      - 10579
+      - 10180
+      - 10179
+      - 13579
+      - 13580
+      - 13581
+      - 10574
+      - 10573
+      - 15174
+      - 15175
+      - 15176
+      - 10520
+      - 10521
+      - 15457
+      - 15460
+      - 15461
+      - 15458
+      - 15459
+      type: DeviceList
   - uid: 12611
     components:
     - rot: -1.5707963267948966 rad
@@ -6526,13 +6671,7 @@ entities:
       parent: 1
       type: Transform
     - ShutdownSubscribers:
-      - 15440
-      - 15439
-      - 15442
-      - 15441
-      - 15435
-      - 15434
-      - 15443
+      - 13856
       type: DeviceNetwork
     - deviceLimit: 40
       devices:
@@ -6573,6 +6712,7 @@ entities:
       - 15441
       - 15442
       - 15443
+      - 13856
       type: DeviceList
   - uid: 13637
     components:
@@ -6580,6 +6720,40 @@ entities:
       pos: -63.5,12.5
       parent: 1
       type: Transform
+    - ShutdownSubscribers:
+      - 13724
+      - 11912
+      - 13723
+      - 1944
+      - 15498
+      - 15497
+      - 15495
+      - 15496
+      - 15490
+      - 15487
+      - 15485
+      - 15491
+      - 15492
+      - 15493
+      - 15494
+      type: DeviceNetwork
+    - devices:
+      - 13724
+      - 11912
+      - 13723
+      - 1944
+      - 15498
+      - 15497
+      - 15495
+      - 15496
+      - 15490
+      - 15487
+      - 15485
+      - 15491
+      - 15492
+      - 15493
+      - 15494
+      type: DeviceList
   - uid: 13853
     components:
     - rot: -1.5707963267948966 rad
@@ -6632,21 +6806,44 @@ entities:
       - 14605
       - 14604
       type: DeviceList
+  - uid: 14742
+    components:
+    - pos: 4.5,6.5
+      parent: 1
+      type: Transform
+    - ShutdownSubscribers:
+      - 956
+      type: DeviceNetwork
+    - devices:
+      - 15453
+      - 15454
+      - 7177
+      - 956
+      type: DeviceList
   - uid: 14909
     components:
     - rot: -1.5707963267948966 rad
       pos: -111.5,-18.5
       parent: 1
       type: Transform
+    - ShutdownSubscribers:
+      - 15499
+      type: DeviceNetwork
     - devices:
-      - 14900
-      - 14899
-      - 14897
-      - 14898
       - 14895
       - 14894
+      - 14896
       - 14889
       - 14892
+      - 14898
+      - 14897
+      - 14900
+      - 14899
+      - 15276
+      - 15275
+      - 15273
+      - 15274
+      - 15499
       type: DeviceList
   - uid: 15168
     components:
@@ -6654,6 +6851,9 @@ entities:
       pos: 23.5,-1.5
       parent: 1
       type: Transform
+    - ShutdownSubscribers:
+      - 15222
+      type: DeviceNetwork
     - devices:
       - 15225
       - 15220
@@ -6720,6 +6920,325 @@ entities:
       - 15217
       - 15218
       - 15220
+      type: DeviceList
+  - uid: 15452
+    components:
+    - pos: 8.5,6.5
+      parent: 1
+      type: Transform
+    - ShutdownSubscribers:
+      - 957
+      - 6687
+      - 15455
+      - 15456
+      type: DeviceNetwork
+    - devices:
+      - 957
+      - 6687
+      - 15455
+      - 15456
+      type: DeviceList
+  - uid: 15462
+    components:
+    - rot: -1.5707963267948966 rad
+      pos: -96.5,-7.5
+      parent: 1
+      type: Transform
+    - ShutdownSubscribers:
+      - 7917
+      - 7912
+      - 7918
+      - 7919
+      type: DeviceNetwork
+    - devices:
+      - 7917
+      - 7912
+      - 7918
+      - 7919
+      type: DeviceList
+  - uid: 15463
+    components:
+    - rot: -1.5707963267948966 rad
+      pos: -88.5,-6.5
+      parent: 1
+      type: Transform
+    - ShutdownSubscribers:
+      - 7913
+      - 15323
+      - 15320
+      - 7919
+      - 15464
+      type: DeviceNetwork
+    - devices:
+      - 7913
+      - 15323
+      - 15320
+      - 7919
+      - 15464
+      type: DeviceList
+  - uid: 15465
+    components:
+    - rot: -1.5707963267948966 rad
+      pos: -88.5,-1.5
+      parent: 1
+      type: Transform
+    - ShutdownSubscribers:
+      - 15322
+      - 15321
+      - 15464
+      type: DeviceNetwork
+    - devices:
+      - 15322
+      - 15321
+      - 15464
+      type: DeviceList
+  - uid: 15466
+    components:
+    - rot: 1.5707963267948966 rad
+      pos: -9.5,0.5
+      parent: 1
+      type: Transform
+    - ShutdownSubscribers:
+      - 208
+      - 207
+      - 9841
+      - 9839
+      - 9826
+      - 9830
+      - 9831
+      - 15469
+      - 15467
+      - 15468
+      type: DeviceNetwork
+    - devices:
+      - 208
+      - 207
+      - 9841
+      - 9839
+      - 9826
+      - 9830
+      - 9831
+      - 15469
+      - 15467
+      - 15468
+      type: DeviceList
+  - uid: 15471
+    components:
+    - rot: 3.141592653589793 rad
+      pos: -11.5,3.5
+      parent: 1
+      type: Transform
+    - ShutdownSubscribers:
+      - 9530
+      - 9533
+      - 15470
+      - 9840
+      - 15468
+      - 15467
+      - 15469
+      - 9822
+      - 9813
+      type: DeviceNetwork
+    - devices:
+      - 9530
+      - 9533
+      - 15470
+      - 9840
+      - 15468
+      - 15467
+      - 15469
+      - 9822
+      - 9813
+      type: DeviceList
+  - uid: 15472
+    components:
+    - rot: 3.141592653589793 rad
+      pos: -3.5,-10.5
+      parent: 1
+      type: Transform
+    - ShutdownSubscribers:
+      - 595
+      - 610
+      - 9829
+      - 9828
+      - 9827
+      - 9853
+      - 15473
+      type: DeviceNetwork
+    - devices:
+      - 595
+      - 610
+      - 9829
+      - 9828
+      - 9827
+      - 9853
+      - 15473
+      type: DeviceList
+  - uid: 15474
+    components:
+    - pos: 11.5,-10.5
+      parent: 1
+      type: Transform
+    - ShutdownSubscribers:
+      - 9674
+      - 9673
+      - 9858
+      type: DeviceNetwork
+    - devices:
+      - 9674
+      - 9673
+      - 9858
+      type: DeviceList
+  - uid: 15475
+    components:
+    - rot: -1.5707963267948966 rad
+      pos: -36.5,-13.5
+      parent: 1
+      type: Transform
+    - ShutdownSubscribers:
+      - 4029
+      - 4031
+      - 9885
+      - 9866
+      type: DeviceNetwork
+    - devices:
+      - 4029
+      - 4031
+      - 9885
+      - 9866
+      type: DeviceList
+  - uid: 15476
+    components:
+    - rot: 3.141592653589793 rad
+      pos: -12.5,-15.5
+      parent: 1
+      type: Transform
+    - ShutdownSubscribers:
+      - 8929
+      - 5894
+      - 9874
+      - 9876
+      - 9877
+      type: DeviceNetwork
+    - devices:
+      - 8929
+      - 5894
+      - 9874
+      - 9876
+      - 9877
+      type: DeviceList
+  - uid: 15477
+    components:
+    - pos: -56.5,6.5
+      parent: 1
+      type: Transform
+    - ShutdownSubscribers:
+      - 8823
+      - 8824
+      - 15479
+      - 9742
+      - 9746
+      - 9747
+      - 9759
+      - 9758
+      - 9748
+      - 15480
+      type: DeviceNetwork
+    - devices:
+      - 8823
+      - 8824
+      - 15479
+      - 9742
+      - 9746
+      - 9747
+      - 9759
+      - 9758
+      - 9748
+      - 15480
+      type: DeviceList
+  - uid: 15478
+    components:
+    - rot: -1.5707963267948966 rad
+      pos: -48.5,4.5
+      parent: 1
+      type: Transform
+    - ShutdownSubscribers:
+      - 1940
+      - 1942
+      - 9759
+      - 15481
+      type: DeviceNetwork
+    - devices:
+      - 1940
+      - 1942
+      - 9759
+      - 15481
+      type: DeviceList
+  - uid: 15482
+    components:
+    - rot: 3.141592653589793 rad
+      pos: -61.5,3.5
+      parent: 1
+      type: Transform
+    - ShutdownSubscribers:
+      - 8815
+      - 8810
+      - 9758
+      type: DeviceNetwork
+    - devices:
+      - 8815
+      - 8810
+      - 9758
+      type: DeviceList
+  - uid: 15483
+    components:
+    - rot: 3.141592653589793 rad
+      pos: -65.5,12.5
+      parent: 1
+      type: Transform
+    - ShutdownSubscribers:
+      - 1943
+      - 11847
+      - 15485
+      type: DeviceNetwork
+    - devices:
+      - 1943
+      - 11847
+      - 15485
+      type: DeviceList
+  - uid: 15486
+    components:
+    - rot: 3.141592653589793 rad
+      pos: -66.5,15.5
+      parent: 1
+      type: Transform
+    - ShutdownSubscribers:
+      - 11897
+      - 1941
+      - 15488
+      - 15487
+      type: DeviceNetwork
+    - devices:
+      - 11897
+      - 1941
+      - 15488
+      - 15487
+      type: DeviceList
+  - uid: 15489
+    components:
+    - rot: -1.5707963267948966 rad
+      pos: -56.5,23.5
+      parent: 1
+      type: Transform
+    - ShutdownSubscribers:
+      - 2378
+      - 2376
+      - 15490
+      type: DeviceNetwork
+    - devices:
+      - 2378
+      - 2376
+      - 15490
       type: DeviceList
 - proto: AirAlarmElectronics
   entities:
@@ -8673,6 +9192,9 @@ entities:
     - pos: -144.5,6.5
       parent: 1
       type: Transform
+    - ShutdownSubscribers:
+      - 7843
+      type: DeviceNetwork
   - uid: 7574
     components:
     - pos: -69.5,11.5
@@ -8756,21 +9278,33 @@ entities:
       pos: -104.5,-8.5
       parent: 1
       type: Transform
+    - ShutdownSubscribers:
+      - 7904
+      type: DeviceNetwork
   - uid: 7915
     components:
     - pos: -89.5,-18.5
       parent: 1
       type: Transform
+    - ShutdownSubscribers:
+      - 7910
+      type: DeviceNetwork
   - uid: 7916
     components:
     - pos: -99.5,-18.5
       parent: 1
       type: Transform
+    - ShutdownSubscribers:
+      - 7910
+      type: DeviceNetwork
   - uid: 7917
     components:
     - pos: -96.5,-5.5
       parent: 1
       type: Transform
+    - ShutdownSubscribers:
+      - 15462
+      type: DeviceNetwork
   - uid: 9095
     components:
     - pos: -25.5,-12.5
@@ -8822,6 +9356,9 @@ entities:
       pos: -5.5,0.5
       parent: 1
       type: Transform
+    - ShutdownSubscribers:
+      - 15466
+      type: DeviceNetwork
   - uid: 9861
     components:
     - rot: 1.5707963267948966 rad
@@ -8882,6 +9419,9 @@ entities:
       pos: -58.5,-11.5
       parent: 1
       type: Transform
+    - ShutdownSubscribers:
+      - 12611
+      type: DeviceNetwork
   - uid: 13857
     components:
     - rot: -1.5707963267948966 rad
@@ -8906,12 +9446,41 @@ entities:
       pos: 17.5,-3.5
       parent: 1
       type: Transform
+    - ShutdownSubscribers:
+      - 15168
+      type: DeviceNetwork
   - uid: 15436
     components:
     - rot: -1.5707963267948966 rad
       pos: -64.5,-14.5
       parent: 1
       type: Transform
+  - uid: 15453
+    components:
+    - pos: 4.5,9.5
+      parent: 1
+      type: Transform
+  - uid: 15454
+    components:
+    - pos: 6.5,9.5
+      parent: 1
+      type: Transform
+  - uid: 15455
+    components:
+    - pos: 8.5,9.5
+      parent: 1
+      type: Transform
+    - ShutdownSubscribers:
+      - 15452
+      type: DeviceNetwork
+  - uid: 15456
+    components:
+    - pos: 10.5,9.5
+      parent: 1
+      type: Transform
+    - ShutdownSubscribers:
+      - 15452
+      type: DeviceNetwork
 - proto: AirTankFilled
   entities:
   - uid: 14596
@@ -9358,6 +9927,12 @@ entities:
     - rot: 3.141592653589793 rad
       pos: -141.5,-7.5
       parent: 1
+      type: Transform
+  - uid: 15501
+    components:
+    - rot: 3.141592653589793 rad
+      pos: -3.5,-2.5
+      parent: 14329
       type: Transform
 - proto: APCElectronics
   entities:
@@ -23527,13 +24102,6 @@ entities:
       type: AmbientSound
     - fixtures: {}
       type: Fixtures
-  - uid: 14742
-    components:
-    - pos: -0.5,-4.5
-      parent: 14329
-      type: Transform
-    - fixtures: {}
-      type: Fixtures
   - uid: 14743
     components:
     - pos: -1.5,-4.5
@@ -24664,6 +25232,33 @@ entities:
     - pos: -150.5,2.5
       parent: 1
       type: Transform
+    - fixtures: {}
+      type: Fixtures
+  - uid: 15507
+    components:
+    - pos: -4.5,-1.5
+      parent: 14329
+      type: Transform
+    - enabled: True
+      type: AmbientSound
+    - fixtures: {}
+      type: Fixtures
+  - uid: 15508
+    components:
+    - pos: -3.5,-1.5
+      parent: 14329
+      type: Transform
+    - enabled: True
+      type: AmbientSound
+    - fixtures: {}
+      type: Fixtures
+  - uid: 15509
+    components:
+    - pos: -3.5,-2.5
+      parent: 14329
+      type: Transform
+    - enabled: True
+      type: AmbientSound
     - fixtures: {}
       type: Fixtures
 - proto: CableApcStack
@@ -35237,6 +35832,58 @@ entities:
     components:
     - pos: -141.5,-7.5
       parent: 1
+      type: Transform
+    - enabled: True
+      type: AmbientSound
+    - fixtures: {}
+      type: Fixtures
+  - uid: 15500
+    components:
+    - pos: -5.5,-3.5
+      parent: 14329
+      type: Transform
+    - fixtures: {}
+      type: Fixtures
+  - uid: 15502
+    components:
+    - pos: -5.5,-2.5
+      parent: 14329
+      type: Transform
+    - enabled: True
+      type: AmbientSound
+    - fixtures: {}
+      type: Fixtures
+  - uid: 15503
+    components:
+    - pos: -5.5,-1.5
+      parent: 14329
+      type: Transform
+    - enabled: True
+      type: AmbientSound
+    - fixtures: {}
+      type: Fixtures
+  - uid: 15504
+    components:
+    - pos: -4.5,-1.5
+      parent: 14329
+      type: Transform
+    - enabled: True
+      type: AmbientSound
+    - fixtures: {}
+      type: Fixtures
+  - uid: 15505
+    components:
+    - pos: -3.5,-1.5
+      parent: 14329
+      type: Transform
+    - enabled: True
+      type: AmbientSound
+    - fixtures: {}
+      type: Fixtures
+  - uid: 15506
+    components:
+    - pos: -3.5,-2.5
+      parent: 14329
       type: Transform
     - enabled: True
       type: AmbientSound
@@ -50998,7 +51645,7 @@ entities:
       type: Transform
   - uid: 1957
     components:
-    - pos: -66.2759,14.499999
+    - pos: -66.2759,14.49997
       parent: 1
       type: Transform
   - uid: 3500
@@ -51584,6 +52231,9 @@ entities:
       pos: 7.5,-7.5
       parent: 1
       type: Transform
+    - ShutdownSubscribers:
+      - 9859
+      type: DeviceNetwork
   - uid: 1886
     components:
     - pos: -48.5,-14.5
@@ -51623,18 +52273,27 @@ entities:
       pos: -110.5,-8.5
       parent: 1
       type: Transform
+    - ShutdownSubscribers:
+      - 7885
+      type: DeviceNetwork
   - uid: 7890
     components:
     - rot: 3.141592653589793 rad
       pos: -110.5,-13.5
       parent: 1
       type: Transform
+    - ShutdownSubscribers:
+      - 7885
+      type: DeviceNetwork
   - uid: 7891
     components:
     - rot: 3.141592653589793 rad
       pos: -103.5,-13.5
       parent: 1
       type: Transform
+    - ShutdownSubscribers:
+      - 7885
+      type: DeviceNetwork
   - uid: 7896
     components:
     - rot: -1.5707963267948966 rad
@@ -51676,21 +52335,33 @@ entities:
     - pos: -100.5,-8.5
       parent: 1
       type: Transform
+    - ShutdownSubscribers:
+      - 7910
+      type: DeviceNetwork
   - uid: 7918
     components:
     - pos: -95.5,-3.5
       parent: 1
       type: Transform
+    - ShutdownSubscribers:
+      - 15462
+      type: DeviceNetwork
   - uid: 7920
     components:
     - pos: -101.5,-16.5
       parent: 1
       type: Transform
+    - ShutdownSubscribers:
+      - 7910
+      type: DeviceNetwork
   - uid: 7921
     components:
     - pos: -87.5,-16.5
       parent: 1
       type: Transform
+    - ShutdownSubscribers:
+      - 7910
+      type: DeviceNetwork
   - uid: 9304
     components:
     - pos: -83.5,-4.5
@@ -51842,12 +52513,18 @@ entities:
       pos: -5.5,7.5
       parent: 1
       type: Transform
+    - ShutdownSubscribers:
+      - 15466
+      type: DeviceNetwork
   - uid: 9840
     components:
     - rot: 1.5707963267948966 rad
       pos: -12.5,3.5
       parent: 1
       type: Transform
+    - ShutdownSubscribers:
+      - 15471
+      type: DeviceNetwork
   - uid: 9844
     components:
     - rot: 3.141592653589793 rad
@@ -51872,6 +52549,9 @@ entities:
       pos: -0.5,-8.5
       parent: 1
       type: Transform
+    - ShutdownSubscribers:
+      - 15472
+      type: DeviceNetwork
   - uid: 9855
     components:
     - rot: -1.5707963267948966 rad
@@ -51914,6 +52594,9 @@ entities:
       pos: -15.5,-11.5
       parent: 1
       type: Transform
+    - ShutdownSubscribers:
+      - 15476
+      type: DeviceNetwork
   - uid: 9875
     components:
     - rot: 1.5707963267948966 rad
@@ -51926,17 +52609,26 @@ entities:
       pos: -14.5,-15.5
       parent: 1
       type: Transform
+    - ShutdownSubscribers:
+      - 15476
+      type: DeviceNetwork
   - uid: 9877
     components:
     - rot: 1.5707963267948966 rad
       pos: -10.5,-10.5
       parent: 1
       type: Transform
+    - ShutdownSubscribers:
+      - 15476
+      type: DeviceNetwork
   - uid: 9885
     components:
     - pos: -40.5,-13.5
       parent: 1
       type: Transform
+    - ShutdownSubscribers:
+      - 15475
+      type: DeviceNetwork
   - uid: 9886
     components:
     - pos: -11.5,-8.5
@@ -52016,6 +52708,24 @@ entities:
       pos: -114.5,9.5
       parent: 1
       type: Transform
+  - uid: 15470
+    components:
+    - rot: 1.5707963267948966 rad
+      pos: -13.5,8.5
+      parent: 1
+      type: Transform
+    - ShutdownSubscribers:
+      - 15471
+      type: DeviceNetwork
+  - uid: 15473
+    components:
+    - rot: 3.141592653589793 rad
+      pos: -2.5,-10.5
+      parent: 1
+      type: Transform
+    - ShutdownSubscribers:
+      - 15472
+      type: DeviceNetwork
 - proto: FirelockEdge
   entities:
   - uid: 956
@@ -52023,11 +52733,17 @@ entities:
     - pos: 5.5,7.5
       parent: 1
       type: Transform
+    - ShutdownSubscribers:
+      - 14742
+      type: DeviceNetwork
   - uid: 957
     components:
     - pos: 9.5,7.5
       parent: 1
       type: Transform
+    - ShutdownSubscribers:
+      - 15452
+      type: DeviceNetwork
   - uid: 12818
     components:
     - pos: -67.5,8.5
@@ -52039,12 +52755,18 @@ entities:
       pos: 5.5,5.5
       parent: 1
       type: Transform
+    - ShutdownSubscribers:
+      - 360
+      type: DeviceNetwork
   - uid: 13692
     components:
     - rot: 3.141592653589793 rad
       pos: 9.5,5.5
       parent: 1
       type: Transform
+    - ShutdownSubscribers:
+      - 360
+      type: DeviceNetwork
   - uid: 14604
     components:
     - rot: 3.141592653589793 rad
@@ -52119,43 +52841,28 @@ entities:
     - pos: -67.5,-9.5
       parent: 1
       type: Transform
-    - ShutdownSubscribers:
-      - 12611
-      type: DeviceNetwork
   - uid: 15440
     components:
     - pos: -64.5,-9.5
       parent: 1
       type: Transform
-    - ShutdownSubscribers:
-      - 12611
-      type: DeviceNetwork
   - uid: 15441
     components:
     - pos: -61.5,-9.5
       parent: 1
       type: Transform
-    - ShutdownSubscribers:
-      - 12611
-      type: DeviceNetwork
   - uid: 15442
     components:
     - rot: 1.5707963267948966 rad
       pos: -66.5,-13.5
       parent: 1
       type: Transform
-    - ShutdownSubscribers:
-      - 12611
-      type: DeviceNetwork
   - uid: 15443
     components:
     - rot: 1.5707963267948966 rad
       pos: -66.5,-14.5
       parent: 1
       type: Transform
-    - ShutdownSubscribers:
-      - 12611
-      type: DeviceNetwork
 - proto: FirelockElectronics
   entities:
   - uid: 2499
@@ -52315,51 +53022,80 @@ entities:
       pos: -105.5,-9.5
       parent: 1
       type: Transform
+    - ShutdownSubscribers:
+      - 7885
+      type: DeviceNetwork
   - uid: 7893
     components:
     - rot: 3.141592653589793 rad
       pos: -104.5,-9.5
       parent: 1
       type: Transform
+    - ShutdownSubscribers:
+      - 7885
+      type: DeviceNetwork
   - uid: 7905
     components:
     - rot: 1.5707963267948966 rad
       pos: -93.5,-9.5
       parent: 1
       type: Transform
+    - ShutdownSubscribers:
+      - 7910
+      type: DeviceNetwork
   - uid: 7906
     components:
     - rot: 1.5707963267948966 rad
       pos: -89.5,-9.5
       parent: 1
       type: Transform
+    - ShutdownSubscribers:
+      - 7910
+      type: DeviceNetwork
   - uid: 7907
     components:
     - rot: 1.5707963267948966 rad
       pos: -98.5,-15.5
       parent: 1
       type: Transform
+    - ShutdownSubscribers:
+      - 7910
+      type: DeviceNetwork
   - uid: 7908
     components:
     - rot: 1.5707963267948966 rad
       pos: -90.5,-15.5
       parent: 1
       type: Transform
+    - ShutdownSubscribers:
+      - 7910
+      type: DeviceNetwork
   - uid: 7912
     components:
     - pos: -97.5,-8.5
       parent: 1
       type: Transform
+    - ShutdownSubscribers:
+      - 7910
+      - 15462
+      type: DeviceNetwork
   - uid: 7913
     components:
     - pos: -89.5,-7.5
       parent: 1
       type: Transform
+    - ShutdownSubscribers:
+      - 15463
+      type: DeviceNetwork
   - uid: 7919
     components:
     - pos: -94.5,-5.5
       parent: 1
       type: Transform
+    - ShutdownSubscribers:
+      - 15462
+      - 15463
+      type: DeviceNetwork
   - uid: 7922
     components:
     - pos: -82.5,-9.5
@@ -52415,31 +53151,52 @@ entities:
     - pos: -87.5,-10.5
       parent: 1
       type: Transform
+    - ShutdownSubscribers:
+      - 7910
+      type: DeviceNetwork
   - uid: 7961
     components:
     - pos: -87.5,-11.5
       parent: 1
       type: Transform
+    - ShutdownSubscribers:
+      - 7910
+      type: DeviceNetwork
   - uid: 7962
     components:
     - pos: -87.5,-12.5
       parent: 1
       type: Transform
+    - ShutdownSubscribers:
+      - 7910
+      type: DeviceNetwork
   - uid: 7963
     components:
     - pos: -101.5,-10.5
       parent: 1
       type: Transform
+    - ShutdownSubscribers:
+      - 7885
+      - 7910
+      type: DeviceNetwork
   - uid: 7964
     components:
     - pos: -101.5,-11.5
       parent: 1
       type: Transform
+    - ShutdownSubscribers:
+      - 7885
+      - 7910
+      type: DeviceNetwork
   - uid: 7965
     components:
     - pos: -101.5,-12.5
       parent: 1
       type: Transform
+    - ShutdownSubscribers:
+      - 7885
+      - 7910
+      type: DeviceNetwork
   - uid: 7966
     components:
     - pos: -123.5,-9.5
@@ -52520,16 +53277,25 @@ entities:
     - pos: -115.5,-10.5
       parent: 1
       type: Transform
+    - ShutdownSubscribers:
+      - 7885
+      type: DeviceNetwork
   - uid: 8375
     components:
     - pos: -115.5,-11.5
       parent: 1
       type: Transform
+    - ShutdownSubscribers:
+      - 7885
+      type: DeviceNetwork
   - uid: 8376
     components:
     - pos: -115.5,-12.5
       parent: 1
       type: Transform
+    - ShutdownSubscribers:
+      - 7885
+      type: DeviceNetwork
   - uid: 8858
     components:
     - rot: 3.141592653589793 rad
@@ -52644,21 +53410,33 @@ entities:
     - pos: -55.5,3.5
       parent: 1
       type: Transform
+    - ShutdownSubscribers:
+      - 15477
+      type: DeviceNetwork
   - uid: 9746
     components:
     - pos: -56.5,3.5
       parent: 1
       type: Transform
+    - ShutdownSubscribers:
+      - 15477
+      type: DeviceNetwork
   - uid: 9747
     components:
     - pos: -57.5,3.5
       parent: 1
       type: Transform
+    - ShutdownSubscribers:
+      - 15477
+      type: DeviceNetwork
   - uid: 9748
     components:
     - pos: -58.5,3.5
       parent: 1
       type: Transform
+    - ShutdownSubscribers:
+      - 15477
+      type: DeviceNetwork
   - uid: 9751
     components:
     - pos: -33.5,2.5
@@ -52676,12 +53454,20 @@ entities:
       pos: -60.5,5.5
       parent: 1
       type: Transform
+    - ShutdownSubscribers:
+      - 15477
+      - 15482
+      type: DeviceNetwork
   - uid: 9759
     components:
     - rot: -1.5707963267948966 rad
       pos: -53.5,4.5
       parent: 1
       type: Transform
+    - ShutdownSubscribers:
+      - 15477
+      - 15478
+      type: DeviceNetwork
   - uid: 9805
     components:
     - rot: 1.5707963267948966 rad
@@ -52718,6 +53504,9 @@ entities:
       pos: -14.5,3.5
       parent: 1
       type: Transform
+    - ShutdownSubscribers:
+      - 15471
+      type: DeviceNetwork
   - uid: 9817
     components:
     - rot: -1.5707963267948966 rad
@@ -52754,42 +53543,63 @@ entities:
       pos: -15.5,5.5
       parent: 1
       type: Transform
+    - ShutdownSubscribers:
+      - 15471
+      type: DeviceNetwork
   - uid: 9826
     components:
     - rot: -1.5707963267948966 rad
       pos: -5.5,-1.5
       parent: 1
       type: Transform
+    - ShutdownSubscribers:
+      - 15466
+      type: DeviceNetwork
   - uid: 9827
     components:
     - rot: -1.5707963267948966 rad
       pos: -4.5,-5.5
       parent: 1
       type: Transform
+    - ShutdownSubscribers:
+      - 15472
+      type: DeviceNetwork
   - uid: 9828
     components:
     - rot: -1.5707963267948966 rad
       pos: -3.5,-5.5
       parent: 1
       type: Transform
+    - ShutdownSubscribers:
+      - 15472
+      type: DeviceNetwork
   - uid: 9829
     components:
     - rot: -1.5707963267948966 rad
       pos: -2.5,-5.5
       parent: 1
       type: Transform
+    - ShutdownSubscribers:
+      - 15472
+      type: DeviceNetwork
   - uid: 9830
     components:
     - rot: -1.5707963267948966 rad
       pos: -4.5,-1.5
       parent: 1
       type: Transform
+    - ShutdownSubscribers:
+      - 15466
+      type: DeviceNetwork
   - uid: 9831
     components:
     - rot: -1.5707963267948966 rad
       pos: -3.5,-1.5
       parent: 1
       type: Transform
+    - ShutdownSubscribers:
+      - 15466
+      type: DeviceNetwork
   - uid: 9832
     components:
     - rot: -1.5707963267948966 rad
@@ -52808,6 +53618,9 @@ entities:
       pos: 7.5,-13.5
       parent: 1
       type: Transform
+    - ShutdownSubscribers:
+      - 15474
+      type: DeviceNetwork
   - uid: 9862
     components:
     - rot: 1.5707963267948966 rad
@@ -52820,6 +53633,9 @@ entities:
       pos: -36.5,-12.5
       parent: 1
       type: Transform
+    - ShutdownSubscribers:
+      - 15475
+      type: DeviceNetwork
   - uid: 9868
     components:
     - rot: 1.5707963267948966 rad
@@ -52943,31 +53759,49 @@ entities:
     - pos: 31.5,-1.5
       parent: 1
       type: Transform
+    - ShutdownSubscribers:
+      - 10422
+      type: DeviceNetwork
   - uid: 13578
     components:
     - pos: 33.5,-0.5
       parent: 1
       type: Transform
+    - ShutdownSubscribers:
+      - 10422
+      type: DeviceNetwork
   - uid: 13579
     components:
     - pos: 39.5,-0.5
       parent: 1
       type: Transform
+    - ShutdownSubscribers:
+      - 10422
+      type: DeviceNetwork
   - uid: 13580
     components:
     - pos: 41.5,-1.5
       parent: 1
       type: Transform
+    - ShutdownSubscribers:
+      - 10422
+      type: DeviceNetwork
   - uid: 13581
     components:
     - pos: 41.5,-5.5
       parent: 1
       type: Transform
+    - ShutdownSubscribers:
+      - 10422
+      type: DeviceNetwork
   - uid: 13584
     components:
     - pos: 31.5,-5.5
       parent: 1
       type: Transform
+    - ShutdownSubscribers:
+      - 10422
+      type: DeviceNetwork
   - uid: 14107
     components:
     - rot: 3.141592653589793 rad
@@ -53088,12 +53922,18 @@ entities:
       pos: -113.5,-13.5
       parent: 1
       type: Transform
+    - ShutdownSubscribers:
+      - 7885
+      type: DeviceNetwork
   - uid: 14895
     components:
     - rot: 1.5707963267948966 rad
       pos: -112.5,-13.5
       parent: 1
       type: Transform
+    - ShutdownSubscribers:
+      - 7885
+      type: DeviceNetwork
   - uid: 15195
     components:
     - rot: -1.5707963267948966 rad
@@ -53153,17 +53993,238 @@ entities:
       pos: -68.5,-12.5
       parent: 1
       type: Transform
-    - ShutdownSubscribers:
-      - 12611
-      type: DeviceNetwork
   - uid: 15435
     components:
     - rot: -1.5707963267948966 rad
       pos: -64.5,-12.5
       parent: 1
       type: Transform
+  - uid: 15457
+    components:
+    - pos: 39.5,-6.5
+      parent: 1
+      type: Transform
     - ShutdownSubscribers:
-      - 12611
+      - 10422
+      type: DeviceNetwork
+  - uid: 15458
+    components:
+    - pos: 36.5,-5.5
+      parent: 1
+      type: Transform
+    - ShutdownSubscribers:
+      - 10422
+      type: DeviceNetwork
+  - uid: 15459
+    components:
+    - pos: 36.5,-9.5
+      parent: 1
+      type: Transform
+    - ShutdownSubscribers:
+      - 10422
+      type: DeviceNetwork
+  - uid: 15460
+    components:
+    - pos: 29.5,-3.5
+      parent: 1
+      type: Transform
+    - ShutdownSubscribers:
+      - 10422
+      type: DeviceNetwork
+  - uid: 15461
+    components:
+    - pos: 26.5,-3.5
+      parent: 1
+      type: Transform
+    - ShutdownSubscribers:
+      - 10422
+      type: DeviceNetwork
+  - uid: 15464
+    components:
+    - rot: -1.5707963267948966 rad
+      pos: -90.5,-3.5
+      parent: 1
+      type: Transform
+    - ShutdownSubscribers:
+      - 15463
+      - 15465
+      type: DeviceNetwork
+  - uid: 15467
+    components:
+    - rot: 1.5707963267948966 rad
+      pos: -9.5,5.5
+      parent: 1
+      type: Transform
+    - ShutdownSubscribers:
+      - 15466
+      - 15471
+      type: DeviceNetwork
+  - uid: 15468
+    components:
+    - rot: 1.5707963267948966 rad
+      pos: -9.5,4.5
+      parent: 1
+      type: Transform
+    - ShutdownSubscribers:
+      - 15466
+      - 15471
+      type: DeviceNetwork
+  - uid: 15469
+    components:
+    - rot: 1.5707963267948966 rad
+      pos: -9.5,6.5
+      parent: 1
+      type: Transform
+    - ShutdownSubscribers:
+      - 15466
+      - 15471
+      type: DeviceNetwork
+  - uid: 15479
+    components:
+    - rot: -1.5707963267948966 rad
+      pos: -57.5,6.5
+      parent: 1
+      type: Transform
+    - ShutdownSubscribers:
+      - 15477
+      type: DeviceNetwork
+  - uid: 15480
+    components:
+    - rot: -1.5707963267948966 rad
+      pos: -58.5,6.5
+      parent: 1
+      type: Transform
+    - ShutdownSubscribers:
+      - 15477
+      type: DeviceNetwork
+  - uid: 15481
+    components:
+    - rot: -1.5707963267948966 rad
+      pos: -51.5,2.5
+      parent: 1
+      type: Transform
+    - ShutdownSubscribers:
+      - 15478
+      type: DeviceNetwork
+  - uid: 15485
+    components:
+    - rot: 1.5707963267948966 rad
+      pos: -63.5,13.5
+      parent: 1
+      type: Transform
+    - ShutdownSubscribers:
+      - 15483
+      - 13637
+      type: DeviceNetwork
+  - uid: 15487
+    components:
+    - rot: 3.141592653589793 rad
+      pos: -64.5,18.5
+      parent: 1
+      type: Transform
+    - ShutdownSubscribers:
+      - 15486
+      - 13637
+      type: DeviceNetwork
+  - uid: 15488
+    components:
+    - rot: 3.141592653589793 rad
+      pos: -66.5,20.5
+      parent: 1
+      type: Transform
+    - ShutdownSubscribers:
+      - 15486
+      type: DeviceNetwork
+  - uid: 15490
+    components:
+    - rot: -1.5707963267948966 rad
+      pos: -59.5,21.5
+      parent: 1
+      type: Transform
+    - ShutdownSubscribers:
+      - 15489
+      - 13637
+      type: DeviceNetwork
+  - uid: 15491
+    components:
+    - rot: -1.5707963267948966 rad
+      pos: -63.5,11.5
+      parent: 1
+      type: Transform
+    - ShutdownSubscribers:
+      - 13637
+      type: DeviceNetwork
+  - uid: 15492
+    components:
+    - rot: -1.5707963267948966 rad
+      pos: -57.5,9.5
+      parent: 1
+      type: Transform
+    - ShutdownSubscribers:
+      - 13637
+      type: DeviceNetwork
+  - uid: 15493
+    components:
+    - rot: -1.5707963267948966 rad
+      pos: -52.5,11.5
+      parent: 1
+      type: Transform
+    - ShutdownSubscribers:
+      - 13637
+      type: DeviceNetwork
+  - uid: 15494
+    components:
+    - rot: -1.5707963267948966 rad
+      pos: -52.5,14.5
+      parent: 1
+      type: Transform
+    - ShutdownSubscribers:
+      - 13637
+      type: DeviceNetwork
+  - uid: 15495
+    components:
+    - rot: -1.5707963267948966 rad
+      pos: -52.5,19.5
+      parent: 1
+      type: Transform
+    - ShutdownSubscribers:
+      - 13637
+      type: DeviceNetwork
+  - uid: 15496
+    components:
+    - rot: -1.5707963267948966 rad
+      pos: -52.5,18.5
+      parent: 1
+      type: Transform
+    - ShutdownSubscribers:
+      - 13637
+      type: DeviceNetwork
+  - uid: 15497
+    components:
+    - rot: -1.5707963267948966 rad
+      pos: -52.5,21.5
+      parent: 1
+      type: Transform
+    - ShutdownSubscribers:
+      - 13637
+      type: DeviceNetwork
+  - uid: 15498
+    components:
+    - rot: -1.5707963267948966 rad
+      pos: -52.5,22.5
+      parent: 1
+      type: Transform
+    - ShutdownSubscribers:
+      - 13637
+      type: DeviceNetwork
+  - uid: 15499
+    components:
+    - rot: -1.5707963267948966 rad
+      pos: -120.5,-18.5
+      parent: 1
+      type: Transform
+    - ShutdownSubscribers:
+      - 14909
       type: DeviceNetwork
 - proto: Fireplace
   entities:
@@ -53844,18 +54905,6 @@ entities:
     components:
     - rot: -1.5707963267948966 rad
       pos: -173.5,6.5
-      parent: 1
-      type: Transform
-  - uid: 6687
-    components:
-    - rot: 1.5707963267948966 rad
-      pos: 4.5,7.5
-      parent: 1
-      type: Transform
-  - uid: 7177
-    components:
-    - rot: 1.5707963267948966 rad
-      pos: 8.5,7.5
       parent: 1
       type: Transform
   - uid: 7330
@@ -54800,6 +55849,16 @@ entities:
       parent: 14329
       type: Transform
     - nextSound: 211.2471327
+      type: EmitSoundOnCollide
+  - uid: 15484
+    components:
+    - rot: 1.5707963267948966 rad
+      pos: -66.5,14.5
+      parent: 1
+      type: Transform
+    - color: '#B22222FF'
+      type: AtmosPipeColor
+    - nextSound: 1498.6682569
       type: EmitSoundOnCollide
 - proto: GasPipeFourway
   entities:
@@ -67340,6 +68399,9 @@ entities:
       pos: -3.5,3.5
       parent: 1
       type: Transform
+    - ShutdownSubscribers:
+      - 15466
+      type: DeviceNetwork
     - enabled: False
       type: AmbientSound
     - color: '#4169E1FF'
@@ -67350,6 +68412,9 @@ entities:
       pos: -1.5,-8.5
       parent: 1
       type: Transform
+    - ShutdownSubscribers:
+      - 15472
+      type: DeviceNetwork
     - enabled: False
       type: AmbientSound
     - color: '#4169E1FF'
@@ -67390,6 +68455,9 @@ entities:
       pos: 0.5,-12.5
       parent: 1
       type: Transform
+    - ShutdownSubscribers:
+      - 9860
+      type: DeviceNetwork
     - enabled: False
       type: AmbientSound
     - color: '#4169E1FF'
@@ -67401,6 +68469,9 @@ entities:
     - pos: -51.5,4.5
       parent: 1
       type: Transform
+    - ShutdownSubscribers:
+      - 15478
+      type: DeviceNetwork
     - enabled: False
       type: AmbientSound
     - color: '#4169E1FF'
@@ -67410,6 +68481,9 @@ entities:
     - pos: -59.5,23.5
       parent: 1
       type: Transform
+    - ShutdownSubscribers:
+      - 15489
+      type: DeviceNetwork
     - enabled: False
       type: AmbientSound
     - color: '#4169E1FF'
@@ -67431,6 +68505,9 @@ entities:
       pos: -146.5,-9.5
       parent: 1
       type: Transform
+    - ShutdownSubscribers:
+      - 7848
+      type: DeviceNetwork
     - enabled: False
       type: AmbientSound
     - color: '#4169E1FF'
@@ -67441,6 +68518,9 @@ entities:
       pos: -38.5,-12.5
       parent: 1
       type: Transform
+    - ShutdownSubscribers:
+      - 15475
+      type: DeviceNetwork
     - enabled: False
       type: AmbientSound
     - color: '#4169E1FF'
@@ -67453,6 +68533,9 @@ entities:
       pos: -17.5,-4.5
       parent: 1
       type: Transform
+    - ShutdownSubscribers:
+      - 9811
+      type: DeviceNetwork
     - enabled: False
       type: AmbientSound
     - color: '#4169E1FF'
@@ -67464,6 +68547,9 @@ entities:
     - pos: -16.5,-6.5
       parent: 1
       type: Transform
+    - ShutdownSubscribers:
+      - 9888
+      type: DeviceNetwork
     - enabled: False
       type: AmbientSound
     - color: '#4169E1FF'
@@ -67475,6 +68561,9 @@ entities:
     - pos: 8.5,3.5
       parent: 1
       type: Transform
+    - ShutdownSubscribers:
+      - 360
+      type: DeviceNetwork
     - enabled: False
       type: AmbientSound
     - color: '#4169E1FF'
@@ -67495,6 +68584,9 @@ entities:
       pos: -151.5,1.5
       parent: 1
       type: Transform
+    - ShutdownSubscribers:
+      - 7801
+      type: DeviceNetwork
     - enabled: False
       type: AmbientSound
     - color: '#4169E1FF'
@@ -67602,6 +68694,9 @@ entities:
     - pos: -107.5,-11.5
       parent: 1
       type: Transform
+    - ShutdownSubscribers:
+      - 7885
+      type: DeviceNetwork
     - enabled: False
       type: AmbientSound
     - color: '#4169E1FF'
@@ -67620,6 +68715,9 @@ entities:
     - pos: -96.5,-10.5
       parent: 1
       type: Transform
+    - ShutdownSubscribers:
+      - 7910
+      type: DeviceNetwork
     - enabled: False
       type: AmbientSound
     - color: '#4169E1FF'
@@ -67746,6 +68844,9 @@ entities:
       pos: -46.5,-3.5
       parent: 1
       type: Transform
+    - ShutdownSubscribers:
+      - 9754
+      type: DeviceNetwork
     - enabled: False
       type: AmbientSound
     - color: '#4169E1FF'
@@ -67766,6 +68867,9 @@ entities:
       pos: -61.5,5.5
       parent: 1
       type: Transform
+    - ShutdownSubscribers:
+      - 15482
+      type: DeviceNetwork
     - enabled: False
       type: AmbientSound
     - color: '#4169E1FF'
@@ -67776,6 +68880,9 @@ entities:
       pos: -55.5,5.5
       parent: 1
       type: Transform
+    - ShutdownSubscribers:
+      - 15477
+      type: DeviceNetwork
     - enabled: False
       type: AmbientSound
     - color: '#4169E1FF'
@@ -67786,6 +68893,9 @@ entities:
       pos: -12.5,-12.5
       parent: 1
       type: Transform
+    - ShutdownSubscribers:
+      - 15476
+      type: DeviceNetwork
     - enabled: False
       type: AmbientSound
     - color: '#4169E1FF'
@@ -67995,6 +69105,9 @@ entities:
       pos: -11.5,4.5
       parent: 1
       type: Transform
+    - ShutdownSubscribers:
+      - 15471
+      type: DeviceNetwork
     - enabled: False
       type: AmbientSound
     - color: '#4169E1FF'
@@ -68044,6 +69157,9 @@ entities:
       pos: 11.5,-13.5
       parent: 1
       type: Transform
+    - ShutdownSubscribers:
+      - 15474
+      type: DeviceNetwork
     - enabled: False
       type: AmbientSound
     - color: '#4169E1FF'
@@ -68081,6 +69197,9 @@ entities:
     - pos: 35.5,2.5
       parent: 1
       type: Transform
+    - ShutdownSubscribers:
+      - 10422
+      type: DeviceNetwork
     - enabled: False
       type: AmbientSound
     - color: '#4169E1FF'
@@ -68090,6 +69209,9 @@ entities:
     - pos: 37.5,2.5
       parent: 1
       type: Transform
+    - ShutdownSubscribers:
+      - 10422
+      type: DeviceNetwork
     - enabled: False
       type: AmbientSound
     - color: '#4169E1FF'
@@ -68100,6 +69222,9 @@ entities:
       pos: 28.5,-2.5
       parent: 1
       type: Transform
+    - ShutdownSubscribers:
+      - 10422
+      type: DeviceNetwork
     - enabled: False
       type: AmbientSound
     - color: '#4169E1FF'
@@ -68110,6 +69235,9 @@ entities:
       pos: 34.5,0.5
       parent: 1
       type: Transform
+    - ShutdownSubscribers:
+      - 10422
+      type: DeviceNetwork
     - enabled: False
       type: AmbientSound
     - color: '#4169E1FF'
@@ -68120,6 +69248,9 @@ entities:
       pos: 35.5,-11.5
       parent: 1
       type: Transform
+    - ShutdownSubscribers:
+      - 10422
+      type: DeviceNetwork
     - enabled: False
       type: AmbientSound
     - color: '#4169E1FF'
@@ -68130,6 +69261,9 @@ entities:
       pos: 37.5,-11.5
       parent: 1
       type: Transform
+    - ShutdownSubscribers:
+      - 10422
+      type: DeviceNetwork
     - enabled: False
       type: AmbientSound
     - color: '#4169E1FF'
@@ -68140,6 +69274,9 @@ entities:
       pos: 38.5,-4.5
       parent: 1
       type: Transform
+    - ShutdownSubscribers:
+      - 10422
+      type: DeviceNetwork
     - enabled: False
       type: AmbientSound
     - color: '#4169E1FF'
@@ -68150,6 +69287,9 @@ entities:
       pos: 38.5,0.5
       parent: 1
       type: Transform
+    - ShutdownSubscribers:
+      - 10422
+      type: DeviceNetwork
     - enabled: False
       type: AmbientSound
     - color: '#4169E1FF'
@@ -68198,6 +69338,9 @@ entities:
       pos: -65.5,13.5
       parent: 1
       type: Transform
+    - ShutdownSubscribers:
+      - 15483
+      type: DeviceNetwork
     - enabled: False
       type: AmbientSound
     - color: '#4169E1FF'
@@ -68218,6 +69361,9 @@ entities:
       pos: -65.5,17.5
       parent: 1
       type: Transform
+    - ShutdownSubscribers:
+      - 15486
+      type: DeviceNetwork
     - enabled: False
       type: AmbientSound
     - color: '#4169E1FF'
@@ -68227,6 +69373,9 @@ entities:
     - pos: -54.5,19.5
       parent: 1
       type: Transform
+    - ShutdownSubscribers:
+      - 13637
+      type: DeviceNetwork
     - enabled: False
       type: AmbientSound
     - color: '#4169E1FF'
@@ -68247,6 +69396,9 @@ entities:
       pos: -57.5,13.5
       parent: 1
       type: Transform
+    - ShutdownSubscribers:
+      - 13637
+      type: DeviceNetwork
     - enabled: False
       type: AmbientSound
     - color: '#4169E1FF'
@@ -68404,6 +69556,9 @@ entities:
       pos: 36.5,-7.5
       parent: 1
       type: Transform
+    - ShutdownSubscribers:
+      - 10422
+      type: DeviceNetwork
     - enabled: False
       type: AmbientSound
     - color: '#4169E1FF'
@@ -68436,6 +69591,10 @@ entities:
       pos: -89.5,-1.5
       parent: 1
       type: Transform
+    - ShutdownSubscribers:
+      - 7910
+      - 15465
+      type: DeviceNetwork
     - enabled: False
       type: AmbientSound
     - color: '#4169E1FF'
@@ -68448,6 +69607,10 @@ entities:
       pos: -89.5,-5.5
       parent: 1
       type: Transform
+    - ShutdownSubscribers:
+      - 7910
+      - 15463
+      type: DeviceNetwork
     - enabled: False
       type: AmbientSound
     - color: '#4169E1FF'
@@ -68470,6 +69633,9 @@ entities:
       pos: -7.5,3.5
       parent: 1
       type: Transform
+    - ShutdownSubscribers:
+      - 15466
+      type: DeviceNetwork
     - enabled: False
       type: AmbientSound
     - color: '#B22222FF'
@@ -68480,6 +69646,9 @@ entities:
       pos: -5.5,-8.5
       parent: 1
       type: Transform
+    - ShutdownSubscribers:
+      - 15472
+      type: DeviceNetwork
     - enabled: False
       type: AmbientSound
     - color: '#B22222FF'
@@ -68557,6 +69726,9 @@ entities:
       pos: -65.5,18.5
       parent: 1
       type: Transform
+    - ShutdownSubscribers:
+      - 15486
+      type: DeviceNetwork
     - enabled: False
       type: AmbientSound
     - color: '#B22222FF'
@@ -68566,6 +69738,9 @@ entities:
     - pos: -52.5,4.5
       parent: 1
       type: Transform
+    - ShutdownSubscribers:
+      - 15478
+      type: DeviceNetwork
     - enabled: False
       type: AmbientSound
     - color: '#B22222FF'
@@ -68576,14 +69751,22 @@ entities:
       pos: -66.5,13.5
       parent: 1
       type: Transform
+    - ShutdownSubscribers:
+      - 15483
+      type: DeviceNetwork
     - enabled: False
       type: AmbientSound
+    - color: '#B22222FF'
+      type: AtmosPipeColor
   - uid: 1944
     components:
     - rot: -1.5707963267948966 rad
       pos: -57.5,14.5
       parent: 1
       type: Transform
+    - ShutdownSubscribers:
+      - 13637
+      type: DeviceNetwork
     - enabled: False
       type: AmbientSound
     - color: '#B22222FF'
@@ -68593,6 +69776,9 @@ entities:
     - pos: -60.5,23.5
       parent: 1
       type: Transform
+    - ShutdownSubscribers:
+      - 15489
+      type: DeviceNetwork
     - enabled: False
       type: AmbientSound
     - color: '#B22222FF'
@@ -68603,6 +69789,9 @@ entities:
       pos: 0.5,-13.5
       parent: 1
       type: Transform
+    - ShutdownSubscribers:
+      - 9860
+      type: DeviceNetwork
     - enabled: False
       type: AmbientSound
     - color: '#B22222FF'
@@ -68615,6 +69804,9 @@ entities:
       pos: -38.5,-11.5
       parent: 1
       type: Transform
+    - ShutdownSubscribers:
+      - 15475
+      type: DeviceNetwork
     - enabled: False
       type: AmbientSound
     - color: '#B22222FF'
@@ -68654,6 +69846,9 @@ entities:
       pos: -20.5,-4.5
       parent: 1
       type: Transform
+    - ShutdownSubscribers:
+      - 9811
+      type: DeviceNetwork
     - enabled: False
       type: AmbientSound
     - color: '#B22222FF'
@@ -68666,6 +69861,9 @@ entities:
       pos: -14.5,-12.5
       parent: 1
       type: Transform
+    - ShutdownSubscribers:
+      - 15476
+      type: DeviceNetwork
     - enabled: False
       type: AmbientSound
     - color: '#B22222FF'
@@ -68678,17 +69876,46 @@ entities:
       pos: -17.5,-9.5
       parent: 1
       type: Transform
+    - ShutdownSubscribers:
+      - 9888
+      type: DeviceNetwork
     - enabled: False
       type: AmbientSound
     - color: '#B22222FF'
       type: AtmosPipeColor
     - nextSound: 605.4843476
       type: EmitSoundOnCollide
+  - uid: 6687
+    components:
+    - rot: 1.5707963267948966 rad
+      pos: 8.5,7.5
+      parent: 1
+      type: Transform
+    - ShutdownSubscribers:
+      - 15452
+      type: DeviceNetwork
+    - enabled: False
+      type: AmbientSound
+    - nextSound: 38.6315379
+      type: EmitSoundOnCollide
+  - uid: 7177
+    components:
+    - rot: 1.5707963267948966 rad
+      pos: 4.5,7.5
+      parent: 1
+      type: Transform
+    - enabled: False
+      type: AmbientSound
+    - nextSound: 38.0830076
+      type: EmitSoundOnCollide
   - uid: 7178
     components:
     - pos: 7.5,2.5
       parent: 1
       type: Transform
+    - ShutdownSubscribers:
+      - 360
+      type: DeviceNetwork
     - enabled: False
       type: AmbientSound
     - color: '#B22222FF'
@@ -68709,6 +69936,9 @@ entities:
       pos: -152.5,2.5
       parent: 1
       type: Transform
+    - ShutdownSubscribers:
+      - 7801
+      type: DeviceNetwork
     - enabled: False
       type: AmbientSound
     - color: '#B22222FF'
@@ -68817,6 +70047,9 @@ entities:
       pos: -106.5,-12.5
       parent: 1
       type: Transform
+    - ShutdownSubscribers:
+      - 7885
+      type: DeviceNetwork
     - enabled: False
       type: AmbientSound
     - color: '#B22222FF'
@@ -68845,6 +70078,9 @@ entities:
     - pos: -94.5,-10.5
       parent: 1
       type: Transform
+    - ShutdownSubscribers:
+      - 7910
+      type: DeviceNetwork
     - enabled: False
       type: AmbientSound
     - color: '#B22222FF'
@@ -68982,6 +70218,9 @@ entities:
       pos: -45.5,-3.5
       parent: 1
       type: Transform
+    - ShutdownSubscribers:
+      - 9754
+      type: DeviceNetwork
     - enabled: False
       type: AmbientSound
     - color: '#B22222FF'
@@ -69002,6 +70241,9 @@ entities:
       pos: -61.5,4.5
       parent: 1
       type: Transform
+    - ShutdownSubscribers:
+      - 15482
+      type: DeviceNetwork
     - enabled: False
       type: AmbientSound
     - color: '#B22222FF'
@@ -69012,6 +70254,9 @@ entities:
       pos: -55.5,4.5
       parent: 1
       type: Transform
+    - ShutdownSubscribers:
+      - 15477
+      type: DeviceNetwork
     - enabled: False
       type: AmbientSound
     - color: '#B22222FF'
@@ -69158,6 +70403,9 @@ entities:
     - pos: -13.5,7.5
       parent: 1
       type: Transform
+    - ShutdownSubscribers:
+      - 15471
+      type: DeviceNetwork
     - enabled: False
       type: AmbientSound
     - color: '#B22222FF'
@@ -69218,6 +70466,9 @@ entities:
       pos: 11.5,-12.5
       parent: 1
       type: Transform
+    - ShutdownSubscribers:
+      - 15474
+      type: DeviceNetwork
     - enabled: False
       type: AmbientSound
     - color: '#B22222FF'
@@ -69257,6 +70508,9 @@ entities:
       pos: 28.5,-4.5
       parent: 1
       type: Transform
+    - ShutdownSubscribers:
+      - 10422
+      type: DeviceNetwork
     - enabled: False
       type: AmbientSound
     - color: '#B22222FF'
@@ -69266,6 +70520,9 @@ entities:
     - pos: 38.5,-2.5
       parent: 1
       type: Transform
+    - ShutdownSubscribers:
+      - 10422
+      type: DeviceNetwork
     - enabled: False
       type: AmbientSound
     - color: '#B22222FF'
@@ -69275,6 +70532,9 @@ entities:
     - pos: 36.5,0.5
       parent: 1
       type: Transform
+    - ShutdownSubscribers:
+      - 10422
+      type: DeviceNetwork
     - enabled: False
       type: AmbientSound
     - color: '#B22222FF'
@@ -69336,6 +70596,9 @@ entities:
       pos: -54.5,21.5
       parent: 1
       type: Transform
+    - ShutdownSubscribers:
+      - 13637
+      type: DeviceNetwork
     - enabled: False
       type: AmbientSound
     - color: '#B22222FF'
@@ -69501,6 +70764,9 @@ entities:
       pos: 36.5,-11.5
       parent: 1
       type: Transform
+    - ShutdownSubscribers:
+      - 10422
+      type: DeviceNetwork
     - enabled: False
       type: AmbientSound
     - color: '#B22222FF'
@@ -69511,6 +70777,9 @@ entities:
       pos: 37.5,-8.5
       parent: 1
       type: Transform
+    - ShutdownSubscribers:
+      - 10422
+      type: DeviceNetwork
     - enabled: False
       type: AmbientSound
     - color: '#B22222FF'
@@ -69543,6 +70812,10 @@ entities:
       pos: -92.5,-5.5
       parent: 1
       type: Transform
+    - ShutdownSubscribers:
+      - 7910
+      - 15463
+      type: DeviceNetwork
     - enabled: False
       type: AmbientSound
     - color: '#B22222FF'
@@ -69555,6 +70828,10 @@ entities:
       pos: -92.5,-1.5
       parent: 1
       type: Transform
+    - ShutdownSubscribers:
+      - 7910
+      - 15465
+      type: DeviceNetwork
     - enabled: False
       type: AmbientSound
     - color: '#B22222FF'
