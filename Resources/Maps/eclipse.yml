@@ -9908,10 +9908,6 @@ entities:
     - pos: 0.5,-3.5
       parent: 14329
       type: Transform
-    - loadingNetworkDemand: 32510
-      currentReceiving: 32510.05
-      currentSupply: 32510
-      type: PowerNetworkBattery
   - uid: 14570
     components:
     - rot: 1.5707963267948966 rad
