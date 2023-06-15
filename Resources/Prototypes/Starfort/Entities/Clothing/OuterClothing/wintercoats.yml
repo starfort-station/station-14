@@ -18,28 +18,3 @@
     modifiers:
       coefficients:
         Heat: 0.80
-
-- type: entity
-  parent: ClothingOuterStorageBase
-  id: ClothingMercenaryOuterWinterCoat
-  name: mercenary winter coat
-  description: Heavy jacket made of "synthetic" animal fur. Has additional armor plates. Painted in camouflage.
-  components:
-  - type: Sprite
-    sprite: Starfort/Clothing/OuterClothing/WinterCoats/mercenary-coat.rsi
-  - type: Clothing
-    sprite: Starfort/Clothing/OuterClothing/WinterCoats/mercenary-coat.rsi
-  - type: TemperatureProtection
-    coefficient: 0.1
-  - type: Item
-    size: 10
-  - type: Storage
-    capacity: 10
-  - type: Armor
-    modifiers:
-      coefficients:
-        Blunt: 0.6
-        Slash: 0.5
-        Piercing: 0.3
-        Heat: 0.2
-
