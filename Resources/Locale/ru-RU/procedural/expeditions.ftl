@@ -1,9 +1,8 @@
 salvage-expedition-structure-examine = Это [color=#B02E26]разрушение[/color] цели
-salvage-expedition-structure-remaining =
-    { $count ->
-        [one] { $count } оставшаяся структура.
-       * [other] { $count } оставшиеся структуры.
-    }
+salvage-expedition-structure-remaining = { $count ->
+    [one] { $count } оставшаяся структура.
+    *[other] { $count } оставшиеся структуры.
+}
 salvage-expedition-megafauna-remaining = { $count } мегафауны осталось.
 salvage-expedition-window-title = Спасательные экспедиции
 salvage-expedition-window-difficulty = Сложность:
@@ -23,11 +22,10 @@ salvage-expedition-desc-mining = Собирать ресурсы в зоне.
 # Вы будете облагаться налогом {$tax}% от собранных ресурсов.
 
 salvage-expedition-desc-elimination = Убейте большое и опасное существо внутри зоны.
-salvage-expedition-desc-structure = ...
-    { $count ->
-        [1] Уничтожить { $count } { $structure } внутри области.
-       * [other] Уничтожить { $count } { $structure } внутри области.
-    }
+salvage-expedition-desc-structure = { $count ->
+    [1] Уничтожить { $count } { $structure } внутри области.
+    *[other] Уничтожить { $count } { $structure } внутри области.
+}
 salvage-expedition-type-Mining = Добыча
 salvage-expedition-type-Elimination = Ликвидация
 salvage-expedition-type-Destruction = Разрушение
