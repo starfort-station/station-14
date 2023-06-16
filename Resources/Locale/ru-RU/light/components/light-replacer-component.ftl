@@ -10,8 +10,7 @@ comp-light-replacer-insert-broken-light = Вы не можете вставля�
 comp-light-replacer-refill-from-storage = Вы пополнили { $light-replacer }.
 comp-light-replacer-no-lights = Он пуст.
 comp-light-replacer-has-lights = В нем есть следующее:
-comp-light-replacer-light-listing =
-    { $amount ->
-        [one] [color=yellow]{ $amount }[/color] [color=gray]{ $name }[/color]
-       * [other] [color=yellow]{ $amount }[/color] [color=gray]{ $name }s[/color]
-    }
+comp-light-replacer-light-listing ={ $amount ->
+    [one] [color=yellow]{ $amount }[/color] [color=gray]{ $name }[/color]
+    *[other] [color=yellow]{ $amount }[/color] [color=gray]{ $name }s[/color]
+}

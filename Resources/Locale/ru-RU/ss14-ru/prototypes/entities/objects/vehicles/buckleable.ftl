@@ -15,5 +15,5 @@ ent-VehicleSkeletonMotorcycle = скелетонский мотоцикл
 ent-VehicleUnicycle = одноколесный велосипед
     .desc = У него только одно колесо!
 ent-VehicleUnicycleFolded = { ent-VehicleUnicycle }
-    .суффикс = сложенный
+    .suffix = сложенный
     .desc = { ent-VehicleUnicycle.desc }
