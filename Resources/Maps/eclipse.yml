@@ -5580,6 +5580,9 @@ entities:
       type: Joint
     - nextUpdate: 0
       type: SpreaderGrid
+    - following:
+      - invalid
+      type: Followed
   - uid: 10
     components:
     - type: MetaData
@@ -5608,7 +5611,7 @@ entities:
           tiles: AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAXgAAAF4AAABeAAAAXgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAXgAAAF8AAABfAAAAXwAAAF8AAABeAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAXgAAAF8AAABfAAAAHAAAABwAAABfAAAAXwAAAF4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAF4AAABfAAAAHAAAAEUAAABFAAAAHAAAAF8AAABeAAAAXgAAAF4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABeAAAAXwAAABwAAABFAAAARQAAABwAAABfAAAAXwAAAF8AAABfAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAXgAAAF8AAABFAAAARQAAAEUAAABFAAAAXwAAAFsAAAAcAAAAWwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAXgAAAF8AAABfAAAARQAAAEUAAABFAAAARQAAAEUAAABbAAAAWwAAAFsAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAF4AAABfAAAAHAAAAEUAAABFAAAARQAAAEUAAABfAAAAWwAAAFsAAABbAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABfAAAAXwAAAF8AAABfAAAAXwAAAEUAAABfAAAAXwAAAEUAAABfAAAAXwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAXwAAAF8AAABfAAAAXwAAACAAAAAgAAAAIAAAACAAAAAgAAAAIAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAF8AAABfAAAAXwAAAF8AAAAgAAAAIAAAACAAAAAgAAAAIAAAACAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABfAAAAXwAAAF8AAABfAAAAXwAAAEUAAABfAAAAXwAAAF8AAAAgAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAXgAAAF8AAAAcAAAARQAAAEUAAABfAAAAXwAAAF8AAABfAAAAXwAAAF8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAF4AAABfAAAAXwAAAF8AAABfAAAAXwAAAF8AAABfAAAAXwAAAF8AAABfAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAXgAAAF8AAABfAAAAXwAAAF8AAABfAAAAXwAAAF8AAABfAAAAXwAAAA==
         0,-1:
           ind: 0,-1
-          tiles: AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAF4AAABeAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABfAAAAXwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABeAAAAXwAAAF8AAABeAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAF4AAABeAAAAXgAAAF8AAABfAAAAXgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABfAAAAXwAAAF8AAABfAAAAXwAAAF8AAABfAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHAAAABwAAABfAAAAXwAAAF8AAABfAAAAXwAAAF4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFsAAABbAAAAXwAAAF8AAABfAAAAXwAAAF8AAABfAAAAXgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAcAAAAHAAAAF8AAABfAAAAXwAAAF8AAABfAAAAXwAAAF4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAXwAAAF8AAABfAAAAXwAAAF8AAABfAAAAXwAAAF8AAABfAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAgAAAAIAAAACAAAAAgAAAAXwAAAF8AAABfAAAAXwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAIAAAACAAAAAgAAAAIAAAAF8AAABfAAAAXwAAAF8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAXwAAAF8AAABFAAAARQAAAF8AAABfAAAAXwAAAF8AAABfAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAF8AAABFAAAARQAAAEUAAABFAAAARQAAABwAAABfAAAAXgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABfAAAAHAAAABwAAAAcAAAARQAAABwAAABfAAAAXwAAAF4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAXwAAABwAAAAcAAAAHAAAAEUAAAAcAAAAXwAAAF4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==
+          tiles: AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAF8AAABfAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABfAAAAXwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABfAAAAXwAAAF8AAABfAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAF4AAABfAAAAXwAAAF8AAABfAAAAXwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABfAAAAXwAAAF8AAABfAAAAXwAAAF8AAABfAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHAAAABwAAABfAAAAXwAAAF8AAABfAAAAXwAAAF4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFsAAABbAAAAXwAAAF8AAABfAAAAXwAAAF8AAABfAAAAXgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAcAAAAHAAAAF8AAABfAAAAXwAAAF8AAABfAAAAXwAAAF4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAXwAAAF8AAABfAAAAXwAAAF8AAABfAAAAXwAAAF8AAABfAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAgAAAAIAAAACAAAAAgAAAAXwAAAF8AAABfAAAAXwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAIAAAACAAAAAgAAAAIAAAAF8AAABfAAAAXwAAAF8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAXwAAAF8AAABFAAAARQAAAF8AAABfAAAAXwAAAF8AAABfAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAF8AAABFAAAARQAAAEUAAABFAAAARQAAABwAAABfAAAAXgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABfAAAAHAAAABwAAAAcAAAARQAAABwAAABfAAAAXwAAAF4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAXwAAABwAAAAcAAAAHAAAAEUAAAAcAAAAXwAAAF4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==
       type: MapGrid
     - type: Broadphase
     - angularDamping: 0.05
@@ -5916,8 +5919,6 @@ entities:
     - nextShake: 0
       shakeTimes: 10
       type: GravityShake
-    - following: []
-      type: Followed
 - proto: AirAlarm
   entities:
   - uid: 360
@@ -6663,6 +6664,20 @@ entities:
       - 15461
       - 15458
       - 15459
+      type: DeviceList
+  - uid: 12481
+    components:
+    - rot: 3.141592653589793 rad
+      pos: -66.5,8.5
+      parent: 1
+      type: Transform
+    - ShutdownSubscribers:
+      - 7574
+      - 7573
+      type: DeviceNetwork
+    - devices:
+      - 7573
+      - 7574
       type: DeviceList
   - uid: 12611
     components:
@@ -9200,6 +9215,9 @@ entities:
     - pos: -69.5,11.5
       parent: 1
       type: Transform
+    - ShutdownSubscribers:
+      - 12481
+      type: DeviceNetwork
   - uid: 7803
     components:
     - pos: -157.5,-8.5
@@ -54459,22 +54477,22 @@ entities:
       type: Transform
     - canCollide: False
       type: Physics
-- proto: FloorTileItemWoodPattern
+- proto: FloorTileItemWood
   entities:
+  - uid: 7035
+    components:
+    - pos: -27.272335,19.756004
+      parent: 1
+      type: Transform
+    - nextSound: 686.5512431
+      type: EmitSoundOnCollide
   - uid: 13417
     components:
-    - pos: -25.934885,20.89928
+    - pos: -26.03796,20.725763
       parent: 1
       type: Transform
-    - canCollide: False
-      type: Physics
-  - uid: 13418
-    components:
-    - pos: -26.934885,19.93053
-      parent: 1
-      type: Transform
-    - canCollide: False
-      type: Physics
+    - nextSound: 687.4955503
+      type: EmitSoundOnCollide
 - proto: FloraTree06
   entities:
   - uid: 3303
@@ -54903,11 +54921,6 @@ entities:
       pos: -173.5,6.5
       parent: 1
       type: Transform
-  - uid: 7330
-    components:
-    - pos: -67.5,11.5
-      parent: 1
-      type: Transform
 - proto: GasPassiveVent
   entities:
   - uid: 1169
@@ -54967,20 +54980,24 @@ entities:
       pos: -71.5,9.5
       parent: 1
       type: Transform
+  - uid: 13418
+    components:
+    - rot: 1.5707963267948966 rad
+      pos: 2.5,-11.5
+      parent: 14329
+      type: Transform
+    - color: '#990000FF'
+      type: AtmosPipeColor
+    - nextSound: 169.51332
+      type: EmitSoundOnCollide
   - uid: 14681
     components:
     - rot: 3.141592653589793 rad
       pos: 5.5,-11.5
       parent: 14329
       type: Transform
-  - uid: 15397
-    components:
-    - rot: 1.5707963267948966 rad
-      pos: 2.5,-11.5
-      parent: 14329
-      type: Transform
-    - nextSound: 101.7069273
-      type: EmitSoundOnCollide
+    - color: '#990000FF'
+      type: AtmosPipeColor
 - proto: GasPipeBend
   entities:
   - uid: 656
@@ -55668,12 +55685,6 @@ entities:
       type: AtmosPipeColor
     - enabled: True
       type: AmbientSound
-  - uid: 12481
-    components:
-    - rot: -1.5707963267948966 rad
-      pos: -66.5,9.5
-      parent: 1
-      type: Transform
   - uid: 12613
     components:
     - rot: -1.5707963267948966 rad
@@ -55706,6 +55717,15 @@ entities:
       type: Transform
     - color: '#4169E1FF'
       type: AtmosPipeColor
+  - uid: 13480
+    components:
+    - pos: 4.5,-5.5
+      parent: 14329
+      type: Transform
+    - color: '#990000FF'
+      type: AtmosPipeColor
+    - nextSound: 71.2088571
+      type: EmitSoundOnCollide
   - uid: 13776
     components:
     - rot: 3.141592653589793 rad
@@ -55720,18 +55740,17 @@ entities:
       pos: 4.5,-7.5
       parent: 14329
       type: Transform
+    - color: '#990000FF'
+      type: AtmosPipeColor
     - enabled: True
       type: AmbientSound
-  - uid: 14678
-    components:
-    - pos: 4.5,-5.5
-      parent: 14329
-      type: Transform
   - uid: 14679
     components:
     - pos: 5.5,-7.5
       parent: 14329
       type: Transform
+    - color: '#990000FF'
+      type: AtmosPipeColor
     - enabled: True
       type: AmbientSound
   - uid: 14695
@@ -55740,12 +55759,16 @@ entities:
       pos: 3.5,-2.5
       parent: 14329
       type: Transform
+    - color: '#0055CCFF'
+      type: AtmosPipeColor
   - uid: 14696
     components:
     - rot: -1.5707963267948966 rad
       pos: 3.5,-4.5
       parent: 14329
       type: Transform
+    - color: '#0055CCFF'
+      type: AtmosPipeColor
   - uid: 14887
     components:
     - rot: -1.5707963267948966 rad
@@ -55820,31 +55843,17 @@ entities:
       type: AtmosPipeColor
     - nextSound: 439.7582324
       type: EmitSoundOnCollide
-  - uid: 15399
-    components:
-    - rot: 1.5707963267948966 rad
-      pos: 4.5,-2.5
-      parent: 14329
-      type: Transform
-    - nextSound: 194.5161637
-      type: EmitSoundOnCollide
   - uid: 15400
     components:
     - rot: -1.5707963267948966 rad
       pos: 4.5,-11.5
       parent: 14329
       type: Transform
+    - color: '#990000FF'
+      type: AtmosPipeColor
     - enabled: True
       type: AmbientSound
     - nextSound: 196.0135258
-      type: EmitSoundOnCollide
-  - uid: 15401
-    components:
-    - rot: -1.5707963267948966 rad
-      pos: 5.5,-2.5
-      parent: 14329
-      type: Transform
-    - nextSound: 211.2471327
       type: EmitSoundOnCollide
   - uid: 15484
     components:
@@ -56042,11 +56051,6 @@ entities:
       type: Transform
     - color: '#4169E1FF'
       type: AtmosPipeColor
-  - uid: 12817
-    components:
-    - pos: -68.5,9.5
-      parent: 1
-      type: Transform
   - uid: 13550
     components:
     - pos: -57.5,-15.5
@@ -56059,6 +56063,8 @@ entities:
     - pos: -1.5,-5.5
       parent: 14329
       type: Transform
+    - color: '#990000FF'
+      type: AtmosPipeColor
 - proto: GasPipeStraight
   entities:
   - uid: 16
@@ -57371,21 +57377,9 @@ entities:
       type: Transform
     - enabled: True
       type: AmbientSound
-  - uid: 7035
-    components:
-    - rot: 3.141592653589793 rad
-      pos: -68.5,10.5
-      parent: 1
-      type: Transform
   - uid: 7294
     components:
     - pos: 5.5,6.5
-      parent: 1
-      type: Transform
-  - uid: 7350
-    components:
-    - rot: 3.141592653589793 rad
-      pos: -67.5,10.5
       parent: 1
       type: Transform
   - uid: 7406
@@ -65482,12 +65476,18 @@ entities:
       type: Transform
     - color: '#4169E1FF'
       type: AtmosPipeColor
-  - uid: 13480
+  - uid: 13545
     components:
-    - rot: 3.141592653589793 rad
-      pos: -66.5,10.5
-      parent: 1
+    - rot: 1.5707963267948966 rad
+      pos: 3.5,-11.5
+      parent: 14329
       type: Transform
+    - color: '#990000FF'
+      type: AtmosPipeColor
+    - enabled: True
+      type: AmbientSound
+    - nextSound: 188.8478526
+      type: EmitSoundOnCollide
   - uid: 13551
     components:
     - rot: 1.5707963267948966 rad
@@ -66005,6 +66005,8 @@ entities:
     - pos: 5.5,-10.5
       parent: 14329
       type: Transform
+    - color: '#990000FF'
+      type: AtmosPipeColor
     - enabled: True
       type: AmbientSound
   - uid: 14676
@@ -66012,6 +66014,8 @@ entities:
     - pos: 5.5,-8.5
       parent: 14329
       type: Transform
+    - color: '#990000FF'
+      type: AtmosPipeColor
     - enabled: True
       type: AmbientSound
   - uid: 14680
@@ -66019,6 +66023,8 @@ entities:
     - pos: 4.5,-6.5
       parent: 14329
       type: Transform
+    - color: '#990000FF'
+      type: AtmosPipeColor
     - enabled: True
       type: AmbientSound
   - uid: 14692
@@ -66027,90 +66033,122 @@ entities:
       pos: 2.5,-3.5
       parent: 14329
       type: Transform
+    - color: '#990000FF'
+      type: AtmosPipeColor
   - uid: 14693
     components:
     - rot: 3.141592653589793 rad
       pos: 3.5,-3.5
       parent: 14329
       type: Transform
+    - color: '#0055CCFF'
+      type: AtmosPipeColor
   - uid: 14697
     components:
     - rot: 3.141592653589793 rad
       pos: 2.5,-4.5
       parent: 14329
       type: Transform
+    - color: '#990000FF'
+      type: AtmosPipeColor
   - uid: 14698
     components:
     - rot: 1.5707963267948966 rad
       pos: 3.5,-5.5
       parent: 14329
       type: Transform
+    - color: '#990000FF'
+      type: AtmosPipeColor
   - uid: 14700
     components:
     - rot: 1.5707963267948966 rad
       pos: 2.5,-4.5
       parent: 14329
       type: Transform
+    - color: '#0055CCFF'
+      type: AtmosPipeColor
   - uid: 14702
     components:
     - rot: 1.5707963267948966 rad
       pos: 0.5,-4.5
       parent: 14329
       type: Transform
+    - color: '#0055CCFF'
+      type: AtmosPipeColor
   - uid: 14703
     components:
     - rot: 1.5707963267948966 rad
       pos: -1.5,-4.5
       parent: 14329
       type: Transform
+    - color: '#0055CCFF'
+      type: AtmosPipeColor
   - uid: 14704
     components:
     - rot: 1.5707963267948966 rad
       pos: -2.5,-4.5
       parent: 14329
       type: Transform
+    - color: '#0055CCFF'
+      type: AtmosPipeColor
   - uid: 14705
     components:
     - rot: 1.5707963267948966 rad
       pos: -3.5,-4.5
       parent: 14329
       type: Transform
+    - color: '#0055CCFF'
+      type: AtmosPipeColor
   - uid: 14706
     components:
     - rot: 1.5707963267948966 rad
       pos: -4.5,-4.5
       parent: 14329
       type: Transform
+    - color: '#0055CCFF'
+      type: AtmosPipeColor
   - uid: 14708
     components:
     - pos: -5.5,-3.5
       parent: 14329
       type: Transform
+    - color: '#0055CCFF'
+      type: AtmosPipeColor
   - uid: 14709
     components:
     - pos: -5.5,-5.5
       parent: 14329
       type: Transform
+    - color: '#0055CCFF'
+      type: AtmosPipeColor
   - uid: 14710
     components:
     - pos: -5.5,-6.5
       parent: 14329
       type: Transform
+    - color: '#0055CCFF'
+      type: AtmosPipeColor
   - uid: 14711
     components:
     - pos: -5.5,-7.5
       parent: 14329
       type: Transform
+    - color: '#0055CCFF'
+      type: AtmosPipeColor
   - uid: 14712
     components:
     - pos: -6.5,-7.5
       parent: 14329
       type: Transform
+    - color: '#990000FF'
+      type: AtmosPipeColor
   - uid: 14713
     components:
     - pos: -6.5,-6.5
       parent: 14329
       type: Transform
+    - color: '#990000FF'
+      type: AtmosPipeColor
     - enabled: True
       type: AmbientSound
   - uid: 14714
@@ -66118,11 +66156,15 @@ entities:
     - pos: -6.5,-4.5
       parent: 14329
       type: Transform
+    - color: '#990000FF'
+      type: AtmosPipeColor
   - uid: 14715
     components:
     - pos: -6.5,-3.5
       parent: 14329
       type: Transform
+    - color: '#990000FF'
+      type: AtmosPipeColor
     - enabled: True
       type: AmbientSound
   - uid: 14717
@@ -66131,48 +66173,64 @@ entities:
       pos: -5.5,-5.5
       parent: 14329
       type: Transform
+    - color: '#990000FF'
+      type: AtmosPipeColor
   - uid: 14718
     components:
     - rot: 1.5707963267948966 rad
       pos: -4.5,-5.5
       parent: 14329
       type: Transform
+    - color: '#990000FF'
+      type: AtmosPipeColor
   - uid: 14719
     components:
     - rot: 1.5707963267948966 rad
       pos: -3.5,-5.5
       parent: 14329
       type: Transform
+    - color: '#990000FF'
+      type: AtmosPipeColor
   - uid: 14720
     components:
     - rot: 1.5707963267948966 rad
       pos: -2.5,-5.5
       parent: 14329
       type: Transform
+    - color: '#990000FF'
+      type: AtmosPipeColor
   - uid: 14721
     components:
     - rot: 1.5707963267948966 rad
       pos: 1.5,-5.5
       parent: 14329
       type: Transform
+    - color: '#990000FF'
+      type: AtmosPipeColor
   - uid: 14724
     components:
     - rot: -1.5707963267948966 rad
       pos: -0.5,-5.5
       parent: 14329
       type: Transform
+    - color: '#990000FF'
+      type: AtmosPipeColor
   - uid: 14725
     components:
     - rot: -1.5707963267948966 rad
       pos: 0.5,-5.5
       parent: 14329
       type: Transform
+    - color: '#990000FF'
+      type: AtmosPipeColor
   - uid: 14726
     components:
     - rot: 3.141592653589793 rad
       pos: -1.5,-6.5
       parent: 14329
       type: Transform
+    - color: '#990000FF'
+      type: AtmosPipeColor
     - enabled: True
       type: AmbientSound
   - uid: 14727
@@ -66181,18 +66239,24 @@ entities:
       pos: -1.5,-7.5
       parent: 14329
       type: Transform
+    - color: '#990000FF'
+      type: AtmosPipeColor
   - uid: 14728
     components:
     - rot: 3.141592653589793 rad
       pos: -0.5,-7.5
       parent: 14329
       type: Transform
+    - color: '#0055CCFF'
+      type: AtmosPipeColor
   - uid: 14729
     components:
     - rot: 3.141592653589793 rad
       pos: -0.5,-6.5
       parent: 14329
       type: Transform
+    - color: '#0055CCFF'
+      type: AtmosPipeColor
     - enabled: True
       type: AmbientSound
   - uid: 14730
@@ -66201,6 +66265,8 @@ entities:
       pos: -0.5,-5.5
       parent: 14329
       type: Transform
+    - color: '#0055CCFF'
+      type: AtmosPipeColor
   - uid: 14872
     components:
     - rot: 3.141592653589793 rad
@@ -66313,12 +66379,6 @@ entities:
       type: Transform
     - color: '#B22222FF'
       type: AtmosPipeColor
-  - uid: 14991
-    components:
-    - rot: -1.5707963267948966 rad
-      pos: 5.5,-2.5
-      parent: 14329
-      type: Transform
   - uid: 15165
     components:
     - rot: 3.141592653589793 rad
@@ -66649,6 +66709,8 @@ entities:
       pos: 4.5,-10.5
       parent: 14329
       type: Transform
+    - color: '#990000FF'
+      type: AtmosPipeColor
     - enabled: True
       type: AmbientSound
     - nextSound: 219.0193138
@@ -66659,6 +66721,8 @@ entities:
       pos: 4.5,-9.5
       parent: 14329
       type: Transform
+    - color: '#990000FF'
+      type: AtmosPipeColor
     - enabled: True
       type: AmbientSound
     - nextSound: 219.0193138
@@ -66669,6 +66733,8 @@ entities:
       pos: 4.5,-8.5
       parent: 14329
       type: Transform
+    - color: '#990000FF'
+      type: AtmosPipeColor
     - enabled: True
       type: AmbientSound
     - nextSound: 219.0193138
@@ -66679,6 +66745,8 @@ entities:
       pos: 4.5,-7.5
       parent: 14329
       type: Transform
+    - color: '#990000FF'
+      type: AtmosPipeColor
     - enabled: True
       type: AmbientSound
     - nextSound: 219.0193138
@@ -66689,32 +66757,8 @@ entities:
       pos: 4.5,-6.5
       parent: 14329
       type: Transform
-    - enabled: True
-      type: AmbientSound
-    - nextSound: 219.0193138
-      type: EmitSoundOnCollide
-  - uid: 15407
-    components:
-    - rot: 3.141592653589793 rad
-      pos: 4.5,-5.5
-      parent: 14329
-      type: Transform
-    - nextSound: 219.0193138
-      type: EmitSoundOnCollide
-  - uid: 15408
-    components:
-    - rot: 3.141592653589793 rad
-      pos: 4.5,-4.5
-      parent: 14329
-      type: Transform
-    - nextSound: 219.0193138
-      type: EmitSoundOnCollide
-  - uid: 15409
-    components:
-    - rot: 3.141592653589793 rad
-      pos: 4.5,-3.5
-      parent: 14329
-      type: Transform
+    - color: '#990000FF'
+      type: AtmosPipeColor
     - enabled: True
       type: AmbientSound
     - nextSound: 219.0193138
@@ -66928,12 +66972,6 @@ entities:
       type: Transform
     - color: '#4169E1FF'
       type: AtmosPipeColor
-  - uid: 7573
-    components:
-    - rot: 3.141592653589793 rad
-      pos: -67.5,9.5
-      parent: 1
-      type: Transform
   - uid: 7876
     components:
     - pos: -30.5,-12.5
@@ -68008,6 +68046,16 @@ entities:
       type: Transform
     - color: '#B22222FF'
       type: AtmosPipeColor
+  - uid: 13466
+    components:
+    - rot: 3.141592653589793 rad
+      pos: 5.5,-2.5
+      parent: 14329
+      type: Transform
+    - color: '#0055CCFF'
+      type: AtmosPipeColor
+    - nextSound: 81.8132025
+      type: EmitSoundOnCollide
   - uid: 13505
     components:
     - rot: 1.5707963267948966 rad
@@ -68069,28 +68117,38 @@ entities:
       pos: 2.5,-5.5
       parent: 14329
       type: Transform
+    - color: '#990000FF'
+      type: AtmosPipeColor
   - uid: 14707
     components:
     - rot: 1.5707963267948966 rad
       pos: -5.5,-4.5
       parent: 14329
       type: Transform
+    - color: '#0055CCFF'
+      type: AtmosPipeColor
   - uid: 14716
     components:
     - rot: 1.5707963267948966 rad
       pos: -6.5,-5.5
       parent: 14329
       type: Transform
+    - color: '#990000FF'
+      type: AtmosPipeColor
   - uid: 14722
     components:
     - pos: 1.5,-4.5
       parent: 14329
       type: Transform
+    - color: '#0055CCFF'
+      type: AtmosPipeColor
   - uid: 14723
     components:
     - pos: -0.5,-4.5
       parent: 14329
       type: Transform
+    - color: '#0055CCFF'
+      type: AtmosPipeColor
   - uid: 14863
     components:
     - rot: -1.5707963267948966 rad
@@ -68113,6 +68171,8 @@ entities:
       pos: 4.5,-2.5
       parent: 14329
       type: Transform
+    - color: '#0055CCFF'
+      type: AtmosPipeColor
   - uid: 15178
     components:
     - rot: 1.5707963267948966 rad
@@ -68207,11 +68267,15 @@ entities:
       pos: 6.5,-2.5
       parent: 14329
       type: Transform
+    - color: '#0055CCFF'
+      type: AtmosPipeColor
   - uid: 15410
     components:
     - pos: 5.5,-1.5
       parent: 14329
       type: Transform
+    - color: '#0055CCFF'
+      type: AtmosPipeColor
     - nextSound: 224.219606
       type: EmitSoundOnCollide
 - proto: GasPressurePump
@@ -68387,6 +68451,8 @@ entities:
       pos: 5.5,-9.5
       parent: 14329
       type: Transform
+    - color: '#990000FF'
+      type: AtmosPipeColor
 - proto: GasVentPump
   entities:
   - uid: 207
@@ -69495,6 +69561,8 @@ entities:
       type: Transform
     - enabled: False
       type: AmbientSound
+    - color: '#0055CCFF'
+      type: AtmosPipeColor
   - uid: 14685
     components:
     - rot: 3.141592653589793 rad
@@ -69503,6 +69571,8 @@ entities:
       type: Transform
     - enabled: False
       type: AmbientSound
+    - color: '#0055CCFF'
+      type: AtmosPipeColor
   - uid: 14686
     components:
     - rot: 3.141592653589793 rad
@@ -69511,6 +69581,8 @@ entities:
       type: Transform
     - enabled: False
       type: AmbientSound
+    - color: '#0055CCFF'
+      type: AtmosPipeColor
   - uid: 14732
     components:
     - rot: 3.141592653589793 rad
@@ -69519,6 +69591,8 @@ entities:
       type: Transform
     - enabled: False
       type: AmbientSound
+    - color: '#0055CCFF'
+      type: AtmosPipeColor
   - uid: 14892
     components:
     - rot: 1.5707963267948966 rad
@@ -69536,6 +69610,8 @@ entities:
       type: Transform
     - enabled: False
       type: AmbientSound
+    - color: '#0055CCFF'
+      type: AtmosPipeColor
   - uid: 15167
     components:
     - rot: 3.141592653589793 rad
@@ -69916,6 +69992,19 @@ entities:
       type: AmbientSound
     - color: '#B22222FF'
       type: AtmosPipeColor
+  - uid: 7573
+    components:
+    - rot: -1.5707963267948966 rad
+      pos: -68.5,9.5
+      parent: 1
+      type: Transform
+    - ShutdownSubscribers:
+      - 12481
+      type: DeviceNetwork
+    - enabled: False
+      type: AmbientSound
+    - nextSound: 502.4276037
+      type: EmitSoundOnCollide
   - uid: 7832
     components:
     - rot: 1.5707963267948966 rad
@@ -70564,28 +70653,6 @@ entities:
       type: AmbientSound
     - color: '#B22222FF'
       type: AtmosPipeColor
-  - uid: 12815
-    components:
-    - rot: 3.141592653589793 rad
-      pos: -68.5,8.5
-      parent: 1
-      type: Transform
-    - enabled: False
-      type: AmbientSound
-  - uid: 13466
-    components:
-    - pos: -66.5,11.5
-      parent: 1
-      type: Transform
-    - enabled: False
-      type: AmbientSound
-  - uid: 13545
-    components:
-    - pos: -68.5,11.5
-      parent: 1
-      type: Transform
-    - enabled: False
-      type: AmbientSound
   - uid: 13724
     components:
     - rot: -1.5707963267948966 rad
@@ -70705,6 +70772,8 @@ entities:
       type: Transform
     - enabled: False
       type: AmbientSound
+    - color: '#990000FF'
+      type: AtmosPipeColor
   - uid: 14641
     components:
     - rot: 3.141592653589793 rad
@@ -70713,6 +70782,8 @@ entities:
       type: Transform
     - enabled: False
       type: AmbientSound
+    - color: '#990000FF'
+      type: AtmosPipeColor
   - uid: 14642
     components:
     - rot: 3.141592653589793 rad
@@ -70721,6 +70792,8 @@ entities:
       type: Transform
     - enabled: False
       type: AmbientSound
+    - color: '#990000FF'
+      type: AtmosPipeColor
   - uid: 14683
     components:
     - pos: -6.5,-2.5
@@ -70728,6 +70801,8 @@ entities:
       type: Transform
     - enabled: False
       type: AmbientSound
+    - color: '#990000FF'
+      type: AtmosPipeColor
   - uid: 14731
     components:
     - pos: -1.5,-4.5
@@ -70735,6 +70810,8 @@ entities:
       type: Transform
     - enabled: False
       type: AmbientSound
+    - color: '#990000FF'
+      type: AtmosPipeColor
   - uid: 14889
     components:
     - rot: 1.5707963267948966 rad
@@ -70849,14 +70926,6 @@ entities:
       pos: -69.5,9.5
       parent: 1
       type: Transform
-  - uid: 15398
-    components:
-    - rot: 1.5707963267948966 rad
-      pos: 3.5,-11.5
-      parent: 14329
-      type: Transform
-    - nextSound: 1059.3935952
-      type: EmitSoundOnCollide
 - proto: GeneratorUranium
   entities:
   - uid: 10094
@@ -81252,6 +81321,11 @@ entities:
       type: EntityStorage
 - proto: MouseTimedSpawner
   entities:
+  - uid: 12815
+    components:
+    - pos: -23.5,-18.5
+      parent: 1
+      type: Transform
   - uid: 13157
     components:
     - pos: -93.5,4.5
@@ -81259,7 +81333,7 @@ entities:
       type: Transform
   - uid: 13392
     components:
-    - pos: -100.5,-2.5
+    - pos: -51.5,8.5
       parent: 1
       type: Transform
   - uid: 13393
@@ -81269,7 +81343,7 @@ entities:
       type: Transform
   - uid: 13395
     components:
-    - pos: -106.5,-16.5
+    - pos: -26.5,7.5
       parent: 1
       type: Transform
 - proto: Multitool
@@ -81288,6 +81362,24 @@ entities:
       type: Transform
     - canCollide: False
       type: Physics
+  - uid: 7330
+    components:
+    - pos: -111.45279,14.179727
+      parent: 1
+      type: Transform
+    - lastUseAttempt: 801.7785186
+      type: NetworkConfigurator
+    - nextSound: 801.9785186
+      type: EmitSoundOnCollide
+  - uid: 7350
+    components:
+    - pos: 1.6171571,-15.436377
+      parent: 1
+      type: Transform
+    - lastUseAttempt: 758.229523
+      type: NetworkConfigurator
+    - nextSound: 758.429523
+      type: EmitSoundOnCollide
   - uid: 11875
     components:
     - pos: -62.65743,10.581851
@@ -81295,6 +81387,15 @@ entities:
       type: Transform
     - canCollide: False
       type: Physics
+  - uid: 12817
+    components:
+    - pos: -3.5500317,9.48799
+      parent: 1
+      type: Transform
+    - lastUseAttempt: 784.4983852
+      type: NetworkConfigurator
+    - nextSound: 784.6983852
+      type: EmitSoundOnCollide
   - uid: 13705
     components:
     - pos: 9.618564,3.575942
