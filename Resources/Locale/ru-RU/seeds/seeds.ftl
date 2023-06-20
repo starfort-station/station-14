@@ -74,3 +74,5 @@ seeds-watermelon-name = арбуза
 seeds-watermelon-display-name = арбуза
 seeds-grape-name = винограда
 seeds-grape-display-name = винограда
+seeds-hellblossom-name = адоцвета
+seeds-hellblossom-display-name = адоцвета
