@@ -219,7 +219,6 @@
       - EncryptionKeyScience
       - EncryptionKeyCommand
       - EncryptionKeyCommon
-      - EncryptionKeyExpedition
 
 - type: entity
   parent: ClothingHeadset
