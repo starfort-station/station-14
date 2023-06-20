@@ -1,0 +1,20 @@
+
+- type: entity
+  name: hellblossom
+  description: Fire, Fire, Fire!
+  id: FoodHellblossom
+  parent: FoodProduceBase
+  components:
+  - type: Sprite
+    sprite: Starfort/Objects/Specific/Hydroponics/hellblossom.rsi
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 12
+        reagents:
+        - ReagentId: Phlogiston
+          Quantity: 2
+        - ReagentId: Napalm
+          Quantity: 10
+  - type: Produce
+    seedId: hellblossom
