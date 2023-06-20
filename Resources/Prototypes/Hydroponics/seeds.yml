@@ -954,3 +954,29 @@
       Min: 1
       Max: 5
       PotencyDivisor: 20
+
+- type: seed
+  id: hellblossom
+  name: seeds-hellblossom-name
+  noun: seeds-noun-seeds
+  displayName: seeds-hellblossom-display-name
+  plantRsi: Objects/Specific/Hydroponics/hellblossom.rsi
+  packetPrototype: HellblossomSeeds
+  productPrototypes:
+    - FoodHellblossom
+  lifespan: 25
+  maturation: 4
+  production: 7
+  yield: 2
+  potency: 10
+  idealHeat: 298
+  growthStages: 3
+  chemicals:
+    Phlogiston:
+      Min: 0
+      Max: 2
+      PotencyDivisor: 50
+    Napalm:
+      Min: 1
+      Max: 10
+      PotencyDivisor: 10
