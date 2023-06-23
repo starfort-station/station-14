@@ -24,3 +24,29 @@
       Min: 1
       Max: 10
       PotencyDivisor: 10
+
+- type: seed
+  id: limitcane
+  name: seeds-limitcane-name
+  noun: seeds-noun-seeds
+  displayName: seeds-limitcane-display-name
+  plantRsi: Starfort/Objects/Specific/Hydroponics/limitcane.rsi
+  packetPrototype: LimitcaneSeeds
+  productPrototypes:
+    - FoodLimitcane
+  lifespan: 70
+  maturation: 16
+  production: 16
+  yield: 1
+  potency: 50
+  idealHeat: 298
+  growthStages: 3
+  chemicals:
+    WeldingFuel:
+      Min: 1
+      Max: 5
+      PotencyDivisor: 20
+    Sulfur:
+      Min: 1
+      Max: 25
+      PotencyDivisor: 4
