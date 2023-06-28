@@ -102,6 +102,7 @@
       - id: HandheldHealthAnalyzer
       - id: SyringeEphedrine
       - id: SyringeTranexamicAcid
+      - id: SyringeBicaridine
       - id: AntiPoisonMedipen
       - id: Bloodpack
         amount: 2

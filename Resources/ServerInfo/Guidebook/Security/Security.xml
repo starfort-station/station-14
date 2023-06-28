@@ -1,3 +1,29 @@
 ﻿<Document>
 
+  ## Снаряжение
+  Сначала у нас есть нелетальные средства, которые стоят на ступень выше, чем просто приказать кому-то сотрудничать с инструкциями. И дубинка-шокер, и станнер способны ограничить движение нападающего, в то время как наручники могут быть применены, чтобы лишить преступника свободы передвижения и доступа к своим рукам.
+  <Box>
+    <GuideEntityEmbed Entity="Stunbaton"/>
+    <GuideEntityEmbed Entity="Handcuffs"/>
+    <GuideEntityEmbed Entity="WeaponDisabler"/>
+  </Box>
+
+  ## Вспышки
+  Вспышки - эффективный инструмент для рассеивания толпы и задержания особо уклоняющихся целей, с большой площадью действия, ослепляющей всех, кто не защищен.
+  Стоит отметить, что вспышки можно использовать как на большой площади (горячая клавиша [color=yellow]Z[/color]), так и если атаковать ими кого-либо при активном [color=red]режиме нанесения вреда[/color]. Важно отметить, что локальные вспышки длятся в [color=yellow]2,5[/color] раза дольше, чем вспышки на большой площади.
+  У охраны и [color=#a4885c]некоторых[/color] других сотрудников есть защита глаз от вспышек.
+  <Box>
+    <GuideEntityEmbed Entity="Flash"/>
+    <GuideEntityEmbed Entity="ClothingEyesGlassesSecurity"/>
+    <GuideEntityEmbed Entity="GrenadeFlashBang"/>
+
+  </Box>
+  ## Смертельное оружие
+  Если возникнет ситуация, Служба Безопасности имеет доступ к лазерным винтовкам, дробовикам, пистолетам и автоматическим винтовкам, способным вести огонь на поражение против любого, кто выступит против станции.
+  <Box>
+  <GuideEntityEmbed Entity="WeaponLaserCarbine"/>
+  <GuideEntityEmbed Entity="WeaponShotgunKammerer"/>
+  <GuideEntityEmbed Entity="WeaponPistolMk58"/>
+  <GuideEntityEmbed Entity="WeaponRifleLecter"/>
+  </Box>
 </Document>

@@ -52,8 +52,8 @@
         - MobLayer
   - type: MobState
     allowedStates:
-      - Alive
-      - Dead
+    - Alive
+    - Dead
   - type: MobThresholds
     thresholds:
       0: Alive
@@ -125,10 +125,6 @@
     layers:
     - map: ["enum.DamageStateVisualLayers.Base"]
       state: running
-  - type: MobState
-    allowedStates:
-      - Alive
-      - Dead
   - type: MobThresholds
     thresholds:
       0: Alive
@@ -137,7 +133,7 @@
     excess: 300
   - type: SlowOnDamage
     speedModifierThresholds:
-      250: 0.7
+      50: 0.7
   - type: Fixtures
     fixtures:
       fix1:
@@ -162,10 +158,6 @@
     layers:
     - map: ["enum.DamageStateVisualLayers.Base"]
       state: running
-  - type: MobState
-    allowedStates:
-      - Alive
-      - Dead
   - type: MobThresholds
     thresholds:
       0: Alive
@@ -177,8 +169,12 @@
   - type: Stamina
     excess: 200
   - type: MovementSpeedModifier
-    baseWalkSpeed : 3.0
-    baseSprintSpeed : 5.5
+    baseWalkSpeed: 2.0
+    baseSprintSpeed: 2.5
+  - type: SlowOnDamage
+    speedModifierThresholds:
+      100: 0.4
+      50: 0.7
   - type: Fixtures
     fixtures:
       fix1:
@@ -203,10 +199,6 @@
     layers:
     - map: ["enum.DamageStateVisualLayers.Base"]
       state: running
-  - type: MobState
-    allowedStates:
-      - Alive
-      - Dead
   - type: MobThresholds
     thresholds:
       0: Alive
@@ -214,8 +206,8 @@
   - type: Stamina
     excess: 1500
   - type: MovementSpeedModifier
-    baseWalkSpeed : 2.8
-    baseSprintSpeed : 3.8
+    baseWalkSpeed: 2.8
+    baseSprintSpeed: 3.8
   - type: MeleeWeapon
     hidden: true
     damage:
@@ -223,7 +215,8 @@
        Brute: 30
   - type: SlowOnDamage
     speedModifierThresholds:
-      1000: 0.7
+      250: 0.4
+      200: 0.7
   - type: Fixtures
     fixtures:
       fix1:
@@ -251,10 +244,6 @@
     layers:
     - map: ["enum.DamageStateVisualLayers.Base"]
       state: running
-  - type: MobState
-    allowedStates:
-      - Alive
-      - Dead
   - type: MobThresholds
     thresholds:
       0: Alive
@@ -262,8 +251,8 @@
   - type: Stamina
     excess: 550
   - type: MovementSpeedModifier
-    baseWalkSpeed : 2.3
-    baseSprintSpeed : 4.2
+    baseWalkSpeed: 2.3
+    baseSprintSpeed: 4.2
   - type: MeleeWeapon
     hidden: true
     damage:
@@ -271,7 +260,8 @@
        Brute: 30
   - type: SlowOnDamage
     speedModifierThresholds:
-      450: 0.7
+      150: 0.5
+      100: 0.7
   - type: Fixtures
     fixtures:
       fix1:
@@ -306,8 +296,8 @@
   - type: Stamina
     excess: 250
   - type: MovementSpeedModifier
-    baseWalkSpeed : 2.7
-    baseSprintSpeed : 6.0
+    baseWalkSpeed: 2.7
+    baseSprintSpeed: 6.0
   - type: MeleeWeapon
     hidden: true
     damage:
@@ -347,10 +337,6 @@
     layers:
     - map: ["enum.DamageStateVisualLayers.Base"]
       state: running
-  - type: MobState
-    allowedStates:
-      - Alive
-      - Dead
   - type: MobThresholds
     thresholds:
       0: Alive
@@ -359,7 +345,7 @@
     excess: 300
   - type: SlowOnDamage
     speedModifierThresholds:
-      250: 0.4
+      50: 0.4
   - type: Fixtures
     fixtures:
       fix1:
@@ -384,7 +370,6 @@
     layers:
     - map: ["enum.DamageStateVisualLayers.Base"]
       state: purple_snake
-  - type: Appearance
   - type: DamageStateVisuals
     states:
       Alive:
@@ -444,7 +429,6 @@
     layers:
     - map: ["enum.DamageStateVisualLayers.Base"]
       state: small_purple_snake
-  - type: Appearance
   - type: DamageStateVisuals
     states:
       Alive:
