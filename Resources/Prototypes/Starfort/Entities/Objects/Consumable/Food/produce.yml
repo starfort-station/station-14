@@ -1,0 +1,42 @@
+
+- type: entity
+  name: hellblossom
+  description: Fire, Fire, Fire!
+  id: FoodHellblossom
+  parent: FoodProduceBase
+  components:
+  - type: Sprite
+    sprite: Starfort/Objects/Specific/Hydroponics/hellblossom.rsi
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 12
+        reagents:
+        - ReagentId: Phlogiston
+          Quantity: 2
+        - ReagentId: Napalm
+          Quantity: 10
+  - type: Produce
+    seedId: hellblossom
+
+- type: entity
+  name: limitcane
+  description: For those who love war crimes.
+  id: FoodLimitcane
+  parent: FoodProduceBase
+  components:
+  - type: Sprite
+    sprite: Starfort/Objects/Specific/Hydroponics/limitcane.rsi
+  - type: Food
+    trash: WeaponLauncherMultipleRocket
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 30
+        reagents:
+        - ReagentId: WeldingFuel
+          Quantity: 5
+        - ReagentId: Sulfur
+          Quantity: 25
+  - type: Produce
+    seedId: limitcane

@@ -1,0 +1,52 @@
+
+- type: seed
+  id: hellblossom
+  name: seeds-hellblossom-name
+  noun: seeds-noun-seeds
+  displayName: seeds-hellblossom-display-name
+  plantRsi: Starfort/Objects/Specific/Hydroponics/hellblossom.rsi
+  packetPrototype: HellblossomSeeds
+  productPrototypes:
+    - FoodHellblossom
+  lifespan: 25
+  maturation: 4
+  production: 7
+  yield: 2
+  potency: 10
+  idealHeat: 298
+  growthStages: 3
+  chemicals:
+    Phlogiston:
+      Min: 0
+      Max: 2
+      PotencyDivisor: 50
+    Napalm:
+      Min: 1
+      Max: 10
+      PotencyDivisor: 10
+
+- type: seed
+  id: limitcane
+  name: seeds-limitcane-name
+  noun: seeds-noun-seeds
+  displayName: seeds-limitcane-display-name
+  plantRsi: Starfort/Objects/Specific/Hydroponics/limitcane.rsi
+  packetPrototype: LimitcaneSeeds
+  productPrototypes:
+    - FoodLimitcane
+  lifespan: 70
+  maturation: 16
+  production: 16
+  yield: 1
+  potency: 50
+  idealHeat: 298
+  growthStages: 3
+  chemicals:
+    WeldingFuel:
+      Min: 1
+      Max: 5
+      PotencyDivisor: 20
+    Sulfur:
+      Min: 1
+      Max: 25
+      PotencyDivisor: 4
