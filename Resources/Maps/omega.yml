@@ -70679,15 +70679,6 @@ entities:
     - pos: -17.5,-20.5
       parent: 4812
       type: Transform
-- proto: StationGoalRandom
-  entities:
-  - uid: 9584
-    components:
-    - pos: -3.4559574,35.21532
-      parent: 4812
-      type: Transform
-    - nextSound: 14.9262143
-      type: EmitSoundOnCollide
 - proto: StationMap
   entities:
   - uid: 3772
