@@ -10,6 +10,7 @@
   - type: CombatMode
   - type: InputMover
   - type: MobMover
+  - type: IgnoreXenoMucilage
   - type: HTN
     rootTask: XenoCompound
     blackboard:
