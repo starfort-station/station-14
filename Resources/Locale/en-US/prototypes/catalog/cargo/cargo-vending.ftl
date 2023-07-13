@@ -69,3 +69,5 @@ ent-CrateVendingMachineRestockExpeditionEquipment = { ent-CrateVendingMachineRes
 
 ent-CrateVendingMachineRestockExpeditionDrobeEquipment = { ent-CrateVendingMachineRestockExpeditionDrobeEquipmentFilled }
     .desc = { ent-CrateVendingMachineRestockExpeditionDrobeEquipmentFilled.desc }
+ent-CrateVendingMachineRestockChemVend = { ent-CrateVendingMachineRestockChemVendFilled }
+    .desc = { CrateVendingMachineRestockChemVendFilled.desc }

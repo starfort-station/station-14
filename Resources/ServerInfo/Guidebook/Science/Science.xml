@@ -20,6 +20,7 @@
 <Box>
 <GuideEntityEmbed Entity="ExosuitFabricator"/>
 <GuideEntityEmbed Entity="MedicalTechFab"/>
+<GuideEntityEmbed Entity="SecurityTechFab"/>
 </Box>
 На протолате вы можете синхронизироваться с сервером, чтобы позволить ему печатать любые рецепты, которые вы разблокировали. Для рецептов требуются различные материалы (сталь, стекло, пластик, золото, плазма), которые можно приобрести в грузовом отсеке или на складе.
 
