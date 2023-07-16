@@ -152,6 +152,7 @@
   - type: SlowOnDamage
     speedModifierThresholds:
       250: 0.7
+  - type: XenoMucilage
   - type: Fixtures
     fixtures:
       fix1:
