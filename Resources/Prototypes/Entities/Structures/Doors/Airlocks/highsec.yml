@@ -55,8 +55,10 @@
     denySound:
       path: /Audio/Machines/airlock_deny.ogg
   - type: Weldable
+    fuel: 10
     time: 10
   - type: Airlock
+    openUnlitVisible: true
   - type: DoorBolt
   - type: Appearance
   - type: WiresVisuals

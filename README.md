@@ -1,6 +1,6 @@
 <p align="center"> <img alt="Space Station 14" width="880" height="300" src="https://raw.githubusercontent.com/space-wizards/asset-dump/de329a7898bb716b9d5ba9a0cd07f38e61f1ed05/github-logo.svg" /></p>
 
-Space Station 14 - это ремейк SS13, который работает на [Robust Toolbox](https://github.com/space-wizards/RobustToolbox), нашем собственном движке, написанном на C#.
+Space Station 14 - это ремейк SS13, который работает на [Robust Toolbox](https://github.com/space-wizards/RobustToolbox), движке, написанном на C#.
 
 Это основной репозиторий для Space Station 14. Чтобы предотвратить форки RobustToolbox, клиент и сервер загружают пакет "контента". Этот пакет контента содержит все необходимое для игры на одном конкретном сервере.
 

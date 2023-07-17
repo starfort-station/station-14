@@ -28449,7 +28449,6 @@ entities:
         paper_label: !type:ContainerSlot
           showEnts: False
           occludes: True
-          ent: null
       type: ContainerContainer
 - proto: ClosetChefFilled
   entities:
@@ -28796,7 +28795,6 @@ entities:
         paper_label: !type:ContainerSlot
           showEnts: False
           occludes: True
-          ent: null
       type: ContainerContainer
 - proto: ClosetL3JanitorFilled
   entities:
@@ -28833,7 +28831,6 @@ entities:
         paper_label: !type:ContainerSlot
           showEnts: False
           occludes: True
-          ent: null
       type: ContainerContainer
 - proto: ClosetL3VirologyFilled
   entities:
@@ -30394,7 +30391,6 @@ entities:
         paper_label: !type:ContainerSlot
           showEnts: False
           occludes: True
-          ent: null
       type: ContainerContainer
 - proto: CrateEngineeringCableBulk
   entities:
@@ -58449,7 +58445,6 @@ entities:
         paper_label: !type:ContainerSlot
           showEnts: False
           occludes: True
-          ent: null
       type: ContainerContainer
 - proto: LockerChemistryFilled
   entities:
@@ -58492,7 +58487,6 @@ entities:
         paper_label: !type:ContainerSlot
           showEnts: False
           occludes: True
-          ent: null
       type: ContainerContainer
 - proto: LockerChiefMedicalOfficerFilled
   entities:
@@ -58528,7 +58522,6 @@ entities:
         paper_label: !type:ContainerSlot
           showEnts: False
           occludes: True
-          ent: null
       type: ContainerContainer
 - proto: LockerDetectiveFilled
   entities:
@@ -58565,7 +58558,6 @@ entities:
         paper_label: !type:ContainerSlot
           showEnts: False
           occludes: True
-          ent: null
       type: ContainerContainer
 - proto: LockerElectricalSuppliesFilled
   entities:
@@ -58669,7 +58661,6 @@ entities:
         paper_label: !type:ContainerSlot
           showEnts: False
           occludes: True
-          ent: null
       type: ContainerContainer
 - proto: LockerHeadOfPersonnelFilled
   entities:
@@ -58706,7 +58697,6 @@ entities:
         paper_label: !type:ContainerSlot
           showEnts: False
           occludes: True
-          ent: null
       type: ContainerContainer
 - proto: LockerHeadOfSecurityFilled
   entities:
@@ -58742,7 +58732,6 @@ entities:
         paper_label: !type:ContainerSlot
           showEnts: False
           occludes: True
-          ent: null
       type: ContainerContainer
 - proto: LockerMedicalFilled
   entities:
@@ -58807,7 +58796,6 @@ entities:
         paper_label: !type:ContainerSlot
           showEnts: False
           occludes: True
-          ent: null
       type: ContainerContainer
 - proto: LockerResearchDirectorFilled
   entities:
@@ -58843,7 +58831,6 @@ entities:
         paper_label: !type:ContainerSlot
           showEnts: False
           occludes: True
-          ent: null
       type: ContainerContainer
 - proto: LockerSalvageSpecialistFilled
   entities:
@@ -70370,15 +70357,6 @@ entities:
     - pos: -21.5,5.5
       parent: 1
       type: Transform
-- proto: StationGoalRandom
-  entities:
-  - uid: 10641
-    components:
-    - pos: -0.91948557,27.779697
-      parent: 1
-      type: Transform
-    - nextSound: 55.1060194
-      type: EmitSoundOnCollide
 - proto: StationMap
   entities:
   - uid: 12501
@@ -83973,15 +83951,6 @@ entities:
     - pos: -28.522102,-7.4028454
       parent: 1
       type: Transform
-  - uid: 10640
-    components:
-    - pos: 1.5078005,6.80188
-      parent: 1
-      type: Transform
-    - nextAttack: -32.850589
-      type: MeleeWeapon
-    - nextSound: -140.439704
-      type: EmitSoundOnCollide
 - proto: YellowOxygenTankFilled
   entities:
   - uid: 8928
