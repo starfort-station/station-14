@@ -868,7 +868,7 @@
   name: CentCom Agent PDA
   description: For some kinds of clown.
   components:
-  - type: PDA
+  - type: Pda
     id: CCAgentIDCard
     state: pda-ert
     penSlot:

@@ -29,6 +29,7 @@ using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Content.Shared.Database;
 using Robust.Shared.Asynchronous;
 using PlayerData = Content.Server.Players.PlayerData;
+using Content.Shared.CCVar;
 
 namespace Content.Server.GameTicking
 {

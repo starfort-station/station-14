@@ -9,16 +9,16 @@
     sprite: Starfort/Objects/Devices/pda.rsi
     netsync: false
     layers:
-    - map: [ "enum.PDAVisualLayers.Base" ]
+    - map: [ "enum.PdaVisualLayers.Base" ]
     - state: "light_overlay"
-      map: [ "enum.PDAVisualLayers.Flashlight" ]
+      map: [ "enum.PdaVisualLayers.Flashlight" ]
       shader: "unshaded"
       visible: false
     - state: "id_overlay"
-      map: [ "enum.PDAVisualLayers.IDLight" ]
+      map: [ "enum.PdaVisualLayers.IdLight" ]
       shader: "unshaded"
       visible: false
-  - type: PDA
+  - type: Pda
     id: FieldTrooperIDCard
     state: pda-fieldtrooper
   - type: Icon
@@ -38,7 +38,7 @@
   description: Looks like brand new camo pda.
   components:
   - type: Sprite
-  - type: PDA
+  - type: Pda
     id: FieldMedicIDCard
     state: pda-fieldmedic
   - type: Icon
@@ -61,7 +61,7 @@
   description: Looks like brand new camo pda.
   components:
   - type: Sprite
-  - type: PDA
+  - type: Pda
     id: FieldScientistIDCard
     state: pda-fieldscientist
   - type: Icon
@@ -80,7 +80,7 @@
   description: Looks like brand new camo pda.
   components:
   - type: Sprite
-  - type: PDA
+  - type: Pda
     id: FieldEngineerIDCard
     state: pda-fieldengineer
   - type: Icon
@@ -93,7 +93,7 @@
       - Multitool
       - DroneUsable
   - type: CartridgeLoader
-    uiKey: enum.PDAUiKey.Key
+    uiKey: enum.PdaUiKey.Key
     preinstalled:
       - NotekeeperCartridge
       - NetProbeCartridge
@@ -119,7 +119,7 @@
   description: A parody of ERT
   components:
   - type: Sprite
-  - type: PDA
+  - type: Pda
     id: FieldCommanderIDCard
     state: pda-fieldcommander
   - type: Icon
@@ -145,7 +145,7 @@
   description: Looks like brand new camo pda.
   components:
   - type: Sprite
-  - type: PDA
+  - type: Pda
     id: FieldRecrutIDCard
     state: pda-fieldrecrut
   - type: Icon
