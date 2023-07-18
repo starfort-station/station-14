@@ -46,3 +46,5 @@ ent-MassHallucinations = { ent-BaseGameRule }
     .desc = { ent-BaseGameRule.desc }
 ent-ImmovableRodSpawn = { ent-BaseGameRule }
     .desc = { ent-BaseGameRule.desc }
+ent-ExpeditionMapSpawn = { ent-BaseGameRule }
+    .desc = { ent-BaseGameRule.desc }

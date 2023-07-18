@@ -96,3 +96,5 @@ ent-CBURNIDcard = CBURN ID card
 ent-CluwneIDCard = cluwne ID card
     .suffix = Unremoveable
     .desc = { ent-IDCardStandard.desc }
+ent-CCAgentIDCard = CentCom Agent ID card
+    .desc = { ent-IDCardStandard.desc }

@@ -1,6 +1,12 @@
 ent-AirlockExpedition = { ent-Airlock }
     .suffix = Экспедиция
     .desc = { ent-Airlock.desc }
+ent-AirlockExpeditionSergeant = { ent-Airlock }
+    .suffix = Экспедиция, Сержант
+    .desc = { ent-Airlock.desc }
+ent-AirlockExpeditionCommand = { ent-Airlock }
+    .suffix = Экспедиция, Командир экспедиций
+    .desc = { ent-Airlock.desc }
 ent-AirlockExpeditionGlass = { ent-AirlockGlass }
     .suffix = Экспедиция
     .desc = { ent-AirlockGlass.desc }

@@ -18,3 +18,5 @@ ent-NitrousOxideTank = nitrous oxide tank
     .desc = Contains a mixture of air and nitrous oxide. Make sure you don't refill it with pure N2O.
 ent-PlasmaTank = plasma tank
     .desc = Contains dangerous plasma. Do not inhale. Extremely flammable.
+ent-EmergencyAirTank = emergency air tank
+    .desc = Used for emergencies. Contains very little oxygen, so try to conserve it until you actually need it.

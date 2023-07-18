@@ -1,0 +1,9 @@
+ent-XenoAlienBurrowerBody = { ent-XenoAlienBurrower }
+    .suffix = Dead
+    .desc = { ent-XenoAlienBurrower.desc }
+ent-XenoAlienPraetorianBody = { ent-XenoAlienPraetorian }
+    .suffix = Dead
+    .desc = { ent-XenoAlienPraetorian.desc }
+ent-XenoAlienDroneBody = { ent-XenoAlienDrone }
+    .suffix = Dead
+    .desc = { ent-XenoAlienDrone.desc }

@@ -1,0 +1,9 @@
+ent-SuitStorageLES = { ent-SuitStorageBase }
+    .suffix = LES
+    .desc = { ent-SuitStorageBase.desc }
+ent-SuitStorageOBS1 = { ent-SuitStorageBase }
+    .suffix = OBS-1
+    .desc = { ent-SuitStorageBase.desc }
+ent-SuitStorageOBS2 = { ent-SuitStorageBase }
+    .suffix = OBS2
+    .desc = { ent-SuitStorageBase.desc }

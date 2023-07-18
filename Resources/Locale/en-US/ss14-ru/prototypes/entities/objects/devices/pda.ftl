@@ -91,3 +91,5 @@ ent-BrigmedicPDA = brigmedic PDA
 ent-CluwnePDA = cluwne PDA
     .desc = Cursed cluwne PDA.
     .suffix = Unremoveable
+ent-CCAgentPDA = CentCom Agent PDA
+    .desc = For some kinds of clown.

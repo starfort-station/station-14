@@ -28,3 +28,6 @@ ent-WeaponShotgunHandmade = самодельный пистолет
 ent-WeaponShotgunBlunderbuss = мушкетон
     .desc = Смертельно опасен на близком расстоянии.
     .suffix = Дробовик, Пират
+ent-WeaponShotgunKammererAdmeme = Адмемерер
+    .desc = Настал час расправы над аборигенами. Использует дробовые патроны 50-го калибра.
+    .suffix = Адмем

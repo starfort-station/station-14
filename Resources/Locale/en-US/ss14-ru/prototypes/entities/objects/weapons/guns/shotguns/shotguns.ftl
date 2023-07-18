@@ -21,3 +21,6 @@ ent-WeaponShotgunHandmade = handmade pistol
 ent-WeaponShotgunBlunderbuss = blunderbuss
     .desc = Deadly at close range.
     .suffix = Pirate
+ent-WeaponShotgunKammererAdmeme = Admemerer
+    .desc = The hour of punishment over the natives has come. Uses .50 shotgun shells.
+    .suffix = Admin

@@ -1,2 +1,2 @@
 ent-FatExtractor = lipid extractor
-    .desc = Safely and efficiently extracts excess fat from a subject.
+    .desc = Безопасно и эффективно удаляет излишки жира из организма.

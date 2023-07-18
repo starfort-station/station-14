@@ -34,3 +34,5 @@ ent-ClothingHeadsetBrigmedic = гарнитура бригмедика
     .desc = Гарнитура, которая помогает слушать предсмертные крики.
 ent-ClothingHeadsetGrey = гарнитура пассажира
     .desc = { ent-ClothingHeadset.desc }
+ent-ClothingHeadsetIAA = гарнитура АВД
+    .desc = Гарнитура, которую использует АВД.

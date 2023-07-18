@@ -31,6 +31,8 @@ ent-MicroBombImplanter = { ent-Implanter }
 ent-MacroBombImplanter = { ent-Implanter }
     .desc = { ent-BaseImplantOnlyImplanter.desc }
     .suffix = Макробомба
+ent-DeathRattleImplanter = имплантер смертохрипа
+    .desc = одноразовый имплантант, который сообщит о вашей смерти любому, кто имеет доступ к радиоканалу синдиката.
 
 # Corvax anti-meta localization end
 

@@ -96,3 +96,5 @@ ent-CBURNIDcard = ID карта РХБЗЗ
 ent-CluwneIDCard = ID карта клувеня
     .suffix = Неснимаемый
     .desc = { ent-IDCardStandard.desc }
+ent-CCAgentIDCard = ID карта АВД
+    .desc = { ent-IDCardStandard.desc }
