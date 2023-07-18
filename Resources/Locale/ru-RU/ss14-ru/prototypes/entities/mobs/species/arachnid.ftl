@@ -1,4 +1,4 @@
-ent-BaseMobArachnid = Урист МакВеб
+ent-BaseMobArachnid = Урист МакАрахнид
     .desc = { ent-BaseMobOrganic.desc }
-ent-MobArachnidDummy = Урист МакХэндс
+ent-MobArachnidDummy = Урист МакФлафф
     .desc = Манекен-арахнид, используемый при создании персонажа.

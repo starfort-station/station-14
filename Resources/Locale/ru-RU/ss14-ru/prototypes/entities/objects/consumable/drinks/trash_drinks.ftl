@@ -1,4 +1,4 @@
-ent-DrinkBottleBaseEmpty = пустая бутылка
+ent-DrinkBottleBaseEmpty = base empty bottle
     .desc = Это пустая бутылка.
 ent-DrinkBottleAbsinthe = бутылка от Джейлбрейк Верте
     .desc = { ent-DrinkBottleBaseEmpty.desc }

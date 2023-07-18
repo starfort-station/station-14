@@ -1,2 +1,2 @@
-ent-ReinforcedUraniumWindow = окно из армированного урана
+ent-ReinforcedUraniumWindow = армированное урановое окно
     .desc = { ent-Window.desc }

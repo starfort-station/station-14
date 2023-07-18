@@ -9,16 +9,14 @@ comp-pda-io-settings-button = Настройки
 comp-pda-io-program-fallback-title = Программа
 comp-pda-io-no-programs-available = Нет доступных программ
 pda-bound-user-interface-show-uplink-title = Открыть аплинк
-pda-bound-user-interface-show-uplink-description = Доступ к вашему аплинку
-pda-bound-user-interface-lock-uplink-title = Заблокировать аплинк
-pda-bound-user-interface-lock-uplink-description = Предотвратить доступ к вашему аплинку без кода.
-pda-bound-user-interface-uplink-tab-description = Получите доступ к аплинку
-pda-bound-user-interface-uplink-tab-title = Аплинк
-comp-pda-ui-station-alert-level = Уровень угрозы: [color={ $color }]{ $level }[/color]
-comp-pda-ui-station-alert-level-instructions = Инструкции: [color=white]{ $instructions }[/color]
-comp-pda-ui-station-time = Продолжительность смены: [color=white]{ $time }[/color]
+pda-bound-user-interface-show-uplink-description = Получите доступ к своему аплинку
+pda-bound-user-interface-lock-uplink-title = Закрыть аплинк
+pda-bound-user-interface-lock-uplink-description = Предотвратите доступ к вашему аплинку персон без кода
 comp-pda-ui-menu-title = КПК
 comp-pda-ui-station = Станция: [color=white]{ $station }[/color]
+comp-pda-ui-station-alert-level = Уровень угрозы: [color={ $color }]{ $level }[/color]
+comp-pda-ui-station-alert-level-instructions = Инструкции: [color=white]{ $instructions }[/color]
+comp-pda-ui-station-time = Длительность смены: [color=white]{ $time }[/color]
 comp-pda-ui-eject-id-button = Извлечь ID
 comp-pda-ui-eject-pen-button = Извлечь ручку
 comp-pda-ui-ringtone-button-description = Измените рингтон вашего КПК

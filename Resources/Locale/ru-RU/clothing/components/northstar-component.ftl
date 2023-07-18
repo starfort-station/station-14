@@ -1,2 +1,2 @@
-north-star-current-battlecry = Боевое искусство:
-north-star-menu-title = Установить боевое искусство
+north-star-current-battlecry = Боевой клич:
+north-star-menu-title = Выбрать боевой клич
