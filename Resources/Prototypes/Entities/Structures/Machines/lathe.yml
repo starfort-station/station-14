@@ -643,6 +643,16 @@
       - ClothingOuterWinterSci
       - ClothingOuterWinterRobo
       - ClothingOuterWinterSec
+      - ClothingUniformJumpsuitFieldCommander
+      - ClothingUniformJumpsuitFieldTrooper
+      - ClothingUniformJumpsuitFieldScientist
+      - ClothingUniformJumpsuitFieldMedic
+      - ClothingUniformJumpsuitFieldEngineer
+      - ClothingUniformJumpsuitFieldRecrut
+      - ClothingNeckIDMarksCommander
+      - ClothingNeckIDMarksSergeant
+      - ClothingNeckIDMarksEngineer
+      - ClothingNeckIDMarksMedic
   - type: MaterialStorage
     whitelist:
       tags:
