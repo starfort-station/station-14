@@ -10,3 +10,5 @@ ent-LockerSergeant = шкаф сержанта
     .desc = { ent-LockerBaseSecure.desc }
 ent-LockerFieldComm = шкаф командира экспедиторов
     .desc = { ent-LockerBaseSecure.desc }
+ent-LockerMedicineBrig = шкаф для медикаментов брига
+    .desc = Набитый до краев медицинским барахлом. Требуется доступ уровня "Медотсек" или "Служба Безопасности".

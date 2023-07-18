@@ -1,0 +1,53 @@
+<Document>
+# Электропитание
+
+SS14 имеет достаточно глубокую систему электроснабжения, через которую все устройства на станции получают электроэнергию. Она разделена на три основные сети: высоковольтную, низковольтную и средневольтную.
+<Box>
+<GuideEntityEmbed Entity="CableHVStack"/>
+<GuideEntityEmbed Entity="CableMVStack"/>
+<GuideEntityEmbed Entity="CableApcStack"/>
+</Box>
+
+## Кабели
+Три основных типа кабелей (HV, MV и LV) могут использоваться для формирования независимых электросетей. Изучите их, чтобы получить описание их применения.
+<Box>
+<GuideEntityEmbed Entity="CableHV"/>
+<GuideEntityEmbed Entity="CableMV"/>
+<GuideEntityEmbed Entity="CableApcExtension"/>
+</Box>
+
+## Накопители энергии
+Каждое представленное устройство хранения электроэнергии выполняет функцию трансформатора для соответствующего уровня мощности (высокого, среднего и низкого), а также обеспечивает достаточно емкий резервный аккумулятор для сглаживания скачков и провалов в потреблении электроэнергии.
+<Box>
+<GuideEntityEmbed Entity="SMESBasic"/>
+<GuideEntityEmbed Entity="SubstationBasic"/>
+<GuideEntityEmbed Entity="APCBasic"/>
+</Box>
+
+## Ramping
+В отличие от того, что можно ожидать от электрической симуляции в видеоигре, электроэнергия не подается мгновенно по запросу. Генераторам и батареям требуется время, чтобы нарастить потребление, что приводит к отключению электричества, когда потребление тока сильно меняется одновременно, например, когда разряжаются батареи.
+
+## Установка накопителей электроэнергии
+Подстанции являются наиболее понятными. Просто установите устройство поверх кабеля НН и ВН, оно будет забирать энергию из кабеля ВН для подачи на НН.
+
+Установка APC также проста, за исключением того, что APC являются исключительно настенным оборудованием и не могут быть установлены на полу. Убедитесь, что он имеет как MV, так и LV соединения.
+
+Для установки SMES необходимо изготовить кабельный терминал, который будет использоваться в качестве входа. SMES будет получать энергию от терминала и отправлять ее снизу. Терминал гарантирует, что вход ВН и выход НН не соединятся. Избегайте подключения SMES к самому себе, это приведет к короткому замыканию, которое может привести к мерцанию или отключению питания в зависимости от степени тяжести.
+
+## APC breaking
+Currently the only power storage device that has a limit to it's power network is APC. As soon as all connected devices and machinery demand more than [color=#a4885c]24kW[/color] it's breaker will pop and everything will turn off.
+<Box>
+<GuideEntityEmbed Entity="APCBasic"/>
+</Box>
+
+## Checking power grid
+1. Use the [color=#a4885c]t-ray scanner[/color] in order to locate cables that are hidden under tiles. (skip this step if cables aren't hidden)
+2. Pry open the tile that is blocking your access to the cable with a [color=#a4885c]crowbar[/color]. (skip this step if cables aren't hidden)
+3. Equip your trusty [color=#a4885c]Multitool[/color] and click on any cable to see powergrid stats.
+<Box>
+<GuideEntityEmbed Entity="Multitool"/>
+<GuideEntityEmbed Entity="Crowbar"/>
+<GuideEntityEmbed Entity="trayScanner"/>
+</Box>
+
+</Document>

@@ -41,7 +41,7 @@ flavor-base-shocking = шокирующе
 flavor-base-cheap = дёшево
 flavor-base-piquant = пикантно
 flavor-base-sharp = резко
-flavor-base-syrupy = сиропный
+flavor-base-syrupy = сиропово
 # lmao
 flavor-base-terrible = ужасно
 
@@ -73,8 +73,8 @@ flavor-complex-batter = как тесто для торта
 flavor-complex-butter = как масло
 flavor-complex-egg = как яйца
 flavor-complex-bacon = как бекон
-flavor-complex-chicken = как курица
-flavor-complex-duck = как утка
+flavor-complex-chicken = как курочка
+flavor-complex-duck = как уточка
 flavor-complex-chocolate = как шоколад
 flavor-complex-pasta = как паста
 flavor-complex-rice = как рис
@@ -138,14 +138,14 @@ flavor-complex-validhunting = как валидхантинг
 
 flavor-complex-people = как люди
 flavor-complex-cat = как кошка
-flavor-complex-homerun = как хоумран
+flavor-complex-homerun = как хоум-ран
 flavor-complex-grass = как трава
 flavor-complex-flare = как дымовая шашка
 flavor-complex-cobwebs = как паутина
-flavor-complex-sadness = как грусть
+flavor-complex-sadness = как тоска
 flavor-complex-hope = как надежда
 flavor-complex-chaos = как хаос
-flavor-complex-squirming = как корчащийся
+flavor-complex-squirming = как шевеление
 flavor-complex-electrons = как электроны
 flavor-complex-parents = как чьи-то родители
 flavor-complex-plastic = как пластик
@@ -196,12 +196,13 @@ flavor-complex-atomic-cola = как накопление бутылочных к
 flavor-complex-cuba-libre = как крепкая кола
 flavor-complex-gin-tonic = как крепкая газировка с лимоном и лаймом
 flavor-complex-screwdriver = как крепкий апельсиновый сок
+flavor-complex-cogchamp = как латунь
+flavor-complex-themartinez = как фиалки и лимонная водка
 
 ### This is exactly what pilk tastes like. I'm not even joking. I might've been a little drunk though
 
-flavor-complex-themartinez = как фиалки и лимонная водка
-flavor-complex-cogchamp = как латунь
-flavor-complex-antifreeze = теплый
+flavor-complex-white-gilgamesh = как слегка газированные сливки
+flavor-complex-antifreeze = как тепло
 flavor-complex-pilk = как сладкое молоко
 
 # Medicine/chemical-specific flavors.

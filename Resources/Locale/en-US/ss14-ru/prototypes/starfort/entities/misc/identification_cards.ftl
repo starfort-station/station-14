@@ -1,0 +1,12 @@
+ent-FieldTrooperIDCard = field trooper ID card
+    .desc = { ent-PassengerIDCard.desc }
+ent-FieldMedicIDCard = field medic ID card
+    .desc = { ent-FieldTrooperIDCard.desc }
+ent-FieldScientistIDCard = field scientist ID card
+    .desc = { ent-FieldTrooperIDCard.desc }
+ent-FieldEngineerIDCard = field engineer ID card
+    .desc = { ent-FieldTrooperIDCard.desc }
+ent-FieldCommanderIDCard = field commander ID card
+    .desc = { ent-FieldTrooperIDCard.desc }
+ent-FieldRecrutIDCard = field recrut ID card
+    .desc = { ent-FieldTrooperIDCard.desc }

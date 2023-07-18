@@ -1,15 +1,4 @@
-mopping-system-tool-full = { CAPITALIZE(THE($used)) } полон!
-mopping-system-puddle-diluted = Вы разбавляете лужу.
-mopping-system-puddle-success = Вы вытираете лужу.
-mopping-system-release-to-floor = Вы выдавливаете немного жидкости на пол.
-mopping-system-target-container-full = { CAPITALIZE(THE($target)) } заполнен!
 mopping-system-target-container-empty = В { CAPITALIZE($target) } пусто!
-mopping-system-target-container-too-small = { CAPITALIZE(THE($target)) } слишком мал для этого!
-mopping-system-refillable-success = Вы выжимаете { THE($used) } в { THE($target) }.
-mopping-system-drainable-success = Вы смачиваете { THE($used) } из { THE($target) }.
-mopping-system-hand-squeeze-still-wet = Вы выжимаете { THE($used) } руками. Она все еще мокрое.
-mopping-system-hand-squeeze-little-wet = Вы выжимаете { THE($used) } руками. Она все еще немного влажная.
-mopping-system-hand-squeeze-dry = Вы выжимаете { THE($used) } руками. Она практически сухая.
 mopping-system-target-container-empty-water = В { CAPITALIZE($target) } нет воды!
 mopping-system-puddle-space = В { $used } полно воды
 mopping-system-puddle-evaporate = { $target } испаряется

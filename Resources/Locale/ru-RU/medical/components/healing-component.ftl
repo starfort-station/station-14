@@ -1,3 +1,3 @@
-medical-item-finished-using = Вы закончили исцеление с помощью { $item }
-medical-item-cant-use = Нет повреждений, которые вы можете исцелить с помощью { $item }
-medical-item-stop-bleeding = У них прекратилось кровотечение
+medical-item-finished-using = Вы закончили лечить при помощи { $item }
+medical-item-cant-use = Нет повреждений, которые можно вылечить при помощи { $item }
+medical-item-stop-bleeding = Кровотечение было остановлено.

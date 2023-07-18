@@ -1,0 +1,12 @@
+ent-ClothingUniformJumpsuitFieldTrooper = field trooper jumpsuit
+    .desc = Uniform for expedition squad performing operations in deep space.
+ent-ClothingUniformJumpsuitFieldScientist = field scientist jumpsuit
+    .desc = Uniform for expedition squad performing operations in deep space.
+ent-ClothingUniformJumpsuitFieldMedic = field medic jumpsuit
+    .desc = Uniform for expedition squad performing operations in deep space.
+ent-ClothingUniformJumpsuitFieldEngineer = field engineer jumpsuit
+    .desc = Uniform for expedition squad performing operations in deep space.
+ent-ClothingUniformJumpsuitFieldCommander = field commander jumpsuit
+    .desc = Uniform for convenient management of your freight forwarders.
+ent-ClothingUniformJumpsuitFieldRecrut = field recrut jumpsuit
+    .desc = Uniform for expedition squad performing operations in deep space.

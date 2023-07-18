@@ -51,7 +51,7 @@
 - type: deviceFrequency
   id: SurveillanceCameraExpedition
   name: device-frequency-prototype-name-surveillance-camera-expedition
-  frequency: 1940 
+  frequency: 1940
 
 - type: deviceFrequency
   id: AtmosMonitor

@@ -1,39 +1,39 @@
-# Экран загрузки
+# Loading Screen
 
 replay-loading = Загрузка ({ $cur }/{ $total })
 replay-loading-reading = Чтение файлов
 replay-loading-processing = Обработка файлов
-replay-loading-spawning = Порождение сущностей
+replay-loading-spawning = Спавн сущностей
 replay-loading-initializing = Инициализация сущностей
 replay-loading-starting = Запуск сущностей
 replay-loading-failed =
-    Не удалось загрузить воспроизведение:
+    Не удалось загрузить повтор:
     { $reason }
-# Главное меню
-replay-menu-subtext = Клиент воспроизведения
+# Main Menu
+replay-menu-subtext = Повторы
 replay-menu-load = Загрузить выбранный повтор
-replay-menu-select = Выбрать воспроизведение
-replay-menu-open = Открыть папку воспроизведения
-replay-menu-none = Не найдено ни одного повтора.
-# Информационное окно главного меню
-replay-info-title = Информация о воспроизведении
+replay-menu-select = Выбрать повтор
+replay-menu-open = Открыть папку повторов
+replay-menu-none = Повторы не найдены.
+# Main Menu Info Box
+replay-info-title = Информация о повторе
 replay-info-none-selected = Повтор не выбран
-replay-info-invalid = [color=red]Выбран недействительный повтор[/color]
+replay-info-invalid = [color=red]Выбран неверный повтор[/color]
 replay-info-info =
-    { "[" }color=gray]Выбрано:[/color] { $name } ({ $file })
-    { "[" }color=gray]Время:[/color] { $time }
-    { "[" }color=gray]ID раунда:[/color] { $roundId }
-    { "[" }color=gray]Продолжительность:[/color] { $duration }
-    { "[" }color=gray]ForkId:[/color] { $forkId }
-    { "[" }color=gray]Версия:[/color] { $version }
-    { "[" }color=gray]Engine:[/color] { $engVersion }
-    { "[" }color=gray]Type Hash:[/color] { $hash }
-    { "[" }color=gray]Comp Hash:[/color] { $compHash }
-# Окно выбора воспроизведения
-replay-menu-select-title = Выбрать воспроизведение
-# Глаголы, связанные с воспроизведением
-replay-verb-spectate = Смотреть
-# команда
-cmd-replay-spectate-help = replay_spectate [сущность]
+    { "[" }color=gray]Выбрано:[/color]  { $name } ({ $file })
+    { "[" }color=gray]Время:[/color]   { $time }
+    { "[" }color=gray]ID раунда:[/color]   { $roundId }
+    { "[" }color=gray]Продолжительность:[/color]   { $duration }
+    { "[" }color=gray]ForkId:[/color]   { $forkId }
+    { "[" }color=gray]Version:[/color]   { $version }
+    { "[" }color=gray]Engine:[/color]   { $engVersion }
+    { "[" }color=gray]Type Hash:[/color]   { $hash }
+    { "[" }color=gray]Comp Hash:[/color]   { $compHash }
+# Replay selection window
+replay-menu-select-title = Выбрать повтор
+# Replay related verbs
+replay-verb-spectate = Наблюдать
+# command
+cmd-replay-spectate-help = replay_spectate [сущность (опционально)]
 cmd-replay-spectate-desc = Прикрепляет или открепляет локального игрока к заданному uid сущности.
-cmd-replay-spectate-hint = Необязательный идентификатор сущности
+cmd-replay-spectate-hint = Опциональный EntityUid

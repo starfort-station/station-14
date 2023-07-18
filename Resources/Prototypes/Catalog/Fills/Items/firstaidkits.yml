@@ -33,8 +33,8 @@
   components:
   - type: StorageFill
     contents:
-      - id: Brutepack
-        amount: 2 # TO DO: Advanced brute pack
+      - id: MedicatedSuture
+        amount: 2
       - id: Gauze
       - id: Bloodpack
       - id: SyringeTranexamicAcid
@@ -85,9 +85,9 @@
   components:
   - type: StorageFill
     contents:
-      - id: Brutepack
-        amount: 2 # TO DO: Advanced fills
-      - id: Ointment
+      - id: MedicatedSuture
+        amount: 2
+      - id: RegenerativeMesh
       - id: Gauze
       - id: Bloodpack
         amount: 2
@@ -100,11 +100,13 @@
   - type: StorageFill
     contents:
       - id: HandheldHealthAnalyzer
+      - id: MedicatedSuture
+      - id: RegenerativeMesh
       - id: SyringeEphedrine
       - id: SyringeTranexamicAcid
+      - id: SyringeBicaridine
       - id: AntiPoisonMedipen
       - id: Bloodpack
-        amount: 2
       - id: PillTricordrazine
         amount: 2
 
