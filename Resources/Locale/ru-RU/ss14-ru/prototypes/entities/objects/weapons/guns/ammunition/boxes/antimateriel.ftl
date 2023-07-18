@@ -1,2 +1,2 @@
-ent-MagazineBoxAntiMateriel = ящик для боеприпасов (антиматериальный .60)
+ent-MagazineBoxAntiMateriel = коробка патронов (.60 антиматериальные)
     .desc = { ent-BaseItem.desc }

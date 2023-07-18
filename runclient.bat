@@ -1,6 +1,7 @@
 @echo off
 set PDIR=%~dp0
 cd %PDIR%Bin\Content.Client
-start Content.Client.exe %*
+Content.Client.exe %*
 cd %PDIR%
 set PDIR=
+pause

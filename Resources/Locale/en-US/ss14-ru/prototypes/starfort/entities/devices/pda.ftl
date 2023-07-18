@@ -1,0 +1,12 @@
+ent-FieldTrooperPDA = field trooper PDA
+    .desc = Looks like brand new camo pda.
+ent-FieldMedicPDA = field medic PDA
+    .desc = Looks like brand new camo pda.
+ent-FieldScientistPDA = field scientist PDA
+    .desc = Looks like brand new camo pda.
+ent-FieldEngineerPDA = field engineer PDA
+    .desc = Looks like brand new camo pda.
+ent-FieldCommanderPDA = field commander PDA
+    .desc = A parody of ERT
+ent-FieldRecrutPDA = field recrut PDA
+    .desc = Looks like brand new camo pda.

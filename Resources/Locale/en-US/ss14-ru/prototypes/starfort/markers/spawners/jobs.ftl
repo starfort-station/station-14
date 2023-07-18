@@ -1,0 +1,12 @@
+ent-SpawnPointFieldRecrut = FieldRecrut
+    .desc = { ent-SpawnPointJobBase.desc }
+ent-SpawnPointFieldTrooper = FieldTrooper
+    .desc = { ent-SpawnPointJobBase.desc }
+ent-SpawnPointFieldMedic = FieldMedic
+    .desc = { ent-SpawnPointJobBase.desc }
+ent-SpawnPointFieldScientist = FieldScientist
+    .desc = { ent-SpawnPointJobBase.desc }
+ent-SpawnPointFieldEngineer = FieldEngineer
+    .desc = { ent-SpawnPointJobBase.desc }
+ent-SpawnPointFieldCommander = FieldCommander
+    .desc = { ent-SpawnPointJobBase.desc }

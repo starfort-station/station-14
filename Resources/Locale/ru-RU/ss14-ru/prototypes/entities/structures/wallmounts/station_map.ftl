@@ -1,11 +1,8 @@
-ent-StationMap = карта станции
-    .desc = Виртуальная карта окрестностей станции.
-    .suffix = Настенный
 ent-StationMapBroken = карта станции
     .desc = Виртуальная карта окрестностей станции.
-    .suffix = Настенный, Сломанный
+    .suffix = Настенный, Сломано
+ent-StationMap = карта станции
+    .desc = { ent-StationMapBroken.desc }
+    .suffix = Настенный
 ent-StationMapAssembly = каркас карты станции
     .desc = Каркас карты станции.
-ent-WallStationMap = карта станции
-    .suffix = Настенный
-    .desc = { ent-WallStationMapBroken.desc }

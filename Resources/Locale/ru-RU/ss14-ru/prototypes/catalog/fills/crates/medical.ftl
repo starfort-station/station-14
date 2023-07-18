@@ -1,5 +1,3 @@
-ent-CrateMedicalDefib = ящик с дефибриллятором
-    .desc = { ent-CrateMedical.desc }
 ent-CrateMedicalSupplies = ящик медицинских припасов
     .desc = Стандартные медикаменты.
 ent-CrateChemistrySupplies = ящик химического оборудования
@@ -20,7 +18,7 @@ ent-CrateEmergencyAdvancedKit = Продвинутый аварийный наб
     .desc = Ящик, содержащий 4 продвинутые аптечки первой помощи.
 ent-CrateEmergencyRadiationKit = Аварийный набор выведения радиации
     .desc = Ящик, содержащий 4 набора для выведения радиации.
-ent-CrateBodyBags = { ent-CrateMedical }
-    .desc = { ent-CrateMedical.desc }
+ent-CrateBodyBags = ящик мешков для тела
+    .desc = Содержит 10 мешков тела.
 ent-CrateVirologyBiosuit = ящик вирусологических биозащитных костюмов
     .desc = Содержит 2 костюма биологической защиты, чтобы никакая зараза не отвлекала вас от лечения экипажа. Чтобы открыть, необходим уровень доступа Медицинский.

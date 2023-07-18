@@ -10,7 +10,7 @@
     interactSuccessString: hugging-success-generic
     interactSuccessSound: /Audio/Effects/thudswoosh.ogg
     messagePerceivedByOthers: hugging-success-generic-others
-  - type: Mind
+  - type: MindContainer
     showExamineInfo: true
   - type: Input
     context: "human"
@@ -29,7 +29,7 @@
   - type: CameraRecoil
   - type: Examiner
   - type: CanHostGuardian
-  - type: Faction
+  - type: NpcFactionMember
     factions:
     - NanoTrasen
 
@@ -44,7 +44,7 @@
       prototypes: [SyndicateOperativeGearExtremelyBasic]
     - type: RandomMetadata
       nameSegments: [corvax_names_death_commando] # Corvax-Localization
-    - type: Faction
+    - type: NpcFactionMember
       factions:
       - Syndicate
 
@@ -74,6 +74,6 @@
       nameSegments:
       - Агент
       - SyndicateNamesNormal
-    - type: Faction
+    - type: NpcFactionMember
       factions:
       - Syndicate
