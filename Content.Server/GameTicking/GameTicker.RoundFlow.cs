@@ -33,7 +33,7 @@ using PlayerData = Content.Server.Players.PlayerData;
 using Content.Shared.CCVar;
 using Content.Shared.Database;
 using Robust.Shared.Asynchronous;
-using PlayerData = Content.Server.Players.PlayerData;
+
 using System.Net.Http;
 using Newtonsoft.Json;
 using System.Text.Json;
