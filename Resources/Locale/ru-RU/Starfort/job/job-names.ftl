@@ -6,7 +6,7 @@ job-name-field-scientist = Полевой Ученый
 job-name-field-engineer = Полевой Инженер
 job-name-field-commander = Командир Экспедиции
 # Role timers - Make these alphabetical or I cut you
-JobCentralCommandOfficial = Агент внутрених дел
+JobCentralCommandOfficial = Агент Внутренних Дел
 JobFieldRecrut = Новобранец
 JobFieldTrooper = Солдат
 JobFieldMedic = Полевой Врач
