@@ -1,15 +1,15 @@
-job-name-ccagent = Агент внутренних дел
+job-name-ccagent = Агент Внутренних Дел
 job-name-field-recrut = Новобранец
 job-name-field-trooper = Солдат
-job-name-field-medic = Полевой врач
-job-name-field-scientist = Полевой ученый
-job-name-field-engineer = Полевой инженер
-job-name-field-commander = Командир экспедиции
+job-name-field-medic = Полевой Врач
+job-name-field-scientist = Полевой Ученый
+job-name-field-engineer = Полевой Инженер
+job-name-field-commander = Командир Экспедиции
 # Role timers - Make these alphabetical or I cut you
 JobCentralCommandOfficial = Агент внутрених дел
 JobFieldRecrut = Новобранец
 JobFieldTrooper = Солдат
-JobFieldMedic = Полевой врач
-JobFieldScientist = Полевой ученый
-JobFieldEngineer = Полевой инженер
-JobFieldCommander = Командир экспедиции
+JobFieldMedic = Полевой Врач
+JobFieldScientist = Полевой Ученый
+JobFieldEngineer = Полевой Инженер
+JobFieldCommander = Командир Экспедиции
