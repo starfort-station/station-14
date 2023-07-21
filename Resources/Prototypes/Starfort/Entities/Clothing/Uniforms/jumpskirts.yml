@@ -1,0 +1,10 @@
+- type: entity
+  parent: ClothingUniformSkirtBase
+  id: ClothingUniformJumpskirtColorBlueMiniSkirtColorBeige
+  name: Navy Blue Women's Top with Beige V-Neck Mini Skirt
+  description: Fashionable women's top in dark blue with a beige miniskirt with a v-neck.
+  components:
+  - type: Sprite
+    sprite: Starfort/Clothing/Uniforms/Jumpskirt/miniskirt.rsi
+  - type: Clothing
+    sprite: Starfort/Clothing/Uniforms/Jumpskirt/miniskirt.rsi
