@@ -110,8 +110,7 @@ ent-StationGoalMedicines = { ent-StationGoalPaper }
     .suffix = Medicines
     .desc = { ent-StationGoalPaper.desc }
 ent-StationGoalRandom = { ent-['PresentBase', 'BaseItem'] }
-
-  .suffix = Filled Safe
-  .desc = { ent-['PresentBase', 'BaseItem'].desc }
+    .suffix = Filled Safe
+    .desc = { ent-['PresentBase', 'BaseItem'].desc }
 ent-TrashEnvelope = trash
     .desc = Crumpled piece of paper.
