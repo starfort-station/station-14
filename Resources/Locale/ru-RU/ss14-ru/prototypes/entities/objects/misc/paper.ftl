@@ -109,9 +109,8 @@ ent-StationGoalProvisions = { ent-StationGoalPaper }
 ent-StationGoalMedicines = { ent-StationGoalPaper }
     .suffix = Лекарства
     .desc = { ent-StationGoalPaper.desc }
-ent-StationGoalRandom = { ent-['PresentBase', 'BaseItem'] }
-
-    .suffix = Заполненный сейф
-    .desc = { ent-['PresentBase', 'BaseItem'].desc }
+ent-StationGoalRandom = конверт
+    .suffix = Заполненный, Безопасный
+    .desc = Конверт с печатью ЦентКома.
 ent-TrashEnvelope = Мусор
     .desc = Скомканный лист бумаги.
