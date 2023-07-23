@@ -74710,6 +74710,13 @@ entities:
     - pos: 1.5,-9.5
       parent: 14329
       type: Transform
+- proto: LockerParamedicFilled
+  entities:
+  - uid: 1441
+    components:
+    - pos: -37.5,-10.5
+      parent: 1
+      type: Transform
 - proto: LockerQuarterMasterFilled
   entities:
   - uid: 1831
@@ -90482,6 +90489,13 @@ entities:
   - uid: 9903
     components:
     - pos: -18.5,-3.5
+      parent: 1
+      type: Transform
+- proto: SpawnPointParamedic
+  entities:
+  - uid: 15585
+    components:
+    - pos: -37.5,-11.5
       parent: 1
       type: Transform
 - proto: SpawnPointPsychologist
@@ -106642,31 +106656,6 @@ entities:
     - pos: -149.5,-11.5
       parent: 1
       type: Transform
-- proto: WardrobeMedicalDoctorFilled
-  entities:
-  - uid: 1441
-    components:
-    - pos: -37.5,-10.500019
-      parent: 1
-      type: Transform
-    - air:
-        volume: 200
-        immutable: False
-        temperature: 293.1495
-        moles:
-        - 5.486693
-        - 20.640417
-        - 0
-        - 0
-        - 0
-        - 0
-        - 0
-        - 0
-        - 0
-        - 0
-        - 0
-        - 0
-      type: EntityStorage
 - proto: WardrobePrisonFilled
   entities:
   - uid: 2409
