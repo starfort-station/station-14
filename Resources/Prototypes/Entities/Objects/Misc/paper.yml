@@ -380,15 +380,22 @@
       color: "#3f3f3f"
     - state: folder-base
 
+# Stamps
 - type: entity
-  name: mime's rubber stamp
+  name: generic rubber stamp
   parent: BaseItem
-  id: RubberStampMime
+  id: RubberStampBase
   description: A rubber stamp for stamping important documents.
+  abstract: true
   components:
   - type: Stamp
-    stampedName: stamp-component-stamped-name-mime
-    stampState: "paper_stamp-mime"
+    stampedName: stamp-component-stamped-name-default
+    stampState: "paper_stamp-generic"
+    sound:
+      path: /Audio/Items/Stamp/thick_stamp_sub.ogg
+      params:
+        volume: -2
+        maxdistance: 5
   - type: Sprite
     sprite: Objects/Misc/bureaucracy.rsi
     state: stamp-mime
@@ -396,8 +403,23 @@
     size: 3
 
 - type: entity
+  name: alternate rubber stamp
+  parent: RubberStampBase
+  id: RubberStampBaseAlt
+  abstract: true
+  components:
+  - type: Stamp
+    stampedName: stamp-component-stamped-name-default
+    stampState: "paper_stamp-generic"
+    sound:
+      path: /Audio/Items/Stamp/automatic_stamp.ogg
+      params:
+        volume: -2
+        maxdistance: 5
+
+- type: entity
   name: captain's rubber stamp
-  parent: RubberStampMime
+  parent: RubberStampBase
   id: RubberStampCaptain
   components:
   - type: Stamp
@@ -409,7 +431,7 @@
 
 - type: entity
   name: CentCom rubber stamp
-  parent: RubberStampMime
+  parent: RubberStampBase
   id: RubberStampCentcom
   components:
   - type: Stamp
@@ -421,7 +443,7 @@
 
 - type: entity
   name: chaplain's rubber stamp
-  parent: RubberStampMime
+  parent: RubberStampBase
   id: RubberStampChaplain
   components:
   - type: Stamp
@@ -433,7 +455,7 @@
 
 - type: entity
   name: clown's rubber stamp
-  parent: RubberStampMime
+  parent: RubberStampBase
   id: RubberStampClown
   components:
   - type: Stamp
@@ -447,8 +469,20 @@
       - ClownRubberStamp
 
 - type: entity
+  name: chief engineer's rubber stamp
+  parent: RubberStampBase
+  id: RubberStampCE
+  components:
+  - type: Stamp
+    stampedName: stamp-component-stamped-name-ce
+    stampState: "paper_stamp-ce"
+  - type: Sprite
+    sprite: Objects/Misc/bureaucracy.rsi
+    state: stamp-ce
+
+- type: entity
   name: chief medical officer's rubber stamp
-  parent: RubberStampMime
+  parent: RubberStampBase
   id: RubberStampCMO
   components:
   - type: Stamp
@@ -459,32 +493,8 @@
     state: stamp-cmo
 
 - type: entity
-  name: DENIED rubber stamp
-  parent: RubberStampMime
-  id: RubberStampDenied
-  components:
-  - type: Stamp
-    stampedName: stamp-component-stamped-name-denied
-    stampState: "paper_stamp-deny"
-  - type: Sprite
-    sprite: Objects/Misc/bureaucracy.rsi
-    state: stamp-deny
-
-- type: entity
-  name: APPROVED rubber stamp
-  parent: RubberStampMime
-  id: RubberStampApproved
-  components:
-  - type: Stamp
-    stampedName: stamp-component-stamped-name-approved
-    stampState: "paper_stamp-iaa"
-  - type: Sprite
-    sprite: Objects/Misc/bureaucracy.rsi
-    state: stamp-iaa
-
-- type: entity
   name: head of personnel's rubber stamp
-  parent: RubberStampMime
+  parent: RubberStampBase
   id: RubberStampHop
   components:
   - type: Stamp
@@ -496,7 +506,7 @@
 
 - type: entity
   name: head of security's rubber stamp
-  parent: RubberStampMime
+  parent: RubberStampBase
   id: RubberStampHos
   components:
   - type: Stamp
@@ -507,8 +517,21 @@
     state: stamp-hos
 
 - type: entity
+  name: mime's rubber stamp
+  parent: RubberStampBase
+  id: RubberStampMime
+  components:
+  - type: Stamp
+    stampedName: stamp-component-stamped-name-mime
+    stampState: "paper_stamp-mime"
+    # TODO remove sound from mime's rubber stamp
+  - type: Sprite
+    sprite: Objects/Misc/bureaucracy.rsi
+    state: stamp-mime
+
+- type: entity
   name: quartermaster's rubber stamp
-  parent: RubberStampMime
+  parent: RubberStampBase
   id: RubberStampQm
   components:
   - type: Stamp
@@ -520,7 +543,7 @@
 
 - type: entity
   name: research director's rubber stamp
-  parent: RubberStampMime
+  parent: RubberStampBase
   id: RubberStampRd
   components:
   - type: Stamp
@@ -531,20 +554,8 @@
     state: stamp-rd
 
 - type: entity
-  name: warden's rubber stamp
-  parent: RubberStampMime
-  id: RubberStampWarden
-  components:
-  - type: Stamp
-    stampedName: stamp-component-stamped-name-warden
-    stampState: "paper_stamp-warden"
-  - type: Sprite
-    sprite: Objects/Misc/bureaucracy.rsi
-    state: stamp-warden
-
-- type: entity
   name: trader's rubber stamp
-  parent: RubberStampMime
+  parent: RubberStampBase
   id: RubberStampTrader
   components:
   - type: Stamp
@@ -556,7 +567,7 @@
 
 - type: entity
   name: syndicate rubber stamp
-  parent: RubberStampMime
+  parent: RubberStampBase
   id: RubberStampSyndicate
   components:
   - type: Stamp
@@ -567,121 +578,40 @@
     state: stamp-syndicate
 
 - type: entity
-  name: chief engineer's rubber stamp
-  parent: RubberStampMime
-  id: RubberStampCE
+  name: warden's rubber stamp
+  parent: RubberStampBase
+  id: RubberStampWarden
   components:
   - type: Stamp
-    stampedName: stamp-component-stamped-name-ce
-    stampState: "paper_stamp-ce"
+    stampedName: stamp-component-stamped-name-warden
+    stampState: "paper_stamp-warden"
   - type: Sprite
     sprite: Objects/Misc/bureaucracy.rsi
-    state: stamp-ce
+    state: stamp-warden
 
 - type: entity
-  parent: Paper
-  id: StationGoalPaper
-  name: station goal
-  description: "It looks like you have a lot of work to do."
+  name: APPROVED rubber stamp
+  parent: RubberStampBaseAlt
+  id: RubberStampApproved
   components:
-    - type: Paper
-      stampState: paper_stamp-cent
-      stampedBy:
-        - ЦентКом #CentComm
-
-- type: entity
-  parent: StationGoalPaper
-  id: StationGoalShuttle
-  suffix: Shuttle
-  components:
-    - type: Paper
-      content: station-goal-shuttle
-
-- type: entity
-  parent: StationGoalPaper
-  id: StationGoalRestoration
-  suffix: Restoration
-  components:
-    - type: Paper
-      content: station-goal-restoration
-
-- type: entity
-  parent: StationGoalPaper
-  id: StationGoalOrbitalStorage
-  suffix: OrbitalStorage
-  components:
-    - type: Paper
-      content: station-goal-orbital-storage
-
-- type: entity
-  parent: StationGoalPaper
-  id: StationGoalArtifacts
-  suffix: Artifacts
-  components:
-    - type: Paper
-      content: station-goal-artifacts
-
-- type: entity
-  parent: StationGoalPaper
-  id: StationGoalRipley
-  suffix: Ripley
-  components:
-    - type: Paper
-      content: station-goal-ripley
-
-- type: entity
-  parent: StationGoalPaper
-  id: StationGoalMoney
-  suffix: Money
-  components:
-    - type: Paper
-      content: station-goal-money
-
-- type: entity
-  parent: StationGoalPaper
-  id: StationGoalProvisions
-  suffix: Provisions
-  components:
-    - type: Paper
-      content: station-goal-provisions
-
-- type: entity
-  parent: StationGoalPaper
-  id: StationGoalMedicines
-  suffix: Medicines
-  components:
-    - type: Paper
-      content: station-goal-medicines
-
-- type: entity
-  id: StationGoalRandom
-  parent: [PresentBase, BaseItem]
-  suffix: Filled Safe
-  components:
-  - type: SpawnItemsOnUse
-    items:
-      - id: TrashEnvelope
-      - id: StationGoalShuttle
-        orGroup: GiftPool
-      - id: StationGoalRestoration
-        orGroup: GiftPool
-      - id: StationGoalOrbitalStorage
-        orGroup: GiftPool
-      - id: StationGoalRipley
-        orGroup: GiftPool
-      - id: StationGoalMoney
-        orGroup: GiftPool
-      - id: StationGoalProvisions
-        orGroup: GiftPool
-      - id: StationGoalMedicines
-        orGroup: GiftPool
-    sound:
-      path: /Audio/Effects/unwrap.ogg
+  - type: Stamp
+    stampedName: stamp-component-stamped-name-approved
+    stampState: "paper_stamp-iaa"
   - type: Sprite
     sprite: Objects/Misc/bureaucracy.rsi
-    netsync: false
-    layers:
-      - state: envelope_station_goal
+    state: stamp-iaa
+
+- type: entity
+  name: DENIED rubber stamp
+  parent: RubberStampBaseAlt
+  id: RubberStampDenied
+  components:
+  - type: Stamp
+    stampedName: stamp-component-stamped-name-denied
+    stampState: "paper_stamp-deny"
+  - type: Sprite
+    sprite: Objects/Misc/bureaucracy.rsi
+    state: stamp-deny
 
 - type: entity
   id: TrashEnvelope

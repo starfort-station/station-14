@@ -1,0 +1,69 @@
+- type: latheRecipe
+  id: ClothingUniformJumpsuitFieldCommander
+  result: ClothingUniformJumpsuitFieldCommander
+  completetime: 4
+  materials:
+    Cloth: 300
+
+- type: latheRecipe
+  id: ClothingUniformJumpsuitFieldTrooper
+  result: ClothingUniformJumpsuitFieldTrooper
+  completetime: 4
+  materials:
+    Cloth: 300
+
+- type: latheRecipe
+  id: ClothingUniformJumpsuitFieldScientist
+  result: ClothingUniformJumpsuitFieldScientist
+  completetime: 4
+  materials:
+    Cloth: 300
+
+- type: latheRecipe
+  id: ClothingUniformJumpsuitFieldMedic
+  result: ClothingUniformJumpsuitFieldMedic
+  completetime: 4
+  materials:
+    Cloth: 300
+
+- type: latheRecipe
+  id: ClothingUniformJumpsuitFieldEngineer
+  result: ClothingUniformJumpsuitFieldEngineer
+  completetime: 4
+  materials:
+    Cloth: 300
+
+- type: latheRecipe
+  id: ClothingUniformJumpsuitFieldRecrut
+  result: ClothingUniformJumpsuitFieldRecrut
+  completetime: 4
+  materials:
+    Cloth: 300
+
+- type: latheRecipe
+  id: ClothingNeckIDMarksCommander
+  result: ClothingNeckIDMarksCommander
+  completetime: 2
+  materials:
+    Cloth: 50
+
+- type: latheRecipe
+  id: ClothingNeckIDMarksSergeant
+  result: ClothingNeckIDMarksSergeant
+  completetime: 2
+  materials:
+    Cloth: 50
+
+- type: latheRecipe
+  id: ClothingNeckIDMarksEngineer
+  result: ClothingNeckIDMarksEngineer
+  completetime: 2
+  materials:
+    Cloth: 50
+
+- type: latheRecipe
+  id: ClothingNeckIDMarksMedic
+  result: ClothingNeckIDMarksMedic
+  completetime: 2
+  materials:
+    Cloth: 50

@@ -1,0 +1,14 @@
+ent-WallSolidRadioactive = { ent-WallSolid }
+    .suffix = radioactive
+    .desc = { ent-WallSolid.desc }
+ent-WallSolidRustRadioactive = { ent-WallSolidRust }
+    .suffix = rust, radioactive
+    .desc = { ent-WallSolidRust.desc }
+ent-WallReinforcedRadioactive = { ent-WallReinforced }
+    .suffix = radioactive
+    .desc = { ent-WallReinforced.desc }
+ent-WallReinforcedShuttle = reinforced shuttle wall
+    .desc = { ent-WallShuttle.desc }
+ent-WallReinforcedShuttleDiagonal = reinforced shuttle wall
+    .suffix = diagonal
+    .desc = { ent-WallShuttleDiagonal.desc }

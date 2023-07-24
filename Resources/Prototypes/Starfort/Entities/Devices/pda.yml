@@ -93,6 +93,7 @@
       - Multitool
       - DroneUsable
   - type: CartridgeLoader
+    uiKey: enum.PdaUiKey.Key
     preinstalled:
       - NotekeeperCartridge
       - NetProbeCartridge

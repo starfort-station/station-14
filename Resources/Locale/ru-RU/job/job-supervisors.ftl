@@ -1,4 +1,4 @@
-job-supervisors-centcom = представителю ЦентКома
+job-supervisors-centcom = Центральному Командованию
 job-supervisors-captain = Капитану
 job-supervisors-hop = Главе Персонала
 job-supervisors-hop-qm = Квартирмейстеру и Главе Персонала

@@ -1,12 +1,12 @@
 ent-SpawnPointFieldRecrut = Новобранец
     .desc = { ent-SpawnPointJobBase.desc }
-ent-SpawnPointFieldTrooper = Полевой солдат
+ent-SpawnPointFieldTrooper = Полевой Солдат
     .desc = { ent-SpawnPointJobBase.desc }
-ent-SpawnPointFieldMedic = Полевой медик
+ent-SpawnPointFieldMedic = Полевой Медик
     .desc = { ent-SpawnPointJobBase.desc }
-ent-SpawnPointFieldScientist = Полевой учёный
+ent-SpawnPointFieldScientist = Полевой Учёный
     .desc = { ent-SpawnPointJobBase.desc }
-ent-SpawnPointFieldEngineer = Полевой инженер
+ent-SpawnPointFieldEngineer = Полевой Инженер
     .desc = { ent-SpawnPointJobBase.desc }
-ent-SpawnPointFieldCommander = Полевой командир
+ent-SpawnPointFieldCommander = Полевой Командир
     .desc = { ent-SpawnPointJobBase.desc }

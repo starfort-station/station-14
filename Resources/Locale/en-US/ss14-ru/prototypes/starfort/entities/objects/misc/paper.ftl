@@ -1,0 +1,10 @@
+ent-RubberStampIAA = IAA rubber stamp
+    .desc = { ent-RubberStampMime.desc }
+ent-RubberAdmemekhuynya = Khuynya peredelyvay
+    .desc = { ent-RubberStampMime.desc }
+ent-RubberIncorrectquery = Incorrect query
+    .desc = { ent-RubberStampMime.desc }
+ent-RubberStampApprovedbyCC = APPROVED from Centcom rubber stamp
+    .desc = { ent-RubberStampMime.desc }
+ent-RubberStampExpeditorComm = expeditor commander rubber stamp
+    .desc = { ent-RubberStampMime.desc }

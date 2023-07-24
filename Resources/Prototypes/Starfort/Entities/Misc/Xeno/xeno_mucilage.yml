@@ -1,0 +1,75 @@
+- type: entity
+  id: XenoMucilage
+  name: Xeno mucilage
+  description: A viscous and sticky xenomorph secretion that slows the movement of potential aggressors or prey.
+  placement:
+    mode: SnapgridCenter
+    snap:
+      - Wall
+  components:
+    - type: MeleeSound
+      soundGroups:
+        Brute:
+          path:
+            "/Audio/Weapons/slash.ogg"
+    - type: Sprite
+      sprite: Starfort/Objects/Misc/xenomucilage.rsi
+      layers:
+        - state: xeno_mucilage_1
+          map: ["spiderWebLayer"]
+      drawdepth: WallMountedItems
+    - type: Appearance
+    - type: GenericVisualizer
+      visuals:
+        enum.SpiderWebVisuals.Variant:
+            spiderWebLayer:
+                1:  {state: xeno_mucilage_1}
+                2:  {state: xeno_mucilage_2}
+    - type: Clickable
+    - type: Transform
+      anchored: true
+    - type: Physics
+    - type: Fixtures
+      fixtures:
+        fix1:
+          hard: false
+          density: 7
+          shape:
+            !type:PhysShapeAabb
+            bounds: "-0.5,-0.5,0.5,0.5"
+          layer:
+          - MidImpassable
+    - type: Damageable
+      damageModifierSet: Wood
+    - type: Destructible
+      thresholds:
+      - trigger:
+          !type:DamageTrigger
+          damage: 10
+        behaviors:
+        - !type:DoActsBehavior
+          acts: [ "Destruction" ]
+    - type: Temperature
+      heatDamage:
+        types:
+          Heat: 5
+      coldDamage: {}
+      ColdDamageThreshold: 0
+    - type: Flammable
+      fireSpread: true
+      cold:
+        types: {}
+      damage:
+        types:
+          Heat: 1
+    - type: Reactive
+      groups:
+        Flammable: [Touch]
+        Extinguish: [Touch]
+    - type: SpiderWebObject
+    - type: SlowContacts
+      walkSpeedModifier: 0.5
+      sprintSpeedModifier: 0.5
+      ignoreWhitelist:
+        components:
+            - IgnoreXenoMucilage

@@ -3,5 +3,5 @@ ent-BaseMobDragon = космический дракон
 ent-MobDragon = { ent-BaseMobDragon }
     .desc = { ent-BaseMobDragon.desc }
 ent-MobDragonDungeon = { ent-BaseMobDragon }
-    .suffix = Подземелья
+    .suffix = Подземелье
     .desc = { ent-BaseMobDragon.desc }

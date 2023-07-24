@@ -1,0 +1,17 @@
+ent-MobXenoAlienBase = { ent-SimpleSpaceMobBase }
+    .desc = They mostly come at night. Mostly.
+    .suffix = AI, Xeno
+ent-XenoAlienBurrower = Burrower
+    .desc = { ent-MobXenoAlienBase.desc }
+ent-XenoAlienPraetorian = Praetorian
+    .desc = { ent-MobXenoAlienBase.desc }
+ent-XenoAlienDrone = Drone
+    .desc = { ent-MobXenoAlienBase.desc }
+ent-XenoAlienQueen = Queen
+    .desc = { ent-MobXenoAlienBase.desc }
+ent-XenoAlienRavager = Ravager
+    .desc = { ent-MobXenoAlienBase.desc }
+ent-XenoAlienRunner = Runner
+    .desc = { ent-MobXenoAlienBase.desc }
+ent-XenoAlienSpitter = Spitter
+    .desc = { ent-MobXenoAlienBase.desc }
