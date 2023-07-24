@@ -59,7 +59,6 @@
           XenoMucilage:
             min: 1
             max: 1
-          # Wow double-yolk you're so lucky!
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
 
