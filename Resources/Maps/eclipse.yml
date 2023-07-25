@@ -11971,11 +11971,6 @@ entities:
     - pos: -25.5,9.5
       parent: 1
       type: Transform
-  - uid: 8547
-    components:
-    - pos: -25.5,10.5
-      parent: 1
-      type: Transform
 - proto: BoxLethalshot
   entities:
   - uid: 9739
