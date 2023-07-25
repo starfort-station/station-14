@@ -5,6 +5,8 @@ using Content.Server.Stack;
 using System.Threading;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
+using Content.Shared.Mobs.Systems;
+using Content.Shared.Spawners.Components;
 
 namespace Content.Server.Spawners.EntitySystems
 {
@@ -15,6 +17,7 @@ namespace Content.Server.Spawners.EntitySystems
         [Dependency] public readonly IPrototypeManager PrototypeManager = default!;
         [Dependency] public readonly IComponentFactory ComponentFactory = default!;
         [Dependency] public readonly StackSystem StackSystem = default!;
+
         //[Dependency] public readonly IEntityManager EntityManager = default!;
         public override void Initialize()
         {
@@ -22,8 +25,15 @@ namespace Content.Server.Spawners.EntitySystems
 
             SubscribeLocalEvent<TimedRandomSpawnerComponent, ComponentStartup>(OnStartup);
             SubscribeLocalEvent<TimedRandomSpawnerComponent, TimerReached>(Exec);
+            SubscribeLocalEvent<TimedRandomSpawnerComponent, UpdateMobStateEvent>(DisableSpawn);
         }
 
+        private void DisableSpawn(EntityUid uid, TimedRandomSpawnerComponent timedRandomSpawnerComponent, ref UpdateMobStateEvent args)
+        {
+            RemCompDeferred(uid, timedRandomSpawnerComponent);
+            var despawnComponent = EntityManager.GetComponent<TimedDespawnComponent>(uid);
+            RemCompDeferred(uid, despawnComponent);
+        }
 
         private void Exec(EntityUid owner, TimedRandomSpawnerComponent component, TimerReached args)
         {
@@ -34,7 +44,8 @@ namespace Content.Server.Spawners.EntitySystems
             for (int i = 0; i < number; i++)
             {
                 var entity = _robustRandom.Pick(component.Prototypes);
-                IoCManager.Resolve<IEntityManager>().SpawnEntity(entity,IoCManager.Resolve<IEntityManager>().GetComponent<TransformComponent>(owner).Coordinates);
+                var xform = Transform(owner);
+                Spawn(entity, xform.Coordinates.Offset(_robustRandom.NextVector2(0.3f)));
             }
 
         }
