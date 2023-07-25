@@ -33,15 +33,17 @@
           XenoMucilage:
             min: 0
             max: 1
-    intervalSeconds: 59
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+    intervalSeconds: 59.4
   - type: TimedSpawner
     prototypes:
-    - XenoAlienPraetorian
+    - XenoLarva
     intervalSeconds: 57
     MinimumEntitiesSpawned: 1
     MaximumEntitiesSpawned: 1
-  - type: TimedDespawn #delete the egg after the xeno spawns
-    lifetime: 60
+  #- type: TimedDespawn #delete the egg after the xeno spawns
+  #  lifetime: 60
   - type: Destructible
     thresholds:
     - trigger:
