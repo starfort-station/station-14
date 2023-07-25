@@ -1,0 +1,11 @@
+- type: entity
+  name: Psychologist rubber stamp
+  parent: RubberStampBase
+  id: RubberStampPsychologist
+  components:
+  - type: Stamp
+    stampedName: stamp-component-stamped-name-psychologist
+    stampState: "paper_stamp-psychologist"
+  - type: Sprite
+    sprite: Objects/Misc/bureaucracy.rsi
+    state: stamp-psychologist
