@@ -35,11 +35,11 @@
             max: 1
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
-    intervalSeconds: 59.4
-  - type: TimedSpawner
+    intervalSeconds: 60
+  - type: TimedRandomSpawner
     prototypes:
     - XenoLarva
-    intervalSeconds: 57
+    intervalSeconds: 59.9
     MinimumEntitiesSpawned: 1
     MaximumEntitiesSpawned: 1
   #- type: TimedDespawn #delete the egg after the xeno spawns
