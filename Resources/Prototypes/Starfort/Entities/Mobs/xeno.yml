@@ -34,7 +34,7 @@
     - Xeno
   - type: Hands
   - type: DarkVision
-    layerColor: '#a61f34' #"#920016"
+    layerColor: '#920016'
     shaderTexture: "GreyscaleFullscreen"
     mustDrawLight: false
     toggle: true
@@ -432,6 +432,6 @@
     - XenoAlienDrone
     - XenoAlienPraetorian
     - XenoAlienBurrower
-    intervalSeconds: 119.9
+    intervalSeconds: 179.9
   - type: TimedDespawn
-    lifetime: 120
+    lifetime: 180
