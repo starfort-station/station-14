@@ -440,3 +440,4 @@
     intervalSeconds: 179.9
   - type: TimedDespawn
     lifetime: 180
+  - type: XenoLarva
