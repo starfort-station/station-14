@@ -258,6 +258,11 @@
     name: ghost-role-information-queen-name
     description: ghost-role-information-queen-description
     rules: ghost-role-information-queen-rules
+  - type: XenoMucilage
+  - type: XenoEgg
+    prototype: XenoEgg
+    MinimumEntitiesSpawned: 1
+    MaximumEntitiesSpawned: 3
 
 
 # AlienRavager
