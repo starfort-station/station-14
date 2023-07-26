@@ -426,9 +426,9 @@
         layer:
         - SmallMobLayer
   - type: GhostRole
-    name: ghost-role-information-praetorian-name # <--------------- не забыть поменять!!!
-    description: ghost-role-information-praetorian-description
-    rules: ghost-role-information-praetorian-rules
+    name: ghost-role-information-larva-name
+    description: ghost-role-information-larva-description
+    rules: ghost-role-information-larva-rules
   - type: TimedRandomSpawner
     prototypes:
     - XenoAlienSpitter

@@ -2,6 +2,6 @@
   id: XenoEggAction
   icon: Starfort\Objects\Misc\Xeno\XenoEgg.rsi\icon.png
   name: xeno-egg-action-name
-  description: xeno-mucilage-action-description
+  description: xeno-egg-action-description
   serverEvent: !type:XenoEggActionEvent
   useDelay: 120
