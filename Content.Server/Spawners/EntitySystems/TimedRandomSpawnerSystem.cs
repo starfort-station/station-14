@@ -25,14 +25,6 @@ namespace Content.Server.Spawners.EntitySystems
 
             SubscribeLocalEvent<TimedRandomSpawnerComponent, ComponentStartup>(OnStartup);
             SubscribeLocalEvent<TimedRandomSpawnerComponent, TimerReached>(Exec);
-            //SubscribeLocalEvent<TimedRandomSpawnerComponent, UpdateMobStateEvent>(DisableSpawn);
-        }
-
-        private void DisableSpawn(EntityUid uid, TimedRandomSpawnerComponent timedRandomSpawnerComponent, ref UpdateMobStateEvent args)
-        {
-            RemCompDeferred(uid, timedRandomSpawnerComponent);
-            var despawnComponent = EntityManager.GetComponent<TimedDespawnComponent>(uid);
-            RemCompDeferred(uid, despawnComponent);
         }
 
         private void Exec(EntityUid owner, TimedRandomSpawnerComponent component, TimerReached args)
