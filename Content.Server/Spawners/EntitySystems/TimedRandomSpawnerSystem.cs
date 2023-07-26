@@ -25,7 +25,7 @@ namespace Content.Server.Spawners.EntitySystems
 
             SubscribeLocalEvent<TimedRandomSpawnerComponent, ComponentStartup>(OnStartup);
             SubscribeLocalEvent<TimedRandomSpawnerComponent, TimerReached>(Exec);
-            SubscribeLocalEvent<TimedRandomSpawnerComponent, UpdateMobStateEvent>(DisableSpawn);
+            //SubscribeLocalEvent<TimedRandomSpawnerComponent, UpdateMobStateEvent>(DisableSpawn);
         }
 
         private void DisableSpawn(EntityUid uid, TimedRandomSpawnerComponent timedRandomSpawnerComponent, ref UpdateMobStateEvent args)
@@ -45,7 +45,11 @@ namespace Content.Server.Spawners.EntitySystems
             {
                 var entity = _robustRandom.Pick(component.Prototypes);
                 var xform = Transform(owner);
-                Spawn(entity, xform.Coordinates.Offset(_robustRandom.NextVector2(0.3f)));
+                var spawned = Spawn(entity, xform.Coordinates.Offset(_robustRandom.NextVector2(0.3f)));
+                var spawnedEvent = new NewEntitySpawned();
+                spawnedEvent.parent = owner;
+                spawnedEvent.spawned = spawned;
+                RaiseLocalEvent(owner, spawnedEvent);
             }
 
         }
@@ -64,6 +68,11 @@ namespace Content.Server.Spawners.EntitySystems
         public sealed class TimerReached : EntityEventArgs
         {
 
+        }
+        public sealed class NewEntitySpawned : EntityEventArgs
+        {
+            public EntityUid parent;
+            public EntityUid spawned;
         }
         public override void Update(float frameTime)
         {
