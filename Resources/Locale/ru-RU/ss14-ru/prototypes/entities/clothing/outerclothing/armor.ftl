@@ -1,8 +1,8 @@
-ent-ClothingOuterArmorBasic = armor vest
-    .desc = A standard Type I armored vest that provides decent protection against most types of damage.
-ent-ClothingOuterArmorBasicSlim = armor vest
-    .desc = A slim Type I armored vest that provides decent protection against most types of damage.
-    .suffix = slim
+ent-ClothingOuterArmorBasic = бронежилет
+    .desc = Стандартный бронежилет I класса, обеспечивающий достойную защиту от большинства видов повреждений.
+ent-ClothingOuterArmorBasicSlim = бронежилет
+    .desc = Тонкий бронежилет I класса, обеспечивающий достойную защиту от большинства видов повреждений.
+    .suffix = тонкий
 ent-ClothingOuterArmorReflective = отражающий бронежилет
     .desc = Бронежилет с усовершенствованной защитой от энергетического оружия.
 ent-ClothingOuterArmorBulletproof = пуленепробиваемый жилет

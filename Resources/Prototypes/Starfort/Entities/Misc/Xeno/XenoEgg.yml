@@ -1,0 +1,91 @@
+- type: entity
+  name: xenoegg
+  id: XenoEgg
+  parent: FoodEggBase
+  suffix: Fertilized, Xeno
+  components:
+  - type: Sprite
+    sprite: Starfort\Objects\Misc\Xeno\XenoEgg.rsi
+    state: icon
+  - type: Item
+    sprite: Starfort\Objects\Misc\Xeno\XenoEgg.rsi
+    size: 1
+  - type: Food
+    trash: XenoEggShells
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 24.875
+        reagents:
+        - ReagentId: FluorosulfuricAcid
+          Quantity: 24.875
+  - type: Timer
+  - type: TimedBehaviors
+    behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: desecration
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          XenoEggShells:
+            min: 1
+            max: 1
+          XenoMucilage:
+            min: 0
+            max: 1
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+    intervalSeconds: 60
+  - type: TimedRandomSpawner
+    prototypes:
+    - XenoLarva
+    intervalSeconds: 59.9
+    MinimumEntitiesSpawned: 1
+    MaximumEntitiesSpawned: 1
+  #- type: TimedDespawn #delete the egg after the xeno spawns
+  #  lifetime: 60
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 1
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: desecration
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          XenoEggShells:
+            min: 1
+            max: 1
+          XenoMucilage:
+            min: 1
+            max: 1
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+
+
+- type: entity
+  name: XenoEggShells
+  parent: BaseItem
+  id: XenoEggShells
+  description: You're walkin' on 'em bud.
+  components:
+  - type: Food
+  - type: Sprite
+    sprite: Starfort\Objects\Misc\Xeno\XenoEgg.rsi
+    state: eggshells
+  - type: Item
+    size: 1
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 10
+        reagents:
+        - ReagentId: FluorosulfuricAcid
+          Quantity: 10
+  - type: Tag
+    tags:
+    - Egg
+    - Trash
+  - type: SpaceGarbage
