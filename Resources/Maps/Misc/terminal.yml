@@ -1890,48 +1890,18 @@ entities:
       type: Transform
 - proto: BoxLightMixed
   entities:
-  - uid: 1646
+  - uid: 1244
     components:
-    - pos: 3.4040582,13.643151
+    - pos: 3.3401098,13.653434
       parent: 2
       type: Transform
-    - containers:
-        storagebase: !type:Container
-          showEnts: False
-          occludes: True
-          ents:
-          - 1647
-          - 1648
-          - 1649
-          - 1650
-          - 1651
-          - 1652
-          - 1653
-          - 1654
-          - 1655
-          - 1656
-          - 1657
-          - 1658
-      type: ContainerContainer
 - proto: BoxTrashbag
   entities:
   - uid: 1635
     components:
-    - pos: 3.6228082,13.721276
+    - pos: 3.6682348,13.700309
       parent: 2
       type: Transform
-    - containers:
-        storagebase: !type:Container
-          showEnts: False
-          occludes: True
-          ents:
-          - 1636
-          - 1637
-          - 1638
-          - 1639
-          - 1640
-          - 1641
-      type: ContainerContainer
 - proto: CableApcExtension
   entities:
   - uid: 898
@@ -10164,106 +10134,6 @@ entities:
     - pos: 14.447026,24.460087
       parent: 2
       type: Transform
-- proto: LightBulb
-  entities:
-  - uid: 1647
-    components:
-    - flags: InContainer
-      type: MetaData
-    - parent: 1646
-      type: Transform
-    - canCollide: False
-      type: Physics
-  - uid: 1648
-    components:
-    - flags: InContainer
-      type: MetaData
-    - parent: 1646
-      type: Transform
-    - canCollide: False
-      type: Physics
-  - uid: 1649
-    components:
-    - flags: InContainer
-      type: MetaData
-    - parent: 1646
-      type: Transform
-    - canCollide: False
-      type: Physics
-  - uid: 1650
-    components:
-    - flags: InContainer
-      type: MetaData
-    - parent: 1646
-      type: Transform
-    - canCollide: False
-      type: Physics
-  - uid: 1651
-    components:
-    - flags: InContainer
-      type: MetaData
-    - parent: 1646
-      type: Transform
-    - canCollide: False
-      type: Physics
-  - uid: 1652
-    components:
-    - flags: InContainer
-      type: MetaData
-    - parent: 1646
-      type: Transform
-    - canCollide: False
-      type: Physics
-- proto: LightTube
-  entities:
-  - uid: 1653
-    components:
-    - flags: InContainer
-      type: MetaData
-    - parent: 1646
-      type: Transform
-    - canCollide: False
-      type: Physics
-  - uid: 1654
-    components:
-    - flags: InContainer
-      type: MetaData
-    - parent: 1646
-      type: Transform
-    - canCollide: False
-      type: Physics
-  - uid: 1655
-    components:
-    - flags: InContainer
-      type: MetaData
-    - parent: 1646
-      type: Transform
-    - canCollide: False
-      type: Physics
-  - uid: 1656
-    components:
-    - flags: InContainer
-      type: MetaData
-    - parent: 1646
-      type: Transform
-    - canCollide: False
-      type: Physics
-  - uid: 1657
-    components:
-    - flags: InContainer
-      type: MetaData
-    - parent: 1646
-      type: Transform
-    - canCollide: False
-      type: Physics
-  - uid: 1658
-    components:
-    - flags: InContainer
-      type: MetaData
-    - parent: 1646
-      type: Transform
-    - canCollide: False
-      type: Physics
 - proto: LockerBooze
   entities:
   - uid: 1694
@@ -12721,12 +12591,6 @@ entities:
       pos: 26.5,22.5
       parent: 2
       type: Transform
-  - uid: 1244
-    components:
-    - rot: 3.141592653589793 rad
-      pos: 3.5,13.5
-      parent: 2
-      type: Transform
   - uid: 1510
     components:
     - rot: 3.141592653589793 rad
@@ -12737,6 +12601,11 @@ entities:
     components:
     - rot: 3.141592653589793 rad
       pos: 23.5,25.5
+      parent: 2
+      type: Transform
+  - uid: 1636
+    components:
+    - pos: 3.5,13.5
       parent: 2
       type: Transform
 - proto: TableCarpet
@@ -12997,56 +12866,6 @@ entities:
     - pos: 16.5,22.5
       parent: 2
       type: Transform
-- proto: TrashBag
-  entities:
-  - uid: 1636
-    components:
-    - flags: InContainer
-      type: MetaData
-    - parent: 1635
-      type: Transform
-    - canCollide: False
-      type: Physics
-  - uid: 1637
-    components:
-    - flags: InContainer
-      type: MetaData
-    - parent: 1635
-      type: Transform
-    - canCollide: False
-      type: Physics
-  - uid: 1638
-    components:
-    - flags: InContainer
-      type: MetaData
-    - parent: 1635
-      type: Transform
-    - canCollide: False
-      type: Physics
-  - uid: 1639
-    components:
-    - flags: InContainer
-      type: MetaData
-    - parent: 1635
-      type: Transform
-    - canCollide: False
-      type: Physics
-  - uid: 1640
-    components:
-    - flags: InContainer
-      type: MetaData
-    - parent: 1635
-      type: Transform
-    - canCollide: False
-      type: Physics
-  - uid: 1641
-    components:
-    - flags: InContainer
-      type: MetaData
-    - parent: 1635
-      type: Transform
-    - canCollide: False
-      type: Physics
 - proto: TwoWayLever
   entities:
   - uid: 1386
@@ -13058,10 +12877,6 @@ entities:
       state: Left
       type: TwoWayLever
     - linkedPorts:
-        invalid:
-        - Middle: Off
-        - Right: Forward
-        - Left: Reverse
         1382:
         - Left: Forward
         - Right: Reverse
@@ -13076,17 +12891,14 @@ entities:
         - Middle: Off
       registeredSinks:
         Left:
-        - invalid
         - 1382
         - 1383
         - 1384
         Right:
-        - invalid
         - 1382
         - 1383
         - 1384
         Middle:
-        - invalid
         - 1382
         - 1383
         - 1384
