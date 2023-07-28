@@ -4,4 +4,4 @@
   name: xeno-mucilage-action-name
   description: xeno-mucilage-action-description
   serverEvent: !type:XenoMucilageActionEvent
-  useDelay: 30
+  useDelay: 25
