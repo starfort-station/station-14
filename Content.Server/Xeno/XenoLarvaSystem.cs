@@ -7,11 +7,11 @@ using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
 using Content.Shared.Mobs.Systems;
 using Content.Shared.Spawners.Components;
-using Content.Shared.Xeno;
 using static Content.Server.Spawners.EntitySystems.TimedBehaviorsSystem;
 using Content.Server.Mind;
 using Content.Server.Mind.Components;
 using static Content.Server.Spawners.EntitySystems.TimedRandomSpawnerSystem;
+using Content.Server.Xeno;
 
 namespace Content.Server.Spawners.EntitySystems
 {
