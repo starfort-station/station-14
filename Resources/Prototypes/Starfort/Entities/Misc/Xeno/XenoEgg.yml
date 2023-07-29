@@ -5,10 +5,10 @@
   suffix: Fertilized, Xeno
   components:
   - type: Sprite
-    sprite: Starfort\Objects\Misc\Xeno\XenoEgg.rsi
+    sprite: Starfort/Objects/Misc/Xeno/XenoEgg.rsi
     state: icon
   - type: Item
-    sprite: Starfort\Objects\Misc\Xeno\XenoEgg.rsi
+    sprite: Starfort/Objects/Misc/Xeno/XenoEgg.rsi
     size: 1
   - type: Food
     trash: XenoEggShells
@@ -73,7 +73,7 @@
   components:
   - type: Food
   - type: Sprite
-    sprite: Starfort\Objects\Misc\Xeno\XenoEgg.rsi
+    sprite: Starfort/Objects/Misc/Xeno/XenoEgg.rsi
     state: eggshells
   - type: Item
     size: 1
