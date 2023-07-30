@@ -12054,11 +12054,6 @@ entities:
         1380:
         - On: Forward
         - Off: Off
-      registeredSinks:
-        On:
-        - 1380
-        Off:
-        - 1380
       type: DeviceLinkSource
 - proto: SignConference
   entities:
@@ -12889,19 +12884,6 @@ entities:
         - Left: Forward
         - Right: Reverse
         - Middle: Off
-      registeredSinks:
-        Left:
-        - 1382
-        - 1383
-        - 1384
-        Right:
-        - 1382
-        - 1383
-        - 1384
-        Middle:
-        - 1382
-        - 1383
-        - 1384
       type: DeviceLinkSource
     - type: ItemCooldown
 - proto: VendingBarDrobe
