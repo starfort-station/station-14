@@ -13,7 +13,7 @@
       department: Medical
       time: 3600 #1 hrs
   startingGear: FieldMedicGear
-  icon: "FieldMedic"
+  icon: "JobIconFieldMedic"
   supervisors: job-supervisors-field-commander
   canBeAntag: false
   access:

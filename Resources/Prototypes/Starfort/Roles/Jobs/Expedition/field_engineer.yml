@@ -13,8 +13,8 @@
       department: Engineering
       time: 3600 #1 hrs
   startingGear: FieldEngineerGear
-  icon: "FieldEngineer"
-  supervisors: job-supervisors-field-commander 
+  icon: "JobIconFieldEngineer"
+  supervisors: job-supervisors-field-commander
   canBeAntag: false
   access:
   - Engineering
