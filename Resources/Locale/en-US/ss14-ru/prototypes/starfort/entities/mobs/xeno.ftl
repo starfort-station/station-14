@@ -15,3 +15,5 @@ ent-XenoAlienRunner = Runner
     .desc = { ent-MobXenoAlienBase.desc }
 ent-XenoAlienSpitter = Spitter
     .desc = { ent-MobXenoAlienBase.desc }
+ent-XenoLarva = Larva
+    .desc = { ent-MobXenoAlienBase.desc }

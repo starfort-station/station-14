@@ -1,0 +1,42 @@
+- type: statusIcon
+  parent: JobIcon
+  id: JobIconFieldCommander
+  icon:
+    sprite: Interface/Misc/job_icons.rsi
+    state: FieldCommander
+
+- type: statusIcon
+  parent: JobIcon
+  id: JobIconFieldEngineer
+  icon:
+    sprite: Interface/Misc/job_icons.rsi
+    state: FieldEngineer
+
+- type: statusIcon
+  parent: JobIcon
+  id: JobIconFieldMedic
+  icon:
+    sprite: Interface/Misc/job_icons.rsi
+    state: FieldMedic
+
+- type: statusIcon
+  parent: JobIcon
+  id: JobIconFieldRecrut
+  icon:
+    sprite: Interface/Misc/job_icons.rsi
+    state: FieldRecrut
+
+- type: statusIcon
+  parent: JobIcon
+  id: JobIconFieldScientist
+  icon:
+    sprite: Interface/Misc/job_icons.rsi
+    state: FieldScientist
+
+- type: statusIcon
+  parent: JobIcon
+  id: JobIconFieldTrooper
+  icon:
+    sprite: Interface/Misc/job_icons.rsi
+    state: FieldTrooper
+

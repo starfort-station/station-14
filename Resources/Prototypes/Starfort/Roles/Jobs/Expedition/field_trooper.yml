@@ -10,7 +10,7 @@
       department: Security
       time: 3600 #1 hrs
   startingGear: FieldTrooperGear
-  icon: "FieldTrooper"
+  icon: "JobIconFieldTrooper"
   supervisors: job-supervisors-field-commander
   canBeAntag: false
   access:

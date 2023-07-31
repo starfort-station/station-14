@@ -13,7 +13,7 @@
       department: Science
       time: 3600 #1 hrs
   startingGear: FieldScientistGear
-  icon: "FieldScientist"
+  icon: "JobIconFieldScientist"
   supervisors: job-supervisors-field-commander
   canBeAntag: false
   access:

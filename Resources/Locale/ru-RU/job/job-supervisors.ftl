@@ -5,13 +5,14 @@ job-supervisors-hop-qm = Квартирмейстеру и Главе Персо
 job-supervisors-hos = Главе Службы Безопасности
 job-supervisors-ce = Старшему Инженеру
 job-supervisors-cmo = Главному Врачу
+job-supervisors-qm = Квартирмейстеру
 job-supervisors-rd = Научному Руководителю
 job-supervisors-service = поварам, ботаникам, барменам, и Главе Персонала
 job-supervisors-engineering = инженерам, атмосферным техникам, и Старшему Инженеру
 job-supervisors-medicine = врачам, химикам, и Главному Врачу
+job-supervisors-science = Учёным, Старшему Учёному, Научному Руководителю
 job-supervisors-security = офицерам, смотрителю, и Главе Службы Безопасности
 job-supervisors-hire = своим нанимателям
 job-supervisors-everyone = вообще всем
 job-supervisors-field-commander = Командиру Экспедиции
 job-supervisors-magistrate = Магистрату
-

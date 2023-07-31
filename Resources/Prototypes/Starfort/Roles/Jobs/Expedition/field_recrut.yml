@@ -7,7 +7,7 @@
     - !type:OverallPlaytimeRequirement
       time: 7200 #2 hrs
   startingGear: FieldRecrutGear
-  icon: "FieldRecrut"
+  icon: "JobIconFieldRecrut"
   supervisors: job-supervisors-field-commander
   canBeAntag: false
   access:

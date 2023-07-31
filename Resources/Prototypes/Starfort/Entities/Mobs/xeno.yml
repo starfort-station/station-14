@@ -34,7 +34,7 @@
     - Xeno
   - type: Hands
   - type: DarkVision
-    layerColor: "#920016"
+    layerColor: '#920016'
     shaderTexture: "GreyscaleFullscreen"
     mustDrawLight: false
     toggle: true
@@ -258,6 +258,11 @@
     name: ghost-role-information-queen-name
     description: ghost-role-information-queen-description
     rules: ghost-role-information-queen-rules
+  - type: XenoMucilage
+  - type: XenoEgg
+    prototype: XenoEgg
+    MinimumEntitiesSpawned: 1
+    MaximumEntitiesSpawned: 3
 
 
 # AlienRavager
@@ -382,3 +387,57 @@
     name: ghost-role-information-spitter-name
     description: ghost-role-information-spitter-description
     rules: ghost-role-information-spitter-rules
+
+# XenoLarva
+- type: entity
+  name: Xeno larva
+  parent: MobXenoAlienBase
+  id: XenoLarva
+  components:
+  - type: Sprite
+    drawdepth: SmallMobs
+    sprite: Starfort/Mobs/Aliens/Xenos/xenolarva.rsi
+    offset: 0,0.2
+    layers:
+    - map: ["enum.DamageStateVisualLayers.Base"]
+      state: running
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      35: Dead
+  - type: MeleeWeapon
+    damage:
+      groups:
+        Brute: 7
+  - type: Stamina
+    excess: 200
+  - type: MovementSpeedModifier
+    baseWalkSpeed : 3.0
+    baseSprintSpeed : 5.5
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.2
+        density: 100
+        mask:
+        - SmallMobMask
+        layer:
+        - SmallMobLayer
+  - type: GhostRole
+    name: ghost-role-information-larva-name
+    description: ghost-role-information-larva-description
+    rules: ghost-role-information-larva-rules
+  - type: TimedRandomSpawner
+    prototypes:
+    - XenoAlienSpitter
+    - XenoAlienRunner
+    - XenoAlienRavager
+    - XenoAlienDrone
+    - XenoAlienPraetorian
+    - XenoAlienBurrower
+    intervalSeconds: 179.9
+  - type: TimedDespawn
+    lifetime: 180
+  - type: XenoLarva

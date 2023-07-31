@@ -15,3 +15,5 @@ ent-XenoAlienRunner = Бегун
     .desc = { ent-MobXenoAlienBase.desc }
 ent-XenoAlienSpitter = Плеватель
     .desc = { ent-MobXenoAlienBase.desc }
+ent-XenoLarva = Личинка
+    .desc = { ent-MobXenoAlienBase.desc }
