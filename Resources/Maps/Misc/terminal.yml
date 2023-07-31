@@ -12052,8 +12052,8 @@ entities:
       type: Transform
     - linkedPorts:
         1380:
-        - On: Forward
         - Off: Off
+        - On: Forward
       type: DeviceLinkSource
 - proto: SignConference
   entities:
