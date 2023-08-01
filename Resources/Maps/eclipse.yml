@@ -85896,14 +85896,13 @@ entities:
       type: DeviceLinkSource
   - uid: 4590
     components:
-    - rot: 1.5707963267948966 rad
-      pos: 15.510868,-0.6124915
+    - pos: 16.5,0.5
       parent: 1
       type: Transform
     - linkedPorts:
         1988:
-        - Off: Close
         - On: Open
+        - Off: Close
         10381:
         - Off: Close
         - On: Open
@@ -85962,17 +85961,38 @@ entities:
       type: DeviceLinkSource
   - uid: 10261
     components:
-    - rot: 1.5707963267948966 rad
-      pos: 15.510866,-0.3937415
+    - rot: 3.141592653589793 rad
+      pos: 16.5,-7.5
       parent: 1
       type: Transform
     - linkedPorts:
+        10354:
+        - Off: Close
+        - On: Open
+        10355:
+        - Off: Close
+        - On: Open
+        10356:
+        - Off: Close
+        - On: Open
+        10357:
+        - Off: Close
+        - On: Open
+        10377:
+        - Off: Close
+        - On: Open
+        10378:
+        - Off: Close
+        - On: Open
+        10379:
+        - Off: Close
+        - On: Open
         10263:
         - Off: Close
         - On: Open
         10264:
-        - Off: Close
         - On: Open
+        - Off: Close
         10269:
         - Off: Close
         - On: Open
@@ -85986,27 +86006,6 @@ entities:
         - Off: Close
         - On: Open
         10349:
-        - Off: Close
-        - On: Open
-        10354:
-        - On: Open
-        - Off: Close
-        10355:
-        - On: Open
-        - Off: Close
-        10356:
-        - On: Open
-        - Off: Close
-        10357:
-        - On: Open
-        - Off: Close
-        10377:
-        - On: Open
-        - Off: Close
-        10378:
-        - Off: Close
-        - On: Open
-        10379:
         - On: Open
         - Off: Close
       type: DeviceLinkSource
