@@ -3,6 +3,6 @@ ent-XenoMucilage = Xeno mucilage
 ent-XenoEgg = xenoegg
     .desc = It's xenoegg.
 ent-XenoEggShells = xenoegg shells
-    .desc = It's xenoeggshells
+    .desc = It's xenoeggshells.
 ent-xenolarva = larva
     .desc = { ent-MobXenoAlienBase.desc }
