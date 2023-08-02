@@ -417,6 +417,8 @@
       - ShellTranquilizer
       - CartridgeLightRifle
       - CartridgeRifle
+      - CartridgeHeavyLecter
+      - MagazineBoxHeavyLecter
       - MagazineBoxPistol
       - MagazineBoxMagnum
       - MagazineBoxRifle
@@ -435,7 +437,6 @@
       - MagazineBoxRifleRubber
       - MagazineBoxLightRifleRubber
       - MagazineBoxHeavyLecterBig
-      - MagazineBoxHeavyLecter
       - CartridgePistolHighVelocity
       - CartridgeMagnumHighVelocity
       - CartridgeLightRifleHighVelocity
@@ -498,6 +499,7 @@
       staticRecipes:
         - CartridgePistol
         - CartridgeMagnum
+        - CartridgeHeavyLecter
         - ShellShotgun
         - ShellShotgunFlare
         - ShellTranquilizer
@@ -507,6 +509,8 @@
         - MagazineBoxMagnum
         - MagazineBoxRifle
         - MagazineBoxLightRifle
+        - MagazineBoxHeavyLecter
+        - MagazineBoxHeavyLecterBig
     - type: MaterialStorage
       whitelist:
         tags:
