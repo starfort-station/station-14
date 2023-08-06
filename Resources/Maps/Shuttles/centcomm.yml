@@ -75,53 +75,53 @@ entities:
             color: '#9D9D97FF'
             id: Bot
           decals:
-            108: -2,-7
-            109: -2,-13
+            106: -2,-7
+            107: -2,-13
         - node:
             color: '#D4D4D496'
             id: Bot
           decals:
-            115: 3,-4
+            113: 3,-4
         - node:
             color: '#9D9D97FF'
             id: BotLeft
           decals:
-            110: -2,-13
+            108: -2,-13
         - node:
             color: '#D4D4D496'
             id: BotLeft
           decals:
-            114: 3,-5
+            112: 3,-5
         - node:
             color: '#9D9D97FF'
             id: BotRight
           decals:
-            111: -2,-13
+            109: -2,-13
         - node:
             color: '#D4D4D496'
             id: BotRight
           decals:
-            113: 3,-5
+            111: 3,-5
         - node:
             color: '#FFFFFFFF'
             id: Box
           decals:
-            123: -2,-19
-            124: -2,-20
+            121: -2,-19
+            122: -2,-20
         - node:
             color: '#EFB34196'
             id: BoxGreyscale
           decals:
-            119: -2,-19
-            120: -2,-20
+            117: -2,-19
+            118: -2,-20
         - node:
             color: '#FFFFFFFF'
             id: BoxGreyscale
           decals:
-            117: -2,-20
-            118: -2,-19
-            121: -2,-19
-            122: -2,-20
+            115: -2,-20
+            116: -2,-19
+            119: -2,-19
+            120: -2,-20
         - node:
             color: '#334E6DC8'
             id: BrickTileWhiteCornerNe
@@ -132,7 +132,7 @@ entities:
             id: BrickTileWhiteCornerNe
           decals:
             29: -4,-15
-            93: -5,-18
+            92: -5,-18
         - node:
             color: '#334E6DC8'
             id: BrickTileWhiteCornerNw
@@ -154,13 +154,13 @@ entities:
           decals:
             30: -4,-16
             31: -5,-17
-            96: -5,-20
+            95: -5,-20
         - node:
             color: '#52B4E996'
             id: BrickTileWhiteCornerSw
           decals:
             32: -7,-17
-            97: -6,-20
+            96: -6,-20
         - node:
             color: '#DE3A3A96'
             id: BrickTileWhiteCornerSw
@@ -192,7 +192,7 @@ entities:
             color: '#334E6DC8'
             id: BrickTileWhiteInnerNw
           decals:
-            90: 0,-4
+            89: 0,-4
         - node:
             color: '#52B4E996'
             id: BrickTileWhiteInnerNw
@@ -226,7 +226,7 @@ entities:
             color: '#334E6DC8'
             id: BrickTileWhiteInnerSw
           decals:
-            91: 0,-4
+            90: 0,-4
         - node:
             color: '#52B4E996'
             id: BrickTileWhiteInnerSw
@@ -234,7 +234,7 @@ entities:
             37: -6,-14
             47: -5,-12
             48: -2,-12
-            99: -6,-17
+            98: -6,-17
         - node:
             color: '#DE3A3A96'
             id: BrickTileWhiteInnerSw
@@ -252,14 +252,14 @@ entities:
             72: -3,-5
             73: -3,-6
             87: 2,-3
-            126: 2,-4
+            124: 2,-4
         - node:
             color: '#52B4E996'
             id: BrickTileWhiteLineE
           decals:
             28: -5,-14
             41: -5,-13
-            98: -5,-19
+            97: -5,-19
         - node:
             color: '#DE3A3A96'
             id: BrickTileWhiteLineE
@@ -284,7 +284,7 @@ entities:
             77: 2,-8
             78: 3,-8
             84: -1,-4
-            92: 1,-2
+            91: 1,-2
         - node:
             color: '#52B4E996'
             id: BrickTileWhiteLineN
@@ -314,15 +314,15 @@ entities:
             color: '#334E6DC8'
             id: BrickTileWhiteLineW
           decals:
-            89: 0,-3
+            88: 0,-3
         - node:
             color: '#52B4E996'
             id: BrickTileWhiteLineW
           decals:
             33: -6,-15
             42: -5,-13
-            94: -6,-19
-            95: -6,-18
+            93: -6,-19
+            94: -6,-18
         - node:
             color: '#DE3A3A96'
             id: BrickTileWhiteLineW
@@ -339,26 +339,26 @@ entities:
             color: '#9D9D97FF'
             id: Delivery
           decals:
-            107: -1,-5
+            105: -1,-5
         - node:
             color: '#D4D4D496'
             id: Delivery
           decals:
-            125: 0,-10
+            123: 0,-10
         - node:
             color: '#9D9D97FF'
             id: DeliveryGreyscale
           decals:
-            103: 1,-12
-            104: 1,-13
-            105: -4,-14
+            102: 1,-12
+            103: 1,-13
+            104: -4,-14
         - node:
             color: '#FFFFFFFF'
             id: DeliveryGreyscale
           decals:
-            100: -4,-14
-            101: 1,-13
-            102: 1,-12
+            99: -4,-14
+            100: 1,-13
+            101: 1,-12
         - node:
             color: '#FFFFFFFF'
             id: WarnCornerSmallNW
@@ -397,7 +397,7 @@ entities:
             12: 0,-17
             23: -1,-17
             24: 0,-17
-            116: 1,-17
+            114: 1,-17
         - node:
             color: '#FFFFFFFF'
             id: WoodTrimThinCornerNe
@@ -408,7 +408,7 @@ entities:
             id: WoodTrimThinCornerNw
           decals:
             4: -4,-5
-            112: 0,-5
+            110: 0,-5
         - node:
             color: '#FFFFFFFF'
             id: WoodTrimThinCornerSw
@@ -1459,6 +1459,13 @@ entities:
   - uid: 688
     components:
     - pos: -1.5,-19.5
+      parent: 2
+      type: Transform
+    - enabled: True
+      type: AmbientSound
+  - uid: 701
+    components:
+    - pos: 4.5,-14.5
       parent: 2
       type: Transform
     - enabled: True
