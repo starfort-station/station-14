@@ -21,6 +21,7 @@
   - type: ContainerContainer
     containers:
       dropperSlot: !type:ContainerSlot
+  - type: Dropper
 
 - type: entity
   parent: BaseBeakerMetallic
@@ -44,3 +45,20 @@
     solutions:
       beaker:
         maxVol: 100
+
+- type: entity
+  parent: BaseItem
+  id: DropperNeedle
+  name: dropper needle
+  description: Just stick it in your friend.
+  components:
+  - type: Sprite
+    sprite: Objects/Specific/Chemistry/syringe.rsi
+    state: syringe_base0
+  - type: Icon
+    sprite: Objects/Specific/Chemistry/syringe.rsi
+    state: "syringe_base0"
+  - type: Item
+    size: 3
+    sprite: Objects/Specific/Chemistry/syringe.rsi
+    heldPrefix: 0
