@@ -1,0 +1,46 @@
+- type: entity
+  parent: BaseStructureDynamic
+  id: MedicineDropper
+  name: dropper
+  description: Designed for transfusion of substances to the patient.
+  components:
+  - type: Icon
+    sprite: Structures/Storage/tanks.rsi
+    state: watercooler
+  - type: Sprite
+    noRot: true
+    sprite: Structures/Storage/tanks.rsi
+    state: watercooler
+  - type: ItemSlots
+    slots:
+      dropperSlot:
+        whitelistFailPopup: dropper-cannot-put-entity-message #локализовать
+        whitelist:
+          tags:
+          - DropperPack
+  - type: ContainerContainer
+    containers:
+      dropperSlot: !type:ContainerSlot
+
+- type: entity
+  parent: BaseBeakerMetallic
+  id: SolutionPack
+  name: solution pack
+  description: Designed for transfusion of substances to the patient.
+  components:
+  - type: Tag
+    tags:
+    - GlassBeaker
+    - DropperPack
+  - type: Sprite
+    sprite: Objects/Specific/Medical/medical.rsi
+    layers:
+      - state: bloodpack
+  - type: Item
+    size: 10
+    sprite: Objects/Specific/Medical/medical.rsi
+    state: bloodpack
+  - type: SolutionContainerManager
+    solutions:
+      beaker:
+        maxVol: 100
