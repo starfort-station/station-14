@@ -5,9 +5,9 @@
   description: A set of tactical webbing worn for ERT.
   components:
   - type: Sprite
-    sprite: Clothing/Belt/militarywebbingERT.rsi
+    sprite: Starfort/Clothing/Belt/militarywebbingERT.rsi
   - type: Clothing
-    sprite: Clothing/Belt/militarywebbingERT.rsi
+    sprite: Starfort/Clothing/Belt/militarywebbingERT.rsi
   - type: Item
     size: 80
   - type: Storage
@@ -20,9 +20,9 @@
   description: A set of tactical webbing worn for ERT.
   components:
   - type: Sprite
-    sprite: Clothing/Belt/militarywebbingERT.rsi
+    sprite: Starfort/Clothing/Belt/militarywebbingERT.rsi
   - type: Clothing
-    sprite: Clothing/Belt/militarywebbingERT.rsi
+    sprite: Starfort/Clothing/Belt/militarywebbingERT.rsi
   - type: Item
     size: 80
   - type: Storage
