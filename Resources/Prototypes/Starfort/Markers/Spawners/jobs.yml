@@ -4,7 +4,7 @@
   name: FieldRecrut
   components:
   - type: SpawnPoint
-    job_id: FieldTrooper
+    job_id: FieldRecrut
   - type: Sprite
     layers:
       - state: green
