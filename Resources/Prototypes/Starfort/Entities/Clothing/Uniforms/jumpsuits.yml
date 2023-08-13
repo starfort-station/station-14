@@ -8,7 +8,7 @@
     sprite: Starfort/Clothing/Uniforms/Jumpsuit/field_trooper.rsi
   - type: Clothing
     sprite: Starfort/Clothing/Uniforms/Jumpsuit/field_trooper.rsi
-    
+
 - type: entity
   parent: ClothingUniformBase
   id: ClothingUniformJumpsuitFieldScientist
@@ -63,3 +63,14 @@
     sprite: Starfort/Clothing/Uniforms/Jumpsuit/field_recrut.rsi
   - type: Clothing
     sprite: Starfort/Clothing/Uniforms/Jumpsuit/field_recrut.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniforNavySweatshirt
+  name: Calfskin
+  description: Uniform for expedition squad performing operations in deep space.
+  components:
+  - type: Sprite
+    sprite: Starfort/Clothing/Uniforms/Jumpsuit/navy_sweatshirt.rsi
+  - type: Clothing
+    sprite: Starfort/Clothing/Uniforms/Jumpsuit/navy_sweatshirt.rsi
