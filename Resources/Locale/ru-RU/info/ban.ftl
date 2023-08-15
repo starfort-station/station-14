@@ -2,10 +2,9 @@
 cmd-ban-desc = Банит кого-либо
 cmd-ban-help = Использование: ban <name or user ID> <reason> [продолжительность в минутах, без указания или 0 для пермабана]
 cmd-ban-player = Не удалось найти игрока с таким именем.
-cmd-ban-invalid-minutes = ${ minutes } не является допустимым количеством минут!
-cmd-ban-invalid-severity = ${ severity } не является допустимой строгостью!
-cmd-ban-invalid-arguments = Недопустимое количество аргументов
-cmd-ban-self = Вы не можете забанить себя!
+cmd-ban-invalid-minutes = ${ minutes } is not a valid amount of minutes!
+cmd-ban-invalid-severity = ${ severity } is not a valid severity!
+cmd-ban-invalid-arguments = Invalid amount of arguments
 cmd-ban-hint = <name/user ID>
 cmd-ban-hint-reason = <reason>
 cmd-ban-hint-severity = [severity]
@@ -16,10 +15,10 @@ cmd-ban-hint-duration-3 = 3 дня
 cmd-ban-hint-duration-4 = 1 неделя
 cmd-ban-hint-duration-5 = 2 недели
 # ban panel
-cmd-banpanel-desc = Открывает панель банов
-cmd-banpanel-help = Использование: banpanel [имя или user guid]
-cmd-banpanel-server = Это не может быть использовано из консоли сервера
-cmd-banpanel-player-err = Указанный проигрыватель не может быть найден
+cmd-banpanel-desc = Opens the ban panel
+cmd-banpanel-help = Usage: banpanel [name or user guid]
+cmd-banpanel-server = This can not be used from the server console
+cmd-banpanel-player-err = The specified player could not be found
 cmd-ban-hint-duration-6 = 1 месяц
 # listbans
 cmd-banlist-desc = Список активных банов пользователя.
@@ -71,6 +70,6 @@ ban-panel-ip-hwid-tooltip = Leave empty and check the checkbox below to use last
 ban-panel-severity = Severity:
 # Ban string
 server-ban-string = { $admin } created a { $severity } severity server ban that expires { $expires } for [{ $name }, { $ip }, { $hwid }], with reason: { $reason }
-server-ban-string-no-pii = { $admin } created a { $severity } severity server ban that expires { $expires } for { $name } with reason: { $reason }
 server-ban-string-never = never
+server-ban-string-no-pii = { $admin } created a { $severity } severity server ban that expires { $expires } for { $name } with reason: { $reason }
 cmd-ban_exemption_get-arg-player = <player>
