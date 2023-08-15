@@ -1,1 +1,1 @@
-melee-stamina = Не хватает выносливости
+stamina-resist = Устоял

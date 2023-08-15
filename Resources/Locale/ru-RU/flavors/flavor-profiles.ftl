@@ -42,7 +42,6 @@ flavor-base-cheap = дёшево
 flavor-base-piquant = пикантно
 flavor-base-sharp = резко
 flavor-base-syrupy = сиропово
-flavor-base-spaceshroom = таинственно
 # lmao
 flavor-base-terrible = ужасно
 
@@ -151,7 +150,6 @@ flavor-complex-electrons = как электроны
 flavor-complex-parents = как чьи-то родители
 flavor-complex-plastic = как пластик
 flavor-complex-glue = как клей
-flavor-complex-spaceshroom-cooked = как космический умами
 
 ## Generic alcohol/soda taste. This should be replaced with an actual flavor profile.
 
