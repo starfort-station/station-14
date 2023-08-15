@@ -36,6 +36,7 @@
     eyes: ClothingEyesGlassesSunglasses
     id: CaptainPDA
     ears: ClothingHeadsetAltCommand
+    gloves: ClothingHandsGlovesCaptain
   innerclothingskirt: ClothingUniformJumpskirtCaptain
   satchel: ClothingBackpackSatchelCaptainFilled
   duffelbag: ClothingBackpackDuffelCaptainFilled
