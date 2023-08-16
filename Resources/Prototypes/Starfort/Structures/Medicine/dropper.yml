@@ -22,6 +22,13 @@
     containers:
       dropperSlot: !type:ContainerSlot
   - type: Dropper
+  - type: InteractionOutline
+  - type: ActivatableUI
+    key: enum.DropperUiKey.Key
+  - type: UserInterface
+    interfaces:
+    - key: enum.DropperUiKey.Key
+      type: DropperBoundUserInterface
 
 - type: entity
   parent: BaseBeakerMetallic
