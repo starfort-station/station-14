@@ -16,13 +16,72 @@ namespace Content.Client.Medical.Dropper.UI
     public sealed partial class DropperWindow : DefaultWindow
     {
         private readonly ButtonGroup _buttonGroup = new();
+        public event Action? DropperNeedleEjectButtonPressed;
+        public event Action? DropperSolutionEjectButtonPressed;
+        public event Action<float>? QuantitySet;
+        public event Action<float>? FrequencySet;
 
         public DropperWindow()
         {
             RobustXamlLoader.Load(this);
+            DropperNeedleEjectButton.OnPressed += _ => DropperNeedleEjectButtonPressed?.Invoke();
+            DropperSolutionEjectButton.OnPressed += _ => DropperSolutionEjectButtonPressed?.Invoke();
+            QuantitySlider.OnKeyBindUp += OnQuantitySliderReleased;
+            QuantitySlider.OnValueChanged += OnQuantitySliderChanged;
+            Quantity.OnValueChanged += OnQuantityChanged;
+
+            FrequencySlider.OnKeyBindUp += OnFrequencySliderReleased;
+            FrequencySlider.OnValueChanged += OnFrequencySliderChanged;
+            Frequency.OnValueChanged += OnFrequencyChanged;
 
         }
 
+        private void OnFrequencyChanged(FloatSpinBox.FloatSpinBoxEventArgs args)
+        {
+            var value = Math.Clamp(args.Value, FrequencySlider.MinValue, FrequencySlider.MaxValue);
 
+            FrequencySlider.SetValueWithoutEvent(value);
+            FrequencySet?.Invoke(value);
+        }
+
+        private void OnFrequencySliderChanged(Range range)
+        {
+            Frequency.Value = range.Value;
+        }
+
+        private void OnFrequencySliderReleased(GUIBoundKeyEventArgs args)
+        {
+            if (args.Function != EngineKeyFunctions.UIClick)
+                return;
+
+            FrequencySet?.Invoke(FrequencySlider.Value);
+        }
+
+        private void OnQuantityChanged(FloatSpinBox.FloatSpinBoxEventArgs args)
+        {
+            var value = Math.Clamp(args.Value, QuantitySlider.MinValue, QuantitySlider.MaxValue);
+
+            QuantitySlider.SetValueWithoutEvent(value);
+            QuantitySet?.Invoke(value);
+        }
+
+        private void OnQuantitySliderChanged(Range range)
+        {
+            Quantity.Value = range.Value;
+        }
+
+        private void OnQuantitySliderReleased(GUIBoundKeyEventArgs args)
+        {
+            if (args.Function != EngineKeyFunctions.UIClick)
+                return;
+
+            QuantitySet?.Invoke(QuantitySlider.Value);
+        }
+        public void SetDropperNeedleStatus(string status){
+            DropperNeedleStatus.Text = status;
+        }
+        public void SetDropperSolutionPackResidual(float Residual,float MaxVolume){
+            DropperSolutionPackResidual.Text = $"{Residual}/{MaxVolume}";
+        }
     }
 }
