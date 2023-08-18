@@ -1,3 +1,4 @@
+using Content.Shared.Chemistry;
 using Robust.Shared.Serialization;
 
 namespace Content.Shared.Medical.Dropper
@@ -35,28 +36,63 @@ namespace Content.Shared.Medical.Dropper
     [Serializable, NetSerializable]
     public sealed class DropperBoundUserInterfaceState : BoundUserInterfaceState
     {
-        /*public string CanisterLabel { get; }
-        public float CanisterPressure { get; }
-        public bool PortStatus { get; }
-        public string? TankLabel { get; }
-        public float TankPressure { get; }
-        public float ReleasePressure { get; }
-        public bool ReleaseValve { get; }
-        public float ReleasePressureMin { get; }
-        public float ReleasePressureMax { get; }
+        public float Quantity { get; }
+        public float Frequency { get; }
+        public string DropperNeedleStatus { get; }
+        public bool DropperSolutionPackStatus { get; }
+        public float QuantityMin { get; }
+        public float QuantityMax { get; }
+        public float FrequencyMin { get; }
+        public float FrequencyMax { get; }
 
-        public GasCanisterBoundUserInterfaceState(string canisterLabel, float canisterPressure, bool portStatus, string? tankLabel, float tankPressure, float releasePressure, bool releaseValve, float releaseValveMin, float releaseValveMax)
+        public readonly ContainerInfo? OutputContainer;
+
+        public DropperBoundUserInterfaceState(float quantity, float frequency, string dropperNeedleStatus, bool dropperSolutionPackStatus, float quantityMin, float quantityMax, float frequencyMin, float frequencyMax, ContainerInfo? outputContainer)
         {
-            CanisterLabel = canisterLabel;
-            CanisterPressure = canisterPressure;
-            PortStatus = portStatus;
-            TankLabel = tankLabel;
-            TankPressure = tankPressure;
-            ReleasePressure = releasePressure;
-            ReleaseValve = releaseValve;
-            ReleasePressureMin = releaseValveMin;
-            ReleasePressureMax = releaseValveMax;
-        }*/
+            Quantity = quantity;
+            Frequency = frequency;
+            DropperNeedleStatus = dropperNeedleStatus;
+            DropperSolutionPackStatus = dropperSolutionPackStatus;
+            QuantityMin = quantityMin;
+            QuantityMax = quantityMax;
+            FrequencyMin = frequencyMin;
+            FrequencyMax = frequencyMax;
+            OutputContainer = outputContainer;
+        }
+    }
+
+    [Serializable, NetSerializable]
+    public sealed class DropperChangeFrequencyMessage : BoundUserInterfaceMessage
+    {
+        public float Frequency { get; }
+        public DropperChangeFrequencyMessage(float frequency)
+        {
+            Frequency = frequency;
+        }
+    }
+
+    [Serializable, NetSerializable]
+    public sealed class DropperChangeQuantityMessage : BoundUserInterfaceMessage
+    {
+        public float Quantity { get; }
+        public DropperChangeQuantityMessage(float quantity)
+        {
+            Quantity = quantity;
+        }
+    }
+
+    [Serializable, NetSerializable]
+    public sealed class DropperSolutionEjectMessage : BoundUserInterfaceMessage
+    {
+        public DropperSolutionEjectMessage()
+        { }
+    }
+
+    [Serializable, NetSerializable]
+    public sealed class DropperNeedleEjectMessage : BoundUserInterfaceMessage
+    {
+        public DropperNeedleEjectMessage()
+        { }
     }
 
 }
