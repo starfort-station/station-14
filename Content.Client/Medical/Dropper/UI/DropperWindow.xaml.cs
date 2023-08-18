@@ -93,6 +93,7 @@ namespace Content.Client.Medical.Dropper.UI
             else
             {
                 DropperSolutionPackStatus.Text = Loc.GetString("comp-dropper-ui-solution-pack-not-inserted");
+                SetDropperSolutionPackResidual(Loc.GetString("comp-dropper-ui-solution-pack-null-residual"));
             }
         }
         public void SetQuantityRange(float min, float max)

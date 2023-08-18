@@ -1,4 +1,6 @@
+using Content.Shared.Containers.ItemSlots;
 using Content.Shared.Medical.Dropper;
+using Content.Client.Medical.Dropper;
 using JetBrains.Annotations;
 using Robust.Client.GameObjects;
 
@@ -48,6 +50,7 @@ namespace Content.Client.Medical.Dropper.UI
         private void OnDropperSolutionEjectButtonPressed()
         {
             SendMessage(new DropperSolutionEjectMessage());
+            SendMessage(new ItemSlotButtonPressedEvent(SharedDropper.OutputSlotName));
         }
 
         private void OnDropperNeedleEjectButtonPressed()

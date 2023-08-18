@@ -38,9 +38,9 @@ namespace Content.Server.Medical.Dropper
 
         private void OnFrequencyChange(EntityUid uid, DropperComponent component, DropperChangeFrequencyMessage args)
         {
-            if (MathHelper.CloseToPercent(args.Frequency, component.LastFrequency))
+            if (MathHelper.CloseToPercent(args.Frequency, component.LastInterval))
                 return;
-            component.LastFrequency = args.Frequency;
+            component.LastInterval = args.Frequency;
             DirtyUI(uid, component);
         }
         private void OnQuantityChange(EntityUid uid, DropperComponent component, DropperChangeQuantityMessage args)
@@ -58,18 +58,18 @@ namespace Content.Server.Medical.Dropper
 
         private void OnSolutionPackEject(EntityUid uid, DropperComponent component, DropperSolutionEjectMessage args)
         {
-            if (!TryComp<ContainerManagerComponent>(uid, out var containerManager)
-                || !containerManager.TryGetContainer(component.ContainerName, out var container))
-                return;
-            if(container.ContainedEntities.Count == 0)
-                return;
-            container.Remove(container.ContainedEntities[0]);
-            DirtyUI(uid, component);
+            //if (!TryComp<ContainerManagerComponent>(uid, out var containerManager)
+            //    || !containerManager.TryGetContainer(component.ContainerName, out var container))
+            //    return;
+            //if(container.ContainedEntities.Count == 0)
+            //    return;
+            //container.Remove(container.ContainedEntities[0]);
+            //DirtyUI(uid, component);
         }
 
         private void OnSolutionPackRemoved(EntityUid uid, DropperComponent component, EntRemovedFromContainerMessage args)
         {
-            if (args.Container.ID != component.ContainerName)
+            if (args.Container.ID != SharedDropper.OutputSlotName)
             return;
 
             DirtyUI(uid, component);
@@ -82,11 +82,11 @@ namespace Content.Server.Medical.Dropper
                 return;
             string needleStatus = "еблан";
             var solutionPackStatus = false;
-            var frequency = dropper.LastFrequency;
+            var interval = dropper.LastInterval;
             var quantity = dropper.LastQuantity;
-            var outputContainer = _itemSlotsSystem.GetItemOrNull(uid,dropper.ContainerName);
+            var outputContainer = _itemSlotsSystem.GetItemOrNull(uid,SharedDropper.OutputSlotName);
             var outputContainerInfo = BuildOutputContainerInfo(outputContainer);
-            if (containerManager.TryGetContainer(dropper.ContainerName, out var solutionPack)
+            if (containerManager.TryGetContainer(SharedDropper.OutputSlotName, out var solutionPack)
             && solutionPack.ContainedEntities.Count > 0)
             {
                // var pack = solutionPack.ContainedEntities[0];
@@ -96,9 +96,9 @@ namespace Content.Server.Medical.Dropper
 
             }
             _ui.TrySetUiState(uid, DropperUiKey.Key,
-                new DropperBoundUserInterfaceState(quantity,frequency,needleStatus,solutionPackStatus,
+                new DropperBoundUserInterfaceState(quantity,interval,needleStatus,solutionPackStatus,
                     dropper.MinQuantity,dropper.MaxQuantity,
-                    dropper.MinFrequency,dropper.MaxFrequency,
+                    dropper.MinInterval,dropper.MaxInterval,
                     outputContainerInfo));
         }
         private ContainerInfo? BuildOutputContainerInfo(EntityUid? container)
@@ -116,7 +116,7 @@ namespace Content.Server.Medical.Dropper
         }
         private void OnSolutionPackInserted(EntityUid uid, DropperComponent component, EntInsertedIntoContainerMessage args)
         {
-            if (args.Container.ID != component.ContainerName)
+            if (args.Container.ID != SharedDropper.OutputSlotName)
                 return;
             DirtyUI(uid, component);
 
@@ -126,7 +126,7 @@ namespace Content.Server.Medical.Dropper
         private void OnDropperStartup(EntityUid uid, DropperComponent component, ComponentStartup args)
         {
             var containerManager = EnsureComp<ContainerManagerComponent>(uid);
-            _container.EnsureContainer<ContainerSlot>(uid, component.ContainerName, containerManager);
+            _container.EnsureContainer<ContainerSlot>(uid, SharedDropper.OutputSlotName, containerManager);
             DirtyUI(uid, component);
         }
     }
