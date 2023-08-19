@@ -23,3 +23,5 @@ comp-dropper-ui-solution-label = Пакет для переливания:
 comp-dropper-ui-solution-pack-not-inserted = отсутствует
 comp-dropper-ui-solution-pack-inserted = вставлен
 comp-dropper-ui-solution-pack-eject = Взять
+
+comp-dropper-popup-needle-already-inserted = Игла уже вставлена!

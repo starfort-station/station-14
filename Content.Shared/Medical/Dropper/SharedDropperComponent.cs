@@ -85,12 +85,12 @@ namespace Content.Shared.Medical.Dropper
         }
     }
 
-    [Serializable, NetSerializable]
+    /*[Serializable, NetSerializable]
     public sealed class DropperSolutionEjectMessage : BoundUserInterfaceMessage
     {
         public DropperSolutionEjectMessage()
         { }
-    }
+    }*/
 
     [Serializable, NetSerializable]
     public sealed class DropperNeedleEjectMessage : BoundUserInterfaceMessage

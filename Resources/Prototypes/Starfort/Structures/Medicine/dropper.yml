@@ -69,3 +69,4 @@
     size: 3
     sprite: Objects/Specific/Chemistry/syringe.rsi
     heldPrefix: 0
+  - type: DropperNeedle

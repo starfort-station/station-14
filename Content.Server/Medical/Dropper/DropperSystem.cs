@@ -9,6 +9,8 @@ using Content.Shared.Chemistry;
 using Content.Server.Chemistry.EntitySystems;
 using System.Linq;
 using Content.Server.Popups;
+using Content.Shared.Hands.EntitySystems;
+using Content.Shared.Interaction;
 
 namespace Content.Server.Medical.Dropper
 {
@@ -20,6 +22,7 @@ namespace Content.Server.Medical.Dropper
         [Dependency] private readonly ItemSlotsSystem _itemSlotsSystem = default!;
         [Dependency] private readonly SolutionContainerSystem _solutionContainerSystem = default!;
         [Dependency] private readonly PopupSystem _popup = default!;
+        [Dependency] private readonly SharedHandsSystem _hands = default!;
         public override void Initialize()
         {
             base.Initialize();
@@ -28,12 +31,27 @@ namespace Content.Server.Medical.Dropper
             SubscribeLocalEvent<DropperComponent, ComponentStartup>(OnDropperStartup);
             SubscribeLocalEvent<DropperComponent, EntInsertedIntoContainerMessage>(OnSolutionPackInserted);
             SubscribeLocalEvent<DropperComponent, EntRemovedFromContainerMessage>(OnSolutionPackRemoved);
+            SubscribeLocalEvent<DropperComponent, InteractUsingEvent>(OnDropperInteractUsing);
             // При вводе вещества если открыть UI сделать динамический показ остатка пакета!!
             // UI
-            SubscribeLocalEvent<DropperComponent, DropperSolutionEjectMessage>(OnSolutionPackEject);
+            //SubscribeLocalEvent<DropperComponent, DropperSolutionEjectMessage>(OnSolutionPackEject);
             SubscribeLocalEvent<DropperComponent, DropperNeedleEjectMessage>(OnDropperNeedleEject);
             SubscribeLocalEvent<DropperComponent, DropperChangeFrequencyMessage>(OnFrequencyChange);
             SubscribeLocalEvent<DropperComponent, DropperChangeQuantityMessage>(OnQuantityChange);
+        }
+
+        private void OnDropperInteractUsing(EntityUid uid, DropperComponent component, InteractUsingEvent args)
+        {
+            if (!HasComp<DropperNeedleComponent>(args.Used)){
+                return;
+            }
+            if (component.NeedleStatus)
+            {
+                _popup.PopupEntity(Loc.GetString("comp-dropper-popup-needle-already-inserted"), uid);
+                return;
+            }
+            QueueDel(args.Used);
+            component.NeedleStatus = true;
         }
 
         private void OnFrequencyChange(EntityUid uid, DropperComponent component, DropperChangeFrequencyMessage args)
@@ -53,11 +71,25 @@ namespace Content.Server.Medical.Dropper
 
         private void OnDropperNeedleEject(EntityUid uid, DropperComponent component, DropperNeedleEjectMessage args)
         {
-            _popup.PopupEntity("долбоеб? не работает пока что", uid);
+            if (!component.NeedleStatus)
+                return;
+            if (args.Session.AttachedEntity == null){
+                return;
+            }
+            if (!_hands.TryGetEmptyHand(args.Session.AttachedEntity.Value, out var hand))
+            {
+                return;
+            }
+            var xform = Transform(uid);
+            var spawned = Spawn(component.NeedlePrototype, xform.Coordinates);
+            _hands.TryPickupAnyHand(args.Session.AttachedEntity.Value, spawned);
+            //_hands.CanPickupAnyHand(args.Session.AttachedEntity, )
+            component.NeedleStatus = false;
+
         }
 
-        private void OnSolutionPackEject(EntityUid uid, DropperComponent component, DropperSolutionEjectMessage args)
-        {
+        //private void OnSolutionPackEject(EntityUid uid, DropperComponent component, DropperSolutionEjectMessage args)
+        //{
             //if (!TryComp<ContainerManagerComponent>(uid, out var containerManager)
             //    || !containerManager.TryGetContainer(component.ContainerName, out var container))
             //    return;
@@ -65,40 +97,41 @@ namespace Content.Server.Medical.Dropper
             //    return;
             //container.Remove(container.ContainedEntities[0]);
             //DirtyUI(uid, component);
-        }
+        //}
 
         private void OnSolutionPackRemoved(EntityUid uid, DropperComponent component, EntRemovedFromContainerMessage args)
         {
             if (args.Container.ID != SharedDropper.OutputSlotName)
-            return;
+                return;
 
             DirtyUI(uid, component);
 
             _appearance.SetData(uid, DropperVisuals.PackInserted, false);
         }
 
-        private void DirtyUI(EntityUid uid, DropperComponent? dropper = null,ContainerManagerComponent? containerManager = null){
+        private void DirtyUI(EntityUid uid, DropperComponent? dropper = null, ContainerManagerComponent? containerManager = null)
+        {
             if (!Resolve(uid, ref dropper, ref containerManager))
                 return;
             string needleStatus = "еблан";
             var solutionPackStatus = false;
             var interval = dropper.LastInterval;
             var quantity = dropper.LastQuantity;
-            var outputContainer = _itemSlotsSystem.GetItemOrNull(uid,SharedDropper.OutputSlotName);
+            var outputContainer = _itemSlotsSystem.GetItemOrNull(uid, SharedDropper.OutputSlotName);
             var outputContainerInfo = BuildOutputContainerInfo(outputContainer);
             if (containerManager.TryGetContainer(SharedDropper.OutputSlotName, out var solutionPack)
             && solutionPack.ContainedEntities.Count > 0)
             {
-               // var pack = solutionPack.ContainedEntities[0];
+                // var pack = solutionPack.ContainedEntities[0];
                 //var packComponent = Comp<SolutionContainerManagerComponent>(pack);
                 //_ui.
                 solutionPackStatus = true;
 
             }
             _ui.TrySetUiState(uid, DropperUiKey.Key,
-                new DropperBoundUserInterfaceState(quantity,interval,needleStatus,solutionPackStatus,
-                    dropper.MinQuantity,dropper.MaxQuantity,
-                    dropper.MinInterval,dropper.MaxInterval,
+                new DropperBoundUserInterfaceState(quantity, interval, needleStatus, solutionPackStatus,
+                    dropper.MinQuantity, dropper.MaxQuantity,
+                    dropper.MinInterval, dropper.MaxInterval,
                     outputContainerInfo));
         }
         private ContainerInfo? BuildOutputContainerInfo(EntityUid? container)

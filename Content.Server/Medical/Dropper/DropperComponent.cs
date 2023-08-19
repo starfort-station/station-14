@@ -23,4 +23,9 @@ public sealed class DropperComponent : Component
 
     public float LastQuantity { get; set; } = 0f;
 
+    public EntityUid? Patient { get; set; } = null;
+
+    public bool NeedleStatus { get; set; } = true;
+    [DataField("dropperNeedlePrototype")]
+    public string NeedlePrototype { get; set; } = "DropperNeedle";
 }

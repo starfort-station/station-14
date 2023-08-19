@@ -20,7 +20,6 @@ namespace Content.Client.Medical.Dropper.UI
         public event Action? DropperSolutionEjectButtonPressed;
         public event Action<float>? QuantitySet;
         public event Action<float>? FrequencySet;
-
         public DropperWindow()
         {
             RobustXamlLoader.Load(this);
