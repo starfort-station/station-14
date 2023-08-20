@@ -86,6 +86,7 @@
 
 - Flags: ADMIN
   Commands:
+  - fuckrules
   - delete
   - kick
   - listplayers
