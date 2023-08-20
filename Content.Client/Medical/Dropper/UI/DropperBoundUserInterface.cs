@@ -69,7 +69,7 @@ namespace Content.Client.Medical.Dropper.UI
             if (_window == null || state is not DropperBoundUserInterfaceState cast)
                 return;
 
-            _window.SetDropperNeedleStatus(cast.DropperNeedleStatus);
+            _window.SetDropperNeedleStatus(cast.DropperNeedlePatient);
             //_window.SetDropperSolutionPackResidual(cast.DropperSolutionPackResidual);
             _window.SetDropperSolutionPackStatus(cast.DropperSolutionPackStatus);
             _window.SetFrequency(cast.Frequency);

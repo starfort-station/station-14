@@ -42,7 +42,8 @@ namespace Content.Shared.Medical.Dropper
     {
         public float Quantity { get; }
         public float Frequency { get; }
-        public string DropperNeedleStatus { get; }
+        public string DropperNeedlePatient { get; }
+        public bool DropperNeedleStatus { get; }
         public bool DropperSolutionPackStatus { get; }
         public float QuantityMin { get; }
         public float QuantityMax { get; }
@@ -51,10 +52,11 @@ namespace Content.Shared.Medical.Dropper
 
         public readonly ContainerInfo? OutputContainer;
 
-        public DropperBoundUserInterfaceState(float quantity, float frequency, string dropperNeedleStatus, bool dropperSolutionPackStatus, float quantityMin, float quantityMax, float frequencyMin, float frequencyMax, ContainerInfo? outputContainer)
+        public DropperBoundUserInterfaceState(float quantity, float frequency, string dropperNeedlePatient, bool dropperNeedleStatus, bool dropperSolutionPackStatus, float quantityMin, float quantityMax, float frequencyMin, float frequencyMax, ContainerInfo? outputContainer)
         {
             Quantity = quantity;
             Frequency = frequency;
+            DropperNeedlePatient = dropperNeedlePatient;
             DropperNeedleStatus = dropperNeedleStatus;
             DropperSolutionPackStatus = dropperSolutionPackStatus;
             QuantityMin = quantityMin;

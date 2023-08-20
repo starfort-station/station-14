@@ -23,6 +23,7 @@ namespace Content.Server.Medical.Dropper
         [Dependency] private readonly SolutionContainerSystem _solutionContainerSystem = default!;
         [Dependency] private readonly PopupSystem _popup = default!;
         [Dependency] private readonly SharedHandsSystem _hands = default!;
+        [Dependency] private readonly IEntityManager _entManager = default!;
         public override void Initialize()
         {
             base.Initialize();
@@ -52,6 +53,7 @@ namespace Content.Server.Medical.Dropper
             }
             QueueDel(args.Used);
             component.NeedleStatus = true;
+            DirtyUI(uid, component);
         }
 
         private void OnFrequencyChange(EntityUid uid, DropperComponent component, DropperChangeFrequencyMessage args)
@@ -81,10 +83,14 @@ namespace Content.Server.Medical.Dropper
                 return;
             }
             var xform = Transform(uid);
+
             var spawned = Spawn(component.NeedlePrototype, xform.Coordinates);
+            var needleComp = _entManager.GetComponent<DropperNeedleComponent>(spawned);
+            needleComp.dropper = uid;
             _hands.TryPickupAnyHand(args.Session.AttachedEntity.Value, spawned);
             //_hands.CanPickupAnyHand(args.Session.AttachedEntity, )
             component.NeedleStatus = false;
+            DirtyUI(uid, component);
 
         }
 
@@ -113,7 +119,7 @@ namespace Content.Server.Medical.Dropper
         {
             if (!Resolve(uid, ref dropper, ref containerManager))
                 return;
-            string needleStatus = "еблан";
+            string patient = "еблан";
             var solutionPackStatus = false;
             var interval = dropper.LastInterval;
             var quantity = dropper.LastQuantity;
@@ -129,7 +135,7 @@ namespace Content.Server.Medical.Dropper
 
             }
             _ui.TrySetUiState(uid, DropperUiKey.Key,
-                new DropperBoundUserInterfaceState(quantity, interval, needleStatus, solutionPackStatus,
+                new DropperBoundUserInterfaceState(quantity, interval, patient, dropper.NeedleStatus, solutionPackStatus,
                     dropper.MinQuantity, dropper.MaxQuantity,
                     dropper.MinInterval, dropper.MaxInterval,
                     outputContainerInfo));

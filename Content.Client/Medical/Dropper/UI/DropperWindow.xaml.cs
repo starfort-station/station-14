@@ -130,6 +130,7 @@ namespace Content.Client.Medical.Dropper.UI
             var castState = (DropperBoundUserInterfaceState) state;
             UpdateContainerInfo(castState);
             DropperSolutionEjectButton.Disabled = castState.OutputContainer is null;
+            DropperNeedleEjectButton.Disabled = !castState.DropperNeedleStatus;
         }
     }
 }
