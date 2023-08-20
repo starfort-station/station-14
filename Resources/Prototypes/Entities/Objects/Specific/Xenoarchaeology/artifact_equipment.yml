@@ -5,7 +5,7 @@
     - type: Transform
       noRot: true
     - type: AccessReader
-      access: [["Research"], ["Salvage"]]
+      access: [["Research"], ["Salvage"], ["Expedition"]]
     - type: Lock
     - type: Sprite
       drawdepth: Objects
