@@ -13,7 +13,7 @@
       department: Expedition
       time: 18000 #5 hrs
   startingGear: FieldCommanderGear
-  icon: "FieldCommander"
+  icon: "JobIconFieldCommander"
   supervisors: job-supervisors-captain
   canBeAntag: false
   access:

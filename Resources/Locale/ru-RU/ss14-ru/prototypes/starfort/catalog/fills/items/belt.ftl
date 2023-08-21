@@ -2,5 +2,5 @@ ent-ClothingBeltMilitaryERTMedicFilled = { ent-ClothingBeltMilitaryERTMedic }
     .suffix = Заполенный
     .desc = { ent-ClothingBeltMilitaryERTMedic.desc }
 ent-ClothingBeltMilitaryERTFilled = { ent-ClothingBeltMilitaryERT }
-    .suffix = Заполенный
+    .suffix = Заполненный
     .desc = { ent-ClothingBeltMilitaryERT.desc }

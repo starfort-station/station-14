@@ -95,7 +95,7 @@
 
 - type: entity
   noSpawn: true
-  parent: ClothingBackpack
+  parent: ClothingBackpackCargo
   id: ClothingBackpackQuartermasterFilled
   components:
   - type: StorageFill
@@ -119,6 +119,15 @@
   noSpawn: true
   parent: ClothingBackpackEngineering
   id: ClothingBackpackEngineeringFilled
+  components:
+  - type: StorageFill
+    contents:
+      - id: BoxSurvivalEngineering
+
+- type: entity
+  noSpawn: true
+  parent: ClothingBackpackAtmospherics
+  id: ClothingBackpackAtmosphericsFilled
   components:
   - type: StorageFill
     contents:
@@ -222,6 +231,10 @@
           amount: 2
         - id: MagazinePistol
           amount: 3
+        - id: WeaponPulseCarbine
+        - id: WeaponDisabler
+        - id: MedicatedSuture
+        - id: RegenerativeMesh
         - id: Handcuffs
           amount: 3
         - id: PaperWrittenERTmanual
@@ -244,6 +257,8 @@
         - id: MagazinePistolRubber
           amount: 2
         - id: WeaponPulseCarbine
+        - id: MedicatedSuture
+        - id: RegenerativeMesh
         - id: BoxHandcuff
         - id: PaperWrittenERTmanual
         - id: Handcuffs
@@ -258,7 +273,7 @@
   components:
     - type: StorageFill
       contents:
-        - id: BoxSurvivalERT
+        - id: BoxSurvivalMedical
         - id: WeaponPistolMk58
         - id: MagazinePistol
           amount: 3
@@ -271,7 +286,9 @@
         - id: Handcuffs
           amount: 3
         - id: CrowbarRed
-        - id: BoxBodyBag
+        - id: OmnizineChemistryBottle
+        - id: EpinephrineChemistryBottle
+        - id: EpinephrineChemistryBottle
 
 - type: entity
   noSpawn: true
@@ -284,12 +301,16 @@
         - id: PaperWrittenERTmanual
         - id: trayScanner
         - id: WeaponPulseCarbine
+        - id: MedicatedSuture
+        - id: RegenerativeMesh
         - id: RCD
         - id: RCDAmmo
         - id: RCDAmmo
         - id: RCDAmmo
         - id: Handcuffs
           amount: 3
+        - id: CableMVStack
+        - id: CableHVStack
 
 - type: entity
   noSpawn: true
@@ -308,6 +329,15 @@
         - id: CrowbarRed
         - id: AdvMopItem
         - id: BoxBodyBag
+
+- type: entity
+  noSpawn: true
+  parent: ClothingBackpackCargo
+  id: ClothingBackpackCargoFilled
+  components:
+    - type: StorageFill
+      contents:
+        - id: BoxSurvival
 
 - type: entity
   noSpawn: true

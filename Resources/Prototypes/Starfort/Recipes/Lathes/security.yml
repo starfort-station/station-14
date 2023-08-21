@@ -11,3 +11,10 @@
   completetime: 8
   materials:
     Steel: 2160
+
+- type: latheRecipe
+  id: CartridgeHeavyLecter
+  result: CartridgeHeavyLecter
+  completetime: 2
+  materials:
+    Steel: 35

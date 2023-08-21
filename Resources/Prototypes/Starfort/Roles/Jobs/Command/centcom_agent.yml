@@ -16,7 +16,7 @@
     - !type:OverallPlaytimeRequirement
       time: 108000
   startingGear: CCAgentGear
-  icon: "Lawyer"
+  icon: "JobIconLawyer"
   supervisors: job-supervisors-magistrate
   access:
   - Medical

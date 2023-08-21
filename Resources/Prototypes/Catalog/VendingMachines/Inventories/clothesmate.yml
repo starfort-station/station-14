@@ -32,11 +32,13 @@
     ClothingUniformJumpskirtColorDarkBlue: 2
     ClothingUniformJumpsuitColorTeal: 2
     ClothingUniformJumpskirtColorTeal: 2
+    ClothingUniformJumpskirtColorBlueMiniSkirtColorBeige: 2
     ClothingUniformJumpsuitHawaiBlack: 2
     ClothingUniformJumpsuitHawaiBlue: 2
     ClothingUniformJumpsuitHawaiRed: 2
     ClothingUniformJumpsuitHawaiYellow: 2
     ClothingUniformJumpsuitFlannel: 2
+    ClothingUniforNavySweatshirt: 2
     ClothingShoesColorBlack: 8
     ClothingShoesColorBrown: 4
     ClothingShoesColorWhite: 3
@@ -58,7 +60,6 @@
     ClothingHeadFishCap: 2
     ClothingHeadRastaHat: 2
     ClothingBeltStorageWaistbag: 3
-    ClothingUniformJumpskirtColorBlueMiniSkirtColorBeige: 2
   contrabandInventory:
     ClothingUniformJumpsuitTacticool: 1
     ClothingUniformJumpskirtTacticool: 1

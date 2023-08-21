@@ -12,20 +12,20 @@ void vertex()
 }
 
 void fragment() {
-    vec3 colorset;
-    float time = TIME;
-	float yCoord = 1.0/SCREEN_PIXEL_SIZE.y;
-	float xCoord = 1.0/SCREEN_PIXEL_SIZE.x;
-    float alpha = 0.5;
+    lowp vec3 colorset;
+    highp float time = TIME;
+	highp float yCoord = 1.0/SCREEN_PIXEL_SIZE.y;
+	highp float xCoord = 1.0/SCREEN_PIXEL_SIZE.x;
+    lowp float alpha = 0.5;
 
-    float fLine = yCoord - mod(time * 200.0, yCoord);
-    float sLine = mod(time * 500.0, yCoord);
-    float zLine = mod(time * 500.0, xCoord) * 3;
-	float gLine = xCoord - mod(time * 1500.0, xCoord);
-	float xLine = mod(time * 1500.0, yCoord);
+    highp float fLine = yCoord - mod(time * 200.0, yCoord);
+    highp float sLine = mod(time * 500.0, yCoord);
+    highp float zLine = mod(time * 500.0, xCoord) * 3.0;
+	highp float gLine = xCoord - mod(time * 1500.0, xCoord);
+	highp float xLine = mod(time * 1500.0, yCoord);
 
-    float xValue = (FRAGCOORD.x - xCoord/2.) * (FRAGCOORD.x - xCoord/2.);
-    float yValue = (FRAGCOORD.y - yCoord/2.) * (FRAGCOORD.y - yCoord/2.);
+    lowp float xValue = (FRAGCOORD.x - xCoord/2.) * (FRAGCOORD.x - xCoord/2.);
+    lowp float yValue = (FRAGCOORD.y - yCoord/2.) * (FRAGCOORD.y - yCoord/2.);
 
     if (xValue + yValue > 260000.0) {
         colorset = vec3(0.0);
@@ -62,4 +62,3 @@ void fragment() {
     //COLOR = vec4(vec3(light.z), 1.0);
 	COLOR = vec4(colorset, alpha);
 }
-
