@@ -1,6 +1,6 @@
 - type: entity
   parent: VendingMachine
-  id: VendingMachineExpidition
+  id: VendingMachineExpedition
   name: ExpiMag
   description: For those who consider themselves tough guys.
   components:

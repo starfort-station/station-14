@@ -93605,7 +93605,7 @@ entities:
     - pos: -117.5,-18.5
       parent: 1
       type: Transform
-- proto: VendingMachineExpidition
+- proto: VendingMachineExpedition
   entities:
   - uid: 11460
     components:
