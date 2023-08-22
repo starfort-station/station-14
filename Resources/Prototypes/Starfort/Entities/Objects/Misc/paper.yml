@@ -24,7 +24,7 @@
 
 - type: entity
   name: Incorrect query
-  parent: RubberStampMime
+  parent: RubberStampBaseAlt
   id: RubberIncorrectquery
   components:
   - type: Stamp
@@ -36,7 +36,7 @@
 
 - type: entity
   name: APPROVED from Centcom rubber stamp
-  parent: RubberStampMime
+  parent: RubberStampBaseAlt
   id: RubberStampApprovedbyCC
   components:
   - type: Stamp
