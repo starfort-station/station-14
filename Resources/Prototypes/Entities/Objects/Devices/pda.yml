@@ -646,6 +646,7 @@
     state: pda-centcom
     penSlot:
       startingItem: PenCentcom
+      priority: -1
       whitelist:
         tags:
         - Write
