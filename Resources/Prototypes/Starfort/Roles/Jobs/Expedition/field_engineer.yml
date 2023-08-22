@@ -23,7 +23,6 @@
   - External
   extendedAccess:
   - Atmospherics
-  - Brig
 
 - type: startingGear
   id: FieldEngineerGear
