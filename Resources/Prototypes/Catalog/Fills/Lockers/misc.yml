@@ -32,7 +32,11 @@
       - id: MedkitOxygenFilled
         prob: 0.2
       - id: WeaponFlareGun
-        prob: 0.05
+        prob: 0.2
+      - id: BoxShotgunFlare
+        prob: 0.2
+      - id: BoxInflatable
+        prob: 0.3
       - id: BoxMRE
         prob: 0.1
 
@@ -56,7 +60,11 @@
       - id: MedkitOxygenFilled
         prob: 0.2
       - id: WeaponFlareGun
-        prob: 0.05
+        prob: 0.1
+      - id: BoxShotgunFlare
+        prob: 0.1
+      - id: BoxInflatable
+        prob: 0.3
       - id: BoxMRE
         prob: 0.1
 
