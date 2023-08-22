@@ -21,8 +21,6 @@
   - Maintenance
   - Expedition
   - External
-  extendedAccess:
-  - Brig
 
 - type: startingGear
   id: FieldScientistGear

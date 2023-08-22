@@ -2,6 +2,7 @@
   id: FreightforwardersEquipmentInventory
   startingInventory:
     MedkitFilled: 2
+    CombatMedipen: 3
     Bloodpack: 3
     Crowbar: 3
     Pickaxe: 4
@@ -9,6 +10,7 @@
     Floodlight: 4
     HandheldGPSBasic: 5
     RadioHandheld: 5
+    CombatKnife: 3
     Machete: 3
     InflatableWallStack1: 12
     InflatableDoorStack1: 4

@@ -3,6 +3,10 @@
   name: id-card-access-level-field
 
 - type: accessLevel
+  id: Soldier
+  name: id-card-access-level-field-soldier
+
+- type: accessLevel
   id: Sergeant
   name: id-card-access-level-sergeant
 
@@ -10,4 +14,5 @@
   id: Expedition
   tags:
   - Expedition
+  - Soldier
   - Sergeant

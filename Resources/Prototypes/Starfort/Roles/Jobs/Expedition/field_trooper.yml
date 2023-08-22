@@ -14,12 +14,10 @@
   supervisors: job-supervisors-field-commander
   canBeAntag: false
   access:
-  - Brig
   - Maintenance
   - Expedition
   - External
-  extendedAccess:
-  - Security
+  - Soldier
 
 - type: startingGear
   id: FieldTrooperGear

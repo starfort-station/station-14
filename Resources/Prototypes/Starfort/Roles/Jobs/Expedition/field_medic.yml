@@ -23,7 +23,6 @@
   - External
   extendedAccess:
   - Chemistry
-  - Brig
 
 - type: startingGear
   id: FieldMedicGear

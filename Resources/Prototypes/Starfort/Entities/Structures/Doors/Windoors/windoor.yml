@@ -1,0 +1,7 @@
+- type: entity
+  parent: WindoorSecure
+  id: WindoorSecureExpeditionLocked
+  suffix: Expedition, Locked
+  components:
+  - type: AccessReader
+    access: [["Expedition"]]

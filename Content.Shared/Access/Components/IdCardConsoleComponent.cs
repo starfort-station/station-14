@@ -61,6 +61,7 @@ public sealed class IdCardConsoleComponent : Component
         "HeadOfPersonnel",
         "Expedition",
         "Sergeant",
+        "Soldier",
         "HeadOfSecurity",
         "Hydroponics",
         "Janitor",

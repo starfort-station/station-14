@@ -3,7 +3,7 @@
   startingInventory:
     ClothingHeadsetExpedition: 3
     EncryptionKeyExpedition: 3
-    ClothingShoesBootsCombatFilled: 2
+    ClothingShoesBootsCombat: 2
     ClothingBackpackDuffelExpedition: 3
     ClothingBackpackExpedition: 3
     ClothingBackpackSatchelExpedition: 3

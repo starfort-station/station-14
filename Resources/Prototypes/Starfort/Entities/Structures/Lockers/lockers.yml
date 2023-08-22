@@ -12,7 +12,7 @@
       stateDoorOpen: fieldsci_open
       stateDoorClosed: fieldtroop_door
     - type: AccessReader
-      access: [["Security","Expedition"]]
+      access: [["Soldier","Expedition"]]
 
 - type: entity
   id: LockerFieldSci
