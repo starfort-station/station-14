@@ -1,6 +1,7 @@
 namespace Content.Server.Medical.Dropper;
+using Content.Shared.Damage;
 
-[RegisterComponent, Access(typeof(DropperSystem))]
+[RegisterComponent]//, Access(typeof(DropperSystem))]
 public sealed class DropperComponent : Component
 {
 
@@ -24,8 +25,25 @@ public sealed class DropperComponent : Component
     public float LastQuantity { get; set; } = 0f;
 
     public EntityUid? Patient { get; set; } = null;
+    public EntityUid? Needle { get; set; } = null;
 
     public bool NeedleStatus { get; set; } = true;
     [DataField("dropperNeedlePrototype")]
     public string NeedlePrototype { get; set; } = "DropperNeedle";
+
+    [DataField("maxRange")]
+    public float MaxRange { get; set; } = 1.5f;
+
+    [DataField("damageIfExcessRange")]
+    public DamageSpecifier DamageIfExcessRange = new()
+    {
+        DamageDict = new()
+             {
+                 { "Piercing", 5.0 },
+             }
+    };
+    [DataField("bleedingIfExcessRange")]
+    public float BleedingIfExcessRange { get; set; } = 5f;
+
+    public TimeSpan LastActivation { get; set; }
 }

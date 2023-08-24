@@ -5,12 +5,12 @@
   description: Designed for transfusion of substances to the patient.
   components:
   - type: Icon
-    sprite: Structures/Storage/tanks.rsi
+    sprite: Starfort/Structures/Medicine/dropper.rsi
     state: watercooler
   - type: Sprite
     noRot: true
-    sprite: Structures/Storage/tanks.rsi
-    state: watercooler
+    sprite: Starfort/Structures/Medicine/dropper.rsi
+    state: meddropper
   - type: ItemSlots
     slots:
       dropperSlot:
@@ -41,13 +41,13 @@
     - GlassBeaker
     - DropperPack
   - type: Sprite
-    sprite: Objects/Specific/Medical/medical.rsi
+    sprite: Starfort/Structures/Medicine/dropper.rsi
     layers:
-      - state: bloodpack
+      - state: solution
   - type: Item
     size: 10
-    sprite: Objects/Specific/Medical/medical.rsi
-    state: bloodpack
+    sprite: Starfort/Structures/Medicine/dropper.rsi
+    state: solution
   - type: SolutionContainerManager
     solutions:
       beaker:
@@ -60,13 +60,14 @@
   description: Just stick it in your friend.
   components:
   - type: Sprite
-    sprite: Objects/Specific/Chemistry/syringe.rsi
-    state: syringe_base0
+    sprite: Starfort/Structures/Medicine/dropper.rsi
+    state: dropsyringe
   - type: Icon
-    sprite: Objects/Specific/Chemistry/syringe.rsi
-    state: "syringe_base0"
+    sprite: Starfort/Structures/Medicine/dropper.rsi
+    state: "dropsyringe"
   - type: Item
     size: 3
-    sprite: Objects/Specific/Chemistry/syringe.rsi
+    sprite: Starfort/Structures/Medicine/dropper.rsi
+    state: dropsyringe
     heldPrefix: 0
   - type: DropperNeedle
