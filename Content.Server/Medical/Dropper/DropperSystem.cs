@@ -227,7 +227,7 @@ namespace Content.Server.Medical.Dropper
             var inRange = Transform(component.dropper).Coordinates.InRange(_entManager,Transform(args.Target.Value).Coordinates, dropper.MaxRange);
             if (!inRange)
             {
-                _popup.PopupEntity(Loc.GetString("dropper-needle-out-of-range"), args.Target.Value);
+                _popup.PopupEntity(Loc.GetString("dropper-needle-out-of-range"), args.Target.Value, args.User);
                 return;
             }
             player.dropper = component.dropper;
