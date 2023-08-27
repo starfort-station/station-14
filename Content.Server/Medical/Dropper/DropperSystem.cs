@@ -24,6 +24,7 @@ using Content.Shared.Chemistry.Components;
 using Content.Shared.FixedPoint;
 using Content.Shared.Chemistry.Reagent;
 using Content.Shared.Interaction.Events;
+using Content.Server.Administration.Logs;
 
 namespace Content.Server.Medical.Dropper
 {
@@ -37,14 +38,13 @@ namespace Content.Server.Medical.Dropper
         [Dependency] private readonly PopupSystem _popup = default!;
         [Dependency] private readonly SharedHandsSystem _hands = default!;
         [Dependency] private readonly IEntityManager _entManager = default!;
-        [Dependency] private readonly SharedDoAfterSystem _doAfterSystem = default!;
         [Dependency] private readonly AlertsSystem _alerts = default!;
         [Dependency] private readonly IGameTiming _time = default!;
         [Dependency] private readonly DamageableSystem _damageSystem = default!;
         [Dependency] private readonly BloodstreamSystem _bloodstreamSystem = default!;
         [Dependency] private readonly SolutionContainerSystem _solution = default!;
-        [Dependency] private readonly SolutionTransferSystem _solutionTransferSystem = default!;
         [Dependency] private readonly ReactiveSystem _reactiveSystem = default!;
+        [Dependency] private readonly IAdminLogManager _adminLogger = default!;
         public override void Initialize()
         {
             base.Initialize();
@@ -69,6 +69,7 @@ namespace Content.Server.Medical.Dropper
             SubscribeLocalEvent<DropperNeedleComponent, AfterInteractEvent>(OnAfterInteractWithNeedle);
         }
 
+
         private void OnNeedleDropped(EntityUid uid, DropperNeedleComponent needle, DroppedEvent args)
         {
             if (needle.dropper != null)
@@ -89,13 +90,16 @@ namespace Content.Server.Medical.Dropper
         {
             if (dropper.Patient != null)
             {
-                _damageSystem.TryChangeDamage(dropper.Patient.Value, dropper.DamageIfExcessRange, true, false);
+                var dmg = _damageSystem.TryChangeDamage(dropper.Patient.Value, dropper.DamageIfExcessRange, true, false);
                 if (TryComp<BloodstreamComponent>(dropper.Patient, out var bloodstream))
                 {
                     _bloodstreamSystem.TryModifyBleedAmount(dropper.Patient.Value, dropper.BleedingIfExcessRange);
                 }
+                if (dmg is not null)
+                    _adminLogger.Add(Shared.Database.LogType.Damaged, Shared.Database.LogImpact.Medium, $"Patient {ToPrettyString(dropper.Patient.Value)} sustained damage: {dmg.Total} and bleeding: {dropper.BleedingIfExcessRange} due to going beyond the dropper: {ToPrettyString(uid)} range.");
                 _popup.PopupEntity(Loc.GetString("dropper-needle-out-of-range-patient"), dropper.Patient.Value, dropper.Patient.Value);
                 RemoveNeedle(dropper.Patient.Value);
+
             }
             else if (dropper.Needle != null)
             {
@@ -117,15 +121,12 @@ namespace Content.Server.Medical.Dropper
             var outputContainer = _itemSlotsSystem.GetItemOrNull(uid, SharedDropper.OutputSlotName);
             var outputContainerInfo = BuildOutputContainerInfo(outputContainer);
             if (dropper.Patient == null || dropper.LastQuantity == 0 || dropper.NeedleStatus ||
-            outputContainer == null) // + проверка на пакет
+            outputContainer == null)
                 return;
             if (outputContainerInfo is null)
                 return;
             if (!TryComp<SolutionTransferComponent>(outputContainer, out var solutionTransferComp) || outputContainerInfo.CurrentVolume == 0)
                 return;
-            // не работает условие
-
-
             if (_solution.TryGetInjectableSolution(dropper.Patient.Value, out var injectableSolution)
                 && _solutionContainerSystem.TryGetDrainableSolution(outputContainer.Value, out var ownerDrain))
             {
@@ -133,7 +134,7 @@ namespace Content.Server.Medical.Dropper
                 var solution = _solutionContainerSystem.Drain(outputContainer.Value, ownerDrain, actualAmount);
                 _reactiveSystem.DoEntityReaction(dropper.Patient.Value, solution, ReactionMethod.Injection);
                 _solution.Inject(dropper.Patient.Value, injectableSolution, solution);
-
+                _adminLogger.Add(Shared.Database.LogType.Dropper, Shared.Database.LogImpact.High, $"{SolutionContainerSystem.ToPrettyString(solution)}:solution injected into {ToPrettyString(dropper.Patient.Value)}:patient by {ToPrettyString(uid):dropper}");
             }
 
             DirtyUI(uid, dropper);
@@ -192,7 +193,6 @@ namespace Content.Server.Medical.Dropper
         {
 
         }
-
         private void OnNeedleRemove(EntityUid uid, DropperConnectableComponent component, ref DropperNeedleRemovedEvent args)
         {
             RemoveNeedle(uid);
@@ -233,6 +233,7 @@ namespace Content.Server.Medical.Dropper
             player.dropper = component.dropper;
             dropper.Patient = args.Target;
             dropper.Needle = null;
+            _adminLogger.Add(Shared.Database.LogType.Dropper, Shared.Database.LogImpact.Medium, $"{ToPrettyString(args.User)} injected {ToPrettyString(component.dropper)} needle into {ToPrettyString(args.Target.Value)}");
             _popup.PopupEntity(Loc.GetString("dropper-needle-inserted-into-patient"), args.Target.Value, args.User);
 
             QueueDel(uid);
@@ -276,15 +277,17 @@ namespace Content.Server.Medical.Dropper
 
         private void OnFrequencyChange(EntityUid uid, DropperComponent component, DropperChangeFrequencyMessage args)
         {
-            if (MathHelper.CloseToPercent(args.Frequency, component.LastInterval))
+            if (MathHelper.CloseToPercent(args.Frequency, component.LastInterval) || args.Session.AttachedEntity is null)
                 return;
+            _adminLogger.Add(Shared.Database.LogType.Dropper, Shared.Database.LogImpact.Medium, $"{ToPrettyString(args.Session.AttachedEntity.Value)} change frequency to {args.Frequency} on dropper: {ToPrettyString(uid)}");
             component.LastInterval = args.Frequency;
             DirtyUI(uid, component);
         }
         private void OnQuantityChange(EntityUid uid, DropperComponent component, DropperChangeQuantityMessage args)
         {
-            if (MathHelper.CloseToPercent(args.Quantity, component.LastQuantity))
+            if (MathHelper.CloseToPercent(args.Quantity, component.LastQuantity) || args.Session.AttachedEntity is null)
                 return;
+            _adminLogger.Add(Shared.Database.LogType.Dropper, Shared.Database.LogImpact.Medium, $"{ToPrettyString(args.Session.AttachedEntity.Value)} change quantity to {args.Quantity} on dropper: {ToPrettyString(uid)}");
             component.LastQuantity = args.Quantity;
             DirtyUI(uid, component);
         }
@@ -368,6 +371,7 @@ namespace Content.Server.Medical.Dropper
             if (args.Container.ID != SharedDropper.OutputSlotName)
                 return;
             DirtyUI(uid, component);
+            //_adminLogger.Add(Shared.Database.LogType.Dropper, Shared.Database.LogImpact.Medium, $"{args.} change quantity to {args.Quantity}");
 
             _appearance.SetData(uid, DropperVisuals.PackInserted, true);
         }
