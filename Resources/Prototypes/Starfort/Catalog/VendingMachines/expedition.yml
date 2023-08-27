@@ -3,6 +3,7 @@
   startingInventory:
     MedkitFilled: 2
     CombatMedipen: 3
+    BodyBag_Folded: 6
     Bloodpack: 3
     Crowbar: 3
     Pickaxe: 4
