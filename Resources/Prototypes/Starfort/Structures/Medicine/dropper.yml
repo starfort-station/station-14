@@ -6,7 +6,7 @@
   components:
   - type: Icon
     sprite: Starfort/Structures/Medicine/dropper.rsi
-    state: watercooler
+    state: meddropper
   - type: Sprite
     noRot: true
     sprite: Starfort/Structures/Medicine/dropper.rsi
