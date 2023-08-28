@@ -49,7 +49,6 @@ namespace Content.Client.Medical.Dropper.UI
 
         private void OnDropperSolutionEjectButtonPressed()
         {
-            //SendMessage(new DropperSolutionEjectMessage());
             SendMessage(new ItemSlotButtonPressedEvent(SharedDropper.OutputSlotName));
         }
 
@@ -70,7 +69,6 @@ namespace Content.Client.Medical.Dropper.UI
                 return;
 
             _window.SetDropperNeedleStatus(cast.DropperNeedlePatient);
-            //_window.SetDropperSolutionPackResidual(cast.DropperSolutionPackResidual);
             _window.SetDropperSolutionPackStatus(cast.DropperSolutionPackStatus);
             _window.SetFrequency(cast.Frequency);
             _window.SetFrequencyRange(cast.FrequencyMin, cast.FrequencyMax);

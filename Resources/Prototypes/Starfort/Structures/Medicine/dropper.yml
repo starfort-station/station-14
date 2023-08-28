@@ -14,7 +14,6 @@
   - type: ItemSlots
     slots:
       dropperSlot:
-        # whitelistFailPopup: dropper-cannot-put-entity-message #локализовать
         whitelist:
           tags:
           - DropperPack

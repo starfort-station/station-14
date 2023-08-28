@@ -48,17 +48,13 @@ namespace Content.Server.Medical.Dropper
         public override void Initialize()
         {
             base.Initialize();
-            //SubscribeLocalEvent<HealthAnalyzerComponent, AfterInteractEvent>(OnAfterInteract);
-            //SubscribeLocalEvent<HealthAnalyzerComponent, HealthAnalyzerDoAfterEvent>(OnDoAfter);
             SubscribeLocalEvent<DropperComponent, ComponentStartup>(OnDropperStartup);
             SubscribeLocalEvent<DropperComponent, EntInsertedIntoContainerMessage>(OnSolutionPackInserted);
             SubscribeLocalEvent<DropperComponent, EntRemovedFromContainerMessage>(OnSolutionPackRemoved);
             SubscribeLocalEvent<DropperComponent, InteractUsingEvent>(OnDropperInteractUsing);
             SubscribeLocalEvent<DropperComponent, IntervalReached>(OnIntervalReached);
             SubscribeLocalEvent<DropperComponent, DropperOutOfRange>(OnDropperOutOfRange);
-            // При вводе вещества если открыть UI сделать динамический показ остатка пакета!!
-            // UI
-            //SubscribeLocalEvent<DropperComponent, DropperSolutionEjectMessage>(OnSolutionPackEject);
+
             SubscribeLocalEvent<DropperComponent, DropperNeedleEjectMessage>(OnDropperNeedleEject);
             SubscribeLocalEvent<DropperComponent, DropperChangeFrequencyMessage>(OnFrequencyChange);
             SubscribeLocalEvent<DropperComponent, DropperChangeQuantityMessage>(OnQuantityChange);
@@ -310,7 +306,6 @@ namespace Content.Server.Medical.Dropper
             needleComp.dropper = uid;
             component.Needle = spawned;
             _hands.TryPickupAnyHand(args.Session.AttachedEntity.Value, spawned);
-            //_hands.CanPickupAnyHand(args.Session.AttachedEntity, )
             component.NeedleStatus = false;
             DirtyUI(uid, component);
 
@@ -341,9 +336,7 @@ namespace Content.Server.Medical.Dropper
             if (containerManager.TryGetContainer(SharedDropper.OutputSlotName, out var solutionPack)
             && solutionPack.ContainedEntities.Count > 0)
             {
-                // var pack = solutionPack.ContainedEntities[0];
-                //var packComponent = Comp<SolutionContainerManagerComponent>(pack);
-                //_ui.
+
                 solutionPackStatus = true;
 
             }
@@ -371,7 +364,6 @@ namespace Content.Server.Medical.Dropper
             if (args.Container.ID != SharedDropper.OutputSlotName)
                 return;
             DirtyUI(uid, component);
-            //_adminLogger.Add(Shared.Database.LogType.Dropper, Shared.Database.LogImpact.Medium, $"{args.} change quantity to {args.Quantity}");
 
             _appearance.SetData(uid, DropperVisuals.PackInserted, true);
         }

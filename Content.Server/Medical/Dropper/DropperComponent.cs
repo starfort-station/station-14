@@ -1,7 +1,7 @@
 namespace Content.Server.Medical.Dropper;
 using Content.Shared.Damage;
 
-[RegisterComponent]//, Access(typeof(DropperSystem))]
+[RegisterComponent]
 public sealed class DropperComponent : Component
 {
 
@@ -17,8 +17,6 @@ public sealed class DropperComponent : Component
     [DataField("minInterval")]
     public float MinInterval { get; set; } = 0.5f;
 
-    //[ViewVariables(VVAccess.ReadWrite)]
-    //public string ContainerName { get; set; } = "dropperSlot";
 
     public float LastInterval { get; set; } = 1f;
 

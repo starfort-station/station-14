@@ -34,9 +34,6 @@ namespace Content.Shared.Medical.Dropper
     /// <summary>
     /// Represents a <see cref="DropperComponent"/> state that can be sent to the client
     /// </summary>
-    /// <summary>
-    /// Represents a <see cref="GasCanisterComponent"/> state that can be sent to the client
-    /// </summary>
     [Serializable, NetSerializable]
     public sealed class DropperBoundUserInterfaceState : BoundUserInterfaceState
     {
@@ -86,13 +83,6 @@ namespace Content.Shared.Medical.Dropper
             Quantity = quantity;
         }
     }
-
-    /*[Serializable, NetSerializable]
-    public sealed class DropperSolutionEjectMessage : BoundUserInterfaceMessage
-    {
-        public DropperSolutionEjectMessage()
-        { }
-    }*/
 
     [Serializable, NetSerializable]
     public sealed class DropperNeedleEjectMessage : BoundUserInterfaceMessage
