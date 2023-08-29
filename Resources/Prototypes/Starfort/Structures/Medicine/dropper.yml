@@ -20,6 +20,17 @@
   - type: ContainerContainer
     containers:
       dropperSlot: !type:ContainerSlot
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.25,-0.48,0.25,0.48"
+        density: 75
+        mask:
+        - MachineMask
+        layer:
+        - MachineLayer
   - type: Dropper
   - type: InteractionOutline
   - type: ActivatableUI
@@ -45,8 +56,8 @@
       - state: solution
   - type: Item
     size: 10
-    sprite: Starfort/Structures/Medicine/dropper.rsi
-    state: solution
+    sprite: Objects/Specific/Medical/medical.rsi
+    heldPrefix: regenerative-mesh
   - type: SolutionContainerManager
     solutions:
       beaker:
@@ -66,7 +77,6 @@
     state: "dropsyringe"
   - type: Item
     size: 3
-    sprite: Starfort/Structures/Medicine/dropper.rsi
-    state: dropsyringe
+    sprite: Objects/Specific/Chemistry/syringe.rsi
     heldPrefix: 0
   - type: DropperNeedle
