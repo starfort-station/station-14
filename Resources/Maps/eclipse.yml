@@ -75257,6 +75257,18 @@ entities:
     - pos: -39.5,-12.5
       parent: 1
       type: Transform
+- proto: MedicineDropper
+  entities:
+  - uid: 15779
+    components:
+    - pos: -26.5,-11.5
+      parent: 1
+      type: Transform
+  - uid: 15780
+    components:
+    - pos: -19.5,-11.5
+      parent: 1
+      type: Transform
 - proto: MedkitAdvancedFilled
   entities:
   - uid: 1360
@@ -88530,6 +88542,26 @@ entities:
   - uid: 6190
     components:
     - pos: -215.5,-3.5
+      parent: 1
+      type: Transform
+- proto: SolutionPack
+  entities:
+  - uid: 15781
+    components:
+    - rot: 1.5707963267948966 rad
+      pos: -18.196638,-13.184673
+      parent: 1
+      type: Transform
+  - uid: 15782
+    components:
+    - rot: 1.5707963267948966 rad
+      pos: -18.149763,-13.419048
+      parent: 1
+      type: Transform
+  - uid: 15783
+    components:
+    - rot: 1.5707963267948966 rad
+      pos: -18.196638,-13.637798
       parent: 1
       type: Transform
 - proto: SpaceVillainArcade
