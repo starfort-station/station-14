@@ -4243,7 +4243,9 @@ entities:
           -16,2:
             0: 65535
           -16,3:
-            0: 65535
+            0: 32703
+            2: 64
+            3: 32768
           -16,4:
             0: 65535
           -15,-4:
@@ -4346,7 +4348,7 @@ entities:
             0: 65535
           -21,1:
             0: 49151
-            2: 16384
+            4: 16384
           -21,-3:
             0: 65535
           -21,-4:
@@ -4665,10 +4667,10 @@ entities:
             0: 65535
           -41,1:
             0: 61167
-            3: 4368
+            5: 4368
           -42,1:
             0: 48063
-            4: 17472
+            6: 17472
           -42,0:
             0: 65535
           -42,-1:
@@ -4685,8 +4687,8 @@ entities:
             0: 65535
           -43,1:
             0: 43695
-            5: 4368
-            6: 17472
+            7: 4368
+            8: 17472
           -43,-4:
             0: 65535
           -43,-3:
@@ -4697,7 +4699,7 @@ entities:
             0: 65534
           -44,1:
             0: 48063
-            5: 17472
+            7: 17472
           -44,0:
             0: 65535
           -44,-1:
@@ -4713,7 +4715,7 @@ entities:
           -45,1:
             0: 65535
           -45,0:
-            5: 273
+            7: 273
             0: 65262
           -45,-4:
             0: 65348
@@ -4731,7 +4733,7 @@ entities:
             0: 61282
           -46,0:
             0: 26230
-            5: 34952
+            7: 34952
           -46,1:
             0: 61422
           -46,2:
@@ -5164,7 +5166,7 @@ entities:
             0: 39423
           -6,3:
             0: 61439
-            7: 4096
+            9: 4096
           -5,3:
             0: 63743
           -4,3:
@@ -5177,7 +5179,7 @@ entities:
             0: 64511
           -5,-6:
             0: 65527
-            7: 8
+            9: 8
           -6,-6:
             0: 62668
           -7,-6:
@@ -5445,6 +5447,36 @@ entities:
           moles:
           - 21.824879
           - 82.10312
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+        - volume: 2500
+          temperature: 293.15
+          moles:
+          - 19.590012
+          - 73.695755
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+        - volume: 2500
+          temperature: 293.15
+          moles:
+          - 28.80884
+          - 108.376114
           - 0
           - 0
           - 0
@@ -29825,6 +29857,38 @@ entities:
     - pos: 40.50824,-8.562853
       parent: 1
       type: Transform
+- proto: CargoPallet
+  entities:
+  - uid: 14170
+    components:
+    - pos: -60.5,14.5
+      parent: 1
+      type: Transform
+  - uid: 14171
+    components:
+    - pos: -60.5,15.5
+      parent: 1
+      type: Transform
+  - uid: 14174
+    components:
+    - pos: -61.5,14.5
+      parent: 1
+      type: Transform
+  - uid: 14179
+    components:
+    - pos: -61.5,15.5
+      parent: 1
+      type: Transform
+  - uid: 15774
+    components:
+    - pos: -61.5,13.5
+      parent: 1
+      type: Transform
+  - uid: 15776
+    components:
+    - pos: -60.5,13.5
+      parent: 1
+      type: Transform
 - proto: CargoRequestComputerCircuitboard
   entities:
   - uid: 10091
@@ -39801,6 +39865,14 @@ entities:
     - pos: -115.5,14.5
       parent: 1
       type: Transform
+- proto: ComputerCargoBounty
+  entities:
+  - uid: 15778
+    components:
+    - rot: -1.5707963267948966 rad
+      pos: -53.5,20.5
+      parent: 1
+      type: Transform
 - proto: ComputerCargoOrders
   entities:
   - uid: 1817
@@ -39936,6 +40008,14 @@ entities:
     components:
     - rot: 3.141592653589793 rad
       pos: 17.5,-7.5
+      parent: 1
+      type: Transform
+- proto: ComputerPalletConsole
+  entities:
+  - uid: 15777
+    components:
+    - rot: 3.141592653589793 rad
+      pos: -61.5,16.5
       parent: 1
       type: Transform
 - proto: ComputerPowerMonitoring
@@ -40683,11 +40763,6 @@ entities:
     - pos: -60.5,19.5
       parent: 1
       type: Transform
-  - uid: 14179
-    components:
-    - pos: -58.5,19.5
-      parent: 1
-      type: Transform
   - uid: 14180
     components:
     - pos: -62.5,24.5
@@ -40712,6 +40787,11 @@ entities:
     components:
     - pos: 5.5,-0.5
       parent: 14329
+      type: Transform
+  - uid: 15773
+    components:
+    - pos: -56.5,19.5
+      parent: 1
       type: Transform
 - proto: CrateEngineeringAMEJar
   entities:
@@ -40979,11 +41059,6 @@ entities:
     - pos: -61.5,19.5
       parent: 1
       type: Transform
-  - uid: 14174
-    components:
-    - pos: -57.5,18.5
-      parent: 1
-      type: Transform
   - uid: 14175
     components:
     - pos: -60.5,24.5
@@ -40997,6 +41072,11 @@ entities:
   - uid: 15616
     components:
     - pos: -77.5,9.5
+      parent: 1
+      type: Transform
+  - uid: 15772
+    components:
+    - pos: -57.5,19.5
       parent: 1
       type: Transform
 - proto: CrateFoodMRE
@@ -41046,52 +41126,6 @@ entities:
       type: ContainerContainer
 - proto: CrateLivestock
   entities:
-  - uid: 14170
-    components:
-    - pos: -61.49995,13.499998
-      parent: 1
-      type: Transform
-    - air:
-        volume: 800
-        immutable: False
-        temperature: 293.14996
-        moles:
-        - 6.983961
-        - 26.272997
-        - 0
-        - 0
-        - 0
-        - 0
-        - 0
-        - 0
-        - 0
-        - 0
-        - 0
-        - 0
-      type: EntityStorage
-  - uid: 14171
-    components:
-    - pos: -60.49995,15.499998
-      parent: 1
-      type: Transform
-    - air:
-        volume: 800
-        immutable: False
-        temperature: 293.1499
-        moles:
-        - 6.983961
-        - 26.272997
-        - 0
-        - 0
-        - 0
-        - 0
-        - 0
-        - 0
-        - 0
-        - 0
-        - 0
-        - 0
-      type: EntityStorage
   - uid: 14904
     components:
     - pos: -116.5,-14.500001
@@ -41133,6 +41167,11 @@ entities:
           occludes: True
           ent: null
       type: ContainerContainer
+  - uid: 15775
+    components:
+    - pos: -58.5,18.5
+      parent: 1
+      type: Transform
 - proto: CrateMedical
   entities:
   - uid: 14557
