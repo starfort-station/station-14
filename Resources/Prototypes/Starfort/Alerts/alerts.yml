@@ -1,0 +1,6 @@
+- type: alert
+  id: ConnectedToDropper
+  onClick: !type:RemoveDropperNeedle  { }
+  icons: [ /Textures/Starfort/Structures/Medicine/dropper.rsi/dropsyringe.png ]
+  name: alerts-connected-to-dropper-name
+  description: alerts-connected-to-dropper-desc

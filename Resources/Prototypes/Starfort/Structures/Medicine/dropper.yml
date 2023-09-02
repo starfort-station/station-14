@@ -1,0 +1,82 @@
+- type: entity
+  parent: BaseStructureDynamic
+  id: MedicineDropper
+  name: dropper
+  description: Designed for transfusion of substances to the patient.
+  components:
+  - type: Icon
+    sprite: Starfort/Structures/Medicine/dropper.rsi
+    state: meddropper
+  - type: Sprite
+    noRot: true
+    sprite: Starfort/Structures/Medicine/dropper.rsi
+    state: meddropper
+  - type: ItemSlots
+    slots:
+      dropperSlot:
+        whitelist:
+          tags:
+          - DropperPack
+  - type: ContainerContainer
+    containers:
+      dropperSlot: !type:ContainerSlot
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.25,-0.48,0.25,0.48"
+        density: 75
+        mask:
+        - MachineMask
+        layer:
+        - MachineLayer
+  - type: Dropper
+  - type: InteractionOutline
+  - type: ActivatableUI
+    key: enum.DropperUiKey.Key
+  - type: UserInterface
+    interfaces:
+    - key: enum.DropperUiKey.Key
+      type: DropperBoundUserInterface
+
+- type: entity
+  parent: BaseBeakerMetallic
+  id: SolutionPack
+  name: solution pack
+  description: Designed for transfusion of substances to the patient.
+  components:
+  - type: Tag
+    tags:
+    - GlassBeaker
+    - DropperPack
+  - type: Sprite
+    sprite: Starfort/Structures/Medicine/dropper.rsi
+    layers:
+      - state: solution
+  - type: Item
+    size: 10
+    sprite: Objects/Specific/Medical/medical.rsi
+    heldPrefix: regenerative-mesh
+  - type: SolutionContainerManager
+    solutions:
+      beaker:
+        maxVol: 100
+
+- type: entity
+  parent: BaseItem
+  id: DropperNeedle
+  name: dropper needle
+  description: Just stick it in your friend.
+  components:
+  - type: Sprite
+    sprite: Starfort/Structures/Medicine/dropper.rsi
+    state: dropsyringe
+  - type: Icon
+    sprite: Starfort/Structures/Medicine/dropper.rsi
+    state: "dropsyringe"
+  - type: Item
+    size: 3
+    sprite: Objects/Specific/Chemistry/syringe.rsi
+    heldPrefix: 0
+  - type: DropperNeedle

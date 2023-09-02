@@ -39,6 +39,7 @@ namespace Content.Shared.Alert
         Essence,
         Corporeal,
         Bleed,
+        ConnectedToDropper,
         Debug1,
         Debug2,
         Debug3,
