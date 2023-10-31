@@ -70,7 +70,7 @@
     sprite: Clothing/Ears/Headsets/engineering.rsi
   - type: Clothing
     sprite: Clothing/Ears/Headsets/engineering.rsi
- 
+
 - type: entity
   parent: ClothingHeadsetAlt
   id: ClothingHeadsetAltMedical
@@ -114,6 +114,7 @@
       - EncryptionKeyScience
       - EncryptionKeyCommand
       - EncryptionKeyCommon
+      - EncryptionKeyExpedition
   - type: Sprite
     sprite: Clothing/Ears/Headsets/science.rsi
   - type: Clothing
